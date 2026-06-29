@@ -1,0 +1,11 @@
+.env
+.env.local
+.env.*.local
+
+# Data dumps
+scripts/mazii/data/
+scripts/mazii/output/
+
+# OS
+.DS_Store
+Thumbs.db

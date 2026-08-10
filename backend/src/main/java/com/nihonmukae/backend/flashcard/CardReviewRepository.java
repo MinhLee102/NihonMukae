@@ -15,7 +15,7 @@ public interface CardReviewRepository extends JpaRepository<FlashcardReview, UUI
     // Truy vấn lấy danh sách card cần review ngày hôm nay dựa trên thuật toán SM-2
     @Query("SELECT r FROM FlashcardReview r " +
             "JOIN FETCH r.card c " +
-            "WHERE r.userId = :userId " +
+            "WHERE r.user.id = :userId " +
             "AND r.nextReviewAt <= :now")
     List<FlashcardReview> findCardsToReviewToday(@Param("userId") UUID userId, @Param("now") ZonedDateTime now);
 }

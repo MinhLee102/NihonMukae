@@ -28,7 +28,19 @@ public class JwtUtil {
 
     @PostConstruct
     void init() {
-        byte[] keyBytes = jwtProperties.getSecret().getBytes(StandardCharsets.UTF_8);
+        String secret = jwtProperties.getSecret();
+        byte[] keyBytes;
+        try {
+            // Try to decode base64-url encoded secret (common when providing keys via env)
+            keyBytes = java.util.Base64.getUrlDecoder().decode(secret);
+            // If decode produced no bytes, fall back to raw UTF-8 bytes
+            if (keyBytes == null || keyBytes.length == 0) {
+                keyBytes = secret.getBytes(StandardCharsets.UTF_8);
+            }
+        } catch (IllegalArgumentException ex) {
+            // Not a base64 string — use raw bytes
+            keyBytes = secret.getBytes(StandardCharsets.UTF_8);
+        }
         signingKey = Keys.hmacShaKeyFor(keyBytes);
     }
 

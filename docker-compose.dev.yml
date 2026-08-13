@@ -24,5 +24,24 @@ services:
       - "5672:5672"
       - "15672:15672"   # Management UI: http://localhost:15672
 
+  backend:
+    container_name: backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/nihon_mukae
+      SPRING_DATASOURCE_USERNAME: dev
+      SPRING_DATASOURCE_PASSWORD: dev
+      SPRING_REDIS_HOST: redis
+      SPRING_RABBITMQ_HOST: rabbitmq
+      JWT_SECRET: "${JWT_SECRET:-dev-secret-key-min-256-bits-for-hs256-algorithm!!}"
+    depends_on:
+      - postgres
+      - redis
+      - rabbitmq
+
 volumes:
   postgres_dev_data:

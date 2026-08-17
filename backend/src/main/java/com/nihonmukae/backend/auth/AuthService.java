@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseCookie;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
@@ -69,6 +70,7 @@ public class AuthService {
         return Optional.empty();
     }
 
+    @Transactional
     public Optional<User> refreshFromToken(String rawToken) {
         String hashed = sha256Base64Url(rawToken);
         Optional<RefreshToken> o = refreshTokenRepository.findByTokenAndExpiresAtAfter(hashed, ZonedDateTime.now());
@@ -81,6 +83,7 @@ public class AuthService {
         return Optional.of(user);
     }
 
+    @Transactional
     public void revokeRefreshToken(String rawToken) {
         String hashed = sha256Base64Url(rawToken);
         refreshTokenRepository.deleteByToken(hashed);

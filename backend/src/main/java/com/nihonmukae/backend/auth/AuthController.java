@@ -48,7 +48,7 @@ public class AuthController {
                     String rawRefresh = authService.createAndStoreRefreshToken(user);
                     ResponseCookie cookie = ResponseCookie.from(REFRESH_COOKIE_NAME, rawRefresh)
                             .httpOnly(true)
-                                                .secure(false)
+                            .secure(false)
                             .path("/")
                             .maxAge(Duration.ofDays(30))
                             .sameSite("Lax")

@@ -1,0 +1,19 @@
+# Target path in project: frontend/Dockerfile.dev
+#
+# Dev-only image (hot reload via volume mount in docker-compose).
+# Do NOT use this for production — no build/optimize step, just `next dev`.
+
+FROM node:20-alpine
+
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm install
+
+COPY . .
+
+EXPOSE 3000
+
+# -H 0.0.0.0 is required: Next's default dev bind can be unreachable from
+# outside the container otherwise, which breaks the port mapping.
+CMD ["sh", "-c", "npm run dev -- -H 0.0.0.0 -p 3000"]

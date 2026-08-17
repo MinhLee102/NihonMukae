@@ -43,5 +43,25 @@ services:
       - redis
       - rabbitmq
 
+  frontend:
+    container_name: frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    environment:
+      # This is read by the BROWSER (bundled client-side), so it must be an
+      # address the browser on your host machine can reach — the published
+      # port on localhost, NOT the internal docker network name "backend".
+      NEXT_PUBLIC_API_URL: "http://localhost:8080"
+      WATCHPACK_POLLING: "true" # more reliable file-change detection in Docker
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+      - /app/.next
+    depends_on:
+      - backend
+
 volumes:
   postgres_dev_data:

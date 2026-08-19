@@ -4,6 +4,7 @@ import com.nihonmukae.backend.auth.jwt.JwtUtil;
 import com.nihonmukae.backend.shared.entity.RefreshToken;
 import com.nihonmukae.backend.shared.entity.User;
 import lombok.RequiredArgsConstructor;
+import org.hibernate.Hibernate;
 import org.springframework.http.ResponseCookie;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -75,9 +76,9 @@ public class AuthService {
         String hashed = sha256Base64Url(rawToken);
         Optional<RefreshToken> o = refreshTokenRepository.findByTokenAndExpiresAtAfter(hashed, ZonedDateTime.now());
         if (o.isEmpty()) return Optional.empty();
-        // rotate: remove old and create new
         RefreshToken old = o.get();
         User user = old.getUser();
+        Hibernate.initialize(user);
         refreshTokenRepository.deleteByToken(hashed);
         createAndStoreRefreshToken(user);
         return Optional.of(user);

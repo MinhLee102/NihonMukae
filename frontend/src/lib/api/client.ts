@@ -22,26 +22,34 @@ apiClient.interceptors.request.use((config) => {
   return config;
 });
  
+let refreshPromise: Promise<string | null> | null = null;
+ 
 // A separate plain axios call (bypasses apiClient's interceptors) so calling
 // /auth/refresh from within the response interceptor below can't recurse.
-export async function refreshAccessToken(): Promise<string | null> {
-  try {
-    const { data } = await axios.post<AuthResponse>(
-      `${API_BASE_URL}/auth/refresh`,
-      {},
-      { withCredentials: true }
-    );
-    useAuthStore.getState().setAccessToken(data.accessToken);
-    return data.accessToken;
-  } catch {
-    useAuthStore.getState().clear();
-    return null;
+export function refreshAccessToken(): Promise<string | null> {
+  if (refreshPromise) {
+    return refreshPromise;
   }
-}
  
-// Dedupe concurrent refreshes: if 3 requests 401 at once, only call
-// /auth/refresh once and let all 3 retry with the same new token.
-let refreshPromise: Promise<string | null> | null = null;
+  refreshPromise = (async () => {
+    try {
+      const { data } = await axios.post<AuthResponse>(
+        `${API_BASE_URL}/auth/refresh`,
+        {},
+        { withCredentials: true }
+      );
+      useAuthStore.getState().setAccessToken(data.accessToken);
+      return data.accessToken;
+    } catch {
+      useAuthStore.getState().clear();
+      return null;
+    } finally {
+      refreshPromise = null;
+    }
+  })();
+ 
+  return refreshPromise;
+}
  
 type RetryableConfig = InternalAxiosRequestConfig & { _retry?: boolean };
  
@@ -58,13 +66,7 @@ apiClient.interceptors.response.use(
     ) {
       originalRequest._retry = true;
  
-      if (!refreshPromise) {
-        refreshPromise = refreshAccessToken().finally(() => {
-          refreshPromise = null;
-        });
-      }
- 
-      const newToken = await refreshPromise;
+      const newToken = await refreshAccessToken();
  
       if (newToken) {
         originalRequest.headers = originalRequest.headers ?? {};

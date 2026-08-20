@@ -1,0 +1,4 @@
+ALTER TABLE words
+  ALTER COLUMN pos TYPE TEXT,
+  ALTER COLUMN han_viet TYPE TEXT,
+  ALTER COLUMN pronunciation TYPE TEXT;

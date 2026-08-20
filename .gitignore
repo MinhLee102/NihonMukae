@@ -4,6 +4,7 @@
 
 # Data dumps
 scripts/mazii/data/
+scripts/mazii/.env
 scripts/mazii/output/
 
 # OS

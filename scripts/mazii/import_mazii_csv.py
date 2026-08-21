@@ -1,4 +1,5 @@
 import argparse
+import os
 import re
 import sys
  
@@ -263,6 +264,53 @@ def rebuild_search_vector(conn):
     conn.commit()
  
  
+def run_pipeline(db_url, data_dir, chunk_size,
+                  skip_vocab=False, skip_meanings=False,
+                  skip_examples=False, skip_kanji=False):
+    conn = psycopg2.connect(db_url)
+    try:
+        vocab_id_map = {}
+        meaning_id_map = {}
+
+        if not skip_vocab:
+            print("== Import words (mazii_vocabs.csv) ==")
+            vocab_path = os.path.join(data_dir, "mazii_vocabs.csv")
+            vocab_id_map = import_vocab(conn, vocab_path, chunk_size)
+            print(f"  -> {len(vocab_id_map)} từ đã import")
+        else:
+            print("Bỏ qua vocab. Lưu ý: cần vocab_id_map để import meanings/examples đúng,"
+                  " nên nếu skip vocab thì skip meanings/examples cũng nên bật.")
+
+        if not skip_meanings:
+            print("== Import word_meanings (meaning_detail.csv) ==")
+            meaning_path = os.path.join(data_dir, "meaning_detail.csv")
+            meaning_id_map = import_meanings(
+                conn, meaning_path, chunk_size, vocab_id_map
+            )
+            print(f"  -> {len(meaning_id_map)} nghĩa đã import")
+
+        if not skip_examples:
+            print("== Import example_sentences (examples.csv) ==")
+            examples_path = os.path.join(data_dir, "examples.csv")
+            import_examples(conn, examples_path, chunk_size, meaning_id_map)
+
+        if not skip_kanji:
+            print("== Import kanji (kanji.csv) ==")
+            kanji_path = os.path.join(data_dir, "kanji.csv")
+            count = import_kanji(conn, kanji_path, chunk_size)
+            print(f"  -> {count} kanji đã import")
+
+        print("== Rebuild search_vector ==")
+        rebuild_search_vector(conn)
+
+        print("Xong.")
+    except Exception:
+        conn.rollback()
+        raise
+    finally:
+        conn.close()
+ 
+ 
 def main():
     parser = argparse.ArgumentParser(description="Import Mazii CSV vào PostgreSQL")
     parser.add_argument("--db-url", default=config.DB_URL)
@@ -274,44 +322,15 @@ def main():
     parser.add_argument("--skip-kanji", action="store_true")
     args = parser.parse_args()
  
-    conn = psycopg2.connect(args.db_url)
-    try:
-        vocab_id_map = {}
-        meaning_id_map = {}
- 
-        if not args.skip_vocab:
-            print("== Import words (mazii_vocabs.csv) ==")
-            vocab_id_map = import_vocab(conn, f"{args.data_dir}/mazii_vocabs.csv", args.chunk_size)
-            print(f"  -> {len(vocab_id_map)} từ đã import")
-        else:
-            print("Bỏ qua vocab. Lưu ý: cần vocab_id_map để import meanings/examples đúng,"
-                  " nên nếu --skip-vocab thì --skip-meanings và --skip-examples cũng nên bật.")
- 
-        if not args.skip_meanings:
-            print("== Import word_meanings (meaning_detail.csv) ==")
-            meaning_id_map = import_meanings(
-                conn, f"{args.data_dir}/meaning_detail.csv", args.chunk_size, vocab_id_map
-            )
-            print(f"  -> {len(meaning_id_map)} nghĩa đã import")
- 
-        if not args.skip_examples:
-            print("== Import example_sentences (examples.csv) ==")
-            import_examples(conn, f"{args.data_dir}/examples.csv", args.chunk_size, meaning_id_map)
- 
-        if not args.skip_kanji:
-            print("== Import kanji (kanji.csv) ==")
-            count = import_kanji(conn, f"{args.data_dir}/kanji.csv", args.chunk_size)
-            print(f"  -> {count} kanji đã import")
- 
-        print("== Rebuild search_vector ==")
-        rebuild_search_vector(conn)
- 
-        print("Xong.")
-    except Exception:
-        conn.rollback()
-        raise
-    finally:
-        conn.close()
+    run_pipeline(
+        db_url=args.db_url,
+        data_dir=args.data_dir,
+        chunk_size=args.chunk_size,
+        skip_vocab=args.skip_vocab,
+        skip_meanings=args.skip_meanings,
+        skip_examples=args.skip_examples,
+        skip_kanji=args.skip_kanji,
+    )
  
  
 if __name__ == "__main__":

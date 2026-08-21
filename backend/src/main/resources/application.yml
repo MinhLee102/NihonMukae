@@ -32,7 +32,6 @@ management:
     web:
       exposure:
         include: health,info
-
 app:
   jwt:
     secret: ${JWT_SECRET:dev-secret-key-min-256-bits-for-hs256-algorithm!!}

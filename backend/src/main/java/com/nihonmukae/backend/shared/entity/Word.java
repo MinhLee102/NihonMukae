@@ -2,6 +2,7 @@ package com.nihonmukae.backend.shared.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.BatchSize;
 import org.hibernate.annotations.CreationTimestamp;
 import java.time.ZonedDateTime;
 import java.util.List;
@@ -59,9 +60,11 @@ public class Word {
     private Integer frequencyRank;
 
     @OneToMany(mappedBy = "word", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @BatchSize(size = 20)
     private List<WordMeaning> meanings;
 
     @OneToMany(mappedBy = "word", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @BatchSize(size = 20)
     private List<ExampleSentence> examples;
 
     @CreationTimestamp

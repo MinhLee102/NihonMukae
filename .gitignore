@@ -7,6 +7,8 @@ scripts/mazii/data/
 scripts/mazii/.env
 scripts/mazii/output/
 scripts/mazii/__pycache__/
+__pycache__/
+*.pyc
 
 # OS
 .DS_Store

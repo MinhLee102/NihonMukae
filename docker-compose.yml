@@ -35,7 +35,10 @@ services:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/nihon_mukae
       SPRING_DATASOURCE_USERNAME: dev
       SPRING_DATASOURCE_PASSWORD: dev
+      SPRING_DATA_REDIS_HOST: redis
+      SPRING_DATA_REDIS_PORT: 6379
       SPRING_REDIS_HOST: redis
+      SPRING_REDIS_PORT: 6379
       SPRING_RABBITMQ_HOST: rabbitmq
       JWT_SECRET: "${JWT_SECRET:-dev-secret-key-min-256-bits-for-hs256-algorithm!!}"
       LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_SECURITY: DEBUG

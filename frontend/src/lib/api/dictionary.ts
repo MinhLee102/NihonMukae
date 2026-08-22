@@ -23,12 +23,23 @@ export interface WordDto {
   examples: ExampleDto[];
 }
 
-export interface SearchResultResponse {
-  results: WordDto[];
-  fuzzyFallback: boolean;
-  page: number;
-  totalPages: number;
+export interface PageData<T> {
+  content: T[];
+  pageable?: unknown;
   totalElements: number;
+  totalPages: number;
+  last?: boolean;
+  size: number;
+  number: number;
+  sort?: unknown;
+  numberOfElements?: number;
+  first?: boolean;
+  empty?: boolean;
+}
+
+export interface SearchResultResponse {
+  results: PageData<WordDto>;
+  fuzzyFallback: boolean;
 }
 
 export interface HistoryItemDto {
@@ -70,6 +81,18 @@ export const getSearchHistory = async (
 ): Promise<ApiResponse<PageResponse<HistoryItemDto>>> => {
   const { data } = await apiClient.get<ApiResponse<PageResponse<HistoryItemDto>>>('/dictionary/history', {
     params: { page, size },
+  });
+  return data;
+};
+
+// Lookup a word by its kana and optional kanji. Returns the word details if found.
+// Later use for the "lookup" feature, where users can click on a word to see its full details.
+export const lookupWord = async (
+  kana: string,
+  kanji?: string
+): Promise<ApiResponse<WordDto>> => {
+  const { data } = await apiClient.get<ApiResponse<WordDto>>('/dictionary/lookup', {
+    params: { kana, kanji },
   });
   return data;
 };

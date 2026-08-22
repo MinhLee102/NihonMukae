@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Search, PenLine, Keyboard, Volume2, Camera, ChevronDown } from "lucide-react";
+import { Search, PenLine, Keyboard, Volume2, Camera, ChevronDown, Loader2 } from "lucide-react";
 
 const SEARCH_MODES = [
   { id: "ai", label: "Chế độ AI" },
@@ -12,21 +12,48 @@ const SEARCH_MODES = [
   { id: "ja-ja", label: "Nhật - Nhật" },
 ] as const;
 
+export type SearchMode = (typeof SEARCH_MODES)[number]["id"];
+
+interface SearchBarProps {
+  value?: string;
+  onChange?: (val: string) => void;
+  onSearch?: (query: string, mode: SearchMode) => void;
+  isLoading?: boolean;
+}
 /**
  * Search input + mode tabs. Local UI state only (which tab is selected,
  * the input's text) — no actual search call wired in yet.
  */
-export function SearchBar() {
-  const [activeMode, setActiveMode] = useState<(typeof SEARCH_MODES)[number]["id"]>("vocab");
-  const [query, setQuery] = useState("");
+export function SearchBar({ value, onChange, onSearch, isLoading = false }: SearchBarProps) {
+  const [activeMode, setActiveMode] = useState<SearchMode>("vocab");
+  const [internalQuery, setInternalQuery] = useState("");
+
+  const query = value !== undefined ? value : internalQuery;
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const val = e.target.value;
+    if (value === undefined) setInternalQuery(val);
+    onChange?.(val);
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      onSearch?.(query, activeMode);
+    }
+  };
 
   return (
     <div className="rounded-2xl border border-black/5 bg-white p-2 shadow-sm">
       <div className="flex items-center gap-3 px-3 py-2">
-        <Search size={18} strokeWidth={1.75} className="shrink-0 text-neutral-400" />
+        {isLoading ? (
+          <Loader2 size={18} className="shrink-0 animate-spin text-neutral-400" />
+        ) : (
+          <Search size={18} strokeWidth={1.75} className="shrink-0 text-neutral-400" />
+        )}
         <input
           value={query}
-          onChange={(e) => setQuery(e.target.value)}
+          onChange={handleInputChange}
+          onKeyDown={handleKeyDown}
           placeholder="日本, nihon, Nhật Bản..."
           className="min-w-0 flex-1 bg-transparent text-sm text-neutral-800 outline-none placeholder:text-neutral-400"
         />

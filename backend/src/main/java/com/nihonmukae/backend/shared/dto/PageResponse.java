@@ -1,28 +1,25 @@
 package com.nihonmukae.backend.shared.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.springframework.data.domain.Page;
 
 import java.util.List;
 
 /**
- * Wrapper phân trang gọn hơn org.springframework.data.domain.Page.
+ * Wrapper phân trang gọn hơn org.springframework.data.domain.Page (Page mặc
+ * định serialize ra JSON khá dài dòng và lộ chi tiết nội bộ Spring Data).
  */
 @Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public class PageResponse<T> {
-    private final List<T> content;
-    private final int page;
-    private final int size;
-    private final long totalElements;
-    private final int totalPages;
-
-    public PageResponse(List<T> content, int page, int size, long totalElements, int totalPages) {
-        this.content = content;
-        this.page = page;
-        this.size = size;
-        this.totalElements = totalElements;
-        this.totalPages = totalPages;
-    }
+    private List<T> content;
+    private int page;
+    private int size;
+    private long totalElements;
+    private int totalPages;
 
     public static <T> PageResponse<T> of(Page<T> page) {
         return new PageResponse<>(
@@ -33,5 +30,4 @@ public class PageResponse<T> {
                 page.getTotalPages()
         );
     }
-
 }

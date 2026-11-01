@@ -23,6 +23,26 @@ public interface WordRepository extends JpaRepository<Word, Long> {
     Optional<Word> findForInlineLookup(@Param("kanji") String kanji, @Param("kana") String kana);
 
     /**
+     * Lookup theo mặt chữ kanji, kana là tùy chọn ('' = không biết cách đọc,
+     * vd động từ đã chia). Mazii gộp nhiều cách đọc vào 1 chuỗi cách nhau dấu
+     * cách ("にほん にっぽん") nên so khớp từng cách đọc. Từ khớp cách đọc lên
+     * trước, rồi tới từ phổ biến hơn (frequency_rank nhỏ hơn).
+     */
+    @Query("SELECT w FROM Word w " +
+            "WHERE w.kanji = :kanji " +
+            "ORDER BY CASE WHEN :kana <> '' AND (w.kana = :kana OR w.kana LIKE concat(:kana, ' %') " +
+            "OR w.kana LIKE concat('% ', :kana) OR w.kana LIKE concat('% ', :kana, ' %')) THEN 0 ELSE 1 END, " +
+            "w.frequencyRank ASC NULLS LAST, w.id ASC")
+    List<Word> findLookupByKanji(@Param("kanji") String kanji, @Param("kana") String kana);
+
+    // Từ thuần kana (kanji NULL hoặc Mazii lặp lại kana vào cột kanji), cũng so khớp từng cách đọc
+    @Query("SELECT w FROM Word w " +
+            "WHERE (w.kanji IS NULL OR w.kanji = w.kana) AND (w.kana = :kana OR w.kana LIKE concat(:kana, ' %') " +
+            "OR w.kana LIKE concat('% ', :kana) OR w.kana LIKE concat('% ', :kana, ' %')) " +
+            "ORDER BY w.frequencyRank ASC NULLS LAST, w.id ASC")
+    List<Word> findLookupByKanaOnly(@Param("kana") String kana);
+
+    /**
      * Full-Text Search có phân trang, dùng PostgreSQL to_tsquery + ts_rank.
      *
      * QUAN TRỌNG: tham số `tsQuery` PHẢI là chuỗi tsquery đã build sẵn (vd

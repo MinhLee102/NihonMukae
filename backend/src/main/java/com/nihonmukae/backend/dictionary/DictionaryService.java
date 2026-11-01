@@ -121,14 +121,20 @@ public class DictionaryService {
     }
 
     @Cacheable(cacheNames = "dictLookup")
+    @Transactional(readOnly = true)
     public WordLookupResponse lookup(String kanji, String kana) {
-        if (kana == null || kana.isBlank()) {
-            throw new IllegalArgumentException("Thiếu tham số 'kana'");
+        boolean hasKanji = kanji != null && !kanji.isBlank();
+        boolean hasKana = kana != null && !kana.isBlank();
+        if (!hasKanji && !hasKana) {
+            throw new IllegalArgumentException("Thiếu tham số 'kanji' hoặc 'kana'");
         }
-        String normalizedKanji = (kanji == null || kanji.isBlank()) ? null : kanji;
-        Word word = wordRepository.findForInlineLookup(normalizedKanji, kana)
-                .orElseThrow(() -> new NotFoundException("Không tìm thấy từ"));
-        return toWordLookupResponse(word, DEFAULT_LANG);
+        List<Word> found = hasKanji
+                ? wordRepository.findLookupByKanji(kanji.trim(), hasKana ? kana.trim() : "")
+                : wordRepository.findLookupByKanaOnly(kana.trim());
+        if (found.isEmpty()) {
+            throw new NotFoundException("Không tìm thấy từ");
+        }
+        return toWordLookupResponse(found.get(0), DEFAULT_LANG);
     }
 
     // ─── History CRUD ───────────────────────────────────────────────────

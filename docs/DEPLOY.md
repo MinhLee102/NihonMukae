@@ -23,15 +23,16 @@ GitHub Actions: test ──► build image ──► đẩy lên ghcr.io ──�
 
 ## 2. Ưu đãi GitHub Student Pack dùng được
 
-Theo [trang chính thức của GitHub Education](https://education.github.com/pack) (ưu đãi thay đổi theo thời gian, hãy kiểm tra lại trên trang đó):
+Ưu đãi trong Student Pack thay đổi theo thời gian. Theo các nguồn mình tra được ([Capital & Compute](https://capitalandcompute.net/blog/github-student-developer-pack-2026/), [80aj](https://www.80aj.com/2026/06/13/digitalocean-github-student-pack/)), **DigitalOcean đã rời Student Pack** (credit 200 USD hết hạn ngày 31/7/2026), trang của DigitalOcean vẫn còn quảng cáo nhưng đã cũ. Hãy luôn kiểm tra lại ở [trang chính thức](https://education.github.com/pack).
 
 | Nhu cầu | Ưu đãi | Ghi chú |
 | --- | --- | --- |
-| VPS | **DigitalOcean**: 200 USD credit trong 1 năm | Khuyên dùng. Tạo Droplet Ubuntu, 2 GB RAM là thoải mái |
-| VPS | **Azure for Students**: 100 USD credit | Dành cho sinh viên từ 18 tuổi, không cần thẻ |
+| VPS | **Azure for Students**: 100 USD credit, không cần thẻ tín dụng | Xem mục 4.1 về giới hạn của gói sinh viên |
 | Tên miền | **Namecheap**: 1 năm tên miền `.me` (ngoài ra có Name.com, .TECH) | Cần tên miền để có HTTPS cho backend |
 
 Cần tên miền vì: (1) Caddy lấy chứng chỉ HTTPS miễn phí chỉ cho tên miền, (2) cookie đăng nhập hoạt động ổn khi `app.<miền>` (Vercel) và `api.<miền>` (VPS) cùng một site. Chưa có tên miền thì xem mục 9.
+
+Nếu Azure không tạo được VM phù hợp, có thể dùng bất kỳ VPS Ubuntu nào khác: toàn bộ stack không phụ thuộc nhà cung cấp, chỉ có bước tạo VM (4.1) khác nhau.
 
 ## 3. Những gì đã có trong repo
 
@@ -51,18 +52,34 @@ RabbitMQ **không** nằm trong stack production vì app không còn dùng (furi
 
 ## 4. Việc làm một lần
 
-### 4.1 Tạo VPS
+### 4.1 Tạo VM trên Azure for Students
 
-1. Xác minh GitHub Student Pack, nhận credit DigitalOcean theo trang Student Pack.
-2. Tạo Droplet: Ubuntu 24.04, 2 GB RAM trở lên (1 GB chạy được nhờ swap nhưng sát), chọn đăng nhập bằng SSH key.
-3. Tạo SSH key **riêng cho CI** trên máy bạn:
+Azure for Students tặng 100 USD credit trong 12 tháng (gia hạn khi còn là sinh viên), kèm 750 giờ VM Linux `B1s` miễn phí theo [trang Azure for Students](https://azureforeducation.microsoft.com/Student). Không cần thẻ tín dụng, và credit hết thì Azure dừng dịch vụ chứ không tính tiền.
+
+**Hạn chế cần biết** (theo các trao đổi trên [Microsoft Q&A](https://learn.microsoft.com/en-us/answers/questions/5836257/cannot-create-a-vm-in-azure-for-students) và [Tech Community](https://techcommunity.microsoft.com/discussions/microsoft-learn-for-educators/sku-quota-and-policy-restrictions-on-azure-for-students-and-free-subscriptions/4525160)):
+
+- Mỗi tài khoản sinh viên chỉ được dùng một danh sách region nhỏ (thường 3 đến 5 region), danh sách này khác nhau theo từng người.
+- Size `B1s` hay bị báo không khả dụng ở nhiều region. Khi đó thử `B2ats_v2` hoặc `B2ts_v2`, hoặc đổi region. Các size này có thể không nằm trong 750 giờ miễn phí, nên xem giá hiển thị trên portal.
+- Size nhỏ chỉ có khoảng **1 GiB RAM**. Mình đã thử: backend chạy ổn với heap 384 MB (khoảng 515 MB cho container), cả stack khoảng 750 MB. Chạy được trên VM 1 GiB nếu có swap (`setup-vps.sh` tạo sẵn 2 GB) và đặt `JAVA_OPTS` như trong `.env.prod.example`. Với vài người dùng thì đủ, nhiều người dùng cùng lúc sẽ chậm.
+- 100 USD trong 12 tháng tương đương khoảng 8 USD mỗi tháng, nên đừng chọn size lớn (ví dụ 4 GiB RAM sẽ đốt hết credit trong vài tháng). Vào Cost Management để đặt cảnh báo ngân sách.
+
+**Các bước:**
+
+1. Kích hoạt Azure for Students bằng tài khoản GitHub Education hoặc email trường.
+2. Portal Azure, **Create a virtual machine**: Image **Ubuntu Server 24.04 LTS**, Region chọn trong danh sách portal cho phép (ưu tiên Southeast Asia hoặc East Asia nếu có, gần Việt Nam), Size `B1s` hoặc size nhỏ thay thế như trên.
+3. Authentication: **SSH public key**, username `azureuser`. Tạo key riêng cho CI:
 
    ```bash
    ssh-keygen -t ed25519 -f ~/.ssh/nihongo_deploy -C "github-actions-deploy" -N ""
    ```
 
-   - Nội dung `~/.ssh/nihongo_deploy.pub` dán vào `~/.ssh/authorized_keys` của user trên VPS.
-   - Nội dung file private `~/.ssh/nihongo_deploy` (không có đuôi `.pub`) sẽ dán vào GitHub Secret ở bước 4.4.
+   Dán nội dung file `.pub` vào ô SSH public key. Nội dung file private `~/.ssh/nihongo_deploy` (không có đuôi `.pub`) sẽ dán vào GitHub Secret `VPS_SSH_KEY` ở bước 4.4.
+4. Mục **Inbound port rules**: tick **SSH (22), HTTP (80), HTTPS (443)**. Azure có tường lửa riêng (Network Security Group) mặc định chặn hết, quên bước này thì Caddy không lấy được chứng chỉ và không truy cập được từ ngoài. Có thể thêm sau trong VM, mục Networking.
+5. Public IP: giữ SKU **Standard** (địa chỉ tĩnh) để IP không đổi khi tắt và bật VM. Ghi lại IP này.
+6. Tắt chế độ **Auto-shutdown** nếu portal bật sẵn, và đừng "Stop" VM (VM đã dừng vẫn có thể mất IP hoặc không phục vụ).
+7. Secret `VPS_USER` sẽ là `azureuser`.
+
+**Phương án dự phòng** nếu Azure không có size nào dùng được: Oracle Cloud Always Free (VM ARM cấu hình lớn, miễn phí vĩnh viễn nhưng đăng ký cần thẻ và đôi khi hết chỗ), hoặc thuê VPS giá rẻ vài USD mỗi tháng. Hướng dẫn phần sau không đổi.
 
 ### 4.2 Trỏ tên miền
 
@@ -89,7 +106,7 @@ cd /opt/nihongo-app
 nano .env   # dán nội dung deploy/.env.prod.example rồi điền
 ```
 
-Điền: `API_DOMAIN`, `CORS_ALLOWED_ORIGIN` (địa chỉ Vercel, xem 4.5), `POSTGRES_PASSWORD`, `REDIS_PASSWORD`, `JWT_SECRET`. Tạo chuỗi ngẫu nhiên bằng:
+Điền: `API_DOMAIN`, `CORS_ALLOWED_ORIGIN` (địa chỉ Vercel, xem 4.5), `POSTGRES_PASSWORD`, `REDIS_PASSWORD`, `JWT_SECRET`, và `JAVA_OPTS` nếu VM chỉ có 1 GiB RAM (dòng gợi ý có trong file mẫu). Tạo chuỗi ngẫu nhiên bằng:
 
 ```bash
 openssl rand -base64 32
@@ -104,7 +121,7 @@ Vào repo, mục Settings, Secrets and variables, Actions, tạo:
 | Secret | Giá trị |
 | --- | --- |
 | `VPS_HOST` | IP hoặc `api.<tên-miền>` |
-| `VPS_USER` | user SSH (ví dụ `root` hoặc `ubuntu`) |
+| `VPS_USER` | user SSH (Azure: `azureuser`) |
 | `VPS_SSH_KEY` | nội dung file private key ở bước 4.1 |
 | `VPS_SSH_PORT` | chỉ cần nếu SSH không dùng cổng 22 |
 
@@ -215,9 +232,9 @@ Trình duyệt chỉ nói chuyện với Vercel (cùng origin nên cookie hợp 
 | Đăng nhập xong tải lại trang bị đăng xuất | Cookie không lưu được: kiểm tra backend và frontend cùng site, `APP_COOKIE_SECURE=true` chỉ đi với HTTPS |
 | Job deploy báo `denied` khi pull | Repo hoặc package bị đổi quyền. Kiểm tra `BACKEND_IMAGE` viết thường, và workflow có quyền `packages: write` |
 | `deploy.sh` báo `Missing .env` | Chưa tạo `/opt/nihongo-app/.env` (bước 4.3) |
-| Caddy không lấy được chứng chỉ | Bản ghi A chưa trỏ đúng IP, hoặc cổng 80 và 443 bị chặn. Xem `dc logs caddy` |
+| Caddy không lấy được chứng chỉ | Bản ghi A chưa trỏ đúng IP, hoặc cổng 80 và 443 bị chặn (trên Azure là Network Security Group, xem bước 4 của mục 4.1). Xem `dc logs caddy` |
 | Backend không healthy | `dc logs --tail 100 backend`. Thường do sai mật khẩu DB hoặc thiếu `JWT_SECRET` |
-| Hết RAM, backend bị kill | Dùng VPS 2 GB, hoặc giữ swap (script đã tạo) |
+| Hết RAM, backend bị kill | Đặt `JAVA_OPTS` giới hạn heap (xem `.env.prod.example`), giữ swap (script đã tạo), hoặc dùng VM nhiều RAM hơn |
 | Tìm kiếm từ điển trống | Chưa chạy `seed-data.sh` (mục 6) |
 
 ## 11. Lưu ý bảo mật

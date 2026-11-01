@@ -42,6 +42,8 @@ services:
       # RabbitMQ is not deployed, so its health indicator must not report the app as DOWN
       MANAGEMENT_HEALTH_RABBIT_ENABLED: "false"
       LOGGING_LEVEL_ROOT: INFO
+      # JVM options. The default sizes the heap from the machine memory; on a 1 GiB VM set a fixed cap in .env
+      JAVA_OPTS: ${JAVA_OPTS:--XX:MaxRAMPercentage=65 -XX:+UseSerialGC}
     depends_on:
       postgres:
         condition: service_healthy

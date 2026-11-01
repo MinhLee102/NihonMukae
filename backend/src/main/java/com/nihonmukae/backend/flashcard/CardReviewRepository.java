@@ -20,6 +20,8 @@ public interface CardReviewRepository extends JpaRepository<FlashcardReview, UUI
             "AND r.nextReviewAt <= :now")
     List<FlashcardReview> findCardsToReviewToday(@Param("userId") UUID userId, @Param("now") ZonedDateTime now);
 
+    List<FlashcardReview> findByUserIdAndCardDeckId(UUID userId, UUID deckId);
+
     Optional<FlashcardReview> findByUserIdAndCardId(UUID userId, UUID cardId);
 
     @Query("SELECT COUNT(r) FROM FlashcardReview r WHERE r.user.id = :userId AND r.repetitions > 0")

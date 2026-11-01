@@ -101,8 +101,16 @@ public class FlashcardService {
     @Transactional(readOnly = true)
     public List<CardResponse> listCards(UUID userId, UUID deckId) {
         getOwnedDeck(userId, deckId);
+        Map<UUID, ZonedDateTime> nextReviews = new HashMap<>();
+        for (FlashcardReview r : reviewRepository.findByUserIdAndCardDeckId(userId, deckId)) {
+            nextReviews.put(r.getCard().getId(), r.getNextReviewAt());
+        }
         return cardRepository.findByDeckIdOrderByCreatedAtAsc(deckId).stream()
-                .map(this::toCardResponse)
+                .map(c -> {
+                    CardResponse res = toCardResponse(c);
+                    res.setNextReviewAt(nextReviews.get(c.getId()));
+                    return res;
+                })
                 .toList();
     }
 

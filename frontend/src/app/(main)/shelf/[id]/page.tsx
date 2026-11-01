@@ -51,6 +51,9 @@ function Reader() {
   };
 
   const tokens = item?.tokens ?? [];
+  // A title taken automatically from the first line would repeat the text right below it
+  const firstLine = item?.content?.split("\n")[0].trim() ?? "";
+  const showTitle = !!item && item.title !== firstLine && !(item.title.endsWith("…") && firstLine.startsWith(item.title.slice(0, -1)));
 
   return (
     <div className="mx-auto max-w-3xl">
@@ -87,16 +90,19 @@ function Reader() {
 
       {item && (
         <div ref={containerRef} className="relative">
-          <h1 className="mb-8 text-3xl leading-snug text-neutral-900">{item.title}</h1>
+          {showTitle && <h1 className="mb-8 text-3xl leading-snug text-neutral-900">{item.title}</h1>}
 
           <p className="whitespace-pre-wrap text-xl leading-[3] text-neutral-900">
             {tokens.map((token: ShelfToken, i) => {
               const isSelected = selected?.index === i;
               const content = token.parts.map((part, j) =>
                 part.ruby ? (
-                  <ruby key={j}>
+                  // rt is absolutely positioned so hidden furigana does not widen the word
+                  <ruby key={j} className="relative inline-block leading-[1.15]">
                     {part.text}
-                    <rt className="invisible text-[0.5em] text-sky-600 group-hover:visible">{part.ruby}</rt>
+                    <rt className="invisible absolute left-1/2 top-0 -translate-x-1/2 -translate-y-full whitespace-nowrap text-[0.55em] leading-none text-sky-600 group-hover:visible">
+                      {part.ruby}
+                    </rt>
                   </ruby>
                 ) : (
                   <span key={j}>{part.text}</span>

@@ -37,7 +37,7 @@ export const NAV_ITEMS: NavItem[] = [
     href: "/flashcard",
     label: "Flashcard",
     icon: Layers,
-    breadcrumbJa: "カード",
+    breadcrumbJa: "フラッシュカード",
     breadcrumbVi: "Flashcard",
     publicRoute: false,
   },

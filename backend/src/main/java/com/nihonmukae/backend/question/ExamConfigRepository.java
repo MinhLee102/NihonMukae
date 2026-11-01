@@ -44,7 +44,8 @@ public class ExamConfigRepository {
     }
 
     public List<ScoringSection> findScoringSections(int level) {
-        return jdbc.query("SELECT code, sections, max_score, min_score FROM exam_scoring_sections WHERE level = ? ORDER BY code",
+        return jdbc.query("SELECT code, sections, max_score, min_score FROM exam_scoring_sections WHERE level = ? " +
+                        "ORDER BY array_position(ARRAY['language_reading', 'language', 'reading', 'listening'], code)",
                 (rs, i) -> new ScoringSection(rs.getString(1), toList(rs.getArray(2)), rs.getInt(3), rs.getInt(4)),
                 level);
     }

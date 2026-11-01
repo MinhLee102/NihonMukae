@@ -27,11 +27,17 @@ export function SplitPane({
   const containerRef = useRef<HTMLDivElement>(null);
   const [ratio, setRatio] = useState(defaultRatio);
   const [dragging, setDragging] = useState(false);
+  // The ref is read by pointermove straight away: state would lag behind a fast press-and-move
+  const draggingRef = useRef(false);
+  const ratioRef = useRef(defaultRatio);
 
   useEffect(() => {
     try {
       const saved = parseFloat(localStorage.getItem(storageKey) ?? "");
-      if (Number.isFinite(saved)) setRatio(clamp(saved));
+      if (Number.isFinite(saved)) {
+        ratioRef.current = clamp(saved);
+        setRatio(ratioRef.current);
+      }
     } catch {
       // storage unavailable: keep the default
     }
@@ -51,7 +57,9 @@ export function SplitPane({
   const moveTo = (clientX: number) => {
     const box = containerRef.current?.getBoundingClientRect();
     if (!box || box.width === 0) return;
-    setRatio(clamp((clientX - box.left) / box.width));
+    const next = clamp((clientX - box.left) / box.width);
+    ratioRef.current = next;
+    setRatio(next);
   };
 
   const onKeyDown = (e: React.KeyboardEvent) => {
@@ -61,6 +69,7 @@ export function SplitPane({
     else if (e.key === "Home") next = defaultRatio;
     else return;
     e.preventDefault();
+    ratioRef.current = next;
     setRatio(next);
     persist(next);
   };
@@ -81,16 +90,29 @@ export function SplitPane({
         tabIndex={0}
         title="Kéo để đổi kích thước, nhấn đúp để đặt lại"
         onPointerDown={(e) => {
-          e.currentTarget.setPointerCapture(e.pointerId);
+          // Capture keeps the drag alive outside the divider; not every pointer supports it
+          try {
+            e.currentTarget.setPointerCapture(e.pointerId);
+          } catch {
+            // dragging still works while the pointer stays over the page
+          }
+          draggingRef.current = true;
           setDragging(true);
         }}
-        onPointerMove={(e) => dragging && moveTo(e.clientX)}
+        onPointerMove={(e) => draggingRef.current && moveTo(e.clientX)}
         onPointerUp={(e) => {
-          e.currentTarget.releasePointerCapture(e.pointerId);
+          if (draggingRef.current) moveTo(e.clientX);
+          try {
+            e.currentTarget.releasePointerCapture(e.pointerId);
+          } catch {
+            // nothing was captured
+          }
+          draggingRef.current = false;
           setDragging(false);
-          persist(ratio);
+          persist(ratioRef.current);
         }}
         onDoubleClick={() => {
+          ratioRef.current = defaultRatio;
           setRatio(defaultRatio);
           persist(defaultRatio);
         }}

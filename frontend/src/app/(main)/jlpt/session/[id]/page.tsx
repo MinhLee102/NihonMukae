@@ -264,23 +264,25 @@ function Runner() {
           <p className="text-[10px] tracking-widest text-neutral-400">{subtitle}</p>
         </div>
         <div className="ml-auto flex items-center gap-3">
-          <span
-            className={`flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold tabular-nums text-white ${
-              lowTime ? "bg-red-600" : "bg-neutral-900"
-            }`}
-          >
-            {remainingMs === null ? (
-              <>
-                <InfinityIcon size={14} />
-                Không giới hạn
-              </>
-            ) : (
-              <>
-                <Clock size={14} />
-                {formatClock(remainingMs)}
-              </>
-            )}
-          </span>
+          {activeBlock && (
+            <span
+              className={`flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold tabular-nums text-white ${
+                lowTime ? "bg-red-600" : "bg-neutral-900"
+              }`}
+            >
+              {remainingMs === null ? (
+                <>
+                  <InfinityIcon size={14} />
+                  Không giới hạn
+                </>
+              ) : (
+                <>
+                  <Clock size={14} />
+                  {formatClock(remainingMs)}
+                </>
+              )}
+            </span>
+          )}
           <button
             type="button"
             onClick={() => setDialog("submit")}

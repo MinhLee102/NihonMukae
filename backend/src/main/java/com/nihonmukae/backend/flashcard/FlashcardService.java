@@ -244,7 +244,7 @@ public class FlashcardService {
                 .filter(m -> "vi".equals(m.getLang()))
                 .findFirst()
                 .or(() -> meanings.stream().findFirst())
-                .map(m -> m.getMeaning().replaceFirst("^◆\s*", "").replaceFirst("[.。]\s*$", ""))
+                .map(m -> m.getMeaning().replaceFirst("^◆\\s*", "").replaceFirst("[.。]\\s*$", ""))
                 .orElse("");
 
         List<ExampleSentence> examples = word.getExamples() == null ? List.of() : word.getExamples().stream()
@@ -257,8 +257,7 @@ public class FlashcardService {
         String line = isBlank(example.getTranslation())
                 ? example.getSentence().trim()
                 : example.getSentence().trim() + " – " + example.getTranslation().trim();
-        return meaning + "
-" + line;
+        return meaning + "\n" + line;
     }
 
     private void requireContent(String front, String back) {

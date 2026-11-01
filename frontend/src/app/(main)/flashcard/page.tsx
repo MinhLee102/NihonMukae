@@ -91,7 +91,7 @@ function DeckList() {
       {showCreate && (
         <DeckFormModal
           onClose={() => setShowCreate(false)}
-          onCreated={(deck) => {
+          onSaved={(deck) => {
             setShowCreate(false);
             setDecks((prev) => [deck, ...prev]);
           }}

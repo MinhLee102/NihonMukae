@@ -2,20 +2,23 @@
 
 import { useState } from "react";
 import { X } from "lucide-react";
-import { createDeck, getApiErrorMessage, type DeckDto } from "@/lib/api/flashcard";
+import { createDeck, updateDeck, getApiErrorMessage, type DeckDto } from "@/lib/api/flashcard";
 
 const COLORS = ["#1A1A1A", "#C0392B", "#D68910", "#1E8449", "#2874A6", "#7D3C98"];
 
+/** Create a deck, or edit one when `deck` is given. */
 export function DeckFormModal({
+  deck,
   onClose,
-  onCreated,
+  onSaved,
 }: {
+  deck?: DeckDto;
   onClose: () => void;
-  onCreated: (deck: DeckDto) => void;
+  onSaved: (deck: DeckDto) => void;
 }) {
-  const [name, setName] = useState("");
-  const [description, setDescription] = useState("");
-  const [color, setColor] = useState(COLORS[0]);
+  const [name, setName] = useState(deck?.name ?? "");
+  const [description, setDescription] = useState(deck?.description ?? "");
+  const [color, setColor] = useState(deck?.color ?? COLORS[0]);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -28,8 +31,8 @@ export function DeckFormModal({
     try {
       setSaving(true);
       setError(null);
-      const deck = await createDeck({ name: name.trim(), description: description.trim() || undefined, color });
-      onCreated(deck);
+      const input = { name: name.trim(), description: description.trim() || undefined, color };
+      onSaved(deck ? await updateDeck(deck.id, input) : await createDeck(input));
     } catch (err) {
       setError(getApiErrorMessage(err));
     } finally {
@@ -41,7 +44,7 @@ export function DeckFormModal({
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 px-4">
       <form onSubmit={submit} className="w-full max-w-md rounded-2xl bg-white p-6 shadow-xl">
         <div className="mb-4 flex items-center justify-between">
-          <h2 className="text-lg font-semibold text-neutral-900">Tạo bộ mới</h2>
+          <h2 className="text-lg font-semibold text-neutral-900">{deck ? "Sửa bộ" : "Tạo bộ mới"}</h2>
           <button type="button" onClick={onClose} aria-label="Đóng" className="text-neutral-400 hover:text-neutral-700">
             <X size={18} />
           </button>
@@ -90,7 +93,7 @@ export function DeckFormModal({
             disabled={saving}
             className="rounded-full bg-neutral-900 px-5 py-2 text-sm font-medium text-white disabled:opacity-50"
           >
-            {saving ? "Đang tạo..." : "Tạo bộ"}
+            {saving ? "Đang lưu..." : deck ? "Lưu" : "Tạo bộ"}
           </button>
         </div>
       </form>

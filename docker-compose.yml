@@ -43,6 +43,8 @@ services:
       JWT_SECRET: "${JWT_SECRET:-dev-secret-key-min-256-bits-for-hs256-algorithm!!}"
       LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_SECURITY: DEBUG
       LOGGING_LEVEL_ROOT: INFO
+      # Dev only: nạp câu hỏi JLPT mẫu (tự soạn) khi kho còn rỗng
+      APP_JLPT_SEED_SAMPLE: "true"
     depends_on:
       - postgres
       - redis

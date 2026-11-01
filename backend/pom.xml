@@ -103,6 +103,11 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
+			<groupId>com.atilika.kuromoji</groupId>
+			<artifactId>kuromoji-ipadic</artifactId>
+			<version>0.9.0</version>
+		</dependency>
+		<dependency>
 			<groupId>io.jsonwebtoken</groupId>
 			<artifactId>jjwt-api</artifactId>
 			<version>0.12.6</version>

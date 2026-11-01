@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { ChevronLeft } from "lucide-react";
+import { cardFontClass } from "@/lib/japanese";
 import { RequireAuth } from "@/components/flashcard/RequireAuth";
 import { createCard, getApiErrorMessage } from "@/lib/api/flashcard";
 
@@ -66,7 +67,7 @@ function NewCardForm() {
             value={front}
             onChange={(e) => setFront(e.target.value)}
             placeholder="日本語..."
-            className="h-80 w-[28rem] max-w-full resize-none rounded-2xl bg-white p-6 font-serif text-4xl text-neutral-900 shadow-md outline-none placeholder:text-neutral-300"
+            className={`h-80 w-[28rem] max-w-full resize-none rounded-2xl bg-white p-6 ${cardFontClass(front)} text-4xl text-neutral-900 shadow-md outline-none placeholder:text-neutral-300`}
           />
           <span className="text-xs text-neutral-500">Từ vựng, kanji hoặc mẫu câu</span>
         </div>

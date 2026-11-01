@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { ChevronLeft, Plus } from "lucide-react";
+import { cardFontClass } from "@/lib/japanese";
 import { RequireAuth } from "@/components/flashcard/RequireAuth";
 import { useAuthStore } from "@/store/authStore";
 import {
@@ -26,7 +27,7 @@ function CardText({ text, light }: { text: string; light?: boolean }) {
   const [main, ...rest] = text.split("\n");
   return (
     <>
-      <p className={`font-serif text-6xl ${light ? "text-white" : "text-neutral-900"}`}>{main}</p>
+      <p className={`${cardFontClass(main)} text-6xl ${light ? "text-white" : "text-neutral-900"}`}>{main}</p>
       {rest.length > 0 && (
         <p className={`mt-4 text-xl ${light ? "text-neutral-400" : "text-neutral-500"}`}>{rest.join(" ")}</p>
       )}

@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { ChevronLeft, Pencil, Plus, Search, Trash2 } from "lucide-react";
+import { cardFontClass } from "@/lib/japanese";
 import { RequireAuth } from "@/components/flashcard/RequireAuth";
 import { DeckFormModal } from "@/components/flashcard/DeckFormModal";
 import { useAuthStore } from "@/store/authStore";
@@ -91,7 +92,7 @@ function CardRow({
             value={front}
             onChange={(e) => setFront(e.target.value)}
             rows={3}
-            className="resize-none rounded-xl border border-black/10 p-3 font-serif text-lg outline-none focus:border-black/30"
+            className={`resize-none rounded-xl border border-black/10 p-3 ${cardFontClass(front)} text-lg outline-none focus:border-black/30`}
           />
           <textarea
             value={back}
@@ -134,7 +135,7 @@ function CardRow({
   return (
     <div className="flex items-center gap-4 rounded-2xl border border-black/5 bg-white px-5 py-4">
       <div className="min-w-0 flex-1">
-        <p className="truncate font-serif text-lg text-neutral-900">{frontMain}</p>
+        <p className={`truncate ${cardFontClass(frontMain)} text-lg text-neutral-900`}>{frontMain}</p>
         {frontRest.length > 0 && <p className="truncate text-xs text-neutral-400">{frontRest.join(" ")}</p>}
       </div>
       <div className="min-w-0 flex-1">

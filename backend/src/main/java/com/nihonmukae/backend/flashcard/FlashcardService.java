@@ -9,6 +9,7 @@ import com.nihonmukae.backend.flashcard.dto.DeckResponse;
 import com.nihonmukae.backend.flashcard.dto.FlashcardStatsResponse;
 import com.nihonmukae.backend.flashcard.dto.ReviewResultResponse;
 import com.nihonmukae.backend.shared.entity.FlashcardReview;
+import com.nihonmukae.backend.shared.entity.ExampleSentence;
 import com.nihonmukae.backend.shared.entity.Flashcard;
 import com.nihonmukae.backend.shared.entity.FlashcardDeck;
 import com.nihonmukae.backend.shared.entity.Word;
@@ -22,6 +23,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
+import java.util.concurrent.ThreadLocalRandom;
 
 @Service
 public class FlashcardService {
@@ -234,15 +236,29 @@ public class FlashcardService {
         return word.getKanji() + "\n" + word.getKana();
     }
 
-    // Mặt sau: nghĩa tiếng Việt đầu tiên, không có thì lấy nghĩa đầu tiên bất kỳ
+    // Mặt sau: nghĩa tiếng Việt đầu tiên (không có thì nghĩa đầu tiên bất kỳ),
+    // kèm 1 câu ví dụ ngẫu nhiên ở dòng thứ hai nếu từ có ví dụ
     private String buildBack(Word word) {
         List<WordMeaning> meanings = word.getMeanings() == null ? List.of() : word.getMeanings();
-        return meanings.stream()
+        String meaning = meanings.stream()
                 .filter(m -> "vi".equals(m.getLang()))
                 .findFirst()
                 .or(() -> meanings.stream().findFirst())
-                .map(m -> m.getMeaning().replaceFirst("^◆\\s*", "").replaceFirst("[.。]\\s*$", ""))
+                .map(m -> m.getMeaning().replaceFirst("^◆\s*", "").replaceFirst("[.。]\s*$", ""))
                 .orElse("");
+
+        List<ExampleSentence> examples = word.getExamples() == null ? List.of() : word.getExamples().stream()
+                .filter(e -> !isBlank(e.getSentence()))
+                .toList();
+        if (examples.isEmpty()) {
+            return meaning;
+        }
+        ExampleSentence example = examples.get(ThreadLocalRandom.current().nextInt(examples.size()));
+        String line = isBlank(example.getTranslation())
+                ? example.getSentence().trim()
+                : example.getSentence().trim() + " – " + example.getTranslation().trim();
+        return meaning + "
+" + line;
     }
 
     private void requireContent(String front, String back) {

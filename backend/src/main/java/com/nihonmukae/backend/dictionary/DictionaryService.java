@@ -70,12 +70,12 @@ public class DictionaryService {
             return new SearchResultResponse(PageResponse.of(Page.empty(pageable)), MATCH_NONE);
         }
 
-        Page<Word> wordFormPage = wordRepository.searchFullText(tsQuery, pageable);
+        Page<Word> wordFormPage = wordRepository.searchFullText(tsQuery, rawQuery.trim(), pageable);
         if (!wordFormPage.isEmpty() || pageable.getPageNumber() > 0) {
             return toSearchResult(wordFormPage, effectiveLang, MATCH_WORD_FORM);
         }
 
-        Page<Word> meaningPage = wordRepository.searchByMeaning(tsQuery, pageable);
+        Page<Word> meaningPage = wordRepository.searchByMeaning(tsQuery, rawQuery.trim(), pageable);
         if (!meaningPage.isEmpty()) {
             return toSearchResult(meaningPage, effectiveLang, MATCH_MEANING);
         }

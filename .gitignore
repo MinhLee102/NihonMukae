@@ -13,3 +13,7 @@ __pycache__/
 # OS
 .DS_Store
 Thumbs.db
+# JMdict backfill script
+scripts/jmdict/venv/
+scripts/jmdict/JMdict_e
+scripts/jmdict/JMdict_e.xml

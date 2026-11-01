@@ -28,6 +28,8 @@ export interface CardDto {
   imageUrl?: string;
   wordId?: number;
   createdAt: string;
+  /** Only set by the deck card list; null/undefined means not studied yet. */
+  nextReviewAt?: string | null;
 }
 
 export interface CardInput {

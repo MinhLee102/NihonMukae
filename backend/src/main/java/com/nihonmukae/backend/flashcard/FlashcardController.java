@@ -1,6 +1,8 @@
 package com.nihonmukae.backend.flashcard;
 
 import com.nihonmukae.backend.auth.jwt.JwtUserPrincipal;
+import com.nihonmukae.backend.flashcard.dto.CardRequest;
+import com.nihonmukae.backend.flashcard.dto.CardResponse;
 import com.nihonmukae.backend.flashcard.dto.DeckRequest;
 import com.nihonmukae.backend.flashcard.dto.DeckResponse;
 import com.nihonmukae.backend.shared.dto.ApiResponse;
@@ -45,6 +47,33 @@ public class FlashcardController {
                                                 @PathVariable UUID id,
                                                 @Valid @RequestBody DeckRequest req) {
         return ApiResponse.success(flashcardService.updateDeck(principal.getId(), id, req));
+    }
+
+    @GetMapping("/decks/{id}/cards")
+    public ApiResponse<List<CardResponse>> listCards(@AuthenticationPrincipal JwtUserPrincipal principal,
+                                                     @PathVariable UUID id) {
+        return ApiResponse.success(flashcardService.listCards(principal.getId(), id));
+    }
+
+    @PostMapping("/decks/{id}/cards")
+    public ApiResponse<CardResponse> createCard(@AuthenticationPrincipal JwtUserPrincipal principal,
+                                                @PathVariable UUID id,
+                                                @RequestBody CardRequest req) {
+        return ApiResponse.success(flashcardService.createCard(principal.getId(), id, req));
+    }
+
+    @PutMapping("/cards/{id}")
+    public ApiResponse<CardResponse> updateCard(@AuthenticationPrincipal JwtUserPrincipal principal,
+                                                @PathVariable UUID id,
+                                                @RequestBody CardRequest req) {
+        return ApiResponse.success(flashcardService.updateCard(principal.getId(), id, req));
+    }
+
+    @DeleteMapping("/cards/{id}")
+    public ApiResponse<Void> deleteCard(@AuthenticationPrincipal JwtUserPrincipal principal,
+                                        @PathVariable UUID id) {
+        flashcardService.deleteCard(principal.getId(), id);
+        return ApiResponse.success(null);
     }
 
     @DeleteMapping("/decks/{id}")

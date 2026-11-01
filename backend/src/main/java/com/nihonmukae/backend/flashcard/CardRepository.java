@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @Repository
@@ -13,6 +14,11 @@ public interface CardRepository extends JpaRepository<Flashcard, UUID> {
 
     // Lấy toàn bộ danh sách các thẻ flashcard nằm trong một bộ deck nhất định
     List<Flashcard> findByDeckId(UUID deckId);
+
+    List<Flashcard> findByDeckIdOrderByCreatedAtAsc(UUID deckId);
+
+    // Tìm kèm chủ sở hữu deck để user không sửa/xóa được card của người khác
+    Optional<Flashcard> findByIdAndDeckUserId(UUID id, UUID userId);
 
     long countByDeckId(UUID deckId);
 

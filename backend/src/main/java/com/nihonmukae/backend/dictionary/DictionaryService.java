@@ -121,6 +121,7 @@ public class DictionaryService {
     }
 
     @Cacheable(cacheNames = "dictLookup")
+    @Transactional(readOnly = true)
     public WordLookupResponse lookup(String kanji, String kana) {
         boolean hasKanji = kanji != null && !kanji.isBlank();
         boolean hasKana = kana != null && !kana.isBlank();

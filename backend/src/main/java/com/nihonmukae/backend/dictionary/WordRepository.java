@@ -28,20 +28,16 @@ public interface WordRepository extends JpaRepository<Word, Long> {
      * cách ("にほん にっぽん") nên so khớp từng cách đọc. Từ khớp cách đọc lên
      * trước, rồi tới từ phổ biến hơn (frequency_rank nhỏ hơn).
      */
-    @Query("SELECT DISTINCT w FROM Word w " +
-            "LEFT JOIN FETCH w.meanings " +
-            "LEFT JOIN FETCH w.examples " +
+    @Query("SELECT w FROM Word w " +
             "WHERE w.kanji = :kanji " +
             "ORDER BY CASE WHEN :kana <> '' AND (w.kana = :kana OR w.kana LIKE concat(:kana, ' %') " +
             "OR w.kana LIKE concat('% ', :kana) OR w.kana LIKE concat('% ', :kana, ' %')) THEN 0 ELSE 1 END, " +
             "w.frequencyRank ASC NULLS LAST, w.id ASC")
     List<Word> findLookupByKanji(@Param("kanji") String kanji, @Param("kana") String kana);
 
-    // Từ thuần kana (không có dạng kanji), cũng so khớp từng cách đọc
-    @Query("SELECT DISTINCT w FROM Word w " +
-            "LEFT JOIN FETCH w.meanings " +
-            "LEFT JOIN FETCH w.examples " +
-            "WHERE w.kanji IS NULL AND (w.kana = :kana OR w.kana LIKE concat(:kana, ' %') " +
+    // Từ thuần kana (kanji NULL hoặc Mazii lặp lại kana vào cột kanji), cũng so khớp từng cách đọc
+    @Query("SELECT w FROM Word w " +
+            "WHERE (w.kanji IS NULL OR w.kanji = w.kana) AND (w.kana = :kana OR w.kana LIKE concat(:kana, ' %') " +
             "OR w.kana LIKE concat('% ', :kana) OR w.kana LIKE concat('% ', :kana, ' %')) " +
             "ORDER BY w.frequencyRank ASC NULLS LAST, w.id ASC")
     List<Word> findLookupByKanaOnly(@Param("kana") String kana);

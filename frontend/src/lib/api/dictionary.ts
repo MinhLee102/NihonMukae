@@ -85,14 +85,12 @@ export const getSearchHistory = async (
   return data;
 };
 
-// Lookup a word by its kana and optional kanji. Returns the word details if found.
-// Later use for the "lookup" feature, where users can click on a word to see its full details.
-export const lookupWord = async (
-  kana: string,
-  kanji?: string
-): Promise<ApiResponse<WordDto>> => {
-  const { data } = await apiClient.get<ApiResponse<WordDto>>('/dictionary/lookup', {
-    params: { kana, kanji },
-  });
+// Lookup a word for inline popups (My Shelf, JLPT). Pass the kanji form and/or the
+// kana reading; kana is optional when the kanji form is known (e.g. inflected verbs).
+export const lookupWord = async (params: {
+  kanji?: string;
+  kana?: string;
+}): Promise<ApiResponse<WordDto>> => {
+  const { data } = await apiClient.get<ApiResponse<WordDto>>('/dictionary/lookup', { params });
   return data;
 };

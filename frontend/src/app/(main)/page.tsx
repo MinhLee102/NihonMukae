@@ -5,6 +5,7 @@ import { Clock, BookOpen, Volume2, CheckCircle2 } from "lucide-react";
 import { QuoteBanner } from "../../components/QuoteBanner";
 import { SearchBar } from "../../components/SearchBar";
 import { RecentWordCard, type RecentWord } from "../../components/RecentWordCard";
+import { AddToFlashcardButton } from "@/components/flashcard/AddToFlashcardButton";
 import { useAuthStore } from "@/store/authStore";
 import {
   searchDictionary,
@@ -193,14 +194,17 @@ export default function DictionaryPage() {
                     </div>
                   </div>
 
-                  <button
-                    type="button"
-                    onClick={() => handleSpeak(selectedWord.kanji || selectedWord.kana)}
-                    className="rounded-full p-2 text-neutral-400 transition hover:bg-neutral-100 hover:text-neutral-700"
-                    title="Phát âm"
-                  >
-                    <Volume2 size={22} strokeWidth={1.75} />
-                  </button>
+                  <div className="flex items-center gap-1">
+                    <AddToFlashcardButton wordId={selectedWord.id} />
+                    <button
+                      type="button"
+                      onClick={() => handleSpeak(selectedWord.kanji || selectedWord.kana)}
+                      className="rounded-full p-2 text-neutral-400 transition hover:bg-neutral-100 hover:text-neutral-700"
+                      title="Phát âm"
+                    >
+                      <Volume2 size={22} strokeWidth={1.75} />
+                    </button>
+                  </div>
                 </div>
 
                 <div className="h-px bg-neutral-100" />

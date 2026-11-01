@@ -66,7 +66,7 @@ function NewCardForm() {
             value={front}
             onChange={(e) => setFront(e.target.value)}
             placeholder="日本語..."
-            className="h-52 w-80 resize-none rounded-2xl bg-white p-5 font-serif text-2xl text-neutral-900 shadow-md outline-none placeholder:text-neutral-300"
+            className="h-80 w-[28rem] max-w-full resize-none rounded-2xl bg-white p-6 font-serif text-4xl text-neutral-900 shadow-md outline-none placeholder:text-neutral-300"
           />
           <span className="text-xs text-neutral-500">Từ vựng, kanji hoặc mẫu câu</span>
         </div>
@@ -76,7 +76,7 @@ function NewCardForm() {
             value={back}
             onChange={(e) => setBack(e.target.value)}
             placeholder="Nghĩa, phiên âm, ví dụ..."
-            className="h-52 w-80 resize-none rounded-2xl bg-[#1A1A1A] p-5 text-xl text-white shadow-md outline-none placeholder:text-neutral-500"
+            className="h-80 w-[28rem] max-w-full resize-none rounded-2xl bg-[#1A1A1A] p-6 text-3xl text-white shadow-md outline-none placeholder:text-neutral-500"
           />
           <span className="text-xs text-neutral-500">Nghĩa, phiên âm hoặc ví dụ</span>
         </div>

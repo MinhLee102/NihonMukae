@@ -26,9 +26,9 @@ function CardText({ text, light }: { text: string; light?: boolean }) {
   const [main, ...rest] = text.split("\n");
   return (
     <>
-      <p className={`font-serif text-4xl ${light ? "text-white" : "text-neutral-900"}`}>{main}</p>
+      <p className={`font-serif text-6xl ${light ? "text-white" : "text-neutral-900"}`}>{main}</p>
       {rest.length > 0 && (
-        <p className={`mt-3 text-base ${light ? "text-neutral-400" : "text-neutral-500"}`}>{rest.join(" ")}</p>
+        <p className={`mt-4 text-xl ${light ? "text-neutral-400" : "text-neutral-500"}`}>{rest.join(" ")}</p>
       )}
     </>
   );
@@ -85,7 +85,7 @@ function StudySession() {
   const finished = !loading && !error && index >= cards.length;
 
   return (
-    <div className="mx-auto flex max-w-[448px] flex-col items-stretch pt-16">
+    <div className="mx-auto flex max-w-[720px] flex-col items-stretch pt-16">
       <div className="mb-6 flex items-center gap-3 text-sm">
         <button
           type="button"
@@ -127,17 +127,17 @@ function StudySession() {
             <button
               type="button"
               onClick={() => setFlipped((f) => !f)}
-              className={`relative h-60 w-full transition-transform duration-500 [transform-style:preserve-3d] ${
+              className={`relative h-96 w-full transition-transform duration-500 [transform-style:preserve-3d] ${
                 flipped ? "[transform:rotateY(180deg)]" : ""
               }`}
             >
-              <div className="absolute inset-0 flex flex-col items-center justify-center rounded-3xl bg-white px-6 text-center shadow-md [backface-visibility:hidden]">
-                <span className="mb-4 text-[10px] tracking-widest text-neutral-400">MẶT TRƯỚC</span>
+              <div className="absolute inset-0 flex flex-col items-center justify-center rounded-3xl bg-white px-8 text-center shadow-md [backface-visibility:hidden]">
+                <span className="mb-6 text-xs tracking-widest text-neutral-400">MẶT TRƯỚC</span>
                 <CardText text={current.front} />
-                <span className="mt-8 text-xs text-neutral-300">Nhấn để lật thẻ</span>
+                <span className="mt-10 text-sm text-neutral-300">Nhấn để lật thẻ</span>
               </div>
-              <div className="absolute inset-0 flex flex-col items-center justify-center rounded-3xl bg-[#1A1A1A] px-6 text-center shadow-md [backface-visibility:hidden] [transform:rotateY(180deg)]">
-                <span className="mb-4 text-[10px] tracking-widest text-neutral-500">MẶT SAU</span>
+              <div className="absolute inset-0 flex flex-col items-center justify-center rounded-3xl bg-[#1A1A1A] px-8 text-center shadow-md [backface-visibility:hidden] [transform:rotateY(180deg)]">
+                <span className="mb-6 text-xs tracking-widest text-neutral-500">MẶT SAU</span>
                 <CardText text={current.back} light />
               </div>
             </button>
@@ -150,7 +150,7 @@ function StudySession() {
                 type="button"
                 disabled={submitting}
                 onClick={() => submit(r.rating)}
-                className={`rounded-full border py-2.5 text-sm font-medium transition disabled:opacity-50 ${r.className}`}
+                className={`rounded-full border py-3.5 text-base font-medium transition disabled:opacity-50 ${r.className}`}
               >
                 {r.label}
               </button>

@@ -3,6 +3,7 @@ package com.nihonmukae.backend.auth;
 import com.nihonmukae.backend.shared.entity.User;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -22,6 +23,10 @@ public class AuthController {
 
     private final AuthService authService;
 
+    // true khi chạy sau HTTPS (production): trình duyệt chỉ gửi cookie refresh qua kết nối mã hóa
+    @Value("${app.cookie.secure:false}")
+    private boolean cookieSecure;
+
     private static final String REFRESH_COOKIE_NAME = "refresh_token";
 
     @PostMapping("/register")
@@ -31,7 +36,7 @@ public class AuthController {
         String rawRefresh = authService.createAndStoreRefreshToken(u);
         ResponseCookie cookie = ResponseCookie.from(REFRESH_COOKIE_NAME, rawRefresh)
                 .httpOnly(true)
-                        .secure(false)
+                        .secure(cookieSecure)
                         .path("/")
                         .maxAge(Duration.ofDays(30))
                         .sameSite("Lax")
@@ -48,7 +53,7 @@ public class AuthController {
                     String rawRefresh = authService.createAndStoreRefreshToken(user);
                     ResponseCookie cookie = ResponseCookie.from(REFRESH_COOKIE_NAME, rawRefresh)
                             .httpOnly(true)
-                            .secure(false)
+                            .secure(cookieSecure)
                             .path("/")
                             .maxAge(Duration.ofDays(30))
                             .sameSite("Lax")
@@ -80,7 +85,7 @@ public class AuthController {
         String rawRefresh = authService.createAndStoreRefreshToken(user);
         ResponseCookie cookie = ResponseCookie.from(REFRESH_COOKIE_NAME, rawRefresh)
                 .httpOnly(true)
-                        .secure(false)
+                        .secure(cookieSecure)
                 .path("/")
                 .maxAge(Duration.ofDays(30))
                 .sameSite("Lax")
@@ -102,7 +107,7 @@ public class AuthController {
         }
         ResponseCookie cookie = ResponseCookie.from(REFRESH_COOKIE_NAME, "")
                 .httpOnly(true)
-                        .secure(false)
+                        .secure(cookieSecure)
                 .path("/")
                 .maxAge(Duration.ofSeconds(0))
                 .sameSite("Lax")

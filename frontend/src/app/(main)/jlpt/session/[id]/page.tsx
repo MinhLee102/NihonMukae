@@ -93,8 +93,8 @@ function Runner() {
   const exam = view?.mode === "exam";
   const activeBlock = view?.blocks.find((b) => b.status === "active");
   const pendingBlock = view?.blocks.find((b) => b.status === "pending");
-  const remainingMs =
-    activeBlock?.deadline !== undefined ? new Date(activeBlock.deadline).getTime() - (nowMs + offsetMs) : null;
+  // A block without a deadline (unlimited practice) comes back as null, which must not read as "time is up"
+  const remainingMs = activeBlock?.deadline ? new Date(activeBlock.deadline).getTime() - (nowMs + offsetMs) : null;
 
   const finalSubmit = useCallback(async () => {
     if (finalising.current) return;

@@ -81,11 +81,12 @@ export type BlockStatus = 'pending' | 'active' | 'closed';
 export interface BlockViewDto {
   blockNo: number;
   name: string;
-  durationMin?: number;
+  durationMin?: number | null;
   questionCount: number;
   status: BlockStatus;
-  startedAt?: string;
-  deadline?: string;
+  startedAt?: string | null;
+  /** null for a block without a time limit (unlimited practice). */
+  deadline?: string | null;
 }
 
 export interface GroupViewDto {

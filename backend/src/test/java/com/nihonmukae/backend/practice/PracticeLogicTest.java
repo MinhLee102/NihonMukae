@@ -93,4 +93,26 @@ class PracticeLogicTest {
             assertEquals(2, UnitSelector.countQuestions(UnitSelector.select(pool, 2, new Random(seed))));
         }
     }
+
+    private static com.nihonmukae.backend.shared.entity.PracticeAnswer answer(int position, int block, int type) {
+        return com.nihonmukae.backend.shared.entity.PracticeAnswer.builder()
+                .position((short) position).blockNo((short) block).typeId((short) type).points(BigDecimal.ONE).build();
+    }
+
+    @Test
+    void mondaiNumberChangesWithTypeAndRestartsPerBlock() {
+        List<com.nihonmukae.backend.shared.entity.PracticeAnswer> answers = List.of(
+                answer(1, 1, 1), answer(2, 1, 1), answer(3, 1, 2), answer(4, 1, 2), answer(5, 1, 3),
+                answer(6, 2, 7), answer(7, 2, 7), answer(8, 2, 8));
+        java.util.Map<Integer, Integer> m = PracticeSessionService.mondaiNumbers(answers);
+        assertEquals(1, m.get(1));
+        assertEquals(1, m.get(2));
+        assertEquals(2, m.get(3));
+        assertEquals(2, m.get(4));
+        assertEquals(3, m.get(5));
+        // a new block starts again from 問題1
+        assertEquals(1, m.get(6));
+        assertEquals(1, m.get(7));
+        assertEquals(2, m.get(8));
+    }
 }

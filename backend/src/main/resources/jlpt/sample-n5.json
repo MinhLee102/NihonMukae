@@ -1,49 +1,45 @@
 {
-  "test": { "level": 5, "title": "Đề mẫu N5 (soạn thử) 01", "source_note": "Dữ liệu mẫu tự soạn để chạy thử, không phải đề thật" },
+  "test": {"level": 5, "title": "Đề mẫu N5 (soạn thử) 01", "source_note": "Dữ liệu mẫu tự soạn để chạy thử, không phải đề thật"},
   "questions": [
-    { "type": "kanji_reading", "question": "「学校」の読み方として最もよいものを選びなさい。", "options": ["がっこう", "がくこう", "かっこう", "がっこ"], "correct": "A", "explanation": "「学校」は「がっこう」と読みます。「学」は「がっ」と促音になります。" },
-    { "type": "kanji_reading", "question": "「火曜日」の読み方として最もよいものを選びなさい。", "options": ["ひようび", "かようび", "かよび", "ひよび"], "correct": "B", "explanation": "火曜日は「かようび」。「火」は曜日では「か」と読みます。" },
-    { "type": "kanji_reading", "question": "「安い」の読み方として最もよいものを選びなさい。", "options": ["あんい", "あすい", "やすい", "やさい"], "correct": "C", "explanation": "「安い」は「やすい」。「やさい」は「野菜」です。" },
-    { "type": "orthography", "question": "「がくせい」を漢字で書くとき、最もよいものを選びなさい。", "options": ["学生", "字生", "学主", "字主"], "correct": "A", "explanation": "学生（がくせい）。「学」と「字」の形に注意しましょう。" },
-    { "type": "orthography", "question": "「みせ」を漢字で書くとき、最もよいものを選びなさい。", "options": ["庫", "店", "広", "度"], "correct": "B", "explanation": "店（みせ）。「広」は「ひろい」、「度」は「ど」です。" },
-    { "type": "context_word", "question": "のどがかわいたので、（　）を飲みました。", "options": ["くつ", "みず", "ほん", "いぬ"], "correct": "B", "explanation": "「飲む」ものは「みず（水）」です。" },
-    { "type": "context_word", "question": "このかばんはとても（　）ですから、持てません。", "options": ["おもい", "あかるい", "ひろい", "はやい"], "correct": "A", "explanation": "持てない理由になるのは「おもい（重い）」です。" },
-    { "type": "context_word", "question": "きのう、えいがを（　）ました。", "options": ["よみ", "のみ", "み", "かき"], "correct": "C", "explanation": "映画は「見る」ものです。" },
-    { "type": "synonym", "question": "「わたしのへやはせまいです。」と同じ意味の文はどれですか。", "options": ["わたしのへやはひろくないです。", "わたしのへやはあたらしいです。", "わたしのへやはきれいです。", "わたしのへやはふるいです。"], "correct": "A", "explanation": "「せまい」は「ひろくない」と近い意味です。" },
-    { "type": "synonym", "question": "「ちちはおなかがすいています。」と同じ意味の文はどれですか。", "options": ["ちちはごはんを食べたいです。", "ちちはねたいです。", "ちちはのどがいたいです。", "ちちはつかれています。"], "correct": "A", "explanation": "おなかがすいている人は、食べたいと思っています。" },
-    { "type": "grammar_choice", "question": "わたし（　）日本語の先生です。", "options": ["を", "が", "は", "に"], "correct": "C", "explanation": "「AはBです」の文。主題を表す「は」を使います。" },
-    { "type": "grammar_choice", "question": "あした、ともだち（　）会います。", "options": ["に", "を", "で", "の"], "correct": "A", "explanation": "「会う」は相手に「に」を使います。" },
-    { "type": "grammar_choice", "question": "このかばんはだれ（　）ですか。", "options": ["に", "の", "を", "で"], "correct": "B", "explanation": "「だれのですか」は持ち主をたずねる言い方です。" },
-    { "type": "grammar_choice", "question": "きのうは雨（　）降りました。", "options": ["が", "を", "に", "で"], "correct": "A", "explanation": "天気の現象は「が」で表します。" },
-    { "type": "grammar_ordering", "question": "わたしは ＿＿＿ ＿★＿ ＿＿＿ ＿＿＿。\nＡ えいがを　Ｂ ともだちと　Ｃ 見ました　Ｄ きのう", "options": ["えいがを", "ともだちと", "見ました", "きのう"], "correct": "B", "explanation": "正しい順番は「きのう→ともだちと→えいがを→見ました」。★に入るのは「ともだちと」です。" },
-    { "type": "grammar_ordering", "question": "あした ＿＿＿ ＿★＿ ＿＿＿ ＿＿＿ いきます。\nＡ かいものに　Ｂ ともだちと　Ｃ デパートへ　Ｄ いっしょに", "options": ["かいものに", "ともだちと", "デパートへ", "いっしょに"], "correct": "D", "explanation": "正しい順番は「ともだちと→いっしょに→デパートへ→かいものに」。★は「いっしょに」です。" },
-    { "type": "listen_quick", "question": "【音声スクリプト】男：いただきます。\n女：（　）", "options": ["どうぞ、めしあがれ。", "ありがとうございました。", "いってきます。"], "correct": "A", "explanation": "「いただきます」に対しては「どうぞ、めしあがれ」と答えます。" },
-    { "type": "listen_quick", "question": "【音声スクリプト】女：ただいま。\n男：（　）", "options": ["いってきます。", "おかえりなさい。", "はじめまして。"], "correct": "B", "explanation": "「ただいま」に対しては「おかえりなさい」と答えます。" },
-    { "type": "listen_task", "question": "【音声スクリプト】男の人と女の人が話しています。\n男：もう昼ごはんの時間ですね。\n女：はい。でも、先にこの手紙を出してきます。\n男：わかりました。\n\n女の人はこのあとまず何をしますか。", "options": ["ひるごはんを食べる", "てがみを出す", "かいしゃへもどる", "ともだちに電話する"], "correct": "B", "explanation": "女の人は「先に手紙を出してきます」と言っています。" }
+    {"type": "kanji_reading", "question": "わたしは毎日<u>学校</u>へ行きます。", "options": ["がっこう", "がくこう", "かっこう", "がっこ"], "correct": "A", "explanation": "「学校」は「がっこう」と読みます。「学」は「がっ」と促音になります。"},
+    {"type": "kanji_reading", "question": "<u>火曜日</u>に友だちに会います。", "options": ["ひようび", "かようび", "かよび", "ひよび"], "correct": "B", "explanation": "火曜日は「かようび」。「火」は曜日では「か」と読みます。"},
+    {"type": "kanji_reading", "question": "この店のパンは<u>安い</u>です。", "options": ["あんい", "あすい", "やすい", "やさい"], "correct": "C", "explanation": "「安い」は「やすい」。「やさい」は「野菜」です。"},
+    {"type": "orthography", "question": "わたしは<u>がくせい</u>です。", "options": ["学生", "字生", "学主", "字主"], "correct": "A", "explanation": "学生（がくせい）。「学」と「字」の形に注意しましょう。"},
+    {"type": "orthography", "question": "あの<u>みせ</u>でパンを買いました。", "options": ["庫", "店", "広", "度"], "correct": "B", "explanation": "店（みせ）。「広」は「ひろい」、「度」は「ど」です。"},
+    {"type": "context_word", "question": "のどがかわいたので、（　）を飲みました。", "options": ["くつ", "みず", "ほん", "いぬ"], "correct": "B", "explanation": "「飲む」ものは「みず（水）」です。"},
+    {"type": "context_word", "question": "このかばんはとても（　）ですから、持てません。", "options": ["おもい", "あかるい", "ひろい", "はやい"], "correct": "A", "explanation": "持てない理由になるのは「おもい（重い）」です。"},
+    {"type": "context_word", "question": "きのう、えいがを（　）ました。", "options": ["よみ", "のみ", "み", "かき"], "correct": "C", "explanation": "映画は「見る」ものです。"},
+    {"type": "synonym", "question": "わたしのへやは<u>せまい</u>です。", "options": ["ひろくないです", "あたらしいです", "きれいです", "ふるいです"], "correct": "A", "explanation": "「せまい」は「ひろくない」と近い意味です。"},
+    {"type": "synonym", "question": "ちちは<u>おなかがすいています</u>。", "options": ["ごはんを食べたいです", "ねたいです", "のどがいたいです", "つかれています"], "correct": "A", "explanation": "おなかがすいている人は、食べたいと思っています。"},
+    {"type": "grammar_choice", "question": "わたし（　）日本語の先生です。", "options": ["を", "が", "は", "に"], "correct": "C", "explanation": "「AはBです」の文。主題を表す「は」を使います。"},
+    {"type": "grammar_choice", "question": "あした、ともだち（　）会います。", "options": ["に", "を", "で", "の"], "correct": "A", "explanation": "「会う」は相手に「に」を使います。"},
+    {"type": "grammar_choice", "question": "このかばんはだれ（　）ですか。", "options": ["に", "の", "を", "で"], "correct": "B", "explanation": "「だれのですか」は持ち主をたずねる言い方です。"},
+    {"type": "grammar_choice", "question": "きのうは雨（　）降りました。", "options": ["が", "を", "に", "で"], "correct": "A", "explanation": "天気の現象は「が」で表します。"},
+    {"type": "grammar_ordering", "question": "わたしは ＿＿＿ ＿★＿ ＿＿＿ ＿＿＿。", "options": ["えいがを", "ともだちと", "見ました", "きのう"], "correct": "B", "explanation": "正しい順番は「きのう→ともだちと→えいがを→見ました」。★に入るのは「ともだちと」です。"},
+    {"type": "grammar_ordering", "question": "あした ＿＿＿ ＿★＿ ＿＿＿ ＿＿＿ いきます。", "options": ["かいものに", "ともだちと", "デパートへ", "いっしょに"], "correct": "D", "explanation": "正しい順番は「ともだちと→いっしょに→デパートへ→かいものに」。★は「いっしょに」です。"},
+    {"type": "listen_quick", "question": "【音声スクリプト】男：いただきます。\n女：（　）", "options": ["どうぞ、めしあがれ。", "ありがとうございました。", "いってきます。"], "correct": "A", "explanation": "「いただきます」に対しては「どうぞ、めしあがれ」と答えます。"},
+    {"type": "listen_quick", "question": "【音声スクリプト】女：ただいま。\n男：（　）", "options": ["いってきます。", "おかえりなさい。", "はじめまして。"], "correct": "B", "explanation": "「ただいま」に対しては「おかえりなさい」と答えます。"},
+    {"type": "listen_task", "question": "【音声スクリプト】男の人と女の人が話しています。\n男：もう昼ごはんの時間ですね。\n女：はい。でも、先にこの手紙を出してきます。\n男：わかりました。\n\n女の人はこのあとまず何をしますか。", "options": ["ひるごはんを食べる", "てがみを出す", "かいしゃへもどる", "ともだちに電話する"], "correct": "B", "explanation": "女の人は「先に手紙を出してきます」と言っています。"}
   ],
   "groups": [
     {
-      "type": "grammar_text",
-      "passage": "わたしの家では、ちちがまいあさ６じ（１）おきます。そして、ははは朝ごはん（２）つくります。",
+      "type": "grammar_text", "passage": "わたしの家では、ちちがまいあさ６じ（１）おきます。そして、ははは朝ごはん（２）つくります。",
       "questions": [
-        { "question": "（１）に入るものはどれですか。", "options": ["を", "に", "が", "で"], "correct": "B", "explanation": "時刻には「に」を使います。" },
-        { "question": "（２）に入るものはどれですか。", "options": ["を", "に", "で", "は"], "correct": "A", "explanation": "「つくる」の対象は「を」で表します。" }
+        {"question": "（１）に入るものはどれですか。", "options": ["を", "に", "が", "で"], "correct": "B", "explanation": "時刻には「に」を使います。"},
+        {"question": "（２）に入るものはどれですか。", "options": ["を", "に", "で", "は"], "correct": "A", "explanation": "「つくる」の対象は「を」で表します。"}
       ]
     },
     {
-      "type": "reading_short",
-      "passage": "きのうは日曜日でした。わたしはともだちとこうえんへ行きました。こうえんでサッカーをしました。たのしかったです。そのあと、きっさてんでコーヒーを飲みました。",
+      "type": "reading_short", "passage": "きのうは日曜日でした。わたしはともだちとこうえんへ行きました。こうえんでサッカーをしました。たのしかったです。そのあと、きっさてんでコーヒーを飲みました。",
       "questions": [
-        { "question": "わたしはきのうこうえんで何をしましたか。", "options": ["えいがを見ました", "サッカーをしました", "コーヒーを飲みました", "かいものをしました"], "correct": "B", "explanation": "本文に「こうえんでサッカーをしました」とあります。" },
-        { "question": "こうえんのあとでどこへ行きましたか。", "options": ["きっさてん", "がっこう", "えき", "うち"], "correct": "A", "explanation": "「そのあと、きっさてんでコーヒーを飲みました」とあります。" }
+        {"question": "わたしはきのうこうえんで何をしましたか。", "options": ["えいがを見ました", "サッカーをしました", "コーヒーを飲みました", "かいものをしました"], "correct": "B", "explanation": "本文に「こうえんでサッカーをしました」とあります。"},
+        {"question": "こうえんのあとでどこへ行きましたか。", "options": ["きっさてん", "がっこう", "えき", "うち"], "correct": "A", "explanation": "「そのあと、きっさてんでコーヒーを飲みました」とあります。"}
       ]
     },
     {
-      "type": "info_search",
-      "title": "としょかんのおしらせ",
-      "passage": "【としょかんのおしらせ】\nあいている時間：月〜金 9:00〜18:00 ／ 土 9:00〜15:00\nやすみ：日曜日、しゅくじつ\n本は一人５さつまでかりられます。",
+      "type": "info_search", "title": "としょかんのおしらせ", "passage": "【としょかんのおしらせ】\nあいている時間：月〜金 9:00〜18:00 ／ 土 9:00〜15:00\nやすみ：日曜日、しゅくじつ\n本は一人５さつまでかりられます。",
       "questions": [
-        { "question": "土曜日、としょかんは何時まであいていますか。", "options": ["15時", "18時", "9時", "17時"], "correct": "A", "explanation": "土曜日は 9:00〜15:00 です。" }
+        {"question": "土曜日、としょかんは何時まであいていますか。", "options": ["15時", "18時", "9時", "17時"], "correct": "A", "explanation": "土曜日は 9:00〜15:00 です。"}
       ]
     }
   ]

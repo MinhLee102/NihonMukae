@@ -46,6 +46,13 @@ public class QuestionType {
     @Column(name = "sort_order", nullable = false)
     private Short sortOrder;
 
+    // Đề bài chung của dạng bài, hiện phía trên câu hỏi như "問題 N" trong đề JLPT
+    @Column(name = "instruction_ja", columnDefinition = "TEXT")
+    private String instructionJa;
+
+    @Column(name = "instruction_vi", columnDefinition = "TEXT")
+    private String instructionVi;
+
     @Column(name = "is_active", nullable = false)
     private boolean active;
 }

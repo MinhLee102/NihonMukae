@@ -38,7 +38,8 @@ public final class SessionDtos {
     public record QuestionView(int position, int blockNo, boolean hidden, Long questionId, String typeCode,
                                String typeName, String section, Long groupId, String question, List<String> options,
                                String audioUrl, String selected, boolean locked, Boolean correct,
-                               String correctAnswer, String explanation) {
+                               String correctAnswer, String explanation, Integer mondaiNo, String instructionJa,
+                               String instructionVi) {
     }
 
     @JsonInclude(JsonInclude.Include.NON_NULL)

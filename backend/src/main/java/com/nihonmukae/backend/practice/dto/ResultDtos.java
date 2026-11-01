@@ -32,7 +32,8 @@ public final class ResultDtos {
     public record ResultQuestion(int position, int blockNo, Long questionId, String typeCode, String typeName,
                                  String section, Long groupId, String question, List<String> options,
                                  String audioUrl, String selected, String correctAnswer, boolean correct,
-                                 String explanation, double points) {
+                                 String explanation, double points, Integer mondaiNo, String instructionJa,
+                                 String instructionVi) {
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)

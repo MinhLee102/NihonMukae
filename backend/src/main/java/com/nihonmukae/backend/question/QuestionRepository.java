@@ -2,6 +2,7 @@ package com.nihonmukae.backend.question;
 
 import com.nihonmukae.backend.shared.entity.Question;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
@@ -34,6 +35,11 @@ public interface QuestionRepository extends JpaRepository<Question, Long> {
     @Query("SELECT q.testId, t.section, COUNT(q) FROM Question q JOIN QuestionType t ON t.id = q.typeId " +
             "WHERE q.level = :level AND q.active = true AND q.testId IS NOT NULL GROUP BY q.testId, t.section")
     List<Object[]> countByTestAndSection(@Param("level") short level);
+
+    // Tắt toàn bộ câu của 1 nguồn (dữ liệu mẫu) trước khi nạp lại phiên bản mới
+    @Modifying
+    @Query("UPDATE Question q SET q.active = false WHERE q.source = :source")
+    int deactivateBySource(@Param("source") String source);
 
     long countByActiveTrue();
 }

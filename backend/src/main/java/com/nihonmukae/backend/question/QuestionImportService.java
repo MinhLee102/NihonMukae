@@ -31,6 +31,7 @@ import java.util.stream.Collectors;
 public class QuestionImportService {
 
     public static final String SOURCE_IMPORT = "import_json";
+    public static final String SOURCE_SAMPLE = "sample";
     private static final Duration PREVIEW_TTL = Duration.ofMinutes(30);
 
     private record StoredPreview(UUID userId, ImportFile file, Instant expiresAt) {
@@ -95,6 +96,12 @@ public class QuestionImportService {
     /** Dùng chung cho commit và seeder dữ liệu mẫu: lưu thẳng, đã validate ở nơi gọi. */
     @Transactional
     public CommitResponse importFile(UUID userId, ImportFile file, boolean overwrite) {
+        return importFile(userId, file, overwrite, SOURCE_IMPORT);
+    }
+
+    /** source ghi vào các dòng tạo mới (import_json cho người dùng, sample cho dữ liệu mẫu của seeder). */
+    @Transactional
+    public CommitResponse importFile(UUID userId, ImportFile file, boolean overwrite, String source) {
         Map<String, QuestionType> types = typesByCode();
         JlptTest test = file.getTest() == null ? null : resolveTest(file.getTest());
         int[] counters = new int[4]; // createdQuestions, createdGroups, skipped, overwritten
@@ -102,7 +109,7 @@ public class QuestionImportService {
 
         for (ImportFile.Item item : file.getQuestions()) {
             order++;
-            saveQuestion(userId, item, null, null, null, test, order, types, overwrite, counters, null);
+            saveQuestion(userId, item, null, null, null, test, order, types, overwrite, counters, null, source);
         }
         for (ImportFile.Group group : file.getGroups()) {
             order++;
@@ -112,6 +119,10 @@ public class QuestionImportService {
             String hash = ContentHasher.hashGroup(typeCode == null ? "" : typeCode, level, group.getPassage(),
                     group.getAudioUrl(), group.getImageUrl());
             QuestionGroup saved = groupRepository.findByContentHash(hash).orElse(null);
+            if (saved != null && overwrite && !saved.isActive()) {
+                saved.setActive(true);
+                groupRepository.save(saved);
+            }
             if (saved == null) {
                 saved = groupRepository.save(QuestionGroup.builder()
                         .typeId(groupType == null ? null : groupType.getId())
@@ -123,7 +134,7 @@ public class QuestionImportService {
                         .audioUrl(blankToNull(group.getAudioUrl()))
                         .imageUrl(blankToNull(group.getImageUrl()))
                         .topic(group.getTopic())
-                        .source(SOURCE_IMPORT)
+                        .source(source)
                         .contentHash(hash)
                         .active(true)
                         .build());
@@ -131,7 +142,7 @@ public class QuestionImportService {
             }
             for (ImportFile.Item item : group.getQuestions()) {
                 saveQuestion(userId, item, group.getType(), level, saved, test, order, types, overwrite, counters,
-                        group.getPassage());
+                        group.getPassage(), source);
             }
         }
         return new CommitResponse(counters[0], counters[1], counters[2], counters[3], test == null ? null : test.getId());
@@ -139,7 +150,7 @@ public class QuestionImportService {
 
     private void saveQuestion(UUID userId, ImportFile.Item item, String inheritedType, Integer inheritedLevel,
                               QuestionGroup group, JlptTest test, short order, Map<String, QuestionType> types,
-                              boolean overwrite, int[] counters, String passage) {
+                              boolean overwrite, int[] counters, String passage, String source) {
         String typeCode = item.getType() != null && !item.getType().isBlank() ? item.getType() : inheritedType;
         QuestionType type = types.get(typeCode);
         int level = item.getLevel() != null ? item.getLevel() : inheritedLevel != null ? inheritedLevel : test.getLevel();
@@ -169,7 +180,7 @@ public class QuestionImportService {
                 .options(item.getOptions().stream().map(String::trim).toList())
                 .correct(item.getCorrect())
                 .explanation(item.getExplanation())
-                .source(SOURCE_IMPORT)
+                .source(source)
                 .contentHash(hash)
                 .active(true)
                 .createdBy(userId)

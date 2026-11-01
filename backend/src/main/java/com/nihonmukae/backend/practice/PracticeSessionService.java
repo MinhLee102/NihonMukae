@@ -224,6 +224,7 @@ public class PracticeSessionService {
         Map<Long, Question> questions = questionRepository.findAllById(questionIds).stream()
                 .collect(Collectors.toMap(Question::getId, Function.identity()));
         Map<Short, QuestionType> types = typesById();
+        Map<Integer, Integer> mondaiNos = mondaiNumbers(answers);
 
         List<QuestionView> views = new ArrayList<>();
         Set<Long> groupIds = new java.util.LinkedHashSet<>();
@@ -234,7 +235,7 @@ public class PracticeSessionService {
             if (q == null || hidden) {
                 views.add(new QuestionView(a.getPosition(), a.getBlockNo(), true, null, null, null,
                         type == null ? null : type.getSection(), null, null, null, null, a.getSelected(),
-                        a.isLocked(), null, null, null));
+                        a.isLocked(), null, null, null, null, null, null));
                 continue;
             }
             if (q.getGroupId() != null) {
@@ -245,7 +246,9 @@ public class PracticeSessionService {
                     type == null ? null : type.getCode(), type == null ? null : type.getNameVi(),
                     type == null ? null : type.getSection(), q.getGroupId(), q.getQuestion(), q.getOptions(),
                     q.getAudioUrl(), a.getSelected(), a.isLocked(),
-                    reveal ? a.getCorrect() : null, reveal ? q.getCorrect() : null, reveal ? q.getExplanation() : null));
+                    reveal ? a.getCorrect() : null, reveal ? q.getCorrect() : null, reveal ? q.getExplanation() : null,
+                    mondaiNos.get((int) a.getPosition()), type == null ? null : type.getInstructionJa(),
+                    type == null ? null : type.getInstructionVi()));
         }
 
         List<GroupView> groups = groupRepository.findAllById(groupIds).stream()
@@ -255,6 +258,26 @@ public class PracticeSessionService {
         return new SessionView(session.getId(), session.getMode(), session.getLevel(), session.getTitle(),
                 session.getStatus(), session.getFeedbackMode(), now, session.getStartedAt(), current, blocks, views,
                 groups, warnings);
+    }
+
+    /**
+     * Số "問題 N" của từng câu: trong mỗi khối thi, mỗi lần đổi sang dạng bài khác thì sang 問題 kế tiếp
+     * (các câu liền nhau cùng dạng bài, hoặc cùng đoạn văn, thuộc cùng 1 問題). Key là vị trí câu trong phiên.
+     */
+    static Map<Integer, Integer> mondaiNumbers(List<PracticeAnswer> answers) {
+        Map<Integer, Integer> result = new HashMap<>();
+        Map<Integer, Integer> counterByBlock = new HashMap<>();
+        Map<Integer, Short> lastTypeByBlock = new HashMap<>();
+        for (PracticeAnswer a : answers) {
+            int block = a.getBlockNo();
+            Short last = lastTypeByBlock.get(block);
+            if (last == null || !last.equals(a.getTypeId())) {
+                counterByBlock.merge(block, 1, Integer::sum);
+                lastTypeByBlock.put(block, a.getTypeId());
+            }
+            result.put((int) a.getPosition(), counterByBlock.get(block));
+        }
+        return result;
     }
 
     // ─── Trả lời ────────────────────────────────────────────────────────
@@ -361,6 +384,7 @@ public class PracticeSessionService {
                 answers.stream().map(PracticeAnswer::getQuestionId).filter(q -> q != null).toList()).stream()
                 .collect(Collectors.toMap(Question::getId, Function.identity()));
         Map<Short, QuestionType> types = typesById();
+        Map<Integer, Integer> mondaiNos = mondaiNumbers(answers);
 
         List<ResultQuestion> resultQuestions = new ArrayList<>();
         List<ScoreCalculator.Item> scoreItems = new ArrayList<>();
@@ -397,7 +421,8 @@ public class PracticeSessionService {
             resultQuestions.add(new ResultQuestion(a.getPosition(), a.getBlockNo(), q.getId(),
                     type == null ? null : type.getCode(), type == null ? null : type.getNameVi(), section,
                     q.getGroupId(), q.getQuestion(), q.getOptions(), q.getAudioUrl(), a.getSelected(), q.getCorrect(),
-                    correct, q.getExplanation(), a.getPoints().doubleValue()));
+                    correct, q.getExplanation(), a.getPoints().doubleValue(), mondaiNos.get((int) a.getPosition()),
+                    type == null ? null : type.getInstructionJa(), type == null ? null : type.getInstructionVi()));
         }
         answerRepository.saveAll(answers);
 

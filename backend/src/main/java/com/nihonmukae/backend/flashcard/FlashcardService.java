@@ -74,7 +74,7 @@ public class FlashcardService {
                 .color(req.getColor())
                 .icon(req.getIcon())
                 .build();
-        deck = deckRepository.save(deck);
+        deck = deckRepository.saveAndFlush(deck);
         return toDeckResponse(deck, 0, 0, 0);
     }
 
@@ -123,7 +123,7 @@ public class FlashcardService {
                 .imageUrl(req.getImageUrl())
                 .word(word)
                 .build();
-        return toCardResponse(cardRepository.save(card));
+        return toCardResponse(cardRepository.saveAndFlush(card));
     }
 
     @Transactional
@@ -233,7 +233,7 @@ public class FlashcardService {
                 .filter(m -> "vi".equals(m.getLang()))
                 .findFirst()
                 .or(() -> meanings.stream().findFirst())
-                .map(m -> m.getMeaning().replaceFirst("^◆\\s*", ""))
+                .map(m -> m.getMeaning().replaceFirst("^◆\\s*", "").replaceFirst("[.。]\\s*$", ""))
                 .orElse("");
     }
 

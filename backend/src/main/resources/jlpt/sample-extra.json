@@ -1,0 +1,20 @@
+{
+  "questions": [
+    { "type": "kanji_reading", "level": 4, "question": "「会議」の読み方として最もよいものを選びなさい。", "options": ["かいぎ", "かいき", "えぎ", "かいけん"], "correct": "A", "explanation": "会議は「かいぎ」。" },
+    { "type": "kanji_reading", "level": 4, "question": "「質問」の読み方として最もよいものを選びなさい。", "options": ["しつもん", "しつぶん", "ひつもん", "しちもん"], "correct": "A", "explanation": "質問は「しつもん」。" },
+    { "type": "context_word", "level": 4, "question": "電車が（　）ので、会社に遅れました。", "options": ["こんだ", "とまった", "あいた", "ふえた"], "correct": "B", "explanation": "遅れた理由として自然なのは「電車がとまった」です。" },
+    { "type": "context_word", "level": 4, "question": "この荷物を、新しい住所に（　）ください。", "options": ["おくって", "かりて", "あずけて", "もらって"], "correct": "A", "explanation": "「荷物を送る」が自然な組み合わせです。" },
+    { "type": "synonym", "level": 4, "question": "「この道は<u>あぶない</u>です。」", "options": ["あんぜんではない", "せまくない", "にぎやかだ", "しずかだ"], "correct": "A", "explanation": "「あぶない」は「安全ではない」と近い意味です。" },
+    { "type": "grammar_choice", "level": 4, "question": "宿題を（　）から、遊びに行きます。", "options": ["して", "した", "する", "しない"], "correct": "A", "explanation": "「〜てから」は「〜したあとで」という順序を表します。" },
+    { "type": "grammar_choice", "level": 4, "question": "風邪をひいた（　）、学校を休みました。", "options": ["ので", "のに", "けれど", "ながら"], "correct": "A", "explanation": "原因・理由を表すのは「ので」です。" },
+    { "type": "grammar_choice", "level": 4, "question": "日本語が（　）ようになりました。", "options": ["話せる", "話す", "話した", "話して"], "correct": "A", "explanation": "「可能形＋ようになる」で、できるようになった変化を表します。" },
+    { "type": "kanji_reading", "level": 3, "question": "「関係」の読み方として最もよいものを選びなさい。", "options": ["かんけい", "かんげい", "かいけい", "げんけい"], "correct": "A", "explanation": "関係は「かんけい」。" },
+    { "type": "kanji_reading", "level": 3, "question": "「情報」の読み方として最もよいものを選びなさい。", "options": ["じょうぼう", "じょうほう", "せいほう", "ちょうほう"], "correct": "B", "explanation": "情報は「じょうほう」。" },
+    { "type": "context_word", "level": 3, "question": "この荷物は壊れやすいので、（　）扱ってください。", "options": ["そっと", "さっと", "ずっと", "ぐっと"], "correct": "A", "explanation": "壊れやすいものは「そっと」扱います。" },
+    { "type": "grammar_choice", "level": 3, "question": "彼は医者（　）、料理も上手だ。", "options": ["というより", "でありながら", "だとしたら", "によって"], "correct": "B", "explanation": "「〜でありながら」は「〜なのに、同時に」という意味です。" },
+    { "type": "grammar_choice", "level": 3, "question": "試験が近い（　）、勉強する時間がない。", "options": ["というのに", "ことから", "とおりに", "ばかりに"], "correct": "A", "explanation": "「〜というのに」は「〜なのに」という不満を表します。" },
+    { "type": "grammar_choice", "level": 5, "question": "これは わたし（　）ほんです。", "options": ["の", "を", "に", "で"], "correct": "A", "explanation": "「AのB」は所有を表します。" },
+    { "type": "grammar_choice", "level": 5, "question": "まいあさ、パン（　）食べます。", "options": ["を", "が", "に", "へ"], "correct": "A", "explanation": "「食べる」の対象は「を」です。" },
+    { "type": "kanji_reading", "level": 5, "question": "「先生」の読み方として最もよいものを選びなさい。", "options": ["せんせい", "せんしょう", "ぜんせい", "せいせん"], "correct": "A", "explanation": "先生は「せんせい」。" }
+  ]
+}

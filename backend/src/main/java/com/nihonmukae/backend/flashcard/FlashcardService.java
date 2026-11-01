@@ -6,6 +6,9 @@ import com.nihonmukae.backend.flashcard.dto.CardRequest;
 import com.nihonmukae.backend.flashcard.dto.CardResponse;
 import com.nihonmukae.backend.flashcard.dto.DeckRequest;
 import com.nihonmukae.backend.flashcard.dto.DeckResponse;
+import com.nihonmukae.backend.flashcard.dto.FlashcardStatsResponse;
+import com.nihonmukae.backend.flashcard.dto.ReviewResultResponse;
+import com.nihonmukae.backend.shared.entity.FlashcardReview;
 import com.nihonmukae.backend.shared.entity.Flashcard;
 import com.nihonmukae.backend.shared.entity.FlashcardDeck;
 import com.nihonmukae.backend.shared.entity.Word;
@@ -28,13 +31,16 @@ public class FlashcardService {
     private final CardReviewRepository reviewRepository;
     private final UserRepository userRepository;
     private final WordRepository wordRepository;
+    private final SrsService srsService;
 
     public FlashcardService(DeckRepository deckRepository,
                             CardRepository cardRepository,
                             CardReviewRepository reviewRepository,
                             UserRepository userRepository,
-                            WordRepository wordRepository) {
+                            WordRepository wordRepository,
+                            SrsService srsService) {
         this.wordRepository = wordRepository;
+        this.srsService = srsService;
         this.deckRepository = deckRepository;
         this.cardRepository = cardRepository;
         this.reviewRepository = reviewRepository;
@@ -133,6 +139,78 @@ public class FlashcardService {
     @Transactional
     public void deleteCard(UUID userId, UUID cardId) {
         cardRepository.delete(getOwnedCard(userId, cardId));
+    }
+
+    // ─── Study, review, stats ───────────────────────────────────────────
+
+    @Transactional(readOnly = true)
+    public List<CardResponse> getStudyCards(UUID userId, UUID deckId) {
+        getOwnedDeck(userId, deckId);
+        return cardRepository.findDueCards(deckId, userId, ZonedDateTime.now()).stream()
+                .map(this::toCardResponse)
+                .toList();
+    }
+
+    @Transactional
+    public ReviewResultResponse reviewCard(UUID userId, UUID cardId, String rating) {
+        int grade = SrsService.gradeFromRating(rating);
+        Flashcard card = getOwnedCard(userId, cardId);
+        FlashcardReview review = reviewRepository.findByUserIdAndCardId(userId, cardId)
+                .orElseGet(() -> FlashcardReview.builder()
+                        .user(userRepository.getReferenceById(userId))
+                        .card(card)
+                        .build());
+
+        ZonedDateTime now = ZonedDateTime.now();
+        SrsService.SrsState next = srsService.calculate(
+                review.getEaseFactor(), review.getIntervalDays(), review.getRepetitions(), grade, now);
+        review.setEaseFactor(next.easeFactor());
+        review.setIntervalDays(next.intervalDays());
+        review.setRepetitions(next.repetitions());
+        review.setNextReviewAt(next.nextReviewAt());
+        review.setLastReviewed(now);
+        reviewRepository.save(review);
+
+        return ReviewResultResponse.builder()
+                .intervalDays(next.intervalDays())
+                .repetitions(next.repetitions())
+                .easeFactor(next.easeFactor())
+                .nextReviewAt(next.nextReviewAt())
+                .build();
+    }
+
+    @Transactional(readOnly = true)
+    public FlashcardStatsResponse getStats(UUID userId) {
+        long total = cardRepository.countByDeckUserId(userId);
+        long scheduled = reviewRepository.countNotDue(userId, ZonedDateTime.now());
+        return FlashcardStatsResponse.builder()
+                .totalCards(total)
+                .learnedCards(reviewRepository.countLearned(userId))
+                .dueToday(total - scheduled)
+                .streak(calculateStreak(reviewRepository.findReviewDays(userId)))
+                .build();
+    }
+
+    // reviewDays: các ngày có ôn tập, mới nhất trước. Streak còn giữ nếu hôm nay
+    // hoặc hôm qua có ôn (hôm nay chưa ôn thì chưa bị mất chuỗi)
+    static int calculateStreak(List<java.sql.Date> reviewDays) {
+        java.time.LocalDate expected = java.time.LocalDate.now(java.time.ZoneOffset.UTC);
+        if (reviewDays.isEmpty()) {
+            return 0;
+        }
+        if (!reviewDays.get(0).toLocalDate().equals(expected)) {
+            expected = expected.minusDays(1);
+        }
+        int streak = 0;
+        for (java.sql.Date d : reviewDays) {
+            if (d.toLocalDate().equals(expected)) {
+                streak++;
+                expected = expected.minusDays(1);
+            } else if (d.toLocalDate().isBefore(expected)) {
+                break;
+            }
+        }
+        return streak;
     }
 
     private Flashcard getOwnedCard(UUID userId, UUID cardId) {

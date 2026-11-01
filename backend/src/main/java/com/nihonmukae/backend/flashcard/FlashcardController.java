@@ -5,6 +5,9 @@ import com.nihonmukae.backend.flashcard.dto.CardRequest;
 import com.nihonmukae.backend.flashcard.dto.CardResponse;
 import com.nihonmukae.backend.flashcard.dto.DeckRequest;
 import com.nihonmukae.backend.flashcard.dto.DeckResponse;
+import com.nihonmukae.backend.flashcard.dto.FlashcardStatsResponse;
+import com.nihonmukae.backend.flashcard.dto.ReviewRequest;
+import com.nihonmukae.backend.flashcard.dto.ReviewResultResponse;
 import com.nihonmukae.backend.shared.dto.ApiResponse;
 import jakarta.validation.Valid;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -60,6 +63,25 @@ public class FlashcardController {
                                                 @PathVariable UUID id,
                                                 @RequestBody CardRequest req) {
         return ApiResponse.success(flashcardService.createCard(principal.getId(), id, req));
+    }
+
+    // Card cần ôn hôm nay trong deck (chưa học hoặc đã đến hạn theo SM-2)
+    @GetMapping("/decks/{id}/study")
+    public ApiResponse<List<CardResponse>> study(@AuthenticationPrincipal JwtUserPrincipal principal,
+                                                 @PathVariable UUID id) {
+        return ApiResponse.success(flashcardService.getStudyCards(principal.getId(), id));
+    }
+
+    @PostMapping("/cards/{id}/review")
+    public ApiResponse<ReviewResultResponse> review(@AuthenticationPrincipal JwtUserPrincipal principal,
+                                                    @PathVariable UUID id,
+                                                    @Valid @RequestBody ReviewRequest req) {
+        return ApiResponse.success(flashcardService.reviewCard(principal.getId(), id, req.getRating()));
+    }
+
+    @GetMapping("/stats")
+    public ApiResponse<FlashcardStatsResponse> stats(@AuthenticationPrincipal JwtUserPrincipal principal) {
+        return ApiResponse.success(flashcardService.getStats(principal.getId()));
     }
 
     @PutMapping("/cards/{id}")

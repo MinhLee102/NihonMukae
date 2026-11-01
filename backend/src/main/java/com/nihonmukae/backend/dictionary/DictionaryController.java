@@ -55,7 +55,7 @@ public class DictionaryController {
     @GetMapping("/lookup")
     public ApiResponse<WordLookupResponse> lookup(
             @RequestParam(value = "kanji", required = false) String kanji,
-            @RequestParam("kana") String kana
+            @RequestParam(value = "kana", required = false) String kana
     ) {
         return ApiResponse.success(dictionaryService.lookup(kanji, kana));
     }

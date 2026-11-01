@@ -19,6 +19,9 @@ export interface PanelQuestion {
   /** Set when the answer may be shown: after submit, or right after answering in instant mode. */
   correctAnswer?: string;
   explanation?: string;
+  mondaiNo?: number;
+  instructionJa?: string;
+  instructionVi?: string;
 }
 
 const LETTERS = ["A", "B", "C", "D"];
@@ -40,6 +43,43 @@ function AudioBlock({ url, isListening }: { url?: string; isListening: boolean }
     );
   }
   return null;
+}
+
+/** Underscore runs in an instruction (＿＿＿) are drawn as blank lines, like the printed paper. */
+function InstructionText({ text }: { text: string }) {
+  return (
+    <>
+      {text.split(/(＿+)/).map((part, i) =>
+        part.startsWith("＿") ? (
+          <span
+            key={i}
+            aria-hidden="true"
+            className="inline-block border-b border-neutral-900 align-baseline"
+            style={{ width: `${Math.max(part.length, 2) * 0.9}em`, height: "1em" }}
+          />
+        ) : (
+          <span key={i}>{part}</span>
+        )
+      )}
+    </>
+  );
+}
+
+/** "問題 N" with a rule under it, then the instruction shared by every question of the type. */
+function InstructionHeader({ no, ja, vi }: { no?: number; ja: string; vi?: string }) {
+  return (
+    <div className="shrink-0 border-b border-black/5 px-6 pb-4 pt-5">
+      <div className="mx-auto max-w-5xl">
+        {no !== undefined && (
+          <p className="border-b-2 border-neutral-900 pb-1 text-xl font-medium text-neutral-900">問題{no}</p>
+        )}
+        <p className="mt-3 text-[15px] leading-7 text-neutral-900">
+          <InstructionText text={ja} />
+        </p>
+        {vi && <p className="mt-1 text-xs text-neutral-400">{vi}</p>}
+      </div>
+    </div>
+  );
 }
 
 function GroupContent({ group }: { group: GroupViewDto }) {
@@ -173,8 +213,19 @@ export function QuestionPanel({
     </div>
   );
 
-  if (group && (group.passage || group.imageUrl || group.audioUrl)) {
-    return <SplitPane storageKey={splitKey} left={<GroupContent group={group} />} right={body} />;
-  }
-  return <div className="h-full overflow-y-auto">{body}</div>;
+  const hasGroup = group && (group.passage || group.imageUrl || group.audioUrl);
+  return (
+    <div className="flex h-full min-h-0 flex-col">
+      {question.instructionJa && (
+        <InstructionHeader no={question.mondaiNo} ja={question.instructionJa} vi={question.instructionVi} />
+      )}
+      <div className="min-h-0 flex-1">
+        {hasGroup && group ? (
+          <SplitPane storageKey={splitKey} left={<GroupContent group={group} />} right={body} />
+        ) : (
+          <div className="h-full overflow-y-auto">{body}</div>
+        )}
+      </div>
+    </div>
+  );
 }

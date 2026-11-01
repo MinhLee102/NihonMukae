@@ -116,6 +116,9 @@ function ResultView() {
                 selected: q.selected,
                 correctAnswer: q.correctAnswer,
                 explanation: q.explanation,
+                mondaiNo: q.mondaiNo,
+                instructionJa: q.instructionJa,
+                instructionVi: q.instructionVi,
               }}
               group={group}
               disabled

@@ -350,6 +350,9 @@ function Runner() {
                 selected: currentQuestion.selected,
                 correctAnswer: currentQuestion.locked ? currentQuestion.correctAnswer : undefined,
                 explanation: currentQuestion.explanation,
+                mondaiNo: currentQuestion.mondaiNo,
+                instructionJa: currentQuestion.instructionJa,
+                instructionVi: currentQuestion.instructionVi,
               }}
               group={group}
               disabled={currentQuestion.locked || busy}

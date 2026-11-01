@@ -114,6 +114,11 @@ export interface QuestionViewDto {
   correct?: boolean;
   correctAnswer?: string;
   explanation?: string;
+  /** "問題 N": position of this question's type within its exam block. */
+  mondaiNo?: number;
+  /** Shared instruction of the question type, shown above the question. */
+  instructionJa?: string;
+  instructionVi?: string;
 }
 
 export interface SessionViewDto {
@@ -181,6 +186,9 @@ export interface ResultQuestionDto {
   correct: boolean;
   explanation?: string;
   points: number;
+  mondaiNo?: number;
+  instructionJa?: string;
+  instructionVi?: string;
 }
 
 export interface ResultDto {

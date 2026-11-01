@@ -30,5 +30,10 @@ public interface QuestionRepository extends JpaRepository<Question, Long> {
     @Query("SELECT q.testId, COUNT(q) FROM Question q WHERE q.level = :level AND q.active = true AND q.testId IS NOT NULL GROUP BY q.testId")
     List<Object[]> countByTestForLevel(@Param("level") short level);
 
+    // [testId, section, số câu] của các đề thi ở 1 level, để biết đề có những phần nào
+    @Query("SELECT q.testId, t.section, COUNT(q) FROM Question q JOIN QuestionType t ON t.id = q.typeId " +
+            "WHERE q.level = :level AND q.active = true AND q.testId IS NOT NULL GROUP BY q.testId, t.section")
+    List<Object[]> countByTestAndSection(@Param("level") short level);
+
     long countByActiveTrue();
 }

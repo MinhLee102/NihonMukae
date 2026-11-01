@@ -113,8 +113,8 @@ function Reader() {
                 <span
                   key={i}
                   onClick={(e) => select(i, e.currentTarget)}
-                  className={`group cursor-pointer rounded transition-colors hover:bg-sky-50 ${
-                    isSelected ? "bg-sky-100" : ""
+                  className={`group cursor-pointer rounded transition-colors hover:bg-sky-100 ${
+                    isSelected ? "bg-sky-200" : ""
                   }`}
                 >
                   {content}

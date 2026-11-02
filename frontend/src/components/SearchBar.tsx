@@ -12,6 +12,9 @@ const SEARCH_MODES = [
   { id: "ja-ja", label: "Nhật - Nhật" },
 ] as const;
 
+// Modes that are not built yet stay visible but cannot be selected
+const AVAILABLE_MODES: string[] = ["vocab"];
+
 export type SearchMode = (typeof SEARCH_MODES)[number]["id"];
 
 interface SearchBarProps {
@@ -58,22 +61,24 @@ export function SearchBar({ value, onChange, onSearch, isLoading = false }: Sear
           className="min-w-0 flex-1 bg-transparent text-sm text-neutral-800 outline-none placeholder:text-neutral-400"
         />
         <div className="flex shrink-0 items-center gap-3 text-neutral-400">
-          <button type="button" aria-label="Viết tay" className="transition hover:text-neutral-700">
+          <button type="button" aria-label="Viết tay" disabled title="Đang phát triển" className="cursor-not-allowed opacity-50">
             <PenLine size={16} strokeWidth={1.75} />
           </button>
-          <button type="button" aria-label="Bàn phím ảo" className="transition hover:text-neutral-700">
+          <button type="button" aria-label="Bàn phím ảo" disabled title="Đang phát triển" className="cursor-not-allowed opacity-50">
             <Keyboard size={16} strokeWidth={1.75} />
           </button>
-          <button type="button" aria-label="Tìm bằng giọng nói" className="transition hover:text-neutral-700">
+          <button type="button" aria-label="Tìm bằng giọng nói" disabled title="Đang phát triển" className="cursor-not-allowed opacity-50">
             <Volume2 size={16} strokeWidth={1.75} />
           </button>
-          <button type="button" aria-label="Tìm bằng hình ảnh" className="transition hover:text-neutral-700">
+          <button type="button" aria-label="Tìm bằng hình ảnh" disabled title="Đang phát triển" className="cursor-not-allowed opacity-50">
             <Camera size={16} strokeWidth={1.75} />
           </button>
           <div className="mx-1 h-4 w-px bg-black/10" />
           <button
             type="button"
-            className="flex items-center gap-1 text-sm text-neutral-500 transition hover:text-neutral-700"
+            disabled
+            title="Đang phát triển"
+            className="flex cursor-not-allowed items-center gap-1 text-sm text-neutral-500 opacity-50"
           >
             Nhật - Việt
             <ChevronDown size={14} strokeWidth={1.75} />
@@ -87,10 +92,14 @@ export function SearchBar({ value, onChange, onSearch, isLoading = false }: Sear
             key={mode.id}
             type="button"
             onClick={() => setActiveMode(mode.id)}
+            disabled={!AVAILABLE_MODES.includes(mode.id)}
+            title={AVAILABLE_MODES.includes(mode.id) ? undefined : "Đang phát triển"}
             className={`rounded-full px-3.5 py-1.5 text-sm transition-colors ${
               activeMode === mode.id
                 ? "bg-neutral-900 text-white"
-                : "text-neutral-500 hover:bg-black/5 hover:text-neutral-800"
+                : AVAILABLE_MODES.includes(mode.id)
+                  ? "text-neutral-500 hover:bg-black/5 hover:text-neutral-800"
+                  : "cursor-not-allowed text-neutral-300"
             }`}
           >
             {mode.label}

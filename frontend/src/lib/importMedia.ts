@@ -23,7 +23,7 @@ export function substituteMedia(value: unknown, urlsByName: Map<string, string>)
 }
 
 export const IMPORT_TEMPLATE = {
-  test: { level: 3, title: 'JLPT N3 2023-07', year: 2023, month: 7, source_note: 'Đề mẫu' },
+  test: { level: 3, title: 'JLPT N3 2023-07', year: 2023, month: 7, source_note: 'Đề mẫu', audio_url: 'n3_2023_07_listening.mp3' },
   questions: [
     {
       type: 'kanji_reading',

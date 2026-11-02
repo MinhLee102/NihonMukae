@@ -189,6 +189,14 @@ public class PracticeSessionService {
         return blocks;
     }
 
+    private String listeningAudioOf(PracticeSession session) {
+        if (session.getTestId() == null) {
+            return null;
+        }
+        return testRepository.findById(session.getTestId()).map(JlptTest::getListeningAudioUrl)
+                .filter(u -> !u.isBlank()).orElse(null);
+    }
+
     // ─── Xem phiên ──────────────────────────────────────────────────────
 
     @Transactional(readOnly = true)
@@ -202,6 +210,19 @@ public class PracticeSessionService {
         boolean submitted = PracticeSession.STATUS_SUBMITTED.equals(session.getStatus());
         boolean exam = PracticeSession.MODE_EXAM.equals(session.getMode());
 
+        // Đề có audio cả phần nghe: gắn vào khối có câu nghe, phát liền một mạch khi vào khối đó
+        String listeningAudio = exam ? listeningAudioOf(session) : null;
+        Set<Integer> listeningBlocks = new java.util.HashSet<>();
+        if (listeningAudio != null) {
+            Map<Short, QuestionType> typeById = typesById();
+            for (PracticeAnswer a : answers) {
+                QuestionType t = typeById.get(a.getTypeId());
+                if (t != null && "chokai".equals(t.getSection())) {
+                    listeningBlocks.add((int) a.getBlockNo());
+                }
+            }
+        }
+
         List<BlockView> blocks = new ArrayList<>();
         Integer current = null;
         for (BlockState b : session.getBlockState()) {
@@ -210,7 +231,8 @@ public class PracticeSessionService {
                 current = b.blockNo();
             }
             int count = (int) answers.stream().filter(a -> a.getBlockNo().intValue() == b.blockNo()).count();
-            blocks.add(new BlockView(b.blockNo(), b.name(), b.durationMin(), count, status, b.startedAt(), b.deadline()));
+            blocks.add(new BlockView(b.blockNo(), b.name(), b.durationMin(), count, status, b.startedAt(), b.deadline(),
+                    listeningBlocks.contains(b.blockNo()) ? listeningAudio : null));
         }
 
         if (submitted) {
@@ -450,7 +472,7 @@ public class PracticeSessionService {
 
         Result result = new Result(session.getId(), session.getMode(), session.getLevel(), session.getTitle(),
                 session.getStartedAt(), now, correctCount, resultQuestions.size(), unanswered, jlpt, byType,
-                resultQuestions, resultGroups);
+                resultQuestions, resultGroups, listeningAudioOf(session));
 
         session.setStatus(PracticeSession.STATUS_SUBMITTED);
         session.setFinishedAt(now);

@@ -6,6 +6,7 @@ import { ChevronLeft, ChevronRight, RotateCcw, X } from "lucide-react";
 import { RequireAuth } from "@/components/flashcard/RequireAuth";
 import { AnswerSheet, type SheetCell } from "@/components/jlpt/AnswerSheet";
 import { QuestionPanel } from "@/components/jlpt/QuestionPanel";
+import { SectionAudioReview } from "@/components/jlpt/ListeningAudio";
 import { useAuthStore } from "@/store/authStore";
 import { getApiErrorMessage } from "@/lib/api/flashcard";
 import { SECTION_LABELS, getResult, retrySession, stashSessionWarnings, type ResultDto } from "@/lib/api/jlpt";
@@ -97,6 +98,8 @@ function ResultView() {
       </header>
 
       {error && <div className="shrink-0 bg-red-50 px-5 py-2.5 text-xs text-red-700">{error}</div>}
+
+      {result?.listeningAudioUrl && <SectionAudioReview url={result.listeningAudioUrl} />}
 
       <div className="flex min-h-0 flex-1">
         <main className="min-h-0 min-w-0 flex-1 bg-[#F5F3EE]">

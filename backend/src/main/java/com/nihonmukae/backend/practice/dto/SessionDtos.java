@@ -22,8 +22,9 @@ public final class SessionDtos {
     }
 
     /** Trạng thái 1 khối: pending (chưa bắt đầu), active (đang làm), closed (đã nộp hoặc hết giờ). */
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     public record BlockView(int blockNo, String name, Integer durationMin, int questionCount, String status,
-                            ZonedDateTime startedAt, ZonedDateTime deadline) {
+                            ZonedDateTime startedAt, ZonedDateTime deadline, String audioUrl) {
     }
 
     @JsonInclude(JsonInclude.Include.NON_NULL)

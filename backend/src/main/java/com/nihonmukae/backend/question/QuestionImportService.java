@@ -198,12 +198,17 @@ public class QuestionImportService {
             existing = testRepository.findByLevelAndTitle(level, info.getTitle().trim()).orElse(null);
         }
         if (existing != null) {
+            if (notBlank(info.getAudioUrl())) {
+                existing.setListeningAudioUrl(info.getAudioUrl().trim());
+                testRepository.save(existing);
+            }
             return existing;
         }
         return testRepository.save(JlptTest.builder()
                 .level(level)
                 .title(testTitle(info))
                 .sourceNote(info.getSourceNote())
+                .listeningAudioUrl(notBlank(info.getAudioUrl()) ? info.getAudioUrl().trim() : null)
                 .year(info.getYear() == null ? null : info.getYear().shortValue())
                 .month(info.getMonth() == null ? null : info.getMonth().shortValue())
                 .active(true)
@@ -257,5 +262,9 @@ public class QuestionImportService {
 
     private static String blankToNull(String s) {
         return s == null || s.isBlank() ? null : s.trim();
+    }
+
+    private static boolean notBlank(String s) {
+        return s != null && !s.isBlank();
     }
 }

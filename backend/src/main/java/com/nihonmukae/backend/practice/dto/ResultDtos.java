@@ -45,6 +45,7 @@ public final class ResultDtos {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public record Result(UUID sessionId, String mode, int level, String title, ZonedDateTime startedAt,
                          ZonedDateTime finishedAt, int correct, int total, int unanswered, JlptScore jlpt,
-                         List<TypeStat> byType, List<ResultQuestion> questions, List<ResultGroup> groups) {
+                         List<TypeStat> byType, List<ResultQuestion> questions, List<ResultGroup> groups,
+                         String listeningAudioUrl) {
     }
 }

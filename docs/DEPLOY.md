@@ -208,7 +208,7 @@ Script hỏi mật khẩu, đăng nhập, gọi `preview` (báo lỗi theo từn
 
 - File audio, ảnh upload qua trang admin được lưu ở ổ đĩa VPS (volume `media_data`, mặc định) hoặc Google Drive của bạn (`APP_MEDIA_PROVIDER=drive`).
 - Trình duyệt tải file lên và phát file **trực tiếp từ địa chỉ API**, không qua Vercel (Vercel giới hạn dung lượng body). Trên Vercel đặt thêm biến `NEXT_PUBLIC_MEDIA_URL` = địa chỉ API công khai, ví dụ `https://85-211-178-19.sslip.io`, rồi Redeploy. `CORS_ALLOWED_ORIGIN` đã cho phép địa chỉ Vercel gọi sang.
-- Giới hạn mặc định: audio 60 MB, ảnh 5 MB, tối đa 200 lượt upload mỗi giờ, tổng 20 GB. Chỉ nhận mp3, m4a, ogg, wav, png, jpg, webp, kiểm tra bằng nội dung thật.
+- Giới hạn mặc định: audio 200 MB, ảnh 5 MB, tối đa 200 lượt upload mỗi giờ, tổng 20 GB. Chỉ nhận mp3, m4a, ogg, wav, png, jpg, webp, kiểm tra bằng nội dung thật.
 - Nếu dùng ổ đĩa VPS, nhớ sao lưu volume `media_data`.
 - Chỉ nạp nội dung bạn có quyền sử dụng. Đề thi thật có bản quyền.
 - Dữ liệu mẫu tự động chỉ có ở môi trường dev, production bắt đầu từ kho trống.

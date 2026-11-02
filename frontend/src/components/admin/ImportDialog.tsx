@@ -9,8 +9,15 @@ import { uploadMedia } from "@/lib/media";
 type Step = "edit" | "working" | "preview" | "done";
 
 function describeError(e: unknown): string {
-  const body = (e as { response?: { data?: { message?: string; error?: string } } })?.response?.data;
-  return body?.message ?? body?.error ?? "Có lỗi xảy ra, thử lại nhé.";
+  const response = (e as { response?: { status?: number; data?: { message?: unknown; error?: unknown } } })?.response;
+  // Proxies answer with their own shapes (error may be an object), so only trust plain strings
+  const message = response?.data?.message;
+  if (typeof message === "string") return message;
+  if (response?.status === 413) return "File quá lớn so với giới hạn của máy chủ.";
+  if (response?.status === 502 || response?.status === 504) {
+    return "Máy chủ không phản hồi. Kiểm tra NEXT_PUBLIC_MEDIA_URL đã trỏ thẳng tới API chưa, hoặc file quá lớn.";
+  }
+  return "Có lỗi xảy ra, thử lại nhé.";
 }
 
 /** Import JSON plus audio and image files: upload files, rewrite names, preview, then commit. */
@@ -122,7 +129,7 @@ export function ImportDialog({ onClose, onImported }: { onClose: () => void; onI
                   </p>
                 )}
                 <p className="mt-1 text-xs text-neutral-400">
-                  Chấp nhận mp3, m4a, ogg, wav (tối đa 60 MB) và png, jpg, webp (tối đa 5 MB).
+                  Chấp nhận mp3, m4a, ogg, wav (tối đa 200 MB) và png, jpg, webp (tối đa 5 MB).
                 </p>
               </div>
             </>

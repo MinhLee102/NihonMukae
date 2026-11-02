@@ -7,6 +7,7 @@ import { RequireAuth } from "@/components/flashcard/RequireAuth";
 import { AnswerSheet, type SheetCell } from "@/components/jlpt/AnswerSheet";
 import { ConfirmDialog } from "@/components/jlpt/ConfirmDialog";
 import { QuestionPanel } from "@/components/jlpt/QuestionPanel";
+import { SectionAudio } from "@/components/jlpt/ListeningAudio";
 import { useAuthStore } from "@/store/authStore";
 import { getApiErrorMessage } from "@/lib/api/flashcard";
 import {
@@ -309,6 +310,10 @@ function Runner() {
             <X size={14} />
           </button>
         </div>
+      )}
+
+      {exam && activeBlock?.audioUrl && (
+        <SectionAudio key={`${id}:${activeBlock.blockNo}`} url={activeBlock.audioUrl} progressKey={`${id}:${activeBlock.blockNo}`} />
       )}
 
       <div className="flex min-h-0 flex-1">

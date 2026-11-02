@@ -87,6 +87,8 @@ export interface BlockViewDto {
   startedAt?: string | null;
   /** null for a block without a time limit (unlimited practice). */
   deadline?: string | null;
+  /** Audio of the whole listening section, only on the block that holds the listening questions. */
+  audioUrl?: string;
 }
 
 export interface GroupViewDto {
@@ -206,6 +208,7 @@ export interface ResultDto {
   byType: TypeStatDto[];
   questions: ResultQuestionDto[];
   groups: GroupViewDto[];
+  listeningAudioUrl?: string;
 }
 
 export interface SessionSummaryDto {

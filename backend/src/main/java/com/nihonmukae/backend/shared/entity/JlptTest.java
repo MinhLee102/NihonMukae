@@ -32,6 +32,10 @@ public class JlptTest {
 
     private Short month;
 
+    /** File audio của cả phần nghe, phát liền một mạch khi thi thử. */
+    @Column(name = "listening_audio_url", length = 500)
+    private String listeningAudioUrl;
+
     @Column(name = "is_active", nullable = false)
     private boolean active;
 

@@ -155,9 +155,9 @@ export function QuestionPanel({
 
       {!group?.audioUrl && <AudioBlock url={question.audioUrl} isListening={isListening && !question.audioUrl} mode={audioMode} />}
 
-      <p className="mb-6 text-lg font-semibold leading-8 text-neutral-900">
+      <div className="mb-6 text-lg font-semibold leading-8 text-neutral-900">
         <FormattedText text={question.question} />
-      </p>
+      </div>
 
       <div className="flex flex-col gap-3">
         {question.options.map((option, i) => {

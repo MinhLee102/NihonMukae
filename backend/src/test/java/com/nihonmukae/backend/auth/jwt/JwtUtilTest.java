@@ -52,7 +52,10 @@ class JwtUtilTest {
                 .build();
 
         String token = jwtUtil.generateAccessToken(user);
-        String tamperedToken = token.substring(0, token.length() - 1) + "x";
+        // Sửa một ký tự ở giữa chữ ký. Ký tự cuối của base64url có bit thừa nên đổi nó đôi khi không đổi chữ ký.
+        int middle = token.lastIndexOf('.') + 10;
+        char replacement = token.charAt(middle) == 'A' ? 'B' : 'A';
+        String tamperedToken = token.substring(0, middle) + replacement + token.substring(middle + 1);
 
         assertThat(jwtUtil.isTokenValid(tamperedToken)).isFalse();
     }

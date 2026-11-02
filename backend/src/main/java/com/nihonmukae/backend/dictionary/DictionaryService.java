@@ -166,7 +166,7 @@ public class DictionaryService {
                 .kanji(p.getKanji())
                 .kana(p.getKana())
                 .rawQuery(p.getRawQuery())
-                .searchedAt(p.getSearchedAt())
+                .searchedAt(p.getSearchedAt() == null ? null : p.getSearchedAt().atZone(java.time.ZoneOffset.UTC))
                 .build();
     }
 

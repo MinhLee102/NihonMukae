@@ -34,6 +34,9 @@ public class ImportFile {
         private String title;
         @JsonAlias("source_note")
         private String sourceNote;
+        // Audio của cả phần nghe (một file, phát liền từ đầu đến cuối khi thi thử)
+        @JsonAlias("audio_url")
+        private String audioUrl;
     }
 
     @Getter

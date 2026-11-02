@@ -45,6 +45,13 @@ services:
       LOGGING_LEVEL_ROOT: INFO
       # Dev only: nạp câu hỏi JLPT mẫu (tự soạn) khi kho còn rỗng
       APP_JLPT_SEED_SAMPLE: "true"
+      # Dev only: tạo sẵn 1 tài khoản admin để thử trang quản trị. KHÔNG dùng ở production.
+      APP_DEV_ADMIN_EMAIL: admin@nihongo.local
+      APP_DEV_ADMIN_PASSWORD: Admin-Dev-123!
+      # Audio và ảnh upload lưu vào volume này (mất khi xóa volume)
+      APP_MEDIA_LOCAL_DIR: /data/media
+    volumes:
+      - media_dev_data:/data/media
     depends_on:
       - postgres
       - redis
@@ -72,3 +79,4 @@ services:
 
 volumes:
   postgres_dev_data:
+  media_dev_data:

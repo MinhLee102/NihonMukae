@@ -85,6 +85,9 @@ export const NAV_ITEMS: NavItem[] = [
  
 /** Finds the closest matching nav item for a given pathname (falls back to Dictionary). */
 export function getActiveNavItem(pathname: string): NavItem {
+  if (pathname.startsWith("/profile")) {
+    return { ...NAV_ITEMS[0], href: "/profile", breadcrumbJa: "プロフィール", breadcrumbVi: "Hồ sơ" };
+  }
   const exact = NAV_ITEMS.find((item) => item.href === pathname);
   if (exact) return exact;
  

@@ -38,6 +38,18 @@ public class User {
     @Column(length = 20)
     private String role = "USER";
 
+    // Cấp độ mong muốn: 1 (N1) đến 5 (N5), null nếu chưa chọn
+    @Column(name = "target_level")
+    private Short targetLevel;
+
+    // false khi bị admin khóa: không đăng nhập hay làm mới phiên được
+    @Builder.Default
+    @Column(nullable = false)
+    private boolean enabled = true;
+
+    @Column(name = "last_login_at")
+    private ZonedDateTime lastLoginAt;
+
     @CreationTimestamp
     @Column(name = "created_at", updatable = false)
     private ZonedDateTime createdAt;

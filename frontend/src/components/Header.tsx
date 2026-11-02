@@ -5,6 +5,7 @@ import { ChevronDown, Globe, LogOut } from "lucide-react";
 import { getActiveNavItem } from "@/lib/navigation";
 import { useAuthModalStore } from '@/store/authModalStore';
 import { useAuth } from '@/hooks/useAuth';
+import { useProfileStore } from '@/store/profileStore';
 
 /**
  * Top header. Breadcrumb title updates based on the active route.
@@ -17,6 +18,7 @@ export function Header() {
 
   const openAuthModal = useAuthModalStore((s) => s.open);
   const { isAuthenticated, user, isInitializing,logout } = useAuth();
+  const profileName = useProfileStore((s) => s.profile?.name);
 
   return (
     <header className="flex h-[73px] items-center justify-between border-b border-black/5 bg-[#F5F3EE] px-8">
@@ -31,7 +33,9 @@ export function Header() {
       <div className="flex items-center gap-3">
         <button
           type="button"
-          className="flex items-center gap-1.5 rounded-full border border-black/10 bg-white px-3.5 py-1.5 text-sm text-neutral-600 transition hover:bg-black/[0.03]"
+          disabled
+          title="Đang phát triển"
+          className="flex cursor-not-allowed items-center gap-1.5 rounded-full border border-black/10 bg-white px-3.5 py-1.5 text-sm text-neutral-400 opacity-70"
         >
           <Globe size={14} strokeWidth={1.75} />
           Nhật - Việt
@@ -45,7 +49,7 @@ export function Header() {
         ) : isAuthenticated ? (
           <div className="flex items-center gap-2">
             <span className="text-sm text-neutral-700">
-              {user?.name ?? user?.email}
+              {profileName ?? user?.name ?? user?.email}
             </span>
             <button
               type="button"

@@ -19,7 +19,9 @@ WORKDIR /app
 RUN apt-get update \
     && apt-get install -y --no-install-recommends curl \
     && rm -rf /var/lib/apt/lists/* \
-    && useradd --system --create-home --uid 10001 appuser
+    && useradd --system --create-home --uid 10001 appuser \
+    && mkdir -p /data/media \
+    && chown appuser:appuser /data/media
 
 ARG JAR_FILE=target/*.jar
 COPY --from=builder /app/${JAR_FILE} app.jar

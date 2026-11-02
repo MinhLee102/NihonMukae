@@ -5,6 +5,7 @@ const ERROR_MESSAGES: Record<string, string> = {
   invalid_credentials: 'Email hoặc mật khẩu không đúng.',
   invalid_refresh_token: 'Phiên đăng nhập đã hết hạn, vui lòng đăng nhập lại.',
   no_refresh_token: 'Phiên đăng nhập đã hết hạn, vui lòng đăng nhập lại.',
+  account_locked: 'Tài khoản đã bị khóa. Vui lòng liên hệ quản trị viên.',
   email_already_exists: 'Email này đã được đăng ký.',
 };
  

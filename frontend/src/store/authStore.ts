@@ -27,10 +27,11 @@ function decodeUserFromToken(token: string): AuthUser | null {
       email?: string;
       sub?: string;
       name?: string;
+      role?: string;
     };
     const email = json.email ?? json.sub;
     if (!email) return null;
-    return { email, name: json.name };
+    return { email, name: json.name, role: json.role };
   } catch {
     return null;
   }

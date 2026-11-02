@@ -2,17 +2,32 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
-import { ChevronLeft, ChevronRight, User } from "lucide-react";
+import { useEffect, useState } from "react";
+import { ChevronLeft, ChevronRight, ShieldCheck, User } from "lucide-react";
 import { NAV_ITEMS } from "@/lib/navigation";
+import { useAuthStore } from "@/store/authStore";
+import { useAuthModalStore } from "@/store/authModalStore";
+import { useProfileStore } from "@/store/profileStore";
 
-/**
- * App-wide sidebar. 
- * swap for the real auth store once AUTH-07 lands.
- */
+/** App-wide sidebar. */
 export function Sidebar() {
   const pathname = usePathname();
   const [collapsed, setCollapsed] = useState(false);
+
+  const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
+  const tokenUser = useAuthStore((s) => s.user);
+  const openAuthModal = useAuthModalStore((s) => s.open);
+  const profile = useProfileStore((s) => s.profile);
+  const loadProfile = useProfileStore((s) => s.load);
+  const clearProfile = useProfileStore((s) => s.clear);
+
+  useEffect(() => {
+    if (isAuthenticated) void loadProfile();
+    else clearProfile();
+  }, [isAuthenticated, loadProfile, clearProfile]);
+
+  const displayName = profile?.name ?? tokenUser?.email ?? "";
+  const isAdmin = (profile?.role ?? tokenUser?.role) === "ADMIN";
 
   return (
     <aside
@@ -59,23 +74,53 @@ export function Sidebar() {
         })}
       </nav>
 
-      {/* User footer — placeholder */}
+      {/* User footer: opens the profile page, admins also get a shortcut to the console */}
       <div className="border-t border-black/5 px-3 py-4">
-        <div
-          className={`flex items-center gap-3 rounded-xl px-2 py-2 ${
-            collapsed ? "justify-center" : ""
-          }`}
-        >
-          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-neutral-200 text-neutral-500">
-            <User size={16} strokeWidth={1.75} />
-          </div>
-          {!collapsed && (
-            <div className="min-w-0">
-              <p className="truncate text-sm font-medium text-neutral-800">
-                Tanaka Ken
-              </p>
-              <p className="truncate text-xs text-neutral-400">N4 Level</p>
-            </div>
+        <div className={`flex items-center gap-1 ${collapsed ? "flex-col" : ""}`}>
+          {isAuthenticated ? (
+            <Link
+              href="/profile"
+              title={collapsed ? displayName : undefined}
+              className={`flex min-w-0 flex-1 items-center gap-3 rounded-xl px-2 py-2 transition-colors hover:bg-black/5 ${
+                pathname === "/profile" ? "bg-black/5" : ""
+              } ${collapsed ? "justify-center" : ""}`}
+            >
+              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-neutral-200 text-neutral-500">
+                <User size={16} strokeWidth={1.75} />
+              </div>
+              {!collapsed && (
+                <div className="min-w-0">
+                  <p className="truncate text-sm font-medium text-neutral-800">{displayName}</p>
+                  <p className="truncate text-xs text-neutral-400">
+                    {profile?.targetLevel ? `Mục tiêu N${profile.targetLevel}` : "Chưa chọn mục tiêu"}
+                  </p>
+                </div>
+              )}
+            </Link>
+          ) : (
+            <button
+              type="button"
+              onClick={() => openAuthModal("login")}
+              title={collapsed ? "Đăng nhập" : undefined}
+              className={`flex min-w-0 flex-1 items-center gap-3 rounded-xl px-2 py-2 text-left transition-colors hover:bg-black/5 ${
+                collapsed ? "justify-center" : ""
+              }`}
+            >
+              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-neutral-200 text-neutral-500">
+                <User size={16} strokeWidth={1.75} />
+              </div>
+              {!collapsed && <span className="truncate text-sm text-neutral-500">Đăng nhập</span>}
+            </button>
+          )}
+          {isAuthenticated && isAdmin && (
+            <Link
+              href="/admin"
+              title="Trang quản trị"
+              aria-label="Trang quản trị"
+              className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-neutral-400 transition hover:bg-neutral-900 hover:text-white"
+            >
+              <ShieldCheck size={16} strokeWidth={1.75} />
+            </Link>
           )}
         </div>
       </div>

@@ -2,6 +2,7 @@ package com.nihonmukae.backend.question;
 
 import com.nihonmukae.backend.shared.entity.Question;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -12,7 +13,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface QuestionRepository extends JpaRepository<Question, Long> {
+public interface QuestionRepository extends JpaRepository<Question, Long>, JpaSpecificationExecutor<Question> {
 
     Optional<Question> findByContentHash(String contentHash);
 
@@ -40,6 +41,11 @@ public interface QuestionRepository extends JpaRepository<Question, Long> {
     @Modifying
     @Query("UPDATE Question q SET q.active = false WHERE q.source = :source")
     int deactivateBySource(@Param("source") String source);
+
+    // [section, level, số câu] của các câu đang hoạt động, cho thẻ thống kê của trang quản trị
+    @Query("SELECT t.section, q.level, COUNT(q) FROM Question q JOIN QuestionType t ON t.id = q.typeId " +
+            "WHERE q.active = true GROUP BY t.section, q.level")
+    List<Object[]> countBySectionAndLevel();
 
     long countByActiveTrue();
 }

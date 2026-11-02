@@ -47,6 +47,28 @@ public class GlobalExceptionHandler {
                 .body(ApiResponse.error("Thiếu tham số bắt buộc: " + ex.getParameterName()));
     }
 
+    // Body không đọc được (JSON sai kiểu, sai cú pháp): báo 400 kèm vị trí thay vì 500 chung chung
+    @ExceptionHandler(org.springframework.http.converter.HttpMessageNotReadableException.class)
+    public ResponseEntity<ApiResponse<Void>> handleUnreadable(org.springframework.http.converter.HttpMessageNotReadableException ex) {
+        String where = "";
+        String reason = "JSON không đúng định dạng";
+        if (ex.getCause() instanceof com.fasterxml.jackson.databind.JsonMappingException mapping) {
+            String path = mapping.getPath().stream()
+                    .map(r -> r.getFieldName() != null ? "." + r.getFieldName() : "[" + r.getIndex() + "]")
+                    .collect(java.util.stream.Collectors.joining())
+                    .replaceFirst("^\\.", "");
+            if (!path.isEmpty()) {
+                where = " tại " + path;
+            }
+            if (mapping instanceof com.fasterxml.jackson.databind.exc.InvalidFormatException invalid) {
+                reason = "Giá trị \"" + invalid.getValue() + "\" không hợp lệ";
+            } else if (mapping.getOriginalMessage() != null && mapping.getOriginalMessage().contains("level")) {
+                reason = mapping.getOriginalMessage();
+            }
+        }
+        return ResponseEntity.badRequest().body(ApiResponse.error(reason + where));
+    }
+
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ApiResponse<Void>> handleGeneric(Exception ex) {
         // QUAN TRỌNG: phải log full stack trace ở đây — nếu không, mọi lỗi

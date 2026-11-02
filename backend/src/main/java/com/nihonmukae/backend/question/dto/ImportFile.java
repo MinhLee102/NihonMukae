@@ -2,6 +2,7 @@ package com.nihonmukae.backend.question.dto;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -28,6 +29,7 @@ public class ImportFile {
     @NoArgsConstructor
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static class TestInfo {
+        @JsonDeserialize(using = LevelDeserializer.class)
         private Integer level;
         private Integer year;
         private Integer month;
@@ -46,6 +48,7 @@ public class ImportFile {
     public static class Item {
         // Mã dạng bài (question_types.code). Câu con của group có thể bỏ trống để kế thừa từ group
         private String type;
+        @JsonDeserialize(using = LevelDeserializer.class)
         private Integer level;
         private String question;
         private List<String> options;
@@ -61,6 +64,7 @@ public class ImportFile {
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static class Group {
         private String type;
+        @JsonDeserialize(using = LevelDeserializer.class)
         private Integer level;
         private String title;
         private String topic;

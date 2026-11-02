@@ -55,7 +55,10 @@ public final class ImportValidator {
             ImportFile.Group group = file.getGroups().get(g);
             String gPath = "groups[" + g + "]";
             boolean hasContent = notBlank(group.getPassage()) || notBlank(group.getAudioUrl()) || notBlank(group.getImageUrl());
-            if (!hasContent) {
+            // Nhóm của phần nghe có thể không có nội dung riêng: audio của cả phần nghe nằm ở test.audio_url
+            QuestionType groupType = group.getType() == null ? null : typesByCode.get(group.getType());
+            boolean listening = groupType != null && "chokai".equals(groupType.getSection());
+            if (!hasContent && !listening) {
                 problems.add(new Problem(gPath, "Nhóm cần có passage, audio_url hoặc image_url"));
             }
             if (group.getQuestions().isEmpty()) {

@@ -22,6 +22,27 @@ export function substituteMedia(value: unknown, urlsByName: Map<string, string>)
   return value;
 }
 
+const MEDIA_NAME = /.+\.(mp3|m4a|ogg|wav|png|jpe?g|webp)$/i;
+
+/** File names the JSON refers to: string values that look like a media file, and [[img:name]] tokens. */
+export function collectMediaRefs(value: unknown, found: Set<string> = new Set()): Set<string> {
+  if (typeof value === 'string') {
+    const text = value.trim();
+    if (MEDIA_NAME.test(text) && !text.startsWith('/') && !text.startsWith('http') && !text.includes('[[')) {
+      found.add(text);
+    }
+    for (const m of Array.from(text.matchAll(/\[\[img:([^\]]+)\]\]/g))) {
+      const name = m[1].trim();
+      if (!name.startsWith('/') && !name.startsWith('http')) found.add(name);
+    }
+  } else if (Array.isArray(value)) {
+    value.forEach((v) => collectMediaRefs(v, found));
+  } else if (value && typeof value === 'object') {
+    Object.values(value as Record<string, unknown>).forEach((v) => collectMediaRefs(v, found));
+  }
+  return found;
+}
+
 export const IMPORT_TEMPLATE = {
   test: { level: 3, title: 'JLPT N3 2023-07', year: 2023, month: 7, source_note: 'Đề mẫu', audio_url: 'n3_2023_07_listening.mp3' },
   questions: [

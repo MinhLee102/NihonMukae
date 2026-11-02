@@ -18,14 +18,19 @@ class ImportValidatorTest {
 
     private final Map<String, QuestionType> types = Map.of(
             "kanji_reading", type("kanji_reading", false, 5, 4, 3),
-            "reading_short", type("reading_short", true, 5, 4, 3));
+            "reading_short", type("reading_short", true, 5, 4, 3),
+            "listen_integrated", type("listen_integrated", true, "chokai", 3));
 
     private static QuestionType type(String code, boolean group, int... levels) {
+        return type(code, group, null, levels);
+    }
+
+    private static QuestionType type(String code, boolean group, String section, int... levels) {
         List<Short> l = new java.util.ArrayList<>();
         for (int level : levels) {
             l.add((short) level);
         }
-        return QuestionType.builder().id((short) 1).code(code).levels(l).groupBased(group).build();
+        return QuestionType.builder().id((short) 1).code(code).section(section).levels(l).groupBased(group).build();
     }
 
     private List<ImportValidator.Problem> validate(String json) throws Exception {
@@ -63,6 +68,17 @@ class ImportValidatorTest {
         List<ImportValidator.Problem> problems = validate("{\"groups\":[{\"type\":\"reading_short\",\"level\":3}]}");
         assertTrue(problems.stream().anyMatch(p -> p.path().equals("groups[0]")));
         assertTrue(problems.stream().anyMatch(p -> p.path().equals("groups[0].questions")));
+    }
+
+    @Test
+    void listeningGroupMayHaveNoContentOfItsOwn() throws Exception {
+        // Audio của cả phần nghe nằm ở test.audio_url, nên nhóm nghe không cần nội dung riêng
+        String json = """
+                {"test":{"level":3,"title":"t","audio_url":"all.mp3"},
+                 "groups":[{"type":"listen_integrated","questions":[
+                    {"question":"質問","options":["1","2","3"],"correct":"A"}]}]}
+                """;
+        assertTrue(validate(json).isEmpty());
     }
 
     @Test

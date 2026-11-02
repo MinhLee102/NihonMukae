@@ -177,6 +177,25 @@ Script chạy Python trong một container tạm, nối vào mạng của compos
 
 Câu hỏi JLPT mẫu **không** tự nạp ở production (cờ `APP_JLPT_SEED_SAMPLE` chỉ bật trong `docker-compose.yml` dùng cho dev). Đề thật nạp qua `POST /questions/import/preview` rồi `/commit`.
 
+## 6b. Thêm đề JLPT mới (không cần deploy lại)
+
+Đề nằm trong database, nên nạp trực tiếp vào hệ thống đang chạy bằng script, từ máy bạn:
+
+```bash
+# 1. Kiểm tra file trước, chưa lưu gì
+python scripts/jlpt/import_questions.py de-n3-2023-07.json --api https://<api-của-bạn> --email <email> --dry-run
+
+# 2. Nạp thật (hỏi xác nhận trước khi lưu)
+python scripts/jlpt/import_questions.py de-n3-2023-07.json --api https://<api-của-bạn> --email <email>
+```
+
+Script hỏi mật khẩu, đăng nhập, gọi `preview` (báo lỗi theo từng vị trí như `questions[3].options`, liệt kê câu trùng), rồi `commit` khi bạn xác nhận. Chạy lại cùng file là an toàn: câu trùng bị bỏ qua. File mẫu để làm theo format nằm ở `backend/src/main/resources/jlpt/*.json`.
+
+Lưu ý:
+- Audio cho câu nghe: điền `audio_url` là link công khai tới file (ví dụ Azure Blob Storage, gói sinh viên có 5 GB miễn phí). Câu nghe không có audio sẽ hiện thông báo thay thế.
+- Chỉ nạp nội dung bạn có quyền sử dụng. Đề thi thật có bản quyền.
+- Dữ liệu mẫu tự động chỉ có ở môi trường dev, production bắt đầu từ kho trống.
+
 ## 7. Vận hành hằng ngày
 
 ```bash

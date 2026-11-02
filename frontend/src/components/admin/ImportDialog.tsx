@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 import { Copy, FileAudio, X } from "lucide-react";
 import { commitImport, previewImport, type ImportCommit, type ImportPreview } from "@/lib/api/admin";
-import { IMPORT_TEMPLATE, substituteMedia } from "@/lib/importMedia";
+import { collectMediaRefs, IMPORT_TEMPLATE, substituteMedia } from "@/lib/importMedia";
 import { uploadMedia } from "@/lib/media";
 
 type Step = "edit" | "working" | "preview" | "done";
@@ -39,6 +39,18 @@ export function ImportDialog({ onClose, onImported }: { onClose: () => void; onI
       parsed = JSON.parse(text);
     } catch {
       setError("JSON không hợp lệ, kiểm tra lại dấu phẩy và ngoặc.");
+      return;
+    }
+    // File names in the JSON and the chosen files must match exactly, otherwise the name would be saved as text
+    const wanted = Array.from(collectMediaRefs(parsed));
+    const chosen = files.map((f) => f.name);
+    const missing = wanted.filter((n) => !chosen.some((c) => c.toLowerCase() === n.toLowerCase()));
+    const unused = chosen.filter((c) => !wanted.some((n) => n.toLowerCase() === c.toLowerCase()));
+    if (missing.length > 0 || unused.length > 0) {
+      const parts: string[] = [];
+      if (missing.length > 0) parts.push(`JSON ghi: ${missing.join(", ")} nhưng chưa chọn file trùng tên.`);
+      if (unused.length > 0) parts.push(`File đã chọn nhưng JSON không nhắc tới: ${unused.join(", ")}.`);
+      setError(`${parts.join(" ")} Hãy đổi tên file hoặc sửa tên trong JSON cho giống hệt nhau.`);
       return;
     }
     setStep("working");

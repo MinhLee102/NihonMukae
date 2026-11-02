@@ -20,7 +20,7 @@ Phải có ít nhất 1 câu trong `questions` hoặc trong `groups`.
 
 | Trường | Bắt buộc | Ghi chú |
 |---|---|---|
-| `level` | nên có | 1 đến 5 (N1 đến N5). Là level mặc định cho mọi câu trong file |
+| `level` | nên có | 1 đến 5, hoặc viết `"N1"` đến `"N5"`. Là level mặc định cho mọi câu trong file |
 | `title` | nên có | Ví dụ `JLPT N3 2023-07` |
 | `year`, `month` | không | Tháng 1 đến 12 |
 | `source_note` | không | Ghi chú nguồn |
@@ -109,7 +109,7 @@ Luyện tập chọn câu ngẫu nhiên theo dạng bài nên không phát đư�
 
 ### Ghi chú chung
 
-- Tên file so khớp không phân biệt hoa thường và phải trùng hẳn.
+- Tên file trong JSON và file bạn chọn phải **trùng hẳn** (không phân biệt hoa thường). Nên đổi tên file trước khi chọn (ví dụ `n1_2017_07_listening.mp3`), tránh tên dài có dấu cách và ngoặc. Nếu hai bên lệch nhau, hộp Import báo rõ tên nào lệch và không tải gì lên.
 - Ảnh: `image_url` ở nhóm (xem phần Bài đọc có định dạng), hoặc `[[img:ten_file.png]]` ngay trong chữ.
 - Chấp nhận: audio `mp3`, `m4a`, `ogg`, `wav` (tối đa 200 MB); ảnh `png`, `jpg`, `webp` (tối đa 5 MB). Loại file được xác định bằng nội dung thật, đổi đuôi file không qua mặt được.
 - Cùng một file chọn hai lần chỉ lưu một bản (so theo nội dung).

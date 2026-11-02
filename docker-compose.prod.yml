@@ -42,8 +42,19 @@ services:
       # RabbitMQ is not deployed, so its health indicator must not report the app as DOWN
       MANAGEMENT_HEALTH_RABBIT_ENABLED: "false"
       LOGGING_LEVEL_ROOT: INFO
+      # Tài khoản (đã đăng ký) có email trong danh sách này, ngăn cách bằng dấu phẩy, sẽ là ADMIN
+      APP_ADMIN_EMAILS: ${APP_ADMIN_EMAILS:-}
+      # Nơi lưu audio và ảnh của đề: local (volume bên dưới) hoặc drive (Google Drive, cần 3 biến GOOGLE_DRIVE_*)
+      APP_MEDIA_PROVIDER: ${APP_MEDIA_PROVIDER:-local}
+      APP_MEDIA_LOCAL_DIR: /data/media
+      GOOGLE_DRIVE_CLIENT_ID: ${GOOGLE_DRIVE_CLIENT_ID:-}
+      GOOGLE_DRIVE_CLIENT_SECRET: ${GOOGLE_DRIVE_CLIENT_SECRET:-}
+      GOOGLE_DRIVE_REFRESH_TOKEN: ${GOOGLE_DRIVE_REFRESH_TOKEN:-}
+      GOOGLE_DRIVE_FOLDER_ID: ${GOOGLE_DRIVE_FOLDER_ID:-}
       # JVM options. The default sizes the heap from the machine memory; on a 1 GiB VM set a fixed cap in .env
       JAVA_OPTS: ${JAVA_OPTS:--XX:MaxRAMPercentage=65 -XX:+UseSerialGC}
+    volumes:
+      - media_data:/data/media
     depends_on:
       postgres:
         condition: service_healthy
@@ -80,6 +91,7 @@ services:
       REDIS_PASSWORD: ${REDIS_PASSWORD}
 
 volumes:
+  media_data:
   postgres_data:
   redis_data:
   caddy_data:

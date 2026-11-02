@@ -1,9 +1,11 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { Check, Flag, Volume2, X } from "lucide-react";
+import { Check, Flag, X } from "lucide-react";
 import { FormattedText } from "@/components/jlpt/FormattedText";
 import { SplitPane } from "@/components/jlpt/SplitPane";
+import { ListeningAudio, type AudioMode } from "@/components/jlpt/ListeningAudio";
+import { resolveMediaUrl } from "@/lib/media";
 import { SECTION_LABELS, type GroupViewDto, type Section } from "@/lib/api/jlpt";
 
 export interface PanelQuestion {
@@ -26,15 +28,8 @@ export interface PanelQuestion {
 
 const LETTERS = ["A", "B", "C", "D"];
 
-function AudioBlock({ url, isListening }: { url?: string; isListening: boolean }) {
-  if (url) {
-    return (
-      <div className="mb-4 flex items-center gap-3 rounded-2xl border border-black/5 bg-white px-4 py-3">
-        <Volume2 size={16} className="shrink-0 text-neutral-400" />
-        <audio controls preload="none" src={url} className="h-8 w-full" />
-      </div>
-    );
-  }
+function AudioBlock({ url, isListening, mode }: { url?: string; isListening: boolean; mode: AudioMode }) {
+  if (url) return <ListeningAudio url={url} mode={mode} />;
   if (isListening) {
     return (
       <p className="mb-4 rounded-xl bg-amber-50 px-4 py-2.5 text-xs text-amber-700">
@@ -82,14 +77,14 @@ function InstructionHeader({ no, ja, vi }: { no?: number; ja: string; vi?: strin
   );
 }
 
-function GroupContent({ group }: { group: GroupViewDto }) {
+function GroupContent({ group, audioMode }: { group: GroupViewDto; audioMode: AudioMode }) {
   return (
     <div className="flex flex-col gap-4 p-6">
       {group.title && <p className="text-xs font-semibold tracking-wide text-neutral-400">{group.title}</p>}
-      {group.audioUrl && <AudioBlock url={group.audioUrl} isListening />}
+      {group.audioUrl && <AudioBlock url={group.audioUrl} isListening mode={audioMode} />}
       {group.imageUrl && (
         // eslint-disable-next-line @next/next/no-img-element
-        <img src={group.imageUrl} alt="" className="max-h-80 w-full rounded-xl object-contain" />
+        <img src={resolveMediaUrl(group.imageUrl)} alt="" className="max-h-80 w-full rounded-xl object-contain" />
       )}
       {group.passage && (
         <div className="rounded-2xl border border-black/5 bg-white p-5 text-[15px] leading-8 text-neutral-800">
@@ -113,6 +108,7 @@ export function QuestionPanel({
   flagged,
   onToggleFlag,
   footer,
+  audioMode = "free",
 }: {
   question: PanelQuestion;
   group?: GroupViewDto;
@@ -122,6 +118,8 @@ export function QuestionPanel({
   flagged?: boolean;
   onToggleFlag?: () => void;
   footer?: ReactNode;
+  /** exam: audio plays once with no controls. free: normal player. */
+  audioMode?: AudioMode;
 }) {
   const revealed = question.correctAnswer !== undefined;
   const sectionLabel = question.section ? SECTION_LABELS[question.section].vi : "";
@@ -155,7 +153,7 @@ export function QuestionPanel({
         )}
       </div>
 
-      {!group?.audioUrl && <AudioBlock url={question.audioUrl} isListening={isListening && !question.audioUrl} />}
+      {!group?.audioUrl && <AudioBlock url={question.audioUrl} isListening={isListening && !question.audioUrl} mode={audioMode} />}
 
       <p className="mb-6 text-lg font-semibold leading-8 text-neutral-900">
         <FormattedText text={question.question} />
@@ -221,7 +219,7 @@ export function QuestionPanel({
       )}
       <div className="min-h-0 flex-1">
         {hasGroup && group ? (
-          <SplitPane storageKey={splitKey} left={<GroupContent group={group} />} right={body} />
+          <SplitPane storageKey={splitKey} left={<GroupContent group={group} audioMode={audioMode} />} right={body} />
         ) : (
           <div className="h-full overflow-y-auto">{body}</div>
         )}

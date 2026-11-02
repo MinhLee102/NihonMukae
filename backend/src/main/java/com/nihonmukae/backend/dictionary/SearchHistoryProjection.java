@@ -1,6 +1,6 @@
 package com.nihonmukae.backend.dictionary;
 
-import java.time.ZonedDateTime;
+import java.time.Instant;
 
 
 public interface SearchHistoryProjection {
@@ -9,5 +9,6 @@ public interface SearchHistoryProjection {
     String getKanji();
     String getKana();
     String getRawQuery();
-    ZonedDateTime getSearchedAt();
+    // Native query: Hibernate 6 trả về Instant, không ép được sang ZonedDateTime
+    Instant getSearchedAt();
 }

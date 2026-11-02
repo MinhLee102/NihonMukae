@@ -4,6 +4,7 @@ import com.nihonmukae.backend.auth.jwt.JwtFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.http.HttpMethod;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
@@ -39,6 +40,10 @@ public class SecurityConfig {
                 .sessionManagement(session ->
                         session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
+                        // Khu quản trị và nạp đề: chỉ ADMIN (role trong JWT, nên nâng quyền xong phải đăng nhập lại)
+                        .requestMatchers("/admin/**", "/questions/import/**").hasRole("ADMIN")
+                        // Audio và ảnh của đề thi: thẻ audio/img của trình duyệt không gửi được header Authorization
+                        .requestMatchers(HttpMethod.GET, "/media/**").permitAll()
                         .requestMatchers(
                                 "/auth/**",
                                 "/health",

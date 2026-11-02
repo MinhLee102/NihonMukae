@@ -47,8 +47,13 @@ public class AuthController {
 
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody LoginRequest req, HttpServletResponse res) {
-        return authService.validateUserCredentials(req.getEmail(), req.getPassword())
+        var credentials = authService.validateUserCredentials(req.getEmail(), req.getPassword());
+        if (credentials.isPresent() && !credentials.get().isEnabled()) {
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).body(Map.of("error", "account_locked"));
+        }
+        return credentials
                 .map(user -> {
+                    authService.recordLogin(user.getId());
                     String access = authService.generateAccessToken(user);
                     String rawRefresh = authService.createAndStoreRefreshToken(user);
                     ResponseCookie cookie = ResponseCookie.from(REFRESH_COOKIE_NAME, rawRefresh)
@@ -79,6 +84,7 @@ public class AuthController {
         var optUser = authService.refreshFromToken(raw);
         if (optUser.isEmpty()) return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(Map.of("error", "invalid_refresh_token"));
         User user = optUser.get();
+        authService.recordLogin(user.getId());
         String access = authService.generateAccessToken(user);
         // createAndStoreRefreshToken already rotated a new token in service; but we need to send latest token to client.
         // For simplicity, create another new token here and store+send it (service rotation already created one, but it's fine to create a fresh one now).

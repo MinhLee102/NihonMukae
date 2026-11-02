@@ -71,6 +71,12 @@ public class AuthService {
         return Optional.empty();
     }
 
+    /** Ghi nhận lần đăng nhập gần nhất (hiện ở trang quản lý người dùng). */
+    @Transactional
+    public void recordLogin(UUID userId) {
+        userRepository.findById(userId).ifPresent(u -> u.setLastLoginAt(ZonedDateTime.now()));
+    }
+
     @Transactional
     public Optional<User> refreshFromToken(String rawToken) {
         String hashed = sha256Base64Url(rawToken);
@@ -79,6 +85,11 @@ public class AuthService {
         RefreshToken old = o.get();
         User user = old.getUser();
         Hibernate.initialize(user);
+        if (!user.isEnabled()) {
+            // Tài khoản bị khóa: hủy luôn phiên đang có
+            refreshTokenRepository.deleteByUserId(user.getId());
+            return Optional.empty();
+        }
         refreshTokenRepository.deleteByToken(hashed);
         createAndStoreRefreshToken(user);
         return Optional.of(user);

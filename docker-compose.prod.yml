@@ -1,0 +1,86 @@
+# Production stack for the VPS (copied to /opt/nihongo-app by the deploy script).
+# Only Caddy publishes ports (80 and 443). Everything else stays on the internal network.
+#
+#   docker compose -f docker-compose.prod.yml --env-file .env up -d
+#
+# RabbitMQ is intentionally absent: the app no longer uses it (furigana is parsed synchronously).
+
+name: nihongo-app
+
+services:
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      # api.example.com gets an automatic Let's Encrypt certificate. Use ":80" to serve plain HTTP by IP.
+      API_DOMAIN: ${API_DOMAIN:-:80}
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      backend:
+        condition: service_healthy
+
+  backend:
+    image: ${BACKEND_IMAGE:?set BACKEND_IMAGE in .env}
+    restart: unless-stopped
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/${POSTGRES_DB}
+      SPRING_DATASOURCE_USERNAME: ${POSTGRES_USER}
+      SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD}
+      SPRING_DATA_REDIS_HOST: redis
+      SPRING_DATA_REDIS_PASSWORD: ${REDIS_PASSWORD}
+      JWT_SECRET: ${JWT_SECRET:?set JWT_SECRET in .env}
+      # The browser origin of the frontend (exactly, no trailing slash), e.g. https://app.example.com
+      CORS_ALLOWED_ORIGIN: ${CORS_ALLOWED_ORIGIN:?set CORS_ALLOWED_ORIGIN in .env}
+      # Refresh-token cookie is only sent over HTTPS
+      APP_COOKIE_SECURE: ${APP_COOKIE_SECURE:-true}
+      # RabbitMQ is not deployed, so its health indicator must not report the app as DOWN
+      MANAGEMENT_HEALTH_RABBIT_ENABLED: "false"
+      LOGGING_LEVEL_ROOT: INFO
+      # JVM options. The default sizes the heap from the machine memory; on a 1 GiB VM set a fixed cap in .env
+      JAVA_OPTS: ${JAVA_OPTS:--XX:MaxRAMPercentage=65 -XX:+UseSerialGC}
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    command: ["redis-server", "--requirepass", "${REDIS_PASSWORD}", "--maxmemory", "128mb", "--maxmemory-policy", "allkeys-lru"]
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "redis-cli -a \"$$REDIS_PASSWORD\" ping | grep PONG"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+    environment:
+      REDIS_PASSWORD: ${REDIS_PASSWORD}
+
+volumes:
+  postgres_data:
+  redis_data:
+  caddy_data:
+  caddy_config:

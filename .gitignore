@@ -17,3 +17,6 @@ Thumbs.db
 scripts/jmdict/venv/
 scripts/jmdict/JMdict_e
 scripts/jmdict/JMdict_e.xml
+
+# Local copy of the production env
+.env.prod

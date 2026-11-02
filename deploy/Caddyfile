@@ -1,0 +1,12 @@
+# Reverse proxy in front of the backend. With a domain name Caddy fetches and renews
+# the Let's Encrypt certificate by itself (no certbot, no cron).
+{$API_DOMAIN} {
+	encode gzip
+	reverse_proxy backend:8080
+
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		X-Content-Type-Options "nosniff"
+		-Server
+	}
+}

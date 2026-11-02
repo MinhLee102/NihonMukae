@@ -17,10 +17,17 @@ APP_DIR="${APP_DIR:-/opt/nihongo-app}"
 NETWORK="${COMPOSE_NETWORK:-nihongo-app_default}"
 
 cd "$APP_DIR"
-set -a
-# shellcheck disable=SC1091
-. ./.env
-set +a
+
+# Read only the three values needed. Sourcing the whole .env breaks on values with spaces (JAVA_OPTS).
+env_value() {
+  grep -E "^$1=" .env | head -1 | cut -d= -f2- | sed -e 's/^"//' -e 's/"$//'
+}
+POSTGRES_USER="$(env_value POSTGRES_USER)"
+POSTGRES_PASSWORD="$(env_value POSTGRES_PASSWORD)"
+POSTGRES_DB="$(env_value POSTGRES_DB)"
+for v in POSTGRES_USER POSTGRES_PASSWORD POSTGRES_DB; do
+  [ -n "${!v}" ] || { echo "$v is missing in $APP_DIR/.env" >&2; exit 1; }
+done
 
 for f in mazii_vocabs.csv meaning_detail.csv examples.csv kanji.csv; do
   [ -f "$DATA_DIR/$f" ] || { echo "Missing $DATA_DIR/$f" >&2; exit 1; }

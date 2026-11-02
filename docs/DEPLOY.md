@@ -177,9 +177,22 @@ Script chạy Python trong một container tạm, nối vào mạng của compos
 
 Câu hỏi JLPT mẫu **không** tự nạp ở production (cờ `APP_JLPT_SEED_SAMPLE` chỉ bật trong `docker-compose.yml` dùng cho dev). Đề thật nạp qua `POST /questions/import/preview` rồi `/commit`.
 
-## 6b. Thêm đề JLPT mới (không cần deploy lại)
+## 6b. Tài khoản admin và thêm đề JLPT mới (không cần deploy lại)
 
-Đề nằm trong database, nên nạp trực tiếp vào hệ thống đang chạy bằng script, từ máy bạn:
+### Tạo tài khoản admin
+
+1. Đăng ký một tài khoản bình thường trên web.
+2. Trong `.env` trên VPS đặt `APP_ADMIN_EMAILS=<email-đó>` (nhiều email thì cách nhau bằng dấu phẩy), rồi áp dụng: `dc up -d backend`.
+3. Khi backend khởi động, các email này được nâng lên ADMIN. **Đăng xuất rồi đăng nhập lại** để token mới mang quyền admin.
+4. Sidebar có thêm nút khiên nhỏ cạnh tên tài khoản, bấm vào để sang trang quản trị (`/admin`).
+
+Quyền admin nằm trong access token (hết hạn sau 15 phút). Khóa tài khoản hay đổi quyền có hiệu lực đầy đủ sau tối đa 15 phút hoặc khi người đó đăng nhập lại.
+
+### Thêm đề
+
+Cách chính: trang **Ngân hàng đề**, nút **Import JSON**. Dán JSON, chọn kèm các file audio hoặc ảnh, bấm Kiểm tra rồi Lưu. Định dạng JSON và đoạn yêu cầu để nhờ AI trích đề từ ảnh nằm ở `docs/JLPT_IMPORT_FORMAT.md`. Cách lưu file audio xem `docs/GOOGLE_DRIVE_SETUP.md`.
+
+Cách thay thế: nạp hàng loạt bằng script từ máy bạn (cần tài khoản ADMIN):
 
 ```bash
 # 1. Kiểm tra file trước, chưa lưu gì
@@ -189,10 +202,14 @@ python scripts/jlpt/import_questions.py de-n3-2023-07.json --api https://<api-c�
 python scripts/jlpt/import_questions.py de-n3-2023-07.json --api https://<api-của-bạn> --email <email>
 ```
 
-Script hỏi mật khẩu, đăng nhập, gọi `preview` (báo lỗi theo từng vị trí như `questions[3].options`, liệt kê câu trùng), rồi `commit` khi bạn xác nhận. Chạy lại cùng file là an toàn: câu trùng bị bỏ qua. File mẫu để làm theo format nằm ở `backend/src/main/resources/jlpt/*.json`.
+Script hỏi mật khẩu, đăng nhập, gọi `preview` (báo lỗi theo từng vị trí như `questions[3].options`, liệt kê câu trùng), rồi `commit` khi bạn xác nhận. Chạy lại cùng file là an toàn: câu trùng bị bỏ qua. Script không tải audio lên, nên đề nghe nên đi qua trang admin.
 
-Lưu ý:
-- Audio cho câu nghe: điền `audio_url` là link công khai tới file (ví dụ Azure Blob Storage, gói sinh viên có 5 GB miễn phí). Câu nghe không có audio sẽ hiện thông báo thay thế.
+### Audio và ảnh
+
+- File audio, ảnh upload qua trang admin được lưu ở ổ đĩa VPS (volume `media_data`, mặc định) hoặc Google Drive của bạn (`APP_MEDIA_PROVIDER=drive`).
+- Trình duyệt tải file lên và phát file **trực tiếp từ địa chỉ API**, không qua Vercel (Vercel giới hạn dung lượng body). Trên Vercel đặt thêm biến `NEXT_PUBLIC_MEDIA_URL` = địa chỉ API công khai, ví dụ `https://85-211-178-19.sslip.io`, rồi Redeploy. `CORS_ALLOWED_ORIGIN` đã cho phép địa chỉ Vercel gọi sang.
+- Giới hạn mặc định: audio 60 MB, ảnh 5 MB, tối đa 200 lượt upload mỗi giờ, tổng 20 GB. Chỉ nhận mp3, m4a, ogg, wav, png, jpg, webp, kiểm tra bằng nội dung thật.
+- Nếu dùng ổ đĩa VPS, nhớ sao lưu volume `media_data`.
 - Chỉ nạp nội dung bạn có quyền sử dụng. Đề thi thật có bản quyền.
 - Dữ liệu mẫu tự động chỉ có ở môi trường dev, production bắt đầu từ kho trống.
 

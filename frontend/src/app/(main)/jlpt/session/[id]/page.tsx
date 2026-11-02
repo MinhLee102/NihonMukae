@@ -338,6 +338,7 @@ function Runner() {
           {view && activeBlock && currentQuestion && !currentQuestion.hidden && currentQuestion.options && (
             <QuestionPanel
               splitKey="jlpt:split"
+              audioMode={exam ? "exam" : "free"}
               question={{
                 position: currentQuestion.position,
                 total: questions.length,

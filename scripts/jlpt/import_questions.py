@@ -2,7 +2,7 @@
 import_questions.py
 
 Nạp đề JLPT / câu hỏi từ file JSON vào hệ thống đang chạy, qua API import (preview rồi commit).
-Format file: xem backend/src/main/resources/jlpt/sample-n3.json và mục 5.8.1 trong spec.
+Format file: xem docs/JLPT_IMPORT_FORMAT.md. Cần đăng nhập bằng tài khoản ADMIN.
 
 Ví dụ:
   # Chỉ kiểm tra file, chưa lưu gì

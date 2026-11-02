@@ -14,8 +14,8 @@ spring:
   servlet:
     multipart:
       # File audio của đề có thể vài chục MB; giới hạn thật theo loại file nằm ở MediaService
-      max-file-size: 64MB
-      max-request-size: 66MB
+      max-file-size: 210MB
+      max-request-size: 212MB
   flyway:
     enabled: true
     locations: classpath:db/migration
@@ -45,7 +45,7 @@ app:
     # local = thư mục trên ổ đĩa, drive = Google Drive của admin (cần 3 biến GOOGLE_DRIVE_*)
     provider: ${APP_MEDIA_PROVIDER:local}
     local-dir: ${APP_MEDIA_LOCAL_DIR:}
-    max-audio-mb: 60
+    max-audio-mb: 200
     max-image-mb: 5
     max-total-mb: 20480
     max-uploads-per-hour: 200

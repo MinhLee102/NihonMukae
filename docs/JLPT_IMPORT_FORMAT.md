@@ -97,7 +97,7 @@ Ghi chú:
 
 - Tên file so khớp không phân biệt hoa thường, và phải trùng hẳn (`q01.mp3` khác `q01.MP3.bak`).
 - Ảnh đặt trong đoạn văn hoặc câu hỏi: viết `[[img:ten_file.png]]` ngay trong chữ.
-- Chấp nhận: audio `mp3`, `m4a`, `ogg`, `wav` (tối đa 60 MB); ảnh `png`, `jpg`, `webp` (tối đa 5 MB). Loại file được xác định bằng nội dung thật, đổi đuôi file không qua mặt được.
+- Chấp nhận: audio `mp3`, `m4a`, `ogg`, `wav` (tối đa 200 MB); ảnh `png`, `jpg`, `webp` (tối đa 5 MB). Loại file được xác định bằng nội dung thật, đổi đuôi file không qua mặt được.
 - Cùng một file chọn hai lần chỉ lưu một bản (so theo nội dung).
 - Với câu nghe mà đề in sẵn không có chữ, vẫn phải có `question` (có thể ghi bản chép lời hoặc `質問を聞いてください`) và các `options` (có thể ghi `1`, `2`, `3`, `4`).
 - Một file audio lớn ghép cả phần nghe thì cắt thành từng câu trước khi upload, vì mỗi câu cần audio riêng.

@@ -12,7 +12,7 @@ import { getApiErrorMessage } from "@/lib/api/flashcard";
 
 const POPUP_WIDTH = 320;
 
-type Selected = { index: number; top: number; left: number };
+type Selected = { area: "title" | "content"; index: number; top: number; left: number };
 
 function Reader() {
   const { id } = useParams<{ id: string }>();
@@ -41,19 +41,51 @@ function Reader() {
     }
   };
 
-  const select = (index: number, el: HTMLElement) => {
+  const select = (area: "title" | "content", index: number, el: HTMLElement) => {
     const container = containerRef.current;
     if (!container) return;
     const box = container.getBoundingClientRect();
     const rect = el.getBoundingClientRect();
     const left = Math.min(Math.max(rect.left - box.left, 0), Math.max(box.width - POPUP_WIDTH, 0));
-    setSelected({ index, top: rect.bottom - box.top + 8, left });
+    setSelected({ area, index, top: rect.bottom - box.top + 8, left });
   };
 
   const tokens = item?.tokens ?? [];
+  const titleTokens = item?.titleTokens ?? [];
+  const selectedToken = selected ? (selected.area === "title" ? titleTokens : tokens)[selected.index] : undefined;
   // A title taken automatically from the first line would repeat the text right below it
   const firstLine = item?.content?.split("\n")[0].trim() ?? "";
   const showTitle = !!item && item.title !== firstLine && !(item.title.endsWith("…") && firstLine.startsWith(item.title.slice(0, -1)));
+
+  const renderTokens = (area: "title" | "content", list: ShelfToken[]) =>
+    list.map((token: ShelfToken, i) => {
+      const isSelected = selected?.area === area && selected.index === i;
+      const content = token.parts.map((part, j) =>
+        part.ruby ? (
+          // rt is absolutely positioned so hidden furigana does not widen the word
+          <ruby key={j} className="relative inline-block leading-[1.15]">
+            {part.text}
+            <rt className="invisible absolute left-1/2 top-0 -translate-x-1/2 -translate-y-full whitespace-nowrap text-[0.55em] leading-none text-sky-600 group-hover:visible">
+              {part.ruby}
+            </rt>
+          </ruby>
+        ) : (
+          <span key={j}>{part.text}</span>
+        )
+      );
+      if (!token.lookup) return <span key={i}>{content}</span>;
+      return (
+        <span
+          key={i}
+          onClick={(e) => select(area, i, e.currentTarget)}
+          className={`group cursor-pointer rounded transition-colors hover:bg-sky-100 ${
+            isSelected ? "bg-sky-200 hover:bg-sky-200" : ""
+          }`}
+        >
+          {content}
+        </span>
+      );
+    });
 
   return (
     <div className="mx-auto max-w-3xl">
@@ -90,44 +122,21 @@ function Reader() {
 
       {item && (
         <div ref={containerRef} className="relative">
-          {showTitle && <h1 className="mb-8 text-3xl leading-snug text-neutral-900">{item.title}</h1>}
+          {showTitle && (
+            <h1 className="mb-8 text-3xl leading-[2.2] text-neutral-900">
+              {titleTokens.length > 0 ? renderTokens("title", titleTokens) : item.title}
+            </h1>
+          )}
 
           <p className="whitespace-pre-wrap text-xl leading-[3] text-neutral-900">
-            {tokens.map((token: ShelfToken, i) => {
-              const isSelected = selected?.index === i;
-              const content = token.parts.map((part, j) =>
-                part.ruby ? (
-                  // rt is absolutely positioned so hidden furigana does not widen the word
-                  <ruby key={j} className="relative inline-block leading-[1.15]">
-                    {part.text}
-                    <rt className="invisible absolute left-1/2 top-0 -translate-x-1/2 -translate-y-full whitespace-nowrap text-[0.55em] leading-none text-sky-600 group-hover:visible">
-                      {part.ruby}
-                    </rt>
-                  </ruby>
-                ) : (
-                  <span key={j}>{part.text}</span>
-                )
-              );
-              if (!token.lookup) return <span key={i}>{content}</span>;
-              return (
-                <span
-                  key={i}
-                  onClick={(e) => select(i, e.currentTarget)}
-                  className={`group cursor-pointer rounded transition-colors hover:bg-sky-100 ${
-                    isSelected ? "bg-sky-200 hover:bg-sky-200" : ""
-                  }`}
-                >
-                  {content}
-                </span>
-              );
-            })}
+            {renderTokens("content", tokens)}
           </p>
 
-          {selected && tokens[selected.index] && (
+          {selected && selectedToken && (
             <>
               <div className="fixed inset-0 z-10" onClick={() => setSelected(null)} />
               <div className="absolute z-20" style={{ top: selected.top, left: selected.left }}>
-                <WordPopup token={tokens[selected.index]} onClose={() => setSelected(null)} />
+                <WordPopup token={selectedToken} onClose={() => setSelected(null)} />
               </div>
             </>
           )}

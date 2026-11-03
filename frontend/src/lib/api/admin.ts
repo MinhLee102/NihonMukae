@@ -53,6 +53,36 @@ export async function deleteBankQuestion(id: number) {
   await apiClient.delete(`/admin/questions/${id}`);
 }
 
+export interface AdminQuestionDetail {
+  id: number;
+  level: number;
+  typeCode: string;
+  typeName: string;
+  section: string;
+  question: string;
+  options: string[];
+  correct: string;
+  explanation: string | null;
+  transcript: string | null;
+  audioUrl: string | null;
+  groupId: number | null;
+  testId: number | null;
+}
+
+export async function fetchAdminQuestion(id: number) {
+  const { data } = await apiClient.get<ApiResponse<AdminQuestionDetail>>(`/admin/questions/${id}`);
+  return data.data;
+}
+
+/** Fields left undefined stay unchanged; an empty explanation or transcript clears it. */
+export async function updateAdminQuestion(
+  id: number,
+  payload: { question?: string; options?: string[]; correct?: string; explanation?: string; transcript?: string }
+) {
+  const { data } = await apiClient.put<ApiResponse<AdminQuestionDetail>>(`/admin/questions/${id}`, payload);
+  return data.data;
+}
+
 export interface AdminTest {
   id: number;
   level: number;

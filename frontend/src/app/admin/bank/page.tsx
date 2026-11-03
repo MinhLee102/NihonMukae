@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { Headphones, Search, Trash2, Upload } from "lucide-react";
+import { Headphones, Pencil, Search, Trash2, Upload } from "lucide-react";
 import {
   deleteAdminTest,
   deleteBankQuestion,
@@ -16,6 +16,7 @@ import {
 } from "@/lib/api/admin";
 import { SECTION_LABELS, SECTION_ORDER, type Section } from "@/lib/api/jlpt";
 import { ImportDialog } from "@/components/admin/ImportDialog";
+import { EditQuestionDialog } from "@/components/admin/EditQuestionDialog";
 
 const PAGE_SIZE = 20;
 const LEVELS = [5, 4, 3, 2, 1];
@@ -34,6 +35,7 @@ export default function AdminBankPage() {
   const [search, setSearch] = useState("");
   const [pageIndex, setPageIndex] = useState(0);
   const [importing, setImporting] = useState(false);
+  const [editingId, setEditingId] = useState<number | null>(null);
   const [tests, setTests] = useState<AdminTest[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
@@ -251,7 +253,15 @@ export default function AdminBankPage() {
                 </td>
                 <td className="px-4 py-3 text-neutral-600">{q.correct}</td>
                 <td className="px-4 py-3 text-xs text-neutral-400">{q.source ?? "-"}</td>
-                <td className="px-4 py-3 text-right">
+                <td className="whitespace-nowrap px-4 py-3 text-right">
+                  <button
+                    type="button"
+                    onClick={() => setEditingId(q.id)}
+                    title="Sửa câu hỏi"
+                    className="rounded-full p-2 text-neutral-400 transition hover:bg-neutral-100 hover:text-neutral-800"
+                  >
+                    <Pencil size={16} />
+                  </button>
                   <button
                     type="button"
                     onClick={() => remove(q)}
@@ -300,6 +310,9 @@ export default function AdminBankPage() {
         </div>
       )}
 
+      {editingId !== null && (
+        <EditQuestionDialog questionId={editingId} onClose={() => setEditingId(null)} onSaved={() => void load()} />
+      )}
       {importing && <ImportDialog onClose={() => setImporting(false)} onImported={() => void load()} />}
     </div>
   );

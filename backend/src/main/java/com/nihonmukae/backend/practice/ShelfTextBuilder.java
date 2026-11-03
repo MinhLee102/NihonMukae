@@ -52,6 +52,9 @@ public final class ShelfTextBuilder {
             if (q.selected() != null) {
                 out.append("　選んだ答え：").append(letterToNumber(q.selected()));
             }
+            if (q.transcript() != null && !q.transcript().isBlank()) {
+                out.append("\nスクリプト：\n").append(plain(q.transcript()));
+            }
         }
         return out.toString().trim();
     }

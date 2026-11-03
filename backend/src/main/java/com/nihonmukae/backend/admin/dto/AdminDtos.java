@@ -20,6 +20,17 @@ public final class AdminDtos {
     public record QuestionPage(List<QuestionRow> content, int page, int size, long totalElements, int totalPages) {
     }
 
+    /** Toàn bộ nội dung một câu, để mở form sửa. */
+    public record QuestionDetail(Long id, int level, String typeCode, String typeName, String section, String question,
+                                 List<String> options, String correct, String explanation, String transcript,
+                                 String audioUrl, Long groupId, Long testId) {
+    }
+
+    /** Trường nào null thì giữ nguyên; chuỗi rỗng ở explanation và transcript nghĩa là xóa. */
+    public record UpdateQuestionRequest(String question, List<String> options, String correct, String explanation,
+                                        String transcript) {
+    }
+
     public record TestRow(long id, int level, String title, Integer year, Integer month, boolean hasAudio,
                           long questionCount, long activeCount) {
     }

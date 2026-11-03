@@ -56,6 +56,10 @@ public class Question {
     @Column(columnDefinition = "TEXT")
     private String explanation;
 
+    // Bản chữ của câu nghe (tiếng Nhật), chỉ hiện sau khi nộp bài
+    @Column(columnDefinition = "TEXT")
+    private String transcript;
+
     @Column(nullable = false, length = 30)
     private String source;
 

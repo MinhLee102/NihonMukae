@@ -1,6 +1,6 @@
 "use client";
 
-import type { ReactNode } from "react";
+import { useState, type ReactNode } from "react";
 import { Check, Flag, X } from "lucide-react";
 import { FormattedText } from "@/components/jlpt/FormattedText";
 import { SplitPane } from "@/components/jlpt/SplitPane";
@@ -21,12 +21,49 @@ export interface PanelQuestion {
   /** Set when the answer may be shown: after submit, or right after answering in instant mode. */
   correctAnswer?: string;
   explanation?: string;
+  /** Listening script, shown on demand after the answer is revealed. */
+  transcript?: string;
   mondaiNo?: number;
   instructionJa?: string;
   instructionVi?: string;
 }
 
 const LETTERS = ["A", "B", "C", "D"];
+
+/** "Xem transcript" button that opens a rounded box under the explanation. Without a script it invites a contribution. */
+function TranscriptBlock({ transcript, onContribute }: { transcript?: string; onContribute?: () => void }) {
+  const [open, setOpen] = useState(false);
+  if (!transcript) {
+    return onContribute ? (
+      <div className="mt-4 flex items-center gap-3 text-xs text-neutral-400">
+        <span>Câu nghe này chưa có transcript.</span>
+        <button type="button" onClick={onContribute} className="underline underline-offset-2 hover:text-neutral-700">
+          Đóng góp transcript
+        </button>
+      </div>
+    ) : null;
+  }
+  return (
+    <div className="mt-4">
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        className="rounded-full border border-black/10 bg-white px-4 py-1.5 text-xs text-neutral-600 transition hover:border-black/30"
+      >
+        {open ? "Ẩn transcript" : "Xem transcript"}
+      </button>
+      {open && (
+        <div className="mt-3 rounded-2xl border border-black/10 bg-white px-5 py-4">
+          <p className="text-[10px] font-semibold tracking-widest text-neutral-500">TRANSCRIPT</p>
+          <div className="mt-1.5 text-[15px] leading-7 text-neutral-800">
+            <FormattedText text={transcript} />
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
 
 function AudioBlock({ url, isListening, mode }: { url?: string; isListening: boolean; mode: AudioMode }) {
   if (url) return <ListeningAudio url={url} mode={mode} />;
@@ -120,6 +157,7 @@ export function QuestionPanel({
   onToggleFlag,
   onReport,
   onSaveToShelf,
+  onContributeTranscript,
   footer,
   audioMode = "free",
   sectionAudio = false,
@@ -135,6 +173,8 @@ export function QuestionPanel({
   onReport?: () => void;
   /** Saves this question to My Shelf (result page only). */
   onSaveToShelf?: () => void;
+  /** Lets a learner propose a transcript when the question has none (result page, listening only). */
+  onContributeTranscript?: () => void;
   footer?: ReactNode;
   /** exam: audio plays once with no controls. free: normal player. */
   audioMode?: AudioMode;
@@ -251,6 +291,9 @@ export function QuestionPanel({
             <FormattedText text={question.explanation} />
           </p>
         </div>
+      )}
+      {revealed && isListening && (
+        <TranscriptBlock key={question.position} transcript={question.transcript} onContribute={onContributeTranscript} />
       )}
       {revealed && question.selected === undefined && (
         <p className="mt-4 text-xs text-neutral-400">Bạn chưa trả lời câu này.</p>

@@ -107,6 +107,8 @@ public class JlptService {
         Map<Short, QuestionType> types = typesById();
 
         List<BlueprintRow> rows = examConfig.findBlueprint(level);
+        // Đề random ghép nguyên một bộ nghe có audio chung, nên câu nghe của các bộ đó không tính theo từng dạng
+        boolean hasListeningSet = !listListeningSets(level).isEmpty();
         List<String> shortages = new ArrayList<>();
         List<BlueprintBlock> blocks = new ArrayList<>();
         for (var block : examConfig.findBlocks(level)) {
@@ -119,7 +121,8 @@ public class JlptService {
                 long have = available.getOrDefault(row.typeId(), 0L);
                 list.add(new BlueprintType(row.typeId(), t.getCode(), t.getNameVi(), t.getNameJa(), row.quantity(),
                         row.pointsPerQuestion(), have));
-                if (have < row.quantity()) {
+                boolean coveredBySet = hasListeningSet && "chokai".equals(t.getSection());
+                if (have < row.quantity() && !coveredBySet) {
                     shortages.add(t.getNameVi() + ": có " + have + "/" + row.quantity() + " câu");
                 }
             }

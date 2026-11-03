@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        serif: ["var(--font-noto-serif)", "var(--font-noto-serif-jp)", "Georgia", "serif"],
+        serif: ["Noto Serif", "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", "MS Mincho", "serif"],
       },
       colors: {
         background: "var(--background)",

@@ -4,6 +4,7 @@ import com.nihonmukae.backend.admin.dto.AdminDtos.BankSummary;
 import com.nihonmukae.backend.admin.dto.AdminDtos.EnabledRequest;
 import com.nihonmukae.backend.admin.dto.AdminDtos.QuestionPage;
 import com.nihonmukae.backend.admin.dto.AdminDtos.ServerStatus;
+import com.nihonmukae.backend.admin.dto.AdminDtos.TestRow;
 import com.nihonmukae.backend.admin.dto.AdminDtos.UserPage;
 import com.nihonmukae.backend.admin.dto.AdminDtos.UserRow;
 import com.nihonmukae.backend.admin.dto.AdminDtos.UserSummary;
@@ -19,6 +20,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 
 // Toàn bộ /admin/** chỉ ADMIN truy cập được (SecurityConfig)
@@ -54,6 +57,21 @@ public class AdminController {
     public ApiResponse<Void> deleteQuestion(@PathVariable long id) {
         adminService.deleteQuestion(id);
         return ApiResponse.success(null);
+    }
+
+    @GetMapping("/tests")
+    public ApiResponse<List<TestRow>> tests() {
+        return ApiResponse.success(adminService.listTests());
+    }
+
+    @DeleteMapping("/tests/{id}")
+    public ApiResponse<TestRow> deleteTest(@PathVariable long id) {
+        return ApiResponse.success(adminService.deleteTest(id));
+    }
+
+    @DeleteMapping("/questions/hidden")
+    public ApiResponse<Map<String, Integer>> purgeHidden() {
+        return ApiResponse.success(Map.of("deleted", adminService.purgeHidden()));
     }
 
     // ─── Người dùng ─────────────────────────────────────────────────────

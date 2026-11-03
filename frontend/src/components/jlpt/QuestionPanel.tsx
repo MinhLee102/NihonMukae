@@ -60,18 +60,29 @@ function InstructionText({ text }: { text: string }) {
   );
 }
 
+const LISTEN_PLACEHOLDER = /^\s*質問を聞いてください[。.]?\s*$/;
+
+/** Drops a line that only says 質問を聞いてください。 (listening questions carry it as a placeholder). */
+function stripListenPlaceholder(text: string): string {
+  return text
+    .split("\n")
+    .filter((line) => !LISTEN_PLACEHOLDER.test(line))
+    .join("\n")
+    .trim();
+}
+
 /** "問題 N" with a rule under it, then the instruction shared by every question of the type. */
 function InstructionHeader({ no, ja, vi }: { no?: number; ja: string; vi?: string }) {
   return (
-    <div className="shrink-0 border-b border-black/5 px-6 pb-4 pt-5">
+    <div className="shrink-0 border-b border-black/5 px-6 pb-5 pt-6">
       <div className="mx-auto max-w-5xl">
         {no !== undefined && (
-          <p className="border-b-2 border-neutral-900 pb-1 text-xl font-medium text-neutral-900">問題{no}</p>
+          <p className="border-b-2 border-neutral-900 pb-1 text-2xl font-medium text-neutral-900">問題{no}</p>
         )}
-        <p className="mt-3 text-[15px] leading-7 text-neutral-900">
+        <p className="mt-4 text-xl font-medium leading-9 text-neutral-900">
           <InstructionText text={ja} />
         </p>
-        {vi && <p className="mt-1 text-xs text-neutral-400">{vi}</p>}
+        {vi && <p className="mt-1.5 text-sm text-neutral-500">{vi}</p>}
       </div>
     </div>
   );
@@ -128,6 +139,8 @@ export function QuestionPanel({
   const sectionLabel = question.section ? SECTION_LABELS[question.section].vi : "";
   const isListening = question.section === "chokai";
   // When every answer is a picture, lay them out as a 2 column grid like the printed paper
+  // The instruction above already says "listen to the question first", so the placeholder line is dropped
+  const promptText = isListening && question.instructionJa ? stripListenPlaceholder(question.question) : question.question;
   const imageOptions = question.options.length > 0 && question.options.every((o) => /^\s*\[\[img:[^\]]+\]\]\s*$/.test(o));
 
   const body = (
@@ -160,9 +173,11 @@ export function QuestionPanel({
 
       {!group?.audioUrl && <AudioBlock url={question.audioUrl} isListening={isListening && !question.audioUrl && !sectionAudio} mode={audioMode} />}
 
-      <div className="mb-6 text-lg font-semibold leading-8 text-neutral-900">
-        <FormattedText text={question.question} />
-      </div>
+      {promptText && (
+        <div className="mb-6 text-lg font-semibold leading-8 text-neutral-900">
+          <FormattedText text={promptText} />
+        </div>
+      )}
 
       <div
         className={imageOptions ? "" : "flex flex-col gap-3"}

@@ -3,6 +3,7 @@ package com.nihonmukae.backend.admin;
 import com.nihonmukae.backend.admin.dto.AdminDtos.BankSummary;
 import com.nihonmukae.backend.admin.dto.AdminDtos.QuestionPage;
 import com.nihonmukae.backend.admin.dto.AdminDtos.QuestionRow;
+import com.nihonmukae.backend.admin.dto.AdminDtos.TestRow;
 import com.nihonmukae.backend.admin.dto.AdminDtos.UserPage;
 import com.nihonmukae.backend.admin.dto.AdminDtos.UserRow;
 import com.nihonmukae.backend.admin.dto.AdminDtos.UserSummary;
@@ -19,6 +20,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -43,15 +45,18 @@ public class AdminService {
     private final QuestionTypeRepository typeRepository;
     private final UserRepository userRepository;
     private final RefreshTokenRepository refreshTokenRepository;
+    private final JdbcTemplate jdbc;
 
     public AdminService(QuestionRepository questionRepository,
                         QuestionTypeRepository typeRepository,
                         UserRepository userRepository,
-                        RefreshTokenRepository refreshTokenRepository) {
+                        RefreshTokenRepository refreshTokenRepository,
+                        JdbcTemplate jdbc) {
         this.questionRepository = questionRepository;
         this.typeRepository = typeRepository;
         this.userRepository = userRepository;
         this.refreshTokenRepository = refreshTokenRepository;
+        this.jdbc = jdbc;
     }
 
     // ─── Kho câu hỏi ────────────────────────────────────────────────────
@@ -108,6 +113,43 @@ public class AdminService {
     public void deleteQuestion(long id) {
         Question q = questionRepository.findById(id).orElseThrow(() -> new NotFoundException("Không tìm thấy câu hỏi"));
         q.setActive(false);
+    }
+
+    // ─── Đề thi ─────────────────────────────────────────────────────────
+
+    @Transactional(readOnly = true)
+    public List<TestRow> listTests() {
+        return jdbc.query("""
+                SELECT t.id, t.level, t.title, t.year, t.month, t.listening_audio_url IS NOT NULL AS has_audio,
+                       (SELECT count(*) FROM questions q WHERE q.test_id = t.id) AS question_count,
+                       (SELECT count(*) FROM questions q WHERE q.test_id = t.id AND q.is_active) AS active_count
+                FROM jlpt_tests t ORDER BY t.level, t.year DESC NULLS LAST, t.month DESC NULLS LAST, t.id
+                """, (rs, i) -> new TestRow(rs.getLong("id"), rs.getInt("level"), rs.getString("title"),
+                (Integer) rs.getObject("year"), (Integer) rs.getObject("month"), rs.getBoolean("has_audio"),
+                rs.getLong("question_count"), rs.getLong("active_count")));
+    }
+
+    /**
+     * Xóa hẳn một đề cùng toàn bộ câu hỏi và group của nó. Lịch sử làm bài vẫn giữ (có snapshot):
+     * các khóa ngoại từ phiên làm bài sang đề và câu hỏi tự chuyển về null.
+     */
+    @Transactional
+    public TestRow deleteTest(long id) {
+        TestRow test = listTests().stream().filter(t -> t.id() == id).findFirst()
+                .orElseThrow(() -> new NotFoundException("Không tìm thấy đề"));
+        jdbc.update("DELETE FROM questions WHERE test_id = ?", id);
+        jdbc.update("DELETE FROM question_groups WHERE test_id = ?", id);
+        jdbc.update("DELETE FROM jlpt_tests WHERE id = ?", id);
+        return test;
+    }
+
+    /** Dọn hẳn các câu và group đã bị ẩn (xóa mềm) để DB gọn lại. @return số câu đã xóa */
+    @Transactional
+    public int purgeHidden() {
+        int questions = jdbc.update("DELETE FROM questions WHERE is_active = false");
+        jdbc.update("DELETE FROM question_groups g WHERE g.is_active = false "
+                + "AND NOT EXISTS (SELECT 1 FROM questions q WHERE q.group_id = g.id)");
+        return questions;
     }
 
     private QuestionRow toRow(Question q, QuestionType type) {

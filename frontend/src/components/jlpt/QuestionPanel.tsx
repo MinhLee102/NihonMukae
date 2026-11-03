@@ -119,6 +119,7 @@ export function QuestionPanel({
   flagged,
   onToggleFlag,
   onReport,
+  onSaveToShelf,
   footer,
   audioMode = "free",
   sectionAudio = false,
@@ -132,6 +133,8 @@ export function QuestionPanel({
   onToggleFlag?: () => void;
   /** Opens the feedback form for this question. */
   onReport?: () => void;
+  /** Saves this question to My Shelf (result page only). */
+  onSaveToShelf?: () => void;
   footer?: ReactNode;
   /** exam: audio plays once with no controls. free: normal player. */
   audioMode?: AudioMode;
@@ -158,6 +161,15 @@ export function QuestionPanel({
             Câu {question.position} / {question.total}
           </p>
         </div>
+        {onSaveToShelf && (
+          <button
+            type="button"
+            onClick={onSaveToShelf}
+            className="flex items-center gap-1.5 rounded-full border border-black/10 bg-white px-3.5 py-1.5 text-xs text-neutral-500 transition hover:border-black/30"
+          >
+            Lưu vào My Shelf
+          </button>
+        )}
         {onReport && (
           <button
             type="button"

@@ -11,7 +11,8 @@ import { SectionAudioReview } from "@/components/jlpt/ListeningAudio";
 import { useAuthStore } from "@/store/authStore";
 import { useFeedbackStore } from "@/store/feedbackStore";
 import { getApiErrorMessage } from "@/lib/api/flashcard";
-import { getResult, retrySession, stashSessionWarnings, type ResultDto } from "@/lib/api/jlpt";
+import Link from "next/link";
+import { getResult, retrySession, saveSessionToShelf, stashSessionWarnings, type ResultDto, type ShelfSaveScope } from "@/lib/api/jlpt";
 
 const SCORING_LABELS: Record<string, string> = {
   language: "Ngôn ngữ (chữ, từ, ngữ pháp)",
@@ -34,6 +35,8 @@ function ResultView() {
   const [current, setCurrent] = useState(1);
   const [error, setError] = useState<string | null>(null);
   const [retrying, setRetrying] = useState(false);
+  const [saving, setSaving] = useState(false);
+  const [saved, setSaved] = useState<{ id: string; title: string } | null>(null);
   const [view, setView] = useState<"summary" | "review">("summary");
 
   useEffect(() => {
@@ -63,6 +66,19 @@ function ResultView() {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [go]);
+
+  const saveToShelf = async (scope: ShelfSaveScope, position?: number) => {
+    try {
+      setSaving(true);
+      setSaved(null);
+      setError(null);
+      setSaved(await saveSessionToShelf(id, scope, position));
+    } catch (err) {
+      setError(getApiErrorMessage(err, "Không lưu được vào My Shelf."));
+    } finally {
+      setSaving(false);
+    }
+  };
 
   const retry = async () => {
     try {
@@ -158,6 +174,7 @@ function ResultView() {
               }}
               group={group}
               disabled
+              onSaveToShelf={() => void saveToShelf("question", q.position)}
               onReport={() =>
                 openFeedback({
                   category: "exam_error",
@@ -283,6 +300,39 @@ function ResultView() {
                   </ul>
                 }
               />
+
+              <div className="space-y-2 border-t border-black/5 pt-4">
+                <p className="text-[10px] tracking-widest text-neutral-400">LƯU VÀO MY SHELF</p>
+                <div className="flex gap-2">
+                  <button
+                    type="button"
+                    disabled={saving || result.correct === result.total}
+                    onClick={() => void saveToShelf("wrong")}
+                    className="flex-1 rounded-full border border-black/10 bg-white py-2 text-xs text-neutral-700 hover:border-black/30 disabled:opacity-40"
+                  >
+                    Câu sai
+                  </button>
+                  <button
+                    type="button"
+                    disabled={saving}
+                    onClick={() => void saveToShelf("all")}
+                    className="flex-1 rounded-full border border-black/10 bg-white py-2 text-xs text-neutral-700 hover:border-black/30 disabled:opacity-40"
+                  >
+                    Cả bài
+                  </button>
+                </div>
+                {saved && (
+                  <p className="text-xs text-emerald-700">
+                    Đã lưu.{" "}
+                    <Link href={`/shelf/${saved.id}`} className="underline">
+                      Mở trong My Shelf
+                    </Link>
+                  </p>
+                )}
+                <p className="text-[10px] leading-4 text-neutral-400">
+                  Bài lưu có furigana, bấm vào chữ để tra từ và thêm vào Flashcard. Phần giải thích tiếng Việt không được lưu.
+                </p>
+              </div>
 
               <div className="flex flex-col gap-2">
                 <button

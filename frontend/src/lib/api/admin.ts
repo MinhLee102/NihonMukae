@@ -53,6 +53,33 @@ export async function deleteBankQuestion(id: number) {
   await apiClient.delete(`/admin/questions/${id}`);
 }
 
+export interface AdminTest {
+  id: number;
+  level: number;
+  title: string | null;
+  year: number | null;
+  month: number | null;
+  hasAudio: boolean;
+  questionCount: number;
+  activeCount: number;
+}
+
+export async function fetchAdminTests() {
+  const { data } = await apiClient.get<ApiResponse<AdminTest[]>>('/admin/tests');
+  return data.data;
+}
+
+/** Hard delete: the test, all its questions and groups. Practice history is kept. */
+export async function deleteAdminTest(id: number) {
+  await apiClient.delete(`/admin/tests/${id}`);
+}
+
+/** Hard delete of every question and group that was hidden earlier. */
+export async function purgeHiddenQuestions() {
+  const { data } = await apiClient.delete<ApiResponse<{ deleted: number }>>('/admin/questions/hidden');
+  return data.data.deleted;
+}
+
 // ─── Import ────────────────────────────────────────────────────────────
 
 export interface ImportPreview {

@@ -20,6 +20,10 @@ public final class AdminDtos {
     public record QuestionPage(List<QuestionRow> content, int page, int size, long totalElements, int totalPages) {
     }
 
+    public record TestRow(long id, int level, String title, Integer year, Integer month, boolean hasAudio,
+                          long questionCount, long activeCount) {
+    }
+
     /** Số câu đang hoạt động theo phần thi, và theo level, để hiện các thẻ thống kê. */
     public record BankSummary(Map<String, Long> bySection, Map<Integer, Long> byLevel, long total) {
     }

@@ -3,7 +3,11 @@
 import { useCallback, useEffect, useState } from "react";
 import { Headphones, Search, Trash2, Upload } from "lucide-react";
 import {
+  deleteAdminTest,
   deleteBankQuestion,
+  fetchAdminTests,
+  purgeHiddenQuestions,
+  type AdminTest,
   fetchBankQuestions,
   fetchBankSummary,
   type AdminQuestion,
@@ -30,15 +34,19 @@ export default function AdminBankPage() {
   const [search, setSearch] = useState("");
   const [pageIndex, setPageIndex] = useState(0);
   const [importing, setImporting] = useState(false);
+  const [tests, setTests] = useState<AdminTest[]>([]);
   const [error, setError] = useState<string | null>(null);
+  const [notice, setNotice] = useState<string | null>(null);
 
   const load = useCallback(async () => {
     try {
-      const [s, p] = await Promise.all([
+      const [s, p, t] = await Promise.all([
         fetchBankSummary(),
         fetchBankQuestions({ level, section, q: search || undefined, page: pageIndex, size: PAGE_SIZE }),
+        fetchAdminTests(),
       ]);
       setSummary(s);
+      setTests(t);
       setPage(p);
       setError(null);
     } catch {
@@ -60,6 +68,35 @@ export default function AdminBankPage() {
     }
   }
 
+  async function removeTest(t: AdminTest) {
+    const name = t.title || `N${t.level} ${t.year ?? ""}/${t.month ?? ""}`;
+    if (
+      !window.confirm(
+        `Xóa hẳn đề "${name}" cùng ${t.questionCount} câu hỏi? Không thể hoàn tác. Lịch sử làm bài của người học vẫn được giữ.`
+      )
+    )
+      return;
+    try {
+      await deleteAdminTest(t.id);
+      setNotice(`Đã xóa đề "${name}".`);
+      setPageIndex(0);
+      await load();
+    } catch {
+      setError("Không xóa được đề này.");
+    }
+  }
+
+  async function purgeHidden() {
+    if (!window.confirm("Xóa hẳn mọi câu hỏi đã bị ẩn trước đó? Không thể hoàn tác.")) return;
+    try {
+      const n = await purgeHiddenQuestions();
+      setNotice(`Đã dọn ${n} câu đã ẩn.`);
+      await load();
+    } catch {
+      setError("Không dọn được câu đã ẩn.");
+    }
+  }
+
   return (
     <div>
       <div className="flex items-center justify-between">
@@ -72,6 +109,8 @@ export default function AdminBankPage() {
           <Upload size={15} /> Import JSON
         </button>
       </div>
+
+      {notice && <p className="mt-4 text-sm text-emerald-700">{notice}</p>}
 
       <div className="mt-6 grid grid-cols-2 gap-4 lg:grid-cols-6">
         <div className="rounded-2xl border border-black/5 bg-white p-5">
@@ -96,6 +135,45 @@ export default function AdminBankPage() {
             <p className="mt-1 text-2xl font-semibold text-neutral-900">{summary?.bySection[id] ?? 0}</p>
           </button>
         ))}
+      </div>
+
+      <div className="mt-6 rounded-2xl border border-black/5 bg-white">
+        <div className="flex items-center justify-between border-b border-black/5 px-4 py-3">
+          <p className="text-sm font-medium text-neutral-800">Đề thi ({tests.length})</p>
+          <button
+            type="button"
+            onClick={() => void purgeHidden()}
+            className="rounded-full border border-black/10 px-3.5 py-1.5 text-xs text-neutral-500 transition hover:border-red-300 hover:text-red-600"
+          >
+            Dọn câu đã ẩn
+          </button>
+        </div>
+        {tests.length === 0 ? (
+          <p className="px-4 py-6 text-center text-sm text-neutral-400">Chưa có đề nào.</p>
+        ) : (
+          <ul>
+            {tests.map((t) => (
+              <li key={t.id} className="flex items-center gap-4 border-b border-black/5 px-4 py-3 last:border-0">
+                <span className="w-10 text-sm font-medium text-neutral-800">N{t.level}</span>
+                <span className="min-w-0 flex-1 truncate text-sm text-neutral-700">
+                  {t.title || `Đề ${t.year ?? "?"}/${t.month ?? "?"}`}
+                </span>
+                {t.hasAudio && <Headphones size={14} className="text-neutral-400" />}
+                <span className="text-xs text-neutral-400">
+                  {t.activeCount}/{t.questionCount} câu
+                </span>
+                <button
+                  type="button"
+                  onClick={() => void removeTest(t)}
+                  title="Xóa cả đề"
+                  className="flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs text-neutral-400 transition hover:bg-red-50 hover:text-red-600"
+                >
+                  <Trash2 size={14} /> Xóa cả đề
+                </button>
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
 
       <div className="mt-6 flex flex-wrap items-center gap-3">

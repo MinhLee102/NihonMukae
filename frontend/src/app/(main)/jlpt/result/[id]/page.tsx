@@ -168,6 +168,7 @@ function ResultView() {
                 selected: q.selected,
                 correctAnswer: q.correctAnswer,
                 explanation: q.explanation,
+                transcript: q.transcript,
                 mondaiNo: q.mondaiNo,
                 instructionJa: q.instructionJa,
                 instructionVi: q.instructionVi,
@@ -175,6 +176,13 @@ function ResultView() {
               group={group}
               disabled
               onSaveToShelf={() => void saveToShelf("question", q.position)}
+              onContributeTranscript={() =>
+                openFeedback({
+                  category: "transcript",
+                  context: { questionId: q.questionId, sessionId: id },
+                  hint: `Đóng góp transcript cho câu ${q.position}. Quản trị viên sẽ kiểm tra trước khi hiển thị cho mọi người.`,
+                })
+              }
               onReport={() =>
                 openFeedback({
                   category: "exam_error",

@@ -200,6 +200,8 @@ export interface ResultQuestionDto {
   mondaiNo?: number;
   instructionJa?: string;
   instructionVi?: string;
+  /** Listening script (Japanese), added by admins or approved contributions. */
+  transcript?: string;
 }
 
 export interface ResultDto {

@@ -19,6 +19,7 @@ public interface QuestionGroupRepository extends JpaRepository<QuestionGroup, Lo
 
     Optional<QuestionGroup> findByContentHash(String contentHash);
 
-    @Query("SELECT g.id FROM QuestionGroup g WHERE g.typeId = :typeId AND g.level = :level AND g.active = true")
+    @Query("SELECT g.id FROM QuestionGroup g WHERE g.typeId = :typeId AND g.level = :level AND g.active = true " +
+            "AND NOT EXISTS (SELECT 1 FROM JlptTest jt, QuestionType ty WHERE jt.id = g.testId AND jt.listeningAudioUrl IS NOT NULL AND ty.id = g.typeId AND ty.section = 'chokai')")
     List<Long> findActiveIds(@Param("typeId") short typeId, @Param("level") short level);
 }

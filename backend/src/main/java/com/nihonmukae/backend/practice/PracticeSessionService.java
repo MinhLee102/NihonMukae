@@ -116,13 +116,6 @@ public class PracticeSessionService {
                 throw new IllegalArgumentException("Chọn một đề thi hoặc đề ngẫu nhiên");
             }
         } else {
-            if (req.typeIds() == null || req.typeIds().isEmpty()) {
-                throw new IllegalArgumentException("Hãy chọn ít nhất một dạng bài");
-            }
-            int count = req.questionCount() == null ? 10 : req.questionCount();
-            if (count < 1 || count > MAX_QUESTION_COUNT) {
-                throw new IllegalArgumentException("Số câu phải từ 1 đến " + MAX_QUESTION_COUNT);
-            }
             if (req.timeLimitMin() != null && (req.timeLimitMin() < 1 || req.timeLimitMin() > 300)) {
                 throw new IllegalArgumentException("Thời gian phải từ 1 đến 300 phút");
             }
@@ -130,11 +123,32 @@ public class PracticeSessionService {
             if (!feedback.equals("instant") && !feedback.equals("after")) {
                 throw new IllegalArgumentException("feedbackMode phải là instant hoặc after");
             }
-            picked = picker.pickPractice(level, req.typeIds(), count);
-            title = "N" + level + " · Luyện theo dạng bài";
-            builder.typeIds(req.typeIds()).questionCount((short) count).feedbackMode(feedback)
-                    .timeLimitMin(req.timeLimitMin() == null ? null : req.timeLimitMin().shortValue());
+            Short timeLimit = req.timeLimitMin() == null ? null : req.timeLimitMin().shortValue();
+
+            if (Boolean.TRUE.equals(req.listeningSet())) {
+                QuestionPicker.ListeningSet set = picker.pickListeningSet(level)
+                        .orElseThrow(() -> new IllegalArgumentException("Chưa có bộ đề nghe nào ở N" + level));
+                picked = new QuestionPicker.Picked(set.questions().stream()
+                        .map(q -> new QuestionPicker.Entry(q, 1, java.math.BigDecimal.ONE)).toList(), List.of(),
+                        set.test().getId());
+                title = "N" + level + " · Nghe hiểu: " + set.test().getTitle();
+                builder.typeIds(List.of()).questionCount((short) set.questions().size()).feedbackMode(feedback)
+                        .timeLimitMin(timeLimit);
+            } else {
+                if (req.typeIds() == null || req.typeIds().isEmpty()) {
+                    throw new IllegalArgumentException("Hãy chọn ít nhất một dạng bài");
+                }
+                int count = req.questionCount() == null ? 10 : req.questionCount();
+                if (count < 1 || count > MAX_QUESTION_COUNT) {
+                    throw new IllegalArgumentException("Số câu phải từ 1 đến " + MAX_QUESTION_COUNT);
+                }
+                picked = picker.pickPractice(level, req.typeIds(), count);
+                title = "N" + level + " · Luyện theo dạng bài";
+                builder.typeIds(req.typeIds()).questionCount((short) count).feedbackMode(feedback)
+                        .timeLimitMin(timeLimit);
+            }
         }
+        builder.listeningTestId(picked.listeningTestId());
 
         if (picked.entries().isEmpty()) {
             throw new IllegalArgumentException("Kho chưa có câu hỏi phù hợp với lựa chọn này");
@@ -163,7 +177,8 @@ public class PracticeSessionService {
         StartRequest req = new StartRequest(old.getMode(), old.getLevel(), old.getTypeIds(),
                 old.getQuestionCount() == null ? null : old.getQuestionCount().intValue(),
                 old.getTimeLimitMin() == null ? null : old.getTimeLimitMin().intValue(), old.getFeedbackMode(),
-                old.getTestId(), old.isRandom());
+                old.getTestId(), old.isRandom(),
+                PracticeSession.MODE_PRACTICE.equals(old.getMode()) && old.getListeningTestId() != null);
         return create(userId, req);
     }
 
@@ -190,10 +205,11 @@ public class PracticeSessionService {
     }
 
     private String listeningAudioOf(PracticeSession session) {
-        if (session.getTestId() == null) {
+        Long testId = session.getListeningTestId() != null ? session.getListeningTestId() : session.getTestId();
+        if (testId == null) {
             return null;
         }
-        return testRepository.findById(session.getTestId()).map(JlptTest::getListeningAudioUrl)
+        return testRepository.findById(testId).map(JlptTest::getListeningAudioUrl)
                 .filter(u -> !u.isBlank()).orElse(null);
     }
 
@@ -211,7 +227,7 @@ public class PracticeSessionService {
         boolean exam = PracticeSession.MODE_EXAM.equals(session.getMode());
 
         // Đề có audio cả phần nghe: gắn vào khối có câu nghe, phát liền một mạch khi vào khối đó
-        String listeningAudio = exam ? listeningAudioOf(session) : null;
+        String listeningAudio = listeningAudioOf(session);
         Set<Integer> listeningBlocks = new java.util.HashSet<>();
         if (listeningAudio != null) {
             Map<Short, QuestionType> typeById = typesById();

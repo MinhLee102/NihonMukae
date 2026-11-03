@@ -54,6 +54,10 @@ public class PracticeSession {
     @Column(name = "is_random", nullable = false)
     private boolean random;
 
+    /** Đề cung cấp audio cả phần nghe (luyện nguyên bộ nghe, hoặc đề thi thử ngẫu nhiên). */
+    @Column(name = "listening_test_id")
+    private Long listeningTestId;
+
     @JdbcTypeCode(SqlTypes.ARRAY)
     @Column(name = "type_ids", columnDefinition = "smallint[]")
     private List<Short> typeIds;

@@ -3,17 +3,19 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { ReactNode } from "react";
-import { ArrowLeft, Database, Server, Users } from "lucide-react";
+import { ArrowLeft, Database, MessageSquare, Server, Users } from "lucide-react";
 import { useAuthStore } from "@/store/authStore";
 import { useAuthModalStore } from "@/store/authModalStore";
 
+// adminOnly: MODERATOR (chưa gán cho ai) chỉ thấy các mục không đánh dấu
 const ADMIN_NAV = [
-  { href: "/admin/users", label: "Người dùng", icon: Users },
-  { href: "/admin/server", label: "Trạng thái server", icon: Server },
-  { href: "/admin/bank", label: "Ngân hàng đề", icon: Database },
+  { href: "/admin/users", label: "Người dùng", icon: Users, adminOnly: true },
+  { href: "/admin/server", label: "Trạng thái server", icon: Server, adminOnly: true },
+  { href: "/admin/bank", label: "Ngân hàng đề", icon: Database, adminOnly: false },
+  { href: "/admin/feedback", label: "Góp ý", icon: MessageSquare, adminOnly: false },
 ];
 
-/** Sidebar plus the access check: only a logged-in ADMIN sees the pages. */
+/** Sidebar plus the access check: ADMIN sees everything, MODERATOR only the question bank and feedback. */
 export function AdminShell({ children }: { children: ReactNode }) {
   const pathname = usePathname();
   const isInitializing = useAuthStore((s) => s.isInitializing);
@@ -23,7 +25,7 @@ export function AdminShell({ children }: { children: ReactNode }) {
 
   if (isInitializing) return null;
 
-  if (!isAuthenticated || role !== "ADMIN") {
+  if (!isAuthenticated || (role !== "ADMIN" && role !== "MODERATOR")) {
     return (
       <div className="flex h-full items-center justify-center p-6">
         <div className="max-w-sm rounded-2xl border border-black/5 bg-white p-8 text-center">
@@ -60,7 +62,7 @@ export function AdminShell({ children }: { children: ReactNode }) {
           <p className="text-[11px] uppercase tracking-widest text-neutral-400">Admin console</p>
         </div>
         <nav className="flex flex-1 flex-col gap-1">
-          {ADMIN_NAV.map((item) => {
+          {ADMIN_NAV.filter((item) => !item.adminOnly || role === "ADMIN").map((item) => {
             const Icon = item.icon;
             const active = pathname.startsWith(item.href);
             return (

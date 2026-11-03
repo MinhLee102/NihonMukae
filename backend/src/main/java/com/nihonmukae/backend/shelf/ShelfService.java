@@ -122,6 +122,7 @@ public class ShelfService {
                 .title(item.getTitle())
                 .content(item.getContent())
                 .tokens(item.getContentTokens())
+                .titleTokens(furiganaService.annotate(item.getTitle()))
                 .createdAt(item.getCreatedAt())
                 .updatedAt(item.getUpdatedAt())
                 .build();

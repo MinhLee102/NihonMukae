@@ -22,6 +22,8 @@ public class ShelfItemResponse {
     private String excerpt;
     private String content;
     private List<ShelfToken> tokens;
+    // Tiêu đề cũng được tách từ để bấm vào tra nghĩa như phần nội dung (chỉ ở chi tiết)
+    private List<ShelfToken> titleTokens;
     private ZonedDateTime createdAt;
     private ZonedDateTime updatedAt;
 }

@@ -25,6 +25,8 @@ export interface ShelfItemDto {
   /** Only in the detail response. */
   content?: string;
   tokens?: ShelfToken[];
+  /** The title tokenized the same way, so its words can be looked up too. */
+  titleTokens?: ShelfToken[];
   createdAt: string;
   updatedAt: string;
 }

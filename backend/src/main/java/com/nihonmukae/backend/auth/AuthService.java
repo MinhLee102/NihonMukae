@@ -31,6 +31,16 @@ public class AuthService {
     private static final int REFRESH_TOKEN_EXPIRE_DAYS = 30;
 
     public User register(String email, String rawPassword, String name) {
+        // Giới hạn độ dài: bcrypt chỉ dùng 72 byte đầu, chuỗi rất dài chỉ tốn CPU
+        if (email == null || email.length() > 254 || !email.matches("^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$")) {
+            throw new IllegalArgumentException("Email không hợp lệ");
+        }
+        if (rawPassword == null || rawPassword.length() < 8 || rawPassword.length() > 72) {
+            throw new IllegalArgumentException("Mật khẩu phải từ 8 đến 72 ký tự");
+        }
+        if (name != null && name.length() > 100) {
+            throw new IllegalArgumentException("Tên quá dài");
+        }
         if (userRepository.existsByEmail(email)) {
             throw new IllegalArgumentException("Email already in use");
         }

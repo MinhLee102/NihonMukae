@@ -6,6 +6,7 @@ import {
   Headphones,
   GraduationCap,
   Mic,
+  HelpCircle,
   type LucideIcon,
 } from "lucide-react";
  
@@ -80,6 +81,14 @@ export const NAV_ITEMS: NavItem[] = [
     breadcrumbJa: "発音",
     breadcrumbVi: "Shadowing",
     publicRoute: false,
+  },
+  {
+    href: "/guide",
+    label: "Hướng dẫn",
+    icon: HelpCircle,
+    breadcrumbJa: "使い方",
+    breadcrumbVi: "Hướng dẫn sử dụng",
+    publicRoute: true,
   },
 ];
  

@@ -139,9 +139,11 @@ Các câu nghe N3 đến N5 thường có hình. Dùng `[[img:ten_file.png]]` �
 
 Chọn kèm tất cả file ảnh ở hộp Import JSON như với audio. Ảnh tối đa 5 MB, định dạng png, jpg, webp.
 
-### Tách hình từ file PDF đề thi
+### Cắt hình: tự cắt tay là chính, script là tùy chọn
 
-Dùng script `scripts/jlpt/extract_pdf_images.py` (cần `pip install pymupdf`):
+Cách chính: AI báo danh sách ảnh cần cắt (tên file, câu nào, nằm ở đâu trong đề), bạn mở PDF và chụp từng hình bằng **Win + Shift + S** (kéo chọn vùng hình). Ảnh mới chỉ nằm trong clipboard, nên bấm vào thông báo Snipping Tool hiện ở góc màn hình rồi **Save as** thành png đúng tên file đó (hoặc dán vào Paint rồi Save as). Mỗi ảnh nên dưới 5 MB. Không cần script.
+
+Nếu đề có rất nhiều hình, có thể dùng thêm script `scripts/jlpt/extract_pdf_images.py` chạy trên máy bạn để cắt hàng loạt (không bắt buộc, không gửi gì lên hệ thống). Dùng script `scripts/jlpt/extract_pdf_images.py` (cần `pip install pymupdf`):
 
 ```bash
 # Tự tách các hình được nhúng trong PDF
@@ -200,9 +202,9 @@ Hệ thống chỉ coi một câu là "đã có" khi **cùng đề** (hoặc cù
 
 1. Với từng đề (ví dụ N3 tháng 12 năm 2021), gom: file PDF hoặc ảnh đề và đáp án, một file audio của cả phần nghe.
 2. Nén audio nếu quá nặng (xem `docs/GOOGLE_DRIVE_SETUP.md`), đặt tên dễ nhớ như `n3_2021_12_listening.mp3`.
-3. Tách hình của câu nghe bằng `extract_pdf_images.py`, đổi tên theo câu.
-4. Nhờ AI chuyển đề sang JSON bằng đoạn yêu cầu ở cuối tài liệu này. Một đề nên làm thành **một file JSON** (đủ phần chữ Hán, từ vựng, ngữ pháp, đọc hiểu, nghe hiểu).
-5. Vào Admin, Ngân hàng đề, Import JSON, dán JSON, chọn kèm audio và các ảnh, bấm Kiểm tra. Sửa lỗi nếu có, rồi Lưu.
+3. Nhờ AI chuyển đề sang JSON bằng đoạn yêu cầu ở cuối tài liệu này. Một đề nên làm thành **một file JSON** (đủ phần chữ Hán, từ vựng, ngữ pháp, đọc hiểu, nghe hiểu). AI sẽ trả thêm **danh sách ảnh cần cắt**.
+4. Cắt các ảnh theo danh sách đó (Win + Shift + S), lưu đúng tên file AI đã ghi trong JSON.
+5. Vào Admin, Ngân hàng đề, Import JSON, dán JSON, chọn kèm audio và các ảnh, bấm Kiểm tra. Sửa lỗi nếu có, rồi Lưu. Nếu hộp báo tên file ảnh nào lệch thì đổi tên file cho khớp JSON.
 6. Mở thử vài câu (nhất là câu nghe có hình và bài đọc có bảng) để chắc đáp án và hiển thị đúng.
 
 ## Ví dụ đầy đủ
@@ -259,7 +261,8 @@ MỖI CÂU
 - Từ được gạch chân trong đề thì bọc bằng <u>...</u>. Chỗ trống giữ nguyên là （　）. Câu sắp xếp có ★ giữ nguyên ★.
 - KHÔNG ghi số 問題N và câu hướng dẫn, hệ thống tự thêm.
 - Câu nghe: "question" ghi 質問を聞いてください。 và "options" ghi "1","2","3","4" nếu đề không in chữ. Nếu đề in sẵn đáp án thì ghi đúng chữ.
-- Câu nghe có hình: nếu hình nằm ở đề bài thì viết [[img:n3_2021_12_q03.png]] vào "question" (tên theo mẫu level, năm, tháng, số câu). Nếu 4 đáp án là một hình ghép đánh số thì để "options" là "1","2","3","4" và đặt hình vào "question". Nếu mỗi đáp án là một hình riêng thì "options" là [[img:ten_a.png]], [[img:ten_b.png]]... Đáp án bằng chữ thì giữ nguyên chữ. Chỉ ghi tên file ảnh, tôi sẽ tự tách ảnh từ PDF.
+- Câu nghe có hình: nếu hình nằm ở đề bài thì viết [[img:n3_2021_12_q03.png]] vào "question" (tên theo mẫu level, năm, tháng, số câu). Nếu 4 đáp án là một hình ghép đánh số thì để "options" là "1","2","3","4" và đặt hình vào "question". Nếu mỗi đáp án là một hình riêng thì "options" là [[img:ten_a.png]], [[img:ten_b.png]]... Đáp án bằng chữ thì giữ nguyên chữ. Chỉ ghi tên file ảnh, tôi sẽ tự cắt ảnh từ PDF.
+- SAU phần JSON, hãy trả thêm mục "DANH SÁCH ẢNH CẦN CẮT" dưới dạng bảng: tên file, số thứ tự câu (ví dụ 聴解 問題1 3番), trang trong file đề, vị trí trên trang (đầu, giữa, cuối), và mô tả ngắn hình gồm gì (ví dụ "bản vẽ 4 ô đánh số 1 đến 4", "tờ giấy có các ký hiệu ア イ ウ エ"). Mỗi hình chỉ một dòng và tên file phải trùng đúng với tên trong JSON.
 
 "type" CHỈ DÙNG CÁC MÃ
 kanji_reading, orthography, word_formation, context_word, synonym, word_usage, grammar_choice, grammar_ordering, grammar_text, reading_short, reading_medium, reading_long, reading_integrated, reading_argument, info_search, listen_task, listen_point, listen_overview, listen_expression, listen_quick, listen_integrated.
@@ -280,4 +283,4 @@ Phần 聴解: 課題理解 là listen_task, ポイント理解 là listen_point
 - Nếu đề không có đáp án kèm theo, hãy tự giải và ghi "correct" cẩn thận, ghi chú những câu chưa chắc chắn vào "explanation".
 ```
 
-Nên mở thử vài câu sau khi import để chắc đáp án đúng và định dạng bài đọc hiển thị đẹp, vì AI có thể sai khi tự giải hoặc khi dựng bảng.
+Nên mở thử vài câu sau khi import để chắc đáp án đúng và định dạng bài đọc hiển thị đẹp, vì AI có thể sai khi tự giải hoặc khi dựng bảng. Đếm lại số ảnh AI liệt kê với số ảnh bạn cắt, thiếu ảnh nào thì câu đó sẽ hiện lỗi ảnh.

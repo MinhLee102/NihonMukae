@@ -2,11 +2,20 @@
 # the Let's Encrypt certificate by itself (no certbot, no cron).
 {$API_DOMAIN} {
 	encode gzip
+
+	# Largest legitimate upload is an audio file (200 MB); anything bigger is refused before it reaches the backend
+	request_body {
+		max_size 210MB
+	}
+
 	reverse_proxy backend:8080
 
 	header {
 		Strict-Transport-Security "max-age=31536000"
 		X-Content-Type-Options "nosniff"
+		X-Frame-Options "DENY"
+		Referrer-Policy "no-referrer"
+		Permissions-Policy "camera=(), microphone=(), geolocation=()"
 		-Server
 	}
 }

@@ -18,6 +18,9 @@ export function getAuthErrorMessage(error: unknown): string {
     if (error.response?.status === 409) {
       return 'Email này đã được đăng ký.';
     }
+    if (error.response?.status === 429) {
+      return 'Bạn thử quá nhiều lần. Vui lòng đợi vài phút rồi thử lại.';
+    }
     if (!error.response) {
       return 'Không thể kết nối đến máy chủ. Vui lòng thử lại.';
     }

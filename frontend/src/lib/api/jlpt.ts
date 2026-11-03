@@ -294,6 +294,21 @@ export const submitSession = async (sessionId: string): Promise<ResultDto> => {
   return data.data;
 };
 
+export type ShelfSaveScope = 'wrong' | 'all' | 'question';
+
+/** Turns the session's snapshot into a My Shelf item (Japanese text only, no explanations). */
+export const saveSessionToShelf = async (
+  sessionId: string,
+  scope: ShelfSaveScope,
+  position?: number
+): Promise<{ id: string; title: string }> => {
+  const { data } = await apiClient.post<ApiResponse<{ id: string; title: string }>>(
+    `/practice/sessions/${sessionId}/save-to-shelf`,
+    { scope, position }
+  );
+  return data.data;
+};
+
 export const getResult = async (sessionId: string): Promise<ResultDto> => {
   const { data } = await apiClient.get<ApiResponse<ResultDto>>(`/practice/sessions/${sessionId}/result`);
   return data.data;

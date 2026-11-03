@@ -200,7 +200,7 @@ Hệ thống chỉ coi một câu là "đã có" khi **cùng đề** (hoặc cù
 
 ## Chuẩn bị dữ liệu cho một đề, theo thứ tự
 
-1. Với từng đề (ví dụ N3 tháng 12 năm 2021), gom: file PDF hoặc ảnh đề và đáp án, một file audio của cả phần nghe.
+1. Với từng đề (ví dụ N3 tháng 12 năm 2021), gom: file PDF hoặc ảnh đề, **bảng đáp án**, một file audio của cả phần nghe, và nếu có thì **bản chép lời phần nghe (スクリプト)**. Đáp án phần nghe bắt buộc phải lấy từ bảng đáp án hoặc từ bản chép lời, vì AI không nghe được audio. Hầu hết nguồn đề (sách, trang luyện thi) đều có đáp án và script đi kèm.
 2. Nén audio nếu quá nặng (xem `docs/GOOGLE_DRIVE_SETUP.md`), đặt tên dễ nhớ như `n3_2021_12_listening.mp3`.
 3. Nhờ AI chuyển đề sang JSON bằng đoạn yêu cầu ở cuối tài liệu này. Một đề nên làm thành **một file JSON** (đủ phần chữ Hán, từ vựng, ngữ pháp, đọc hiểu, nghe hiểu). AI sẽ trả thêm **danh sách ảnh cần cắt**.
 4. Cắt các ảnh theo danh sách đó (Win + Shift + S), lưu đúng tên file AI đã ghi trong JSON.
@@ -280,7 +280,8 @@ Phần 聴解: 課題理解 là listen_task, ポイント理解 là listen_point
 - Nếu một bài có hình ảnh, biểu đồ hoặc bố cục quá phức tạp không thể diễn tả bằng các ký hiệu trên, hãy ĐỂ "passage" là "[ẢNH]" và ghi "image_url" theo mẫu n3_2023_07_reading_q45.png, tôi sẽ tự gắn ảnh.
 
 ĐÁP ÁN
-- Nếu đề không có đáp án kèm theo, hãy tự giải và ghi "correct" cẩn thận, ghi chú những câu chưa chắc chắn vào "explanation".
+- Phần chữ Hán, từ vựng, ngữ pháp, đọc hiểu: nếu đề không có đáp án kèm theo, hãy tự giải và ghi "correct" cẩn thận, ghi chú những câu chưa chắc chắn vào "explanation".
+- Phần NGHE (聴解): bạn KHÔNG nghe được audio, nên TUYỆT ĐỐI không đoán đáp án. Chỉ ghi "correct" khi đề có bảng đáp án hoặc bản chép lời (スクリプト) để suy ra được. Câu nào không có căn cứ thì ghi "correct": "?" và liệt kê cuối câu trả lời các câu nghe còn thiếu đáp án (số thứ tự câu) để tôi tự điền.
 ```
 
 Nên mở thử vài câu sau khi import để chắc đáp án đúng và định dạng bài đọc hiển thị đẹp, vì AI có thể sai khi tự giải hoặc khi dựng bảng. Đếm lại số ảnh AI liệt kê với số ảnh bạn cắt, thiếu ảnh nào thì câu đó sẽ hiện lỗi ảnh.

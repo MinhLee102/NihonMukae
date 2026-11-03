@@ -106,6 +106,7 @@ function ResultView() {
           {!result && !error && <p className="py-24 text-center text-sm text-neutral-400">Đang tải...</p>}
           {result && q && (
             <QuestionPanel
+              sectionAudio={!!result.listeningAudioUrl}
               splitKey="jlpt:split"
               question={{
                 position: q.position,

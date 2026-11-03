@@ -35,7 +35,7 @@ public final class ContentHasher {
         return sha256("g|" + typeCode + '|' + level + '|' + normalize(passage) + '|' + normalize(audioUrl) + '|' + normalize(imageUrl));
     }
 
-    private static String sha256(String text) {
+    static String sha256(String text) {
         try {
             byte[] digest = MessageDigest.getInstance("SHA-256").digest(text.getBytes(StandardCharsets.UTF_8));
             return HexFormat.of().formatHex(digest);

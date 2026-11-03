@@ -4,6 +4,7 @@ import com.nihonmukae.backend.question.ExamConfigRepository.BlueprintRow;
 import com.nihonmukae.backend.question.dto.JlptDtos.Blueprint;
 import com.nihonmukae.backend.question.dto.JlptDtos.BlueprintBlock;
 import com.nihonmukae.backend.question.dto.JlptDtos.BlueprintType;
+import com.nihonmukae.backend.question.dto.JlptDtos.ListeningSetInfo;
 import com.nihonmukae.backend.question.dto.JlptDtos.TestSummary;
 import com.nihonmukae.backend.shared.entity.QuestionType;
 import org.springframework.stereotype.Service;
@@ -36,6 +37,25 @@ public class JlptService {
         this.questionRepository = questionRepository;
         this.typeRepository = typeRepository;
         this.examConfig = examConfig;
+    }
+
+    /** Các bộ nghe của 1 level: đề có audio cả phần nghe và còn câu nghe. */
+    @Transactional(readOnly = true)
+    public List<ListeningSetInfo> listListeningSets(short level) {
+        Map<Long, Integer> listeningCounts = new HashMap<>();
+        for (Object[] row : questionRepository.countByTestAndSection(level)) {
+            if ("chokai".equals(row[1])) {
+                listeningCounts.put((Long) row[0], ((Number) row[2]).intValue());
+            }
+        }
+        List<ListeningSetInfo> result = new ArrayList<>();
+        for (var test : testRepository.findByLevelAndActiveTrueAndListeningAudioUrlIsNotNull(level)) {
+            Integer count = listeningCounts.get(test.getId());
+            if (count != null && count > 0) {
+                result.add(new ListeningSetInfo(test.getId(), test.getTitle(), count));
+            }
+        }
+        return result;
     }
 
     /** Các đề thi của 1 level (chỉ đề đã có câu hỏi). */

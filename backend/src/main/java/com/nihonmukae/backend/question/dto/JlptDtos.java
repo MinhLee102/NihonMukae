@@ -13,6 +13,10 @@ public final class JlptDtos {
                               int durationMin, List<String> sections) {
     }
 
+    /** Một bộ nghe luyện được nguyên bộ: đề có audio cả phần nghe. */
+    public record ListeningSetInfo(Long id, String title, int questionCount) {
+    }
+
     public record BlueprintType(Short typeId, String code, String nameVi, String nameJa, int quantity,
                                 BigDecimal pointsPerQuestion, long available) {
     }

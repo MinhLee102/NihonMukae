@@ -1,6 +1,7 @@
 package com.nihonmukae.backend.question;
 
 import com.nihonmukae.backend.question.dto.JlptDtos.Blueprint;
+import com.nihonmukae.backend.question.dto.JlptDtos.ListeningSetInfo;
 import com.nihonmukae.backend.question.dto.JlptDtos.TestSummary;
 import com.nihonmukae.backend.shared.dto.ApiResponse;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,6 +26,12 @@ public class JlptController {
     @GetMapping("/tests")
     public ApiResponse<List<TestSummary>> tests(@RequestParam("level") short level) {
         return ApiResponse.success(jlptService.listTests(level));
+    }
+
+    // GET /jlpt/listening-sets?level=3 — các bộ nghe có audio cả phần, luyện được nguyên bộ
+    @GetMapping("/listening-sets")
+    public ApiResponse<List<ListeningSetInfo>> listeningSets(@RequestParam("level") short level) {
+        return ApiResponse.success(jlptService.listListeningSets(level));
     }
 
     // GET /jlpt/blueprint?level=3 — cấu trúc đề thật, kèm cảnh báo kho thiếu câu

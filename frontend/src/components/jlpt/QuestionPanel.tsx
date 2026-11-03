@@ -109,6 +109,7 @@ export function QuestionPanel({
   onToggleFlag,
   footer,
   audioMode = "free",
+  sectionAudio = false,
 }: {
   question: PanelQuestion;
   group?: GroupViewDto;
@@ -120,10 +121,14 @@ export function QuestionPanel({
   footer?: ReactNode;
   /** exam: audio plays once with no controls. free: normal player. */
   audioMode?: AudioMode;
+  /** The whole listening section has one recording (player shown above), so no per-question audio is expected. */
+  sectionAudio?: boolean;
 }) {
   const revealed = question.correctAnswer !== undefined;
   const sectionLabel = question.section ? SECTION_LABELS[question.section].vi : "";
   const isListening = question.section === "chokai";
+  // When every answer is a picture, lay them out as a 2 column grid like the printed paper
+  const imageOptions = question.options.length > 0 && question.options.every((o) => /^\s*\[\[img:[^\]]+\]\]\s*$/.test(o));
 
   const body = (
     <div className="mx-auto flex w-full max-w-3xl flex-col px-6 py-6">
@@ -153,13 +158,16 @@ export function QuestionPanel({
         )}
       </div>
 
-      {!group?.audioUrl && <AudioBlock url={question.audioUrl} isListening={isListening && !question.audioUrl} mode={audioMode} />}
+      {!group?.audioUrl && <AudioBlock url={question.audioUrl} isListening={isListening && !question.audioUrl && !sectionAudio} mode={audioMode} />}
 
       <div className="mb-6 text-lg font-semibold leading-8 text-neutral-900">
         <FormattedText text={question.question} />
       </div>
 
-      <div className="flex flex-col gap-3">
+      <div
+        className={imageOptions ? "" : "flex flex-col gap-3"}
+        style={imageOptions ? { display: "grid", gridTemplateColumns: "repeat(2, minmax(0, 1fr))", gap: 12 } : undefined}
+      >
         {question.options.map((option, i) => {
           const letter = LETTERS[i];
           const isSelected = question.selected === letter;
@@ -185,7 +193,9 @@ export function QuestionPanel({
               >
                 {i + 1}
               </span>
-              <span className="min-w-0 flex-1 text-[15px] text-neutral-900">
+              <span
+                className={`min-w-0 flex-1 text-[15px] text-neutral-900 ${imageOptions ? "[&_img]:mx-auto [&_img]:max-h-44" : ""}`}
+              >
                 <FormattedText text={option} />
               </span>
               {isCorrect && <Check size={18} className="shrink-0 text-emerald-600" />}

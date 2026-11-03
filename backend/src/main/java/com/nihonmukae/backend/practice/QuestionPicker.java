@@ -3,20 +3,24 @@ package com.nihonmukae.backend.practice;
 import com.nihonmukae.backend.practice.UnitSelector.Unit;
 import com.nihonmukae.backend.question.ExamConfigRepository;
 import com.nihonmukae.backend.question.ExamConfigRepository.BlueprintRow;
+import com.nihonmukae.backend.question.JlptTestRepository;
 import com.nihonmukae.backend.question.QuestionGroupRepository;
 import com.nihonmukae.backend.question.QuestionRepository;
 import com.nihonmukae.backend.question.QuestionTypeRepository;
+import com.nihonmukae.backend.shared.entity.JlptTest;
 import com.nihonmukae.backend.shared.entity.Question;
 import com.nihonmukae.backend.shared.entity.QuestionType;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.Random;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -29,23 +33,34 @@ public class QuestionPicker {
     public record Entry(Question question, int blockNo, BigDecimal points) {
     }
 
-    public record Picked(List<Entry> entries, List<String> warnings) {
+    /** listeningTestId: đề cung cấp audio cả phần nghe cho các câu nghe trong phiên (null nếu không có). */
+    public record Picked(List<Entry> entries, List<String> warnings, Long listeningTestId) {
+        public Picked(List<Entry> entries, List<String> warnings) {
+            this(entries, warnings, null);
+        }
+    }
+
+    /** Một bộ nghe: đề có audio cả phần nghe, kèm toàn bộ câu nghe của đề đó theo thứ tự. */
+    public record ListeningSet(JlptTest test, List<Question> questions) {
     }
 
     private final QuestionRepository questionRepository;
     private final QuestionGroupRepository groupRepository;
     private final QuestionTypeRepository typeRepository;
     private final ExamConfigRepository examConfig;
+    private final JlptTestRepository testRepository;
     private final Random random = new Random();
 
     public QuestionPicker(QuestionRepository questionRepository,
                           QuestionGroupRepository groupRepository,
                           QuestionTypeRepository typeRepository,
-                          ExamConfigRepository examConfig) {
+                          ExamConfigRepository examConfig,
+                          JlptTestRepository testRepository) {
         this.questionRepository = questionRepository;
         this.groupRepository = groupRepository;
         this.typeRepository = typeRepository;
         this.examConfig = examConfig;
+        this.testRepository = testRepository;
     }
 
     // ─── Ôn theo dạng bài ───────────────────────────────────────────────
@@ -113,26 +128,79 @@ public class QuestionPicker {
         return new Picked(entries, List.of());
     }
 
-    /** Đề random: với mỗi dòng blueprint bốc đúng số câu (hoặc cả nhóm) trong số câu hiện có của dạng đó. */
+    /** Đề random: với mỗi dòng blueprint bốc đúng số câu (hoặc cả nhóm); phần nghe lấy nguyên một bộ nghe nếu có. */
     public Picked pickExamRandom(short level) {
         Map<Short, QuestionType> types = typesById();
         List<Entry> entries = new ArrayList<>();
         List<String> warnings = new ArrayList<>();
+        List<BlueprintRow> listeningRows = new ArrayList<>();
 
         for (BlueprintRow row : examConfig.findBlueprint(level)) {
-            List<Unit> pool = unitsForType(row.typeId(), level);
-            List<Unit> chosen = UnitSelector.select(pool, row.quantity(), random);
-            List<Question> questions = loadOrdered(chosen);
-            for (Question q : questions) {
-                entries.add(new Entry(q, row.blockNo(), row.pointsPerQuestion()));
-            }
-            if (questions.size() < row.quantity()) {
-                QuestionType type = types.get(row.typeId());
-                warnings.add("Kho thiếu câu cho dạng " + (type == null ? row.typeId() : type.getNameVi())
-                        + ": có " + questions.size() + "/" + row.quantity() + " câu.");
+            QuestionType type = types.get(row.typeId());
+            if (type != null && "chokai".equals(type.getSection())) {
+                listeningRows.add(row);
+            } else {
+                pickRow(row, level, types, entries, warnings);
             }
         }
-        return new Picked(entries, warnings);
+
+        Long listeningTestId = null;
+        if (!listeningRows.isEmpty()) {
+            Optional<ListeningSet> set = pickListeningSet(level);
+            if (set.isPresent()) {
+                Map<Short, BlueprintRow> rowByType = listeningRows.stream()
+                        .collect(Collectors.toMap(BlueprintRow::typeId, Function.identity(), (x, y) -> x));
+                int block = listeningRows.get(0).blockNo();
+                for (Question q : set.get().questions()) {
+                    BlueprintRow row = rowByType.get(q.getTypeId());
+                    entries.add(new Entry(q, row == null ? block : row.blockNo(),
+                            row == null ? BigDecimal.ONE : row.pointsPerQuestion()));
+                }
+                listeningTestId = set.get().test().getId();
+            } else {
+                // Chưa có bộ nghe nào có audio cả phần: bốc từng câu nghe có audio riêng như trước
+                for (BlueprintRow row : listeningRows) {
+                    pickRow(row, level, types, entries, warnings);
+                }
+            }
+        }
+        return new Picked(entries, warnings, listeningTestId);
+    }
+
+    private void pickRow(BlueprintRow row, short level, Map<Short, QuestionType> types, List<Entry> entries,
+                         List<String> warnings) {
+        List<Unit> pool = unitsForType(row.typeId(), level);
+        List<Unit> chosen = UnitSelector.select(pool, row.quantity(), random);
+        List<Question> questions = loadOrdered(chosen);
+        for (Question q : questions) {
+            entries.add(new Entry(q, row.blockNo(), row.pointsPerQuestion()));
+        }
+        if (questions.size() < row.quantity()) {
+            QuestionType type = types.get(row.typeId());
+            warnings.add("Kho thiếu câu cho dạng " + (type == null ? row.typeId() : type.getNameVi())
+                    + ": có " + questions.size() + "/" + row.quantity() + " câu.");
+        }
+    }
+
+    // ─── Luyện nghe nguyên bộ ───────────────────────────────────────────
+
+    /** Một bộ nghe ngẫu nhiên: đề của level có audio cả phần nghe, kèm toàn bộ câu nghe của đề đó. */
+    public Optional<ListeningSet> pickListeningSet(short level) {
+        List<JlptTest> tests = new ArrayList<>(testRepository.findByLevelAndActiveTrueAndListeningAudioUrlIsNotNull(level));
+        Collections.shuffle(tests, random);
+        Map<Short, QuestionType> types = typesById();
+        for (JlptTest test : tests) {
+            List<Question> questions = questionRepository.findByTestIdAndActiveTrueOrderByTestOrderAscIdAsc(test.getId())
+                    .stream()
+                    .filter(q -> {
+                        QuestionType type = types.get(q.getTypeId());
+                        return type != null && "chokai".equals(type.getSection());
+                    }).toList();
+            if (!questions.isEmpty()) {
+                return Optional.of(new ListeningSet(test, questions));
+            }
+        }
+        return Optional.empty();
     }
 
     // ─── Dùng chung ─────────────────────────────────────────────────────

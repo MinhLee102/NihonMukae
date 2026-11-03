@@ -13,9 +13,13 @@ public final class SessionDtos {
     private SessionDtos() {
     }
 
-    /** mode = practice: level, typeIds, questionCount, timeLimitMin, feedbackMode. mode = exam: level, testId hoặc random. */
+    /**
+     * mode = practice: level, typeIds, questionCount, timeLimitMin, feedbackMode, hoặc listeningSet = true để luyện
+     * nguyên một bộ nghe ngẫu nhiên. mode = exam: level, testId hoặc random.
+     */
     public record StartRequest(@NotBlank String mode, @NotNull Short level, List<Short> typeIds, Integer questionCount,
-                               Integer timeLimitMin, String feedbackMode, Long testId, Boolean random) {
+                               Integer timeLimitMin, String feedbackMode, Long testId, Boolean random,
+                               Boolean listeningSet) {
     }
 
     public record AnswerRequest(String selected) {

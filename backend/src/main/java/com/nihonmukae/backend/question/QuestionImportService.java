@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.Set;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
@@ -106,24 +107,29 @@ public class QuestionImportService {
         JlptTest test = file.getTest() == null ? null : resolveTest(file.getTest());
         int[] counters = new int[4]; // createdQuestions, createdGroups, skipped, overwritten
         short order = 0;
+        ImportKeys keys = new ImportKeys(ImportKeys.scopeOf(test));
 
         for (ImportFile.Item item : file.getQuestions()) {
             order++;
-            saveQuestion(userId, item, null, null, null, test, order, types, overwrite, counters, null, source);
+            saveQuestion(userId, item, null, null, null, test, order, types, overwrite, counters, null, source, keys);
         }
         for (ImportFile.Group group : file.getGroups()) {
             order++;
             QuestionType groupType = group.getType() == null ? null : types.get(group.getType());
             int level = group.getLevel() != null ? group.getLevel() : test.getLevel();
             String typeCode = group.getType();
-            String hash = ContentHasher.hashGroup(typeCode == null ? "" : typeCode, level, group.getPassage(),
-                    group.getAudioUrl(), group.getImageUrl());
+            String hash = keys.group(typeCode == null ? "" : typeCode, level, group.getPassage());
             QuestionGroup saved = groupRepository.findByContentHash(hash).orElse(null);
-            if (saved != null && overwrite && !saved.isActive()) {
+            if (saved != null) {
+                // Nhóm đã có (có thể đã bị xóa mềm): bật lại, và khi ghi đè thì cập nhật audio, ảnh, tiêu đề
                 saved.setActive(true);
+                if (overwrite) {
+                    saved.setAudioUrl(blankToNull(group.getAudioUrl()));
+                    saved.setImageUrl(blankToNull(group.getImageUrl()));
+                    saved.setTitle(group.getTitle());
+                }
                 groupRepository.save(saved);
-            }
-            if (saved == null) {
+            } else {
                 saved = groupRepository.save(QuestionGroup.builder()
                         .typeId(groupType == null ? null : groupType.getId())
                         .level((short) level)
@@ -142,7 +148,7 @@ public class QuestionImportService {
             }
             for (ImportFile.Item item : group.getQuestions()) {
                 saveQuestion(userId, item, group.getType(), level, saved, test, order, types, overwrite, counters,
-                        group.getPassage(), source);
+                        group.getPassage(), source, keys);
             }
         }
         return new CommitResponse(counters[0], counters[1], counters[2], counters[3], test == null ? null : test.getId());
@@ -150,19 +156,25 @@ public class QuestionImportService {
 
     private void saveQuestion(UUID userId, ImportFile.Item item, String inheritedType, Integer inheritedLevel,
                               QuestionGroup group, JlptTest test, short order, Map<String, QuestionType> types,
-                              boolean overwrite, int[] counters, String passage, String source) {
+                              boolean overwrite, int[] counters, String passage, String source, ImportKeys keys) {
         String typeCode = item.getType() != null && !item.getType().isBlank() ? item.getType() : inheritedType;
         QuestionType type = types.get(typeCode);
         int level = item.getLevel() != null ? item.getLevel() : inheritedLevel != null ? inheritedLevel : test.getLevel();
-        String hash = ContentHasher.hashQuestion(typeCode, level, item.getQuestion(), item.getOptions(), passage);
+        String hash = keys.question(typeCode, level, item.getQuestion(), item.getOptions(), passage);
 
         Question existing = questionRepository.findByContentHash(hash).orElse(null);
         if (existing != null) {
-            if (overwrite) {
+            if (!existing.isActive()) {
+                // Câu đã bị xóa mềm trong Ngân hàng đề: import lại thì khôi phục kèm dữ liệu mới
                 existing.setCorrect(item.getCorrect());
                 existing.setExplanation(item.getExplanation());
                 existing.setAudioUrl(blankToNull(item.getAudioUrl()));
                 existing.setActive(true);
+                counters[0]++;
+            } else if (overwrite) {
+                existing.setCorrect(item.getCorrect());
+                existing.setExplanation(item.getExplanation());
+                existing.setAudioUrl(blankToNull(item.getAudioUrl()));
                 counters[3]++;
             } else {
                 counters[2]++;
@@ -188,15 +200,17 @@ public class QuestionImportService {
         counters[0]++;
     }
 
+    private Optional<JlptTest> findTest(ImportFile.TestInfo info) {
+        short level = info.getLevel().shortValue();
+        if (info.getYear() != null && info.getMonth() != null) {
+            return testRepository.findByLevelAndYearAndMonth(level, info.getYear().shortValue(), info.getMonth().shortValue());
+        }
+        return testRepository.findByLevelAndTitle(level, info.getTitle().trim());
+    }
+
     private JlptTest resolveTest(ImportFile.TestInfo info) {
         short level = info.getLevel().shortValue();
-        JlptTest existing;
-        if (info.getYear() != null && info.getMonth() != null) {
-            existing = testRepository.findByLevelAndYearAndMonth(level, info.getYear().shortValue(), info.getMonth().shortValue())
-                    .orElse(null);
-        } else {
-            existing = testRepository.findByLevelAndTitle(level, info.getTitle().trim()).orElse(null);
-        }
+        JlptTest existing = findTest(info).orElse(null);
         if (existing != null) {
             if (notBlank(info.getAudioUrl())) {
                 existing.setListeningAudioUrl(info.getAudioUrl().trim());
@@ -222,37 +236,47 @@ public class QuestionImportService {
         return String.format("Đề thi %02d/%d", info.getMonth(), info.getYear());
     }
 
+    /**
+     * Câu "đã có" là câu cùng đề, cùng nội dung, cùng thứ tự xuất hiện (xem ImportKeys). Câu trùng nội dung nhưng
+     * nằm ở đề khác, hoặc lặp lại trong cùng file (câu nghe giống nhau), không phải là trùng. Câu đã xóa không tính.
+     */
     private void findDuplicates(ImportFile file, Map<String, QuestionType> types, List<Duplicate> out) {
-        Set<String> seen = new HashSet<>();
+        JlptTest test = file.getTest() == null ? null : findTest(file.getTest()).orElse(null);
+        if (file.getTest() != null && test == null) {
+            return; // đề chưa có trong hệ thống nên chưa có câu nào để trùng
+        }
         Integer testLevel = file.getTest() == null ? null : file.getTest().getLevel();
+        ImportKeys keys = new ImportKeys(ImportKeys.scopeOf(test));
+        String where = test == null ? "đã có trong kho luyện tập" : "đã có trong đề này";
 
         for (int i = 0; i < file.getQuestions().size(); i++) {
             ImportFile.Item item = file.getQuestions().get(i);
-            String hash = hashItem(item, null, null, testLevel, null);
-            checkDuplicate(hash, "questions[" + i + "]", seen, out);
+            checkDuplicate(keys.question(typeOf(item, null), levelOf(item, null, testLevel), item.getQuestion(),
+                    item.getOptions(), null), "questions[" + i + "]", where, out);
         }
         for (int g = 0; g < file.getGroups().size(); g++) {
             ImportFile.Group group = file.getGroups().get(g);
             Integer level = group.getLevel() != null ? group.getLevel() : testLevel;
             for (int i = 0; i < group.getQuestions().size(); i++) {
-                String hash = hashItem(group.getQuestions().get(i), group.getType(), level, testLevel, group.getPassage());
-                checkDuplicate(hash, "groups[" + g + "].questions[" + i + "]", seen, out);
+                ImportFile.Item item = group.getQuestions().get(i);
+                checkDuplicate(keys.question(typeOf(item, group.getType()), levelOf(item, level, testLevel),
+                        item.getQuestion(), item.getOptions(), group.getPassage()),
+                        "groups[" + g + "].questions[" + i + "]", where, out);
             }
         }
     }
 
-    private String hashItem(ImportFile.Item item, String inheritedType, Integer inheritedLevel, Integer testLevel,
-                            String passage) {
-        String typeCode = item.getType() != null && !item.getType().isBlank() ? item.getType() : inheritedType;
-        int level = item.getLevel() != null ? item.getLevel() : inheritedLevel != null ? inheritedLevel : testLevel;
-        return ContentHasher.hashQuestion(typeCode, level, item.getQuestion(), item.getOptions(), passage);
+    private static String typeOf(ImportFile.Item item, String inheritedType) {
+        return item.getType() != null && !item.getType().isBlank() ? item.getType() : inheritedType;
     }
 
-    private void checkDuplicate(String hash, String path, Set<String> seen, List<Duplicate> out) {
-        if (!seen.add(hash)) {
-            out.add(new Duplicate(path, "trùng với câu khác trong cùng file"));
-        } else if (questionRepository.findByContentHash(hash).isPresent()) {
-            out.add(new Duplicate(path, "đã có trong kho"));
+    private static int levelOf(ImportFile.Item item, Integer inheritedLevel, Integer testLevel) {
+        return item.getLevel() != null ? item.getLevel() : inheritedLevel != null ? inheritedLevel : testLevel;
+    }
+
+    private void checkDuplicate(String hash, String path, String where, List<Duplicate> out) {
+        if (questionRepository.findByContentHash(hash).filter(Question::isActive).isPresent()) {
+            out.add(new Duplicate(path, where));
         }
     }
 

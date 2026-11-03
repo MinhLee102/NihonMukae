@@ -19,12 +19,15 @@ public interface QuestionRepository extends JpaRepository<Question, Long>, JpaSp
 
     List<Question> findByGroupIdInAndActiveTrueOrderByTestOrderAscIdAsc(Collection<Long> groupIds);
 
-    // Câu đứng riêng (không thuộc nhóm) của 1 dạng bài, dùng để random
-    @Query("SELECT q.id FROM Question q WHERE q.typeId = :typeId AND q.level = :level AND q.active = true AND q.groupId IS NULL")
+    // Câu đứng riêng (không thuộc nhóm) của 1 dạng bài, dùng để random.
+    // Câu nghe của đề có audio cả phần nghe không có audio riêng nên chỉ luyện được theo nguyên bộ, loại khỏi đây.
+    @Query("SELECT q.id FROM Question q WHERE q.typeId = :typeId AND q.level = :level AND q.active = true AND q.groupId IS NULL " +
+            "AND NOT EXISTS (SELECT 1 FROM JlptTest jt, QuestionType ty WHERE jt.id = q.testId AND jt.listeningAudioUrl IS NOT NULL AND ty.id = q.typeId AND ty.section = 'chokai')")
     List<Long> findStandaloneIds(@Param("typeId") short typeId, @Param("level") short level);
 
     // Số câu có sẵn theo dạng bài và level (đếm cả câu thuộc nhóm), để hiển thị và cảnh báo thiếu câu
-    @Query("SELECT q.typeId, COUNT(q) FROM Question q WHERE q.level = :level AND q.active = true GROUP BY q.typeId")
+    @Query("SELECT q.typeId, COUNT(q) FROM Question q WHERE q.level = :level AND q.active = true " +
+            "AND NOT EXISTS (SELECT 1 FROM JlptTest jt, QuestionType ty WHERE jt.id = q.testId AND jt.listeningAudioUrl IS NOT NULL AND ty.id = q.typeId AND ty.section = 'chokai') GROUP BY q.typeId")
     List<Object[]> countByTypeForLevel(@Param("level") short level);
 
     List<Question> findByTestIdAndActiveTrueOrderByTestOrderAscIdAsc(Long testId);

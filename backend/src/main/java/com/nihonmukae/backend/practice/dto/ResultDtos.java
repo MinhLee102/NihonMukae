@@ -33,7 +33,13 @@ public final class ResultDtos {
                                  String section, Long groupId, String question, List<String> options,
                                  String audioUrl, String selected, String correctAnswer, boolean correct,
                                  String explanation, double points, Integer mondaiNo, String instructionJa,
-                                 String instructionVi) {
+                                 String instructionVi, String transcript) {
+
+        public ResultQuestion withTranscript(String value) {
+            return new ResultQuestion(position, blockNo, questionId, typeCode, typeName, section, groupId, question,
+                    options, audioUrl, selected, correctAnswer, correct, explanation, points, mondaiNo,
+                    instructionJa, instructionVi, value);
+        }
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)

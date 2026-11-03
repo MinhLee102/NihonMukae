@@ -11,7 +11,8 @@ import {
   type FeedbackRow,
   type FeedbackStatus,
 } from "@/lib/api/feedback";
-import type { Page } from "@/lib/api/admin";
+import { updateAdminQuestion, type Page } from "@/lib/api/admin";
+import { getApiErrorMessage } from "@/lib/api/flashcard";
 
 const PAGE_SIZE = 20;
 const STATUSES = Object.keys(STATUS_LABELS) as FeedbackStatus[];
@@ -27,6 +28,26 @@ const STATUS_STYLE: Record<FeedbackStatus, string> = {
 function FeedbackCard({ row, onChanged }: { row: FeedbackRow; onChanged: () => void }) {
   const [note, setNote] = useState(row.adminNote ?? "");
   const [busy, setBusy] = useState(false);
+  const [draft, setDraft] = useState(row.message);
+  const [error, setError] = useState<string | null>(null);
+  const questionId = row.context?.questionId;
+  const canApply = row.category === "transcript" && questionId !== undefined && row.status !== "fixed";
+
+  /** Writes the (possibly edited) text as the question's transcript, then marks this feedback as handled. */
+  async function applyTranscript() {
+    if (questionId === undefined) return;
+    try {
+      setBusy(true);
+      setError(null);
+      await updateAdminQuestion(questionId, { transcript: draft });
+      await updateFeedback(row.id, { status: "fixed", adminNote: note.trim() || "Đã áp dụng làm transcript" });
+      onChanged();
+    } catch (err) {
+      setError(getApiErrorMessage(err, "Không áp dụng được."));
+    } finally {
+      setBusy(false);
+    }
+  }
 
   async function setStatus(status: FeedbackStatus) {
     try {
@@ -48,7 +69,17 @@ function FeedbackCard({ row, onChanged }: { row: FeedbackRow; onChanged: () => v
         </span>
       </div>
 
-      <p className="mt-3 whitespace-pre-wrap text-sm leading-6 text-neutral-800">{row.message}</p>
+      {canApply ? (
+        <textarea
+          value={draft}
+          onChange={(e) => setDraft(e.target.value)}
+          rows={Math.min(Math.max(draft.split("\n").length + 1, 4), 14)}
+          className="mt-3 w-full resize-y rounded-xl border border-black/10 bg-[#FBFAF7] px-4 py-3 text-sm leading-6 outline-none focus:border-black/30"
+        />
+      ) : (
+        <p className="mt-3 whitespace-pre-wrap text-sm leading-6 text-neutral-800">{row.message}</p>
+      )}
+      {error && <p className="mt-2 text-xs text-red-600">{error}</p>}
 
       <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-neutral-400">
         {row.pageUrl && <span>Trang: {row.pageUrl}</span>}
@@ -68,6 +99,16 @@ function FeedbackCard({ row, onChanged }: { row: FeedbackRow; onChanged: () => v
           placeholder="Ghi chú xử lý (không bắt buộc)"
           className="min-w-[200px] flex-1 rounded-full border border-black/10 bg-white px-4 py-1.5 text-xs outline-none focus:border-black/30"
         />
+        {canApply && (
+          <button
+            type="button"
+            disabled={busy}
+            onClick={() => void applyTranscript()}
+            className="rounded-full bg-neutral-900 px-4 py-1.5 text-xs font-medium text-white disabled:opacity-50"
+          >
+            Áp dụng làm transcript câu #{questionId}
+          </button>
+        )}
         {STATUSES.filter((s) => s !== row.status).map((s) => (
           <button
             key={s}

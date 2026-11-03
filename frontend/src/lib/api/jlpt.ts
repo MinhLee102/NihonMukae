@@ -200,6 +200,8 @@ export interface ResultQuestionDto {
   mondaiNo?: number;
   instructionJa?: string;
   instructionVi?: string;
+  /** Listening script (Japanese), added by admins or approved contributions. */
+  transcript?: string;
 }
 
 export interface ResultDto {
@@ -291,6 +293,21 @@ export const submitBlock = async (sessionId: string, blockNo: number): Promise<S
 
 export const submitSession = async (sessionId: string): Promise<ResultDto> => {
   const { data } = await apiClient.post<ApiResponse<ResultDto>>(`/practice/sessions/${sessionId}/submit`);
+  return data.data;
+};
+
+export type ShelfSaveScope = 'wrong' | 'all' | 'question';
+
+/** Turns the session's snapshot into a My Shelf item (Japanese text only, no explanations). */
+export const saveSessionToShelf = async (
+  sessionId: string,
+  scope: ShelfSaveScope,
+  position?: number
+): Promise<{ id: string; title: string }> => {
+  const { data } = await apiClient.post<ApiResponse<{ id: string; title: string }>>(
+    `/practice/sessions/${sessionId}/save-to-shelf`,
+    { scope, position }
+  );
   return data.data;
 };
 

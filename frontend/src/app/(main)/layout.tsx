@@ -4,6 +4,7 @@ import { Header } from "../../components/Header";
 import { AuthModal } from '@/components/auth/AuthModal';
 import { AuthInitializer } from '@/components/auth/AuthInitializer';
 import { FeedbackDialog } from '@/components/FeedbackDialog';
+import { WelcomeDialog } from '@/components/WelcomeDialog';
 
 /**
  * Shared shell for every user-facing page (Dictionary, Flashcard, My Shelf,
@@ -20,6 +21,7 @@ export default function AppLayout({ children }: { children: ReactNode }) {
       </div>
       <AuthModal />
       <FeedbackDialog />
+      <WelcomeDialog />
     </div>
   );
 }

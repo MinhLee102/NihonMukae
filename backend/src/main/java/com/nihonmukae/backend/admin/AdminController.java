@@ -2,7 +2,9 @@ package com.nihonmukae.backend.admin;
 
 import com.nihonmukae.backend.admin.dto.AdminDtos.BankSummary;
 import com.nihonmukae.backend.admin.dto.AdminDtos.EnabledRequest;
+import com.nihonmukae.backend.admin.dto.AdminDtos.QuestionDetail;
 import com.nihonmukae.backend.admin.dto.AdminDtos.QuestionPage;
+import com.nihonmukae.backend.admin.dto.AdminDtos.UpdateQuestionRequest;
 import com.nihonmukae.backend.admin.dto.AdminDtos.ServerStatus;
 import com.nihonmukae.backend.admin.dto.AdminDtos.TestRow;
 import com.nihonmukae.backend.admin.dto.AdminDtos.UserPage;
@@ -51,6 +53,16 @@ public class AdminController {
     @GetMapping("/questions/summary")
     public ApiResponse<BankSummary> bankSummary() {
         return ApiResponse.success(adminService.bankSummary());
+    }
+
+    @GetMapping("/questions/{id}")
+    public ApiResponse<QuestionDetail> question(@PathVariable long id) {
+        return ApiResponse.success(adminService.getQuestion(id));
+    }
+
+    @PutMapping("/questions/{id}")
+    public ApiResponse<QuestionDetail> updateQuestion(@PathVariable long id, @RequestBody UpdateQuestionRequest req) {
+        return ApiResponse.success(adminService.updateQuestion(id, req));
     }
 
     @DeleteMapping("/questions/{id}")

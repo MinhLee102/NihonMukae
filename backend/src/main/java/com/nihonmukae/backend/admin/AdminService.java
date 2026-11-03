@@ -2,7 +2,9 @@ package com.nihonmukae.backend.admin;
 
 import com.nihonmukae.backend.admin.dto.AdminDtos.BankSummary;
 import com.nihonmukae.backend.admin.dto.AdminDtos.QuestionPage;
+import com.nihonmukae.backend.admin.dto.AdminDtos.QuestionDetail;
 import com.nihonmukae.backend.admin.dto.AdminDtos.QuestionRow;
+import com.nihonmukae.backend.admin.dto.AdminDtos.UpdateQuestionRequest;
 import com.nihonmukae.backend.admin.dto.AdminDtos.TestRow;
 import com.nihonmukae.backend.admin.dto.AdminDtos.UserPage;
 import com.nihonmukae.backend.admin.dto.AdminDtos.UserRow;
@@ -150,6 +152,65 @@ public class AdminService {
         jdbc.update("DELETE FROM question_groups g WHERE g.is_active = false "
                 + "AND NOT EXISTS (SELECT 1 FROM questions q WHERE q.group_id = g.id)");
         return questions;
+    }
+
+    @Transactional(readOnly = true)
+    public QuestionDetail getQuestion(long id) {
+        Question q = questionRepository.findById(id).orElseThrow(() -> new NotFoundException("Không tìm thấy câu hỏi"));
+        return toDetail(q);
+    }
+
+    /**
+     * Sửa nội dung một câu. Mã băm nội dung giữ nguyên, nên import lại file gốc vẫn nhận ra đây là câu cũ
+     * (bỏ qua, không tạo bản trùng); chọn Ghi đè thì bản gốc được khôi phục.
+     */
+    @Transactional
+    public QuestionDetail updateQuestion(long id, UpdateQuestionRequest req) {
+        Question q = questionRepository.findById(id).orElseThrow(() -> new NotFoundException("Không tìm thấy câu hỏi"));
+        if (req.question() != null) {
+            String text = req.question().trim();
+            if (text.isEmpty() || text.length() > 6000) {
+                throw new IllegalArgumentException("Nội dung câu hỏi phải có từ 1 đến 6000 ký tự");
+            }
+            q.setQuestion(text);
+        }
+        List<String> options = req.options() != null ? req.options().stream().map(String::trim).toList() : q.getOptions();
+        if (req.options() != null) {
+            if (options.size() < 2 || options.size() > 6 || options.stream().anyMatch(o -> o.isEmpty() || o.length() > 1000)) {
+                throw new IllegalArgumentException("Cần 2 đến 6 đáp án, mỗi đáp án không được để trống");
+            }
+            q.setOptions(options);
+        }
+        String correct = req.correct() != null ? req.correct().trim().toUpperCase() : q.getCorrect();
+        if (req.correct() != null || req.options() != null) {
+            if (correct.length() != 1 || correct.charAt(0) < 'A' || correct.charAt(0) - 'A' >= options.size()) {
+                throw new IllegalArgumentException("Đáp án đúng phải là một chữ cái trong số các đáp án");
+            }
+            q.setCorrect(correct);
+        }
+        if (req.explanation() != null) {
+            q.setExplanation(limited(req.explanation(), 6000, "Giải thích"));
+        }
+        if (req.transcript() != null) {
+            q.setTranscript(limited(req.transcript(), 10000, "Transcript"));
+        }
+        return toDetail(q);
+    }
+
+    private static String limited(String value, int max, String label) {
+        String text = value.trim();
+        if (text.length() > max) {
+            throw new IllegalArgumentException(label + " tối đa " + max + " ký tự");
+        }
+        return text.isEmpty() ? null : text;
+    }
+
+    private QuestionDetail toDetail(Question q) {
+        QuestionType type = typeRepository.findById(q.getTypeId()).orElse(null);
+        return new QuestionDetail(q.getId(), q.getLevel(), type == null ? null : type.getCode(),
+                type == null ? null : type.getNameVi(), type == null ? null : type.getSection(), q.getQuestion(),
+                q.getOptions(), q.getCorrect(), q.getExplanation(), q.getTranscript(), q.getAudioUrl(), q.getGroupId(),
+                q.getTestId());
     }
 
     private QuestionRow toRow(Question q, QuestionType type) {

@@ -39,6 +39,7 @@ Có `test` thì các câu được gắn vào đề đó để thi thử nguyên
 | `correct` | có | Một chữ cái: `A` là đáp án 1, `B` là 2, ... |
 | `explanation` | không | Giải thích hiện sau khi nộp bài |
 | `audio_url` | không | Tên file audio (xem phần Audio) |
+| `transcript` | không | Bản chữ tiếng Nhật của câu nghe, mỗi lượt nói một dòng (`男：...`). Hiện ở nút Xem transcript khi xem lại kết quả. Có thể bỏ trống rồi nhập sau ở Admin, Ngân hàng đề, nút sửa |
 
 Số `問題N` và câu hướng dẫn tiếng Nhật được hệ thống tự thêm theo dạng bài, **không** ghi vào JSON.
 
@@ -253,6 +254,7 @@ Hãy chuyển đề thi JLPT đính kèm thành MỘT file JSON hợp lệ theo 
 
 CẤU TRÚC
 - Gốc có 3 khóa: "test" (level, title, year, month, audio_url), "questions", "groups".
+- Câu nghe: nếu tài liệu có sẵn script (lời thoại) thì ghi vào "transcript" nguyên văn tiếng Nhật; KHÔNG tự nghe hoặc đoán, không có thì bỏ trường này.
 - "audio_url" trong "test" là tên file audio của CẢ phần nghe, theo mẫu n3_2023_07_listening.mp3 (level, năm, tháng). Câu nghe KHÔNG cần audio_url riêng, nhưng PHẢI giữ đúng thứ tự như trong đề (1番, 2番, 3番...).
 - Câu đơn vào "questions". Các câu dùng chung một đoạn văn, bảng, thông báo hoặc ảnh vào "groups", mỗi nhóm có "type", "passage" (hoặc "image_url") và "questions".
 

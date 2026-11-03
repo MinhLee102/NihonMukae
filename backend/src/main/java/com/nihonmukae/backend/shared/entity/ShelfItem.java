@@ -40,6 +40,14 @@ public class ShelfItem {
     @Column(name = "content_tokens", nullable = false, columnDefinition = "jsonb")
     private List<ShelfToken> contentTokens;
 
+    // manual: user tự nhập; practice: lưu từ lịch sử luyện thi
+    @Builder.Default
+    @Column(name = "source_type", nullable = false, length = 12)
+    private String sourceType = "manual";
+
+    @Column(name = "source_session_id")
+    private UUID sourceSessionId;
+
     @CreationTimestamp
     @Column(name = "created_at", updatable = false)
     private ZonedDateTime createdAt;

@@ -460,7 +460,8 @@ public class PracticeSessionService {
                     type == null ? null : type.getCode(), type == null ? null : type.getNameVi(), section,
                     q.getGroupId(), q.getQuestion(), q.getOptions(), q.getAudioUrl(), a.getSelected(), q.getCorrect(),
                     correct, q.getExplanation(), a.getPoints().doubleValue(), mondaiNos.get((int) a.getPosition()),
-                    type == null ? null : type.getInstructionJa(), type == null ? null : type.getInstructionVi()));
+                    type == null ? null : type.getInstructionJa(), type == null ? null : type.getInstructionVi(),
+                    q.getTranscript()));
         }
         answerRepository.saveAll(answers);
 
@@ -504,7 +505,27 @@ public class PracticeSessionService {
         if (!PracticeSession.STATUS_SUBMITTED.equals(session.getStatus())) {
             throw new IllegalArgumentException("Phiên này chưa nộp bài");
         }
-        return storedResult(session);
+        return withCurrentTranscripts(storedResult(session));
+    }
+
+    /** Transcript có thể được thêm hoặc sửa sau khi làm bài, nên lấy bản mới nhất thay vì bản trong snapshot. */
+    private Result withCurrentTranscripts(Result stored) {
+        List<Long> ids = stored.questions().stream().map(ResultQuestion::questionId).filter(java.util.Objects::nonNull).toList();
+        if (ids.isEmpty()) {
+            return stored;
+        }
+        Map<Long, String> current = new HashMap<>();
+        questionRepository.findAllById(ids).forEach(q -> {
+            if (q.getTranscript() != null && !q.getTranscript().isBlank()) {
+                current.put(q.getId(), q.getTranscript());
+            }
+        });
+        List<ResultQuestion> questions = stored.questions().stream()
+                .map(q -> q.questionId() == null ? q : q.withTranscript(current.get(q.questionId()) != null ? current.get(q.questionId()) : q.transcript()))
+                .toList();
+        return new Result(stored.sessionId(), stored.mode(), stored.level(), stored.title(), stored.startedAt(),
+                stored.finishedAt(), stored.correct(), stored.total(), stored.unanswered(), stored.jlpt(), stored.byType(),
+                questions, stored.groups(), stored.listeningAudioUrl());
     }
 
     private Result storedResult(PracticeSession session) {

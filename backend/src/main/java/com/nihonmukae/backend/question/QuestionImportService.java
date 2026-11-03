@@ -169,12 +169,14 @@ public class QuestionImportService {
                 existing.setCorrect(item.getCorrect());
                 existing.setExplanation(item.getExplanation());
                 existing.setAudioUrl(blankToNull(item.getAudioUrl()));
+                applyTranscript(existing, item);
                 existing.setActive(true);
                 counters[0]++;
             } else if (overwrite) {
                 existing.setCorrect(item.getCorrect());
                 existing.setExplanation(item.getExplanation());
                 existing.setAudioUrl(blankToNull(item.getAudioUrl()));
+                applyTranscript(existing, item);
                 counters[3]++;
             } else {
                 counters[2]++;
@@ -192,6 +194,7 @@ public class QuestionImportService {
                 .options(item.getOptions().stream().map(String::trim).toList())
                 .correct(item.getCorrect())
                 .explanation(item.getExplanation())
+                .transcript(blankToNull(item.getTranscript()))
                 .source(source)
                 .contentHash(hash)
                 .active(true)
@@ -290,5 +293,12 @@ public class QuestionImportService {
 
     private static boolean notBlank(String s) {
         return s != null && !s.isBlank();
+    }
+
+    /** Chỉ ghi đè transcript khi file có cung cấp, để không xóa transcript đã sửa tay. */
+    private static void applyTranscript(Question question, ImportFile.Item item) {
+        if (notBlank(item.getTranscript())) {
+            question.setTranscript(item.getTranscript().trim());
+        }
     }
 }

@@ -16,6 +16,7 @@ public class ShelfService {
 
     private static final int MAX_TITLE_LENGTH = 60;
     private static final int EXCERPT_LENGTH = 120;
+    private static final int MAX_CONTENT_LENGTH = 20000;
 
     private final ShelfRepository shelfRepository;
     private final UserRepository userRepository;
@@ -49,6 +50,23 @@ public class ShelfService {
                 .title(resolveTitle(req.getTitle(), content))
                 .content(content)
                 .contentTokens(furiganaService.annotate(content))
+                .build();
+        return toDetail(shelfRepository.saveAndFlush(item));
+    }
+
+    /** Bài My Shelf dựng từ một phiên luyện thi: bản sao độc lập, không còn liên kết với kho câu hỏi. */
+    @Transactional
+    public ShelfItemResponse createFromPractice(UUID userId, UUID sessionId, String title, String content) {
+        if (content.length() > MAX_CONTENT_LENGTH) {
+            throw new IllegalArgumentException("Nội dung quá dài để lưu, hãy chỉ lưu câu sai hoặc từng câu");
+        }
+        ShelfItem item = ShelfItem.builder()
+                .user(userRepository.getReferenceById(userId))
+                .title(resolveTitle(title, content))
+                .content(content)
+                .contentTokens(furiganaService.annotate(content))
+                .sourceType("practice")
+                .sourceSessionId(sessionId)
                 .build();
         return toDetail(shelfRepository.saveAndFlush(item));
     }

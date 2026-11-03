@@ -56,6 +56,8 @@ public class ImportFile {
         private String explanation;
         @JsonAlias("audio_url")
         private String audioUrl;
+        // Bản chữ của câu nghe (tùy chọn), hiện sau khi nộp bài
+        private String transcript;
     }
 
     @Getter

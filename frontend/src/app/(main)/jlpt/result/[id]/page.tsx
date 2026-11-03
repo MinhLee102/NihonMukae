@@ -6,10 +6,11 @@ import { ChevronLeft, ChevronRight, RotateCcw, X } from "lucide-react";
 import { RequireAuth } from "@/components/flashcard/RequireAuth";
 import { AnswerSheet, type SheetCell } from "@/components/jlpt/AnswerSheet";
 import { QuestionPanel } from "@/components/jlpt/QuestionPanel";
+import { ResultSummary } from "@/components/jlpt/ResultSummary";
 import { SectionAudioReview } from "@/components/jlpt/ListeningAudio";
 import { useAuthStore } from "@/store/authStore";
 import { getApiErrorMessage } from "@/lib/api/flashcard";
-import { SECTION_LABELS, getResult, retrySession, stashSessionWarnings, type ResultDto } from "@/lib/api/jlpt";
+import { getResult, retrySession, stashSessionWarnings, type ResultDto } from "@/lib/api/jlpt";
 
 const SCORING_LABELS: Record<string, string> = {
   language: "Ngôn ngữ (chữ, từ, ngữ pháp)",
@@ -31,6 +32,7 @@ function ResultView() {
   const [current, setCurrent] = useState(1);
   const [error, setError] = useState<string | null>(null);
   const [retrying, setRetrying] = useState(false);
+  const [view, setView] = useState<"summary" | "review">("summary");
 
   useEffect(() => {
     if (!accessToken) return;
@@ -95,16 +97,44 @@ function ResultView() {
           <p className="truncate text-sm font-medium text-neutral-900">{result?.title ?? "Đang tải..."}</p>
           <p className="text-[10px] tracking-widest text-neutral-400">KẾT QUẢ VÀ ĐÁP ÁN</p>
         </div>
+        <nav className="ml-auto flex gap-1 rounded-full bg-[#F5F3EE] p-1 text-sm">
+          {(
+            [
+              ["summary", "Tổng kết"],
+              ["review", "Xem lại từng câu"],
+            ] as const
+          ).map(([id, label]) => (
+            <button
+              key={id}
+              type="button"
+              onClick={() => setView(id)}
+              className={`rounded-full px-4 py-1.5 transition ${
+                view === id ? "bg-neutral-900 text-white" : "text-neutral-500 hover:text-neutral-800"
+              }`}
+            >
+              {label}
+            </button>
+          ))}
+        </nav>
       </header>
 
       {error && <div className="shrink-0 bg-red-50 px-5 py-2.5 text-xs text-red-700">{error}</div>}
 
-      {result?.listeningAudioUrl && <SectionAudioReview url={result.listeningAudioUrl} />}
+      {result?.listeningAudioUrl && view === "review" && <SectionAudioReview url={result.listeningAudioUrl} />}
 
       <div className="flex min-h-0 flex-1">
         <main className="min-h-0 min-w-0 flex-1 bg-[#F5F3EE]">
           {!result && !error && <p className="py-24 text-center text-sm text-neutral-400">Đang tải...</p>}
-          {result && q && (
+          {result && view === "summary" && (
+            <ResultSummary
+              result={result}
+              onReview={(position) => {
+                setCurrent(position);
+                setView("review");
+              }}
+            />
+          )}
+          {result && q && view === "review" && (
             <QuestionPanel
               sectionAudio={!!result.listeningAudioUrl}
               splitKey="jlpt:split"
@@ -226,7 +256,10 @@ function ResultView() {
               <AnswerSheet
                 cells={cells}
                 current={current}
-                onJump={setCurrent}
+                onJump={(position) => {
+                  setCurrent(position);
+                  setView("review");
+                }}
                 legend={
                   <ul className="space-y-2 border-t border-black/5 pt-4 text-[11px] text-neutral-500">
                     <li className="flex items-center gap-2">
@@ -241,24 +274,6 @@ function ResultView() {
                   </ul>
                 }
               />
-
-              {result.byType.length > 0 && (
-                <div className="border-t border-black/5 pt-4">
-                  <p className="mb-2 text-[10px] tracking-widest text-neutral-400">THEO DẠNG BÀI</p>
-                  <ul className="space-y-1.5 text-xs">
-                    {result.byType.map((t) => (
-                      <li key={t.typeCode} className="flex items-center justify-between gap-3">
-                        <span className="min-w-0 truncate text-neutral-600">
-                          {SECTION_LABELS[t.section]?.vi} · {t.typeName}
-                        </span>
-                        <span className="shrink-0 font-medium text-neutral-800">
-                          {t.correct}/{t.total}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
 
               <div className="flex flex-col gap-2">
                 <button

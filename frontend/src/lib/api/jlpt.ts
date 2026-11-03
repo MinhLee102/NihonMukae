@@ -67,6 +67,14 @@ export interface StartPracticeInput {
   questionCount: number;
   timeLimitMin: number | null;
   feedbackMode: FeedbackMode;
+  /** Practice one whole listening set (random) instead of picking questions by type. */
+  listeningSet?: boolean;
+}
+
+export interface ListeningSetDto {
+  id: number;
+  title: string;
+  questionCount: number;
 }
 
 export interface StartExamInput {
@@ -237,6 +245,11 @@ export const getTests = async (level: number): Promise<TestSummaryDto[]> => {
 
 export const getBlueprint = async (level: number): Promise<BlueprintDto> => {
   const { data } = await apiClient.get<ApiResponse<BlueprintDto>>('/jlpt/blueprint', { params: { level } });
+  return data.data;
+};
+
+export const getListeningSets = async (level: number): Promise<ListeningSetDto[]> => {
+  const { data } = await apiClient.get<ApiResponse<ListeningSetDto[]>>('/jlpt/listening-sets', { params: { level } });
   return data.data;
 };
 

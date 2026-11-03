@@ -7,7 +7,7 @@ import { RequireAuth } from "@/components/flashcard/RequireAuth";
 import { AnswerSheet, type SheetCell } from "@/components/jlpt/AnswerSheet";
 import { ConfirmDialog } from "@/components/jlpt/ConfirmDialog";
 import { QuestionPanel } from "@/components/jlpt/QuestionPanel";
-import { SectionAudio } from "@/components/jlpt/ListeningAudio";
+import { SectionAudio, SectionAudioReview } from "@/components/jlpt/ListeningAudio";
 import { useAuthStore } from "@/store/authStore";
 import { getApiErrorMessage } from "@/lib/api/flashcard";
 import {
@@ -312,6 +312,7 @@ function Runner() {
         </div>
       )}
 
+      {!exam && activeBlock?.audioUrl && <SectionAudioReview url={activeBlock.audioUrl} />}
       {exam && activeBlock?.audioUrl && (
         <SectionAudio key={`${id}:${activeBlock.blockNo}`} url={activeBlock.audioUrl} progressKey={`${id}:${activeBlock.blockNo}`} />
       )}
@@ -344,6 +345,7 @@ function Runner() {
             <QuestionPanel
               splitKey="jlpt:split"
               audioMode={exam ? "exam" : "free"}
+              sectionAudio={!!activeBlock?.audioUrl}
               question={{
                 position: currentQuestion.position,
                 total: questions.length,

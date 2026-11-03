@@ -7,10 +7,12 @@ import { getApiErrorMessage } from "@/lib/api/flashcard";
 import {
   SECTION_LABELS,
   SECTION_ORDER,
+  getListeningSets,
   getQuestionTypes,
   startSession,
   stashSessionWarnings,
   type FeedbackMode,
+  type ListeningSetDto,
   type QuestionTypeDto,
   type Section,
 } from "@/lib/api/jlpt";
@@ -24,6 +26,8 @@ const DEFAULT_SECTIONS: Section[] = ["goi", "bunpou"];
 export function PracticeSetup({ initialLevel = 3 }: { initialLevel?: number }) {
   const router = useRouter();
   const [level, setLevel] = useState(initialLevel);
+  const [kind, setKind] = useState<"types" | "listening">("types");
+  const [sets, setSets] = useState<ListeningSetDto[]>([]);
   const [types, setTypes] = useState<QuestionTypeDto[]>([]);
   const [selected, setSelected] = useState<Set<number>>(new Set());
   const [expanded, setExpanded] = useState<Set<Section>>(new Set(DEFAULT_SECTIONS));
@@ -50,6 +54,22 @@ export function PracticeSetup({ initialLevel = 3 }: { initialLevel?: number }) {
       cancelled = true;
     };
   }, [level]);
+
+  useEffect(() => {
+    let cancelled = false;
+    getListeningSets(level)
+      .then((list) => !cancelled && setSets(list))
+      .catch(() => !cancelled && setSets([]));
+    return () => {
+      cancelled = true;
+    };
+  }, [level]);
+
+  const chooseKind = (next: "types" | "listening") => {
+    setKind(next);
+    // A listening set runs as long as the recording, so it starts without a time limit
+    setLimited(next === "types");
+  };
 
   const bySection = useMemo(() => {
     const map = new Map<Section, QuestionTypeDto[]>();
@@ -100,10 +120,11 @@ export function PracticeSetup({ initialLevel = 3 }: { initialLevel?: number }) {
       const session = await startSession({
         mode: "practice",
         level,
-        typeIds: Array.from(selected),
+        typeIds: kind === "types" ? Array.from(selected) : [],
         questionCount: count,
         timeLimitMin: limited ? minutes : null,
         feedbackMode: feedback,
+        listeningSet: kind === "listening",
       });
       stashSessionWarnings(session.id, session.warnings);
       router.push(`/jlpt/session/${session.id}`);
@@ -113,7 +134,8 @@ export function PracticeSetup({ initialLevel = 3 }: { initialLevel?: number }) {
     }
   };
 
-  const canStart = selected.size > 0 && availableTotal > 0 && !starting;
+  const canStart =
+    !starting && (kind === "listening" ? sets.length > 0 : selected.size > 0 && availableTotal > 0);
 
   return (
     <div className="grid grid-cols-1 gap-5 lg:grid-cols-[1fr_320px]">
@@ -134,10 +156,45 @@ export function PracticeSetup({ initialLevel = 3 }: { initialLevel?: number }) {
           ))}
         </div>
 
-        <p className="mb-3 mt-7 text-xs font-semibold text-neutral-900">2. Chọn một hoặc nhiều dạng bài</p>
-        {loading && <p className="py-6 text-sm text-neutral-400">Đang tải...</p>}
+        <p className="mb-3 mt-7 text-xs font-semibold text-neutral-900">2. Chọn cách luyện</p>
+        <div className="mb-4 grid grid-cols-2 gap-2">
+          {(
+            [
+              ["types", "Theo dạng bài"],
+              ["listening", "Nghe cả bộ đề"],
+            ] as const
+          ).map(([value, label]) => (
+            <button
+              key={value}
+              type="button"
+              onClick={() => chooseKind(value)}
+              className={`rounded-xl border py-2.5 text-sm font-medium transition ${
+                kind === value ? "border-neutral-900 bg-neutral-900 text-white" : "border-black/10 text-neutral-600 hover:border-black/30"
+              }`}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
 
-        <div className="flex flex-col gap-2.5">
+        {kind === "listening" && (
+          <div className="rounded-2xl border border-black/10 bg-[#F5F3EE] p-5 text-sm text-neutral-700">
+            <p className="font-medium text-neutral-900">Nghe nguyên một bộ đề, chọn ngẫu nhiên</p>
+            <p className="mt-1.5 text-xs leading-5 text-neutral-500">
+              Hệ thống bốc một đề nghe và cho bạn làm trọn phần nghe của đề đó với file ghi âm đi kèm, giống đề thật.
+              Khi luyện bạn có thể tua và nghe lại. Phần nghe không chia nhỏ từng câu được vì cả đề chung một file audio.
+            </p>
+            <p className={`mt-3 text-xs ${sets.length > 0 ? "text-neutral-500" : "text-amber-600"}`}>
+              {sets.length > 0
+                ? `Hiện có ${sets.length} bộ nghe ở N${level} (${sets.reduce((sum, s) => sum + s.questionCount, 0)} câu).`
+                : `Chưa có bộ nghe nào ở N${level}.`}
+            </p>
+          </div>
+        )}
+
+        {kind === "types" && loading && <p className="py-6 text-sm text-neutral-400">Đang tải...</p>}
+
+        <div className={`flex flex-col gap-2.5 ${kind === "types" ? "" : "hidden"}`}>
           {Array.from(bySection.entries()).map(([section, list]) => {
             const usable = list.filter((t) => t.available > 0);
             const chosen = list.filter((t) => selected.has(t.id)).length;
@@ -217,6 +274,8 @@ export function PracticeSetup({ initialLevel = 3 }: { initialLevel?: number }) {
       <div className="h-fit rounded-2xl border border-black/5 bg-white p-6 lg:sticky lg:top-0">
         <p className="mb-5 text-sm font-semibold text-neutral-900">Thiết lập phiên luyện</p>
 
+        {kind === "types" && (
+          <>
         <p className="mb-2 text-[10px] tracking-widest text-neutral-400">SỐ CÂU HỎI</p>
         <div className="flex items-center gap-2">
           <button
@@ -263,8 +322,10 @@ export function PracticeSetup({ initialLevel = 3 }: { initialLevel?: number }) {
           Kho có {availableTotal} câu cho các dạng đã chọn
           {count > availableTotal && availableTotal > 0 ? `, sẽ lấy tối đa ${availableTotal} câu` : ""}.
         </p>
+          </>
+        )}
 
-        <p className="mb-2 mt-6 text-[10px] tracking-widest text-neutral-400">THỜI GIAN</p>
+        <p className={`mb-2 text-[10px] tracking-widest text-neutral-400 ${kind === "types" ? "mt-6" : ""}`}>THỜI GIAN</p>
         <button
           type="button"
           onClick={() => setLimited((v) => !v)}
@@ -327,7 +388,7 @@ export function PracticeSetup({ initialLevel = 3 }: { initialLevel?: number }) {
           </div>
           <div className="flex justify-between">
             <dt className="text-neutral-400">Dạng bài</dt>
-            <dd className="font-medium text-neutral-800">{selected.size} mục</dd>
+            <dd className="font-medium text-neutral-800">{kind === "listening" ? "Cả bộ nghe" : `${selected.size} mục`}</dd>
           </div>
           <div className="flex justify-between">
             <dt className="text-neutral-400">Thời lượng</dt>

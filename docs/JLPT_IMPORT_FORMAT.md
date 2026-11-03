@@ -201,7 +201,7 @@ Hệ thống chỉ coi một câu là "đã có" khi **cùng đề** (hoặc cù
 ## Chuẩn bị dữ liệu cho một đề, theo thứ tự
 
 1. Với từng đề (ví dụ N3 tháng 12 năm 2021), gom: file PDF hoặc ảnh đề, **bảng đáp án**, một file audio của cả phần nghe, và nếu có thì **bản chép lời phần nghe (スクリプト)**. Đáp án phần nghe bắt buộc phải lấy từ bảng đáp án hoặc từ bản chép lời, vì AI không nghe được audio. Hầu hết nguồn đề (sách, trang luyện thi) đều có đáp án và script đi kèm.
-2. Nén audio nếu quá nặng (xem `docs/GOOGLE_DRIVE_SETUP.md`), đặt tên dễ nhớ như `n3_2021_12_listening.mp3`.
+2. Nén audio bằng `python scripts/jlpt/compress_audio.py file.mp3` (cần ffmpeg; mono 64 kbps, thường nhẹ hơn 4 đến 8 lần, tiết kiệm băng thông server), đặt tên dễ nhớ như `n3_2021_12_listening.mp3`.
 3. Nhờ AI chuyển đề sang JSON bằng đoạn yêu cầu ở cuối tài liệu này. Một đề nên làm thành **một file JSON** (đủ phần chữ Hán, từ vựng, ngữ pháp, đọc hiểu, nghe hiểu). AI sẽ trả thêm **danh sách ảnh cần cắt**.
 4. Cắt các ảnh theo danh sách đó (Win + Shift + S), lưu đúng tên file AI đã ghi trong JSON.
 5. Vào Admin, Ngân hàng đề, Import JSON, dán JSON, chọn kèm audio và các ảnh, bấm Kiểm tra. Sửa lỗi nếu có, rồi Lưu. Nếu hộp báo tên file ảnh nào lệch thì đổi tên file cho khớp JSON.

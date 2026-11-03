@@ -3,6 +3,7 @@ import { Sidebar } from "../../components/Sidebar";
 import { Header } from "../../components/Header";
 import { AuthModal } from '@/components/auth/AuthModal';
 import { AuthInitializer } from '@/components/auth/AuthInitializer';
+import { FeedbackDialog } from '@/components/FeedbackDialog';
 
 /**
  * Shared shell for every user-facing page (Dictionary, Flashcard, My Shelf,
@@ -18,6 +19,7 @@ export default function AppLayout({ children }: { children: ReactNode }) {
         <main className="flex-1 overflow-y-auto px-8 py-8">{children}</main>
       </div>
       <AuthModal />
+      <FeedbackDialog />
     </div>
   );
 }

@@ -3,11 +3,12 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { ChevronLeft, ChevronRight, ShieldCheck, User } from "lucide-react";
+import { ChevronLeft, ChevronRight, MessageSquarePlus, ShieldCheck, User } from "lucide-react";
 import { NAV_ITEMS } from "@/lib/navigation";
 import { useAuthStore } from "@/store/authStore";
 import { useAuthModalStore } from "@/store/authModalStore";
 import { useProfileStore } from "@/store/profileStore";
+import { useFeedbackStore } from "@/store/feedbackStore";
 
 /** App-wide sidebar. */
 export function Sidebar() {
@@ -20,6 +21,7 @@ export function Sidebar() {
   const profile = useProfileStore((s) => s.profile);
   const loadProfile = useProfileStore((s) => s.load);
   const clearProfile = useProfileStore((s) => s.clear);
+  const openFeedback = useFeedbackStore((s) => s.open);
 
   useEffect(() => {
     if (isAuthenticated) void loadProfile();
@@ -27,7 +29,8 @@ export function Sidebar() {
   }, [isAuthenticated, loadProfile, clearProfile]);
 
   const displayName = profile?.name ?? tokenUser?.email ?? "";
-  const isAdmin = (profile?.role ?? tokenUser?.role) === "ADMIN";
+  const userRole = profile?.role ?? tokenUser?.role;
+  const isAdmin = userRole === "ADMIN" || userRole === "MODERATOR";
 
   return (
     <aside
@@ -73,6 +76,20 @@ export function Sidebar() {
           );
         })}
       </nav>
+
+      <div className="px-3 pb-2">
+        <button
+          type="button"
+          onClick={() => openFeedback()}
+          title={collapsed ? "Góp ý" : undefined}
+          className={`flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-sm text-neutral-500 transition-colors hover:bg-black/5 hover:text-neutral-800 ${
+            collapsed ? "justify-center" : ""
+          }`}
+        >
+          <MessageSquarePlus size={18} strokeWidth={1.75} className="shrink-0" />
+          {!collapsed && <span className="truncate">Góp ý</span>}
+        </button>
+      </div>
 
       {/* User footer: opens the profile page, admins also get a shortcut to the console */}
       <div className="border-t border-black/5 px-3 py-4">

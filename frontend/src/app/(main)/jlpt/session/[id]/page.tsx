@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
+import { useFeedbackStore } from "@/store/feedbackStore";
 import { ChevronLeft, ChevronRight, Clock, Infinity as InfinityIcon, X } from "lucide-react";
 import { RequireAuth } from "@/components/flashcard/RequireAuth";
 import { AnswerSheet, type SheetCell } from "@/components/jlpt/AnswerSheet";
@@ -33,6 +34,7 @@ function formatClock(ms: number): string {
 function Runner() {
   const { id } = useParams<{ id: string }>();
   const router = useRouter();
+  const openFeedback = useFeedbackStore((s) => s.open);
   const accessToken = useAuthStore((s) => s.accessToken);
 
   const [view, setView] = useState<SessionViewDto | null>(null);
@@ -367,6 +369,13 @@ function Runner() {
               onSelect={choose}
               flagged={flags.has(currentQuestion.position)}
               onToggleFlag={() => toggleFlag(currentQuestion.position)}
+              onReport={() =>
+                openFeedback({
+                  category: "exam_error",
+                  context: { questionId: currentQuestion.questionId, sessionId: id },
+                  hint: `Báo lỗi câu ${currentQuestion.position}. Mô tả chỗ sai (đáp án, nội dung, audio...).`,
+                })
+              }
               footer={
                 <div className="flex items-center justify-between">
                   <button

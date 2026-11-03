@@ -9,6 +9,7 @@ import { QuestionPanel } from "@/components/jlpt/QuestionPanel";
 import { ResultSummary } from "@/components/jlpt/ResultSummary";
 import { SectionAudioReview } from "@/components/jlpt/ListeningAudio";
 import { useAuthStore } from "@/store/authStore";
+import { useFeedbackStore } from "@/store/feedbackStore";
 import { getApiErrorMessage } from "@/lib/api/flashcard";
 import { getResult, retrySession, stashSessionWarnings, type ResultDto } from "@/lib/api/jlpt";
 
@@ -26,6 +27,7 @@ function formatScore(n: number): string {
 function ResultView() {
   const { id } = useParams<{ id: string }>();
   const router = useRouter();
+  const openFeedback = useFeedbackStore((s) => s.open);
   const accessToken = useAuthStore((s) => s.accessToken);
 
   const [result, setResult] = useState<ResultDto | null>(null);
@@ -156,6 +158,13 @@ function ResultView() {
               }}
               group={group}
               disabled
+              onReport={() =>
+                openFeedback({
+                  category: "exam_error",
+                  context: { questionId: q.questionId, sessionId: id },
+                  hint: `Báo lỗi câu ${q.position}. Mô tả chỗ sai (đáp án, nội dung, audio...).`,
+                })
+              }
               footer={
                 <div className="flex items-center justify-between">
                   <button

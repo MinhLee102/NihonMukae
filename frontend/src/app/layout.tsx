@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Noto_Serif, Noto_Serif_JP } from "next/font/google";
+import "@fontsource/noto-serif/latin-400.css";
+import "@fontsource/noto-serif/latin-600.css";
+import "@fontsource/noto-serif/latin-700.css";
+import "@fontsource/noto-serif/vietnamese-400.css";
+import "@fontsource/noto-serif/vietnamese-600.css";
+import "@fontsource/noto-serif/vietnamese-700.css";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -14,21 +19,8 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-// Headings use a serif. Noto Serif carries the full Vietnamese diacritics (the system serif drew them detached);
-// Noto Serif JP supplies the kanji and kana, the browser picks per character.
-const notoSerif = Noto_Serif({
-  subsets: ["latin", "vietnamese"],
-  weight: ["400", "600", "700"],
-  variable: "--font-noto-serif",
-  display: "swap",
-});
-const notoSerifJp = Noto_Serif_JP({
-  weight: ["400", "600", "700"],
-  variable: "--font-noto-serif-jp",
-  display: "swap",
-  preload: false,
-});
-
+// Headings use Noto Serif, bundled from npm (no network at build time) with the Vietnamese subset so stacked
+// diacritics render correctly. Kanji and kana fall back to the system Japanese serif (see tailwind.config.ts).
 export const metadata: Metadata = {
   title: "Nihon Mukae",
   description: "Japanese learning platform",
@@ -42,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="vi" className="h-full">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${notoSerif.variable} ${notoSerifJp.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>

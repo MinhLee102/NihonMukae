@@ -58,31 +58,31 @@ Nhóm phải có ít nhất một trong `passage`, `audio_url`, `image_url`.
 
 ## Mã dạng bài (`type`)
 
-| Mã | Phần thi | Tên | Dạng nhóm |
-|---|---|---|---|
-| `kanji_reading` | 文字 | Đọc Hán tự | không |
-| `orthography` | 文字 | Viết Hán tự | không |
-| `word_formation` | 文字 | Tiền tố, hậu tố | không |
-| `context_word` | 語彙 | Chọn từ theo ngữ cảnh | không |
-| `synonym` | 語彙 | Từ đồng nghĩa | không |
-| `word_usage` | 語彙 | Cách dùng từ | không |
-| `grammar_choice` | 文法 | Chọn ngữ pháp | không |
-| `grammar_ordering` | 文法 | Sắp xếp câu (câu có ★) | không |
-| `grammar_text` | 文法 | Ngữ pháp đoạn văn | **có** |
-| `reading_short` | 読解 | Đoản văn | **có** |
-| `reading_medium` | 読解 | Trung văn | **có** |
-| `reading_long` | 読解 | Trường văn, hiểu nội dung | **có** |
-| `reading_integrated` | 読解 | Bài so sánh A và B | **có** |
-| `reading_argument` | 読解 | Trường văn, hiểu luận điểm | **có** |
-| `info_search` | 読解 | Tìm kiếm thông tin | **có** |
-| `listen_task` | 聴解 | Hiểu đề bài | không |
-| `listen_point` | 聴解 | Hiểu điểm chính | không |
-| `listen_overview` | 聴解 | Hiểu bao quát | không |
-| `listen_expression` | 聴解 | Diễn đạt bằng lời nói (3 đáp án) | không |
-| `listen_quick` | 聴解 | Phản hồi tức thì (3 đáp án) | không |
-| `listen_integrated` | 聴解 | Hiểu tổng hợp | **có** |
+| Mã | Phần thi | Tên | Dạng nhóm | Level |
+|---|---|---|---|---|
+| `kanji_reading` | 文字 | Đọc Hán tự | không | N5 đến N1 |
+| `orthography` | 文字 | Viết Hán tự | không | N5 đến N2 |
+| `word_formation` | 文字 | Tiền tố, hậu tố | không | N2 |
+| `context_word` | 語彙 | Chọn từ theo ngữ cảnh | không | N5 đến N1 |
+| `synonym` | 語彙 | Từ đồng nghĩa | không | N5 đến N1 |
+| `word_usage` | 語彙 | Cách dùng từ | không | N4 đến N1 |
+| `grammar_choice` | 文法 | Chọn ngữ pháp | không | N5 đến N1 |
+| `grammar_ordering` | 文法 | Sắp xếp câu (câu có ★) | không | N5 đến N1 |
+| `grammar_text` | 文法 | Ngữ pháp đoạn văn | **có** | N5 đến N1 |
+| `reading_short` | 読解 | Đoản văn | **có** | N5 đến N1 |
+| `reading_medium` | 読解 | Trung văn | **có** | N5 đến N1 |
+| `reading_long` | 読解 | Trường văn, hiểu nội dung | **có** | N3, N1 |
+| `reading_integrated` | 読解 | Bài so sánh A và B | **có** | N2, N1 |
+| `reading_argument` | 読解 | Trường văn, hiểu luận điểm | **có** | N2, N1 |
+| `info_search` | 読解 | Tìm kiếm thông tin | **có** | N5 đến N1 |
+| `listen_task` | 聴解 | Hiểu đề bài | không | N5 đến N1 |
+| `listen_point` | 聴解 | Hiểu điểm chính | không | N5 đến N1 |
+| `listen_overview` | 聴解 | Hiểu bao quát | không | N3 đến N1 |
+| `listen_expression` | 聴解 | Diễn đạt bằng lời nói (3 đáp án) | không | N5 đến N3 |
+| `listen_quick` | 聴解 | Phản hồi tức thì (3 đáp án) | không | N5 đến N1 |
+| `listen_integrated` | 聴解 | Hiểu tổng hợp | **có** | N2, N1 |
 
-Một dạng chỉ áp dụng cho một số level (ví dụ N5 không có `reading_argument`). Dạng sai level sẽ báo lỗi `không áp dụng cho N...`.
+Cột Level cho biết dạng đó có ở level nào (ví dụ N3 có `reading_long` là 長文 nhưng không có `reading_argument`). Dùng sai level sẽ báo lỗi `không áp dụng cho N...`.
 
 Dạng nhóm thì viết trong `groups`, dạng không nhóm thì viết trong `questions` (câu nghe có `audio_url` riêng ngay trong câu).
 
@@ -264,6 +264,8 @@ MỖI CÂU
 "type" CHỈ DÙNG CÁC MÃ
 kanji_reading, orthography, word_formation, context_word, synonym, word_usage, grammar_choice, grammar_ordering, grammar_text, reading_short, reading_medium, reading_long, reading_integrated, reading_argument, info_search, listen_task, listen_point, listen_overview, listen_expression, listen_quick, listen_integrated.
 Các dạng nhóm (grammar_text, reading_*, info_search, listen_integrated) bắt buộc đặt trong "groups".
+Chọn "type" cho phần 読解 theo tên 問題 trong đề: 内容理解(短文) là reading_short, 内容理解(中文) là reading_medium, 内容理解(長文) là reading_long (chỉ N3 và N1), 統合理解 là reading_integrated (N2, N1), 主張理解(長文) là reading_argument (N2, N1), 情報検索 là info_search. N3 KHÔNG có reading_argument.
+Phần 聴解: 課題理解 là listen_task, ポイント理解 là listen_point, 概要理解 là listen_overview (N3 trở lên), 発話表現 là listen_expression (N3 trở xuống), 即時応答 là listen_quick, 統合理解 là listen_integrated (N2, N1).
 
 ĐỊNH DẠNG BÀI ĐỌC (trong "passage", chỉ dùng các ký hiệu này, KHÔNG dùng HTML hay Markdown khác)
 - **chữ** để in đậm, <u>chữ</u> để gạch chân.

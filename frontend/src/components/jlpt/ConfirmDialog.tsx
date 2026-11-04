@@ -27,7 +27,7 @@ export function ConfirmDialog({
   }, [onCancel]);
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 px-4" onClick={onCancel}>
+    <div className="absolute inset-0 z-50 flex items-center justify-center bg-black/30 px-4" onClick={onCancel}>
       <div
         role="dialog"
         aria-modal="true"

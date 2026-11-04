@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { useFeedbackStore } from "@/store/feedbackStore";
-import { ChevronLeft, ChevronRight, Clock, Infinity as InfinityIcon, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, Clock, Infinity as InfinityIcon, PanelRightClose, PanelRightOpen, X } from "lucide-react";
 import { RequireAuth } from "@/components/flashcard/RequireAuth";
 import { AnswerSheet, type SheetCell } from "@/components/jlpt/AnswerSheet";
 import { ConfirmDialog } from "@/components/jlpt/ConfirmDialog";
@@ -31,6 +31,20 @@ function formatClock(ms: number): string {
   return `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
 }
 
+const LEGEND = (
+  <ul className="mt-2 space-y-2 border-t border-black/5 pt-4 text-[11px] text-neutral-500">
+    <li className="flex items-center gap-2">
+      <span className="h-3.5 w-3.5 rounded border border-black/10 bg-[#E8E3D6]" /> Đã trả lời
+    </li>
+    <li className="flex items-center gap-2">
+      <span className="h-3.5 w-3.5 rounded border border-black/10 bg-white" /> Chưa trả lời
+    </li>
+    <li className="flex items-center gap-2">
+      <span className="h-2.5 w-2.5 rounded-full bg-amber-400" /> Đã đánh dấu
+    </li>
+  </ul>
+);
+
 function Runner() {
   const { id } = useParams<{ id: string }>();
   const router = useRouter();
@@ -46,10 +60,29 @@ function Runner() {
   const [error, setError] = useState<string | null>(null);
   const [dialog, setDialog] = useState<"submit" | "exit" | null>(null);
   const [busy, setBusy] = useState(false);
+  const [sheetOpen, setSheetOpen] = useState(true);
   const handledExpiry = useRef<number | null>(null);
   const finalising = useRef(false);
 
   const flagsKey = `jlpt:flags:${id}`;
+
+  useEffect(() => {
+    try {
+      if (localStorage.getItem("jlpt:sheet") === "closed") setSheetOpen(false);
+    } catch {
+      // storage unavailable: the sheet just stays open
+    }
+  }, []);
+
+  const toggleSheet = () =>
+    setSheetOpen((open) => {
+      try {
+        localStorage.setItem("jlpt:sheet", open ? "closed" : "open");
+      } catch {
+        // ignore
+      }
+      return !open;
+    });
 
   const apply = useCallback(
     (next: SessionViewDto) => {
@@ -387,49 +420,75 @@ function Runner() {
                     <ChevronLeft size={14} />
                     Câu trước
                   </button>
-                  <button
-                    type="button"
-                    onClick={() => go(1)}
-                    disabled={openPositions.indexOf(currentQuestion.position) >= openPositions.length - 1}
-                    className="flex items-center gap-1 rounded-full bg-neutral-900 px-5 py-2.5 text-sm font-medium text-white disabled:opacity-40"
-                  >
-                    Câu tiếp theo
-                    <ChevronRight size={14} />
-                  </button>
+                  {openPositions.indexOf(currentQuestion.position) >= openPositions.length - 1 ? (
+                    <button
+                      type="button"
+                      onClick={() => setDialog("submit")}
+                      disabled={busy}
+                      className="flex items-center gap-1 rounded-full bg-neutral-900 px-6 py-2.5 text-sm font-medium text-white disabled:opacity-40"
+                    >
+                      {submitLabel}
+                    </button>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => go(1)}
+                      className="flex items-center gap-1 rounded-full bg-neutral-900 px-5 py-2.5 text-sm font-medium text-white"
+                    >
+                      Câu tiếp theo
+                      <ChevronRight size={14} />
+                    </button>
+                  )}
                 </div>
               }
             />
           )}
         </main>
 
-        <aside className="hidden w-[300px] shrink-0 overflow-y-auto border-l border-black/5 bg-white p-5 lg:block">
-          <AnswerSheet
-            cells={cells}
-            current={current}
-            onJump={setCurrent}
-            header={
-              <div>
-                <p className="text-sm font-semibold text-neutral-900">Phiếu trả lời</p>
-                <p className="mt-0.5 text-[11px] text-neutral-400">
-                  {answeredCount}/{questions.length} câu đã chọn
-                </p>
-              </div>
-            }
-            legend={
-              <ul className="mt-2 space-y-2 border-t border-black/5 pt-4 text-[11px] text-neutral-500">
-                <li className="flex items-center gap-2">
-                  <span className="h-3.5 w-3.5 rounded border border-black/10 bg-[#E8E3D6]" /> Đã trả lời
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="h-3.5 w-3.5 rounded border border-black/10 bg-white" /> Chưa trả lời
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="h-2.5 w-2.5 rounded-full bg-amber-400" /> Đã đánh dấu
-                </li>
-              </ul>
-            }
-          />
-        </aside>
+        {sheetOpen ? (
+          <aside className="hidden w-[260px] shrink-0 overflow-y-auto border-l border-black/5 bg-white p-4 lg:block">
+            <AnswerSheet
+              cells={cells}
+              current={current}
+              onJump={setCurrent}
+              header={
+                <div className="flex items-start justify-between gap-2">
+                  <div>
+                    <p className="text-sm font-semibold text-neutral-900">Phiếu trả lời</p>
+                    <p className="mt-0.5 text-[11px] text-neutral-400">
+                      {answeredCount}/{questions.length} câu đã chọn
+                    </p>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={toggleSheet}
+                    aria-label="Thu nhỏ phiếu trả lời"
+                    title="Thu nhỏ phiếu trả lời"
+                    className="rounded-full p-1.5 text-neutral-400 hover:bg-neutral-100 hover:text-neutral-700"
+                  >
+                    <PanelRightClose size={16} />
+                  </button>
+                </div>
+              }
+              legend={LEGEND}
+            />
+          </aside>
+        ) : (
+          <aside className="hidden w-12 shrink-0 flex-col items-center gap-3 border-l border-black/5 bg-white py-4 lg:flex">
+            <button
+              type="button"
+              onClick={toggleSheet}
+              aria-label="Mở phiếu trả lời"
+              title="Mở phiếu trả lời"
+              className="rounded-full p-1.5 text-neutral-400 hover:bg-neutral-100 hover:text-neutral-700"
+            >
+              <PanelRightOpen size={16} />
+            </button>
+            <span className="text-[11px] tabular-nums text-neutral-500">
+              {answeredCount}/{questions.length}
+            </span>
+          </aside>
+        )}
       </div>
 
       {dialog === "submit" && (

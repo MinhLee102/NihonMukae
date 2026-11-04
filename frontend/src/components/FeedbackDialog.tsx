@@ -62,7 +62,7 @@ export function FeedbackDialog() {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 p-4" onClick={close}>
+    <div className="absolute inset-0 z-50 flex items-center justify-center bg-black/30 p-4" onClick={close}>
       <div
         role="dialog"
         aria-modal="true"

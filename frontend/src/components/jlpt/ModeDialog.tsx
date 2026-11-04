@@ -33,7 +33,7 @@ export function ModeDialog({ onSelect, onClose }: { onSelect: (mode: JlptMode) =
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4"
+      className="absolute inset-0 z-50 flex items-center justify-center bg-black/60 px-4"
       // Blur the page behind; set inline so it does not depend on the generated Tailwind CSS being fresh
       style={{ backdropFilter: "blur(6px)", WebkitBackdropFilter: "blur(6px)" }}
       onClick={onClose}

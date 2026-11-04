@@ -41,7 +41,7 @@ export function DeckFormModal({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 px-4">
+    <div className="absolute inset-0 z-50 flex items-center justify-center bg-black/30 px-4">
       <form onSubmit={submit} className="w-full max-w-md rounded-2xl bg-white p-6 shadow-xl">
         <div className="mb-4 flex items-center justify-between">
           <h2 className="text-lg font-semibold text-neutral-900">{deck ? "Sửa bộ" : "Tạo bộ mới"}</h2>

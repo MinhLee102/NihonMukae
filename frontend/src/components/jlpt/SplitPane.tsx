@@ -80,7 +80,7 @@ export function SplitPane({
       className="flex h-full min-h-0 flex-col md:grid"
       style={{ gridTemplateColumns: `${ratio * 100}% 10px minmax(0, 1fr)` }}
     >
-      <div className="min-h-0 min-w-0 overflow-y-auto">{left}</div>
+      <div data-scroll="left" className="min-h-0 min-w-0 overflow-y-auto">{left}</div>
       <div
         role="separator"
         aria-orientation="vertical"
@@ -125,7 +125,7 @@ export function SplitPane({
           }`}
         />
       </div>
-      <div className="min-h-0 min-w-0 overflow-y-auto">{right}</div>
+      <div data-scroll="right" className="min-h-0 min-w-0 overflow-y-auto">{right}</div>
     </div>
   );
 }

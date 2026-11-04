@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { Check, Flag, X } from "lucide-react";
 import { FormattedText } from "@/components/jlpt/FormattedText";
 import { SplitPane } from "@/components/jlpt/SplitPane";
@@ -111,15 +111,15 @@ function stripListenPlaceholder(text: string): string {
 /** "問題 N" with a rule under it, then the instruction shared by every question of the type. */
 function InstructionHeader({ no, ja, vi }: { no?: number; ja: string; vi?: string }) {
   return (
-    <div className="shrink-0 border-b border-black/5 px-6 pb-5 pt-6">
+    <div className="shrink-0 border-b border-black/5 px-6 pb-3 pt-4">
       <div className="mx-auto max-w-5xl">
         {no !== undefined && (
-          <p className="border-b-2 border-neutral-900 pb-1 text-2xl font-medium text-neutral-900">問題{no}</p>
+          <p className="border-b-2 border-neutral-900 pb-0.5 text-lg font-medium text-neutral-900">問題{no}</p>
         )}
-        <p className="mt-4 text-xl font-medium leading-9 text-neutral-900">
+        <p className="mt-2.5 text-base font-medium leading-7 text-neutral-900">
           <InstructionText text={ja} />
         </p>
-        {vi && <p className="mt-1.5 text-sm text-neutral-500">{vi}</p>}
+        {vi && <p className="mt-1 text-xs text-neutral-500">{vi}</p>}
       </div>
     </div>
   );
@@ -188,6 +188,15 @@ export function QuestionPanel({
   // The instruction above already says "listen to the question first", so the placeholder line is dropped
   const promptText = isListening && question.instructionJa ? stripListenPlaceholder(question.question) : question.question;
   const imageOptions = question.options.length > 0 && question.options.every((o) => /^\s*\[\[img:[^\]]+\]\]\s*$/.test(o));
+
+  // A new question starts at its top; the passage only rewinds when the passage itself changes
+  const rootRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    rootRef.current?.querySelectorAll<HTMLElement>('[data-scroll="right"]').forEach((el) => (el.scrollTop = 0));
+  }, [question.position]);
+  useEffect(() => {
+    rootRef.current?.querySelectorAll<HTMLElement>('[data-scroll="left"]').forEach((el) => (el.scrollTop = 0));
+  }, [group?.id]);
 
   const body = (
     <div className="mx-auto flex w-full max-w-3xl flex-col px-6 py-6">
@@ -305,7 +314,7 @@ export function QuestionPanel({
 
   const hasGroup = group && (group.passage || group.imageUrl || group.audioUrl);
   return (
-    <div className="flex h-full min-h-0 flex-col">
+    <div ref={rootRef} className="flex h-full min-h-0 flex-col">
       {question.instructionJa && (
         <InstructionHeader no={question.mondaiNo} ja={question.instructionJa} vi={question.instructionVi} />
       )}
@@ -313,7 +322,7 @@ export function QuestionPanel({
         {hasGroup && group ? (
           <SplitPane storageKey={splitKey} left={<GroupContent group={group} audioMode={audioMode} />} right={body} />
         ) : (
-          <div className="h-full overflow-y-auto">{body}</div>
+          <div data-scroll="right" className="h-full overflow-y-auto">{body}</div>
         )}
       </div>
     </div>

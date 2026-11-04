@@ -20,6 +20,15 @@ const CELL_STYLE: Record<CellState, string> = {
   skipped: "border-black/10 bg-white text-neutral-400 hover:border-black/30",
 };
 
+/** The open question keeps its state colour, only deeper, so a reviewer still sees right from wrong. */
+const CURRENT_STYLE: Record<CellState, string> = {
+  unanswered: "border-neutral-900 bg-neutral-900 text-white",
+  answered: "border-neutral-900 bg-neutral-900 text-white",
+  correct: "border-emerald-700 bg-emerald-600 text-white",
+  wrong: "border-red-700 bg-red-600 text-white",
+  skipped: "border-neutral-900 bg-neutral-900 text-white",
+};
+
 /** Grid of question numbers. Used as the answer sheet while working and as the result map afterwards. */
 export function AnswerSheet({
   cells,
@@ -48,8 +57,8 @@ export function AnswerSheet({
               onClick={() => onJump(cell.position)}
               aria-label={`Câu ${cell.position}`}
               aria-current={isCurrent ? "true" : undefined}
-              className={`relative flex h-11 items-center justify-center rounded-xl border text-xs font-medium transition disabled:cursor-not-allowed disabled:opacity-40 ${
-                isCurrent ? "border-neutral-900 bg-neutral-900 text-white" : CELL_STYLE[cell.state]
+              className={`relative flex h-10 items-center justify-center rounded-xl border text-xs font-medium transition disabled:cursor-not-allowed disabled:opacity-40 ${
+                isCurrent ? CURRENT_STYLE[cell.state] : CELL_STYLE[cell.state]
               }`}
             >
               {cell.position}

@@ -9,7 +9,6 @@ từ nào đã có kết quả Gemini thì có thêm nghĩa tiếng Việt, Hán
 """
 import argparse
 import glob
-import json
 import os
 import sys
 
@@ -18,7 +17,7 @@ from psycopg2.extras import Json, execute_values
 
 sys.path.insert(0, os.path.dirname(__file__))
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from hanviet import HanViet  # noqa: E402
+from hanviet import HanViet, read_json_array  # noqa: E402
 from prepare import RESULTS, ROOT, SOURCES, headword, pos_label, select  # noqa: E402
 import config  # noqa: E402  (scripts/jmdict/config.py: DB_URL)
 
@@ -27,9 +26,11 @@ def load_results(prefix):
     """Gộp W001.json, W001_retry.json... thành {id hoặc chữ kanji: mục}. Kết quả sau ghi đè kết quả trước."""
     merged = {}
     for path in sorted(glob.glob(os.path.join(RESULTS, f"{prefix}*.json"))):
-        with open(path, encoding="utf-8") as f:
-            for item in json.load(f):
-                merged[item["id" if prefix == "W" else "k"]] = item
+        # File còn trống (tạo sẵn để dán dần) hoặc chưa qua check.py thì bỏ qua
+        for item in read_json_array(path):
+            key = item.get("id" if prefix == "W" else "k") if isinstance(item, dict) else None
+            if key is not None and ("m" in item or prefix == "K"):
+                merged[key] = item
     return merged
 
 

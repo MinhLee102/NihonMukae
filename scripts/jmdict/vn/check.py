@@ -173,8 +173,9 @@ def check(name, hv):
 
 
 def main():
+    # Không chỉ định batch thì bỏ qua các file còn trống (tạo sẵn để dán dần)
     names = sys.argv[1:] or sorted(os.path.splitext(os.path.basename(p))[0]
-                                   for p in glob.glob(os.path.join(RESULTS, "*.json")))
+                                   for p in glob.glob(os.path.join(RESULTS, "*.json")) if os.path.getsize(p) > 0)
     if not names:
         print(f"Chưa có kết quả nào trong {RESULTS}")
         return

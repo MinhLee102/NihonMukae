@@ -18,6 +18,19 @@ def is_kanji(ch):
     return ch == "々" or "CJK UNIFIED IDEOGRAPH" in unicodedata.name(ch, "")
 
 
+TONE_MARKS = {"̀", "́", "̃", "̉", "̣"}  # huyền, sắc, ngã, hỏi, nặng
+
+
+def reading_key(syllable):
+    """Bỏ khác biệt chính tả để so âm: vị trí dấu thanh (thủy/thuỷ, hóa/hoá) và i/y cuối (lý/lí)."""
+    decomposed = unicodedata.normalize("NFD", syllable.strip().lower())
+    tones = "".join(c for c in decomposed if c in TONE_MARKS)
+    base = unicodedata.normalize("NFC", "".join(c for c in decomposed if c not in TONE_MARKS))
+    if base.endswith("y") and not base.endswith(("uy", "ay", "ây")):
+        base = base[:-1] + "i"
+    return base + tones
+
+
 def _parse_unihan(path, fields):
     out = {}
     if not os.path.exists(path):

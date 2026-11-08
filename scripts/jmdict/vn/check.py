@@ -18,7 +18,7 @@ import re
 import sys
 
 sys.path.insert(0, os.path.dirname(__file__))
-from hanviet import HanViet, is_kanji  # noqa: E402
+from hanviet import HanViet, is_kanji, reading_key  # noqa: E402
 from prepare import RESULTS, SOURCES, WORK, read_prompt  # noqa: E402
 
 SYLLABLE = re.compile(r"^[a-zàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]+$")
@@ -64,7 +64,7 @@ def check_kanji(batch, answer, hv, problems, warnings):
             problems.append((item, f"hv không hợp lệ: {readings!r}"))
             continue
         uni = hv.unihan(item["k"])
-        if uni and readings and not set(r.lower() for r in readings) & set(uni):
+        if uni and readings and not {reading_key(r) for r in readings} & {reading_key(u) for u in uni}:
             warnings.append(f"{item['k']}: hv {readings} không trùng Unihan {uni}")
         good.append({"k": item["k"], "hv": [r.strip().lower() for r in readings], "nghia": a.get("nghia", "")})
     return good
@@ -105,7 +105,7 @@ def check_words(batch, answer, hv, problems, warnings):
                 kanji_chars = [ch for ch in item.get("kanji") or item["w"] if is_kanji(ch) and ch != "々"]
                 for ch, s in zip(kanji_chars, syllables):
                     uni = hv.unihan(ch)
-                    if uni and s not in uni:
+                    if uni and reading_key(s) not in {reading_key(u) for u in uni}:
                         warnings.append(f"{item['w']}: âm \"{s}\" của {ch} khác Unihan {uni}")
 
         targets = stems(item)

@@ -29,6 +29,8 @@ def load_answer(path):
     """Đọc mảng JSON từ câu trả lời; bỏ ```json và chữ thừa quanh mảng."""
     with open(path, encoding="utf-8-sig") as f:
         text = f.read()
+    if not text.strip():
+        raise ValueError("file trống, câu trả lời chưa được lưu vào file")
     start, end = text.find("["), text.rfind("]")
     if start < 0 or end < start:
         raise ValueError("không thấy mảng JSON")

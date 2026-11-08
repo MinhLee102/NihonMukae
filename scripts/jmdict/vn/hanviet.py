@@ -18,6 +18,19 @@ def is_kanji(ch):
     return ch == "々" or "CJK UNIFIED IDEOGRAPH" in unicodedata.name(ch, "")
 
 
+def read_json_array(path):
+    """Mảng JSON trong file kết quả, bỏ ```json và chữ thừa quanh mảng. File trống hay hỏng trả về [] để
+    check.py báo lỗi cho đúng batch đó thay vì dừng cả chương trình."""
+    try:
+        with open(path, encoding="utf-8-sig") as f:
+            text = f.read()
+        start, end = text.find("["), text.rfind("]")
+        data = json.loads(text[start:end + 1]) if 0 <= start < end else []
+        return data if isinstance(data, list) else []
+    except (OSError, ValueError):
+        return []
+
+
 TONE_MARKS = {"̀", "́", "̃", "̉", "̣"}  # huyền, sắc, ngã, hỏi, nặng
 
 
@@ -62,11 +75,12 @@ class HanViet:
         self.table = {}
         if results_dir:
             for path in sorted(glob.glob(os.path.join(results_dir, "K*.json"))):
-                with open(path, encoding="utf-8") as f:
-                    for item in json.load(f):
-                        readings = [r.strip().lower() for r in item.get("hv", []) if r.strip()]
-                        if readings:
-                            self.table[item["k"]] = readings
+                for item in read_json_array(path):
+                    if not isinstance(item, dict) or "k" not in item:
+                        continue
+                    readings = [r.strip().lower() for r in item.get("hv", []) if r.strip()]
+                    if readings:
+                        self.table[item["k"]] = readings
 
     def unihan(self, ch):
         """Âm theo Unihan của chữ hoặc các biến thể (経 -> 經 -> kinh). Danh sách rỗng nếu không có."""

@@ -22,7 +22,9 @@ from hanviet import HanViet, is_kanji, reading_key  # noqa: E402
 from prepare import RESULTS, SOURCES, WORK, read_prompt  # noqa: E402
 
 SYLLABLE = re.compile(r"^[a-zàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]+$")
-ENGLISH_WORD = re.compile(r"\b(the|of|to|and|or|with|for|something|someone)\b", re.I)
+# "to", "or" cũng là chữ tiếng Việt (phóng to), nên không đưa vào
+ENGLISH_WORD = re.compile(r"\b(the|of|and|with|for|something|someone|somebody)\b", re.I)
+FULLWIDTH_DIGITS = str.maketrans("０１２３４５６７８９", "〇一二三四五六七八九")
 
 
 def load_answer(path):
@@ -45,6 +47,7 @@ def stems(item):
     out = set()
     for form in filter(None, [item.get("w"), item.get("kanji"), item.get("r")]):
         out.add(form)
+        out.add(form.translate(FULLWIDTH_DIGITS))  # １月 -> 一月
         if len(form) >= 2:
             out.add(form[:-1])  # 食べる -> 食べ, 高い -> 高
         lead = re.match(r"^[^\u3040-\u309f]+", form)

@@ -20,3 +20,7 @@ scripts/jmdict/JMdict_e.xml
 
 # Local copy of the production env
 .env.prod
+
+# JMdict Vietnamese pipeline: downloaded sources and generated batches stay local
+scripts/jmdict/sources/
+scripts/jmdict/work/

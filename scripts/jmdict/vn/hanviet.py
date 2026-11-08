@@ -73,6 +73,8 @@ class HanViet:
             for k, vs in _parse_unihan(os.path.join(sources_dir, "Unihan_Variants.txt"), set(VARIANT_FIELDS)).items()
         }
         self.table = {}
+        # Chữ đã có trong bảng nhưng không có âm Hán Việt (chữ Nhật tự tạo như 込, 畑): bỏ qua khi ghép âm của từ
+        self.no_reading = set()
         if results_dir:
             for path in sorted(glob.glob(os.path.join(results_dir, "K*.json"))):
                 for item in read_json_array(path):
@@ -81,6 +83,16 @@ class HanViet:
                     readings = [r.strip().lower() for r in item.get("hv", []) if r.strip()]
                     if readings:
                         self.table[item["k"]] = readings
+                        self.no_reading.discard(item["k"])
+                    elif item["k"] not in self.table:
+                        self.no_reading.add(item["k"])
+        overrides = os.path.join(os.path.dirname(os.path.abspath(__file__)), "hanviet_overrides.json")
+        if os.path.exists(overrides):
+            with open(overrides, encoding="utf-8") as f:
+                for k, readings in json.load(f).items():
+                    if not k.startswith("_"):
+                        self.table[k] = readings
+                        self.no_reading.discard(k)
 
     def unihan(self, ch):
         """Âm theo Unihan của chữ hoặc các biến thể (経 -> 經 -> kinh). Danh sách rỗng nếu không có."""
@@ -92,13 +104,13 @@ class HanViet:
         return seen
 
     def word_choices(self, word):
-        """Các âm có thể cho từng chữ kanji của từ; None nếu có chữ chưa có trong bảng."""
+        """Các âm có thể cho từng chữ kanji có âm Hán Việt của từ; None nếu có chữ chưa có trong bảng."""
         choices, prev = [], None
         for ch in word:
             if ch == "々" and prev is not None:
                 choices.append(choices[-1])
                 continue
-            if not is_kanji(ch):
+            if not is_kanji(ch) or ch in self.no_reading:
                 continue
             readings = self.table.get(ch)
             if not readings:

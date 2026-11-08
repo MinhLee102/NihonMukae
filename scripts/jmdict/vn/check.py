@@ -94,7 +94,7 @@ def check_words(batch, answer, hv, problems, warnings):
         if "hv_chon" in item or "hv_tu_do" in item:
             reading = str(a.get("hv", "")).strip().lower()
             syllables = reading.split()
-            kanji_count = sum(1 for ch in item.get("kanji") or item["w"] if is_kanji(ch))
+            kanji_count = sum(1 for ch in item.get("kanji") or item["w"] if is_kanji(ch) and ch not in hv.no_reading)
             if "hv_chon" in item:
                 choices = item["hv_chon"]
                 if len(syllables) != len(choices) or any(s not in c for s, c in zip(syllables, choices)):
@@ -104,7 +104,7 @@ def check_words(batch, answer, hv, problems, warnings):
                 problems.append((item, f"hv \"{reading}\" không đủ {kanji_count} âm"))
                 continue
             else:
-                kanji_chars = [ch for ch in item.get("kanji") or item["w"] if is_kanji(ch) and ch != "々"]
+                kanji_chars = [ch for ch in item.get("kanji") or item["w"] if is_kanji(ch) and ch != "々" and ch not in hv.no_reading]
                 for ch, s in zip(kanji_chars, syllables):
                     uni = hv.unihan(ch)
                     if uni and reading_key(s) not in {reading_key(u) for u in uni}:

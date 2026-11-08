@@ -1,0 +1,960 @@
+[
+ {
+  "k": "庸",
+  "hv": [
+   "dung"
+  ],
+  "nghia": "bình thường, tầm thường"
+ },
+ {
+  "k": "晰",
+  "hv": [
+   "tích"
+  ],
+  "nghia": "rõ ràng, sáng tỏ"
+ },
+ {
+  "k": "燻",
+  "hv": [
+   "huân"
+  ],
+  "nghia": "hun khói, xông khói"
+ },
+ {
+  "k": "諍",
+  "hv": [
+   "tranh"
+  ],
+  "nghia": "tranh chấp, cãi cọ"
+ },
+ {
+  "k": "擒",
+  "hv": [
+   "cầm"
+  ],
+  "nghia": "bắt giữ, bắt sống"
+ },
+ {
+  "k": "妾",
+  "hv": [
+   "thiếp"
+  ],
+  "nghia": "vợ lẽ, thiếp"
+ },
+ {
+  "k": "慾",
+  "hv": [
+   "dục"
+  ],
+  "nghia": "ham muốn, dục vọng"
+ },
+ {
+  "k": "躑",
+  "hv": [
+   "trịch"
+  ],
+  "nghia": "ngập ngừng, hoa đỗ quyên"
+ },
+ {
+  "k": "躅",
+  "hv": [
+   "trục"
+  ],
+  "nghia": "dậm chân, hoa đỗ quyên"
+ },
+ {
+  "k": "罅",
+  "hv": [
+   "hạ"
+  ],
+  "nghia": "vết rạn, vết nứt"
+ },
+ {
+  "k": "涎",
+  "hv": [
+   "tiên",
+   "diên"
+  ],
+  "nghia": "nước dãi, thèm thuồng"
+ },
+ {
+  "k": "蹌",
+  "hv": [
+   "thương"
+  ],
+  "nghia": "lảo đảo, lảo đảo bước"
+ },
+ {
+  "k": "踉",
+  "hv": [
+   "lương"
+  ],
+  "nghia": "lảo đảo, loạng choạng"
+ },
+ {
+  "k": "蹣",
+  "hv": [
+   "man"
+  ],
+  "nghia": "bước đi xiêu vẹo"
+ },
+ {
+  "k": "跚",
+  "hv": [
+   "san"
+  ],
+  "nghia": "đi khập khiễng"
+ },
+ {
+  "k": "腱",
+  "hv": [
+   "kiện"
+  ],
+  "nghia": "gân bắp thịt"
+ },
+ {
+  "k": "吋",
+  "hv": [
+   "thốn"
+  ],
+  "nghia": "inch (đơn vị đo)"
+ },
+ {
+  "k": "玖",
+  "hv": [
+   "cửu"
+  ],
+  "nghia": "đá đen đẹp, Cuba"
+ },
+ {
+  "k": "臘",
+  "hv": [
+   "lạp"
+  ],
+  "nghia": "tháng chạp, Hy Lạp"
+ },
+ {
+  "k": "姆",
+  "hv": [
+   "mẫu"
+  ],
+  "nghia": "bảo mẫu, đảo Guam"
+ },
+ {
+  "k": "涅",
+  "hv": [
+   "niết"
+  ],
+  "nghia": "bùn đen, niết bàn"
+ },
+ {
+  "k": "蜚",
+  "hv": [
+   "phi"
+  ],
+  "nghia": "con gián, bay lượn"
+ },
+ {
+  "k": "蠊",
+  "hv": [
+   "liêm"
+  ],
+  "nghia": "con gián"
+ },
+ {
+  "k": "哈",
+  "hv": [
+   "cáp"
+  ],
+  "nghia": "thở ra, sa mạc Sahara"
+ },
+ {
+  "k": "蝲",
+  "hv": [
+   "lạt"
+  ],
+  "nghia": "con tôm đất nhỏ"
+ },
+ {
+  "k": "蜊",
+  "hv": [
+   "ly"
+  ],
+  "nghia": "nghêu, tôm đất"
+ },
+ {
+  "k": "糎",
+  "hv": [],
+  "nghia": "xăng-ti-mét"
+ },
+ {
+  "k": "喇",
+  "hv": [
+   "lạt"
+  ],
+  "nghia": "kèn tây, Đạt-lai Lạt-ma"
+ },
+ {
+  "k": "嘛",
+  "hv": [
+   "ma"
+  ],
+  "nghia": "trợ từ, Đạt-lai Lạt-ma"
+ },
+ {
+  "k": "哇",
+  "hv": [
+   "oa"
+  ],
+  "nghia": "nôn mửa, Hawaii"
+ },
+ {
+  "k": "呎",
+  "hv": [
+   "xích"
+  ],
+  "nghia": "foot (đơn vị đo)"
+ },
+ {
+  "k": "釦",
+  "hv": [
+   "khấu"
+  ],
+  "nghia": "khuy áo, cái cúc"
+ },
+ {
+  "k": "鈕",
+  "hv": [
+   "nữu"
+  ],
+  "nghia": "nút bấm, quai ấn"
+ },
+ {
+  "k": "听",
+  "hv": [
+   "thính"
+  ],
+  "nghia": "pound (đơn vị đo)"
+ },
+ {
+  "k": "粍",
+  "hv": [],
+  "nghia": "mi-li-mét"
+ },
+ {
+  "k": "竓",
+  "hv": [],
+  "nghia": "mi-li-lít"
+ },
+ {
+  "k": "洛",
+  "hv": [
+   "lạc"
+  ],
+  "nghia": "sông Lạc, Ma-rốc"
+ },
+ {
+  "k": "碼",
+  "hv": [
+   "mã"
+  ],
+  "nghia": "thước Anh (yard)"
+ },
+ {
+  "k": "甸",
+  "hv": [
+   "điện"
+  ],
+  "nghia": "ngoại ô, Latinh"
+ },
+ {
+  "k": "檸",
+  "hv": [
+   "nịnh"
+  ],
+  "nghia": "quả chanh vàng"
+ },
+ {
+  "k": "敦",
+  "hv": [
+   "đôn"
+  ],
+  "nghia": "hậu hĩnh, Luân Đôn"
+ },
+ {
+  "k": "嬌",
+  "hv": [
+   "kiều"
+  ],
+  "nghia": "duyên dáng, đáng yêu"
+ },
+ {
+  "k": "惹",
+  "hv": [
+   "nhạ"
+  ],
+  "nghia": "thu hút, chuốc lấy"
+ },
+ {
+  "k": "鰻",
+  "hv": [
+   "man"
+  ],
+  "nghia": "con lươn, cá chình"
+ },
+ {
+  "k": "鴎",
+  "hv": [
+   "âu"
+  ],
+  "nghia": "chim hải âu"
+ },
+ {
+  "k": "蠣",
+  "hv": [
+   "lệ"
+  ],
+  "nghia": "con hàu biển"
+ },
+ {
+  "k": "蛎",
+  "hv": [
+   "lệ"
+  ],
+  "nghia": "con hàu"
+ },
+ {
+  "k": "鶩",
+  "hv": [
+   "vụ"
+  ],
+  "nghia": "vịt nhà"
+ },
+ {
+  "k": "竄",
+  "hv": [
+   "thoán"
+  ],
+  "nghia": "sửa bậy, trốn lủi"
+ },
+ {
+  "k": "愕",
+  "hv": [
+   "ngạc"
+  ],
+  "nghia": "kinh ngạc, sửng sốt"
+ },
+ {
+  "k": "蜀",
+  "hv": [
+   "thục"
+  ],
+  "nghia": "nước Thục, ngô bắp"
+ },
+ {
+  "k": "黍",
+  "hv": [
+   "thử"
+  ],
+  "nghia": "cây kê, ngô bắp"
+ },
+ {
+  "k": "梱",
+  "hv": [
+   "khổn"
+  ],
+  "nghia": "đóng gói, bó hàng"
+ },
+ {
+  "k": "截",
+  "hv": [
+   "tiệt"
+  ],
+  "nghia": "cắt đứt, ngăn chặn"
+ },
+ {
+  "k": "鯖",
+  "hv": [
+   "thanh"
+  ],
+  "nghia": "cá thu Nhật"
+ },
+ {
+  "k": "葵",
+  "hv": [
+   "quỳ"
+  ],
+  "nghia": "mù tạt wasabi, quỳ"
+ },
+ {
+  "k": "珊",
+  "hv": [
+   "san"
+  ],
+  "nghia": "san hô"
+ },
+ {
+  "k": "瑚",
+  "hv": [
+   "hô"
+  ],
+  "nghia": "san hô"
+ },
+ {
+  "k": "踪",
+  "hv": [
+   "tung"
+  ],
+  "nghia": "dấu vết, tung tích"
+ },
+ {
+  "k": "睦",
+  "hv": [
+   "mục"
+  ],
+  "nghia": "hòa thuận, thân thiện"
+ },
+ {
+  "k": "姜",
+  "hv": [
+   "khương"
+  ],
+  "nghia": "củ gừng"
+ },
+ {
+  "k": "閃",
+  "hv": [
+   "thiểm"
+  ],
+  "nghia": "lóe sáng, chớp nhoáng"
+ },
+ {
+  "k": "耽",
+  "hv": [
+   "đam"
+  ],
+  "nghia": "say mê, đắm chìm"
+ },
+ {
+  "k": "橡",
+  "hv": [
+   "tượng"
+  ],
+  "nghia": "cây dẻ gai sồi"
+ },
+ {
+  "k": "簾",
+  "hv": [
+   "liêm"
+  ],
+  "nghia": "rèm che, mành treo"
+ },
+ {
+  "k": "麩",
+  "hv": [
+   "phu"
+  ],
+  "nghia": "cám mì, món tempura"
+ },
+ {
+  "k": "函",
+  "hv": [
+   "hàm"
+  ],
+  "nghia": "hộp, hòm thư"
+ },
+ {
+  "k": "之",
+  "hv": [
+   "chi"
+  ],
+  "nghia": "của, này, đi đến"
+ },
+ {
+  "k": "墟",
+  "hv": [
+   "khư"
+  ],
+  "nghia": "khu đất hoang tàn"
+ },
+ {
+  "k": "蠅",
+  "hv": [
+   "dăng"
+  ],
+  "nghia": "con ruồi"
+ },
+ {
+  "k": "蝿",
+  "hv": [
+   "dăng"
+  ],
+  "nghia": "con ruồi"
+ },
+ {
+  "k": "箆",
+  "hv": [
+   "tỉ"
+  ],
+  "nghia": "cái xẻng trộn, que"
+ },
+ {
+  "k": "篦",
+  "hv": [
+   "tỉ"
+  ],
+  "nghia": "cái nẹp, que phết"
+ },
+ {
+  "k": "某",
+  "hv": [
+   "mỗ"
+  ],
+  "nghia": "ai đó, người nào đó"
+ },
+ {
+  "k": "鮪",
+  "hv": [
+   "vị"
+  ],
+  "nghia": "cá ngừ đại dương"
+ },
+ {
+  "k": "巳",
+  "hv": [
+   "tị"
+  ],
+  "nghia": "chi Tị con rắn"
+ },
+ {
+  "k": "宥",
+  "hv": [
+   "hựu"
+  ],
+  "nghia": "dỗ dành, tha thứ"
+ },
+ {
+  "k": "捥",
+  "hv": [
+   "oản"
+  ],
+  "nghia": "bẻ ngắt, vặn đứt"
+ },
+ {
+  "k": "佇",
+  "hv": [
+   "trữ"
+  ],
+  "nghia": "đứng ngẩn ngơ"
+ },
+ {
+  "k": "俯",
+  "hv": [
+   "phủ"
+  ],
+  "nghia": "cúi đầu nhìn xuống"
+ },
+ {
+  "k": "刹",
+  "hv": [
+   "sát"
+  ],
+  "nghia": "chùa chiền, chớp nhoáng"
+ },
+ {
+  "k": "忖",
+  "hv": [
+   "thốn"
+  ],
+  "nghia": "đoán ý, suy xét"
+ },
+ {
+  "k": "戌",
+  "hv": [
+   "tuất"
+  ],
+  "nghia": "chi Tuất con chó"
+ },
+ {
+  "k": "捏",
+  "hv": [
+   "niết"
+  ],
+  "nghia": "nhào nặn, bịa đặt"
+ },
+ {
+  "k": "曰",
+  "hv": [
+   "viết"
+  ],
+  "nghia": "nói rằng, căn nguyên"
+ },
+ {
+  "k": "梟",
+  "hv": [
+   "kiêu"
+  ],
+  "nghia": "chim cú mèo"
+ },
+ {
+  "k": "炸",
+  "hv": [
+   "tạc"
+  ],
+  "nghia": "nổ tung, rán giòn"
+ },
+ {
+  "k": "焜",
+  "hv": [
+   "côn"
+  ],
+  "nghia": "bếp lò lửa sáng"
+ },
+ {
+  "k": "爬",
+  "hv": [
+   "bà"
+  ],
+  "nghia": "bò trườn, cào gãi"
+ },
+ {
+  "k": "筐",
+  "hv": [
+   "khuông"
+  ],
+  "nghia": "vỏ máy, giỏ tre"
+ },
+ {
+  "k": "脛",
+  "hv": [
+   "hĩnh"
+  ],
+  "nghia": "cẳng chân, ống quyển"
+ },
+ {
+  "k": "臑",
+  "hv": [
+   "nhu"
+  ],
+  "nghia": "cẳng chân, bắp chân"
+ },
+ {
+  "k": "苺",
+  "hv": [
+   "môi"
+  ],
+  "nghia": "quả dâu tây"
+ },
+ {
+  "k": "茣",
+  "hv": [
+   "ngô"
+  ],
+  "nghia": "chiếu cói goza"
+ },
+ {
+  "k": "褪",
+  "hv": [
+   "thoái"
+  ],
+  "nghia": "bay màu, phai nhạt"
+ },
+ {
+  "k": "贔",
+  "hv": [
+   "bí"
+  ],
+  "nghia": "thiên vị, ủng hộ"
+ },
+ {
+  "k": "屓",
+  "hv": [
+   "hí"
+  ],
+  "nghia": "thiên vị, nâng đỡ"
+ },
+ {
+  "k": "跪",
+  "hv": [
+   "quỳ"
+  ],
+  "nghia": "quỳ gối xuống"
+ },
+ {
+  "k": "蹲",
+  "hv": [
+   "tồn"
+  ],
+  "nghia": "ngồi xổm xuống"
+ },
+ {
+  "k": "靨",
+  "hv": [
+   "yếp"
+  ],
+  "nghia": "đồng tiền má lúm"
+ },
+ {
+  "k": "鞦",
+  "hv": [
+   "thu"
+  ],
+  "nghia": "dây đu, xích đu"
+ },
+ {
+  "k": "韆",
+  "hv": [
+   "thiên"
+  ],
+  "nghia": "xích đu chơi đu"
+ },
+ {
+  "k": "頷",
+  "hv": [
+   "hạm"
+  ],
+  "nghia": "gật đầu đồng ý"
+ },
+ {
+  "k": "麒",
+  "hv": [
+   "kỳ"
+  ],
+  "nghia": "kỳ lân đực"
+ },
+ {
+  "k": "麟",
+  "hv": [
+   "lân"
+  ],
+  "nghia": "kỳ lân cái"
+ },
+ {
+  "k": "亥",
+  "hv": [
+   "hợi"
+  ],
+  "nghia": "chi Hợi con lợn"
+ },
+ {
+  "k": "蜻",
+  "hv": [
+   "tinh"
+  ],
+  "nghia": "con chuồn chuồn"
+ },
+ {
+  "k": "蛉",
+  "hv": [
+   "linh"
+  ],
+  "nghia": "chuồn chuồn, con dế"
+ },
+ {
+  "k": "痣",
+  "hv": [
+   "chí"
+  ],
+  "nghia": "vết chàm, nốt ruồi"
+ },
+ {
+  "k": "鯵",
+  "hv": [
+   "sao"
+  ],
+  "nghia": "cá nục Nhật"
+ },
+ {
+  "k": "鰯",
+  "hv": [],
+  "nghia": "cá mòi"
+ },
+ {
+  "k": "閏",
+  "hv": [
+   "nhuận"
+  ],
+  "nghia": "năm nhuận, dư thừa"
+ },
+ {
+  "k": "浚",
+  "hv": [
+   "tuấn"
+  ],
+  "nghia": "nạo vét sông bùn"
+ },
+ {
+  "k": "渫",
+  "hv": [
+   "tiết"
+  ],
+  "nghia": "nạo vét khơi thông"
+ },
+ {
+  "k": "艮",
+  "hv": [
+   "cấn"
+  ],
+  "nghia": "quẻ Cấn, bò biển"
+ },
+ {
+  "k": "蛸",
+  "hv": [
+   "tiêu"
+  ],
+  "nghia": "con bạch tuộc"
+ },
+ {
+  "k": "梳",
+  "hv": [
+   "sơ"
+  ],
+  "nghia": "chải tóc, gỡ tóc"
+ },
+ {
+  "k": "攣",
+  "hv": [
+   "luyến"
+  ],
+  "nghia": "co rút gân, co giật"
+ },
+ {
+  "k": "俎",
+  "hv": [
+   "trở"
+  ],
+  "nghia": "thớt băm thịt cá"
+ },
+ {
+  "k": "閊",
+  "hv": [],
+  "nghia": "vướng víu, tắc nghẽn"
+ },
+ {
+  "k": "錨",
+  "hv": [
+   "miêu"
+  ],
+  "nghia": "mỏ neo thuyền"
+ },
+ {
+  "k": "鬘",
+  "hv": [
+   "man"
+  ],
+  "nghia": "tóc giả, vòng hoa"
+ },
+ {
+  "k": "縋",
+  "hv": [
+   "trụy"
+  ],
+  "nghia": "bám víu, trông cậy"
+ },
+ {
+  "k": "橙",
+  "hv": [
+   "đằng"
+  ],
+  "nghia": "màu da cam, quả cam"
+ },
+ {
+  "k": "糺",
+  "hv": [
+   "củ"
+  ],
+  "nghia": "tra xét làm rõ"
+ },
+ {
+  "k": "孕",
+  "hv": [
+   "dựng"
+  ],
+  "nghia": "mang thai, ấp ủ"
+ },
+ {
+  "k": "縺",
+  "hv": [
+   "liên"
+  ],
+  "nghia": "rối rắm vướng mắc"
+ },
+ {
+  "k": "淀",
+  "hv": [
+   "điện"
+  ],
+  "nghia": "nước đọng lắng cặn"
+ },
+ {
+  "k": "錻",
+  "hv": [
+   "vũ"
+  ],
+  "nghia": "tôn mạ thiếc"
+ },
+ {
+  "k": "擤",
+  "hv": [
+   "hỉnh"
+  ],
+  "nghia": "hỉ mũi, hắt mũi"
+ },
+ {
+  "k": "魯",
+  "hv": [
+   "lỗ"
+  ],
+  "nghia": "nước Lỗ, nước Nga"
+ },
+ {
+  "k": "亘",
+  "hv": [
+   "tuyên",
+   "hằng"
+  ],
+  "nghia": "trải suốt kéo dài"
+ },
+ {
+  "k": "欝",
+  "hv": [
+   "uất"
+  ],
+  "nghia": "u uất sầu não"
+ },
+ {
+  "k": "靖",
+  "hv": [
+   "tĩnh"
+  ],
+  "nghia": "yên ổn thanh bình"
+ },
+ {
+  "k": "幌",
+  "hv": [
+   "hoảng"
+  ],
+  "nghia": "mui xe, bạt che"
+ },
+ {
+  "k": "埼",
+  "hv": [
+   "kỳ"
+  ],
+  "nghia": "mũi đất, tỉnh Saitama"
+ },
+ {
+  "k": "菅",
+  "hv": [
+   "gian"
+  ],
+  "nghia": "cỏ gianh lợp nón"
+ },
+ {
+  "k": "琉",
+  "hv": [
+   "lưu"
+  ],
+  "nghia": "lưu ly, quần đảo Ryukyu"
+ }
+]

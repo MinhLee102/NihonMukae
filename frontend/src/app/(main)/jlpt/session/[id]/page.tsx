@@ -8,6 +8,7 @@ import { RequireAuth } from "@/components/flashcard/RequireAuth";
 import { AnswerSheet, type SheetCell } from "@/components/jlpt/AnswerSheet";
 import { ConfirmDialog } from "@/components/jlpt/ConfirmDialog";
 import { QuestionPanel } from "@/components/jlpt/QuestionPanel";
+import { useStoredToggle } from "@/components/jlpt/useStoredToggle";
 import { SectionAudio, SectionAudioReview } from "@/components/jlpt/ListeningAudio";
 import { useAuthStore } from "@/store/authStore";
 import { getApiErrorMessage } from "@/lib/api/flashcard";
@@ -60,29 +61,11 @@ function Runner() {
   const [error, setError] = useState<string | null>(null);
   const [dialog, setDialog] = useState<"submit" | "exit" | null>(null);
   const [busy, setBusy] = useState(false);
-  const [sheetOpen, setSheetOpen] = useState(true);
+  const [sheetOpen, toggleSheet] = useStoredToggle("jlpt:sheet");
   const handledExpiry = useRef<number | null>(null);
   const finalising = useRef(false);
 
   const flagsKey = `jlpt:flags:${id}`;
-
-  useEffect(() => {
-    try {
-      if (localStorage.getItem("jlpt:sheet") === "closed") setSheetOpen(false);
-    } catch {
-      // storage unavailable: the sheet just stays open
-    }
-  }, []);
-
-  const toggleSheet = () =>
-    setSheetOpen((open) => {
-      try {
-        localStorage.setItem("jlpt:sheet", open ? "closed" : "open");
-      } catch {
-        // ignore
-      }
-      return !open;
-    });
 
   const apply = useCallback(
     (next: SessionViewDto) => {

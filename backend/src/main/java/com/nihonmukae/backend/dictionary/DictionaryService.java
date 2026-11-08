@@ -19,6 +19,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
@@ -130,11 +131,45 @@ public class DictionaryService {
         }
         List<Word> found = hasKanji
                 ? wordRepository.findLookupByKanji(kanji.trim(), hasKana ? kana.trim() : "")
-                : wordRepository.findLookupByKanaOnly(kana.trim());
+                : lookupByKana(kana.trim());
         if (found.isEmpty()) {
             throw new NotFoundException("Không tìm thấy từ");
         }
         return toWordLookupResponse(found.get(0), DEFAULT_LANG);
+    }
+
+    /**
+     * Từ thuần kana: ưu tiên mục chỉ viết bằng kana, rồi tới mục có kanji cùng cách đọc. Katakana thử thêm
+     * bản hiragana và ngược lại, vì nguồn dữ liệu không thống nhất cách lưu cách đọc.
+     */
+    private List<Word> lookupByKana(String kana) {
+        for (String variant : new LinkedHashSet<>(List.of(kana, toHiragana(kana), toKatakana(kana)))) {
+            List<Word> found = wordRepository.findLookupByKanaOnly(variant);
+            if (found.isEmpty()) {
+                found = wordRepository.findLookupByKanaAny(variant);
+            }
+            if (!found.isEmpty()) {
+                return found;
+            }
+        }
+        return List.of();
+    }
+
+    // Katakana ァ..ヶ (0x30A1..0x30F6) lệch hiragana ぁ..ゖ (0x3041..0x3096) đúng 0x60; ー và ký tự khác giữ nguyên
+    static String toHiragana(String s) {
+        StringBuilder sb = new StringBuilder(s.length());
+        for (char c : s.toCharArray()) {
+            sb.append(c >= 0x30A1 && c <= 0x30F6 ? (char) (c - 0x60) : c);
+        }
+        return sb.toString();
+    }
+
+    static String toKatakana(String s) {
+        StringBuilder sb = new StringBuilder(s.length());
+        for (char c : s.toCharArray()) {
+            sb.append(c >= 0x3041 && c <= 0x3096 ? (char) (c + 0x60) : c);
+        }
+        return sb.toString();
     }
 
     // ─── History CRUD ───────────────────────────────────────────────────

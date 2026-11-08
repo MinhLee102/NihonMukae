@@ -49,6 +49,7 @@ export function WordPopup({ token, onClose }: { token: ShelfToken; onClose: () =
   }, [onClose]);
 
   const example = word?.examples?.[0];
+  const nameLabel = token.name === "person" ? "Tên người" : token.name === "place" ? "Địa danh" : null;
 
   return (
     <div className="w-[320px] rounded-2xl border border-black/5 bg-white p-4 text-left shadow-xl">
@@ -57,6 +58,10 @@ export function WordPopup({ token, onClose }: { token: ShelfToken; onClose: () =
           <span className="font-serif text-2xl text-neutral-900">{word?.kanji || token.base}</span>
           {word && word.kana !== (word.kanji || token.base) && (
             <span className="ml-2 text-sm text-neutral-400">{word.kana}</span>
+          )}
+          {!word && token.reading && <span className="ml-2 text-sm text-neutral-400">{token.reading}</span>}
+          {nameLabel && (
+            <p className="mt-0.5 text-[11px] font-medium uppercase tracking-widest text-amber-600">{nameLabel}</p>
           )}
         </div>
         <div className="flex shrink-0 items-center gap-2">
@@ -72,7 +77,11 @@ export function WordPopup({ token, onClose }: { token: ShelfToken; onClose: () =
       </div>
 
       {loading && <p className="mt-4 text-sm text-neutral-400">Đang tra...</p>}
-      {notFound && <p className="mt-4 text-sm text-neutral-500">Không tìm thấy từ này trong từ điển.</p>}
+      {notFound && (
+        <p className="mt-4 text-sm text-neutral-500">
+          {nameLabel ? "Tên riêng, từ điển không có nghĩa cho tên này." : "Không tìm thấy từ này trong từ điển."}
+        </p>
+      )}
 
       {word && (
         <>

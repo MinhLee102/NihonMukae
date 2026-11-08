@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
 import java.util.UUID;
 
 @RestController
@@ -22,9 +23,9 @@ public class PracticeShelfController {
         this.service = service;
     }
 
-    /** Lưu câu của một phiên đã nộp vào My Shelf: scope = wrong | all | question (kèm position). */
+    /** Lưu câu của một phiên đã nộp vào My Shelf: scope = wrong | all | question (kèm position). Bài dài thành nhiều mục. */
     @PostMapping("/sessions/{id}/save-to-shelf")
-    public ApiResponse<ShelfItemResponse> save(@AuthenticationPrincipal JwtUserPrincipal principal,
+    public ApiResponse<List<ShelfItemResponse>> save(@AuthenticationPrincipal JwtUserPrincipal principal,
                                                @PathVariable UUID id, @RequestBody PracticeShelfService.SaveRequest req) {
         return ApiResponse.success(service.save(principal.getId(), id, req));
     }

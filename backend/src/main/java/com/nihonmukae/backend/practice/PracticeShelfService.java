@@ -5,6 +5,7 @@ import com.nihonmukae.backend.practice.dto.ResultDtos.ResultQuestion;
 import com.nihonmukae.backend.shelf.ShelfService;
 import com.nihonmukae.backend.shelf.dto.ShelfItemResponse;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.UUID;
@@ -24,7 +25,8 @@ public class PracticeShelfService {
         this.shelf = shelf;
     }
 
-    public ShelfItemResponse save(UUID userId, UUID sessionId, SaveRequest req) {
+    @Transactional
+    public List<ShelfItemResponse> save(UUID userId, UUID sessionId, SaveRequest req) {
         Result result = sessions.result(userId, sessionId);
         String scope = req.scope() == null ? "" : req.scope();
         List<Integer> positions;
@@ -50,11 +52,16 @@ public class PracticeShelfService {
         if (positions.isEmpty()) {
             throw new IllegalArgumentException("Không có câu nào để lưu");
         }
-        String text = ShelfTextBuilder.build(result, positions);
-        if (text.isBlank()) {
+        // Cả bài thường vượt giới hạn một mục My Shelf nên được tách thành nhiều mục theo phần
+        List<ShelfTextBuilder.Part> parts = ShelfTextBuilder.split(result, positions, ShelfService.MAX_CONTENT_LENGTH);
+        if (parts.stream().allMatch(p -> p.text().isBlank())) {
             throw new IllegalArgumentException("Không tìm thấy câu cần lưu");
         }
-        String title = (result.title() == null ? "Luyện thi" : result.title()) + " (" + suffix + ")";
-        return shelf.createFromPractice(userId, sessionId, title, text);
+        String base = result.title() == null ? "Luyện thi" : result.title();
+        return parts.stream()
+                .filter(p -> !p.text().isBlank())
+                .map(p -> shelf.createFromPractice(userId, sessionId,
+                        base + " (" + suffix + (p.label() == null ? "" : " · " + p.label()) + ")", p.text()))
+                .toList();
     }
 }

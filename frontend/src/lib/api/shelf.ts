@@ -15,6 +15,8 @@ export interface ShelfToken {
   reading?: string;
   /** false for particles and punctuation, which are not clickable. */
   lookup: boolean;
+  /** Set for a person's name or a place name; items saved before this existed do not have it. */
+  name?: 'person' | 'place';
 }
 
 export interface ShelfItemDto {

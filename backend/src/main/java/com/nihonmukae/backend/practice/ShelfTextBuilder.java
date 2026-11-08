@@ -4,8 +4,11 @@ import com.nihonmukae.backend.practice.dto.ResultDtos.Result;
 import com.nihonmukae.backend.practice.dto.ResultDtos.ResultGroup;
 import com.nihonmukae.backend.practice.dto.ResultDtos.ResultQuestion;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -17,6 +20,86 @@ public final class ShelfTextBuilder {
     private static final String[] CIRCLED = {"①", "②", "③", "④", "⑤", "⑥"};
 
     private ShelfTextBuilder() {
+    }
+
+    /** Một mục My Shelf sẽ tạo: nhãn phần (tiếng Việt, dùng cho tiêu đề) và văn bản. */
+    public record Part(String label, String text) {
+    }
+
+    /**
+     * Chia các câu thành nhiều mục để mục nào cũng không quá maxLength: trước hết theo phần (Ngôn ngữ, Đọc hiểu,
+     * Nghe hiểu); phần nào vẫn dài thì gom theo từng 問題, một 問題 quá dài thì gom theo từng câu.
+     * Ít câu (vừa một mục) thì trả về đúng một mục không nhãn, giữ cách lưu cũ.
+     */
+    public static List<Part> split(Result result, List<Integer> positions, int maxLength) {
+        String whole = build(result, positions);
+        if (whole.length() <= maxLength) {
+            return List.of(new Part(null, whole));
+        }
+        Map<String, List<ResultQuestion>> byPart = new LinkedHashMap<>();
+        for (ResultQuestion q : result.questions()) {
+            if (positions.contains(q.position())) {
+                byPart.computeIfAbsent(partLabel(q.section()), k -> new ArrayList<>()).add(q);
+            }
+        }
+        List<Part> parts = new ArrayList<>();
+        for (Map.Entry<String, List<ResultQuestion>> entry : byPart.entrySet()) {
+            List<List<Integer>> chunks = pack(result, mondaiUnits(entry.getValue()), maxLength);
+            for (int i = 0; i < chunks.size(); i++) {
+                String label = chunks.size() == 1 ? entry.getKey() : entry.getKey() + " " + (i + 1);
+                parts.add(new Part(label, build(result, chunks.get(i))));
+            }
+        }
+        return parts;
+    }
+
+    private static String partLabel(String section) {
+        if ("dokkai".equals(section)) {
+            return "Đọc hiểu";
+        }
+        if ("chokai".equals(section)) {
+            return "Nghe hiểu";
+        }
+        return "Ngôn ngữ";
+    }
+
+    /** Các câu liền nhau cùng một 問題 thành một khối. */
+    private static List<List<Integer>> mondaiUnits(List<ResultQuestion> questions) {
+        List<List<Integer>> units = new ArrayList<>();
+        Integer lastMondai = null;
+        for (ResultQuestion q : questions) {
+            if (units.isEmpty() || q.mondaiNo() == null || !q.mondaiNo().equals(lastMondai)) {
+                units.add(new ArrayList<>());
+            }
+            units.get(units.size() - 1).add(q.position());
+            lastMondai = q.mondaiNo();
+        }
+        return units;
+    }
+
+    /** Gom khối vào mục cho tới khi sắp vượt maxLength; một khối tự nó đã quá dài thì gom theo từng câu. */
+    private static List<List<Integer>> pack(Result result, List<List<Integer>> units, int maxLength) {
+        List<List<Integer>> chunks = new ArrayList<>();
+        List<Integer> current = new ArrayList<>();
+        for (List<Integer> unit : units) {
+            List<List<Integer>> pieces = build(result, unit).length() <= maxLength
+                    ? List.of(unit)
+                    : unit.stream().map(List::of).toList();
+            for (List<Integer> piece : pieces) {
+                List<Integer> candidate = new ArrayList<>(current);
+                candidate.addAll(piece);
+                if (!current.isEmpty() && build(result, candidate).length() > maxLength) {
+                    chunks.add(current);
+                    current = new ArrayList<>(piece);
+                } else {
+                    current = candidate;
+                }
+            }
+        }
+        if (!current.isEmpty()) {
+            chunks.add(current);
+        }
+        return chunks;
     }
 
     /** @param positions các câu cần lưu, theo thứ tự trong bài */

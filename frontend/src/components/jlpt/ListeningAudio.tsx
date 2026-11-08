@@ -217,9 +217,18 @@ export function SectionAudio({ url, progressKey }: { url: string; progressKey: s
 }
 
 /** Review after the exam: the section audio with the normal player. */
-export function SectionAudioReview({ url }: { url: string }) {
+export function SectionAudioReview({ url, inline = false }: { url: string; inline?: boolean }) {
   const src = resolveMediaUrl(url);
   if (!src) return null;
+  // inline: sits inside another toolbar row instead of taking a row of its own
+  if (inline) {
+    return (
+      <div className="flex min-w-0 flex-1 items-center gap-2">
+        <Volume2 size={16} className="shrink-0 text-neutral-400" />
+        <audio controls preload="metadata" src={src} className="h-8 w-full min-w-0" />
+      </div>
+    );
+  }
   return (
     <div className="shrink-0 border-b border-black/5 bg-white px-6 py-2.5">
       <div className="mx-auto flex max-w-5xl items-center gap-3">

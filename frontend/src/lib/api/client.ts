@@ -12,9 +12,22 @@ export const apiClient = axios.create({
   withCredentials: true,
 });
  
-// Attach the in-memory access token to every outgoing request.
-apiClient.interceptors.request.use((config) => {
-  const token = useAuthStore.getState().accessToken;
+/** Seconds until the token's exp claim; null when it cannot be read. */
+function secondsLeft(token: string): number | null {
+  try {
+    const payload = JSON.parse(atob(token.split('.')[1].replace(/-/g, '+').replace(/_/g, '/'))) as { exp?: number };
+    return typeof payload.exp === 'number' ? payload.exp - Date.now() / 1000 : null;
+  } catch {
+    return null;
+  }
+}
+
+// Attach the in-memory access token to every outgoing request. A token about to expire is renewed first,
+// so a long exam session never sends a stale token and waits on a failed request.
+apiClient.interceptors.request.use(async (config) => {
+  let token = useAuthStore.getState().accessToken;
+  const left = token ? secondsLeft(token) : null;
+  if (token && left !== null && left < 30) token = await refreshAccessToken();
   if (token) {
     config.headers = config.headers ?? {};
     config.headers.Authorization = `Bearer ${token}`;

@@ -43,6 +43,16 @@ public interface WordRepository extends JpaRepository<Word, Long> {
     List<Word> findLookupByKanaOnly(@Param("kana") String kana);
 
     /**
+     * Tra theo cách đọc, không quan tâm cột kanji: nhiều từ hay viết bằng kana (もちろん, よく, ちょっと)
+     * vẫn được Mazii lưu kèm kanji (勿論, 良く, 一寸) nên findLookupByKanaOnly bỏ sót. Từ phổ biến lên trước.
+     */
+    @Query("SELECT w FROM Word w " +
+            "WHERE w.kana = :kana OR w.kana LIKE concat(:kana, ' %') " +
+            "OR w.kana LIKE concat('% ', :kana) OR w.kana LIKE concat('% ', :kana, ' %') " +
+            "ORDER BY w.frequencyRank ASC NULLS LAST, w.id ASC")
+    List<Word> findLookupByKanaAny(@Param("kana") String kana);
+
+    /**
      * Full-Text Search có phân trang, dùng PostgreSQL to_tsquery + ts_rank.
      *
      * QUAN TRỌNG: tham số `tsQuery` PHẢI là chuỗi tsquery đã build sẵn (vd

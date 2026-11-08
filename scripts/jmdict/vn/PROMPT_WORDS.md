@@ -17,6 +17,10 @@ Với mỗi từ, trả về một object:
   ngắn gọn như từ điển (tối đa khoảng 3 cụm), dùng từ tiếng Việt tự nhiên người Việt hay nói.
   Nghĩa nào trùng ý với nghĩa trước thì gộp lại, không lặp. Nếu một nghĩa đứng sau thực ra phổ biến hơn
   trong tiếng Nhật hiện đại (vd 機関: "cơ quan" phổ biến hơn "động cơ") thì đưa nghĩa đó lên đầu.
+  Mỗi phần tử của "m" ứng với MỘT phần tử của "en": KHÔNG tách từ đồng nghĩa thành nhiều phần tử,
+  KHÔNG dồn nhiều nghĩa khác nhau vào một phần tử. Vd 正直, en ["honest; frank", "honestly; frankly"]:
+  SAI [{"vi":"thành thật"},{"vi":"thẳng thắn"}] hoặc [{"vi":"thành thật, thẳng thắn, thật lòng mà nói"}];
+  ĐÚNG [{"vi":"thật thà, thành thật, thẳng thắn"},{"vi":"thật lòng mà nói, thú thật"}].
 - "ex": đúng 2 câu ví dụ, mỗi câu {"ja": "...", "vi": "..."}:
   - câu tiếng Nhật đúng ngữ pháp và tự nhiên như người Nhật thật sự nói/viết, ngắn (khoảng 10–30 chữ),
     có chứa từ đó (được chia thể). Dùng từ đúng ngữ cảnh của nó: từ trang trọng (告別, 閣僚...) thì

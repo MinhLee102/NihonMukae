@@ -1,0 +1,2715 @@
+[
+ {
+  "id": 1003400,
+  "m": [
+   {
+    "vi": "chỉn chu, đàng hoàng, ngăn nắp"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "脱いだ靴は玄関にきちんと揃えておきなさい。",
+    "vi": "Giày tháo ra con hãy xếp lại thật ngăn nắp ở bậc thềm nhé."
+   },
+   {
+    "ja": "約束の時間をきちんと守ることは大切だ。",
+    "vi": "Việc giữ đúng hẹn một cách chỉn chu là điều rất quan trọng."
+   }
+  ]
+ },
+ {
+  "id": 1003430,
+  "m": [
+   {
+    "vi": "chắc chắn, nhất định"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "明日はきっと晴れると信じている。",
+    "vi": "Tôi tin rằng ngày mai trời chắc chắn sẽ nắng đẹp."
+   },
+   {
+    "ja": "一生懸命努力すればきっと夢は叶う。",
+    "vi": "Nếu nỗ lực hết mình thì nhất định ước mơ sẽ thành hiện thực."
+   }
+  ],
+  "hv": "ngật độ"
+ },
+ {
+  "id": 1003450,
+  "m": [
+   {
+    "vi": "chật, gay gắt, vất vả, khắc nghiệt"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "この靴は少しきつくて足が痛くなる。",
+    "vi": "Đôi giày này hơi chật nên làm tôi bị đau chân."
+   },
+   {
+    "ja": "引っ越しの作業は思ったよりきつかった。",
+    "vi": "Công việc chuyển nhà vất vả hơn tôi tưởng."
+   }
+  ]
+ },
+ {
+  "id": 1004060,
+  "m": [
+   {
+    "vi": "say giấc, ngủ say"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "昨夜は疲れていたので朝までぐっすり眠った。",
+    "vi": "Tối qua mệt mỏi nên tôi đã ngủ một mạch say giấc đến sáng."
+   },
+   {
+    "ja": "赤ちゃんがベッドでぐっすりと眠っている。",
+    "vi": "Em bé đang ngủ rất say sưa trên giường."
+   }
+  ]
+ },
+ {
+  "id": 1004310,
+  "m": [
+   {
+    "vi": "như thế này, thế này"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "こうすればもっと簡単に解決できますよ。",
+    "vi": "Làm như thế này thì có thể giải quyết dễ dàng hơn đấy."
+   },
+   {
+    "ja": "こうして私たちは無事に日本に到着した。",
+    "vi": "Cứ như thế chúng tôi đã đến Nhật Bản an toàn."
+   }
+  ]
+ },
+ {
+  "id": 1004500,
+  "m": [
+   {
+    "vi": "phía này, bên này, người này, chúng tôi"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "どうぞこちらへお入りになってください。",
+    "vi": "Xin mời quý khách đi vào phía bên này ạ."
+   },
+   {
+    "ja": "こちらは新しく入社した田中さんです。",
+    "vi": "Đây là anh Tanaka, người mới gia nhập công ty."
+   }
+  ]
+ },
+ {
+  "id": 1004690,
+  "m": [
+   {
+    "vi": "hôm nọ, dạo gần đây, vừa rồi"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "この間借りた本をお返しいたします。",
+    "vi": "Tôi xin phép hoàn trả lại cuốn sách đã mượn hôm nọ ạ."
+   },
+   {
+    "ja": "この間、駅前のカフェで偶然彼に会った。",
+    "vi": "Vừa rồi tôi tình cờ gặp anh ấy ở quán cà phê trước ga."
+   }
+  ],
+  "hv": "gian"
+ },
+ {
+  "id": 1004710,
+  "m": [
+   {
+    "vi": "dạo này, gần đây"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "この頃は朝晩ずいぶん寒くなってきましたね。",
+    "vi": "Dạo này sáng và tối trời đã trở nên khá lạnh rồi nhỉ."
+   },
+   {
+    "ja": "この頃忙しくて本を読む時間がなかなか取れない。",
+    "vi": "Gần đây bận rộn nên tôi mãi không dành được thời gian đọc sách."
+   }
+  ]
+ },
+ {
+  "id": 1004790,
+  "m": [
+   {
+    "vi": "từ bây giờ, sau đây"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "これから新しいプロジェクトを始めます。",
+    "vi": "Từ bây giờ chúng tôi sẽ bắt đầu dự án mới."
+   },
+   {
+    "ja": "これからは寒くなるので風邪に気をつけてね。",
+    "vi": "Sau đây trời sẽ trở lạnh nên hãy cẩn thận giữ gìn kẻo cảm lạnh nhé."
+   }
+  ]
+ },
+ {
+  "id": 1004830,
+  "m": [
+   {
+    "vi": "những cái này, các thứ này"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "これらの書類をコピーして全員に配ってください。",
+    "vi": "Hãy photo những tài liệu này và phát cho mọi người giúp tôi."
+   },
+   {
+    "ja": "これらの問題についてみんなで話し合いましょう。",
+    "vi": "Chúng ta hãy cùng nhau thảo luận về các vấn đề này nhé."
+   }
+  ]
+ },
+ {
+  "id": 1004880,
+  "m": [
+   {
+    "vi": "như thế này, loại này"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "こんな美味しい料理は今まで食べたことがない。",
+    "vi": "Món ăn ngon như thế này thì từ trước đến nay tôi chưa từng được ăn."
+   },
+   {
+    "ja": "こんな雨の日に出かけるのは嫌だなあ。",
+    "vi": "Đi ra ngoài vào ngày mưa gió như thế này thật là ngại quá đi."
+   }
+  ]
+ },
+ {
+  "id": 1004890,
+  "m": [
+   {
+    "vi": "đến mức này, như thế này nhường này"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "こんなにたくさんの宿題は今日中には終わらない。",
+    "vi": "Nhiều bài tập đến mức này thì không thể nào xong trong hôm nay được."
+   },
+   {
+    "ja": "彼がこんなに喜んでくれるとは思わなかった。",
+    "vi": "Tôi không ngờ anh ấy lại vui mừng đến nhường này."
+   }
+  ]
+ },
+ {
+  "id": 1005110,
+  "m": [
+   {
+    "vi": "nào, thôi nào, chà"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "さあ、時間になりましたから出発しましょう。",
+    "vi": "Nào, đến giờ rồi, chúng ta xuất phát thôi."
+   },
+   {
+    "ja": "さあ、彼が何と言うか私には分かりません。",
+    "vi": "Chà, tôi cũng không rõ anh ấy sẽ nói gì nữa."
+   }
+  ]
+ },
+ {
+  "id": 1005180,
+  "m": [
+   {
+    "vi": "vừa rồi, lúc nãy"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "さっき電話があったので折り返してください。",
+    "vi": "Lúc nãy có cuộc gọi đến nên anh hãy gọi lại nhé."
+   },
+   {
+    "ja": "さっきまでここにいたのに、どこへ行ったのだろう。",
+    "vi": "Vừa rồi còn ở đây mà, không biết cậu ấy đã đi đâu rồi."
+   }
+  ]
+ },
+ {
+  "id": 1005210,
+  "m": [
+   {
+    "vi": "sảng khoái, nhẹ nhõm, hoàn toàn (không)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "お風呂に入って汗を流したらさっぱりした。",
+    "vi": "Tắm gội rửa sạch mồ hôi xong tôi cảm thấy rất sảng khoái."
+   },
+   {
+    "ja": "彼の言っている意味がさっぱり分からない。",
+    "vi": "Tôi hoàn toàn không hiểu ý của anh ấy đang nói gì cả."
+   }
+  ]
+ },
+ {
+  "id": 1005390,
+  "m": [
+   {
+    "vi": "sơ qua, đại khái, khoảng chừng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "会議の前に資料をざっと読んでおいた。",
+    "vi": "Trước cuộc họp tôi đã đọc sơ qua tập tài liệu."
+   },
+   {
+    "ja": "ざっと計算したところ、費用は五万円ほどだ。",
+    "vi": "Tính toán đại khái thì chi phí vào khoảng năm vạn yên."
+   }
+  ]
+ },
+ {
+  "id": 1005480,
+  "m": [
+   {
+    "vi": "liên tục, dồn dập, tha thiết"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "外ではしきりに強い雨が降り続いている。",
+    "vi": "Bên ngoài trời mưa lớn dồn dập không ngớt."
+   },
+   {
+    "ja": "彼は私にしきりに一緒に行こうと誘った。",
+    "vi": "Anh ấy tha thiết rủ tôi cùng đi."
+   }
+  ]
+ },
+ {
+  "id": 1005600,
+  "m": [
+   {
+    "vi": "chết rồi, hỏng rồi, gay go rồi"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "しまった、家に電車の定期券を忘れてきた。",
+    "vi": "Chết rồi, tôi để quên vé tháng tàu điện ở nhà mất rồi."
+   },
+   {
+    "ja": "しまった、大事な約束の時間を間違えてしまった。",
+    "vi": "Hỏng rồi, tôi đã nhớ nhầm giờ hẹn quan trọng mất rồi."
+   }
+  ]
+ },
+ {
+  "id": 1005870,
+  "m": [
+   {
+    "vi": "chăm chú, bất động, kiên nhẫn"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "痛みに耐えてじっと我慢していた。",
+    "vi": "Tôi kiên nhẫn cắn răng chịu đựng cơn đau."
+   },
+   {
+    "ja": "彼は絵画をじっと見つめていた。",
+    "vi": "Anh ấy chăm chú ngắm nhìn bức tranh hội họa."
+   }
+  ]
+ },
+ {
+  "id": 1005900,
+  "m": [
+   {
+    "vi": "vậy thì, thế thì"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "じゃあ、明日の朝八時に駅で会いましょう。",
+    "vi": "Vậy thì tám giờ sáng mai chúng ta gặp nhau ở nhà ga nhé."
+   },
+   {
+    "ja": "じゃあ、その件については後で連絡します。",
+    "vi": "Thế thì về chuyện đó lát nữa tôi sẽ liên lạc lại."
+   }
+  ]
+ },
+ {
+  "id": 1006110,
+  "m": [
+   {
+    "vi": "hoàn toàn, toàn bộ, sạch sành sanh"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "休日にゆっくり休んで疲れがすっかり取れた。",
+    "vi": "Nghỉ ngơi thoải mái vào ngày nghỉ nên cơn mệt mỏi đã hoàn toàn tan biến."
+   },
+   {
+    "ja": "大事な用事をすっかり忘れてしまっていた。",
+    "vi": "Tôi đã quên béng mất công việc quan trọng."
+   }
+  ]
+ },
+ {
+  "id": 1006140,
+  "m": [
+   {
+    "vi": "thoăn thoắt, nhanh nhẹn, nhẹ nhõm"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼女は椅子からすっと立ち上がって部屋を出た。",
+    "vi": "Cô ấy thoăn thoắt đứng dậy khỏi ghế rồi rời khỏi phòng."
+   },
+   {
+    "ja": "言いたいことを全部伝えたらすっとした。",
+    "vi": "Nói ra được hết những điều muốn nói thì lòng tôi thấy nhẹ nhõm hẳn."
+   }
+  ]
+ },
+ {
+  "id": 1006280,
+  "m": [
+   {
+    "vi": "thế rồi, thế là, nếu vậy thì"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "薬を飲んだ。すると頭痛が嘘のように治まった。",
+    "vi": "Tôi đã uống thuốc. Thế rồi cơn đau đầu dịu đi như một phép màu."
+   },
+   {
+    "ja": "すると、君の意見は彼と反対ということだね。",
+    "vi": "Nếu vậy thì, ý kiến của bạn là phản đối anh ấy đúng không."
+   }
+  ]
+ },
+ {
+  "id": 1006380,
+  "m": [
+   {
+    "vi": "suốt, hơn hẳn, mãi tận"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "朝からずっとパソコンに向かって作業している。",
+    "vi": "Từ sáng tới giờ tôi làm việc liên tục suốt bên máy tính."
+   },
+   {
+    "ja": "今年の方が去年よりずっと暖かい。",
+    "vi": "Năm nay trời ấm hơn hẳn so với năm ngoái."
+   }
+  ]
+ },
+ {
+  "id": 1006610,
+  "m": [
+   {
+    "vi": "trông có vẻ, dường như"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "外は今にも雨が降り出しそうな空模様だ。",
+    "vi": "Bên ngoài sắc trời trông như sắp sửa đổ mưa đến nơi rồi."
+   },
+   {
+    "ja": "彼はとても美味しそうにケーキを食べている。",
+    "vi": "Cậu ấy đang ăn bánh kem trông có vẻ rất ngon lành."
+   }
+  ]
+ },
+ {
+  "id": 1006670,
+  "m": [
+   {
+    "vi": "chỗ đó, nơi đó"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "そこに置いてある辞書を取っていただけますか。",
+    "vi": "Bạn có thể lấy giúp tôi cuốn từ điển đặt ở chỗ đó được không?"
+   },
+   {
+    "ja": "危ないですからそこから離れてください。",
+    "vi": "Nguy hiểm lắm nên xin hãy tránh xa chỗ đó ra."
+   }
+  ],
+  "hv": "kỳ xử"
+ },
+ {
+  "id": 1006730,
+  "m": [
+   {
+    "vi": "và, rồi thì"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "朝起きて顔を洗った。そして朝食を食べた。",
+    "vi": "Buổi sáng tôi thức dậy rửa mặt. Và rồi ăn bữa sáng."
+   },
+   {
+    "ja": "彼女は優しく、そしてとても聡明な人だ。",
+    "vi": "Cô ấy dịu dàng và là một người vô cùng thông minh."
+   }
+  ]
+ },
+ {
+  "id": 1006780,
+  "m": [
+   {
+    "vi": "phía đó, bên đó, quý vị"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "そちらの窓側の席へどうぞお進みください。",
+    "vi": "Xin mời quý khách tiến về phía chỗ ngồi gần cửa sổ đằng đó ạ."
+   },
+   {
+    "ja": "そちらのご都合はいかがでしょうか。",
+    "vi": "Thời gian bên quý vị sắp xếp như thế nào ạ?"
+   }
+  ],
+  "hv": "kỳ phương"
+ },
+ {
+  "id": 1006790,
+  "m": [
+   {
+    "vi": "giống hệt, y đúc, toàn bộ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼女は若い頃のお母さんに顔がそっくりだ。",
+    "vi": "Gương mặt cô ấy giống hệt như người mẹ lúc còn trẻ."
+   },
+   {
+    "ja": "お小遣いをそっくり貯金に回した。",
+    "vi": "Tôi đã dành toàn bộ số tiền tiêu vặt cho vào tiết kiệm."
+   }
+  ]
+ },
+ {
+  "id": 1006810,
+  "m": [
+   {
+    "vi": "nhẹ nhàng, rón rén, để yên"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "赤ちゃんを起こさないようにそっとドアを閉めた。",
+    "vi": "Tôi nhẹ nhàng đóng cửa để không đánh thức em bé."
+   },
+   {
+    "ja": "疲れているようだから今はそっとしておこう。",
+    "vi": "Có vẻ anh ấy đang mệt nên bây giờ cứ để anh ấy yên."
+   }
+  ]
+ },
+ {
+  "id": 1006830,
+  "m": [
+   {
+    "vi": "đó, ấy"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "その本を読み終わったら貸してください。",
+    "vi": "Khi nào đọc xong cuốn sách đó thì cho tôi mượn nhé."
+   },
+   {
+    "ja": "その件については明日改めて話し合いましょう。",
+    "vi": "Về chuyện ấy ngày mai chúng ta hãy thảo luận lại."
+   }
+  ],
+  "hv": "kỳ"
+ },
+ {
+  "id": 1006930,
+  "m": [
+   {
+    "vi": "chẳng mấy chốc, sớm muộn gì, trong số đó"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "練習を続ければそのうち上手に話せるようになる。",
+    "vi": "Nếu tiếp tục luyện tập thì chẳng mấy chốc bạn sẽ nói giỏi thôi."
+   },
+   {
+    "ja": "そのうち一度遊びに行きますね。",
+    "vi": "Sớm muộn gì tôi cũng sẽ ghé qua chơi một chuyến nhé."
+   }
+  ]
+ },
+ {
+  "id": 1006980,
+  "m": [
+   {
+    "vi": "sau đó, tiếp theo"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "図書館で勉強した。其れから友達と映画を見た。",
+    "vi": "Tôi học bài ở thư viện. Sau đó tôi đã đi xem phim cùng bạn bè."
+   },
+   {
+    "ja": "まず材料を切ります。其れから鍋で炒めます。",
+    "vi": "Trước hết cắt gọt nguyên liệu. Tiếp theo xào trong chảo."
+   }
+  ],
+  "hv": "kỳ"
+ },
+ {
+  "id": 1007000,
+  "m": [
+   {
+    "vi": "vì thế, thế rồi, do đó"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "昨夜は夜更かしをした。それで今朝寝坊した。",
+    "vi": "Tối qua tôi thức khuya. Do đó sáng nay tôi đã dậy muộn."
+   },
+   {
+    "ja": "それで、その話はどうなったのですか。",
+    "vi": "Thế rồi, câu chuyện đó kết cục ra sao rồi?"
+   }
+  ],
+  "hv": "kỳ"
+ },
+ {
+  "id": 1007010,
+  "m": [
+   {
+    "vi": "hoặc là, hay là"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "コーヒーにしますか、其れとも紅茶にしますか。",
+    "vi": "Quý khách dùng cà phê hay là dùng hồng trà ạ?"
+   },
+   {
+    "ja": "歩いて行きますか、其れともバスに乗りますか。",
+    "vi": "Chúng ta sẽ đi bộ hay là đi xe buýt?"
+   }
+  ],
+  "hv": "kỳ"
+ },
+ {
+  "id": 1007040,
+  "m": [
+   {
+    "vi": "hơn nữa, vả lại, thêm vào đó"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "この部屋は広くて明るい。其れに家賃も安い。",
+    "vi": "Căn phòng này rộng rãi và sáng sủa. Hơn nữa tiền thuê lại rẻ."
+   },
+   {
+    "ja": "今日は寒くて、其れに雨まで降ってきた。",
+    "vi": "Hôm nay trời lạnh, thêm vào đó lại còn đổ mưa nữa."
+   }
+  ],
+  "hv": "kỳ"
+ },
+ {
+  "id": 1007060,
+  "m": [
+   {
+    "vi": "đến mức ấy, đến thế"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "心配していたが、それほど難しい試験ではなかった。",
+    "vi": "Tôi đã lo lắng nhưng bài thi không đến mức khó đến thế."
+   },
+   {
+    "ja": "それほど怒る必要はないと思いますよ。",
+    "vi": "Tôi nghĩ không cần thiết phải nổi giận đến mức độ ấy đâu."
+   }
+  ]
+ },
+ {
+  "id": 1007130,
+  "m": [
+   {
+    "vi": "như thế, kiểu ấy"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "そんな酷いことを言うのはやめなさい。",
+    "vi": "Hãy thôi nói những điều tệ bạc như thế đi."
+   },
+   {
+    "ja": "そんなことは夢にも思わなかった。",
+    "vi": "Chuyện kiểu ấy tôi có nằm mơ cũng không ngờ tới."
+   }
+  ]
+ },
+ {
+  "id": 1007230,
+  "m": [
+   {
+    "vi": "chỉ, vẻn vẹn"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "たった千円しか財布に入っていなかった。",
+    "vi": "Trong ví chỉ có vẻn vẹn một nghìn yên."
+   },
+   {
+    "ja": "たった一人でこの大きな仕事をやり遂げた。",
+    "vi": "Anh ấy đã hoàn thành công việc to lớn này chỉ với một mình."
+   }
+  ]
+ },
+ {
+  "id": 1007240,
+  "m": [
+   {
+    "vi": "đầy ắp, dồi dào, thoải mái"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "栄養たっぷりの温かい野菜スープを作った。",
+    "vi": "Tôi đã nấu món súp rau củ ấm nóng dồi dào dinh dưỡng."
+   },
+   {
+    "ja": "時間はたっぷりあるから慌てなくていいよ。",
+    "vi": "Thời gian còn thoải mái lắm nên không cần vội vàng đâu."
+   }
+  ]
+ },
+ {
+  "id": 1007310,
+  "m": [
+   {
+    "vi": "vì vậy, cho nên"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "雨が降っている。だから傘を持って行きなさい。",
+    "vi": "Trời đang mưa đấy. Vì vậy con hãy mang theo ô đi."
+   },
+   {
+    "ja": "彼は真面目だ。だからみんなに好かれている。",
+    "vi": "Cậu ấy đứng đắn chăm chỉ. Cho nên cậu ấy được mọi người quý mến."
+   }
+  ]
+ },
+ {
+  "id": 1007370,
+  "m": [
+   {
+    "vi": "nhưng, tuy nhiên"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "行きたいのは山々だけど、時間がない。",
+    "vi": "Tôi rất muốn đi nhưng lại chẳng có thời gian."
+   },
+   {
+    "ja": "値段は高い、だけど品質は本当に素晴らしい。",
+    "vi": "Giá cả đắt đỏ, tuy nhiên chất lượng quả thực tuyệt vời."
+   }
+  ]
+ },
+ {
+  "id": 1007560,
+  "m": [
+   {
+    "vi": "một chút cũng (không), chẳng... tí nào"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼の話は難しくてちっとも分からなかった。",
+    "vi": "Câu chuyện của anh ấy khó quá tôi chẳng hiểu một tí nào."
+   },
+   {
+    "ja": "いくら歩いても彼女はちっとも疲れないようだ。",
+    "vi": "Đi bộ bao nhiêu đi nữa cô ấy dường như chẳng hề mệt mỏi chút nào."
+   }
+  ]
+ },
+ {
+  "id": 1007660,
+  "m": [
+   {
+    "vi": "bé, em (hậu tố xưng hô thân mật)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "花子ちゃん、一緒に公園へ遊びに行こう。",
+    "vi": "Bé Hanako ơi, cùng đi ra công viên chơi nào."
+   },
+   {
+    "ja": "可愛い猫のみーちゃんが私の膝に乗ってきた。",
+    "vi": "Bé mèo Mi-chan đáng yêu trèo lên ngồi trên lòng tôi."
+   }
+  ]
+ },
+ {
+  "id": 1007720,
+  "m": [
+   {
+    "vi": "cẩn thận, đàng hoàng, tươm tất"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "朝ご飯をちゃんと食べてから学校へ行きなさい。",
+    "vi": "Con hãy ăn sáng đàng hoàng rồi mới đi học nhé."
+   },
+   {
+    "ja": "言われたことをちゃんとノートにメモした。",
+    "vi": "Tôi đã ghi chép cẩn thận những điều được dặn vào vở."
+   }
+  ]
+ },
+ {
+  "id": 1008190,
+  "m": [
+   {
+    "vi": "chán ngắt, tầm thường, vô vị"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "テレビでつまらない番組ばかり放送している。",
+    "vi": "Trên tivi toàn phát những chương trình chán ngắt."
+   },
+   {
+    "ja": "つまらないものですが、どうぞお受け取りください。",
+    "vi": "Chỉ là chút quà mọn tầm thường nhưng xin anh nhận cho ạ."
+   }
+  ]
+ },
+ {
+  "id": 1008430,
+  "m": [
+   {
+    "vi": "vì thế, do đó (lịch sự)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "明日は大雪の予報です。ですから外出は控えましょう。",
+    "vi": "Ngày mai dự báo có tuyết lớn. Do đó chúng ta nên hạn chế ra ngoài."
+   },
+   {
+    "ja": "締め切りは本日です。ですから急いで提出してください。",
+    "vi": "Hạn chót là hôm nay. Vì thế xin hãy khẩn trương nộp bài."
+   }
+  ]
+ },
+ {
+  "id": 1008450,
+  "m": [
+   {
+    "vi": "vậy thì, thế thì"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "では、本日の講義をこれで終わります。",
+    "vi": "Vậy thì, bài giảng ngày hôm nay xin kết thúc tại đây."
+   },
+   {
+    "ja": "では、また来週お会いしましょう。",
+    "vi": "Thế thì hẹn gặp lại quý vị vào tuần sau nhé."
+   }
+  ]
+ },
+ {
+  "id": 1008460,
+  "m": [
+   {
+    "vi": "nhưng, tuy nhiên, dẫu cho"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "旅行に行きたい。でもお金が足りない。",
+    "vi": "Tôi muốn đi du lịch. Nhưng tiền lại không đủ."
+   },
+   {
+    "ja": "子供でも簡単に使える便利な道具だ。",
+    "vi": "Đây là dụng cụ tiện lợi mà dẫu là trẻ con cũng dùng được dễ dàng."
+   }
+  ]
+ },
+ {
+  "id": 1008570,
+  "m": [
+   {
+    "vi": "thế nhưng, tuy nhiên, vậy mà"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "約束の時間に行った。ところが彼はまだ来ていなかった。",
+    "vi": "Tôi đã đến đúng giờ hẹn. Thế nhưng anh ấy vẫn chưa tới."
+   },
+   {
+    "ja": "一生懸命勉強した。ところが試験に落ちてしまった。",
+    "vi": "Tôi đã học tập hết mình. Vậy mà lại trượt kỳ thi."
+   }
+  ]
+ },
+ {
+  "id": 1008630,
+  "m": [
+   {
+    "vi": "rất, vô cùng, hoàn toàn (không thể)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "富士山の頂上からの景色はとても美しかった。",
+    "vi": "Phong cảnh nhìn từ đỉnh núi Phú Sĩ vô cùng tươi đẹp."
+   },
+   {
+    "ja": "一人ではとても運びきれない重い荷物だ。",
+    "vi": "Kiện hàng nặng đến mức một người thì hoàn toàn không thể khiêng nổi."
+   }
+  ]
+ },
+ {
+  "id": 1008790,
+  "m": [
+   {
+    "vi": "không có chuyện đó, đâu có, quá đáng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "「お世話になりました」「いいえ、とんでも無いことです」",
+    "vi": "「Cảm ơn anh đã giúp đỡ ạ」「Không có chi, đâu có gì to tát đâu ạ」"
+   },
+   {
+    "ja": "とんでも無い時間に電話がかかってきて起こされた。",
+    "vi": "Tôi bị đánh thức bởi cuộc gọi đến vào một giờ giấc quá đáng vô lý."
+   }
+  ],
+  "hv": "vô"
+ },
+ {
+  "id": 1008910,
+  "m": [
+   {
+    "vi": "như thế nào, làm sao, ra sao"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "この問題はどうやって解決すればいいでしょうか。",
+    "vi": "Vấn đề này thì nên giải quyết như thế nào đây ạ?"
+   },
+   {
+    "ja": "食後に温かいコーヒーでも一杯どうですか。",
+    "vi": "Sau bữa ăn làm một tách cà phê ấm nóng thì ra sao nhỉ?"
+   }
+  ]
+ },
+ {
+  "id": 1009000,
+  "m": [
+   {
+    "vi": "cảm ơn, xin chào, dường như"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "手伝ってくれてどうもありがとう。",
+    "vi": "Cảm ơn bạn rất nhiều vì đã giúp đỡ mình."
+   },
+   {
+    "ja": "どうも最近体の調子がすぐれない。",
+    "vi": "Dường như dạo này sức khỏe của tôi không được tốt lắm."
+   }
+  ]
+ },
+ {
+  "id": 1009290,
+  "m": [
+   {
+    "vi": "cái nào (trong nhiều cái), nào"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "並んでいるケーキの中でどれが一番好きですか。",
+    "vi": "Trong số những chiếc bánh kem đang xếp hàng thì bạn thích cái nào nhất?"
+   },
+   {
+    "ja": "どれ、ちょっと見せてごらん。",
+    "vi": "Nào, đưa đây cho tôi xem một chút xem nào."
+   }
+  ]
+ },
+ {
+  "id": 1009320,
+  "m": [
+   {
+    "vi": "dồn dập, nhanh chóng, liên hồi"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "遠慮しないでどんどん質問してください。",
+    "vi": "Xin đừng ngại ngần mà hãy nhanh chóng liên tục đặt câu hỏi nhé."
+   },
+   {
+    "ja": "新しい技術が世の中にどんどん普及している。",
+    "vi": "Công nghệ mới đang được phổ cập nhanh chóng trong xã hội."
+   }
+  ]
+ },
+ {
+  "id": 1009330,
+  "m": [
+   {
+    "vi": "như thế nào, loại nào"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "将来はどんな仕事に就きたいと考えていますか。",
+    "vi": "Tương lai bạn dự định sẽ làm loại công việc như thế nào?"
+   },
+   {
+    "ja": "どんな困難があっても諦めずに進む。",
+    "vi": "Dù có bất kỳ khó khăn nào cũng không bỏ cuộc mà tiến lên."
+   }
+  ]
+ },
+ {
+  "id": 1009340,
+  "m": [
+   {
+    "vi": "dù cho... đến đâu, biết bao"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "どんなに辛くても最後まで頑張り抜くつもりだ。",
+    "vi": "Dù cho có gian khổ đến đâu tôi cũng dự định cố gắng đến cùng."
+   },
+   {
+    "ja": "彼に会えたらどんなに嬉しいことだろう。",
+    "vi": "Nếu được gặp lại anh ấy thì sẽ vui mừng biết bao nhiêu."
+   }
+  ]
+ },
+ {
+  "id": 1009410,
+  "m": [
+   {
+    "vi": "bởi vì, lý do là"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "今日は早く寝ます。なぜなら明日朝早く起きるからです。",
+    "vi": "Hôm nay tôi sẽ đi ngủ sớm. Bởi vì sáng mai tôi phải dậy rất sớm."
+   },
+   {
+    "ja": "彼は成功した。なぜなら決して諦めなかったからだ。",
+    "vi": "Anh ấy đã thành công. Lý do là vì anh ấy chưa từng bao giờ bỏ cuộc."
+   }
+  ]
+ },
+ {
+  "id": 1010050,
+  "m": [
+   {
+    "vi": "thong thả, thong dong, thư thả"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "週末は温泉に入ってのんびり過ごしたい。",
+    "vi": "Cuối tuần tôi muốn đi ngâm suối nước nóng và thư thả nghỉ ngơi."
+   },
+   {
+    "ja": "田舎の静かな景色を眺めてのんびりした。",
+    "vi": "Tôi cảm thấy thật thong thả khi ngắm nhìn phong cảnh yên bình nơi làng quê."
+   }
+  ]
+ },
+ {
+  "id": 1010080,
+  "m": [
+   {
+    "vi": "vâng, dạ, có"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "「田中さん」「はい、ここにいます」",
+    "vi": "「Anh Tanaka」「Vâng, có tôi ở đây」"
+   },
+   {
+    "ja": "はい、ご指示の通りに準備いたします。",
+    "vi": "Dạ vâng, tôi sẽ chuẩn bị theo đúng như chỉ thị."
+   }
+  ]
+ },
+ {
+  "id": 1010150,
+  "m": [
+   {
+    "vi": "rõ ràng, rành mạch"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "自分の意見を相手にはっきりと言いなさい。",
+    "vi": "Hãy nói rõ ràng rành mạch ý kiến của mình cho đối phương biết."
+   },
+   {
+    "ja": "遠くの山が青空の中にくっきりはっきりと見えた。",
+    "vi": "Ngọn núi đằng xa hiện lên rõ ràng rành rẽ giữa nền trời xanh."
+   }
+  ]
+ },
+ {
+  "id": 1010900,
+  "m": [
+   {
+    "vi": "vừa vặn, khớp, sít sao"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "この靴は私の足のサイズにぴったりだ。",
+    "vi": "Đôi giày này vừa vặn y khít với kích cỡ chân của tôi."
+   },
+   {
+    "ja": "電車のドアがぴったりと閉まった。",
+    "vi": "Cánh cửa tàu điện đã đóng chặt sít sao."
+   }
+  ]
+ },
+ {
+  "id": 1011920,
+  "m": [
+   {
+    "vi": "mờ ảo, lơ đãng, thẫn thờ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "霧が濃くて遠くの景色が呆んやりとしか見えない。",
+    "vi": "Sương mù dày đặc nên cảnh vật phía xa chỉ nhìn thấy mờ mờ ảo ảo."
+   },
+   {
+    "ja": "窓の外を呆んやりと眺めて時間を過ごした。",
+    "vi": "Tôi ngồi lơ đãng thẫn thờ ngắm nhìn ra ngoài cửa sổ để giết thời gian."
+   }
+  ],
+  "hv": "ngốc"
+ },
+ {
+  "id": 1012050,
+  "m": [
+   {
+    "vi": "nào, chà, tàm tạm"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "まあ、そう怒らないで私の話を聞いてください。",
+    "vi": "Nào, đừng giận như thế mà hãy nghe tôi nói đã."
+   },
+   {
+    "ja": "今回の試験の成績はまあまあ良かった。",
+    "vi": "Thành tích kỳ thi lần này tàm tạm ổn."
+   }
+  ]
+ },
+ {
+  "id": 1012480,
+  "m": [
+   {
+    "vi": "đã, rồi, sắp sửa, thêm nữa"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "時計を見るともう十二時を回っていた。",
+    "vi": "Nhìn đồng hồ thì đã quá mười hai giờ rồi."
+   },
+   {
+    "ja": "もう一杯お茶をいただけますか。",
+    "vi": "Bạn có thể cho tôi xin thêm một tách trà nữa được không?"
+   }
+  ]
+ },
+ {
+  "id": 1012620,
+  "m": [
+   {
+    "vi": "hơn nữa, thêm nữa"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "日本語がもっと上手に話せるようになりたい。",
+    "vi": "Tôi muốn có thể nói tiếng Nhật giỏi hơn nữa."
+   },
+   {
+    "ja": "もっと近くに寄ってよく見てください。",
+    "vi": "Xin hãy xích lại gần hơn nữa để nhìn cho rõ."
+   }
+  ]
+ },
+ {
+  "id": 1012730,
+  "m": [
+   {
+    "vi": "chẳng mấy chốc, rồi thì, dần dà"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "暗い夜が明けてやがて朝日が昇ってきた。",
+    "vi": "Đêm đen tan đi và chẳng mấy chốc ánh bình minh đã ló rạng."
+   },
+   {
+    "ja": "小さな芽はやがて大きな木に成長するだろう。",
+    "vi": "Chồi non nhỏ bé dần dà sẽ phát triển thành một cái cây to lớn."
+   }
+  ]
+ },
+ {
+  "id": 1012800,
+  "m": [
+   {
+    "vi": "cuối cùng thì, vừa vặn"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "長い間勉強してやっと試験に合格した。",
+    "vi": "Sau thời gian dài học tập cuối cùng tôi cũng đã thi đỗ."
+   },
+   {
+    "ja": "走ってギリギリでやっと終電に間に合った。",
+    "vi": "Tôi chạy thục mạng và vừa vặn kịp chuyến tàu cuối cùng."
+   }
+  ]
+ },
+ {
+  "id": 1012810,
+  "m": [
+   {
+    "vi": "quả nhiên, đúng như dự đoán, rốt cuộc"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "やっぱり彼が試合で優勝したね。",
+    "vi": "Quả nhiên là anh ấy đã vô địch giải đấu nhỉ."
+   },
+   {
+    "ja": "いろいろ考えたが、やっぱり家で休むことにした。",
+    "vi": "Suy đi tính lại nhiều nhưng rốt cuộc tôi quyết định ở nhà nghỉ ngơi."
+   }
+  ]
+ },
+ {
+  "id": 1012980,
+  "m": [
+   {
+    "vi": "làm, thực hiện, cho"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "宿題を早くやって遊びに出かけよう。",
+    "vi": "Mau làm xong bài tập về nhà rồi đi chơi thôi."
+   },
+   {
+    "ja": "庭の植木に毎日水をやる。",
+    "vi": "Mỗi ngày tôi đều tưới nước cho cây cảnh trong vườn."
+   }
+  ]
+ },
+ {
+  "id": 1013050,
+  "m": [
+   {
+    "vi": "chậm rãi, từ tốn, thong thả"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "慌てないでゆっくり話してください。",
+    "vi": "Đừng vội vàng mà hãy nói chậm rãi từ tốn thôi."
+   },
+   {
+    "ja": "お休みの日は家でゆっくり休みたい。",
+    "vi": "Vào ngày nghỉ tôi muốn thong thả nghỉ ngơi ở nhà."
+   }
+  ]
+ },
+ {
+  "id": 1013190,
+  "m": [
+   {
+    "vi": "hơn, so với, từ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "飛行機は新幹線よりスピードが速い。",
+    "vi": "Máy bay có tốc độ nhanh hơn so với tàu siêu tốc Shinkansen."
+   },
+   {
+    "ja": "九時より会議室にて面接を行います。",
+    "vi": "Bắt đầu từ chín giờ sẽ tiến hành phỏng vấn tại phòng họp."
+   }
+  ]
+ },
+ {
+  "id": 1013980,
+  "m": [
+   {
+    "vi": "kem (ăn)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "暑い夏の日には冷たいアイスクリームが一番だ。",
+    "vi": "Vào ngày hè nóng nực thì món kem mát lạnh là tuyệt nhất."
+   },
+   {
+    "ja": "食後にバニラ味のアイスクリームを食べた。",
+    "vi": "Sau bữa ăn tôi đã thưởng thức một que kem vị vani."
+   }
+  ]
+ },
+ {
+  "id": 1014590,
+  "m": [
+   {
+    "vi": "bàn là, bàn ủi"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "出かける前にシャツにアイロンをかけた。",
+    "vi": "Trước khi ra ngoài tôi đã ủi bàn là chiếc áo sơ mi phẳng phiu."
+   },
+   {
+    "ja": "使い終わったアイロンは熱いので気をつけてね。",
+    "vi": "Bàn là dùng xong còn rất nóng nên con hãy cẩn thận nhé."
+   }
+  ]
+ },
+ {
+  "id": 1014680,
+  "m": [
+   {
+    "vi": "ra ngoài biên, loại (thể thao)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "打球が白線の外に出てアウトになった。",
+    "vi": "Quả bóng bay ra ngoài vạch trắng nên bị tính là ngoài sân."
+   },
+   {
+    "ja": "三振でバッターがアウトになった。",
+    "vi": "Cầu thủ đánh bóng đã bị loại sau ba cú vung gậy hụt."
+   }
+  ]
+ },
+ {
+  "id": 1015220,
+  "m": [
+   {
+    "vi": "đồ trang sức, phụ kiện"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼女は胸元にきれいなアクセサリーをつけている。",
+    "vi": "Cô ấy đeo món đồ trang sức xinh đẹp trước ngực."
+   },
+   {
+    "ja": "手作りのアクセサリーを友達にプレゼントした。",
+    "vi": "Tôi đã tặng người bạn món phụ kiện trang sức tự làm."
+   }
+  ]
+ },
+ {
+  "id": 1015840,
+  "m": [
+   {
+    "vi": "Châu Á"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "日本は東アジアに位置する島国です。",
+    "vi": "Nhật Bản là một đảo quốc nằm ở Đông Á."
+   },
+   {
+    "ja": "アジア諸国の経済成長が著しい。",
+    "vi": "Sự tăng trưởng kinh tế của các quốc gia Châu Á rất đáng chú ý."
+   }
+  ]
+ },
+ {
+  "id": 1017330,
+  "m": [
+   {
+    "vi": "phát thanh viên, người dẫn chương trình"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "アナウンサーが明日の天気予報を伝えている。",
+    "vi": "Phát thanh viên đang truyền tải bản tin dự báo thời tiết ngày mai."
+   },
+   {
+    "ja": "将来はテレビのアナウンサーになりたい。",
+    "vi": "Tương lai tôi muốn trở thành một người dẫn chương trình truyền hình."
+   }
+  ]
+ },
+ {
+  "id": 1017760,
+  "m": [
+   {
+    "vi": "căn hộ chung cư, căn hộ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "大学の近くにあるアパートで一人暮らしをしている。",
+    "vi": "Tôi đang sống một mình trong một căn hộ gần trường đại học."
+   },
+   {
+    "ja": "駅から徒歩五分の便利なアパートに引っ越した。",
+    "vi": "Tôi đã chuyển tới một căn hộ tiện lợi chỉ mất năm phút đi bộ từ ga."
+   }
+  ]
+ },
+ {
+  "id": 1019280,
+  "m": [
+   {
+    "vi": "cồn, đồ uống có cồn, rượu"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "アルコールで手の消毒をしっかり行おう。",
+    "vi": "Chúng ta hãy sát trùng tay thật kỹ bằng cồn xịt khuẩn."
+   },
+   {
+    "ja": "運転する人はアルコールを飲んではいけません。",
+    "vi": "Người lái xe tuyệt đối không được uống rượu bia chất có cồn."
+   }
+  ]
+ },
+ {
+  "id": 1019420,
+  "m": [
+   {
+    "vi": "việc làm thêm, nhân viên làm thêm"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "放課後にコンビニでアルバイトをしている。",
+    "vi": "Sau giờ học tôi đi làm thêm ở cửa hàng tiện lợi."
+   },
+   {
+    "ja": "夏休みに新しいアルバイトを探すつもりだ。",
+    "vi": "Kỳ nghỉ hè tôi dự định sẽ tìm một công việc làm thêm mới."
+   }
+  ]
+ },
+ {
+  "id": 1019450,
+  "m": [
+   {
+    "vi": "album ảnh"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "昔の写真をアルバムにきれいに整理した。",
+    "vi": "Tôi đã sắp xếp những bức ảnh cũ vào cuốn album thật gọn gàng."
+   },
+   {
+    "ja": "家族のアルバムを見ながら思い出を語り合った。",
+    "vi": "Chúng tôi vừa ngắm album ảnh gia đình vừa ôn lại kỷ niệm."
+   }
+  ]
+ },
+ {
+  "id": 1022210,
+  "m": [
+   {
+    "vi": "mực (viết, in)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ペンのインクが切れたので新しい芯に替えた。",
+    "vi": "Bút hết mực nên tôi đã thay ngòi mới."
+   },
+   {
+    "ja": "プリンターのインクを補充してください。",
+    "vi": "Xin hãy nạp thêm mực cho máy in."
+   }
+  ]
+ },
+ {
+  "id": 1025140,
+  "m": [
+   {
+    "vi": "rượu whisky"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "父は夜にロックでウイスキーを飲むのが好きだ。",
+    "vi": "Buổi tối bố tôi thích nhâm nhi rượu whisky với đá tảng."
+   },
+   {
+    "ja": "スコットランド産の有名なウイスキーをもらった。",
+    "vi": "Tôi đã được tặng chai rượu whisky nổi tiếng xuất xứ Scotland."
+   }
+  ]
+ },
+ {
+  "id": 1028580,
+  "m": [
+   {
+    "vi": "thang cuốn"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "デパートのエスカレーターで三階へ上がった。",
+    "vi": "Tôi đi thang cuốn của trung tâm thương mại lên tầng ba."
+   },
+   {
+    "ja": "エスカレーターでは手すりにつかまってお乗りください。",
+    "vi": "Khi đi thang cuốn xin hãy vịn vào tay vịn."
+   }
+  ]
+ },
+ {
+  "id": 1029430,
+  "m": [
+   {
+    "vi": "năng lượng, nghị lực"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "太陽光などの自然エネルギーを活用する。",
+    "vi": "Tận dụng các nguồn năng lượng tự nhiên như ánh sáng mặt trời."
+   },
+   {
+    "ja": "子供たちはエネルギーに満ちあふれている。",
+    "vi": "Lũ trẻ tràn đầy năng lượng và nhiệt huyết."
+   }
+  ]
+ },
+ {
+  "id": 1030630,
+  "m": [
+   {
+    "vi": "thang máy"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "重い荷物があるのでエレベーターを使いましょう。",
+    "vi": "Có hành lý nặng nên chúng ta hãy dùng thang máy nhé."
+   },
+   {
+    "ja": "エレベーターのボタンを押して扉が開くのを待った。",
+    "vi": "Tôi bấm nút thang máy và chờ cửa mở."
+   }
+  ]
+ },
+ {
+  "id": 1030950,
+  "m": [
+   {
+    "vi": "động cơ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "車のエンジンをかけて出発の準備をした。",
+    "vi": "Tôi nổ máy động cơ ô tô và chuẩn bị xuất phát."
+   },
+   {
+    "ja": "エンジンの調子が悪くて異音がする。",
+    "vi": "Động cơ gặp trục trặc và phát ra tiếng kêu lạ."
+   }
+  ]
+ },
+ {
+  "id": 1032030,
+  "m": [
+   {
+    "vi": "xe máy, xe mô tô"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "オートバイに乗るときは必ずヘルメットをかぶる。",
+    "vi": "Khi đi xe máy nhất định phải đội mũ bảo hiểm."
+   },
+   {
+    "ja": "彼は新しいオートバイでツーリングに出かけた。",
+    "vi": "Anh ấy đã lái chiếc xe mô tô mới đi phượt."
+   }
+  ]
+ },
+ {
+  "id": 1032390,
+  "m": [
+   {
+    "vi": "áo khoác ngoài, quá mức, thổi phồng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "冬の寒い日は厚手のオーバーを着ていく。",
+    "vi": "Vào những ngày đông giá rét tôi mặc chiếc áo khoác ngoài dày dặn."
+   },
+   {
+    "ja": "重量が制限をオーバーしてしまった。",
+    "vi": "Trọng lượng đã vượt quá mức giới hạn quy định mất rồi."
+   }
+  ]
+ },
+ {
+  "id": 1034660,
+  "m": [
+   {
+    "vi": "văn phòng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "駅前の高層ビルの中に新しいオフィスがある。",
+    "vi": "Bên trong tòa nhà cao tầng trước ga có một văn phòng mới."
+   },
+   {
+    "ja": "快適なオフィス環境で仕事がはかどる。",
+    "vi": "Môi trường văn phòng thoải mái giúp công việc tiến triển nhanh chóng."
+   }
+  ]
+ },
+ {
+  "id": 1036170,
+  "m": [
+   {
+    "vi": "xe hơi, ô tô"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "休日にマイカーで家族とドライブを楽しんだ。",
+    "vi": "Vào ngày nghỉ tôi cùng gia đình tận hưởng chuyến đi chơi bằng xe hơi riêng."
+   },
+   {
+    "ja": "スポーツカーが目の前を猛スピードで走り去った。",
+    "vi": "Chiếc xe thể thao đã lao vụt qua trước mắt với tốc độ xé gió."
+   }
+  ]
+ },
+ {
+  "id": 1036290,
+  "m": [
+   {
+    "vi": "rèm cửa"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "朝起きて窓のカーテンを開けると青空が広がっていた。",
+    "vi": "Sáng thức dậy mở rèm cửa sổ ra thấy bầu trời xanh bao la."
+   },
+   {
+    "ja": "部屋の雰囲気に合わせて白いカーテンを選んだ。",
+    "vi": "Tôi đã chọn chiếc rèm cửa màu trắng cho phù hợp với không khí căn phòng."
+   }
+  ]
+ },
+ {
+  "id": 1036400,
+  "m": [
+   {
+    "vi": "thẻ (ngân hàng, thiệp, thẻ thông tin)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "買い物のお支払いはクレジットカードで済ませた。",
+    "vi": "Tôi đã thanh toán mua sắm bằng thẻ tín dụng."
+   },
+   {
+    "ja": "誕生日に友達から心のこもったカードをもらった。",
+    "vi": "Vào ngày sinh nhật tôi nhận được tấm thiệp chân thành từ bạn bè."
+   }
+  ]
+ },
+ {
+  "id": 1037670,
+  "m": [
+   {
+    "vi": "cốc, tách, cúp thưởng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "コーヒーカップに温かいお茶を注いだ。",
+    "vi": "Tôi rót trà ấm vào chiếc tách uống cà phê."
+   },
+   {
+    "ja": "サッカー大会で優勝して金色のカップを手にした。",
+    "vi": "Vô địch giải bóng đá và giành được chiếc cúp vàng trong tay."
+   }
+  ]
+ },
+ {
+  "id": 1038350,
+  "m": [
+   {
+    "vi": "máy ảnh, máy quay"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "旅行の思い出を新しいカメラでたくさん撮影した。",
+    "vi": "Tôi đã dùng máy ảnh mới chụp thật nhiều bức ảnh kỷ niệm chuyến đi."
+   },
+   {
+    "ja": "カメラを首から下げて観光地を歩き回る。",
+    "vi": "Đeo chiếc máy ảnh lủng lẳng trước cổ và đi dạo quanh khu danh lam."
+   }
+  ]
+ },
+ {
+  "id": 1039140,
+  "m": [
+   {
+    "vi": "món cà ri, cơm cà ri"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "今日のお昼ご飯はスパイシーなカレーライスだ。",
+    "vi": "Bữa cơm trưa hôm nay là món cơm cà ri cay nồng."
+   },
+   {
+    "ja": "玉ねぎと牛肉を煮込んで美味しいカレーを作った。",
+    "vi": "Tôi hầm hành tây cùng thịt bò để nấu món cà ri thơm ngon."
+   }
+  ],
+  "hv": "ca lí"
+ },
+ {
+  "id": 1039220,
+  "m": [
+   {
+    "vi": "lịch, cuốn lịch"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "壁のカレンダーに今月の予定を書き込んだ。",
+    "vi": "Tôi đã viết kín lịch trình của tháng này lên cuốn lịch treo tường."
+   },
+   {
+    "ja": "新年を迎えるために新しいカレンダーを買った。",
+    "vi": "Tôi mua cuốn lịch mới để chào đón năm mới."
+   }
+  ]
+ },
+ {
+  "id": 1040060,
+  "m": [
+   {
+    "vi": "khí đốt, khí ga, sương mù dày"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "お湯を沸かすためにガスの火をつけた。",
+    "vi": "Tôi bật lửa bếp ga để đun sôi nước."
+   },
+   {
+    "ja": "山の頂上は濃いガスに覆われて見通しが悪い。",
+    "vi": "Đỉnh núi bị bao phủ bởi lớp sương mù dày đặc khiến tầm nhìn rất kém."
+   }
+  ]
+ },
+ {
+  "id": 1040250,
+  "m": [
+   {
+    "vi": "xăng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "車のガソリンがもうすぐなくなりそうだ。",
+    "vi": "Xăng trong xe ô tô có vẻ sắp cạn kiệt đến nơi rồi."
+   },
+   {
+    "ja": "ガソリンの価格が最近値上がりしている。",
+    "vi": "Giá xăng gần đây đang có xu hướng tăng cao."
+   }
+  ]
+ },
+ {
+  "id": 1040260,
+  "m": [
+   {
+    "vi": "trạm xăng, cây xăng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "次の交差点を左に曲がるとガソリンスタンドがある。",
+    "vi": "Rẽ trái ở ngã tư tiếp theo là có một trạm xăng."
+   },
+   {
+    "ja": "ガソリンスタンドに寄って満タンに給油した。",
+    "vi": "Tôi ghé vào cây xăng và đổ đầy bình nhiên liệu."
+   }
+  ]
+ },
+ {
+  "id": 1040380,
+  "m": [
+   {
+    "vi": "thủy tinh, kính"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ボールが当たって窓のガラスが割れてしまった。",
+    "vi": "Quả bóng đập trúng làm tấm kính cửa sổ bị vỡ tan."
+   },
+   {
+    "ja": "透明なガラスのコップに冷たい水を注ぐ。",
+    "vi": "Rót nước mát lạnh vào chiếc cốc bằng thủy tinh trong suốt."
+   }
+  ],
+  "hv": "tiêu tử"
+ },
+ {
+  "id": 1041850,
+  "m": [
+   {
+    "vi": "đội trưởng, thuyền trưởng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼はサッカー部のキャプテンとしてチームを引っ張る。",
+    "vi": "Cậu ấy là đội trưởng câu lạc bộ bóng đá dẫn dắt toàn đội."
+   },
+   {
+    "ja": "キャプテンの力強い言葉に選手たちが奮い立った。",
+    "vi": "Các cầu thủ đã được cổ vũ mạnh mẽ bởi những lời đanh thép của người đội trưởng."
+   }
+  ]
+ },
+ {
+  "id": 1042200,
+  "m": [
+   {
+    "vi": "cắm trại"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "夏休みに友達と川辺でキャンプを楽しんだ。",
+    "vi": "Kỳ nghỉ hè tôi cùng bạn bè tận hưởng buổi cắm trại bên bờ sông."
+   },
+   {
+    "ja": "山の中でテントを張ってキャンプをする予定だ。",
+    "vi": "Chúng tôi dự định dựng lều và cắm trại ở trong rừng núi."
+   }
+  ]
+ },
+ {
+  "id": 1042610,
+  "m": [
+   {
+    "vi": "kilo, kilômét, kilôgam"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "毎日五キロのジョギングを欠かさず続けている。",
+    "vi": "Mỗi ngày tôi đều kiên trì chạy bộ năm kilômét không bỏ buổi nào."
+   },
+   {
+    "ja": "リンゴを一キロ買ったら袋がずっしり重くなった。",
+    "vi": "Mua một kilôgam táo làm chiếc túi trĩu nặng."
+   }
+  ]
+ },
+ {
+  "id": 1042620,
+  "m": [
+   {
+    "vi": "kilôgam (kg)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "この荷物の重さはちょうど十キログラムです。",
+    "vi": "Khối lượng của kiện hàng này vừa tròn mười kilôgam."
+   },
+   {
+    "ja": "体重が先月より二キログラム減った。",
+    "vi": "Cân nặng của tôi đã giảm hai kilôgam so với tháng trước."
+   }
+  ]
+ },
+ {
+  "id": 1042650,
+  "m": [
+   {
+    "vi": "kilômét (km)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ここから隣の町までは約二十キロメートルある。",
+    "vi": "Từ đây sang thị trấn bên cạnh có cự ly khoảng hai mươi kilômét."
+   },
+   {
+    "ja": "マラソン選手は四十キロメートル以上を走り抜く。",
+    "vi": "Các vận động viên marathon chạy vượt qua quãng đường hơn bốn mươi kilômét."
+   }
+  ]
+ },
+ {
+  "id": 1042820,
+  "m": [
+   {
+    "vi": "đàn ghi-ta"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼は部屋で静かにギターを弾いて歌っている。",
+    "vi": "Anh ấy đang ngồi đàn ghi-ta và hát thật nhẹ nhàng trong phòng."
+   },
+   {
+    "ja": "高校生の頃からアコースティックギターを習い始めた。",
+    "vi": "Tôi bắt đầu học đàn ghi-ta mộc từ thời còn là học sinh cấp ba."
+   }
+  ]
+ },
+ {
+  "id": 1044020,
+  "m": [
+   {
+    "vi": "nhạc cổ điển, cổ điển"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "リラックスしたいときはクラシック音楽を聴く。",
+    "vi": "Những khi muốn thư giãn tôi thường lắng nghe nhạc cổ điển."
+   },
+   {
+    "ja": "彼はクラシックなデザインの車がとても好きだ。",
+    "vi": "Anh ấy rất thích những chiếc xe hơi mang phong cách cổ điển."
+   }
+  ]
+ },
+ {
+  "id": 1044070,
+  "m": [
+   {
+    "vi": "lớp học, hạng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "私たちのクラスには二十人の留学生がいます。",
+    "vi": "Lớp học của chúng tôi có hai mươi bạn du học sinh."
+   },
+   {
+    "ja": "飛行機のビジネスクラスで快適な空の旅を楽しんだ。",
+    "vi": "Tôi đã tận hưởng chuyến bay thoải mái ở khoang hạng thương gia."
+   }
+  ]
+ },
+ {
+  "id": 1044480,
+  "m": [
+   {
+    "vi": "kem, kem bôi"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ケーキの上にたっぷりと生クリームをのせた。",
+    "vi": "Phủ một lớp kem tươi đầy ắp lên trên chiếc bánh ngọt."
+   },
+   {
+    "ja": "肌の乾燥を防ぐために保湿クリームを塗る。",
+    "vi": "Thoa kem dưỡng ẩm để phòng ngừa da bị khô ráp."
+   }
+  ]
+ },
+ {
+  "id": 1044830,
+  "m": [
+   {
+    "vi": "Giáng sinh, lễ Noel"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "家族みんなでクリスマスツリーの飾り付けをした。",
+    "vi": "Cả gia đình cùng nhau trang trí cây thông Giáng sinh."
+   },
+   {
+    "ja": "子供たちはクリスマスのプレゼントを楽しみに待っている。",
+    "vi": "Lũ trẻ đang háo hức mong chờ quà Giáng sinh."
+   }
+  ]
+ },
+ {
+  "id": 1046430,
+  "m": [
+   {
+    "vi": "cốc thủy tinh, ly"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "冷たいジュースをグラスに注いでもてなした。",
+    "vi": "Rót nước ép trái cây mát lạnh vào ly thủy tinh để mời khách."
+   },
+   {
+    "ja": "乾杯のためにワイングラスを掲げた。",
+    "vi": "Nâng ly rượu vang lên để cùng nhau chúc mừng cạn chén."
+   }
+  ]
+ },
+ {
+  "id": 1046810,
+  "m": [
+   {
+    "vi": "gam (g)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "お菓子作りのために砂糖を百グラム量った。",
+    "vi": "Tôi đã đong một trăm gam đường để làm bánh kẹo."
+   },
+   {
+    "ja": "この手紙の重さは五十グラム未満です。",
+    "vi": "Lá thư này có khối lượng dưới năm mươi gam."
+   }
+  ]
+ },
+ {
+  "id": 1046840,
+  "m": [
+   {
+    "vi": "lớn, quy mô lớn, tráng lệ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "街の広場でグランドセールが開催されている。",
+    "vi": "Một đợt đại hạ giá quy mô lớn đang được tổ chức tại quảng trường thành phố."
+   },
+   {
+    "ja": "ホテルのグランドロビーはとても豪華だった。",
+    "vi": "Đại sảnh của khách sạn vô cùng tráng lệ nguy nga."
+   }
+  ]
+ },
+ {
+  "id": 1047300,
+  "m": [
+   {
+    "vi": "nhóm"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "四人のグループに分かれてディスカッションを行った。",
+    "vi": "Chúng tôi chia thành các nhóm bốn người và tiến hành thảo luận."
+   },
+   {
+    "ja": "人気アイドルグループのコンサートを見に行った。",
+    "vi": "Tôi đã đi xem buổi biểu diễn của một nhóm nhạc thần tượng nổi tiếng."
+   }
+  ]
+ },
+ {
+  "id": 1047860,
+  "m": [
+   {
+    "vi": "bánh ngọt, bánh kem"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "妹の誕生日にいちごのショートケーキを焼いた。",
+    "vi": "Tôi đã nướng chiếc bánh kem dâu tây nhân dịp sinh nhật em gái."
+   },
+   {
+    "ja": "食後に紅茶と美味しいチーズケーキを味わった。",
+    "vi": "Sau bữa ăn tôi nhâm nhi hồng trà và chiếc bánh kem phô mai thơm ngon."
+   }
+  ]
+ },
+ {
+  "id": 1047880,
+  "m": [
+   {
+    "vi": "hộp đựng, vỏ bao, trường hợp"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "眼鏡を拭いて専用のケースに大切にしまった。",
+    "vi": "Lau kính xong tôi cất cẩn thận vào chiếc hộp đựng chuyên dụng."
+   },
+   {
+    "ja": "万が一のケースに備えて準備をしておく。",
+    "vi": "Chuẩn bị sẵn sàng để đề phòng trường hợp vạn nhất xảy ra."
+   }
+  ]
+ },
+ {
+  "id": 1048400,
+  "m": [
+   {
+    "vi": "trò chơi, game"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "休日は時間を忘れてスマホでゲームをしてしまう。",
+    "vi": "Ngày nghỉ tôi hay mải mê chơi game trên điện thoại đến quên cả giờ giấc."
+   },
+   {
+    "ja": "みんなでボードゲームをして楽しい夜を過ごした。",
+    "vi": "Mọi người cùng chơi cờ bàn và trải qua một buổi tối thật vui vẻ."
+   }
+  ]
+ },
+ {
+  "id": 1048910,
+  "m": [
+   {
+    "vi": "huấn luyện viên, huấn luyện"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "水泳のコーチに正しい泳ぎ方を教えてもらった。",
+    "vi": "Tôi được huấn luyện viên bơi lội hướng dẫn cách bơi đúng kỹ thuật."
+   },
+   {
+    "ja": "彼は熱心に後輩たちの指導とコーチを務めている。",
+    "vi": "Anh ấy đang hết lòng đảm nhiệm việc chỉ bảo và huấn luyện các đàn em."
+   }
+  ]
+ },
+ {
+  "id": 1049000,
+  "m": [
+   {
+    "vi": "áo khoác dài, sân đấu"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "冬用の暖かいウールのコートを新しく買った。",
+    "vi": "Tôi đã mua một chiếc áo khoác dài bằng len ấm áp dành cho mùa đông."
+   },
+   {
+    "ja": "テニスコートを予約して仲間と汗を流した。",
+    "vi": "Tôi đặt sân quần vợt và cùng bạn bè thỏa sức đổ mồ hôi."
+   }
+  ]
+ },
+ {
+  "id": 1049010,
+  "m": [
+   {
+    "vi": "dây điện, mã, quy tắc"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "パソコンの電源コードが足に引っかかりそうになった。",
+    "vi": "Dây nguồn máy tính suýt nữa thì vướng vào chân tôi."
+   },
+   {
+    "ja": "プログラミングで新しいコードを書き進める。",
+    "vi": "Tiếp tục viết những dòng mã lệnh mới trong lập trình."
+   }
+  ]
+ },
+ {
+  "id": 1049180,
+  "m": [
+   {
+    "vi": "cà phê"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "朝起きるとまず香りの良いコーヒーを淹れる。",
+    "vi": "Sáng thức dậy việc đầu tiên của tôi là pha một tách cà phê thơm ngát."
+   },
+   {
+    "ja": "喫茶店で友達とコーヒーを飲みながらおしゃべりした。",
+    "vi": "Tôi ngồi trò chuyện cùng bạn bè bên ly cà phê ở quán giải khát."
+   }
+  ]
+ },
+ {
+  "id": 1050590,
+  "m": [
+   {
+    "vi": "bản sao, photocopy, bản chụp"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "会議の資料を十部コピーしておいてください。",
+    "vi": "Xin hãy photocopy mười bản tài liệu cuộc họp giúp tôi."
+   },
+   {
+    "ja": "パスポートのカラーコピーを手元に保管しておく。",
+    "vi": "Lưu giữ một bản sao màu hộ chiếu trong tay."
+   }
+  ]
+ },
+ {
+  "id": 1051970,
+  "m": [
+   {
+    "vi": "buổi hòa nhạc, ca nhạc"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "大好きなアーティストのコンサートのチケットが取れた。",
+    "vi": "Tôi đã săn được vé buổi hòa nhạc của nghệ sĩ mà mình vô cùng yêu mến."
+   },
+   {
+    "ja": "週末のコンサートは満席で熱気に包まれていた。",
+    "vi": "Buổi hòa nhạc cuối tuần chật kín chỗ và bao trùm trong không khí cuồng nhiệt."
+   }
+  ]
+ },
+ {
+  "id": 1053350,
+  "m": [
+   {
+    "vi": "máy tính, máy vi tính"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "現代の社会ではコンピュータが不可欠な道具だ。",
+    "vi": "Trong xã hội hiện đại máy vi tính là một công cụ không thể thiếu."
+   },
+   {
+    "ja": "新しいコンピュータを導入して業務を効率化する。",
+    "vi": "Đưa máy tính mới vào sử dụng để tối ưu hóa hiệu suất công việc."
+   }
+  ]
+ },
+ {
+  "id": 1054230,
+  "m": [
+   {
+    "vi": "khung thành, vạch đích, bàn thắng, mục tiêu"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "マラソンランナーが笑顔でゴールを駆け抜けた。",
+    "vi": "Vận động viên chạy marathon đã tươi cười vượt qua vạch đích."
+   },
+   {
+    "ja": "後半終了間際に劇的なゴールが決まった。",
+    "vi": "Bàn thắng kịch tính đã được ghi đúng vào những giây cuối của hiệp hai."
+   }
+  ]
+ },
+ {
+  "id": 1055000,
+  "m": [
+   {
+    "vi": "dịch vụ, ưu đãi, miễn phí"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "このレストランはお客様へのサービスがとても良い。",
+    "vi": "Nhà hàng này có dịch vụ chăm sóc khách hàng rất tốt."
+   },
+   {
+    "ja": "デザートは店からのサービスで無料で提供された。",
+    "vi": "Món tráng miệng là phần quà ưu đãi miễn phí từ quán."
+   }
+  ]
+ },
+ {
+  "id": 1056230,
+  "m": [
+   {
+    "vi": "chữ ký, ra hiệu, ký tên"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "書類の内容を確認した上でサインをお願いします。",
+    "vi": "Sau khi kiểm tra nội dung tài liệu xin quý khách vui lòng ký tên ạ."
+   },
+   {
+    "ja": "大好きな作家に本へサインをもらった。",
+    "vi": "Tôi đã xin được chữ ký của nhà văn yêu thích vào cuốn sách."
+   }
+  ]
+ },
+ {
+  "id": 1057850,
+  "m": [
+   {
+    "vi": "món xa-lát, nộm"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "健康のために毎食新鮮な野菜サラダを食べる。",
+    "vi": "Vì sức khỏe mỗi bữa ăn tôi đều dùng món rau xà lách tươi."
+   },
+   {
+    "ja": "ドレッシングをかけてポテトサラダを美味しくいただいた。",
+    "vi": "Rưới nước sốt lên và thưởng thức món xa-lát khoai tây thơm ngon."
+   }
+  ]
+ },
+ {
+  "id": 1058480,
+  "m": [
+   {
+    "vi": "dép xăng đan, dép quai hậu"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "夏は涼しいサンダルを履いて散歩に出かける。",
+    "vi": "Mùa hè tôi xỏ đôi dép xăng-đan mát mẻ rồi đi dạo mát."
+   },
+   {
+    "ja": "海辺を歩くために濡れても平気なサンダルを買った。",
+    "vi": "Tôi mua đôi xăng-đan chịu nước để tiện đi dạo ven biển."
+   }
+  ]
+ },
+ {
+  "id": 1058580,
+  "m": [
+   {
+    "vi": "bánh mì kẹp, sandwich"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "朝食にハムと卵を挟んだサンドイッチを作った。",
+    "vi": "Bữa sáng tôi làm bánh mì kẹp giăm bông và trứng."
+   },
+   {
+    "ja": "ピクニックに手作りのサンドイッチを持参した。",
+    "vi": "Tôi mang theo bánh mì kẹp tự làm trong chuyến dã ngoại."
+   }
+  ]
+ },
+ {
+  "id": 1061520,
+  "m": [
+   {
+    "vi": "áo sơ mi, áo lót"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "面接のために清潔な白いシャツを着ていった。",
+    "vi": "Tôi mặc một chiếc áo sơ mi trắng tinh tươm để đi phỏng vấn."
+   },
+   {
+    "ja": "汗をかいたので下着のシャツを着替えた。",
+    "vi": "Vì đổ mồ hôi nên tôi đã thay chiếc áo lót bên trong."
+   }
+  ]
+ },
+ {
+  "id": 1061820,
+  "m": [
+   {
+    "vi": "vòi hoa sen, tắm vòi sen"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "朝起きてすぐに熱いシャワーを浴びて目を覚ます。",
+    "vi": "Sáng thức dậy tôi tắm ngay vòi sen nước ấm để tỉnh ngủ."
+   },
+   {
+    "ja": "運動で汗を流すためにシャワーを浴びた。",
+    "vi": "Tôi đi tắm vòi sen để gột rửa mồ hôi sau khi vận động."
+   }
+  ]
+ },
+ {
+  "id": 1064120,
+  "m": [
+   {
+    "vi": "quần bò, quần jean"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "休日は履き慣れた青いジーンズで過ごすことが多い。",
+    "vi": "Ngày nghỉ tôi thường mặc chiếc quần jean xanh quen thuộc."
+   },
+   {
+    "ja": "新しい丈夫なジーンズを一本買い足した。",
+    "vi": "Tôi đã mua thêm một chiếc quần bò mới rất bền chắc."
+   }
+  ]
+ },
+ {
+  "id": 1064250,
+  "m": [
+   {
+    "vi": "máy bay phản lực"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ジェット機が青空を鋭い音を立てて横切っていった。",
+    "vi": "Chiếc máy bay phản lực rít lên sắc bén băng qua bầu trời xanh."
+   },
+   {
+    "ja": "最新型のジェット機が空港の滑走路に着陸した。",
+    "vi": "Chiếc máy bay phản lực đời mới nhất đã hạ cánh xuống đường băng sân bay."
+   }
+  ]
+ },
+ {
+  "id": 1065680,
+  "m": [
+   {
+    "vi": "mứt (trái cây)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "トーストに甘いイチゴジャムをたっぷり塗る。",
+    "vi": "Tôi quết nhiều mứt dâu tây ngọt ngào lên bánh mì nướng."
+   },
+   {
+    "ja": "庭で採れたブルーベリーで手作りジャムを作った。",
+    "vi": "Tôi dùng việt quất hái trong vườn để tự làm mứt trái cây."
+   }
+  ]
+ },
+ {
+  "id": 1065950,
+  "m": [
+   {
+    "vi": "nước ép, nước trái cây"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "喉が渇いたので冷たいオレンジジュースを飲んだ。",
+    "vi": "Khát nước nên tôi đã uống một cốc nước ép cam mát lạnh."
+   },
+   {
+    "ja": "新鮮な果物を使った百パーセントジュースが好きだ。",
+    "vi": "Tôi thích các loại nước ép trái cây tươi nguyên chất một trăm phần trăm."
+   }
+  ]
+ },
+ {
+  "id": 1066680,
+  "m": [
+   {
+    "vi": "bộ com-lê, bộ vest"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼は紺色のスーツを着て面接に臨んだ。",
+    "vi": "Anh ấy mặc bộ com-lê màu xanh đen bước vào phòng phỏng vấn."
+   },
+   {
+    "ja": "社会人になった記念に仕立ての良いスーツを一着買った。",
+    "vi": "Nhân dịp đi làm tôi đã may một bộ vest thật vừa vặn tôn dáng."
+   }
+  ]
+ },
+ {
+  "id": 1066690,
+  "m": [
+   {
+    "vi": "va li"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "海外旅行のために大きなスーツケースを準備した。",
+    "vi": "Tôi đã chuẩn bị chiếc va li lớn cho chuyến du lịch nước ngoài."
+   },
+   {
+    "ja": "荷物をスーツケースにぎっしりと詰め込んだ。",
+    "vi": "Tôi xếp đồ đạc chật ních vào trong va li."
+   }
+  ]
+ },
+ {
+  "id": 1067040,
+  "m": [
+   {
+    "vi": "món súp, canh kiểu Tây"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "寒い夜には温かいコーンスープが体に染み渡る。",
+    "vi": "Vào đêm lạnh bát súp ngô ấm nóng làm ấm cả người."
+   },
+   {
+    "ja": "野菜がゴロゴロ入った栄養満点のスープを作った。",
+    "vi": "Tôi đã nấu món súp đầy ắp rau củ giàu dinh dưỡng."
+   }
+  ]
+ },
+ {
+  "id": 1067210,
+  "m": [
+   {
+    "vi": "công tắc (điện)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "部屋に入ったら壁のスイッチを押して電気をつけた。",
+    "vi": "Bước vào phòng tôi bấm công tắc trên tường bật đèn lên."
+   },
+   {
+    "ja": "出かける前にエアコンのスイッチを切るのを忘れないで。",
+    "vi": "Trước khi ra ngoài đừng quên tắt công tắc máy điều hòa nhé."
+   }
+  ]
+ },
+ {
+  "id": 1067470,
+  "m": [
+   {
+    "vi": "váy, chân váy"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼女はチェック柄の可愛らしいスカートを履いている。",
+    "vi": "Cô ấy đang mặc chiếc chân váy kẻ caro rất dễ thương."
+   },
+   {
+    "ja": "風が吹いてスカートの裾がふわっと揺れた。",
+    "vi": "Gió thổi làm tà váy bồng bềnh đung đưa."
+   }
+  ]
+ },
+ {
+  "id": 1067770,
+  "m": [
+   {
+    "vi": "môn trượt tuyết, ván trượt tuyết"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "冬休みには雪山へ行ってスキーを楽しみたい。",
+    "vi": "Kỳ nghỉ đông tôi muốn lên núi tuyết thỏa sức trượt tuyết."
+   },
+   {
+    "ja": "小学生の頃からスキーの練習を重ねてきた。",
+    "vi": "Từ thời tiểu học tôi đã chăm chỉ luyện tập môn trượt tuyết."
+   }
+  ]
+ },
+ {
+  "id": 1068550,
+  "m": [
+   {
+    "vi": "màn hình, màn ảnh"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "映画館の大きなスクリーンに迫力ある映像が映った。",
+    "vi": "Hình ảnh sống động đầy uy lực hiện lên trên màn ảnh rộng rạp chiếu phim."
+   },
+   {
+    "ja": "スマホのスクリーンに触れてアプリを起動する。",
+    "vi": "Chạm vào màn hình điện thoại để khởi động ứng dụng."
+   }
+  ]
+ },
+ {
+  "id": 1068770,
+  "m": [
+   {
+    "vi": "môn trượt băng, giày trượt băng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "冬になるとスケート場で友達と楽しく滑る。",
+    "vi": "Vào mùa đông tôi cùng bạn bè trượt băng vui vẻ trên sân băng."
+   },
+   {
+    "ja": "スケート靴を履いてリンクの上に立った。",
+    "vi": "Xỏ giày trượt băng vào và bước ra giữa sân trượt."
+   }
+  ]
+ },
+ {
+  "id": 1069210,
+  "m": [
+   {
+    "vi": "ngôi sao, người nổi tiếng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼は世界中で愛されている有名なロックスターだ。",
+    "vi": "Anh ấy là một ngôi sao nhạc rock nổi tiếng được yêu mến khắp thế giới."
+   },
+   {
+    "ja": "映画の大ヒットで彼女は一夜にしてスターになった。",
+    "vi": "Nhờ thành công vang dội của bộ phim cô ấy đã vụt sáng thành ngôi sao chỉ sau một đêm."
+   }
+  ]
+ },
+ {
+  "id": 1069520,
+  "m": [
+   {
+    "vi": "vóc dáng, thân hình, phong cách"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼女はモデルのようにスタイルが抜群に良い。",
+    "vi": "Cô ấy có vóc dáng đẹp xuất sắc như người mẫu."
+   },
+   {
+    "ja": "自分のライフスタイルに合わせて仕事を選ぶ。",
+    "vi": "Lựa chọn công việc phù hợp với phong cách sống của chính mình."
+   }
+  ]
+ },
+ {
+  "id": 1069930,
+  "m": [
+   {
+    "vi": "khán đài, quầy hàng, đèn bàn"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "スタジアムのスタンドは熱心なサポーターで埋まった。",
+    "vi": "Khán đài sân vận động chật kín những cổ động viên nhiệt thành."
+   },
+   {
+    "ja": "机の上に小さな読書用スタンドを置いている。",
+    "vi": "Trên bàn tôi đặt một chiếc đèn đọc sách nhỏ nhắn."
+   }
+  ]
+ }
+]

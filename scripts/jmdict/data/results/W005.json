@@ -782,20 +782,23 @@
   "id": 1291770,
   "m": [
    {
-    "vi": "chỗ ngồi, vị trí"
+    "vi": "chỗ ngồi, chỗ"
    },
    {
-    "vi": "bầu không khí (buổi tiệc)"
+    "vi": "địa vị, vị trí"
+   },
+   {
+    "vi": "buổi họp mặt; bầu không khí của buổi họp mặt"
    }
   ],
   "ex": [
    {
-    "ja": "一番前の座に座って話を聞く。",
-    "vi": "Ngồi ở vị trí hàng đầu để lắng nghe câu chuyện."
+    "ja": "彼は社長の座を息子に譲った。",
+    "vi": "Ông ấy đã nhường ghế giám đốc cho con trai."
    },
    {
-    "ja": "その場の空気を和ませるために冗談を言った。",
-    "vi": "Tôi nói đùa để làm dịu bầu không khí của buổi gặp mặt."
+    "ja": "彼の冗談で座が和んだ。",
+    "vi": "Câu đùa của anh ấy làm bầu không khí buổi gặp dịu đi."
    }
   ]
  },
@@ -848,7 +851,7 @@
   ],
   "ex": [
    {
-    "ja": "彼女は若者に人気のある小説家だ。",
+    "ja": "彼女は若者に人気のある作家だ。",
     "vi": "Cô ấy là một nhà văn rất được giới trẻ yêu thích."
    },
    {
@@ -1511,20 +1514,20 @@
   "id": 1325740,
   "m": [
    {
-    "vi": "đứng đầu, thủ khoa"
+    "vi": "chủ tịch (nước, đảng, hội đồng)"
    },
    {
-    "vi": "chủ tịch (nước, hội đồng)"
+    "vi": "người đứng đầu; thủ khoa"
    }
   ],
   "ex": [
    {
-    "ja": "彼は大学を首席で卒業した。",
-    "vi": "Anh ấy đã tốt nghiệp đại học với tư cách là thủ khoa."
-   },
-   {
     "ja": "国家主席が外国の首脳と会談した。",
     "vi": "Chủ tịch nước đã hội đàm với các nhà lãnh đạo nước ngoài."
+   },
+   {
+    "ja": "彼はその団体の主席に選ばれた。",
+    "vi": "Ông ấy được bầu làm người đứng đầu tổ chức đó."
    }
   ],
   "hv": "chủ tịch"

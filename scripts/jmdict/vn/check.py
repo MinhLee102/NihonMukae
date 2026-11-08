@@ -18,13 +18,14 @@ import re
 import sys
 
 sys.path.insert(0, os.path.dirname(__file__))
-from hanviet import HanViet, is_kanji, reading_key  # noqa: E402
+from hanviet import HanViet, is_kanji, read_json_array, reading_key  # noqa: E402
 from prepare import RESULTS, SOURCES, WORK, read_prompt  # noqa: E402
 
 SYLLABLE = re.compile(r"^[a-zàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]+$")
 # "to", "or" cũng là chữ tiếng Việt (phóng to), nên không đưa vào
 ENGLISH_WORD = re.compile(r"\b(the|of|and|with|for|something|someone|somebody)\b", re.I)
-FULLWIDTH_DIGITS = str.maketrans("０１２３４５６７８９", "〇一二三四五六七八九")
+PART = re.compile(r"_part\d+$")
+FULLWIDTH_DIGITS =str.maketrans("０１２３４５６７８９", "〇一二三四五六七八九")
 
 
 def load_answer(path):
@@ -78,6 +79,7 @@ def check_kanji(batch, answer, hv, problems, warnings):
 def check_words(batch, answer, hv, problems, warnings):
     by_id = {a.get("id"): a for a in answer if isinstance(a, dict)}
     good = []
+    stats = {"meanings": 0, "short": 0, "multi_en": 0, "single_m": 0}
     for item in batch:
         a = by_id.get(item["id"])
         if a is None:
@@ -121,19 +123,38 @@ def check_words(batch, answer, hv, problems, warnings):
             if ENGLISH_WORD.search(m["vi"]):
                 warnings.append(f"{item['w']}: nghĩa còn tiếng Anh? {m['vi']}")
 
+        stats["meanings"] += len(meanings)
+        stats["short"] += sum(1 for m in meanings if len(m["vi"].split()) <= 2)
+        if len(item.get("en", [])) >= 2:
+            stats["multi_en"] += 1
+            stats["single_m"] += len(meanings) == 1
+
         entry = {"id": item["id"], "m": [{"vi": m["vi"].strip()} for m in meanings[:4]],
                  "ex": [{"ja": e["ja"].strip(), "vi": e["vi"].strip()} for e in examples[:2]]}
         if reading is not None:
             entry["hv"] = reading
         good.append(entry)
+    meaning_drift(stats, warnings)
     return good
 
 
+def meaning_drift(stats, warnings):
+    """Gemini hay 'trôi' khi chat dài: tách từ đồng nghĩa thành nhiều nghĩa, hoặc dồn mọi nghĩa làm một."""
+    if stats["meanings"] >= 50 and stats["short"] / stats["meanings"] > 0.4:
+        warnings.insert(0, f"NGHĨA: {stats['short'] / stats['meanings']:.0%} nghĩa chỉ 1-2 tiếng, có vẻ đang tách "
+                           "từ đồng nghĩa thành nhiều nghĩa. Nên mở chat mới và làm lại batch này.")
+    if stats["multi_en"] >= 30 and stats["single_m"] / stats["multi_en"] > 0.6:
+        warnings.insert(0, f"NGHĨA: {stats['single_m']}/{stats['multi_en']} từ nhiều nghĩa chỉ được ghi 1 nghĩa, "
+                           "có vẻ đang dồn nghĩa. Nên mở chat mới và làm lại batch này.")
+
+
 def check(name, hv):
-    batch_path = os.path.join(WORK, "batches", f"{name}.json")
+    # W035_part1.json: một phần của batch W035 (khi dán/sinh làm nhiều lần)
+    base = PART.sub("", name)
+    batch_path = os.path.join(WORK, "batches", f"{base}.json")
     result_path = os.path.join(RESULTS, f"{name}.json")
     if not os.path.exists(batch_path):
-        return f"{name}: không thấy work/batches/{name}.json (chạy lại prepare.py?)"
+        return f"{name}: không thấy work/batches/{base}.json (chạy lại prepare.py?)"
     with open(batch_path, encoding="utf-8") as f:
         batch = json.load(f)
     problems, warnings = [], []
@@ -141,6 +162,17 @@ def check(name, hv):
         answer = load_answer(result_path)
     except (ValueError, json.JSONDecodeError) as err:
         return f"{name}: LỖI đọc JSON ({err}). Dán lại cả batch."
+    part_note = ""
+    if base != name:
+        key = "k" if name.startswith("K") else "id"
+        present = {a.get(key) for a in answer if isinstance(a, dict)}
+        covered = set()
+        for p in glob.glob(os.path.join(RESULTS, f"{base}.json")) + glob.glob(os.path.join(RESULTS, f"{base}_part*.json")):
+            covered |= {a.get(key) for a in read_json_array(p) if isinstance(a, dict)}
+        covered |= present
+        batch_left = sum(1 for it in batch if it[key] not in covered)
+        batch = [it for it in batch if it[key] in present]
+        part_note = f" (cả {base} còn {batch_left} mục chưa có trong file nào)" if batch_left else f" ({base} đã đủ các phần)"
 
     is_kanji_batch = name.startswith("K")
     good = (check_kanji if is_kanji_batch else check_words)(batch, answer, hv, problems, warnings)
@@ -169,7 +201,8 @@ def check(name, hv):
         os.remove(retry_txt)
 
     status = "OK" if not problems else f"{len(problems)} LỖI -> dán work/batches/{retry_name}.txt"
-    return f"{name}: {len(good)}/{len(batch)} đạt, {len(warnings)} cảnh báo, {status}"
+    drift = "".join(f"\n   ! {w}" for w in warnings if w.startswith("NGHĨA:"))
+    return f"{name}: {len(good)}/{len(batch)} đạt, {len(warnings)} cảnh báo, {status}{part_note}{drift}"
 
 
 def main():

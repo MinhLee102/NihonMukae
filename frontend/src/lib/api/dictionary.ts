@@ -108,6 +108,46 @@ export const lookupWord = async (params: {
   return data;
 };
 
+// ─── Hán tự ────────────────────────────────────────────────────────────
+
+export interface KanjiSummaryDto {
+  kanji: string;
+  hanViet: string[];
+  meaningVi: string | null;
+  meaningsEn: string[];
+  onYomi: string[];
+  kunYomi: string[];
+  strokeCount: number | null;
+  grade: number | null;
+}
+
+export interface KanjiDetailDto {
+  kanji: string;
+  hanViet: string[];
+  meaningVi: string | null;
+  meaningsEn: string[];
+  onYomi: string[];
+  kunYomi: string[];
+  strokeCount: number | null;
+  grade: number | null;
+  frequency: number | null;
+  radical: number | null;
+  radicalChar: string | null;
+  /** Thuộc tính d của từng nét theo thứ tự viết (hệ toạ độ 109x109) */
+  strokePaths: string[];
+  words: WordDto[];
+}
+
+export async function searchKanji(q: string) {
+  const { data } = await apiClient.get<ApiResponse<KanjiSummaryDto[]>>('/dictionary/kanji/search', { params: { q } });
+  return data.data;
+}
+
+export async function getKanji(kanji: string) {
+  const { data } = await apiClient.get<ApiResponse<KanjiDetailDto>>(`/dictionary/kanji/${encodeURIComponent(kanji)}`);
+  return data.data;
+}
+
 // ─── Đóng góp của người dùng ───────────────────────────────────────────
 
 export interface MyContribution {

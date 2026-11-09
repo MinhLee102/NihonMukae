@@ -40,6 +40,19 @@ public final class DictDtos {
                               ZonedDateTime searchedAt) {
     }
 
+    // ─── Hán tự ─────────────────────────────────────────────────────────
+
+    public record KanjiSummary(String kanji, List<String> hanViet, String meaningVi, List<String> meaningsEn,
+                               List<String> onYomi, List<String> kunYomi, Integer strokeCount, Integer grade) {
+    }
+
+    /** strokePaths: thuộc tính d của từng nét theo thứ tự viết (KanjiVG, hệ toạ độ 109x109). */
+    public record KanjiDetail(String kanji, List<String> hanViet, String meaningVi, List<String> meaningsEn,
+                              List<String> onYomi, List<String> kunYomi, Integer strokeCount, Integer grade,
+                              Integer frequency, Integer radical, String radicalChar, List<String> strokePaths,
+                              List<Entry> words) {
+    }
+
     // ─── Đóng góp của người dùng ────────────────────────────────────────
 
     /** kind = meaning | example | note. ja chỉ dùng cho example. */

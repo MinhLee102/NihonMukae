@@ -35,6 +35,22 @@ export const DATA_SOURCES = [
     url: "http://www.tanos.co.uk/jlpt/",
   },
   {
+    name: "KANJIDIC2",
+    owner: "Electronic Dictionary Research and Development Group (EDRDG)",
+    usage: "Âm on/kun, nghĩa tiếng Anh, số nét, bộ thủ và độ phổ biến của chữ Hán.",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+    url: "https://www.edrdg.org/wiki/index.php/KANJIDIC_Project",
+  },
+  {
+    name: "KanjiVG",
+    owner: "Ulrich Apel và những người đóng góp",
+    usage: "Hình thứ tự nét viết của chữ Hán.",
+    license: "CC BY-SA 3.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/",
+    url: "https://kanjivg.tagaini.net",
+  },
+  {
     name: "Unihan Database",
     owner: "Unicode, Inc.",
     usage: "Âm Hán Việt của chữ kanji.",

@@ -61,12 +61,26 @@ Câu ví dụ có thêm `"src"` (`"tatoeba"` kèm `"sid"`, hoặc `"ai"`), impor
 python vn/import_dict.py
 ```
 
-Nạp mọi từ đã chọn (nghĩa tiếng Anh của JMdict) và phần tiếng Việt của các batch đã có. Chạy lại được bất cứ lúc nào.
+Nạp toàn bộ JMdict (~218 nghìn mục, nhóm `other` chỉ có nghĩa tiếng Anh; `--core-only` chỉ nạp các từ đã chọn) và phần tiếng Việt của các batch đã có. Chạy lại được bất cứ lúc nào. Cần migration V21 (cột `gloss_text`) chạy trước.
 Web tra từ điển trên các bảng `dict_*` (thay Mazii). Mục admin đã sửa tay (`dict_entries.edited`) hoặc đã xoá
 (`dict_deleted`) trong trang `/admin/dictionary` được import bỏ qua, nên chạy lại import không mất chỉnh sửa.
 Từ chưa có nghĩa tiếng Việt hiện nghĩa tiếng Anh của JMdict kèm nhãn.
 
 `data/results/` được đưa lên git: đó là phần tốn công nhất, đừng để mất.
+
+## Tab Hán tự (KANJIDIC2 và KanjiVG)
+
+Tải mỗi nguồn vào thư mục riêng trong `sources/` (không đưa lên git), giải nén, rồi nạp:
+
+```
+sources/kanjidic2/kanjidic2.xml   https://www.edrdg.org/kanjidic/kanjidic2.xml.gz
+sources/kanjivg/kanjivg.xml       https://github.com/KanjiVG/kanjivg/releases  (file kanjivg-<ngày>.xml.gz)
+python -I -X utf8 vn/import_kanji.py
+```
+
+Cần migration V23. Script thêm âm on/kun, nghĩa tiếng Anh, số nét, bộ, lớp, tần suất và thứ tự nét vào `dict_kanji`;
+Hán Việt và nghĩa tiếng Việt đã có từ pipeline được giữ, chữ nào chưa có Hán Việt thì lấy âm `vietnam` của KANJIDIC2.
+Lên production thì dump lại các bảng `dict_*` như với từ điển (có cả `dict_kanji`).
 
 ## Giấy phép
 
@@ -74,6 +88,7 @@ Từ chưa có nghĩa tiếng Việt hiện nghĩa tiếng Anh của JMdict kèm
   là bản phái sinh nên cũng theo CC BY-SA 4.0.
 - Danh sách JLPT: Jonathan Waller (CC BY), gắn mã JMdict bởi stephenmk/yomitan-jlpt-vocab (CC BY-SA 4.0).
 - Unihan: Unicode License.
+- KANJIDIC2: © EDRDG, CC BY-SA 4.0. KanjiVG (hình nét viết): CC BY-SA 3.0, https://kanjivg.tagaini.net.
 - Câu ví dụ Tatoeba (Tanaka Corpus): CC BY 2.0 FR, https://tatoeba.org. Cần ghi nguồn; mỗi câu có `source_id`
   để dẫn về `https://tatoeba.org/sentences/show/<id>`.
 

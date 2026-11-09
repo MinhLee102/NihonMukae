@@ -35,10 +35,13 @@ public class DictionaryService {
 
     private final DictionaryRepository repository;
     private final SearchHistoryRepository searchHistoryRepository;
+    private final Deinflector deinflector;
 
-    public DictionaryService(DictionaryRepository repository, SearchHistoryRepository searchHistoryRepository) {
+    public DictionaryService(DictionaryRepository repository, SearchHistoryRepository searchHistoryRepository,
+                             Deinflector deinflector) {
         this.repository = repository;
         this.searchHistoryRepository = searchHistoryRepository;
+        this.deinflector = deinflector;
     }
 
     /**
@@ -56,11 +59,24 @@ public class DictionaryService {
         int offset = (int) pageable.getOffset();
         int size = pageable.getPageSize();
 
-        IdPage byForm = repository.searchByForm(DictionaryRepository.kanaVariants(q), offset, size);
+        // Gõ romaji (nihon, taberu): nếu đổi sang kana ra đúng một từ thì coi là tra theo cách đọc
+        String romajiKana = Romaji.toHiragana(q);
+        if (romajiKana != null) {
+            Set<String> kanaForms = DictionaryRepository.kanaVariants(romajiKana);
+            if (repository.hasExactForm(kanaForms)) {
+                IdPage byRomaji = repository.searchByForm(kanaForms, List.of(), offset, size);
+                return result(byRomaji, pageable, MATCH_WORD_FORM);
+            }
+        }
+
+        // Dạng chia (食べました, 高かった) đưa về dạng gốc, khớp nguyên văn vẫn đứng trước
+        IdPage byForm = repository.searchByForm(DictionaryRepository.kanaVariants(q), deinflector.baseForms(q), offset,
+                size);
         if (byForm.total() > 0) {
             return result(byForm, pageable, MATCH_WORD_FORM);
         }
-        IdPage byMeaning = repository.searchByMeaning(q, offset, size);
+        boolean accentless = Romaji.stripAccents(q).equals(q);
+        IdPage byMeaning = repository.searchByMeaning(q, accentless, offset, size);
         if (byMeaning.total() > 0) {
             return result(byMeaning, pageable, MATCH_MEANING);
         }
@@ -87,9 +103,11 @@ public class DictionaryService {
         if (hasKanji) {
             id = repository.findByKanji(Set.of(kanji.trim()), kanaForms);
         }
-        if (id == null && hasKana) {
+        if (!hasKanji) {
             id = repository.findByKana(kanaForms);
         }
+        // Có chữ Hán mà không có mục đó thì báo không tìm thấy, không đoán theo cách đọc:
+        // 化 (か) hay 復号 (ふくごう) sẽ ra nhầm 箇, 複合.
         if (id == null) {
             throw new NotFoundException("Không tìm thấy từ");
         }

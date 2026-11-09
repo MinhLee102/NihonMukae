@@ -4,7 +4,8 @@ import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { Clock, BookOpen, Volume2, CheckCircle2, Pencil } from "lucide-react";
 import { QuoteBanner } from "../../components/QuoteBanner";
-import { SearchBar } from "../../components/SearchBar";
+import { SearchBar, type SearchMode } from "../../components/SearchBar";
+import { KanjiPanel } from "@/components/dictionary/KanjiPanel";
 import { RecentWordCard, type RecentWord } from "../../components/RecentWordCard";
 import { AddToFlashcardButton } from "@/components/flashcard/AddToFlashcardButton";
 import { ContributeDialog } from "@/components/dictionary/ContributeDialog";
@@ -22,6 +23,7 @@ export default function DictionaryPage() {
   const accessToken = useAuthStore((state) => state.accessToken);
   const openAuthModal = useAuthModalStore((s) => s.open);
   const [contributing, setContributing] = useState(false);
+  const [mode, setMode] = useState<SearchMode>("vocab");
 
   const [query, setQuery] = useState("");
   const [debouncedQuery, setDebouncedQuery] = useState("");
@@ -77,7 +79,7 @@ export default function DictionaryPage() {
 
   // Search API Call
   useEffect(() => {
-    if (!debouncedQuery) {
+    if (mode !== "vocab" || !debouncedQuery) {
       setSearchResults([]);
       setSelectedWord(null);
       setMatchType("none");
@@ -110,7 +112,7 @@ export default function DictionaryPage() {
     return () => {
       isMounted = false;
     };
-  }, [debouncedQuery, accessToken, loadHistory]);
+  }, [debouncedQuery, accessToken, loadHistory, mode]);
 
   const handleSpeak = (text: string) => {
     if (!("speechSynthesis" in window)) return;
@@ -150,20 +152,25 @@ export default function DictionaryPage() {
       <SearchBar
         value={query}
         onChange={setQuery}
+        mode={mode}
+        onModeChange={setMode}
         isLoading={isSearching}
       />
 
       {/* Khu vực hiển thị kết quả */}
-      {debouncedQuery ? (
+      {mode === "kanji" && debouncedQuery ? (
+        <KanjiPanel
+          query={debouncedQuery}
+          onSearchWord={(word) => {
+            setMode("vocab");
+            setQuery(word);
+          }}
+        />
+      ) : debouncedQuery ? (
         <section className="flex flex-col gap-3">
           {matchType === "fuzzy" && (
             <div className="rounded-lg bg-amber-500/10 px-4 py-2 text-xs text-amber-600">
               Không có kết quả khớp chính xác. Hiển thị các từ gần giống:
-            </div>
-          )}
-          {matchType === "meaning" && (
-            <div className="rounded-lg bg-sky-500/10 px-4 py-2 text-xs text-sky-700">
-              Các từ có nghĩa chứa &ldquo;{debouncedQuery}&rdquo;:
             </div>
           )}
 

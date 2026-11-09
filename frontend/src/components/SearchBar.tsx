@@ -13,13 +13,16 @@ const SEARCH_MODES = [
 ] as const;
 
 // Modes that are not built yet stay visible but cannot be selected
-const AVAILABLE_MODES: string[] = ["vocab"];
+const AVAILABLE_MODES: string[] = ["vocab", "kanji"];
 
 export type SearchMode = (typeof SEARCH_MODES)[number]["id"];
 
 interface SearchBarProps {
   value?: string;
   onChange?: (val: string) => void;
+  /** Chế độ đang chọn; truyền cùng onModeChange để trang cha điều khiển */
+  mode?: SearchMode;
+  onModeChange?: (mode: SearchMode) => void;
   onSearch?: (query: string, mode: SearchMode) => void;
   isLoading?: boolean;
 }
@@ -27,8 +30,13 @@ interface SearchBarProps {
  * Search input + mode tabs. Local UI state only (which tab is selected,
  * the input's text) — no actual search call wired in yet.
  */
-export function SearchBar({ value, onChange, onSearch, isLoading = false }: SearchBarProps) {
-  const [activeMode, setActiveMode] = useState<SearchMode>("vocab");
+export function SearchBar({ value, onChange, mode, onModeChange, onSearch, isLoading = false }: SearchBarProps) {
+  const [internalMode, setInternalMode] = useState<SearchMode>("vocab");
+  const activeMode = mode ?? internalMode;
+  const setActiveMode = (m: SearchMode) => {
+    setInternalMode(m);
+    onModeChange?.(m);
+  };
   const [internalQuery, setInternalQuery] = useState("");
 
   const query = value !== undefined ? value : internalQuery;
@@ -57,7 +65,7 @@ export function SearchBar({ value, onChange, onSearch, isLoading = false }: Sear
           value={query}
           onChange={handleInputChange}
           onKeyDown={handleKeyDown}
-          placeholder="日本, nihon, Nhật Bản..."
+          placeholder={activeMode === "kanji" ? "食, thực, ăn, ショク, shoku..." : "日本, nihon, Nhật Bản..."}
           className="min-w-0 flex-1 bg-transparent text-sm text-neutral-800 outline-none placeholder:text-neutral-400"
         />
         <div className="flex shrink-0 items-center gap-3 text-neutral-400">

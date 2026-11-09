@@ -88,6 +88,7 @@ export function WordPopup({ token, onClose }: { token: ShelfToken; onClose: () =
           <div className="mt-2 flex flex-wrap items-center gap-2 text-[11px]">
             {word.pos && <span className="text-neutral-400">{word.pos}</span>}
             {word.hanViet && <span className="font-bold uppercase text-sky-600">{word.hanViet}</span>}
+            {!word.hasVietnamese && <span className="text-amber-600">Chưa có bản dịch Việt, hiện nghĩa tiếng Anh</span>}
           </div>
 
           <ul className="mt-3 flex flex-col gap-1.5 border-t border-black/5 pt-3">

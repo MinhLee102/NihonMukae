@@ -5,6 +5,7 @@ import { AuthModal } from '@/components/auth/AuthModal';
 import { AuthInitializer } from '@/components/auth/AuthInitializer';
 import { FeedbackDialog } from '@/components/FeedbackDialog';
 import { WelcomeDialog } from '@/components/WelcomeDialog';
+import { Footer } from '@/components/Footer';
 
 /**
  * Shared shell for every user-facing page (Dictionary, Flashcard, My Shelf,
@@ -17,7 +18,10 @@ export default function AppLayout({ children }: { children: ReactNode }) {
       <Sidebar />
       <div className="relative flex min-w-0 flex-1 flex-col">
         <Header />
-        <main className="flex-1 overflow-y-auto px-8 py-8">{children}</main>
+        <main className="flex-1 overflow-y-auto px-8 py-8">
+          {children}
+          <Footer />
+        </main>
         {/* Dialogs sit inside the content column so the sidebar stays usable while one is open */}
         <FeedbackDialog />
         <WelcomeDialog />

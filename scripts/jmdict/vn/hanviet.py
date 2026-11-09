@@ -18,6 +18,32 @@ def is_kanji(ch):
     return ch == "々" or "CJK UNIFIED IDEOGRAPH" in unicodedata.name(ch, "")
 
 
+def read_json_array(path):
+    """Mảng JSON trong file kết quả, bỏ ```json và chữ thừa quanh mảng. File trống hay hỏng trả về [] để
+    check.py báo lỗi cho đúng batch đó thay vì dừng cả chương trình."""
+    try:
+        with open(path, encoding="utf-8-sig") as f:
+            text = f.read()
+        start, end = text.find("["), text.rfind("]")
+        data = json.loads(text[start:end + 1]) if 0 <= start < end else []
+        return data if isinstance(data, list) else []
+    except (OSError, ValueError):
+        return []
+
+
+TONE_MARKS = {"̀", "́", "̃", "̉", "̣"}  # huyền, sắc, ngã, hỏi, nặng
+
+
+def reading_key(syllable):
+    """Bỏ khác biệt chính tả để so âm: vị trí dấu thanh (thủy/thuỷ, hóa/hoá) và i/y cuối (lý/lí)."""
+    decomposed = unicodedata.normalize("NFD", syllable.strip().lower())
+    tones = "".join(c for c in decomposed if c in TONE_MARKS)
+    base = unicodedata.normalize("NFC", "".join(c for c in decomposed if c not in TONE_MARKS))
+    if base.endswith("y") and not base.endswith(("uy", "ay", "ây")):
+        base = base[:-1] + "i"
+    return base + tones
+
+
 def _parse_unihan(path, fields):
     out = {}
     if not os.path.exists(path):
@@ -47,13 +73,26 @@ class HanViet:
             for k, vs in _parse_unihan(os.path.join(sources_dir, "Unihan_Variants.txt"), set(VARIANT_FIELDS)).items()
         }
         self.table = {}
+        # Chữ đã có trong bảng nhưng không có âm Hán Việt (chữ Nhật tự tạo như 込, 畑): bỏ qua khi ghép âm của từ
+        self.no_reading = set()
         if results_dir:
             for path in sorted(glob.glob(os.path.join(results_dir, "K*.json"))):
-                with open(path, encoding="utf-8") as f:
-                    for item in json.load(f):
-                        readings = [r.strip().lower() for r in item.get("hv", []) if r.strip()]
-                        if readings:
-                            self.table[item["k"]] = readings
+                for item in read_json_array(path):
+                    if not isinstance(item, dict) or "k" not in item:
+                        continue
+                    readings = [r.strip().lower() for r in item.get("hv", []) if r.strip()]
+                    if readings:
+                        self.table[item["k"]] = readings
+                        self.no_reading.discard(item["k"])
+                    elif item["k"] not in self.table:
+                        self.no_reading.add(item["k"])
+        overrides = os.path.join(os.path.dirname(os.path.abspath(__file__)), "hanviet_overrides.json")
+        if os.path.exists(overrides):
+            with open(overrides, encoding="utf-8") as f:
+                for k, readings in json.load(f).items():
+                    if not k.startswith("_"):
+                        self.table[k] = readings
+                        self.no_reading.discard(k)
 
     def unihan(self, ch):
         """Âm theo Unihan của chữ hoặc các biến thể (経 -> 經 -> kinh). Danh sách rỗng nếu không có."""
@@ -65,13 +104,13 @@ class HanViet:
         return seen
 
     def word_choices(self, word):
-        """Các âm có thể cho từng chữ kanji của từ; None nếu có chữ chưa có trong bảng."""
+        """Các âm có thể cho từng chữ kanji có âm Hán Việt của từ; None nếu có chữ chưa có trong bảng."""
         choices, prev = [], None
         for ch in word:
             if ch == "々" and prev is not None:
                 choices.append(choices[-1])
                 continue
-            if not is_kanji(ch):
+            if not is_kanji(ch) or ch in self.no_reading:
                 continue
             readings = self.table.get(ch)
             if not readings:

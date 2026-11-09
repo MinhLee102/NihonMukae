@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { ReactNode } from "react";
-import { ArrowLeft, Database, MessageSquare, Server, Users } from "lucide-react";
+import { ArrowLeft, BookOpen, Database, HandHeart, MessageSquare, Server, Users } from "lucide-react";
 import { useAuthStore } from "@/store/authStore";
 import { useAuthModalStore } from "@/store/authModalStore";
 
@@ -12,6 +12,8 @@ const ADMIN_NAV = [
   { href: "/admin/users", label: "Người dùng", icon: Users, adminOnly: true },
   { href: "/admin/server", label: "Trạng thái server", icon: Server, adminOnly: true },
   { href: "/admin/bank", label: "Ngân hàng đề", icon: Database, adminOnly: false },
+  { href: "/admin/dictionary", label: "Từ điển", icon: BookOpen, adminOnly: false },
+  { href: "/admin/contributions", label: "Đóng góp từ điển", icon: HandHeart, adminOnly: false },
   { href: "/admin/feedback", label: "Góp ý", icon: MessageSquare, adminOnly: false },
 ];
 

@@ -31,18 +31,9 @@ public class AuthController {
 
     @PostMapping("/register")
     public ResponseEntity<?> register(@RequestBody RegisterRequest req, HttpServletResponse res) {
-        User u = authService.register(req.getEmail(), req.getPassword(), req.getName());
-        String access = authService.generateAccessToken(u);
-        String rawRefresh = authService.createAndStoreRefreshToken(u);
-        ResponseCookie cookie = ResponseCookie.from(REFRESH_COOKIE_NAME, rawRefresh)
-                .httpOnly(true)
-                        .secure(cookieSecure)
-                        .path("/")
-                        .maxAge(Duration.ofDays(30))
-                        .sameSite("Lax")
-                        .build();
-                res.setHeader(HttpHeaders.SET_COOKIE, cookie.toString());
-        return ResponseEntity.status(HttpStatus.CREATED).contentType(MediaType.APPLICATION_JSON).body(Map.of("accessToken", access));
+        authService.register(req.getEmail(), req.getPassword(), req.getName());
+        // Chưa cấp token: tài khoản mới chờ admin duyệt rồi mới đăng nhập được
+        return ResponseEntity.status(HttpStatus.ACCEPTED).contentType(MediaType.APPLICATION_JSON).body(Map.of("pending", true));
     }
 
     @PostMapping("/login")
@@ -50,6 +41,9 @@ public class AuthController {
         var credentials = authService.validateUserCredentials(req.getEmail(), req.getPassword());
         if (credentials.isPresent() && !credentials.get().isEnabled()) {
             return ResponseEntity.status(HttpStatus.FORBIDDEN).body(Map.of("error", "account_locked"));
+        }
+        if (credentials.isPresent() && !credentials.get().isApproved()) {
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).body(Map.of("error", "pending_approval"));
         }
         return credentials
                 .map(user -> {

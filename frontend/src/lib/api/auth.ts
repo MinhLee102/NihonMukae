@@ -1,8 +1,8 @@
 import { apiClient } from './client';
-import type { AuthResponse, LoginPayload, RegisterPayload } from '@/types/auth';
+import type { AuthResponse, LoginPayload, RegisterPayload, RegisterResponse } from '@/types/auth';
  
 export async function registerRequest(payload: RegisterPayload) {
-  const { data } = await apiClient.post<AuthResponse>('/auth/register', payload);
+  const { data } = await apiClient.post<RegisterResponse>('/auth/register', payload);
   return data;
 }
  

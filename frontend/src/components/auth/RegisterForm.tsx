@@ -1,11 +1,9 @@
 'use client';
  
 import { useState, type FormEvent } from 'react';
-import { useRouter } from 'next/navigation';
 import { User, Mail, Lock, Eye, EyeOff } from 'lucide-react';
 import { registerRequest } from '@/lib/api/auth';
 import { getAuthErrorMessage } from '@/lib/api/errors';
-import { useAuthStore } from '@/store/authStore';
 import { useAuthModalStore } from '@/store/authModalStore';
 import { GoogleIcon } from './GoogleIcon';
  
@@ -21,11 +19,11 @@ export function RegisterForm() {
   const [error, setError] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
  
-  const setAccessToken = useAuthStore((s) => s.setAccessToken);
+  const [submitted, setSubmitted] = useState(false);
+
   const closeModal = useAuthModalStore((s) => s.close);
   const setMode = useAuthModalStore((s) => s.setMode);
-  const router = useRouter();
- 
+
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
     setError(null);
@@ -41,10 +39,9 @@ export function RegisterForm() {
  
     setIsSubmitting(true);
     try {
-      const { accessToken } = await registerRequest({ name, email, password });
-      setAccessToken(accessToken);
-      closeModal();
-      router.push('/');
+      // Tài khoản mới chưa có token: chờ admin duyệt rồi mới đăng nhập được
+      await registerRequest({ name, email, password });
+      setSubmitted(true);
     } catch (err) {
       setError(getAuthErrorMessage(err));
     } finally {
@@ -52,11 +49,41 @@ export function RegisterForm() {
     }
   }
  
+  if (submitted) {
+    return (
+      <div className="space-y-4 text-center">
+        <h2 className="text-2xl font-semibold text-neutral-900">Đã gửi đăng ký</h2>
+        <p className="text-sm leading-relaxed text-neutral-600">
+          Tài khoản <span className="font-medium text-neutral-900">{email}</span> đang chờ quản trị viên duyệt. Ứng dụng
+          chỉ mở cho người được mời để tránh vi phạm bản quyền đề thi. Bạn sẽ đăng nhập được sau khi được duyệt.
+        </p>
+        <div className="flex justify-center gap-2 pt-2">
+          <button
+            type="button"
+            onClick={() => setMode('login')}
+            className="rounded-lg border border-neutral-200 px-5 py-2 text-sm text-neutral-600 hover:bg-neutral-50"
+          >
+            Về đăng nhập
+          </button>
+          <button
+            type="button"
+            onClick={closeModal}
+            className="rounded-lg bg-neutral-900 px-5 py-2 text-sm font-medium text-white"
+          >
+            Đóng
+          </button>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <form onSubmit={handleSubmit} className="space-y-4" noValidate>
       <div>
         <h2 className="text-2xl font-semibold text-neutral-900">Tạo tài khoản</h2>
-        <p className="mt-1 text-sm text-neutral-500">Miễn phí. Không cần thẻ tín dụng.</p>
+        <p className="mt-1 text-sm text-neutral-500">
+          Miễn phí. Tài khoản mới cần được quản trị viên duyệt trước khi đăng nhập.
+        </p>
       </div>
  
       <button

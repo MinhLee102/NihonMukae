@@ -15,6 +15,7 @@ Nguồn: JMdict (CC BY-SA 4.0), danh sách JLPT của Jonathan Waller qua stephe
 """
 import argparse
 import csv
+import glob
 import json
 import os
 import sys
@@ -215,12 +216,89 @@ def cmd_words(args):
     print("Xem work/MANIFEST.md")
 
 
+# Từ W061 trở đi làm theo hai lượt nhẹ (xem docs/JMDICT_VI_PIPELINE.md):
+#   N (nghĩa + Hán Việt, thêm 1 câu ví dụ cho từ không có câu Tatoeba), mỗi batch = 2 batch W
+#   C (dịch câu ví dụ Tatoeba sang tiếng Việt)
+NEW_FLOW_START = 61
+NGHIA_DIR = os.path.join(ROOT, "data", "nghia")
+CAU_DIR = os.path.join(ROOT, "data", "cau")
+TATOEBA_CHOSEN = os.path.join(ROOT, "data", "tatoeba_chon.json")
+CAU_BATCH_SIZE = 450
+
+
+def new_flow_batches():
+    names = sorted(os.path.splitext(os.path.basename(p))[0]
+                   for p in glob.glob(os.path.join(WORK, "batches", "W[0-9][0-9][0-9].json")))
+    return [n for n in names if int(n[1:]) >= NEW_FLOW_START]
+
+
+def load_chosen():
+    if not os.path.exists(TATOEBA_CHOSEN):
+        sys.exit("Chưa có data/tatoeba_chon.json: chạy python vn/tatoeba.py trước")
+    with open(TATOEBA_CHOSEN, encoding="utf-8") as f:
+        return json.load(f)
+
+
+def precreate(folder, name):
+    os.makedirs(folder, exist_ok=True)
+    path = os.path.join(folder, f"{name}.json")
+    if not os.path.exists(path):
+        open(path, "w").close()
+
+
+def cmd_nghia(args):
+    chosen = load_chosen()
+    prompt = read_prompt("PROMPT_NGHIA_VD.md")
+    names = new_flow_batches()
+    made, need_ex = [], 0
+    for i in range(0, len(names), 2):
+        pair = names[i:i + 2]
+        items = []
+        for w in pair:
+            with open(os.path.join(WORK, "batches", f"{w}.json"), encoding="utf-8") as f:
+                for it in json.load(f):
+                    item = dict(it)
+                    if str(it["id"]) not in chosen:
+                        item["vd"] = True
+                        need_ex += 1
+                    items.append(item)
+        name = "N" + pair[0][1:]
+        write_batch(name, prompt, items)
+        precreate(NGHIA_DIR, name)
+        made.append(name)
+    print(f"{len(made)} batch nghĩa: {made[0]}..{made[-1]} (mỗi batch = 2 batch W); {need_ex} từ cần AI viết 1 câu ví dụ")
+    print("Kết quả lưu vào data/nghia/<tên batch>.json")
+
+
+def cmd_cau(args):
+    chosen = load_chosen()
+    prompt = read_prompt("PROMPT_CAU.md")
+    order = []
+    for w in new_flow_batches():
+        with open(os.path.join(WORK, "batches", f"{w}.json"), encoding="utf-8") as f:
+            order += [str(it["id"]) for it in json.load(f)]
+    todo, seen = [], set()
+    for wid in order:
+        for s in chosen.get(wid, []):
+            if not s["vi"] and s["sid"] not in seen:
+                seen.add(s["sid"])
+                todo.append({"sid": s["sid"], "ja": s["ja"], **({"en": s["en"]} if s["en"] else {})})
+    made = []
+    for i in range(0, len(todo), CAU_BATCH_SIZE):
+        name = f"C{i // CAU_BATCH_SIZE + 1:03d}"
+        write_batch(name, prompt, todo[i:i + CAU_BATCH_SIZE])
+        precreate(CAU_DIR, name)
+        made.append(name)
+    print(f"{len(todo)} câu cần dịch -> {len(made)} batch: {made[0]}..{made[-1]}")
+    print("Kết quả lưu vào data/cau/<tên batch>.json")
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    p.add_argument("step", choices=["kanji", "words"])
+    p.add_argument("step", choices=["kanji", "words", "nghia", "cau"])
     p.add_argument("--jmdict", default=os.path.join(ROOT, "JMdict_e"))
     args = p.parse_args()
-    {"kanji": cmd_kanji, "words": cmd_words}[args.step](args)
+    {"kanji": cmd_kanji, "words": cmd_words, "nghia": cmd_nghia, "cau": cmd_cau}[args.step](args)
 
 
 if __name__ == "__main__":

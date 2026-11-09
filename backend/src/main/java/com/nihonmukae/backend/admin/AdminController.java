@@ -1,5 +1,6 @@
 package com.nihonmukae.backend.admin;
 
+import com.nihonmukae.backend.admin.dto.AdminDtos.ApprovedRequest;
 import com.nihonmukae.backend.admin.dto.AdminDtos.BankSummary;
 import com.nihonmukae.backend.admin.dto.AdminDtos.EnabledRequest;
 import com.nihonmukae.backend.admin.dto.AdminDtos.QuestionDetail;
@@ -105,6 +106,18 @@ public class AdminController {
     public ApiResponse<UserRow> setEnabled(@AuthenticationPrincipal JwtUserPrincipal principal,
                                            @PathVariable UUID id, @RequestBody EnabledRequest req) {
         return ApiResponse.success(adminService.setEnabled(principal.getId(), id, req.enabled()));
+    }
+
+    @PutMapping("/users/{id}/approved")
+    public ApiResponse<UserRow> setApproved(@AuthenticationPrincipal JwtUserPrincipal principal,
+                                            @PathVariable UUID id, @RequestBody ApprovedRequest req) {
+        return ApiResponse.success(adminService.setApproved(principal.getId(), id, req.approved()));
+    }
+
+    @DeleteMapping("/users/{id}")
+    public ApiResponse<Void> rejectUser(@PathVariable UUID id) {
+        adminService.rejectPending(id);
+        return ApiResponse.success(null, "Đã từ chối đăng ký");
     }
 
     // ─── Trạng thái server ──────────────────────────────────────────────

@@ -1,6 +1,11 @@
 export interface AuthResponse {
   accessToken: string;
 }
+
+/** Đăng ký không cấp token: tài khoản mới chờ admin duyệt. */
+export interface RegisterResponse {
+  pending: boolean;
+}
  
 export interface ApiErrorBody {
   error: string;

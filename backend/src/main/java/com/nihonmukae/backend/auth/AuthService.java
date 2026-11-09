@@ -50,6 +50,7 @@ public class AuthService {
                 .name(name)
                 .provider("local")
                 .role("USER")
+                .approved(false)
                 .build();
         return userRepository.save(u);
     }
@@ -95,8 +96,8 @@ public class AuthService {
         RefreshToken old = o.get();
         User user = old.getUser();
         Hibernate.initialize(user);
-        if (!user.isEnabled()) {
-            // Tài khoản bị khóa: hủy luôn phiên đang có
+        if (!user.isEnabled() || !user.isApproved()) {
+            // Tài khoản bị khóa hoặc chưa được duyệt: hủy luôn phiên đang có
             refreshTokenRepository.deleteByUserId(user.getId());
             return Optional.empty();
         }

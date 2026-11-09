@@ -1,5 +1,6 @@
 """
-Nạp từ điển JMdict + kết quả Gemini đã qua check.py vào các bảng dict_* (migration V18).
+Nạp từ điển JMdict + kết quả Gemini đã qua check.py vào các bảng dict_* (migration V18, V19, V20).
+Từ W061 trở đi chạy vn/merge_w.py trước để ghép nghĩa + câu ví dụ thành data/results/W0xx.json.
 
     python vn/import_dict.py                 # DB dev (MAZII_DB_URL hoặc postgresql://dev:dev@localhost:5432/nihon_mukae)
     python vn/import_dict.py --db-url ...    # DB khác
@@ -9,7 +10,6 @@ từ nào đã có kết quả Gemini thì có thêm nghĩa tiếng Việt, Hán
 """
 import argparse
 import glob
-import json
 import os
 import sys
 
@@ -18,7 +18,7 @@ from psycopg2.extras import Json, execute_values
 
 sys.path.insert(0, os.path.dirname(__file__))
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from hanviet import HanViet  # noqa: E402
+from hanviet import HanViet, read_json_array  # noqa: E402
 from prepare import RESULTS, ROOT, SOURCES, headword, pos_label, select  # noqa: E402
 import config  # noqa: E402  (scripts/jmdict/config.py: DB_URL)
 
@@ -27,9 +27,11 @@ def load_results(prefix):
     """Gộp W001.json, W001_retry.json... thành {id hoặc chữ kanji: mục}. Kết quả sau ghi đè kết quả trước."""
     merged = {}
     for path in sorted(glob.glob(os.path.join(RESULTS, f"{prefix}*.json"))):
-        with open(path, encoding="utf-8") as f:
-            for item in json.load(f):
-                merged[item["id" if prefix == "W" else "k"]] = item
+        # File còn trống (tạo sẵn để dán dần) hoặc chưa qua check.py thì bỏ qua
+        for item in read_json_array(path):
+            key = item.get("id" if prefix == "W" else "k") if isinstance(item, dict) else None
+            if key is not None and ("m" in item or prefix == "K"):
+                merged[key] = item
     return merged
 
 
@@ -52,6 +54,15 @@ def main():
     kanji = load_results("K")
     entries = select(args.jmdict)
 
+    # Mục admin đã sửa tay (edited) giữ nguyên, mục admin đã xoá (dict_deleted) không nạp lại
+    with psycopg2.connect(args.db_url) as conn, conn.cursor() as cur:
+        cur.execute("SELECT id FROM dict_entries WHERE edited")
+        edited = {r[0] for r in cur.fetchall()}
+        cur.execute("SELECT id FROM dict_deleted")
+        deleted = {r[0] for r in cur.fetchall()}
+    entries = [e for e in entries if e["id"] not in deleted and e["id"] not in edited]
+    words = {k: v for k, v in words.items() if k not in deleted and k not in edited}
+
     entry_rows, meaning_rows, example_rows = [], [], []
     for e in entries:
         ai = words.get(e["id"])
@@ -64,7 +75,8 @@ def main():
         ))
         if ai:
             meaning_rows += [(e["id"], i, m["vi"]) for i, m in enumerate(ai["m"])]
-            example_rows += [(e["id"], i, x["ja"], x["vi"]) for i, x in enumerate(ai["ex"])]
+            example_rows += [(e["id"], i, x["ja"], x["vi"], x.get("src", "ai"), x.get("sid"))
+                             for i, x in enumerate(ai["ex"])]
 
     with psycopg2.connect(args.db_url) as conn, conn.cursor() as cur:
         execute_values(cur, """
@@ -85,7 +97,8 @@ def main():
             cur.execute("DELETE FROM dict_meanings WHERE entry_id = ANY(%s)", (ids,))
             cur.execute("DELETE FROM dict_examples WHERE entry_id = ANY(%s)", (ids,))
         execute_values(cur, "INSERT INTO dict_meanings (entry_id, idx, meaning) VALUES %s", meaning_rows, page_size=5000)
-        execute_values(cur, "INSERT INTO dict_examples (entry_id, idx, ja, vi) VALUES %s", example_rows, page_size=5000)
+        execute_values(cur, "INSERT INTO dict_examples (entry_id, idx, ja, vi, source, source_id) VALUES %s",
+                       example_rows, page_size=5000)
 
         execute_values(cur, """
             INSERT INTO dict_kanji (kanji, han_viet, meaning) VALUES %s
@@ -94,6 +107,8 @@ def main():
 
     with_vi = sum(1 for e in entries if e["id"] in words)
     print(f"Đã nạp {len(entry_rows)} từ ({with_vi} có nghĩa tiếng Việt), {len(example_rows)} câu ví dụ, {len(kanji)} chữ kanji.")
+    if edited or deleted:
+        print(f"Bỏ qua {len(edited)} mục admin đã sửa và {len(deleted)} mục admin đã xoá.")
 
 
 if __name__ == "__main__":

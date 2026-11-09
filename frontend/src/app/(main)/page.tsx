@@ -1,20 +1,27 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { Clock, BookOpen, Volume2, CheckCircle2 } from "lucide-react";
+import Link from "next/link";
+import { Clock, BookOpen, Volume2, CheckCircle2, Pencil } from "lucide-react";
 import { QuoteBanner } from "../../components/QuoteBanner";
 import { SearchBar } from "../../components/SearchBar";
 import { RecentWordCard, type RecentWord } from "../../components/RecentWordCard";
 import { AddToFlashcardButton } from "@/components/flashcard/AddToFlashcardButton";
+import { ContributeDialog } from "@/components/dictionary/ContributeDialog";
 import { useAuthStore } from "@/store/authStore";
+import { useAuthModalStore } from "@/store/authModalStore";
+import { SOURCE_LINKS } from "@/lib/site";
 import {
   searchDictionary,
   getSearchHistory,
+  type MatchType,
   type WordDto,
 } from "@/lib/api/dictionary";
 
 export default function DictionaryPage() {
   const accessToken = useAuthStore((state) => state.accessToken);
+  const openAuthModal = useAuthModalStore((s) => s.open);
+  const [contributing, setContributing] = useState(false);
 
   const [query, setQuery] = useState("");
   const [debouncedQuery, setDebouncedQuery] = useState("");
@@ -23,7 +30,7 @@ export default function DictionaryPage() {
   const [selectedWord, setSelectedWord] = useState<WordDto | null>(null);
   
   const [isSearching, setIsSearching] = useState(false);
-  const [fuzzyFallback, setFuzzyFallback] = useState(false);
+  const [matchType, setMatchType] = useState<MatchType>("none");
 
   const [recentWords, setRecentWords] = useState<RecentWord[]>([]);
   const [loadingHistory, setLoadingHistory] = useState(false);
@@ -44,15 +51,15 @@ export default function DictionaryPage() {
       const res = await getSearchHistory(0, 10);
       if (res.data?.content) {
         const mapped: RecentWord[] = res.data.content
-          .filter((item) => item.word)
+          .filter((item) => item.kana)
           .map((item) => {
-            const w = item.word!;
+            const word = item.kanji || item.kana!;
             return {
               id: item.id.toString(),
-              avatarChar: w.kanji ? w.kanji.charAt(0) : w.kana.charAt(0),
-              word: w.kanji || w.kana,
-              reading: w.kana,
-              meaning: w.meanings?.[0]?.meaning || "Chưa có nghĩa",
+              avatarChar: word.charAt(0),
+              word,
+              reading: item.kana!,
+              meaning: item.meaning?.replace(/^◆\s*/, "") || "Chưa có nghĩa",
             };
           });
         setRecentWords(mapped);
@@ -73,20 +80,20 @@ export default function DictionaryPage() {
     if (!debouncedQuery) {
       setSearchResults([]);
       setSelectedWord(null);
-      setFuzzyFallback(false);
+      setMatchType("none");
       return;
     }
 
     let isMounted = true;
     setIsSearching(true);
 
-    searchDictionary(debouncedQuery, "vi", 0, 20)
+    searchDictionary(debouncedQuery, 0, 20)
       .then((res) => {
         if (!isMounted) return;
         const words = res.data?.results?.content || [];
         setSearchResults(words);
         setSelectedWord(words[0] || null); // Mặc định từ đầu tiên là từ chính
-        setFuzzyFallback(res.data?.fuzzyFallback || false);
+        setMatchType(res.data?.matchType || "none");
         if (accessToken) loadHistory();
       })
       .catch((err) => {
@@ -149,9 +156,14 @@ export default function DictionaryPage() {
       {/* Khu vực hiển thị kết quả */}
       {debouncedQuery ? (
         <section className="flex flex-col gap-3">
-          {fuzzyFallback && (
+          {matchType === "fuzzy" && (
             <div className="rounded-lg bg-amber-500/10 px-4 py-2 text-xs text-amber-600">
-              Không có kết quả khớp chính xác 100%. Hiển thị các kết quả tương tự:
+              Không có kết quả khớp chính xác. Hiển thị các từ gần giống:
+            </div>
+          )}
+          {matchType === "meaning" && (
+            <div className="rounded-lg bg-sky-500/10 px-4 py-2 text-xs text-sky-700">
+              Các từ có nghĩa chứa &ldquo;{debouncedQuery}&rdquo;:
             </div>
           )}
 
@@ -164,14 +176,14 @@ export default function DictionaryPage() {
                   <div className="flex flex-col gap-3">
                     <div className="flex items-center gap-2">
                       <h1 className="text-4xl font-bold tracking-tight text-neutral-900">
-                        {selectedWord.kanji || selectedWord.kana}
+                        {selectedWord.headword}
                       </h1>
                       <CheckCircle2 size={18} className="text-sky-500" />
                     </div>
 
                     {/* Tag phiên âm / Hán việt / Loại từ */}
                     <div className="flex flex-wrap items-center gap-2 text-xs">
-                      {selectedWord.kana && (
+                      {selectedWord.kana && selectedWord.kana !== selectedWord.headword && (
                         <span className="rounded-full bg-neutral-100 px-3 py-1 text-neutral-700 font-medium">
                           {selectedWord.kana}
                         </span>
@@ -191,6 +203,11 @@ export default function DictionaryPage() {
                           N{selectedWord.jlptLevel}
                         </span>
                       )}
+                      {!selectedWord.hasVietnamese && (
+                        <span className="rounded-full bg-amber-50 px-3 py-1 text-amber-700">
+                          Chưa có bản dịch tiếng Việt
+                        </span>
+                      )}
                     </div>
                   </div>
 
@@ -198,7 +215,7 @@ export default function DictionaryPage() {
                     <AddToFlashcardButton wordId={selectedWord.id} />
                     <button
                       type="button"
-                      onClick={() => handleSpeak(selectedWord.kanji || selectedWord.kana)}
+                      onClick={() => handleSpeak(selectedWord.kana || selectedWord.headword)}
                       className="rounded-full p-2 text-neutral-400 transition hover:bg-neutral-100 hover:text-neutral-700"
                       title="Phát âm"
                     >
@@ -209,35 +226,75 @@ export default function DictionaryPage() {
 
                 <div className="h-px bg-neutral-100" />
 
-                {/* Danh sách nghĩa và ví dụ */}
-                <div className="flex flex-col gap-6">
+                {/* Danh sách nghĩa */}
+                <div className="flex flex-col gap-3">
                   {selectedWord.meanings.map((m, idx) => (
-                    <div key={idx} className="flex flex-col gap-2">
-                      <div className="flex items-center gap-2">
-                        <span className="h-1.5 w-1.5 rounded-full bg-sky-500" />
-                        <span className="text-base font-bold text-neutral-800">
-                          {m.meaning.replace(/^◆\s*/, "")}
-                        </span>
-                        {m.pos && (
-                          <span className="rounded bg-neutral-100 px-2 py-0.5 text-[11px] text-neutral-500">
-                            {m.pos}
-                          </span>
-                        )}
-                      </div>
-
-                      {/* Câu ví dụ đi kèm */}
-                      {selectedWord.examples && selectedWord.examples.length > 0 && (
-                        <div className="ml-4 flex flex-col gap-3 border-l-2 border-neutral-200 pl-4">
-                          {selectedWord.examples.map((ex, exIdx) => (
-                            <div key={exIdx} className="flex flex-col text-sm">
-                              <p className="text-neutral-800">{ex.sentence}</p>
-                              <p className="text-xs text-neutral-500">{ex.translation}</p>
-                            </div>
-                          ))}
-                        </div>
+                    <div key={idx} className="flex items-start gap-2">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-sky-500" />
+                      <span className={`text-base ${m.lang === "en" ? "text-neutral-600" : "font-bold text-neutral-800"}`}>
+                        {m.meaning.replace(/^◆\s*/, "")}
+                      </span>
+                      {m.lang === "en" && (
+                        <span className="mt-1 rounded bg-neutral-100 px-2 py-0.5 text-[11px] text-neutral-500">EN</span>
                       )}
                     </div>
                   ))}
+                </div>
+
+                {/* Câu ví dụ */}
+                {selectedWord.examples.length > 0 && (
+                  <div className="flex flex-col gap-3 border-l-2 border-neutral-200 pl-4">
+                    {selectedWord.examples.map((ex, exIdx) => (
+                      <div key={exIdx} className="flex flex-col text-sm">
+                        <p className="text-neutral-800">{ex.sentence}</p>
+                        <p className="text-xs text-neutral-500">{ex.translation}</p>
+                        {ex.source === "tatoeba" && ex.sourceId && (
+                          <a
+                            href={SOURCE_LINKS.tatoebaSentence(ex.sourceId)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mt-0.5 w-fit text-[11px] text-neutral-400 hover:text-neutral-600 hover:underline"
+                          >
+                            Tatoeba #{ex.sourceId} · CC BY 2.0 FR
+                          </a>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {/* Đóng góp của người dùng đã được duyệt */}
+                {selectedWord.contributions.length > 0 && (
+                  <div className="flex flex-col gap-3 rounded-xl bg-[#F5F3EE] p-4">
+                    <p className="text-xs font-bold uppercase tracking-wider text-neutral-400">Từ cộng đồng</p>
+                    {selectedWord.contributions.map((c) => (
+                      <div key={c.id} className="text-sm">
+                        {c.kind === "example" && c.ja && <p className="text-neutral-800">{c.ja}</p>}
+                        <p className={c.kind === "example" ? "text-xs text-neutral-500" : "text-neutral-800"}>
+                          {c.kind === "meaning" && <span className="mr-1.5 text-[11px] text-neutral-400">Nghĩa:</span>}
+                          {c.kind === "note" && <span className="mr-1.5 text-[11px] text-neutral-400">Ghi chú:</span>}
+                          {c.vi}
+                        </p>
+                        <p className="text-[11px] text-neutral-400">Đóng góp bởi {c.contributor}</p>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                <div className="flex items-center justify-between border-t border-neutral-100 pt-3 text-xs text-neutral-400">
+                  <button
+                    type="button"
+                    onClick={() => (accessToken ? setContributing(true) : openAuthModal("login"))}
+                    className="flex items-center gap-1.5 rounded-full border border-black/10 px-3.5 py-1.5 text-neutral-600 transition hover:bg-neutral-50"
+                  >
+                    <Pencil size={13} />
+                    Đóng góp nghĩa, ví dụ, ghi chú
+                  </button>
+                  {accessToken && (
+                    <Link href="/contributions" className="hover:text-neutral-600 hover:underline">
+                      Đóng góp của tôi
+                    </Link>
+                  )}
                 </div>
               </div>
 
@@ -266,14 +323,14 @@ export default function DictionaryPage() {
                         <div className="flex items-baseline gap-2">
                           <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-sky-500" />
                           <span className="font-bold text-neutral-900">
-                            {item.kanji || item.kana}
+                            {item.headword}
                           </span>
                           <span className="line-clamp-1 text-xs text-neutral-500">
                             {primaryMeaning}
                           </span>
                         </div>
 
-                        {item.kana && (
+                        {item.kana && item.kana !== item.headword && (
                           <span className="ml-3.5 rounded-full bg-neutral-100 px-2 py-0.5 text-[11px] text-neutral-600">
                             {item.kana}
                           </span>
@@ -313,6 +370,9 @@ export default function DictionaryPage() {
             <div className="py-2 text-xs text-neutral-400">Chưa có lịch sử tra cứu gần đây.</div>
           )}
         </section>
+      )}
+      {contributing && selectedWord && (
+        <ContributeDialog word={selectedWord} onClose={() => setContributing(false)} />
       )}
     </div>
   );

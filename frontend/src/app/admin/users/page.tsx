@@ -1,10 +1,12 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { Lock, LockOpen, Search } from "lucide-react";
+import { Check, Lock, LockOpen, Search, X } from "lucide-react";
 import {
   fetchUsers,
   fetchUserSummary,
+  rejectUser,
+  setUserApproved,
   setUserEnabled,
   type AdminUser,
   type Page,
@@ -15,6 +17,7 @@ const PAGE_SIZE = 20;
 
 const STATUS_FILTERS = [
   { id: "", label: "Tất cả" },
+  { id: "pending", label: "Chờ duyệt" },
   { id: "active", label: "Đang hoạt động" },
   { id: "locked", label: "Đã khóa" },
 ];
@@ -61,7 +64,27 @@ export default function AdminUsersPage() {
     }
   }
 
+  async function approve(user: AdminUser) {
+    try {
+      await setUserApproved(user.id, true);
+      await load();
+    } catch {
+      setError("Không duyệt được tài khoản này.");
+    }
+  }
+
+  async function reject(user: AdminUser) {
+    if (!window.confirm(`Từ chối và xoá đăng ký của ${user.email}? Không hoàn tác được.`)) return;
+    try {
+      await rejectUser(user.id);
+      await load();
+    } catch {
+      setError("Không từ chối được tài khoản này.");
+    }
+  }
+
   const cards = [
+    { label: "Chờ duyệt", value: summary?.pending, highlight: (summary?.pending ?? 0) > 0 },
     { label: "Tổng người dùng", value: summary?.total },
     { label: "Đang hoạt động (30 ngày)", value: summary?.active },
     { label: "Đã khóa", value: summary?.locked },
@@ -72,9 +95,12 @@ export default function AdminUsersPage() {
     <div>
       <h1 className="font-serif text-2xl font-semibold text-neutral-900">Người dùng</h1>
 
-      <div className="mt-6 grid grid-cols-2 gap-4 lg:grid-cols-4">
+      <div className="mt-6 grid grid-cols-2 gap-4 lg:grid-cols-5">
         {cards.map((c) => (
-          <div key={c.label} className="rounded-2xl border border-black/5 bg-white p-5">
+          <div
+            key={c.label}
+            className={`rounded-2xl border bg-white p-5 ${"highlight" in c && c.highlight ? "border-amber-300" : "border-black/5"}`}
+          >
             <p className="text-xs text-neutral-400">{c.label}</p>
             <p className="mt-1 text-2xl font-semibold text-neutral-900">{c.value ?? "-"}</p>
           </div>
@@ -146,14 +172,38 @@ export default function AdminUsersPage() {
                 <td className="px-4 py-3">
                   <span
                     className={`rounded-full px-2.5 py-1 text-xs ${
-                      u.enabled ? "bg-emerald-50 text-emerald-700" : "bg-red-50 text-red-700"
+                      !u.approved
+                        ? "bg-amber-50 text-amber-700"
+                        : u.enabled
+                          ? "bg-emerald-50 text-emerald-700"
+                          : "bg-red-50 text-red-700"
                     }`}
                   >
-                    {u.enabled ? "Hoạt động" : "Đã khóa"}
+                    {!u.approved ? "Chờ duyệt" : u.enabled ? "Hoạt động" : "Đã khóa"}
                   </span>
                 </td>
                 <td className="px-4 py-3 text-right">
-                  {u.role !== "ADMIN" && (
+                  {!u.approved && (
+                    <span className="inline-flex gap-1">
+                      <button
+                        type="button"
+                        onClick={() => approve(u)}
+                        title="Duyệt tài khoản"
+                        className="rounded-full p-2 text-emerald-600 transition hover:bg-emerald-50"
+                      >
+                        <Check size={16} />
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => reject(u)}
+                        title="Từ chối và xoá đăng ký"
+                        className="rounded-full p-2 text-red-500 transition hover:bg-red-50"
+                      >
+                        <X size={16} />
+                      </button>
+                    </span>
+                  )}
+                  {u.approved && u.role !== "ADMIN" && (
                     <button
                       type="button"
                       onClick={() => toggle(u)}

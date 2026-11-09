@@ -3,7 +3,7 @@
   "id": 1419370,
   "m": [
    {
-    "vi": "chơi (đàn, nhạc cụ dây/phím)"
+    "vi": "chơi, đánh (đàn)"
    }
   ],
   "ex": [
@@ -40,7 +40,10 @@
   "id": 1420400,
   "m": [
    {
-    "vi": "thông báo, tin tức, điềm báo"
+    "vi": "tin tức, thông báo"
+   },
+   {
+    "vi": "điềm báo, linh cảm"
    }
   ],
   "ex": [
@@ -58,7 +61,7 @@
   "id": 1420410,
   "m": [
    {
-    "vi": "thông báo, cho biết"
+    "vi": "báo, thông báo"
    }
   ],
   "ex": [
@@ -76,7 +79,16 @@
   "id": 1421850,
   "m": [
    {
-    "vi": "đặt, để, bố trí, bổ nhiệm"
+    "vi": "đặt, để"
+   },
+   {
+    "vi": "để lại"
+   },
+   {
+    "vi": "thành lập, đặt (cơ quan, chức vụ)"
+   },
+   {
+    "vi": "bổ nhiệm, thuê"
    }
   ],
   "ex": [
@@ -94,7 +106,10 @@
   "id": 1422970,
   "m": [
    {
-    "vi": "đến, tới nơi, ngồi vào (bàn)"
+    "vi": "đến, tới nơi"
+   },
+   {
+    "vi": "ngồi vào (bàn)"
    }
   ],
   "ex": [
@@ -113,7 +128,16 @@
   "id": 1423310,
   "m": [
    {
-    "vi": "trong, bên trong, giữa"
+    "vi": "bên trong"
+   },
+   {
+    "vi": "trong số"
+   },
+   {
+    "vi": "giữa, trung tâm"
+   },
+   {
+    "vi": "trong lúc, giữa chừng"
    }
   ],
   "ex": [
@@ -131,7 +155,10 @@
   "id": 1427340,
   "m": [
    {
-    "vi": "vừa đúng, vừa vặn, y như"
+    "vi": "vừa đúng, chính xác"
+   },
+   {
+    "vi": "giống như, cứ như"
    }
   ],
   "ex": [
@@ -150,7 +177,7 @@
   "id": 1427510,
   "m": [
    {
-    "vi": "nói chuyện, tán gẫu, bép xép"
+    "vi": "nói, nói chuyện, tán gẫu"
    }
   ],
   "ex": [
@@ -168,7 +195,7 @@
   "id": 1430620,
   "m": [
    {
-    "vi": "ngay lập tức, ngay"
+    "vi": "ngay lập tức"
    }
   ],
   "ex": [
@@ -186,7 +213,7 @@
   "id": 1430690,
   "m": [
    {
-    "vi": "trực tiếp, đích thân"
+    "vi": "trực tiếp"
    }
   ],
   "ex": [
@@ -204,7 +231,16 @@
   "id": 1432900,
   "m": [
    {
-    "vi": "cho qua, luồn qua, xâu qua, kết nối"
+    "vi": "cho qua, cho đi qua"
+   },
+   {
+    "vi": "cho (ánh sáng, điện, nước) đi qua"
+   },
+   {
+    "vi": "xuyên qua, xỏ (kim)"
+   },
+   {
+    "vi": "nối thông (hai nơi), mở (đường)"
    }
   ],
   "ex": [
@@ -222,7 +258,16 @@
   "id": 1432920,
   "m": [
    {
-    "vi": "con đường, phố, lưu thông"
+    "vi": "con đường, phố"
+   },
+   {
+    "vi": "sự qua lại, giao thông"
+   },
+   {
+    "vi": "sự lưu thông (nước, khí)"
+   },
+   {
+    "vi": "độ vang (âm thanh)"
    }
   ],
   "ex": [
@@ -240,7 +285,13 @@
   "id": 1433650,
   "m": [
    {
-    "vi": "nắm bắt, tóm lấy, chộp lấy, thấu hiểu"
+    "vi": "nắm, bắt, túm"
+   },
+   {
+    "vi": "giành được, có được"
+   },
+   {
+    "vi": "nắm bắt, hiểu"
    }
   ],
   "ex": [
@@ -258,7 +309,7 @@
   "id": 1436730,
   "m": [
    {
-    "vi": "từ bỏ, bỏ cuộc"
+    "vi": "từ bỏ, bỏ cuộc, cam chịu"
    }
   ],
   "ex": [
@@ -276,7 +327,10 @@
   "id": 1437560,
   "m": [
    {
-    "vi": "chìm đắm, đuối nước, say mê"
+    "vi": "chết đuối, đuối nước"
+   },
+   {
+    "vi": "đắm chìm, nghiện"
    }
   ],
   "ex": [
@@ -312,7 +366,7 @@
   "id": 1441870,
   "m": [
    {
-    "vi": "truyền đạt, truyền tải, nhắn nhủ"
+    "vi": "truyền đạt, báo, chuyển lời"
    }
   ],
   "ex": [
@@ -331,7 +385,7 @@
   "id": 1442730,
   "m": [
    {
-    "vi": "ruộng lúa, ruộng đồng"
+    "vi": "ruộng lúa"
    }
   ],
   "ex": [
@@ -349,7 +403,13 @@
   "id": 1443990,
   "m": [
    {
-    "vi": "dù sao thì, dù thế nào, dù sao đi nữa"
+    "vi": "dù sao đi nữa"
+   },
+   {
+    "vi": "khoan bàn đến"
+   },
+   {
+    "vi": "thật sự, quả là"
    }
   ],
   "ex": [
@@ -367,7 +427,7 @@
   "id": 1445150,
   "m": [
    {
-    "vi": "lần, mỗi lần"
+    "vi": "lần"
    }
   ],
   "ex": [
@@ -386,7 +446,16 @@
   "id": 1445160,
   "m": [
    {
-    "vi": "độ (nhiệt độ, cồn), lần"
+    "vi": "độ (góc, nhiệt độ)"
+   },
+   {
+    "vi": "(đếm) lần"
+   },
+   {
+    "vi": "độ (kính)"
+   },
+   {
+    "vi": "độ (rượu)"
    }
   ],
   "ex": [
@@ -405,7 +474,7 @@
   "id": 1445590,
   "m": [
    {
-    "vi": "thứ bảy"
+    "vi": "thứ Bảy"
    }
   ],
   "ex": [
@@ -424,7 +493,7 @@
   "id": 1449890,
   "m": [
    {
-    "vi": "cuối cùng thì, rốt cuộc"
+    "vi": "cuối cùng, rốt cuộc"
    }
   ],
   "ex": [
@@ -442,7 +511,16 @@
   "id": 1451150,
   "m": [
    {
-    "vi": "làm việc, lao động, hoạt động"
+    "vi": "làm việc, lao động"
+   },
+   {
+    "vi": "hoạt động, có tác dụng"
+   },
+   {
+    "vi": "gây ra (tội ác), làm"
+   },
+   {
+    "vi": "(ngữ pháp) chia (động từ)"
    }
   ],
   "ex": [
@@ -460,7 +538,16 @@
   "id": 1451210,
   "m": [
    {
-    "vi": "chuyển động, di chuyển, hoạt động (máy)"
+    "vi": "chuyển động, di chuyển"
+   },
+   {
+    "vi": "vận hành, chạy"
+   },
+   {
+    "vi": "hành động"
+   },
+   {
+    "vi": "dao động, bị lay động"
    }
   ],
   "ex": [
@@ -478,7 +565,16 @@
   "id": 1457200,
   "m": [
    {
-    "vi": "tới nơi, đến nơi, đạt tới (tự động từ)"
+    "vi": "với tới, chạm tới, vang tới"
+   },
+   {
+    "vi": "được giao đến, đến nơi"
+   },
+   {
+    "vi": "chu đáo, tỉ mỉ"
+   },
+   {
+    "vi": "(nguyện vọng) thành hiện thực, (tình cảm) được đáp lại"
    }
   ],
   "ex": [
@@ -496,7 +592,10 @@
   "id": 1457210,
   "m": [
    {
-    "vi": "chuyển đến, giao đến, trình báo (tha động từ)"
+    "vi": "giao, gửi đến"
+   },
+   {
+    "vi": "báo cáo, khai báo (với cơ quan)"
    }
   ],
   "ex": [
@@ -514,7 +613,7 @@
   "id": 1457320,
   "m": [
    {
-    "vi": "tấn (1000 kg)"
+    "vi": "tấn"
    }
   ],
   "ex": [
@@ -533,7 +632,10 @@
   "id": 1462900,
   "m": [
    {
-    "vi": "ngày mùng 2, hai ngày"
+    "vi": "ngày mùng 2"
+   },
+   {
+    "vi": "hai ngày"
    }
   ],
   "ex": [
@@ -551,7 +653,10 @@
   "id": 1463480,
   "m": [
    {
-    "vi": "nhộn nhịp, náo nhiệt, rôm rả"
+    "vi": "náo nhiệt, nhộn nhịp"
+   },
+   {
+    "vi": "ồn ào, vui vẻ"
    }
   ],
   "ex": [
@@ -569,7 +674,7 @@
   "id": 1464900,
   "m": [
    {
-    "vi": "chủ nhật"
+    "vi": "Chủ nhật"
    }
   ],
   "ex": [
@@ -587,7 +692,16 @@
   "id": 1465610,
   "m": [
    {
-    "vi": "cho vào, bỏ vào, pha (trà)"
+    "vi": "cho vào, đưa vào"
+   },
+   {
+    "vi": "nhận, tuyển"
+   },
+   {
+    "vi": "chấp nhận, nghe theo"
+   },
+   {
+    "vi": "tính vào, bao gồm"
    }
   ],
   "ex": [
@@ -605,7 +719,16 @@
   "id": 1466940,
   "m": [
    {
-    "vi": "tại sao, vì sao, làm thế nào"
+    "vi": "bằng cách nào"
+   },
+   {
+    "vi": "tại sao"
+   },
+   {
+    "vi": "làm sao có thể"
+   },
+   {
+    "vi": "không thể nào"
    }
   ],
   "ex": [
@@ -623,7 +746,16 @@
   "id": 1466950,
   "m": [
    {
-    "vi": "dù thế nào đi nữa, nhất định, không tài nào"
+    "vi": "bằng mọi giá"
+   },
+   {
+    "vi": "dù muốn hay không"
+   },
+   {
+    "vi": "dù thế nào cũng không"
+   },
+   {
+    "vi": "rốt cuộc, sau cùng"
    }
   ],
   "ex": [
@@ -641,7 +773,13 @@
   "id": 1467150,
   "m": [
    {
-    "vi": "giao phó, ủy thác, phó thác"
+    "vi": "giao phó, phó thác"
+   },
+   {
+    "vi": "phó mặc (cho số phận, trí tưởng tượng)"
+   },
+   {
+    "vi": "dùng hết, tận dụng (tiền, sức)"
    }
   ],
   "ex": [
@@ -660,7 +798,10 @@
   "id": 1473960,
   "m": [
    {
-    "vi": "bán chạy, bán được, nổi tiếng"
+    "vi": "bán chạy"
+   },
+   {
+    "vi": "nổi tiếng, được ưa chuộng"
    }
   ],
   "ex": [
@@ -678,7 +819,10 @@
   "id": 1476060,
   "m": [
    {
-    "vi": "khổng lồ, to lớn, kếch xù"
+    "vi": "to lớn, khổng lồ"
+   },
+   {
+    "vi": "hạt ươi (đười ươi)"
    }
   ],
   "ex": [
@@ -697,7 +841,10 @@
   "id": 1476920,
   "m": [
    {
-    "vi": "ngày mùng 8, tám ngày"
+    "vi": "ngày mùng 8"
+   },
+   {
+    "vi": "tám ngày"
    }
   ],
   "ex": [
@@ -715,7 +862,16 @@
   "id": 1478190,
   "m": [
    {
-    "vi": "rút ra, nhổ, bỏ bớt, xả (nước)"
+    "vi": "rút ra, nhổ"
+   },
+   {
+    "vi": "bỏ qua, bỏ bữa"
+   },
+   {
+    "vi": "làm đến cùng"
+   },
+   {
+    "vi": "xả (hơi, nước)"
    }
   ],
   "ex": [
@@ -733,7 +889,16 @@
   "id": 1478200,
   "m": [
    {
-    "vi": "tuột ra, rụng (tóc), thiếu sót, rời khỏi"
+    "vi": "rụng, rơi ra, bị thiếu"
+   },
+   {
+    "vi": "phai màu"
+   },
+   {
+    "vi": "thủng (quần áo)"
+   },
+   {
+    "vi": "rời khỏi (cuộc họp)"
    }
   ],
   "ex": [
@@ -751,7 +916,16 @@
   "id": 1481920,
   "m": [
    {
-    "vi": "ồn ào, phiền phức, khó tính"
+    "vi": "ồn ào"
+   },
+   {
+    "vi": "phiền phức, khó chịu"
+   },
+   {
+    "vi": "khó tính, kỹ tính"
+   },
+   {
+    "vi": "im đi!"
    }
   ],
   "ex": [
@@ -769,7 +943,10 @@
   "id": 1483070,
   "m": [
    {
-    "vi": "anh ấy, bạn trai"
+    "vi": "anh ấy"
+   },
+   {
+    "vi": "bạn trai"
    }
   ],
   "ex": [
@@ -787,7 +964,7 @@
   "id": 1484930,
   "m": [
    {
-    "vi": "vô cùng, hết sức, cực kỳ"
+    "vi": "rất, cực kỳ"
    }
   ],
   "ex": [
@@ -823,7 +1000,10 @@
   "id": 1486650,
   "m": [
    {
-    "vi": "ngon miệng, hấp dẫn"
+    "vi": "ngon"
+   },
+   {
+    "vi": "hấp dẫn, béo bở"
    }
   ],
   "ex": [
@@ -842,7 +1022,10 @@
   "id": 1489350,
   "m": [
    {
-    "vi": "bảng biểu, biểu đồ, danh sách"
+    "vi": "bảng, biểu"
+   },
+   {
+    "vi": "tờ trình lên vua"
    }
   ],
   "ex": [
@@ -860,7 +1043,7 @@
   "id": 1493240,
   "m": [
    {
-    "vi": "đột nhiên, tình cờ, bất giác"
+    "vi": "chợt, bỗng nhiên, tình cờ"
    }
   ],
   "ex": [
@@ -878,7 +1061,16 @@
   "id": 1495000,
   "m": [
    {
-    "vi": "dở, khó ăn, vụng về, hỏng bét"
+    "vi": "dở, không ngon"
+   },
+   {
+    "vi": "vụng về, kém"
+   },
+   {
+    "vi": "xấu xí"
+   },
+   {
+    "vi": "không ổn, rắc rối"
    }
   ],
   "ex": [
@@ -896,7 +1088,16 @@
   "id": 1495740,
   "m": [
    {
-    "vi": "dính, gắn, đi kèm, có thêm"
+    "vi": "dính, bám, gắn vào"
+   },
+   {
+    "vi": "để lại vết, nhuốm"
+   },
+   {
+    "vi": "ra (quả), sinh (lãi)"
+   },
+   {
+    "vi": "hình thành (thói quen), tăng (sức)"
    }
   ],
   "ex": [
@@ -914,7 +1115,16 @@
   "id": 1495770,
   "m": [
    {
-    "vi": "gắn vào, bật (đèn), viết (nhật ký)"
+    "vi": "gắn, đính, thêm vào"
+   },
+   {
+    "vi": "trang bị (đồ đạc)"
+   },
+   {
+    "vi": "đeo, mặc"
+   },
+   {
+    "vi": "ghi (nhật ký)"
    }
   ],
   "ex": [
@@ -932,7 +1142,13 @@
   "id": 1499720,
   "m": [
    {
-    "vi": "gió, cảm cúm, phong cách"
+    "vi": "gió"
+   },
+   {
+    "vi": "cách cư xử, phong thái"
+   },
+   {
+    "vi": "cảm lạnh"
    }
   ],
   "ex": [
@@ -950,7 +1166,16 @@
   "id": 1501760,
   "m": [
    {
-    "vi": "Phật, người từ bi, người đã khuất"
+    "vi": "Phật"
+   },
+   {
+    "vi": "tượng Phật"
+   },
+   {
+    "vi": "người đã khuất"
+   },
+   {
+    "vi": "người hiền như Phật"
    }
   ],
   "ex": [
@@ -968,7 +1193,16 @@
   "id": 1502390,
   "m": [
    {
-    "vi": "đồ vật, vật, thứ, của cải"
+    "vi": "đồ vật, vật"
+   },
+   {
+    "vi": "đồ đạc, tài sản"
+   },
+   {
+    "vi": "điều, cái gì đó"
+   },
+   {
+    "vi": "chất lượng"
    }
   ],
   "ex": [
@@ -986,7 +1220,16 @@
   "id": 1502860,
   "m": [
    {
-    "vi": "phần, phần dành cho, bổn phận"
+    "vi": "phần, suất"
+   },
+   {
+    "vi": "lượng, phần (dành cho)"
+   },
+   {
+    "vi": "thân phận, địa vị"
+   },
+   {
+    "vi": "bổn phận"
    }
   ],
   "ex": [
@@ -1005,7 +1248,16 @@
   "id": 1505090,
   "m": [
    {
-    "vi": "câu văn, bài văn, văn chương"
+    "vi": "câu"
+   },
+   {
+    "vi": "bài văn, văn bản"
+   },
+   {
+    "vi": "văn chương, học thuật"
+   },
+   {
+    "vi": "câu lệnh"
    }
   ],
   "ex": [
@@ -1023,7 +1275,7 @@
   "id": 1505990,
   "m": [
    {
-    "vi": "tuy nhiên, nhưng mà"
+    "vi": "tuy nhiên, nhưng"
    }
   ],
   "ex": [
@@ -1041,7 +1293,10 @@
   "id": 1506050,
   "m": [
    {
-    "vi": "hơn nữa, lại còn, vậy mà"
+    "vi": "hơn nữa"
+   },
+   {
+    "vi": "vậy mà, thế mà"
    }
   ],
   "ex": [
@@ -1059,7 +1314,16 @@
   "id": 1506930,
   "m": [
    {
-    "vi": "bằng phẳng, phẳng phiu, bình thản"
+    "vi": "bằng phẳng, phẳng"
+   },
+   {
+    "vi": "bình thản"
+   },
+   {
+    "vi": "(ngồi) thoải mái"
+   },
+   {
+    "vi": "cao nguyên, đồng bằng"
    }
   ],
   "ex": [
@@ -1077,7 +1341,10 @@
   "id": 1508290,
   "m": [
    {
-    "vi": "cán, chuôi, tay cầm"
+    "vi": "cán, chuôi"
+   },
+   {
+    "vi": "cuống (nấm, lá)"
    }
   ],
   "ex": [
@@ -1095,7 +1362,13 @@
   "id": 1508390,
   "m": [
    {
-    "vi": "xếp thành hàng, bày biện, liệt kê"
+    "vi": "xếp hàng, bày ra"
+   },
+   {
+    "vi": "liệt kê"
+   },
+   {
+    "vi": "sánh ngang, sánh bằng"
    }
   ],
   "ex": [
@@ -1114,6 +1387,12 @@
   "m": [
    {
     "vi": "gạo"
+   },
+   {
+    "vi": "thứ thiết yếu"
+   },
+   {
+    "vi": "(mạng) bình luận"
    }
   ],
   "ex": [
@@ -1131,7 +1410,16 @@
   "id": 1509430,
   "m": [
    {
-    "vi": "phân biệt, khác, riêng biệt"
+    "vi": "sự phân biệt, khác biệt"
+   },
+   {
+    "vi": "khác, riêng"
+   },
+   {
+    "vi": "ngoại lệ"
+   },
+   {
+    "vi": "theo, phân loại theo"
    }
   ],
   "ex": [
@@ -1149,7 +1437,7 @@
   "id": 1513065,
   "m": [
    {
-    "vi": "cơm hộp"
+    "vi": "cơm hộp bento"
    }
   ],
   "ex": [
@@ -1168,7 +1456,7 @@
   "id": 1514320,
   "m": [
    {
-    "vi": "đi bộ, bước đi"
+    "vi": "đi bộ"
    }
   ],
   "ex": [
@@ -1186,7 +1474,16 @@
   "id": 1516925,
   "m": [
    {
-    "vi": "vị, người, phương hướng, cách làm"
+    "vi": "phía, hướng"
+   },
+   {
+    "vi": "vị, người (kính ngữ)"
+   },
+   {
+    "vi": "cách (làm)"
+   },
+   {
+    "vi": "gửi qua ..."
    }
   ],
   "ex": [
@@ -1204,7 +1501,16 @@
   "id": 1517150,
   "m": [
    {
-    "vi": "luật, phương pháp, phép tắc"
+    "vi": "luật, pháp luật, nguyên tắc"
+   },
+   {
+    "vi": "phương pháp"
+   },
+   {
+    "vi": "thức (ngữ pháp)"
+   },
+   {
+    "vi": "Phật pháp"
    }
   ],
   "ex": [
@@ -1222,7 +1528,7 @@
   "id": 1518540,
   "m": [
    {
-    "vi": "qua đời, mất, chết"
+    "vi": "qua đời, mất"
    }
   ],
   "ex": [
@@ -1240,7 +1546,16 @@
   "id": 1519210,
   "m": [
    {
-    "vi": "quên, để quên"
+    "vi": "quên"
+   },
+   {
+    "vi": "để quên"
+   },
+   {
+    "vi": "lơ đãng"
+   },
+   {
+    "vi": "quên đi"
    }
   ],
   "ex": [
@@ -1258,7 +1573,13 @@
   "id": 1522050,
   "m": [
    {
-    "vi": "hầu như, phần lớn, hầu hết"
+    "vi": "hầu như, gần như"
+   },
+   {
+    "vi": "hầu như không"
+   },
+   {
+    "vi": "phần lớn, đa số"
    }
   ],
   "ex": [
@@ -1276,7 +1597,16 @@
   "id": 1522150,
   "m": [
    {
-    "vi": "sách, tập, bản thân"
+    "vi": "sách"
+   },
+   {
+    "vi": "này, hiện tại"
+   },
+   {
+    "vi": "chính, chủ yếu"
+   },
+   {
+    "vi": "thật, chính thức"
    }
   ],
   "ex": [
@@ -1295,7 +1625,16 @@
   "id": 1523450,
   "m": [
    {
-    "vi": "khoảng chừng, đại khái, nói chung"
+    "vi": "khoảng, chừng"
+   },
+   {
+    "vi": "nói chung"
+   },
+   {
+    "vi": "hoàn toàn"
+   },
+   {
+    "vi": "đại khái, đại ý"
    }
   ],
   "ex": [
@@ -1313,7 +1652,10 @@
   "id": 1523940,
   "m": [
    {
-    "vi": "đánh bóng, mài giũa, đánh (răng)"
+    "vi": "đánh bóng, chà"
+   },
+   {
+    "vi": "trau dồi, mài giũa (kỹ năng)"
    }
   ],
   "ex": [
@@ -1331,7 +1673,16 @@
   "id": 1527110,
   "m": [
    {
-    "vi": "vẫn, chưa"
+    "vi": "vẫn, vẫn còn"
+   },
+   {
+    "vi": "chưa"
+   },
+   {
+    "vi": "còn, thêm"
+   },
+   {
+    "vi": "còn hơn, tương đối"
    }
   ],
   "ex": [
@@ -1350,7 +1701,10 @@
   "id": 1529530,
   "m": [
    {
-    "vi": "làm mất, loại bỏ, làm mất mát"
+    "vi": "làm mất"
+   },
+   {
+    "vi": "loại bỏ, xóa bỏ"
    }
   ],
   "ex": [
@@ -1369,7 +1723,13 @@
   "id": 1529550,
   "m": [
    {
-    "vi": "bị mất, hết, cạn kiệt"
+    "vi": "bị mất"
+   },
+   {
+    "vi": "hết, cạn"
+   },
+   {
+    "vi": "biến mất (cơn đau, tự tin)"
    }
   ],
   "ex": [
@@ -1388,7 +1748,10 @@
   "id": 1532870,
   "m": [
    {
-    "vi": "kêu, hót (động vật, chim)"
+    "vi": "(động vật) kêu, hót"
+   },
+   {
+    "vi": "(mạt chược) hô ăn quân"
    }
   ],
   "ex": [
@@ -1406,7 +1769,7 @@
   "id": 1533330,
   "m": [
    {
-    "vi": "sợi bông, cotton"
+    "vi": "bông"
    }
   ],
   "ex": [
@@ -1424,7 +1787,7 @@
   "id": 1534890,
   "m": [
    {
-    "vi": "thứ năm"
+    "vi": "thứ Năm"
    }
   ],
   "ex": [
@@ -1442,7 +1805,7 @@
   "id": 1535780,
   "m": [
    {
-    "vi": "dĩ nhiên, tất nhiên"
+    "vi": "tất nhiên, đương nhiên"
    }
   ],
   "ex": [
@@ -1460,7 +1823,10 @@
   "id": 1535810,
   "m": [
    {
-    "vi": "tuy nhiên, đương nhiên, hợp lý"
+    "vi": "nhưng mà, tuy nhiên"
+   },
+   {
+    "vi": "hợp lý, đương nhiên"
    }
   ],
   "ex": [
@@ -1478,7 +1844,10 @@
   "id": 1538440,
   "m": [
    {
-    "vi": "nhảy múa, khiêu vũ"
+    "vi": "nhảy, múa"
+   },
+   {
+    "vi": "bị giật dây, nhảy theo điệu người khác"
    }
   ],
   "ex": [
@@ -1496,7 +1865,7 @@
   "id": 1539080,
   "m": [
    {
-    "vi": "xuất sắc, ưu việt, vượt trội"
+    "vi": "vượt trội, giỏi hơn, xuất sắc"
    }
   ],
   "ex": [
@@ -1514,7 +1883,10 @@
   "id": 1545710,
   "m": [
    {
-    "vi": "rung lắc, lắc lư, dao động"
+    "vi": "rung, lắc, đung đưa"
+   },
+   {
+    "vi": "dao động, lung lay"
    }
   ],
   "ex": [
@@ -1532,7 +1904,16 @@
   "id": 1546200,
   "m": [
    {
-    "vi": "việc bận, mục đích, dùng cho"
+    "vi": "việc, công việc"
+   },
+   {
+    "vi": "công dụng, mục đích"
+   },
+   {
+    "vi": "dùng cho ..."
+   },
+   {
+    "vi": "đi vệ sinh"
    }
   ],
   "ex": [
@@ -1551,6 +1932,9 @@
   "m": [
    {
     "vi": "bưu thiếp"
+   },
+   {
+    "vi": "phiếu, thẻ ghi chép"
    }
   ],
   "ex": [
@@ -1568,7 +1952,7 @@
   "id": 1551200,
   "m": [
    {
-    "vi": "tỷ lệ, suất"
+    "vi": "tỷ lệ"
    }
   ],
   "ex": [
@@ -1587,7 +1971,16 @@
   "id": 1551530,
   "m": [
    {
-    "vi": "dựng đứng, dựng lên, gây ra (tiếng động), lập (kế hoạch)"
+    "vi": "dựng lên, dựng đứng"
+   },
+   {
+    "vi": "cắm vào"
+   },
+   {
+    "vi": "phát ra (tiếng động)"
+   },
+   {
+    "vi": "làm (bụi, sóng) nổi lên"
    }
   ],
   "ex": [
@@ -1605,7 +1998,13 @@
   "id": 1554640,
   "m": [
    {
-    "vi": "lượng, khối lượng, dung lượng"
+    "vi": "lượng, số lượng"
+   },
+   {
+    "vi": "độ lượng, lòng bao dung"
+   },
+   {
+    "vi": "lượng (triết học Ấn Độ)"
    }
   ],
   "ex": [
@@ -1623,7 +2022,16 @@
   "id": 1554820,
   "m": [
    {
-    "vi": "sức lực, năng lực, sức mạnh"
+    "vi": "sức, sức mạnh"
+   },
+   {
+    "vi": "năng lực, khả năng"
+   },
+   {
+    "vi": "hiệu lực"
+   },
+   {
+    "vi": "nỗ lực"
    }
   ],
   "ex": [
@@ -1641,7 +2049,10 @@
   "id": 1561470,
   "m": [
    {
-    "vi": "ngày mùng 6, sáu ngày"
+    "vi": "ngày mùng 6"
+   },
+   {
+    "vi": "sáu ngày"
    }
   ],
   "ex": [
@@ -1659,7 +2070,16 @@
   "id": 1565300,
   "m": [
    {
-    "vi": "rên rỉ, gầm gừ, trầm trồ"
+    "vi": "rên, rên rỉ"
+   },
+   {
+    "vi": "gầm, gừ"
+   },
+   {
+    "vi": "(máy, gió) ù ù, vù vù"
+   },
+   {
+    "vi": "trầm trồ thán phục"
    }
   ],
   "ex": [
@@ -1677,7 +2097,7 @@
   "id": 1565750,
   "m": [
    {
-    "vi": "bụi bẩn, cát bụi"
+    "vi": "bụi"
    }
   ],
   "ex": [
@@ -1695,7 +2115,16 @@
   "id": 1566210,
   "m": [
    {
-    "vi": "cái nào, dù sao đi nữa, sớm muộn gì"
+    "vi": "cái nào, đâu, ai"
+   },
+   {
+    "vi": "cả, tất cả"
+   },
+   {
+    "vi": "dù sao đi nữa"
+   },
+   {
+    "vi": "sớm muộn gì, một ngày nào đó"
    }
   ],
   "ex": [
@@ -1733,6 +2162,9 @@
   "m": [
    {
     "vi": "cái kéo"
+   },
+   {
+    "vi": "cái bấm lỗ"
    }
   ],
   "ex": [
@@ -1750,7 +2182,13 @@
   "id": 1576260,
   "m": [
    {
-    "vi": "một ngày, cả ngày"
+    "vi": "một ngày"
+   },
+   {
+    "vi": "cả ngày"
+   },
+   {
+    "vi": "ngày mùng 1"
    }
   ],
   "ex": [
@@ -1768,7 +2206,7 @@
   "id": 1577120,
   "m": [
    {
-    "vi": "tại sao, vì sao"
+    "vi": "tại sao"
    }
   ],
   "ex": [
@@ -1786,7 +2224,10 @@
   "id": 1577130,
   "m": [
    {
-    "vi": "bất cứ khi nào, lúc nào cũng"
+    "vi": "luôn luôn"
+   },
+   {
+    "vi": "bất cứ lúc nào"
    }
   ],
   "ex": [
@@ -1805,7 +2246,7 @@
   "id": 1577660,
   "m": [
    {
-    "vi": "súc miệng, súc họng"
+    "vi": "súc miệng"
    }
   ],
   "ex": [
@@ -1825,6 +2266,15 @@
   "m": [
    {
     "vi": "có, ở (người, động vật)"
+   },
+   {
+    "vi": "ở lại"
+   },
+   {
+    "vi": "đang ..."
+   },
+   {
+    "vi": "đã ..."
    }
   ],
   "ex": [
@@ -1842,7 +2292,16 @@
   "id": 1578850,
   "m": [
    {
-    "vi": "đi, tiến tới"
+    "vi": "đi"
+   },
+   {
+    "vi": "đi qua, đi dọc"
+   },
+   {
+    "vi": "tiến triển, diễn ra"
+   },
+   {
+    "vi": "làm (theo cách), chọn"
    }
   ],
   "ex": [
@@ -1861,7 +2320,13 @@
   "id": 1579080,
   "m": [
    {
-    "vi": "khoảng thời gian, dạo, lúc"
+    "vi": "khoảng, chừng (thời gian)"
+   },
+   {
+    "vi": "thời điểm thích hợp"
+   },
+   {
+    "vi": "mùa"
    }
   ],
   "ex": [
@@ -1879,7 +2344,10 @@
   "id": 1579630,
   "m": [
    {
-    "vi": "ngày mùng 7, bảy ngày"
+    "vi": "ngày mùng 7"
+   },
+   {
+    "vi": "bảy ngày"
    }
   ],
   "ex": [
@@ -1897,7 +2365,10 @@
   "id": 1580600,
   "m": [
    {
-    "vi": "thẳng, thẳng thắn, chính trực"
+    "vi": "thẳng, thẳng tắp"
+   },
+   {
+    "vi": "thẳng thắn, ngay thẳng"
    }
   ],
   "ex": [
@@ -1915,7 +2386,16 @@
   "id": 1580640,
   "m": [
    {
-    "vi": "người, con người, người khác"
+    "vi": "người"
+   },
+   {
+    "vi": "loài người"
+   },
+   {
+    "vi": "con người"
+   },
+   {
+    "vi": "người khác"
    }
   ],
   "ex": [
@@ -1933,7 +2413,16 @@
   "id": 1580825,
   "m": [
    {
-    "vi": "vài, mấy, con số"
+    "vi": "vài, một số"
+   },
+   {
+    "vi": "số lượng"
+   },
+   {
+    "vi": "tính toán, con số"
+   },
+   {
+    "vi": "số"
    }
   ],
   "ex": [
@@ -1952,7 +2441,7 @@
   "id": 1582120,
   "m": [
    {
-    "vi": "cửa hàng, tiệm, quán"
+    "vi": "cửa hàng, quán"
    }
   ],
   "ex": [
@@ -1970,7 +2459,16 @@
   "id": 1582300,
   "m": [
    {
-    "vi": "vân vân, những thứ như"
+    "vi": "vân vân"
+   },
+   {
+    "vi": "hay gì đó"
+   },
+   {
+    "vi": "những thứ như"
+   },
+   {
+    "vi": "chẳng hạn"
    }
   ],
   "ex": [
@@ -1988,7 +2486,16 @@
   "id": 1582310,
   "m": [
    {
-    "vi": "đầu, mái tóc, đầu óc, thủ lĩnh"
+    "vi": "đầu"
+   },
+   {
+    "vi": "tóc"
+   },
+   {
+    "vi": "đầu óc, trí tuệ"
+   },
+   {
+    "vi": "người đứng đầu"
    }
   ],
   "ex": [
@@ -2006,7 +2513,13 @@
   "id": 1582920,
   "m": [
    {
-    "vi": "này, cái này"
+    "vi": "này"
+   },
+   {
+    "vi": "... vừa qua"
+   },
+   {
+    "vi": "đồ (nói dối) này"
    }
   ],
   "ex": [
@@ -2024,7 +2537,13 @@
   "id": 1583095,
   "m": [
    {
-    "vi": "tám cái, 8 tuổi"
+    "vi": "tám (cái)"
+   },
+   {
+    "vi": "tám tuổi"
+   },
+   {
+    "vi": "hai giờ (giờ cổ)"
    }
   ],
   "ex": [
@@ -2042,7 +2561,16 @@
   "id": 1583260,
   "m": [
    {
-    "vi": "tránh, lảng tránh, né tránh"
+    "vi": "tránh (va chạm)"
+   },
+   {
+    "vi": "tránh, né (tình huống, câu hỏi)"
+   },
+   {
+    "vi": "ngăn ngừa"
+   },
+   {
+    "vi": "dẹp sang một bên"
    }
   ],
   "ex": [
@@ -2060,7 +2588,16 @@
   "id": 1583460,
   "m": [
    {
-    "vi": "vẽ, miêu tả, hình dung"
+    "vi": "vẽ"
+   },
+   {
+    "vi": "miêu tả"
+   },
+   {
+    "vi": "hình dung"
+   },
+   {
+    "vi": "tạo thành (hình dạng)"
    }
   ],
   "ex": [
@@ -2078,7 +2615,13 @@
   "id": 1583470,
   "m": [
    {
-    "vi": "hàng hóa, đồ vật, phẩm chất"
+    "vi": "hàng hóa, món đồ"
+   },
+   {
+    "vi": "phẩm chất"
+   },
+   {
+    "vi": "làm duyên"
    }
   ],
   "ex": [
@@ -2096,7 +2639,10 @@
   "id": 1584090,
   "m": [
    {
-    "vi": "ôm, ấp ủ (ước mơ), mang (hoài bão)"
+    "vi": "ôm, bế"
+   },
+   {
+    "vi": "ôm ấp (ý nghĩ, nghi ngờ), mang (cảm xúc)"
    }
   ],
   "ex": [
@@ -2114,7 +2660,7 @@
   "id": 1584105,
   "m": [
    {
-    "vi": "khắp nơi, bốn phương tám hướng"
+    "vi": "khắp nơi, đây đó"
    }
   ],
   "ex": [
@@ -2132,7 +2678,16 @@
   "id": 1584460,
   "m": [
    {
-    "vi": "vạn, mười nghìn (10.000)"
+    "vi": "mười nghìn, vạn"
+   },
+   {
+    "vi": "vô số"
+   },
+   {
+    "vi": "mọi thứ"
+   },
+   {
+    "vi": "đủ loại"
    }
   ],
   "ex": [
@@ -2150,7 +2705,10 @@
   "id": 1584640,
   "m": [
    {
-    "vi": "ngày kia, ngày mốt"
+    "vi": "ngày kia"
+   },
+   {
+    "vi": "(hướng) sai bét"
    }
   ],
   "ex": [
@@ -2168,7 +2726,16 @@
   "id": 1584695,
   "m": [
    {
-    "vi": "mặt, bề mặt, phương diện"
+    "vi": "mặt"
+   },
+   {
+    "vi": "mặt nạ"
+   },
+   {
+    "vi": "(kendo) đòn vào đầu"
+   },
+   {
+    "vi": "mặt (hình học)"
    }
   ],
   "ex": [
@@ -2186,7 +2753,13 @@
   "id": 1585315,
   "m": [
    {
-    "vi": "sáu cái, 6 tuổi"
+    "vi": "sáu (cái)"
+   },
+   {
+    "vi": "sáu tuổi"
+   },
+   {
+    "vi": "sáu giờ (giờ cổ)"
    }
   ],
   "ex": [
@@ -2204,7 +2777,7 @@
   "id": 1585460,
   "m": [
    {
-    "vi": "nào, và bây giờ"
+    "vi": "nào, thế thì"
    }
   ],
   "ex": [
@@ -2222,7 +2795,10 @@
   "id": 1586265,
   "m": [
    {
-    "vi": "vắng, thưa thớt, đói (bụng)"
+    "vi": "vắng, bớt đông"
+   },
+   {
+    "vi": "đói bụng"
    }
   ],
   "ex": [
@@ -2240,7 +2816,16 @@
   "id": 1586270,
   "m": [
    {
-    "vi": "mở, trống, rảnh rỗi"
+    "vi": "mở (cửa)"
+   },
+   {
+    "vi": "mở cửa (kinh doanh)"
+   },
+   {
+    "vi": "trống"
+   },
+   {
+    "vi": "rảnh, còn chỗ"
    }
   ],
   "ex": [
@@ -2258,7 +2843,7 @@
   "id": 1586330,
   "m": [
    {
-    "vi": "bữa sáng, cơm sáng"
+    "vi": "bữa sáng"
    }
   ],
   "ex": [
@@ -2277,7 +2862,7 @@
   "id": 1586780,
   "m": [
    {
-    "vi": "tất cả, mọi"
+    "vi": "mọi, tất cả"
    }
   ],
   "ex": [
@@ -2314,7 +2899,13 @@
   "id": 1586850,
   "m": [
    {
-    "vi": "hoặc là, có lẽ"
+    "vi": "hoặc"
+   },
+   {
+    "vi": "có lẽ"
+   },
+   {
+    "vi": "có khi ... có khi ..."
    }
   ],
   "ex": [
@@ -2332,7 +2923,16 @@
   "id": 1587290,
   "m": [
    {
-    "vi": "nhận, ăn, uống (khiêm nhường)"
+    "vi": "nhận (khiêm nhường)"
+   },
+   {
+    "vi": "ăn, uống (khiêm nhường)"
+   },
+   {
+    "vi": "đội (trên đầu)"
+   },
+   {
+    "vi": "suy tôn (làm lãnh đạo)"
    }
   ],
   "ex": [
@@ -2350,7 +2950,7 @@
   "id": 1587700,
   "m": [
    {
-    "vi": "sốt ruột, bực bội, cáu kỉnh"
+    "vi": "bực bội, sốt ruột"
    }
   ],
   "ex": [
@@ -2368,7 +2968,16 @@
   "id": 1588760,
   "m": [
    {
-    "vi": "nhận được, đạt được, hiểu được"
+    "vi": "được, có được, đạt được"
+   },
+   {
+    "vi": "hiểu"
+   },
+   {
+    "vi": "bị (phạt), mắc (bệnh)"
+   },
+   {
+    "vi": "có thể"
    }
   ],
   "ex": [
@@ -2386,7 +2995,7 @@
   "id": 1589110,
   "m": [
    {
-    "vi": "tủ âm tường"
+    "vi": "tủ âm tường (kiểu Nhật)"
    }
   ],
   "ex": [
@@ -2404,7 +3013,16 @@
   "id": 1589580,
   "m": [
    {
-    "vi": "hạ xuống, thả xuống, rút (tiền)"
+    "vi": "hạ xuống, kéo xuống"
+   },
+   {
+    "vi": "cho (khách) xuống, dỡ (hàng)"
+   },
+   {
+    "vi": "rút (tiền)"
+   },
+   {
+    "vi": "dùng lần đầu"
    }
   ],
   "ex": [
@@ -2422,7 +3040,16 @@
   "id": 1590150,
   "m": [
    {
-    "vi": "bóng râm, phía sau, góc khuất"
+    "vi": "bóng râm, bóng"
+   },
+   {
+    "vi": "phía sau, mặt sau"
+   },
+   {
+    "vi": "hậu trường, sau lưng"
+   },
+   {
+    "vi": "vẻ u ám"
    }
   ],
   "ex": [
@@ -2459,6 +3086,15 @@
   "m": [
    {
     "vi": "có hiệu quả, có tác dụng"
+   },
+   {
+    "vi": "hoạt động tốt"
+   },
+   {
+    "vi": "có thể"
+   },
+   {
+    "vi": "nếm thử"
    }
   ],
   "ex": [
@@ -2476,7 +3112,16 @@
   "id": 1591110,
   "m": [
    {
-    "vi": "nghe, hỏi, lắng nghe"
+    "vi": "nghe thấy"
+   },
+   {
+    "vi": "nghe (nhạc)"
+   },
+   {
+    "vi": "hỏi"
+   },
+   {
+    "vi": "nghe nói"
    }
   ],
   "ex": [
@@ -2495,7 +3140,13 @@
   "id": 1591900,
   "m": [
    {
-    "vi": "đẹp, sạch sẽ, tinh tươm"
+    "vi": "đẹp, xinh"
+   },
+   {
+    "vi": "sạch sẽ, gọn gàng"
+   },
+   {
+    "vi": "hoàn toàn, sạch trơn"
    }
   ],
   "ex": [
@@ -2513,7 +3164,10 @@
   "id": 1593590,
   "m": [
    {
-    "vi": "bữa tiệc, chiêu đãi, món ngon"
+    "vi": "chiêu đãi, khao"
+   },
+   {
+    "vi": "bữa tiệc thịnh soạn, món ngon"
    }
   ],
   "ex": [
@@ -2531,7 +3185,16 @@
   "id": 1594400,
   "m": [
    {
-    "vi": "chắc chắn, vững vàng, nghiêm túc"
+    "vi": "chặt, chắc"
+   },
+   {
+    "vi": "vững chắc"
+   },
+   {
+    "vi": "đầy đủ, chăm chỉ"
+   },
+   {
+    "vi": "đáng tin cậy, tỉnh táo"
    }
   ],
   "ex": [
@@ -2550,6 +3213,9 @@
   "m": [
    {
     "vi": "tất cả, toàn bộ"
+   },
+   {
+    "vi": "hoàn toàn"
    }
   ],
   "ex": [
@@ -2567,7 +3233,10 @@
   "id": 1596050,
   "m": [
    {
-    "vi": "tối đa, nhiều nhất là, cố hết sức"
+    "vi": "nhiều nhất, cùng lắm"
+   },
+   {
+    "vi": "cố gắng hết sức"
    }
   ],
   "ex": [
@@ -2585,7 +3254,7 @@
   "id": 1596690,
   "m": [
    {
-    "vi": "từng người, mỗi người, tương ứng"
+    "vi": "mỗi, từng, lần lượt"
    }
   ],
   "ex": [
@@ -2604,7 +3273,10 @@
   "id": 1597180,
   "m": [
    {
-    "vi": "tình cờ, ngẫu nhiên, thỉnh thoảng"
+    "vi": "tình cờ, ngẫu nhiên"
+   },
+   {
+    "vi": "thỉnh thoảng"
    }
   ],
   "ex": [
@@ -2622,7 +3294,16 @@
   "id": 1599420,
   "m": [
    {
-    "vi": "khá là, mãi mà (không)"
+    "vi": "khá, rất"
+   },
+   {
+    "vi": "mãi mà (không)"
+   },
+   {
+    "vi": "giữa chừng"
+   },
+   {
+    "vi": "tuyệt, giỏi"
    }
   ],
   "ex": [
@@ -2640,7 +3321,10 @@
   "id": 1600790,
   "m": [
    {
-    "vi": "20 tuổi"
+    "vi": "hai mươi tuổi"
+   },
+   {
+    "vi": "hai mươi"
    }
   ],
   "ex": [
@@ -2658,7 +3342,10 @@
   "id": 1600850,
   "m": [
    {
-    "vi": "ngày 20, hai mươi ngày"
+    "vi": "ngày 20"
+   },
+   {
+    "vi": "hai mươi ngày"
    }
   ],
   "ex": [
@@ -2676,7 +3363,7 @@
   "id": 1601340,
   "m": [
    {
-    "vi": "bữa tối, cơm tối"
+    "vi": "bữa tối"
    }
   ],
   "ex": [
@@ -2695,7 +3382,13 @@
   "id": 1601810,
   "m": [
    {
-    "vi": "râu, ria"
+    "vi": "râu"
+   },
+   {
+    "vi": "râu (mèo), râu (côn trùng)"
+   },
+   {
+    "vi": "bóng nến (biểu đồ)"
    }
   ],
   "ex": [
@@ -2713,7 +3406,16 @@
   "id": 1602060,
   "m": [
    {
-    "vi": "tồi tệ, khủng khiếp, quá đáng, tàn nhẫn"
+    "vi": "tàn nhẫn, khắc nghiệt"
+   },
+   {
+    "vi": "dữ dội, nặng"
+   },
+   {
+    "vi": "tệ hại, kinh khủng"
+   },
+   {
+    "vi": "quá đáng, vô lý"
    }
   ],
   "ex": [

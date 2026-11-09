@@ -79,7 +79,7 @@ def check_kanji(batch, answer, hv, problems, warnings):
 def check_words(batch, answer, hv, problems, warnings):
     by_id = {a.get("id"): a for a in answer if isinstance(a, dict)}
     good = []
-    stats = {"meanings": 0, "short": 0, "multi_en": 0, "single_m": 0}
+    stats = new_meaning_stats()
     for item in batch:
         a = by_id.get(item["id"])
         if a is None:
@@ -123,11 +123,7 @@ def check_words(batch, answer, hv, problems, warnings):
             if ENGLISH_WORD.search(m["vi"]):
                 warnings.append(f"{item['w']}: nghĩa còn tiếng Anh? {m['vi']}")
 
-        stats["meanings"] += len(meanings)
-        stats["short"] += sum(1 for m in meanings if len(m["vi"].split()) <= 2)
-        if len(item.get("en", [])) >= 2:
-            stats["multi_en"] += 1
-            stats["single_m"] += len(meanings) == 1
+        add_meaning_stats(stats, item, meanings)
 
         entry = {"id": item["id"], "m": [{"vi": m["vi"].strip()} for m in meanings[:4]],
                  "ex": [{"ja": e["ja"].strip(), "vi": e["vi"].strip()} for e in examples[:2]]}
@@ -138,11 +134,25 @@ def check_words(batch, answer, hv, problems, warnings):
     return good
 
 
+def new_meaning_stats():
+    return {"items": 0, "split": 0, "multi_en": 0, "single_m": 0}
+
+
+def add_meaning_stats(stats, item, meanings):
+    senses = min(len(item.get("en", [])), 4)
+    stats["items"] += 1
+    stats["split"] += len(meanings) > senses
+    if senses >= 2:
+        stats["multi_en"] += 1
+        stats["single_m"] += len(meanings) == 1
+
+
 def meaning_drift(stats, warnings):
-    """Gemini hay 'trôi' khi chat dài: tách từ đồng nghĩa thành nhiều nghĩa, hoặc dồn mọi nghĩa làm một."""
-    if stats["meanings"] >= 50 and stats["short"] / stats["meanings"] > 0.4:
-        warnings.insert(0, f"NGHĨA: {stats['short'] / stats['meanings']:.0%} nghĩa chỉ 1-2 tiếng, có vẻ đang tách "
-                           "từ đồng nghĩa thành nhiều nghĩa. Nên mở chat mới và làm lại batch này.")
+    """Gemini hay 'trôi' khi chat dài: tách từ đồng nghĩa thành nhiều nghĩa, hoặc dồn mọi nghĩa làm một.
+    Batch tốt: gần như không mục nào có nhiều nghĩa Việt hơn nghĩa Anh; batch trôi: 30-45%."""
+    if stats["items"] >= 50 and stats["split"] / stats["items"] > 0.1:
+        warnings.insert(0, f"NGHĨA: {stats['split']}/{stats['items']} từ có nhiều nghĩa Việt hơn nghĩa Anh, có vẻ đang "
+                           "tách từ đồng nghĩa thành nhiều nghĩa. Nên mở chat mới và làm lại batch này.")
     if stats["multi_en"] >= 30 and stats["single_m"] / stats["multi_en"] > 0.6:
         warnings.insert(0, f"NGHĨA: {stats['single_m']}/{stats['multi_en']} từ nhiều nghĩa chỉ được ghi 1 nghĩa, "
                            "có vẻ đang dồn nghĩa. Nên mở chat mới và làm lại batch này.")

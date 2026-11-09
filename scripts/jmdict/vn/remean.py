@@ -14,7 +14,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(__file__))
-from check import load_answer, meaning_drift  # noqa: E402
+from check import add_meaning_stats, load_answer, meaning_drift, new_meaning_stats  # noqa: E402
 from hanviet import read_json_array  # noqa: E402
 from prepare import RESULTS, ROOT, WORK, read_prompt  # noqa: E402
 
@@ -64,13 +64,9 @@ def apply(names):
                 bad.append(batch[a["id"]]["w"])
         missing = [it["w"] for i, it in batch.items() if i not in new and it["w"] not in bad]
 
-        stats = {"meanings": 0, "short": 0, "multi_en": 0, "single_m": 0}
+        stats = new_meaning_stats()
         for i, m in new.items():
-            stats["meanings"] += len(m)
-            stats["short"] += sum(1 for x in m if len(x["vi"].split()) <= 2)
-            if len(batch[i]["en"]) >= 2:
-                stats["multi_en"] += 1
-                stats["single_m"] += len(m) == 1
+            add_meaning_stats(stats, batch[i], m)
         drift = []
         meaning_drift(stats, drift)
         if drift:
@@ -104,16 +100,11 @@ def drifted():
         if len(data) < 100:
             continue
         batch = {it["id"]: it for it in read_batch(name)}
-        stats = {"meanings": 0, "short": 0, "multi_en": 0, "single_m": 0}
+        stats = new_meaning_stats()
         for r in data:
-            m, it = r.get("m") or [], batch.get(r.get("id"))
-            if not it:
-                continue
-            stats["meanings"] += len(m)
-            stats["short"] += sum(1 for x in m if len(x["vi"].split()) <= 2)
-            if len(it["en"]) >= 2:
-                stats["multi_en"] += 1
-                stats["single_m"] += len(m) == 1
+            it = batch.get(r.get("id"))
+            if it:
+                add_meaning_stats(stats, it, r.get("m") or [])
         warn = []
         meaning_drift(stats, warn)
         if warn:

@@ -3,7 +3,7 @@
   "id": 1070280,
   "m": [
    {
-    "vi": "món bít tết"
+    "vi": "bít tết"
    }
   ],
   "ex": [
@@ -21,7 +21,13 @@
   "id": 1070650,
   "m": [
    {
-    "vi": "dàn âm thanh nổi, stereo"
+    "vi": "âm thanh nổi"
+   },
+   {
+    "vi": "dàn âm thanh stereo"
+   },
+   {
+    "vi": "nổi, lập thể"
    }
   ],
   "ex": [
@@ -39,7 +45,7 @@
   "id": 1070790,
   "m": [
    {
-    "vi": "lò sưởi, máy sưởi"
+    "vi": "lò sưởi"
    }
   ],
   "ex": [
@@ -57,7 +63,7 @@
   "id": 1072260,
   "m": [
    {
-    "vi": "bài phát biểu, diễn thuyết"
+    "vi": "bài phát biểu"
    }
   ],
   "ex": [
@@ -75,7 +81,10 @@
   "id": 1072590,
   "m": [
    {
-    "vi": "chiếc thìa, muỗng"
+    "vi": "thìa, muỗng"
+   },
+   {
+    "vi": "mồi câu hình thìa"
    }
   ],
   "ex": [
@@ -111,7 +120,7 @@
   "id": 1073900,
   "m": [
    {
-    "vi": "dép đi trong nhà, dép lê"
+    "vi": "dép đi trong nhà"
    }
   ],
   "ex": [
@@ -129,7 +138,7 @@
   "id": 1074260,
   "m": [
    {
-    "vi": "quần dài, quần"
+    "vi": "quần (dài)"
    }
   ],
   "ex": [
@@ -165,7 +174,16 @@
   "id": 1074600,
   "m": [
    {
-    "vi": "bộ, tập hợp, cài đặt"
+    "vi": "bộ, combo"
+   },
+   {
+    "vi": "sắp đặt, chuẩn bị"
+   },
+   {
+    "vi": "làm (tóc)"
+   },
+   {
+    "vi": "séc, hiệp (quần vợt, bóng chuyền)"
    }
   ],
   "ex": [
@@ -184,6 +202,9 @@
   "m": [
    {
     "vi": "trung tâm"
+   },
+   {
+    "vi": "(bóng chày) cầu thủ giữa sân ngoài"
    }
   ],
   "ex": [
@@ -201,7 +222,7 @@
   "id": 1075480,
   "m": [
    {
-    "vi": "ghế sô-pha, ghế bành"
+    "vi": "ghế sofa"
    }
   ],
   "ex": [
@@ -219,7 +240,16 @@
   "id": 1075500,
   "m": [
    {
-    "vi": "phần mềm, mềm mại"
+    "vi": "mềm, mềm mại"
+   },
+   {
+    "vi": "phần mềm"
+   },
+   {
+    "vi": "mũ phớt"
+   },
+   {
+    "vi": "kem tươi (soft cream)"
    }
   ],
   "ex": [
@@ -237,7 +267,16 @@
   "id": 1075940,
   "m": [
    {
-    "vi": "kiểu, loại, mẫu người"
+    "vi": "kiểu, loại"
+   },
+   {
+    "vi": "mẫu người (lý tưởng), gu"
+   },
+   {
+    "vi": "máy đánh chữ"
+   },
+   {
+    "vi": "đánh máy"
    }
   ],
   "ex": [
@@ -273,7 +312,7 @@
   "id": 1076170,
   "m": [
    {
-    "vi": "khăn bông, khăn tắm"
+    "vi": "khăn tắm, khăn lau"
    }
   ],
   "ex": [
@@ -291,7 +330,7 @@
   "id": 1076190,
   "m": [
    {
-    "vi": "xe tắc-xi"
+    "vi": "tắc-xi"
    }
   ],
   "ex": [
@@ -309,7 +348,7 @@
   "id": 1076860,
   "m": [
    {
-    "vi": "kim cương, bảng giờ tàu"
+    "vi": "kim cương"
    }
   ],
   "ex": [
@@ -327,7 +366,7 @@
   "id": 1077250,
   "m": [
    {
-    "vi": "khiêu vũ, nhảy múa"
+    "vi": "khiêu vũ, nhảy"
    }
   ],
   "ex": [
@@ -346,6 +385,12 @@
   "m": [
    {
     "vi": "phô mai"
+   },
+   {
+    "vi": "ống chữ T"
+   },
+   {
+    "vi": "cười lên! (khi chụp ảnh)"
    }
   ],
   "ex": [
@@ -381,7 +426,16 @@
   "id": 1077550,
   "m": [
    {
-    "vi": "kiểm tra, họa tiết kẻ ca-rô"
+    "vi": "kẻ ca-rô"
+   },
+   {
+    "vi": "kiểm tra, xem xét"
+   },
+   {
+    "vi": "dấu tích, đánh dấu"
+   },
+   {
+    "vi": "theo dõi, để mắt tới"
    }
   ],
   "ex": [
@@ -399,7 +453,7 @@
   "id": 1078040,
   "m": [
    {
-    "vi": "cơ hội, thời cơ"
+    "vi": "cơ hội"
    }
   ],
   "ex": [
@@ -435,7 +489,7 @@
   "id": 1078750,
   "m": [
    {
-    "vi": "băng dính, băng từ"
+    "vi": "băng (dính, ghi âm)"
    }
   ],
   "ex": [
@@ -453,7 +507,10 @@
   "id": 1079290,
   "m": [
    {
-    "vi": "giáo trình, sách giáo khoa, văn bản"
+    "vi": "văn bản"
+   },
+   {
+    "vi": "sách giáo khoa, giáo trình"
    }
   ],
   "ex": [
@@ -471,7 +528,13 @@
   "id": 1079760,
   "m": [
    {
-    "vi": "bài kiểm tra, bài thi, thử nghiệm"
+    "vi": "bài kiểm tra, kỳ thi"
+   },
+   {
+    "vi": "thử nghiệm"
+   },
+   {
+    "vi": "diễn tập"
    }
   ],
   "ex": [
@@ -489,7 +552,7 @@
   "id": 1080000,
   "m": [
    {
-    "vi": "quần vợt, tennis"
+    "vi": "quần vợt"
    }
   ],
   "ex": [
@@ -507,7 +570,10 @@
   "id": 1080510,
   "m": [
    {
-    "vi": "ti-vi, truyền hình"
+    "vi": "ti vi"
+   },
+   {
+    "vi": "chương trình truyền hình"
    }
   ],
   "ex": [
@@ -525,7 +591,7 @@
   "id": 1081040,
   "m": [
    {
-    "vi": "lều bạt, căn lều"
+    "vi": "lều"
    }
   ],
   "ex": [
@@ -543,7 +609,10 @@
   "id": 1081430,
   "m": [
    {
-    "vi": "hẹn hò, buổi hẹn"
+    "vi": "hẹn hò"
+   },
+   {
+    "vi": "ngày tháng"
    }
   ],
   "ex": [
@@ -561,7 +630,10 @@
   "id": 1083590,
   "m": [
    {
-    "vi": "trung tâm thương mại, bách hóa"
+    "vi": "cửa hàng bách hóa"
+   },
+   {
+    "vi": "bộ phận"
    }
   ],
   "ex": [
@@ -579,7 +651,10 @@
   "id": 1084000,
   "m": [
    {
-    "vi": "cuộc biểu tình, bản thử nghiệm (demo)"
+    "vi": "biểu tình"
+   },
+   {
+    "vi": "trình diễn, demo"
    }
   ],
   "ex": [
@@ -598,6 +673,9 @@
   "m": [
    {
     "vi": "nhà vệ sinh"
+   },
+   {
+    "vi": "đi vệ sinh"
    }
   ],
   "ex": [
@@ -615,7 +693,16 @@
   "id": 1085030,
   "m": [
    {
-    "vi": "đỉnh đầu, vị trí đứng đầu, hàng đầu"
+    "vi": "đỉnh, đầu"
+   },
+   {
+    "vi": "vị trí số một"
+   },
+   {
+    "vi": "lãnh đạo cấp cao"
+   },
+   {
+    "vi": "trang chủ (website)"
    }
   ],
   "ex": [
@@ -651,7 +738,7 @@
   "id": 1086410,
   "m": [
    {
-    "vi": "bộ bài tây"
+    "vi": "bài tây"
    }
   ],
   "ex": [
@@ -670,6 +757,12 @@
   "m": [
    {
     "vi": "đường hầm"
+   },
+   {
+    "vi": "(vật lý) xuyên hầm"
+   },
+   {
+    "vi": "(bóng chày) để bóng lăn lọt qua chân"
    }
   ],
   "ex": [
@@ -687,7 +780,7 @@
   "id": 1087820,
   "m": [
    {
-    "vi": "cánh cửa"
+    "vi": "cửa"
    }
   ],
   "ex": [
@@ -705,7 +798,16 @@
   "id": 1088580,
   "m": [
    {
-    "vi": "chuyến đi chơi bằng ô tô, lái xe"
+    "vi": "lái xe đi chơi"
+   },
+   {
+    "vi": "đi chơi bằng ô tô"
+   },
+   {
+    "vi": "lái (xe)"
+   },
+   {
+    "vi": "thúc đẩy"
    }
   ],
   "ex": [
@@ -723,7 +825,10 @@
   "id": 1088830,
   "m": [
    {
-    "vi": "phim truyền hình, vở kịch"
+    "vi": "phim truyền hình, kịch"
+   },
+   {
+    "vi": "kịch tính, sự kiện bi thảm"
    }
   ],
   "ex": [
@@ -741,7 +846,7 @@
   "id": 1089280,
   "m": [
    {
-    "vi": "váy đầm, lễ phục"
+    "vi": "váy đầm"
    }
   ],
   "ex": [
@@ -759,7 +864,7 @@
   "id": 1089890,
   "m": [
    {
-    "vi": "con dao"
+    "vi": "dao"
    }
   ],
   "ex": [
@@ -777,7 +882,7 @@
   "id": 1091500,
   "m": [
    {
-    "vi": "tin tức, bản tin"
+    "vi": "tin tức"
    }
   ],
   "ex": [
@@ -813,7 +918,16 @@
   "id": 1093450,
   "m": [
    {
-    "vi": "vở ghi, sổ tay, máy tính xách tay"
+    "vi": "vở"
+   },
+   {
+    "vi": "ghi chép"
+   },
+   {
+    "vi": "nốt nhạc"
+   },
+   {
+    "vi": "máy tính xách tay"
    }
   ],
   "ex": [
@@ -832,6 +946,12 @@
   "m": [
    {
     "vi": "gõ cửa"
+   },
+   {
+    "vi": "(bóng chày) đánh bóng cho luyện bắt"
+   },
+   {
+    "vi": "bấm (bút bi bấm)"
    }
   ],
   "ex": [
@@ -849,7 +969,7 @@
   "id": 1095040,
   "m": [
    {
-    "vi": "đi bộ dã ngoại, leo núi ngắm cảnh"
+    "vi": "đi bộ đường dài, leo núi dã ngoại"
    }
   ],
   "ex": [
@@ -940,6 +1060,9 @@
   "m": [
    {
     "vi": "xe buýt"
+   },
+   {
+    "vi": "(máy tính) bus"
    }
   ],
   "ex": [
@@ -975,7 +1098,7 @@
   "id": 1099100,
   "m": [
    {
-    "vi": "túi xách, giỏ xách"
+    "vi": "túi xách"
    }
   ],
   "ex": [
@@ -993,7 +1116,7 @@
   "id": 1100090,
   "m": [
    {
-    "vi": "búi tóc, bánh mì tròn"
+    "vi": "búi tóc"
    }
   ],
   "ex": [
@@ -1011,7 +1134,7 @@
   "id": 1100610,
   "m": [
    {
-    "vi": "phần trăm (%)"
+    "vi": "phần trăm"
    }
   ],
   "ex": [
@@ -1029,7 +1152,13 @@
   "id": 1100760,
   "m": [
    {
-    "vi": "bữa tiệc, buổi liên hoan"
+    "vi": "bữa tiệc"
+   },
+   {
+    "vi": "nhóm (leo núi)"
+   },
+   {
+    "vi": "đảng (chính trị)"
    }
   ],
   "ex": [
@@ -1047,7 +1176,13 @@
   "id": 1100810,
   "m": [
    {
-    "vi": "công việc bán thời gian, người làm bán thời gian"
+    "vi": "phần"
+   },
+   {
+    "vi": "người làm bán thời gian"
+   },
+   {
+    "vi": "việc làm bán thời gian"
    }
   ],
   "ex": [
@@ -1065,7 +1200,16 @@
   "id": 1101120,
   "m": [
    {
-    "vi": "đường ống, tẩu thuốc"
+    "vi": "ống"
+   },
+   {
+    "vi": "tẩu thuốc"
+   },
+   {
+    "vi": "đót thuốc lá"
+   },
+   {
+    "vi": "người trung gian, mối quan hệ"
    }
   ],
   "ex": [
@@ -1101,7 +1245,16 @@
   "id": 1101440,
   "m": [
    {
-    "vi": "thi đỗ, vé thông hành, chuyền bóng"
+    "vi": "đỗ, qua (kỳ thi, kiểm tra)"
+   },
+   {
+    "vi": "vé, thẻ ra vào"
+   },
+   {
+    "vi": "chuyền bóng"
+   },
+   {
+    "vi": "bỏ lượt"
    }
   ],
   "ex": [
@@ -1156,6 +1309,9 @@
   "m": [
    {
     "vi": "bánh mì"
+   },
+   {
+    "vi": "miếng cơm manh áo"
    }
   ],
   "ex": [
@@ -1173,7 +1329,16 @@
   "id": 1105360,
   "m": [
    {
-    "vi": "video, băng hình"
+    "vi": "video"
+   },
+   {
+    "vi": "băng video"
+   },
+   {
+    "vi": "đầu video"
+   },
+   {
+    "vi": "đoạn phim ngắn"
    }
   ],
   "ex": [
@@ -1209,7 +1374,10 @@
   "id": 1106400,
   "m": [
    {
-    "vi": "đàn dương cầm, piano"
+    "vi": "đàn piano"
+   },
+   {
+    "vi": "(nhạc) nhẹ, piano"
    }
   ],
   "ex": [
@@ -1227,7 +1395,10 @@
   "id": 1106530,
   "m": [
    {
-    "vi": "chuyến dã ngoại"
+    "vi": "dã ngoại"
+   },
+   {
+    "vi": "đi chơi, đi bộ"
    }
   ],
   "ex": [
@@ -1245,7 +1416,13 @@
   "id": 1107060,
   "m": [
    {
-    "vi": "cái kẹp ghim, ghim cài"
+    "vi": "ghim, kẹp"
+   },
+   {
+    "vi": "(bowling) con ki"
+   },
+   {
+    "vi": "(golf) cờ cắm lỗ"
    }
   ],
   "ex": [
@@ -1263,7 +1440,10 @@
   "id": 1108180,
   "m": [
    {
-    "vi": "máy fax, bản fax"
+    "vi": "fax"
+   },
+   {
+    "vi": "máy fax"
    }
   ],
   "ex": [
@@ -1281,7 +1461,7 @@
   "id": 1109380,
   "m": [
    {
-    "vi": "phim (chụp ảnh, màng mỏng)"
+    "vi": "phim (chụp ảnh), màng phim"
    }
   ],
   "ex": [
@@ -1299,7 +1479,10 @@
   "id": 1110110,
   "m": [
    {
-    "vi": "cái dĩa (nĩa)"
+    "vi": "dĩa, nĩa"
+   },
+   {
+    "vi": "(bóng chày) cú ném forkball"
    }
   ],
   "ex": [
@@ -1317,7 +1500,10 @@
   "id": 1114640,
   "m": [
    {
-    "vi": "phanh xe, thắng xe"
+    "vi": "phanh"
+   },
+   {
+    "vi": "sự kìm hãm"
    }
   ],
   "ex": [
@@ -1335,7 +1521,16 @@
   "id": 1115150,
   "m": [
    {
-    "vi": "bể bơi, hồ bơi"
+    "vi": "bể bơi"
+   },
+   {
+    "vi": "bi-a lỗ"
+   },
+   {
+    "vi": "gom góp (tiền, nguồn lực)"
+   },
+   {
+    "vi": "liên minh giá"
    }
   ],
   "ex": [
@@ -1353,7 +1548,16 @@
   "id": 1115630,
   "m": [
    {
-    "vi": "cộng, điểm cộng, yếu tố tích cực"
+    "vi": "cộng, thêm vào"
+   },
+   {
+    "vi": "số dương"
+   },
+   {
+    "vi": "dấu cộng"
+   },
+   {
+    "vi": "lợi thế, điểm cộng"
    }
   ],
   "ex": [
@@ -1371,7 +1575,10 @@
   "id": 1115900,
   "m": [
    {
-    "vi": "kế hoạch, gói cước"
+    "vi": "kế hoạch"
+   },
+   {
+    "vi": "gói (dịch vụ)"
    }
   ],
   "ex": [
@@ -1389,7 +1596,7 @@
   "id": 1116840,
   "m": [
    {
-    "vi": "món quà, quà tặng"
+    "vi": "quà, tặng quà"
    }
   ],
   "ex": [
@@ -1407,7 +1614,16 @@
   "id": 1117030,
   "m": [
    {
-    "vi": "chuyên nghiệp, dân chuyên nghiệp"
+    "vi": "chuyên nghiệp, dân chuyên"
+   },
+   {
+    "vi": "chương trình"
+   },
+   {
+    "vi": "công ty sản xuất"
+   },
+   {
+    "vi": "vô sản"
    }
   ],
   "ex": [
@@ -1425,7 +1641,7 @@
   "id": 1119650,
   "m": [
    {
-    "vi": "giường, chiếc giường"
+    "vi": "giường"
    }
   ],
   "ex": [
@@ -1443,7 +1659,7 @@
   "id": 1120010,
   "m": [
    {
-    "vi": "chuông, tiếng chuông"
+    "vi": "chuông"
    }
   ],
   "ex": [
@@ -1461,7 +1677,13 @@
   "id": 1120070,
   "m": [
    {
-    "vi": "thắt lưng, dây nịt, băng chuyền"
+    "vi": "thắt lưng"
+   },
+   {
+    "vi": "dây curoa"
+   },
+   {
+    "vi": "vành đai, khu vực"
    }
   ],
   "ex": [
@@ -1479,7 +1701,7 @@
   "id": 1120280,
   "m": [
    {
-    "vi": "ghế băng, ghế dài"
+    "vi": "ghế dài"
    }
   ],
   "ex": [
@@ -1497,7 +1719,10 @@
   "id": 1120410,
   "m": [
    {
-    "vi": "trang (sách)"
+    "vi": "trang"
+   },
+   {
+    "vi": "trang thứ ..."
    }
   ],
   "ex": [
@@ -1515,7 +1740,10 @@
   "id": 1120990,
   "m": [
    {
-    "vi": "thú cưng, vật nuôi"
+    "vi": "thú cưng"
+   },
+   {
+    "vi": "kèn trumpet"
    }
   ],
   "ex": [
@@ -1533,7 +1761,7 @@
   "id": 1121380,
   "m": [
    {
-    "vi": "bút mực, cây bút"
+    "vi": "bút"
    }
   ],
   "ex": [
@@ -1551,7 +1779,7 @@
   "id": 1121390,
   "m": [
    {
-    "vi": "sơn quét"
+    "vi": "sơn"
    }
   ],
   "ex": [
@@ -1569,7 +1797,7 @@
   "id": 1121740,
   "m": [
    {
-    "vi": "sân ga, ke ga"
+    "vi": "sân ga"
    }
   ],
   "ex": [
@@ -1605,7 +1833,10 @@
   "id": 1123230,
   "m": [
    {
-    "vi": "người bồi bàn, cậu bé phục vụ"
+    "vi": "cậu bé"
+   },
+   {
+    "vi": "nhân viên khuân vác, bồi bàn"
    }
   ],
   "ex": [
@@ -1623,7 +1854,10 @@
   "id": 1123440,
   "m": [
    {
-    "vi": "thuyền nhỏ, xuồng chèo"
+    "vi": "thuyền"
+   },
+   {
+    "vi": "thuyền chèo"
    }
   ],
   "ex": [
@@ -1642,6 +1876,9 @@
   "m": [
    {
     "vi": "quả bóng"
+   },
+   {
+    "vi": "(bóng chày) bóng hỏng"
    }
   ],
   "ex": [
@@ -1677,7 +1914,7 @@
   "id": 1124970,
   "m": [
    {
-    "vi": "túi áo, túi quần"
+    "vi": "túi (áo, quần)"
    }
   ],
   "ex": [
@@ -1695,7 +1932,16 @@
   "id": 1125150,
   "m": [
    {
-    "vi": "hòm thư, hộp thư, vị trí công tác"
+    "vi": "hòm thư"
+   },
+   {
+    "vi": "chức vụ, vị trí"
+   },
+   {
+    "vi": "cột (khung thành)"
+   },
+   {
+    "vi": "bài đăng (mạng xã hội)"
    }
   ],
   "ex": [
@@ -1731,7 +1977,7 @@
   "id": 1126590,
   "m": [
    {
-    "vi": "mic-rô, ống nói"
+    "vi": "micro"
    }
   ],
   "ex": [
@@ -1749,7 +1995,16 @@
   "id": 1127970,
   "m": [
    {
-    "vi": "làm chủ (kỹ năng), ông chủ (quán), thạc sĩ"
+    "vi": "thành thạo (kỹ năng)"
+   },
+   {
+    "vi": "chủ quán"
+   },
+   {
+    "vi": "người đứng đầu"
+   },
+   {
+    "vi": "thạc sĩ"
    }
   ],
   "ex": [
@@ -1767,7 +2022,10 @@
   "id": 1129240,
   "m": [
    {
-    "vi": "mẹ, bà chủ quán"
+    "vi": "mẹ"
+   },
+   {
+    "vi": "bà chủ (quán bar)"
    }
   ],
   "ex": [
@@ -1785,7 +2043,7 @@
   "id": 1130650,
   "m": [
    {
-    "vi": "lỗi lầm, sai sót"
+    "vi": "lỗi, sai sót"
    }
   ],
   "ex": [
@@ -1803,7 +2061,13 @@
   "id": 1131990,
   "m": [
    {
-    "vi": "sữa, sữa bột"
+    "vi": "sữa"
+   },
+   {
+    "vi": "sữa công thức (cho trẻ)"
+   },
+   {
+    "vi": "sữa đặc"
    }
   ],
   "ex": [
@@ -1821,7 +2085,10 @@
   "id": 1132570,
   "m": [
    {
-    "vi": "mét (m)"
+    "vi": "mét"
+   },
+   {
+    "vi": "đồng hồ đo"
    }
   ],
   "ex": [
@@ -1839,7 +2106,7 @@
   "id": 1133830,
   "m": [
    {
-    "vi": "ghi chú, sổ tay, bản ghi nhớ"
+    "vi": "ghi chú, ghi nhớ"
    }
   ],
   "ex": [
@@ -1857,7 +2124,7 @@
   "id": 1134370,
   "m": [
    {
-    "vi": "thành viên"
+    "vi": "thành viên, đội hình"
    }
   ],
   "ex": [
@@ -1875,7 +2142,7 @@
   "id": 1136850,
   "m": [
    {
-    "vi": "sự hài hước, tính khôi hài"
+    "vi": "sự hài hước"
    }
   ],
   "ex": [
@@ -1893,7 +2160,7 @@
   "id": 1137570,
   "m": [
    {
-    "vi": "Châu Âu"
+    "vi": "châu Âu"
    }
   ],
   "ex": [
@@ -1911,7 +2178,7 @@
   "id": 1137620,
   "m": [
    {
-    "vi": "thuyền buồm, du thuyền"
+    "vi": "thuyền buồm"
    }
   ],
   "ex": [
@@ -1929,7 +2196,7 @@
   "id": 1137880,
   "m": [
    {
-    "vi": "bật lửa, người viết bài"
+    "vi": "bật lửa"
    }
   ],
   "ex": [
@@ -1947,7 +2214,7 @@
   "id": 1138710,
   "m": [
    {
-    "vi": "vợt (cầu lông, tennis, bóng bàn)"
+    "vi": "vợt"
    }
   ],
   "ex": [
@@ -1965,7 +2232,7 @@
   "id": 1138860,
   "m": [
    {
-    "vi": "đài phát thanh, radio"
+    "vi": "radio, đài"
    }
   ],
   "ex": [
@@ -1983,7 +2250,7 @@
   "id": 1138960,
   "m": [
    {
-    "vi": "máy cassette kết hợp đài radio"
+    "vi": "máy radio cát-xét"
    }
   ],
   "ex": [
@@ -2001,7 +2268,13 @@
   "id": 1144940,
   "m": [
    {
-    "vi": "đĩa than, kỷ lục (thể thao)"
+    "vi": "đĩa hát"
+   },
+   {
+    "vi": "kỷ lục"
+   },
+   {
+    "vi": "bản ghi (dữ liệu)"
    }
   ],
   "ex": [
@@ -2019,7 +2292,10 @@
   "id": 1145130,
   "m": [
    {
-    "vi": "quầy thu ngân, máy tính tiền"
+    "vi": "máy tính tiền"
+   },
+   {
+    "vi": "quầy thu ngân"
    }
   ],
   "ex": [
@@ -2037,7 +2313,7 @@
   "id": 1145310,
   "m": [
    {
-    "vi": "nhà hàng, quán ăn"
+    "vi": "nhà hàng"
    }
   ],
   "ex": [
@@ -2055,7 +2331,10 @@
   "id": 1145990,
   "m": [
    {
-    "vi": "bản báo cáo, bài thu hoạch"
+    "vi": "bản báo cáo, bài luận"
+   },
+   {
+    "vi": "phóng sự"
    }
   ],
   "ex": [
@@ -2109,7 +2388,7 @@
   "id": 1148640,
   "m": [
    {
-    "vi": "áo sơ mi nam công sở"
+    "vi": "áo sơ mi"
    }
   ],
   "ex": [
@@ -2145,7 +2424,10 @@
   "id": 1149830,
   "m": [
    {
-    "vi": "nước Mỹ, Hoa Kỳ, châu Mỹ"
+    "vi": "nước Mỹ"
+   },
+   {
+    "vi": "châu Mỹ"
    }
   ],
   "ex": [
@@ -2163,7 +2445,16 @@
   "id": 1151580,
   "m": [
    {
-    "vi": "nghịch ngợm, trêu chọc, trò đùa"
+    "vi": "trò nghịch, trò đùa ác"
+   },
+   {
+    "vi": "nghịch ngợm"
+   },
+   {
+    "vi": "trò tiêu khiển"
+   },
+   {
+    "vi": "nghịch, mày mò (đồ vật)"
    }
   ],
   "ex": [
@@ -2182,7 +2473,16 @@
   "id": 1154770,
   "m": [
    {
-    "vi": "đề án, ý tưởng, dự thảo"
+    "vi": "ý tưởng, đề xuất, phương án"
+   },
+   {
+    "vi": "bản nháp"
+   },
+   {
+    "vi": "dự tính"
+   },
+   {
+    "vi": "bàn, giá"
    }
   ],
   "ex": [
@@ -2200,7 +2500,16 @@
   "id": 1155400,
   "m": [
    {
-    "vi": "ngôi vị, vị thế, cấp bậc"
+    "vi": "ngôi vua"
+   },
+   {
+    "vi": "chức vị, phẩm hàm"
+   },
+   {
+    "vi": "địa vị"
+   },
+   {
+    "vi": "cấp độ, thứ hạng"
    }
   ],
   "ex": [
@@ -2237,7 +2546,16 @@
   "id": 1157170,
   "m": [
    {
-    "vi": "làm, thực hiện"
+    "vi": "làm"
+   },
+   {
+    "vi": "làm cho trở thành"
+   },
+   {
+    "vi": "làm (vai trò), giữ chức"
+   },
+   {
+    "vi": "mặc, đeo, mang (vẻ mặt)"
    }
   ],
   "ex": [
@@ -2256,7 +2574,13 @@
   "id": 1160570,
   "m": [
    {
-    "vi": "nuôi nấng, dạy dỗ, bồi dưỡng"
+    "vi": "nuôi, nuôi dưỡng"
+   },
+   {
+    "vi": "đào tạo, dạy dỗ"
+   },
+   {
+    "vi": "vun đắp, phát triển"
    }
   ],
   "ex": [
@@ -2292,7 +2616,16 @@
   "id": 1163940,
   "m": [
    {
-    "vi": "một chút, một lát"
+    "vi": "một chút, hơi"
+   },
+   {
+    "vi": "một lát"
+   },
+   {
+    "vi": "khá"
+   },
+   {
+    "vi": "(không) dễ dàng"
    }
   ],
   "ex": [
@@ -2310,7 +2643,16 @@
   "id": 1168660,
   "m": [
    {
-    "vi": "tùy thuộc vào, do, dựa vào"
+    "vi": "do, bởi"
+   },
+   {
+    "vi": "tùy thuộc vào"
+   },
+   {
+    "vi": "dựa vào, căn cứ vào"
+   },
+   {
+    "vi": "đóng tại, có trụ sở ở"
    }
   ],
   "ex": [
@@ -2328,7 +2670,16 @@
   "id": 1169250,
   "m": [
    {
-    "vi": "kéo, lôi kéo, thu hút, gạch (dòng)"
+    "vi": "kéo"
+   },
+   {
+    "vi": "thu hút (sự chú ý)"
+   },
+   {
+    "vi": "rụt lại, thu (cằm, bụng)"
+   },
+   {
+    "vi": "rút (bài, quẻ)"
    }
   ],
   "ex": [
@@ -2346,7 +2697,16 @@
   "id": 1170660,
   "m": [
    {
-    "vi": "ẩn nấp, trốn, che khuất"
+    "vi": "trốn, ẩn nấp"
+   },
+   {
+    "vi": "khuất, bị che"
+   },
+   {
+    "vi": "ở ẩn"
+   },
+   {
+    "vi": "ẩn giấu (tài năng, ý nghĩa)"
    }
   ],
   "ex": [
@@ -2364,7 +2724,13 @@
   "id": 1177820,
   "m": [
    {
-    "vi": "nơi xa, đằng xa, từ lâu"
+    "vi": "nơi xa, đằng xa"
+   },
+   {
+    "vi": "xa xưa, xa (tương lai)"
+   },
+   {
+    "vi": "xa (hơn hẳn)"
    }
   ],
   "ex": [
@@ -2382,7 +2748,7 @@
   "id": 1179330,
   "m": [
    {
-    "vi": "bà xã, vợ người khác, phu nhân"
+    "vi": "vợ (người khác), bà, phu nhân"
    }
   ],
   "ex": [
@@ -2400,7 +2766,10 @@
   "id": 1183300,
   "m": [
    {
-    "vi": "nguội, ấm ấm (nước)"
+    "vi": "âm ấm, nguội"
+   },
+   {
+    "vi": "dễ dãi"
    }
   ],
   "ex": [
@@ -2418,7 +2787,16 @@
   "id": 1184140,
   "m": [
    {
-    "vi": "dưới, bên dưới, cấp dưới"
+    "vi": "dưới, phía dưới, nhỏ hơn"
+   },
+   {
+    "vi": "đáy"
+   },
+   {
+    "vi": "bên dưới"
+   },
+   {
+    "vi": "ngay sau"
    }
   ],
   "ex": [
@@ -2436,7 +2814,7 @@
   "id": 1188880,
   "m": [
    {
-    "vi": "mãi mãi, muôn đời"
+    "vi": "mãi mãi, bao lâu cũng được"
    }
   ],
   "ex": [
@@ -2455,7 +2833,13 @@
   "id": 1188890,
   "m": [
    {
-    "vi": "luôn luôn, lúc nào cũng"
+    "vi": "luôn luôn"
+   },
+   {
+    "vi": "(không bao giờ)"
+   },
+   {
+    "vi": "thường lệ, như mọi khi"
    }
   ],
   "ex": [
@@ -2474,7 +2858,10 @@
   "id": 1189000,
   "m": [
    {
-    "vi": "nơi nào đó, đâu đó"
+    "vi": "đâu đó"
+   },
+   {
+    "vi": "có phần, ở điểm nào đó"
    }
   ],
   "ex": [
@@ -2494,6 +2881,15 @@
   "m": [
    {
     "vi": "xin mời, xin vui lòng"
+   },
+   {
+    "vi": "cứ tự nhiên"
+   },
+   {
+    "vi": "đây ạ"
+   },
+   {
+    "vi": "(khiêm nhường) tặng"
    }
   ],
   "ex": [
@@ -2511,7 +2907,13 @@
   "id": 1189360,
   "m": [
    {
-    "vi": "phía nào, hướng nào, cái nào (trong 2)"
+    "vi": "phía nào, đâu"
+   },
+   {
+    "vi": "cái nào (trong hai)"
+   },
+   {
+    "vi": "ai, vị nào"
    }
   ],
   "ex": [
@@ -2547,7 +2949,7 @@
   "id": 1190740,
   "m": [
    {
-    "vi": "đáng yêu, xinh xắn, dễ thương"
+    "vi": "đáng yêu, dễ thương"
    }
   ],
   "ex": [
@@ -2565,7 +2967,13 @@
   "id": 1191730,
   "m": [
    {
-    "vi": "ngôi nhà, gia đình, nhà"
+    "vi": "nhà, nơi ở"
+   },
+   {
+    "vi": "gia đình"
+   },
+   {
+    "vi": "dòng họ"
    }
   ],
   "ex": [
@@ -2584,7 +2992,10 @@
   "id": 1195140,
   "m": [
    {
-    "vi": "bắt nạt, ức hiếp"
+    "vi": "bắt nạt, hành hạ"
+   },
+   {
+    "vi": "hành xác, đối xử khắc nghiệt"
    }
   ],
   "ex": [
@@ -2602,7 +3013,10 @@
   "id": 1197020,
   "m": [
    {
-    "vi": "ích kỷ, bướng bỉnh, tùy tiện"
+    "vi": "ích kỷ"
+   },
+   {
+    "vi": "bướng bỉnh, tùy tiện"
    }
   ],
   "ex": [
@@ -2620,7 +3034,10 @@
   "id": 1198170,
   "m": [
    {
-    "vi": "hội, cuộc họp, buổi tụ họp"
+    "vi": "hội nghị, buổi họp, bữa tiệc"
+   },
+   {
+    "vi": "hội, câu lạc bộ"
    }
   ],
   "ex": [
@@ -2639,7 +3056,16 @@
   "id": 1198890,
   "m": [
    {
-    "vi": "giải (bài toán), tháo, cởi (dây), hóa giải"
+    "vi": "cởi, tháo"
+   },
+   {
+    "vi": "tháo chỉ"
+   },
+   {
+    "vi": "giải (bài toán)"
+   },
+   {
+    "vi": "xóa tan (hiểu lầm, nghi ngờ)"
    }
   ],
   "ex": [
@@ -2657,7 +3083,16 @@
   "id": 1198910,
   "m": [
    {
-    "vi": "được giải quyết, tuột ra, cởi mở"
+    "vi": "được giải"
+   },
+   {
+    "vi": "bị tuột, bung ra"
+   },
+   {
+    "vi": "được dỡ bỏ (lệnh cấm), bị phá (bùa)"
+   },
+   {
+    "vi": "(giận, căng thẳng) tan đi"
    }
   ],
   "ex": [
@@ -2675,7 +3110,10 @@
   "id": 1200220,
   "m": [
    {
-    "vi": "vết thương, chấn thương"
+    "vi": "vết thương, bị thương"
+   },
+   {
+    "vi": "sai lầm, rủi ro"
    }
   ],
   "ex": [
@@ -2693,7 +3131,7 @@
   "id": 1201860,
   "m": [
    {
-    "vi": "tro, tàn tro"
+    "vi": "tro"
    }
   ],
   "ex": [

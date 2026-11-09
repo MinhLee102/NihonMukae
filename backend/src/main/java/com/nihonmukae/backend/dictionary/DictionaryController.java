@@ -4,11 +4,14 @@ import com.nihonmukae.backend.auth.jwt.JwtUserPrincipal;
 import com.nihonmukae.backend.dictionary.dto.DictDtos.ContributionRequest;
 import com.nihonmukae.backend.dictionary.dto.DictDtos.Entry;
 import com.nihonmukae.backend.dictionary.dto.DictDtos.HistoryItem;
+import com.nihonmukae.backend.dictionary.dto.DictDtos.KanjiDetail;
+import com.nihonmukae.backend.dictionary.dto.DictDtos.KanjiSummary;
 import com.nihonmukae.backend.dictionary.dto.DictDtos.MyContribution;
 import com.nihonmukae.backend.dictionary.dto.DictDtos.PageData;
 import com.nihonmukae.backend.dictionary.dto.DictDtos.SearchResult;
 import com.nihonmukae.backend.shared.dto.ApiResponse;
 import com.nihonmukae.backend.shared.dto.PageResponse;
+import java.util.List;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -30,10 +33,13 @@ public class DictionaryController {
 
     private final DictionaryService dictionaryService;
     private final ContributionService contributionService;
+    private final KanjiService kanjiService;
 
-    public DictionaryController(DictionaryService dictionaryService, ContributionService contributionService) {
+    public DictionaryController(DictionaryService dictionaryService, ContributionService contributionService,
+                                KanjiService kanjiService) {
         this.dictionaryService = dictionaryService;
         this.contributionService = contributionService;
+        this.kanjiService = kanjiService;
     }
 
     // GET /dictionary/search?q=地域&page=0&size=20
@@ -60,6 +66,20 @@ public class DictionaryController {
             @RequestParam(value = "kana", required = false) String kana
     ) {
         return ApiResponse.success(dictionaryService.lookup(kanji, kana));
+    }
+
+    // ─── Hán tự (công khai) ─────────────────────────────────────────────
+
+    // GET /dictionary/kanji/search?q=食  (hoặc Hán Việt, nghĩa, cách đọc)
+    @GetMapping("/kanji/search")
+    public ApiResponse<List<KanjiSummary>> searchKanji(@RequestParam("q") String q) {
+        return ApiResponse.success(kanjiService.search(q));
+    }
+
+    // GET /dictionary/kanji/食
+    @GetMapping("/kanji/{kanji}")
+    public ApiResponse<KanjiDetail> kanji(@PathVariable String kanji) {
+        return ApiResponse.success(kanjiService.detail(kanji));
     }
 
     // ─── Đóng góp (cần tài khoản đã duyệt) ──────────────────────────────

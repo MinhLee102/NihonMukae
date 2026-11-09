@@ -2,6 +2,7 @@ package com.nihonmukae.backend.shelf;
 
 import com.atilika.kuromoji.ipadic.Token;
 import com.atilika.kuromoji.ipadic.Tokenizer;
+import com.nihonmukae.backend.shared.nlp.KuromojiHolder;
 import com.nihonmukae.backend.shelf.dto.ShelfToken;
 import org.springframework.stereotype.Service;
 
@@ -23,7 +24,7 @@ public class FuriganaService {
     private static final Set<String> SKIP_POS = Set.of("助詞", "助動詞", "記号", "フィラー", "その他");
 
     // Tokenizer khởi tạo nặng (nạp từ điển ipadic) nên dùng chung 1 instance, thread-safe
-    private final Tokenizer tokenizer = new Tokenizer();
+    private final Tokenizer tokenizer = KuromojiHolder.get();
 
     public List<ShelfToken> annotate(String text) {
         List<ShelfToken> result = new ArrayList<>();

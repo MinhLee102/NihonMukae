@@ -47,47 +47,81 @@ public class DictionaryRepository {
 
     private static final String FORM_WHERE = """
             (e.word IN (:v) OR e.reading IN (:v) OR e.headword IN (:v)
+            OR e.word IN (:b) OR e.reading IN (:b) OR e.headword IN (:b)
             OR e.other_forms && ARRAY[:v]::text[] OR e.other_readings && ARRAY[:v]::text[]
             OR e.word LIKE ANY (ARRAY[:p]::text[]) OR e.reading LIKE ANY (ARRAY[:p]::text[])
             OR e.headword LIKE ANY (ARRAY[:p]::text[]))
             """;
 
-    /** Khớp mặt chữ hoặc cách đọc: khớp đúng lên đầu, rồi các dạng khác, rồi khớp phần đầu. */
-    public IdPage searchByForm(Set<String> variants, int offset, int limit) {
+    // Giá trị không bao giờ khớp, để danh sách dạng gốc rỗng vẫn là mệnh đề IN hợp lệ
+    private static final List<String> NO_MATCH = List.of("\uFFFF");
+
+    /**
+     * Khớp mặt chữ hoặc cách đọc: khớp đúng câu gõ vào lên đầu, rồi khớp dạng gốc của từ chia (食べました → 食べる),
+     * rồi các dạng viết khác, rồi khớp phần đầu.
+     */
+    public IdPage searchByForm(Set<String> variants, List<String> bases, int offset, int limit) {
         List<String> prefixes = variants.stream().map(v -> escapeLike(v) + "%").toList();
         MapSqlParameterSource p = new MapSqlParameterSource("v", List.copyOf(variants))
+                .addValue("b", bases.isEmpty() ? NO_MATCH : bases)
                 .addValue("p", prefixes).addValue("limit", limit).addValue("offset", offset);
         Long total = jdbc.queryForObject("SELECT count(*) FROM dict_entries e WHERE " + FORM_WHERE, p, Long.class);
         List<Long> ids = jdbc.queryForList("SELECT e.id FROM dict_entries e WHERE " + FORM_WHERE + """
                 ORDER BY CASE WHEN e.word IN (:v) OR e.reading IN (:v) OR e.headword IN (:v) THEN 0
-                              WHEN e.other_forms && ARRAY[:v]::text[] OR e.other_readings && ARRAY[:v]::text[] THEN 1
-                              ELSE 2 END,
+                              WHEN e.word IN (:b) OR e.reading IN (:b) OR e.headword IN (:b) THEN 1
+                              WHEN e.other_forms && ARRAY[:v]::text[] OR e.other_readings && ARRAY[:v]::text[] THEN 2
+                              ELSE 3 END,
                          NOT EXISTS (SELECT 1 FROM dict_meanings m WHERE m.entry_id = e.id),
+                         e.priority_group = 'other',
                          COALESCE(e.freq_rank, 999999), length(e.headword), e.id
                 LIMIT :limit OFFSET :offset
                 """, p, Long.class);
         return new IdPage(ids, total == null ? 0 : total);
     }
 
-    private static final String MEANING_WHERE = """
-            (EXISTS (SELECT 1 FROM dict_meanings m WHERE m.entry_id = e.id AND m.meaning ILIKE :like)
-            OR e.han_viet ILIKE :like OR e.gloss_en::text ILIKE :like)
-            """;
+    /** Có mục nào mà mặt chữ hoặc cách đọc khớp đúng một trong các dạng này không (dùng để quyết định có hiểu câu gõ là romaji). */
+    public boolean hasExactForm(Set<String> variants) {
+        Integer n = jdbc.queryForObject("""
+                SELECT count(*) FROM (SELECT 1 FROM dict_entries e
+                WHERE e.word IN (:v) OR e.reading IN (:v) OR e.headword IN (:v) LIMIT 1) t
+                """, new MapSqlParameterSource("v", List.copyOf(variants)), Integer.class);
+        return n != null && n > 0;
+    }
 
-    /** Khớp theo nghĩa tiếng Việt, Hán Việt hoặc nghĩa tiếng Anh. */
-    public IdPage searchByMeaning(String q, int offset, int limit) {
-        MapSqlParameterSource p = new MapSqlParameterSource("like", "%" + escapeLike(q) + "%")
-                .addValue("q", q).addValue("quoted", "%\"" + escapeLike(q) + "\"%")
+    // Khớp nguyên từ: câu gõ vào phải đứng giữa khoảng trắng, dấu câu hoặc đầu/cuối chuỗi. Không dùng [[:alpha:]]
+    // vì phụ thuộc locale của DB (chữ có dấu có thể không được coi là chữ cái). Tránh "ăn" khớp trong "năng", "chăn".
+    private static final String SEP = "[] ,;.:()/\"'!?~=*+–-]";
+
+    /**
+     * Khớp theo nghĩa tiếng Việt, Hán Việt hoặc nghĩa tiếng Anh, nguyên từ. Một truy vấn lấy cả trang lẫn tổng số.
+     * accentless: câu gõ không có dấu thì bỏ dấu cả hai phía (nhat ban → Nhật Bản); gõ có dấu thì khớp đúng dấu.
+     * Ba nhánh UNION để mỗi nhánh dùng được chỉ mục trigram riêng (gộp bằng OR thì Postgres quét toàn bảng).
+     */
+    public IdPage searchByMeaning(String q, boolean accentless, int offset, int limit) {
+        String re = "(^|" + SEP + ")" + regexQuote(q) + "($|" + SEP + ")";
+        String meaning = accentless ? "immutable_unaccent(m.meaning)" : "m.meaning";
+        String hanViet = accentless ? "immutable_unaccent(x.han_viet)" : "x.han_viet";
+        String hanVietOrder = accentless ? "immutable_unaccent(lower(e.han_viet))" : "lower(e.han_viet)";
+        String meaningOrder = accentless ? "immutable_unaccent(lower(m.meaning))" : "lower(m.meaning)";
+        MapSqlParameterSource p = new MapSqlParameterSource("re", re)
+                .addValue("q", q.toLowerCase()).addValue("quoted", "%\"" + escapeLike(q) + "\"%")
                 .addValue("limit", limit).addValue("offset", offset);
-        Long total = jdbc.queryForObject("SELECT count(*) FROM dict_entries e WHERE " + MEANING_WHERE, p, Long.class);
-        List<Long> ids = jdbc.queryForList("SELECT e.id FROM dict_entries e WHERE " + MEANING_WHERE + """
-                ORDER BY CASE WHEN EXISTS (SELECT 1 FROM dict_meanings m WHERE m.entry_id = e.id AND lower(m.meaning) = lower(:q)) THEN 0
-                              WHEN lower(e.han_viet) = lower(:q) OR e.gloss_en::text ILIKE :quoted THEN 1
-                              ELSE 2 END,
-                         COALESCE(e.freq_rank, 999999), length(e.headword), e.id
-                LIMIT :limit OFFSET :offset
-                """, p, Long.class);
-        return new IdPage(ids, total == null ? 0 : total);
+        String sql = "SELECT e.id, count(*) OVER () AS total FROM dict_entries e WHERE e.id IN ("
+                + "SELECT m.entry_id FROM dict_meanings m WHERE " + meaning + " ~* :re "
+                + "UNION SELECT x.id FROM dict_entries x WHERE " + hanViet + " ~* :re "
+                + "UNION SELECT y.id FROM dict_entries y WHERE y.gloss_text ~* :re) "
+                + "ORDER BY CASE WHEN EXISTS (SELECT 1 FROM dict_meanings m WHERE m.entry_id = e.id AND "
+                + meaningOrder + " = :q) THEN 0 "
+                + "WHEN " + hanVietOrder + " = :q OR e.gloss_text ILIKE :quoted THEN 1 ELSE 2 END, "
+                + "NOT EXISTS (SELECT 1 FROM dict_meanings m WHERE m.entry_id = e.id), "
+                + "e.priority_group = 'other', "
+                + "COALESCE(e.freq_rank, 999999), length(e.headword), e.id "
+                + "LIMIT :limit OFFSET :offset";
+        List<long[]> rows = jdbc.query(sql, p, (rs, i) -> new long[]{rs.getLong("id"), rs.getLong("total")});
+        if (rows.isEmpty()) {
+            return new IdPage(List.of(), 0);
+        }
+        return new IdPage(rows.stream().map(r -> r[0]).toList(), rows.get(0)[1]);
     }
 
     /** Gợi ý gần đúng bằng trigram khi gõ sai chính tả. */
@@ -118,6 +152,18 @@ public class DictionaryRepository {
                 LIMIT 1
                 """, p, Long.class);
         return ids.isEmpty() ? null : ids.get(0);
+    }
+
+    /** Các từ có chứa chữ kanji này: từ đã có nghĩa Việt và từ phổ biến lên trước. */
+    public List<Long> findIdsContaining(String kanji, int limit) {
+        return jdbc.queryForList("""
+                SELECT e.id FROM dict_entries e
+                WHERE e.word LIKE :like
+                ORDER BY NOT EXISTS (SELECT 1 FROM dict_meanings m WHERE m.entry_id = e.id),
+                         e.priority_group = 'other', COALESCE(e.freq_rank, 999999), length(e.headword), e.id
+                LIMIT :limit
+                """, new MapSqlParameterSource("like", "%" + escapeLike(kanji) + "%").addValue("limit", limit),
+                Long.class);
     }
 
     /** Từ thuần kana: ưu tiên mục chỉ viết bằng kana, rồi tới mục có kanji cùng cách đọc. */
@@ -252,6 +298,10 @@ public class DictionaryRepository {
 
     public static Short shortOrNull(Object o) {
         return o instanceof Number n ? Short.valueOf(n.shortValue()) : null;
+    }
+
+    static String regexQuote(String s) {
+        return s.replaceAll("[\\\\.^$|?*+()\\[\\]{}]", "\\\\$0");
     }
 
     static String escapeLike(String s) {

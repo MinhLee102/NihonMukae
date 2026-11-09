@@ -1,5 +1,5 @@
 """
-Nạp từ điển JMdict + kết quả Gemini đã qua check.py vào các bảng dict_* (migration V18, V19, V20).
+Nạp toàn bộ JMdict (--core-only: chỉ các từ đã chọn) + kết quả Gemini đã qua check.py vào các bảng dict_* (migration V18, V19, V20, V21).
 Từ W061 trở đi chạy vn/merge_w.py trước để ghép nghĩa + câu ví dụ thành data/results/W0xx.json.
 
     python vn/import_dict.py                 # DB dev (MAZII_DB_URL hoặc postgresql://dev:dev@localhost:5432/nihon_mukae)
@@ -10,6 +10,7 @@ từ nào đã có kết quả Gemini thì có thêm nghĩa tiếng Việt, Hán
 """
 import argparse
 import glob
+import json
 import os
 import sys
 
@@ -19,7 +20,8 @@ from psycopg2.extras import Json, execute_values
 sys.path.insert(0, os.path.dirname(__file__))
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from hanviet import HanViet, read_json_array  # noqa: E402
-from prepare import RESULTS, ROOT, SOURCES, headword, pos_label, select  # noqa: E402
+from jmdict_parse import iter_entries  # noqa: E402
+from prepare import RESULTS, ROOT, SOURCES, headword, load_jlpt, pos_label, select  # noqa: E402
 import config  # noqa: E402  (scripts/jmdict/config.py: DB_URL)
 
 
@@ -47,12 +49,23 @@ def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("--db-url", default=config.DB_URL)
     p.add_argument("--jmdict", default=os.path.join(ROOT, "JMdict_e"))
+    p.add_argument("--core-only", action="store_true",
+                   help="chỉ nạp các từ đã chọn (core, n2, n1, common), mặc định nạp toàn bộ JMdict")
     args = p.parse_args()
 
     hv = HanViet(SOURCES, RESULTS)
     words = load_results("W")
     kanji = load_results("K")
     entries = select(args.jmdict)
+    if not args.core_only:
+        # Phần còn lại của JMdict: chỉ có nghĩa tiếng Anh, nhóm other xếp sau khi tìm kiếm
+        chosen_ids = {e["id"] for e in entries}
+        jlpt = load_jlpt()
+        for e in iter_entries(args.jmdict):
+            if e["id"] not in chosen_ids and e["senses"]:
+                e["group"] = "other"
+                e["jlpt"] = jlpt.get(e["id"])
+                entries.append(e)
 
     # Mục admin đã sửa tay (edited) giữ nguyên, mục admin đã xoá (dict_deleted) không nạp lại
     with psycopg2.connect(args.db_url) as conn, conn.cursor() as cur:
@@ -72,6 +85,7 @@ def main():
             e["usually_kana"], pos_label(e["senses"][0]["pos"]) if e["senses"] else None,
             e["jlpt"], e["rank"], e["group"], han_viet,
             Json([s["gloss"] for s in e["senses"]]),
+            json.dumps([s["gloss"] for s in e["senses"]], ensure_ascii=False, separators=(", ", ": ")),
         ))
         if ai:
             meaning_rows += [(e["id"], i, m["vi"]) for i, m in enumerate(ai["m"])]
@@ -81,14 +95,15 @@ def main():
     with psycopg2.connect(args.db_url) as conn, conn.cursor() as cur:
         execute_values(cur, """
             INSERT INTO dict_entries (id, word, reading, headword, other_forms, other_readings, usually_kana, pos,
-                                      jlpt_level, freq_rank, priority_group, han_viet, gloss_en)
+                                      jlpt_level, freq_rank, priority_group, han_viet, gloss_en, gloss_text)
             VALUES %s
             ON CONFLICT (id) DO UPDATE SET
                 word = EXCLUDED.word, reading = EXCLUDED.reading, headword = EXCLUDED.headword,
                 other_forms = EXCLUDED.other_forms, other_readings = EXCLUDED.other_readings,
                 usually_kana = EXCLUDED.usually_kana, pos = EXCLUDED.pos, jlpt_level = EXCLUDED.jlpt_level,
                 freq_rank = EXCLUDED.freq_rank, priority_group = EXCLUDED.priority_group,
-                han_viet = EXCLUDED.han_viet, gloss_en = EXCLUDED.gloss_en, updated_at = now()
+                han_viet = EXCLUDED.han_viet, gloss_en = EXCLUDED.gloss_en, gloss_text = EXCLUDED.gloss_text,
+                updated_at = now()
         """, entry_rows, page_size=2000)
 
         # Nghĩa và ví dụ của các từ có kết quả mới: xoá bản cũ rồi chèn lại cho gọn

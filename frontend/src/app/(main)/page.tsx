@@ -161,11 +161,6 @@ export default function DictionaryPage() {
               Không có kết quả khớp chính xác. Hiển thị các từ gần giống:
             </div>
           )}
-          {matchType === "meaning" && (
-            <div className="rounded-lg bg-sky-500/10 px-4 py-2 text-xs text-sky-700">
-              Các từ có nghĩa chứa &ldquo;{debouncedQuery}&rdquo;:
-            </div>
-          )}
 
           {searchResults.length > 0 && selectedWord ? (
             <div className="grid grid-cols-1 items-start gap-5 md:grid-cols-3">

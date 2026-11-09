@@ -87,9 +87,11 @@ public class DictionaryService {
         if (hasKanji) {
             id = repository.findByKanji(Set.of(kanji.trim()), kanaForms);
         }
-        if (id == null && hasKana) {
+        if (!hasKanji) {
             id = repository.findByKana(kanaForms);
         }
+        // Có chữ Hán mà không có mục đó thì báo không tìm thấy, không đoán theo cách đọc:
+        // 化 (か) hay 復号 (ふくごう) sẽ ra nhầm 箇, 複合.
         if (id == null) {
             throw new NotFoundException("Không tìm thấy từ");
         }

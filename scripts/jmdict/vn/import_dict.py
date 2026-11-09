@@ -1,5 +1,6 @@
 """
-Nạp từ điển JMdict + kết quả Gemini đã qua check.py vào các bảng dict_* (migration V18).
+Nạp từ điển JMdict + kết quả Gemini đã qua check.py vào các bảng dict_* (migration V18, V19).
+Từ W061 trở đi chạy vn/merge_w.py trước để ghép nghĩa + câu ví dụ thành data/results/W0xx.json.
 
     python vn/import_dict.py                 # DB dev (MAZII_DB_URL hoặc postgresql://dev:dev@localhost:5432/nihon_mukae)
     python vn/import_dict.py --db-url ...    # DB khác
@@ -65,7 +66,8 @@ def main():
         ))
         if ai:
             meaning_rows += [(e["id"], i, m["vi"]) for i, m in enumerate(ai["m"])]
-            example_rows += [(e["id"], i, x["ja"], x["vi"]) for i, x in enumerate(ai["ex"])]
+            example_rows += [(e["id"], i, x["ja"], x["vi"], x.get("src", "ai"), x.get("sid"))
+                             for i, x in enumerate(ai["ex"])]
 
     with psycopg2.connect(args.db_url) as conn, conn.cursor() as cur:
         execute_values(cur, """
@@ -86,7 +88,8 @@ def main():
             cur.execute("DELETE FROM dict_meanings WHERE entry_id = ANY(%s)", (ids,))
             cur.execute("DELETE FROM dict_examples WHERE entry_id = ANY(%s)", (ids,))
         execute_values(cur, "INSERT INTO dict_meanings (entry_id, idx, meaning) VALUES %s", meaning_rows, page_size=5000)
-        execute_values(cur, "INSERT INTO dict_examples (entry_id, idx, ja, vi) VALUES %s", example_rows, page_size=5000)
+        execute_values(cur, "INSERT INTO dict_examples (entry_id, idx, ja, vi, source, source_id) VALUES %s",
+                       example_rows, page_size=5000)
 
         execute_values(cur, """
             INSERT INTO dict_kanji (kanji, han_viet, meaning) VALUES %s

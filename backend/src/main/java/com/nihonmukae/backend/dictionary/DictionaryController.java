@@ -1,9 +1,12 @@
 package com.nihonmukae.backend.dictionary;
 
 import com.nihonmukae.backend.auth.jwt.JwtUserPrincipal;
-import com.nihonmukae.backend.dictionary.dto.HistoryItemResponse;
-import com.nihonmukae.backend.dictionary.dto.SearchResultResponse;
-import com.nihonmukae.backend.dictionary.dto.WordLookupResponse;
+import com.nihonmukae.backend.dictionary.dto.DictDtos.ContributionRequest;
+import com.nihonmukae.backend.dictionary.dto.DictDtos.Entry;
+import com.nihonmukae.backend.dictionary.dto.DictDtos.HistoryItem;
+import com.nihonmukae.backend.dictionary.dto.DictDtos.MyContribution;
+import com.nihonmukae.backend.dictionary.dto.DictDtos.PageData;
+import com.nihonmukae.backend.dictionary.dto.DictDtos.SearchResult;
 import com.nihonmukae.backend.shared.dto.ApiResponse;
 import com.nihonmukae.backend.shared.dto.PageResponse;
 import org.springframework.data.domain.PageRequest;
@@ -12,6 +15,8 @@ import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,27 +29,24 @@ public class DictionaryController {
     private static final int MAX_PAGE_SIZE = 50;
 
     private final DictionaryService dictionaryService;
+    private final ContributionService contributionService;
 
-    public DictionaryController(DictionaryService dictionaryService) {
+    public DictionaryController(DictionaryService dictionaryService, ContributionService contributionService) {
         this.dictionaryService = dictionaryService;
+        this.contributionService = contributionService;
     }
 
-    // GET /dictionary/search?q=地域&lang=vi&page=0&size=20
-    // Public — nhưng nếu request có JWT hợp lệ đính kèm (không bắt buộc),
-    // tự ghi lịch sử theo user đó. Tách 2 lời gọi: searchCached() (được
-    // @Cacheable, thuần túy) + recordSearchHistory() (luôn chạy, kể cả khi
-    // searchCached() trả từ cache) — xem ghi chú trong DictionaryService.
+    // GET /dictionary/search?q=地域&page=0&size=20
+    // Công khai, nhưng nếu request có JWT hợp lệ đính kèm (không bắt buộc) thì ghi lịch sử theo user đó.
     @GetMapping("/search")
-    public ApiResponse<SearchResultResponse> search(
+    public ApiResponse<SearchResult> search(
             @RequestParam("q") String q,
-            @RequestParam(value = "lang", required = false) String lang,
             @RequestParam(value = "page", defaultValue = "0") int page,
             @RequestParam(value = "size", defaultValue = "" + DEFAULT_PAGE_SIZE) int size,
             @AuthenticationPrincipal JwtUserPrincipal principal
     ) {
-        int safeSize = Math.min(Math.max(size, 1), MAX_PAGE_SIZE);
-        Pageable pageable = PageRequest.of(Math.max(page, 0), safeSize);
-        SearchResultResponse result = dictionaryService.searchCached(q, lang, pageable);
+        Pageable pageable = pageable(page, size);
+        SearchResult result = dictionaryService.search(q, pageable);
         if (principal != null) {
             dictionaryService.recordSearchHistory(principal.getId(), q, pageable, result);
         }
@@ -53,28 +55,47 @@ public class DictionaryController {
 
     // GET /dictionary/lookup?kanji=地域&kana=ちいき
     @GetMapping("/lookup")
-    public ApiResponse<WordLookupResponse> lookup(
+    public ApiResponse<Entry> lookup(
             @RequestParam(value = "kanji", required = false) String kanji,
             @RequestParam(value = "kana", required = false) String kana
     ) {
         return ApiResponse.success(dictionaryService.lookup(kanji, kana));
     }
 
-    // GET /dictionary/history?page=0&size=20 — bắt buộc JWT (không nằm
-    // trong permitAll của SecurityConfig, Spring Security tự chặn 401/403
-    // nếu thiếu token trước khi vào tới đây).
-    @GetMapping("/history")
-    public ApiResponse<PageResponse<HistoryItemResponse>> getHistory(
+    // ─── Đóng góp (cần tài khoản đã duyệt) ──────────────────────────────
+
+    // POST /dictionary/entries/{id}/contributions  { kind, ja, vi }
+    @PostMapping("/entries/{id}/contributions")
+    public ApiResponse<MyContribution> contribute(
+            @AuthenticationPrincipal JwtUserPrincipal principal,
+            @PathVariable long id,
+            @RequestBody ContributionRequest req
+    ) {
+        return ApiResponse.success(contributionService.submit(principal.getId(), id, req),
+                "Đã gửi, đóng góp sẽ hiện sau khi admin duyệt");
+    }
+
+    @GetMapping("/contributions/mine")
+    public ApiResponse<PageData<MyContribution>> myContributions(
             @AuthenticationPrincipal JwtUserPrincipal principal,
             @RequestParam(value = "page", defaultValue = "0") int page,
             @RequestParam(value = "size", defaultValue = "" + DEFAULT_PAGE_SIZE) int size
     ) {
-        int safeSize = Math.min(Math.max(size, 1), MAX_PAGE_SIZE);
-        Pageable pageable = PageRequest.of(Math.max(page, 0), safeSize);
-        return ApiResponse.success(dictionaryService.getHistory(principal.getId(), pageable));
+        return ApiResponse.success(contributionService.mine(principal.getId(), page, size));
     }
 
-    // DELETE /dictionary/history/{id} — xoá 1 mục lịch sử của chính user đó
+    // ─── Lịch sử tra cứu ────────────────────────────────────────────────
+
+    // Bắt buộc JWT (không nằm trong permitAll của SecurityConfig)
+    @GetMapping("/history")
+    public ApiResponse<PageResponse<HistoryItem>> getHistory(
+            @AuthenticationPrincipal JwtUserPrincipal principal,
+            @RequestParam(value = "page", defaultValue = "0") int page,
+            @RequestParam(value = "size", defaultValue = "" + DEFAULT_PAGE_SIZE) int size
+    ) {
+        return ApiResponse.success(dictionaryService.getHistory(principal.getId(), pageable(page, size)));
+    }
+
     @DeleteMapping("/history/{id}")
     public ApiResponse<Void> deleteHistoryItem(
             @AuthenticationPrincipal JwtUserPrincipal principal,
@@ -84,10 +105,13 @@ public class DictionaryController {
         return ApiResponse.success(null, "Đã xoá");
     }
 
-    // DELETE /dictionary/history — xoá toàn bộ lịch sử của user
     @DeleteMapping("/history")
     public ApiResponse<Void> clearHistory(@AuthenticationPrincipal JwtUserPrincipal principal) {
         dictionaryService.clearHistory(principal.getId());
         return ApiResponse.success(null, "Đã xoá toàn bộ lịch sử");
+    }
+
+    private Pageable pageable(int page, int size) {
+        return PageRequest.of(Math.max(page, 0), Math.min(Math.max(size, 1), MAX_PAGE_SIZE));
     }
 }

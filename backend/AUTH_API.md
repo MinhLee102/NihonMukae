@@ -7,11 +7,11 @@ Base URL: http://localhost:8080
 Endpoints
 
 1) POST /auth/register
-- Mục đích: tạo user + trả access token + set refresh cookie.
+- Mục đích: gửi đăng ký. Tài khoản mới CHƯA được duyệt (users.approved = false), admin duyệt trong /admin/users
+  thì mới đăng nhập được. Không trả token, không set cookie.
 - Request JSON: { "email": "...", "password": "...", "name": "..." }
-- Success: 201
-  Response body: { "accessToken": "<JWT>" }
-  Response header: Set-Cookie: refresh_token=<RAW_TOKEN>; HttpOnly; Path=/; SameSite=Lax (dev: secure=false)
+- Success: 202 { "pending": true }
+- Failure: 400 { "success": false, "message": "..." } (email sai định dạng, mật khẩu ngắn, email đã dùng)
 
 2) POST /auth/login
 - Mục đích: đăng nhập
@@ -20,6 +20,8 @@ Endpoints
   Body: { "accessToken": "<JWT>" }
   Set-Cookie as above
 - Failure: 401 { "error": "invalid_credentials" }
+- Failure: 403 { "error": "account_locked" } (bị admin khoá) hoặc 403 { "error": "pending_approval" } (chưa được duyệt)
+  /auth/refresh cũng từ chối tài khoản chưa duyệt hoặc đã khoá.
 
 3) POST /auth/refresh
 - Mục đích: cấp lại access token dùng refresh token từ cookie

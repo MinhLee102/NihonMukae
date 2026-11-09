@@ -57,6 +57,7 @@ public class AdminBootstrap implements ApplicationRunner {
                     user.setRole("ADMIN");
                     log.info("Đã nâng {} lên ADMIN", email);
                 }
+                user.setApproved(true);
             }, () -> log.warn("APP_ADMIN_EMAILS có {} nhưng chưa có tài khoản này, hãy đăng ký trước rồi khởi động lại", email));
         }
 
@@ -67,6 +68,7 @@ public class AdminBootstrap implements ApplicationRunner {
                     .name("Administrator")
                     .provider("local")
                     .role("ADMIN")
+                    .approved(true)
                     .build());
             log.info("Đã tạo tài khoản admin dev: {}", devAdminEmail);
         }

@@ -13,11 +13,14 @@ import java.util.UUID;
 @Repository
 public interface SearchHistoryRepository extends JpaRepository<SearchHistory, Long> {
 
-    // LEFT JOIN words vì word_id có thể null (search không ra kết quả vẫn
+    // LEFT JOIN dict_entries vì word_id có thể null (search không ra kết quả vẫn
     // ghi lại raw_query) hoặc từ đã bị xoá (ON DELETE SET NULL).
-    @Query(value = "SELECT sh.id AS id, sh.word_id AS wordId, w.kanji AS kanji, w.kana AS kana, " +
+    // meaning: nghĩa tiếng Việt đầu tiên, chưa có thì nghĩa tiếng Anh đầu tiên của JMdict.
+    @Query(value = "SELECT sh.id AS id, sh.word_id AS wordId, e.word AS kanji, e.reading AS kana, " +
+            "COALESCE((SELECT m.meaning FROM dict_meanings m WHERE m.entry_id = e.id ORDER BY m.idx LIMIT 1), " +
+            "e.gloss_en -> 0 ->> 0) AS meaning, " +
             "sh.raw_query AS rawQuery, sh.searched_at AS searchedAt " +
-            "FROM search_history sh LEFT JOIN words w ON w.id = sh.word_id " +
+            "FROM search_history sh LEFT JOIN dict_entries e ON e.id = sh.word_id " +
             "WHERE sh.user_id = :userId " +
             "ORDER BY sh.searched_at DESC",
             countQuery = "SELECT count(*) FROM search_history WHERE user_id = :userId",

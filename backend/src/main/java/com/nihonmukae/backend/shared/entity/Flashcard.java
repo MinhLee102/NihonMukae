@@ -31,9 +31,9 @@ public class Flashcard {
     @Column(name = "image_url", columnDefinition = "TEXT")
     private String imageUrl;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "word_id")
-    private Word word; // Liên kết optional tới từ điển gốc[cite: 1]
+    // id mục trong dict_entries (ent_seq của JMdict), liên kết tuỳ chọn tới từ điển
+    @Column(name = "word_id")
+    private Long wordId;
 
     @CreationTimestamp
     @Column(name = "created_at", updatable = false)

@@ -232,8 +232,11 @@ public class AdminService {
                 String like = "%" + keyword.trim().toLowerCase() + "%";
                 p.add(cb.or(cb.like(cb.lower(root.get("email")), like), cb.like(cb.lower(root.get("name")), like)));
             }
-            if ("active".equals(status)) {
+            if ("pending".equals(status)) {
+                p.add(cb.isFalse(root.get("approved")));
+            } else if ("active".equals(status)) {
                 p.add(cb.isTrue(root.get("enabled")));
+                p.add(cb.isTrue(root.get("approved")));
             } else if ("locked".equals(status)) {
                 p.add(cb.isFalse(root.get("enabled")));
             }
@@ -249,7 +252,8 @@ public class AdminService {
     public UserSummary userSummary() {
         ZonedDateTime since = ZonedDateTime.now().minusDays(30);
         return new UserSummary(userRepository.count(), userRepository.countByEnabledTrueAndLastLoginAtAfter(since),
-                userRepository.countByEnabledFalse(), userRepository.countByCreatedAtAfter(since));
+                userRepository.countByEnabledFalse(), userRepository.countByCreatedAtAfter(since),
+                userRepository.countByApprovedFalse());
     }
 
     /** Khóa hoặc mở khóa. Không khóa chính mình và không khóa admin khác, tránh tự khóa mình ra khỏi hệ thống. */
@@ -270,10 +274,35 @@ public class AdminService {
         return toUserRow(user);
     }
 
+    /** Duyệt hoặc thu hồi duyệt. Thu hồi huỷ luôn phiên đang có; không thu hồi ADMIN hay chính mình. */
+    @Transactional
+    public UserRow setApproved(UUID adminId, UUID userId, boolean approved) {
+        User user = userRepository.findById(userId).orElseThrow(() -> new NotFoundException("Không tìm thấy người dùng"));
+        if (!approved && (user.getId().equals(adminId) || "ADMIN".equals(user.getRole()))) {
+            throw new IllegalArgumentException("Không thể thu hồi duyệt tài khoản ADMIN");
+        }
+        user.setApproved(approved);
+        if (!approved) {
+            refreshTokenRepository.deleteByUserId(user.getId());
+        }
+        return toUserRow(user);
+    }
+
+    /** Từ chối đăng ký: xoá hẳn tài khoản đang chờ duyệt (tài khoản đã duyệt thì khoá, không xoá). */
+    @Transactional
+    public void rejectPending(UUID userId) {
+        User user = userRepository.findById(userId).orElseThrow(() -> new NotFoundException("Không tìm thấy người dùng"));
+        if (user.isApproved()) {
+            throw new IllegalArgumentException("Chỉ từ chối được tài khoản đang chờ duyệt");
+        }
+        refreshTokenRepository.deleteByUserId(user.getId());
+        userRepository.delete(user);
+    }
+
     private UserRow toUserRow(User u) {
         String name = u.getName() == null || u.getName().isBlank() ? u.getEmail().split("@")[0] : u.getName();
         return new UserRow(u.getId(), name, u.getEmail(), u.getRole(), u.getTargetLevel(), u.isEnabled(),
-                u.getCreatedAt(), u.getLastLoginAt());
+                u.isApproved(), u.getCreatedAt(), u.getLastLoginAt());
     }
 
     private int clampSize(int size) {

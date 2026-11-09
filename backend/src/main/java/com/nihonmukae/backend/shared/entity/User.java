@@ -47,6 +47,11 @@ public class User {
     @Column(nullable = false)
     private boolean enabled = true;
 
+    // false cho tới khi admin duyệt: tài khoản mới đăng ký chưa đăng nhập được
+    @Builder.Default
+    @Column(nullable = false)
+    private boolean approved = false;
+
     @Column(name = "last_login_at")
     private ZonedDateTime lastLoginAt;
 

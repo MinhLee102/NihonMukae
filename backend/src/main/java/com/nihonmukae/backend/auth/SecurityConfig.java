@@ -47,7 +47,8 @@ public class SecurityConfig {
                         // Khu quản trị và nạp đề: chỉ ADMIN (role trong JWT, nên nâng quyền xong phải đăng nhập lại)
                         // MODERATOR (chưa gán cho ai) duyệt góp ý và sửa câu hỏi nhưng không quản lý người dùng hay server
                         .requestMatchers(HttpMethod.DELETE, "/admin/questions/hidden").hasRole("ADMIN")
-                        .requestMatchers("/admin/feedback/**", "/admin/questions/**").hasAnyRole("ADMIN", "MODERATOR")
+                        .requestMatchers("/admin/feedback/**", "/admin/questions/**", "/admin/dictionary/**")
+                        .hasAnyRole("ADMIN", "MODERATOR")
                         .requestMatchers("/admin/**", "/questions/import/**").hasRole("ADMIN")
                         // Audio và ảnh của đề thi: thẻ audio/img của trình duyệt không gửi được header Authorization
                         .requestMatchers(HttpMethod.GET, "/media/**").permitAll()

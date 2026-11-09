@@ -1,7 +1,10 @@
 package com.nihonmukae.backend.flashcard;
 
 import com.nihonmukae.backend.auth.UserRepository;
-import com.nihonmukae.backend.dictionary.WordRepository;
+import com.nihonmukae.backend.dictionary.DictionaryService;
+import com.nihonmukae.backend.dictionary.dto.DictDtos.Entry;
+import com.nihonmukae.backend.dictionary.dto.DictDtos.Example;
+import com.nihonmukae.backend.dictionary.dto.DictDtos.Meaning;
 import com.nihonmukae.backend.flashcard.dto.CardRequest;
 import com.nihonmukae.backend.flashcard.dto.CardResponse;
 import com.nihonmukae.backend.flashcard.dto.DeckRequest;
@@ -9,11 +12,8 @@ import com.nihonmukae.backend.flashcard.dto.DeckResponse;
 import com.nihonmukae.backend.flashcard.dto.FlashcardStatsResponse;
 import com.nihonmukae.backend.flashcard.dto.ReviewResultResponse;
 import com.nihonmukae.backend.shared.entity.FlashcardReview;
-import com.nihonmukae.backend.shared.entity.ExampleSentence;
 import com.nihonmukae.backend.shared.entity.Flashcard;
 import com.nihonmukae.backend.shared.entity.FlashcardDeck;
-import com.nihonmukae.backend.shared.entity.Word;
-import com.nihonmukae.backend.shared.entity.WordMeaning;
 import com.nihonmukae.backend.shared.exception.NotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -32,16 +32,16 @@ public class FlashcardService {
     private final CardRepository cardRepository;
     private final CardReviewRepository reviewRepository;
     private final UserRepository userRepository;
-    private final WordRepository wordRepository;
+    private final DictionaryService dictionaryService;
     private final SrsService srsService;
 
     public FlashcardService(DeckRepository deckRepository,
                             CardRepository cardRepository,
                             CardReviewRepository reviewRepository,
                             UserRepository userRepository,
-                            WordRepository wordRepository,
+                            DictionaryService dictionaryService,
                             SrsService srsService) {
-        this.wordRepository = wordRepository;
+        this.dictionaryService = dictionaryService;
         this.srsService = srsService;
         this.deckRepository = deckRepository;
         this.cardRepository = cardRepository;
@@ -119,8 +119,7 @@ public class FlashcardService {
     @Transactional
     public CardResponse createCard(UUID userId, UUID deckId, CardRequest req) {
         FlashcardDeck deck = getOwnedDeck(userId, deckId);
-        Word word = req.getWordId() == null ? null : wordRepository.findById(req.getWordId())
-                .orElseThrow(() -> new NotFoundException("Không tìm thấy từ trong từ điển"));
+        Entry word = req.getWordId() == null ? null : dictionaryService.getEntry(req.getWordId());
 
         String front = isBlank(req.getFront()) && word != null ? buildFront(word) : req.getFront();
         String back = isBlank(req.getBack()) && word != null ? buildBack(word) : req.getBack();
@@ -131,7 +130,7 @@ public class FlashcardService {
                 .front(front.trim())
                 .back(back.trim())
                 .imageUrl(req.getImageUrl())
-                .word(word)
+                .wordId(word == null ? null : word.id())
                 .build();
         return toCardResponse(cardRepository.saveAndFlush(card));
     }
@@ -229,34 +228,31 @@ public class FlashcardService {
     }
 
     // Mặt trước: dòng đầu là mặt chữ chính, dòng sau (nếu có) là cách đọc
-    private String buildFront(Word word) {
-        if (word.getKanji() == null || word.getKanji().isBlank()) {
-            return word.getKana();
+    private String buildFront(Entry word) {
+        if (word.kanji() == null || word.kanji().isBlank()) {
+            return word.kana();
         }
-        return word.getKanji() + "\n" + word.getKana();
+        return word.kanji() + "\n" + word.kana();
     }
 
-    // Mặt sau: nghĩa tiếng Việt đầu tiên (không có thì nghĩa đầu tiên bất kỳ),
+    // Mặt sau: nghĩa đầu tiên (tiếng Việt, chưa có thì tiếng Anh),
     // kèm 1 câu ví dụ ngẫu nhiên ở dòng thứ hai nếu từ có ví dụ
-    private String buildBack(Word word) {
-        List<WordMeaning> meanings = word.getMeanings() == null ? List.of() : word.getMeanings();
-        String meaning = meanings.stream()
-                .filter(m -> "vi".equals(m.getLang()))
-                .findFirst()
-                .or(() -> meanings.stream().findFirst())
-                .map(m -> m.getMeaning().replaceFirst("^◆\\s*", "").replaceFirst("[.。]\\s*$", ""))
+    private String buildBack(Entry word) {
+        String meaning = word.meanings().stream().findFirst()
+                .map(Meaning::meaning)
+                .map(m -> m.replaceFirst("^◆\\s*", "").replaceFirst("[.。]\\s*$", ""))
                 .orElse("");
 
-        List<ExampleSentence> examples = word.getExamples() == null ? List.of() : word.getExamples().stream()
-                .filter(e -> !isBlank(e.getSentence()))
+        List<Example> examples = word.examples().stream()
+                .filter(e -> !isBlank(e.sentence()))
                 .toList();
         if (examples.isEmpty()) {
             return meaning;
         }
-        ExampleSentence example = examples.get(ThreadLocalRandom.current().nextInt(examples.size()));
-        String line = isBlank(example.getTranslation())
-                ? example.getSentence().trim()
-                : example.getSentence().trim() + " – " + example.getTranslation().trim();
+        Example example = examples.get(ThreadLocalRandom.current().nextInt(examples.size()));
+        String line = isBlank(example.translation())
+                ? example.sentence().trim()
+                : example.sentence().trim() + " – " + example.translation().trim();
         return meaning + "\n" + line;
     }
 
@@ -277,7 +273,7 @@ public class FlashcardService {
                 .front(c.getFront())
                 .back(c.getBack())
                 .imageUrl(c.getImageUrl())
-                .wordId(c.getWord() == null ? null : c.getWord().getId())
+                .wordId(c.getWordId())
                 .createdAt(c.getCreatedAt())
                 .build();
     }

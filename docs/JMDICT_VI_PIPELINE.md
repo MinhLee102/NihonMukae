@@ -62,7 +62,9 @@ python vn/import_dict.py
 ```
 
 Nạp mọi từ đã chọn (nghĩa tiếng Anh của JMdict) và phần tiếng Việt của các batch đã có. Chạy lại được bất cứ lúc nào.
-Web chưa đọc các bảng `dict_*` cho tới bước chuyển đổi (tuần 5).
+Web tra từ điển trên các bảng `dict_*` (thay Mazii). Mục admin đã sửa tay (`dict_entries.edited`) hoặc đã xoá
+(`dict_deleted`) trong trang `/admin/dictionary` được import bỏ qua, nên chạy lại import không mất chỉnh sửa.
+Từ chưa có nghĩa tiếng Việt hiện nghĩa tiếng Anh của JMdict kèm nhãn.
 
 `data/results/` được đưa lên git: đó là phần tốn công nhất, đừng để mất.
 

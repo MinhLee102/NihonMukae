@@ -5,7 +5,7 @@ import { useAuthStore } from "@/store/authStore";
 import { useAuthModalStore } from "@/store/authModalStore";
 
 /** Flashcard pages need a logged-in user; guests see a login prompt instead. */
-export function RequireAuth({ children }: { children: ReactNode }) {
+export function RequireAuth({ children, message }: { children: ReactNode; message?: string }) {
   const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
   const isInitializing = useAuthStore((s) => s.isInitializing);
   const openAuthModal = useAuthModalStore((s) => s.open);
@@ -17,7 +17,7 @@ export function RequireAuth({ children }: { children: ReactNode }) {
   if (!isAuthenticated) {
     return (
       <div className="mx-auto flex max-w-md flex-col items-center gap-4 py-24 text-center">
-        <p className="text-neutral-600">Bạn cần đăng nhập để dùng Flashcard.</p>
+        <p className="text-neutral-600">{message ?? "Bạn cần đăng nhập để dùng Flashcard."}</p>
         <button
           type="button"
           onClick={() => openAuthModal("login")}

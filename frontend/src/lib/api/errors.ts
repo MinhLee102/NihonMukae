@@ -6,6 +6,7 @@ const ERROR_MESSAGES: Record<string, string> = {
   invalid_refresh_token: 'Phiên đăng nhập đã hết hạn, vui lòng đăng nhập lại.',
   no_refresh_token: 'Phiên đăng nhập đã hết hạn, vui lòng đăng nhập lại.',
   account_locked: 'Tài khoản đã bị khóa. Vui lòng liên hệ quản trị viên.',
+  pending_approval: 'Tài khoản của bạn đang chờ quản trị viên duyệt. Bạn sẽ đăng nhập được sau khi được duyệt.',
   email_already_exists: 'Email này đã được đăng ký.',
 };
  
@@ -14,6 +15,10 @@ export function getAuthErrorMessage(error: unknown): string {
     const body = error.response?.data as ApiErrorBody | undefined;
     if (body?.error && ERROR_MESSAGES[body.error]) {
       return ERROR_MESSAGES[body.error];
+    }
+    const message = (error.response?.data as { message?: string } | undefined)?.message;
+    if (error.response?.status === 400 && message) {
+      return message;
     }
     if (error.response?.status === 409) {
       return 'Email này đã được đăng ký.';

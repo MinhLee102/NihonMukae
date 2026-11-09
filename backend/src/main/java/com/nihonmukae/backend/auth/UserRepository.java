@@ -14,6 +14,8 @@ public interface UserRepository extends JpaRepository<User, UUID>, JpaSpecificat
 
     long countByEnabledFalse();
 
+    long countByApprovedFalse();
+
     long countByCreatedAtAfter(java.time.ZonedDateTime since);
 
     long countByEnabledTrueAndLastLoginAtAfter(java.time.ZonedDateTime since);

@@ -1,5 +1,5 @@
 """
-Nạp từ điển JMdict + kết quả Gemini đã qua check.py vào các bảng dict_* (migration V18, V19).
+Nạp từ điển JMdict + kết quả Gemini đã qua check.py vào các bảng dict_* (migration V18, V19, V20).
 Từ W061 trở đi chạy vn/merge_w.py trước để ghép nghĩa + câu ví dụ thành data/results/W0xx.json.
 
     python vn/import_dict.py                 # DB dev (MAZII_DB_URL hoặc postgresql://dev:dev@localhost:5432/nihon_mukae)
@@ -54,6 +54,15 @@ def main():
     kanji = load_results("K")
     entries = select(args.jmdict)
 
+    # Mục admin đã sửa tay (edited) giữ nguyên, mục admin đã xoá (dict_deleted) không nạp lại
+    with psycopg2.connect(args.db_url) as conn, conn.cursor() as cur:
+        cur.execute("SELECT id FROM dict_entries WHERE edited")
+        edited = {r[0] for r in cur.fetchall()}
+        cur.execute("SELECT id FROM dict_deleted")
+        deleted = {r[0] for r in cur.fetchall()}
+    entries = [e for e in entries if e["id"] not in deleted and e["id"] not in edited]
+    words = {k: v for k, v in words.items() if k not in deleted and k not in edited}
+
     entry_rows, meaning_rows, example_rows = [], [], []
     for e in entries:
         ai = words.get(e["id"])
@@ -98,6 +107,8 @@ def main():
 
     with_vi = sum(1 for e in entries if e["id"] in words)
     print(f"Đã nạp {len(entry_rows)} từ ({with_vi} có nghĩa tiếng Việt), {len(example_rows)} câu ví dụ, {len(kanji)} chữ kanji.")
+    if edited or deleted:
+        print(f"Bỏ qua {len(edited)} mục admin đã sửa và {len(deleted)} mục admin đã xoá.")
 
 
 if __name__ == "__main__":

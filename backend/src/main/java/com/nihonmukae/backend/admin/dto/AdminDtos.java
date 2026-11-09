@@ -42,17 +42,20 @@ public final class AdminDtos {
     // ─── Người dùng ─────────────────────────────────────────────────────
 
     public record UserRow(UUID id, String name, String email, String role, Short targetLevel, boolean enabled,
-                          ZonedDateTime createdAt, ZonedDateTime lastLoginAt) {
+                          boolean approved, ZonedDateTime createdAt, ZonedDateTime lastLoginAt) {
     }
 
     public record UserPage(List<UserRow> content, int page, int size, long totalElements, int totalPages) {
     }
 
     /** active = chưa bị khóa và có đăng nhập trong 30 ngày qua. */
-    public record UserSummary(long total, long active, long locked, long newLast30Days) {
+    public record UserSummary(long total, long active, long locked, long newLast30Days, long pending) {
     }
 
     public record EnabledRequest(boolean enabled) {
+    }
+
+    public record ApprovedRequest(boolean approved) {
     }
 
     // ─── Trạng thái server ──────────────────────────────────────────────

@@ -143,7 +143,7 @@ public class ServerStatusService {
     private Counts counts() {
         try {
             Long users = jdbc.queryForObject("SELECT count(*) FROM users", Long.class);
-            Long words = jdbc.queryForObject("SELECT count(*) FROM words", Long.class);
+            Long words = jdbc.queryForObject("SELECT count(*) FROM dict_entries", Long.class);
             Long questions = jdbc.queryForObject("SELECT count(*) FROM questions WHERE is_active", Long.class);
             Long sessions = jdbc.queryForObject("SELECT count(*) FROM practice_sessions", Long.class);
             Long mediaFiles = jdbc.queryForObject("SELECT count(*) FROM media_files", Long.class);

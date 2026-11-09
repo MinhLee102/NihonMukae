@@ -16,7 +16,7 @@ public class ShelfService {
 
     private static final int MAX_TITLE_LENGTH = 60;
     private static final int EXCERPT_LENGTH = 120;
-    private static final int MAX_CONTENT_LENGTH = 20000;
+    public static final int MAX_CONTENT_LENGTH = 20000;
 
     private final ShelfRepository shelfRepository;
     private final UserRepository userRepository;

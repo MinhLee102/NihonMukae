@@ -298,13 +298,13 @@ export const submitSession = async (sessionId: string): Promise<ResultDto> => {
 
 export type ShelfSaveScope = 'wrong' | 'all' | 'question';
 
-/** Turns the session's snapshot into a My Shelf item (Japanese text only, no explanations). */
+/** Turns the session's snapshot into My Shelf items (Japanese text only); a long selection becomes one item per part. */
 export const saveSessionToShelf = async (
   sessionId: string,
   scope: ShelfSaveScope,
   position?: number
-): Promise<{ id: string; title: string }> => {
-  const { data } = await apiClient.post<ApiResponse<{ id: string; title: string }>>(
+): Promise<{ id: string; title: string }[]> => {
+  const { data } = await apiClient.post<ApiResponse<{ id: string; title: string }[]>>(
     `/practice/sessions/${sessionId}/save-to-shelf`,
     { scope, position }
   );

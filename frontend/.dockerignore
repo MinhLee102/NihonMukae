@@ -1,0 +1,6 @@
+# node_modules and .next live in container volumes; sending them as build context costs GBs of cache
+node_modules/
+.next/
+.vercel/
+.env*.local
+*.log

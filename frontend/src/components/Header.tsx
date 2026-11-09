@@ -12,6 +12,9 @@ import { useProfileStore } from '@/store/profileStore';
  * Auth buttons are static placeholders — wiring to open the login/register
  * modal happens once AUTH-07 is built.
  */
+// Exam and result screens use the whole height for the paper, so the header steps aside there
+const FOCUS_ROUTES = /^\/jlpt\/(session|result)\//;
+
 export function Header() {
   const pathname = usePathname();
   const active = getActiveNavItem(pathname);
@@ -19,6 +22,8 @@ export function Header() {
   const openAuthModal = useAuthModalStore((s) => s.open);
   const { isAuthenticated, user, isInitializing,logout } = useAuth();
   const profileName = useProfileStore((s) => s.profile?.name);
+
+  if (FOCUS_ROUTES.test(pathname)) return null;
 
   return (
     <header className="flex h-[73px] items-center justify-between border-b border-black/5 bg-[#F5F3EE] px-8">

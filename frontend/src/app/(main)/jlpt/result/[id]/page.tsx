@@ -2,10 +2,11 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
-import { ChevronLeft, ChevronRight, RotateCcw, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, PanelRightClose, PanelRightOpen, RotateCcw, X } from "lucide-react";
 import { RequireAuth } from "@/components/flashcard/RequireAuth";
 import { AnswerSheet, type SheetCell } from "@/components/jlpt/AnswerSheet";
 import { QuestionPanel } from "@/components/jlpt/QuestionPanel";
+import { useStoredToggle } from "@/components/jlpt/useStoredToggle";
 import { ResultSummary } from "@/components/jlpt/ResultSummary";
 import { SectionAudioReview } from "@/components/jlpt/ListeningAudio";
 import { useAuthStore } from "@/store/authStore";
@@ -36,8 +37,9 @@ function ResultView() {
   const [error, setError] = useState<string | null>(null);
   const [retrying, setRetrying] = useState(false);
   const [saving, setSaving] = useState(false);
-  const [saved, setSaved] = useState<{ id: string; title: string } | null>(null);
+  const [saved, setSaved] = useState<{ id: string; title: string }[] | null>(null);
   const [view, setView] = useState<"summary" | "review">("summary");
+  const [panelOpen, togglePanel] = useStoredToggle("jlpt:result-panel");
 
   useEffect(() => {
     if (!accessToken) return;
@@ -111,11 +113,16 @@ function ResultView() {
         >
           <X size={18} />
         </button>
-        <div className="min-w-0">
+        <div className="min-w-0 max-w-[30%] shrink-0">
           <p className="truncate text-sm font-medium text-neutral-900">{result?.title ?? "Đang tải..."}</p>
           <p className="text-[10px] tracking-widest text-neutral-400">KẾT QUẢ VÀ ĐÁP ÁN</p>
         </div>
-        <nav className="ml-auto flex gap-1 rounded-full bg-[#F5F3EE] p-1 text-sm">
+        {result?.listeningAudioUrl && view === "review" ? (
+          <SectionAudioReview url={result.listeningAudioUrl} inline />
+        ) : (
+          <span className="flex-1" />
+        )}
+        <nav className="flex shrink-0 gap-1 rounded-full bg-[#F5F3EE] p-1 text-sm">
           {(
             [
               ["summary", "Tổng kết"],
@@ -137,8 +144,6 @@ function ResultView() {
       </header>
 
       {error && <div className="shrink-0 bg-red-50 px-5 py-2.5 text-xs text-red-700">{error}</div>}
-
-      {result?.listeningAudioUrl && view === "review" && <SectionAudioReview url={result.listeningAudioUrl} />}
 
       <div className="flex min-h-0 flex-1">
         <main className="min-h-0 min-w-0 flex-1 bg-[#F5F3EE]">
@@ -216,9 +221,37 @@ function ResultView() {
           )}
         </main>
 
-        <aside className="hidden w-[320px] shrink-0 overflow-y-auto border-l border-black/5 bg-white p-5 lg:block">
+        {!panelOpen && (
+          <aside className="hidden w-12 shrink-0 flex-col items-center gap-3 border-l border-black/5 bg-white py-4 lg:flex">
+            <button
+              type="button"
+              onClick={togglePanel}
+              aria-label="Mở bảng kết quả"
+              title="Mở bảng kết quả"
+              className="rounded-full p-1.5 text-neutral-400 hover:bg-neutral-100 hover:text-neutral-700"
+            >
+              <PanelRightOpen size={16} />
+            </button>
+            {result && (
+              <span className="text-[11px] tabular-nums text-neutral-500">
+                {result.correct}/{result.total}
+              </span>
+            )}
+          </aside>
+        )}
+        <aside
+          className={`hidden w-[300px] shrink-0 overflow-y-auto border-l border-black/5 bg-white p-4 ${panelOpen ? "lg:block" : ""}`}
+        >
           {result && (
             <div className="flex flex-col gap-5">
+              <button
+                type="button"
+                onClick={togglePanel}
+                className="-mb-2 flex items-center gap-1.5 self-end rounded-full px-2 py-1 text-[11px] text-neutral-400 hover:bg-neutral-100 hover:text-neutral-700"
+              >
+                <PanelRightClose size={14} />
+                Thu nhỏ
+              </button>
               <div className="rounded-2xl bg-[#1A1A1A] p-5 text-white">
                 <p className="text-[10px] tracking-[0.2em] text-neutral-400">
                   {result.jlpt ? "ĐIỂM ƯỚC TÍNH" : "KẾT QUẢ"}
@@ -329,13 +362,27 @@ function ResultView() {
                     Cả bài
                   </button>
                 </div>
-                {saved && (
+                {saved && saved.length === 1 && (
                   <p className="text-xs text-emerald-700">
                     Đã lưu.{" "}
-                    <Link href={`/shelf/${saved.id}`} className="underline">
+                    <Link href={`/shelf/${saved[0].id}`} className="underline">
                       Mở trong My Shelf
                     </Link>
                   </p>
+                )}
+                {saved && saved.length > 1 && (
+                  <div className="text-xs text-emerald-700">
+                    <p>Bài dài nên đã lưu thành {saved.length} mục:</p>
+                    <ul className="mt-1 space-y-0.5">
+                      {saved.map((item) => (
+                        <li key={item.id}>
+                          <Link href={`/shelf/${item.id}`} className="underline">
+                            {item.title.match(/·\s*([^)]+)\)$/)?.[1] ?? item.title}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 )}
                 <p className="text-[10px] leading-4 text-neutral-400">
                   Bài lưu có furigana, bấm vào chữ để tra từ và thêm vào Flashcard. Phần giải thích tiếng Việt không được lưu.

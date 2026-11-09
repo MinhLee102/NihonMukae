@@ -1,11 +1,12 @@
 "use client";
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { Check, Flag, X } from "lucide-react";
+import { Check, ChevronDown, ChevronRight, Flag, X } from "lucide-react";
 import { FormattedText } from "@/components/jlpt/FormattedText";
 import { SplitPane } from "@/components/jlpt/SplitPane";
 import { ListeningAudio, type AudioMode } from "@/components/jlpt/ListeningAudio";
 import { resolveMediaUrl } from "@/lib/media";
+import { useStoredToggle } from "@/components/jlpt/useStoredToggle";
 import { SECTION_LABELS, type GroupViewDto, type Section } from "@/lib/api/jlpt";
 
 export interface PanelQuestion {
@@ -108,18 +109,41 @@ function stripListenPlaceholder(text: string): string {
     .trim();
 }
 
-/** "問題 N" with a rule under it, then the instruction shared by every question of the type. */
+/**
+ * "問題 N" with a rule under it, then the instruction shared by every question of the type.
+ * It folds down to one line to give the question more room; the choice is remembered.
+ */
 function InstructionHeader({ no, ja, vi }: { no?: number; ja: string; vi?: string }) {
+  const [open, toggle] = useStoredToggle("jlpt:instruction");
+  const Icon = open ? ChevronDown : ChevronRight;
   return (
-    <div className="shrink-0 border-b border-black/5 px-6 pb-3 pt-4">
+    <div className={`shrink-0 border-b border-black/5 px-6 ${open ? "pb-3 pt-4" : "py-2"}`}>
       <div className="mx-auto max-w-5xl">
-        {no !== undefined && (
-          <p className="border-b-2 border-neutral-900 pb-0.5 text-lg font-medium text-neutral-900">問題{no}</p>
+        <button
+          type="button"
+          onClick={toggle}
+          aria-expanded={open}
+          title={open ? "Thu gọn hướng dẫn" : "Mở hướng dẫn"}
+          className={`flex w-full items-center gap-2 text-left text-neutral-900 ${
+            open && no !== undefined ? "border-b-2 border-neutral-900 pb-0.5" : ""
+          }`}
+        >
+          <span className="shrink-0 text-lg font-medium">{no !== undefined ? `問題${no}` : "Hướng dẫn"}</span>
+          {!open && (
+            <span className="min-w-0 flex-1 truncate text-sm text-neutral-500">
+              <InstructionText text={ja} />
+            </span>
+          )}
+          <Icon size={16} className="ml-auto shrink-0 text-neutral-400" />
+        </button>
+        {open && (
+          <>
+            <p className="mt-2.5 text-base font-medium leading-7 text-neutral-900">
+              <InstructionText text={ja} />
+            </p>
+            {vi && <p className="mt-1 text-xs text-neutral-500">{vi}</p>}
+          </>
         )}
-        <p className="mt-2.5 text-base font-medium leading-7 text-neutral-900">
-          <InstructionText text={ja} />
-        </p>
-        {vi && <p className="mt-1 text-xs text-neutral-500">{vi}</p>}
       </div>
     </div>
   );
@@ -200,8 +224,8 @@ export function QuestionPanel({
 
   const body = (
     <div className="mx-auto flex w-full max-w-3xl flex-col px-6 py-6">
-      <div className="mb-6 flex items-start justify-between gap-4">
-        <div>
+      <div className="mb-6 flex flex-wrap items-start justify-between gap-2">
+        <div className="mr-auto">
           <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-neutral-400">
             {sectionLabel}
             {question.typeName ? ` · ${question.typeName}` : ""}
@@ -214,7 +238,7 @@ export function QuestionPanel({
           <button
             type="button"
             onClick={onSaveToShelf}
-            className="flex items-center gap-1.5 rounded-full border border-black/10 bg-white px-3.5 py-1.5 text-xs text-neutral-500 transition hover:border-black/30"
+            className="flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full border border-black/10 bg-white px-3.5 py-1.5 text-xs text-neutral-500 transition hover:border-black/30"
           >
             Lưu vào My Shelf
           </button>
@@ -223,7 +247,7 @@ export function QuestionPanel({
           <button
             type="button"
             onClick={onReport}
-            className="flex items-center gap-1.5 rounded-full border border-black/10 bg-white px-3.5 py-1.5 text-xs text-neutral-500 transition hover:border-black/30"
+            className="flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full border border-black/10 bg-white px-3.5 py-1.5 text-xs text-neutral-500 transition hover:border-black/30"
           >
             Báo lỗi
           </button>
@@ -232,7 +256,7 @@ export function QuestionPanel({
           <button
             type="button"
             onClick={onToggleFlag}
-            className={`flex items-center gap-1.5 rounded-full border px-3.5 py-1.5 text-xs transition ${
+            className={`flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full border px-3.5 py-1.5 text-xs transition ${
               flagged
                 ? "border-amber-300 bg-amber-50 text-amber-700"
                 : "border-black/10 bg-white text-neutral-500 hover:border-black/30"

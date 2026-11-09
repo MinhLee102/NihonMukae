@@ -11,9 +11,10 @@ import java.util.List;
  * @param base      dạng gốc từ điển (vd 食べた -> 食べる), dùng để tra nghĩa
  * @param reading   cách đọc hiragana của mặt chữ nguyên token (null nếu không có kanji)
  * @param lookup    true nếu là từ có nghĩa đáng tra (danh từ, động từ, tính từ...), false với trợ từ, dấu câu
+ * @param name      "person" hoặc "place" khi kuromoji nhận ra tên người hoặc địa danh, null với từ thường
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public record ShelfToken(List<Part> parts, String base, String reading, boolean lookup) {
+public record ShelfToken(List<Part> parts, String base, String reading, boolean lookup, String name) {
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public record Part(String text, String ruby) {

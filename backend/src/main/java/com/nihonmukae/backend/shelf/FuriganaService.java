@@ -46,7 +46,19 @@ public class FuriganaService {
         } else {
             parts = List.of(new ShelfToken.Part(surface, null));
         }
-        return new ShelfToken(parts, base, reading, lookup);
+        return new ShelfToken(parts, base, reading, lookup, nameKind(token));
+    }
+
+    // Tên riêng: ipadic gắn 名詞-固有名詞-人名 / 地域; từ điển thường không có nghĩa cho chúng nên popup hiện cách đọc thay vào
+    private static String nameKind(Token token) {
+        if (!"固有名詞".equals(token.getPartOfSpeechLevel2())) {
+            return null;
+        }
+        return switch (token.getPartOfSpeechLevel3()) {
+            case "人名" -> "person";
+            case "地域" -> "place";
+            default -> null;
+        };
     }
 
     /**

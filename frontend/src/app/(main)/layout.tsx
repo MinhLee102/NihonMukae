@@ -19,7 +19,8 @@ export default function AppLayout({ children }: { children: ReactNode }) {
       <div className="relative flex min-w-0 flex-1 flex-col">
         <Header />
         <main className="flex-1 overflow-y-auto px-8 py-8">
-          {children}
+          {/* min-h-full đẩy footer xuống dưới màn hình đầu tiên: chỉ thấy khi kéo hết trang */}
+          <div className="min-h-full">{children}</div>
           <Footer />
         </main>
         {/* Dialogs sit inside the content column so the sidebar stays usable while one is open */}

@@ -22,17 +22,28 @@ const COUNT_PRESETS = [10, 20, 30, 50];
 const MAX_COUNT = 200;
 const DEFAULT_SECTIONS: Section[] = ["goi", "bunpou"];
 
+type PracticeKind = "types" | "listening";
+
+interface PracticeSetupProps {
+  initialLevel?: number;
+  /** Chỉ hiện các phần này (trang Reading chỉ có dokkai). Mặc định: tất cả phần, chọn sẵn goi và bunpou. */
+  sections?: Section[];
+  /** Các cách luyện cho phép (trang Listening chỉ có "listening"). Mặc định: cả hai. */
+  kinds?: PracticeKind[];
+}
+
 /** "Luyện theo dạng bài": pick a level, any mix of section types, a free question count and a timer. */
-export function PracticeSetup({ initialLevel = 3 }: { initialLevel?: number }) {
+export function PracticeSetup({ initialLevel = 3, sections, kinds }: PracticeSetupProps) {
   const router = useRouter();
+  const defaultSections = sections ?? DEFAULT_SECTIONS;
   const [level, setLevel] = useState(initialLevel);
-  const [kind, setKind] = useState<"types" | "listening">("types");
+  const [kind, setKind] = useState<PracticeKind>(kinds?.[0] ?? "types");
   const [sets, setSets] = useState<ListeningSetDto[]>([]);
   const [types, setTypes] = useState<QuestionTypeDto[]>([]);
   const [selected, setSelected] = useState<Set<number>>(new Set());
-  const [expanded, setExpanded] = useState<Set<Section>>(new Set(DEFAULT_SECTIONS));
+  const [expanded, setExpanded] = useState<Set<Section>>(new Set(defaultSections));
   const [count, setCount] = useState(10);
-  const [limited, setLimited] = useState(true);
+  const [limited, setLimited] = useState((kinds?.[0] ?? "types") === "types");
   const [minutes, setMinutes] = useState(30);
   const [feedback, setFeedback] = useState<FeedbackMode>("after");
   const [loading, setLoading] = useState(true);
@@ -43,16 +54,19 @@ export function PracticeSetup({ initialLevel = 3 }: { initialLevel?: number }) {
     let cancelled = false;
     setLoading(true);
     getQuestionTypes(level)
-      .then((list) => {
+      .then((all) => {
         if (cancelled) return;
+        const list = sections ? all.filter((t) => sections.includes(t.section)) : all;
         setTypes(list);
-        setSelected(new Set(list.filter((t) => DEFAULT_SECTIONS.includes(t.section) && t.available > 0).map((t) => t.id)));
+        setSelected(new Set(list.filter((t) => defaultSections.includes(t.section) && t.available > 0).map((t) => t.id)));
       })
       .catch((err) => !cancelled && setError(getApiErrorMessage(err, "Không tải được danh sách dạng bài.")))
       .finally(() => !cancelled && setLoading(false));
     return () => {
       cancelled = true;
     };
+    // sections là hằng số của từng trang, không đổi trong vòng đời component
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [level]);
 
   useEffect(() => {
@@ -65,7 +79,7 @@ export function PracticeSetup({ initialLevel = 3 }: { initialLevel?: number }) {
     };
   }, [level]);
 
-  const chooseKind = (next: "types" | "listening") => {
+  const chooseKind = (next: PracticeKind) => {
     setKind(next);
     // A listening set runs as long as the recording, so it starts without a time limit
     setLimited(next === "types");
@@ -156,6 +170,8 @@ export function PracticeSetup({ initialLevel = 3 }: { initialLevel?: number }) {
           ))}
         </div>
 
+        {(!kinds || kinds.length > 1) && (
+        <>
         <p className="mb-3 mt-7 text-xs font-semibold text-neutral-900">2. Chọn cách luyện</p>
         <div className="mb-4 grid grid-cols-2 gap-2">
           {(
@@ -176,6 +192,10 @@ export function PracticeSetup({ initialLevel = 3 }: { initialLevel?: number }) {
             </button>
           ))}
         </div>
+        </>
+        )}
+
+        <div className={!kinds || kinds.length > 1 ? "" : "mt-6"} />
 
         {kind === "listening" && (
           <div className="rounded-2xl border border-black/10 bg-[#F5F3EE] p-5 text-sm text-neutral-700">

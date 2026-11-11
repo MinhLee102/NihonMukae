@@ -176,6 +176,7 @@ export function ChatView({ apiKey, level, topic, onExit }: Props) {
         </p>
       )}
 
+      <p className="mt-2 text-center text-[10px] text-neutral-400">Nội dung hội thoại được gửi tới Google Gemini. Đừng nói thông tin cá nhân.</p>
       <div className="mt-3 flex items-end gap-2">
         {speech.supported && (
           <button

@@ -29,6 +29,9 @@ export function Footer() {
         <Link href="/credits" className={link}>
           Nguồn dữ liệu và bản quyền
         </Link>
+        <Link href="/privacy" className={link}>
+          Quyền riêng tư
+        </Link>
       </p>
     </footer>
   );

@@ -1,13 +1,16 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import Link from "next/link";
 import { Loader2, Sparkles, Trash2 } from "lucide-react";
 import { RequireAuth } from "@/components/flashcard/RequireAuth";
 import { ApiKeyPanel } from "@/components/kaiwa/ApiKeyPanel";
 import { ChatView } from "@/components/kaiwa/ChatView";
+import { KaiwaConsent } from "@/components/kaiwa/KaiwaConsent";
+import { getConsent, withdrawConsent, type ConsentStatus } from "@/lib/api/consent";
 import { getApiErrorMessage } from "@/lib/api/flashcard";
 import { deleteKaiwaSession, listKaiwaSessions, type KaiwaSessionDto } from "@/lib/api/kaiwa";
-import { GeminiError, suggestTopics } from "@/lib/kaiwa/gemini";
+import { GeminiError, clearApiKey, suggestTopics } from "@/lib/kaiwa/gemini";
 
 const LEVELS = [5, 4, 3, 2, 1];
 
@@ -21,6 +24,8 @@ function KaiwaHome() {
   const [chat, setChat] = useState<{ level: number; topic: string } | null>(null);
   const [history, setHistory] = useState<KaiwaSessionDto[] | null>(null);
   const [open, setOpen] = useState<string | null>(null);
+  const [consent, setConsent] = useState<ConsentStatus | null>(null);
+  const [consentError, setConsentError] = useState<string | null>(null);
 
   const loadHistory = useCallback(() => {
     listKaiwaSessions()
@@ -29,6 +34,23 @@ function KaiwaHome() {
   }, []);
 
   useEffect(loadHistory, [loadHistory]);
+
+  useEffect(() => {
+    getConsent("kaiwa")
+      .then(setConsent)
+      .catch((err) => setConsentError(getApiErrorMessage(err, "Không kiểm tra được trạng thái đồng ý.")));
+  }, []);
+
+  const withdraw = async () => {
+    if (!window.confirm("Rút lại đồng ý? Key Gemini lưu trong trình duyệt này cũng sẽ bị xoá và bạn cần đồng ý lại để dùng Kaiwa.")) return;
+    try {
+      setConsent(await withdrawConsent("kaiwa"));
+      clearApiKey();
+      setApiKey("");
+    } catch (err) {
+      setError(getApiErrorMessage(err));
+    }
+  };
 
   const suggest = async () => {
     setSuggesting(true);
@@ -69,6 +91,9 @@ function KaiwaHome() {
 
   const canStart = apiKey !== "" && topic.trim() !== "";
 
+  if (consentError) return <p className="py-20 text-center text-sm text-red-600">{consentError}</p>;
+  if (!consent) return <p className="py-20 text-center text-sm text-neutral-400">Đang tải...</p>;
+
   return (
     <div className="mx-auto max-w-2xl">
       <div className="mb-8">
@@ -81,6 +106,9 @@ function KaiwaHome() {
         </p>
       </div>
 
+      {!consent.accepted ? (
+        <KaiwaConsent version={consent.currentVersion} onAccepted={() => setConsent({ ...consent, accepted: true })} />
+      ) : (
       <div className="space-y-5">
         <ApiKeyPanel onChange={setApiKey} />
 
@@ -179,7 +207,19 @@ function KaiwaHome() {
             </div>
           </div>
         )}
+
+        <p className="text-center text-[11px] text-neutral-400">
+          Bạn đã đồng ý gửi nội dung hội thoại tới Google.{" "}
+          <button type="button" onClick={withdraw} className="underline hover:text-red-600">
+            Rút lại đồng ý
+          </button>{" "}
+          ·{" "}
+          <Link href="/privacy" className="underline">
+            Chính sách quyền riêng tư
+          </Link>
+        </p>
       </div>
+      )}
     </div>
   );
 }

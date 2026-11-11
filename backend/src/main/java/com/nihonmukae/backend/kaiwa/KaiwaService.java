@@ -37,6 +37,11 @@ public class KaiwaService {
     }
 
     public SessionDto save(UUID userId, SaveRequest req) {
+        Integer consented = jdbc.queryForObject("SELECT count(*) FROM user_consents WHERE user_id = :uid AND kind = 'kaiwa'",
+                new MapSqlParameterSource("uid", userId), Integer.class);
+        if (consented == null || consented == 0) {
+            throw new IllegalArgumentException("Bạn cần đồng ý điều khoản dùng Kaiwa trước");
+        }
         int level = req.level() == null ? 0 : req.level();
         if (level < 1 || level > 5) {
             throw new IllegalArgumentException("Cấp độ phải từ N1 đến N5");

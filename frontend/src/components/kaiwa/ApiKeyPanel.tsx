@@ -62,7 +62,8 @@ export function ApiKeyPanel({ onChange }: { onChange: (key: string) => void }) {
             <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener noreferrer" className="underline">
               aistudio.google.com/apikey
             </a>{" "}
-            (đăng nhập Google, bấm Create API key) rồi dán vào đây.
+            (đăng nhập Google, bấm Create API key) rồi dán vào đây. <strong>Hãy dùng key miễn phí</strong> (dự án chưa bật thanh toán) để
+            không thể bị tính tiền.
           </p>
           <div className="mt-3 flex gap-2">
             <input

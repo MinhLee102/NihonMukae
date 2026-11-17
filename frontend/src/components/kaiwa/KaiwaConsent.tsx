@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ShieldCheck } from "lucide-react";
+import { KeyRound, ShieldCheck } from "lucide-react";
 import { acceptConsent } from "@/lib/api/consent";
 import { getApiErrorMessage } from "@/lib/api/flashcard";
 
@@ -68,6 +68,30 @@ export function KaiwaConsent({ version, onAccepted }: { version: number; onAccep
         </li>
       </ul>
 
+      <div className="mt-5 rounded-xl border border-black/10 p-4">
+        <p className="flex items-center gap-2 text-sm font-semibold text-neutral-900">
+          <KeyRound size={15} /> Chúng tôi bảo vệ key của bạn thế nào
+        </p>
+        <ul className="mt-2 list-disc space-y-1.5 pl-5 text-sm leading-6 text-neutral-700">
+          <li>Key chỉ nằm trong trình duyệt của bạn. Nó không bao giờ được gửi tới máy chủ Nihon Mukae, nên chúng tôi không thể đọc, lưu hay làm lộ key.</li>
+          <li>Key chỉ được gửi tới Google, qua kết nối mã hoá (HTTPS) và nằm trong phần đầu yêu cầu chứ không nằm trong địa chỉ trang, nên không lọt vào lịch sử hay nhật ký.</li>
+          <li>Ô nhập key che ký tự, và chúng tôi chỉ hiện 4 ký tự cuối. Bạn xoá key khỏi trình duyệt bất cứ lúc nào bằng nút &ldquo;Xoá key&rdquo; hoặc &ldquo;Rút lại đồng ý&rdquo;.</li>
+        </ul>
+        <p className="mt-2 text-xs leading-5 text-neutral-500">
+          Giới hạn thật thà: dữ liệu trong trình duyệt vẫn có thể bị đọc bởi tiện ích cài thêm hoặc phần mềm độc hại trên máy bạn. Vì vậy
+          đừng nhập key trên máy dùng chung.
+        </p>
+      </div>
+
+      <div className="mt-4 rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-sm leading-6 text-emerald-900">
+        <p className="font-semibold">Hãy dùng key miễn phí, đừng dùng key trả phí theo lượng dùng</p>
+        <p className="mt-1 text-xs leading-5">
+          Tạo key trong một dự án Google AI Studio <strong>chưa bật thanh toán</strong>. Key miễn phí có hạn mức cố định nên dù bị lộ hay bị
+          dùng quá tay cũng không thể phát sinh tiền, chỉ bị chặn tạm thời. Key trả phí tính tiền theo từng token, nếu lộ có thể mất tiền
+          thật. Nếu nghi ngờ lộ key, vào aistudio.google.com/apikey và xoá key đó ngay.
+        </p>
+      </div>
+
       <p className="mt-4 rounded-xl bg-amber-50 px-4 py-3 text-xs leading-5 text-amber-900">
         Với key Gemini miễn phí, Google có thể dùng nội dung để cải thiện sản phẩm và người của Google có thể xem lại. Dữ liệu được
         xử lý ở máy chủ nước ngoài. Vì vậy <strong>đừng nói hoặc gõ thông tin cá nhân</strong> như họ tên đầy đủ, địa chỉ, số điện
@@ -76,7 +100,8 @@ export function KaiwaConsent({ version, onAccepted }: { version: number; onAccep
 
       <div className="mt-5 space-y-2.5">
         <Check checked={dataOk} onChange={setDataOk}>
-          Tôi đã đọc và đồng ý để nội dung hội thoại (chữ, và âm thanh nếu tôi dùng micro) được gửi tới Google như trên.
+          Tôi đã đọc và đồng ý để nội dung hội thoại (chữ, và âm thanh nếu tôi dùng micro) được gửi tới Google như trên, và tôi hiểu
+          nên dùng key miễn phí.
         </Check>
         <Check checked={ageOk} onChange={setAgeOk}>
           Tôi từ đủ 16 tuổi trở lên, hoặc đã được cha mẹ hoặc người giám hộ đồng ý cho dùng tính năng này.

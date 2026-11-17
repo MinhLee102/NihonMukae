@@ -44,6 +44,11 @@ export default function PrivacyPage() {
           Nếu bạn dùng micro, Chrome hoặc Edge gửi âm thanh tới dịch vụ nhận dạng giọng nói của Google hoặc Microsoft để đổi thành chữ.
           Chúng tôi không nhận âm thanh đó. Bạn có thể chỉ gõ chữ.
         </p>
+        <p>
+          Về key: chúng tôi không nhận, không lưu và không ghi lại key của bạn; nó chỉ nằm trong trình duyệt và chỉ đi tới Google qua kết
+          nối mã hoá. Chúng tôi khuyên dùng key miễn phí (dự án Google AI Studio chưa bật thanh toán) để dù key bị lộ cũng không bị tính
+          tiền. Nếu nghi ngờ lộ key, hãy xoá nó tại aistudio.google.com/apikey.
+        </p>
         <p>Chúng tôi chỉ cho dùng Kaiwa sau khi bạn tích đồng ý, và bạn rút lại được bất cứ lúc nào ngay trên trang Kaiwa.</p>
       </Section>
 

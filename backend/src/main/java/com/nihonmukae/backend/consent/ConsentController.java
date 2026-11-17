@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ConsentController {
 
     /** kind → phiên bản nội dung đồng ý hiện hành. Tăng số khi đổi nội dung để hỏi lại mọi người. */
-    static final Map<String, Integer> CURRENT = Map.of("kaiwa", 1);
+    static final Map<String, Integer> CURRENT = Map.of("kaiwa", 2);
 
     public record Status(String kind, int currentVersion, boolean accepted, OffsetDateTime acceptedAt) {
     }

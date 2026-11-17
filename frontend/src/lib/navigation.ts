@@ -6,6 +6,7 @@ import {
   Headphones,
   GraduationCap,
   Mic,
+  MessagesSquare,
   HelpCircle,
   type LucideIcon,
 } from "lucide-react";
@@ -80,6 +81,14 @@ export const NAV_ITEMS: NavItem[] = [
     icon: Mic,
     breadcrumbJa: "発音",
     breadcrumbVi: "Shadowing",
+    publicRoute: false,
+  },
+  {
+    href: "/kaiwa",
+    label: "Kaiwa",
+    icon: MessagesSquare,
+    breadcrumbJa: "会話",
+    breadcrumbVi: "Kaiwa",
     publicRoute: false,
   },
   {

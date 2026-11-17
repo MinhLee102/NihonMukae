@@ -59,23 +59,23 @@ def build_sql(entries, order):
     point_rows, example_rows = [], []
     for e in entries:
         point_rows.append((
-            e["level"], e["pattern"], e.get("reading") or None,
+            e["level"], e["pattern"], e.get("reading") or None, e.get("category") or None,
             json.dumps(e["connection"], ensure_ascii=False), e["meaning"], e["explanation"],
             e.get("notes") or None, json.dumps(e.get("similar", []), ensure_ascii=False), order[e["id"]],
         ))
         example_rows += [(e["level"], e["pattern"], i, x["ja"], x["vi"]) for i, x in enumerate(e["examples"])]
 
     out = []
-    out.append("CREATE TEMP TABLE feed_points (level smallint, pattern text, reading text, connection text, meaning text, "
+    out.append("CREATE TEMP TABLE feed_points (level smallint, pattern text, reading text, category text, connection text, meaning text, "
                "explanation text, notes text, related text, sort_order int) ON COMMIT DROP;\n")
     out.append("CREATE TEMP TABLE feed_examples (level smallint, pattern text, idx smallint, ja text, vi text) ON COMMIT DROP;\n")
-    insert_rows(out, "feed_points", ["level", "pattern", "reading", "connection", "meaning", "explanation", "notes",
+    insert_rows(out, "feed_points", ["level", "pattern", "reading", "category", "connection", "meaning", "explanation", "notes",
                                      "related", "sort_order"], point_rows)
     insert_rows(out, "feed_examples", ["level", "pattern", "idx", "ja", "vi"], example_rows)
     out.append("""
-INSERT INTO grammar_points (level, pattern, reading, connection, meaning, explanation, notes, related, sort_order)
-    SELECT level, pattern, reading, connection::jsonb, meaning, explanation, notes, related::jsonb, sort_order FROM feed_points
-    ON CONFLICT (level, pattern) DO UPDATE SET reading = EXCLUDED.reading, connection = EXCLUDED.connection,
+INSERT INTO grammar_points (level, pattern, reading, category, connection, meaning, explanation, notes, related, sort_order)
+    SELECT level, pattern, reading, category, connection::jsonb, meaning, explanation, notes, related::jsonb, sort_order FROM feed_points
+    ON CONFLICT (level, pattern) DO UPDATE SET reading = EXCLUDED.reading, category = EXCLUDED.category, connection = EXCLUDED.connection,
         meaning = EXCLUDED.meaning, explanation = EXCLUDED.explanation, notes = EXCLUDED.notes,
         related = EXCLUDED.related, sort_order = EXCLUDED.sort_order, updated_at = now();
 DELETE FROM grammar_examples WHERE point_id IN

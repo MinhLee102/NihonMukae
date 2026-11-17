@@ -6,6 +6,10 @@ Chuẩn bị prompt cho AI (Gemini bản web), hai lượt:
       Dán câu trả lời vào data/list/N1.json (lượt sau của cùng cấp: N1_2.json, N1_3.json...).
       --with-file: nhắc AI là có đính kèm file tham khảo (chỉ lấy tên mẫu, không chép nội dung).
 
+  python -I -X utf8 prepare.py extract --level 1 --pages 1-11 --pages 12-21
+      Lượt 0 (tuỳ chọn): prompt nhờ AI trích TÊN mẫu, nhóm và cách nối từ một file PDF tham khảo (đính kèm file khi dán)
+      -> work/extract/EXTRACT_N1_p1-11.txt. Lưu câu trả lời vào data/list/N1.json, N1_2.json... như lượt 1.
+
   python -I -X utf8 prepare.py batches
       Lượt 2: chia danh sách thành batch 15 mẫu, mỗi batch một file prompt -> work/batches/GN1-01.txt
       Dán câu trả lời vào data/results/GN1-01.json rồi chạy check.py. Batch đã có kết quả hợp lệ được bỏ qua,
@@ -42,6 +46,19 @@ def cmd_list(args):
     os.makedirs(LIST_DIR, exist_ok=True)
 
 
+def cmd_extract(args):
+    template = read_prompt("PROMPT_EXTRACT.md")
+    out_dir = os.path.join(WORK, "extract")
+    os.makedirs(out_dir, exist_ok=True)
+    os.makedirs(LIST_DIR, exist_ok=True)
+    for pages in args.pages:
+        text = template.replace("{LEVEL}", str(args.level)).replace("{PAGES}", pages)
+        path = os.path.join(out_dir, f"EXTRACT_N{args.level}_p{pages}.txt")
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(text)
+        print(f"trang {pages} -> {path}")
+
+
 def done_ids():
     """Id đã có nội dung hợp lệ (check.py chỉ giữ mục đạt trong file kết quả)."""
     ids = set()
@@ -71,8 +88,9 @@ def cmd_batches(_args):
                 os.remove(path)
             continue
         todo += len(pending)
-        lines = [json.dumps({"id": i["id"], "level": f"N{i['level']}", "pattern": i["pattern"],
-                             "reading": i["reading"]}, ensure_ascii=False) for i in pending]
+        lines = [json.dumps({k: v for k, v in {
+            "id": i["id"], "level": f"N{i['level']}", "pattern": i["pattern"], "reading": i["reading"],
+            "category": i["category"], "hint": i["hint"]}.items() if v != ""}, ensure_ascii=False) for i in pending]
         with open(path, "w", encoding="utf-8", newline="\n") as f:
             f.write(template.replace("{LIST}", "[\n" + ",\n".join(lines) + "\n]"))
         # tạo sẵn file trống để dán kết quả vào, giống pipeline từ vựng
@@ -85,6 +103,10 @@ def cmd_batches(_args):
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
+    e = sub.add_parser("extract")
+    e.add_argument("--level", type=int, choices=LEVELS, required=True)
+    e.add_argument("--pages", action="append", required=True, help="ví dụ 1-11 (có thể lặp lại)")
+    e.set_defaults(fn=cmd_extract)
     p = sub.add_parser("list")
     p.add_argument("--level", type=int, choices=LEVELS)
     p.add_argument("--with-file", action="store_true")

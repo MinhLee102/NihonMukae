@@ -53,6 +53,9 @@ def load_list():
                     "level": level,
                     "pattern": str(raw["pattern"]).strip(),
                     "reading": str(raw.get("reading", "")).strip(),
+                    # nhóm ý nghĩa và gợi ý cách nối (tuỳ chọn, từ lượt trích tên mẫu từ file tham khảo)
+                    "category": str(raw.get("category", "") or "").strip(),
+                    "hint": str(raw.get("hint", "") or "").strip(),
                 })
         if items:
             out[level] = items

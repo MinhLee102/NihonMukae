@@ -1,6 +1,6 @@
 Bạn là giáo viên tiếng Nhật giàu kinh nghiệm luyện thi JLPT, soạn nội dung ngữ pháp cho một ứng dụng học tiếng Nhật dành cho người Việt.
 
-Bên dưới là danh sách các mẫu ngữ pháp (có id, cấp độ JLPT và tên mẫu). Với MỖI mẫu, hãy viết nội dung theo đúng định dạng JSON ở cuối.
+Bên dưới là danh sách các mẫu ngữ pháp (có id, cấp độ JLPT, tên mẫu; có thể có "category" là nhóm ý nghĩa và "hint" là gợi ý cách nối, chỉ để tham khảo và đối chiếu, không bắt buộc theo). Với MỖI mẫu, hãy viết nội dung theo đúng định dạng JSON ở cuối.
 
 Nguyên tắc nội dung:
 1. Tự viết bằng lời của bạn, ngắn gọn, chính xác. Không sao chép nguyên văn giải thích hay câu ví dụ từ sách, trang web hay đề thi nào.

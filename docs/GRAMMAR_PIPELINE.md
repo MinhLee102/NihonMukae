@@ -3,7 +3,19 @@
 Nội dung ngữ pháp (giải thích, cách chia, ví dụ) do AI viết mới, không sao chép từ sách hay đề. Chạy từ thư mục `scripts/grammar`
 bằng Python của venv trong `scripts/jmdict` (cần `psycopg2`, đã có). Luôn thêm `-I -X utf8`.
 
-## Lượt 1: danh sách tên mẫu theo cấp
+## Lượt 0 (tuỳ chọn): trích tên mẫu từ file tham khảo
+
+Khi có một file PDF tổng hợp (ví dụ bảng ngữ pháp N1 dạng scan), dùng AI để lấy RIÊNG tên mẫu, nhóm ý nghĩa và cách nối, không lấy giải thích hay ví dụ của file:
+
+```
+python -I -X utf8 prepare.py extract --level 1 --pages 1-11 --pages 12-21   # work/extract/EXTRACT_N1_p1-11.txt, ..._p12-21.txt
+```
+
+Đính kèm PDF vào Gemini rồi dán từng prompt (chia theo trang để câu trả lời không quá dài), lưu câu trả lời vào `data/list/N1.json`
+và `data/list/N1_2.json`. Mỗi mục có `pattern`, `reading`, `category` (nhóm như 時間関係) và `hint` (cách nối, chỉ để tham khảo).
+Sau đó làm tiếp lượt 2: nội dung giải thích và ví dụ do AI viết mới, không dựa vào file.
+
+## Lượt 1: danh sách tên mẫu theo cấp (khi không có file tham khảo)
 
 ```
 python -I -X utf8 prepare.py list              # work/list/LIST_N5.txt ... LIST_N1.txt

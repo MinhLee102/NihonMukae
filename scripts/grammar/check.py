@@ -105,6 +105,7 @@ def validate(entry, expected):
         "id": expected["id"],
         "level": expected["level"],
         "pattern": expected["pattern"],
+        "category": expected.get("category", ""),
         "reading": str(entry.get("reading") or expected["reading"]).strip(),
         "connection": [c.strip() for c in conn],
         "meaning": entry["meaning"].strip(),

@@ -1,0 +1,2599 @@
+[
+ {
+  "id": 1059610,
+  "m": [
+   {
+    "vi": "liền mạch, không có đường nối"
+   },
+   {
+    "vi": "tất dài không đường may"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "複数のサービスをシームレスに連携させる仕組みを作った。",
+    "vi": "Chúng tôi đã tạo ra cơ chế liên kết liền mạch nhiều dịch vụ với nhau.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1059640,
+  "m": [
+   {
+    "vi": "trần nhà (ceiling), giới hạn trần"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "リビングの天井に明るいシーリングライトを取り付けた。",
+    "vi": "Tôi đã lắp đèn ốp trần sáng sủa trên trần phòng khách.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1059670,
+  "m": [
+   {
+    "vi": "con dấu, niêm phong"
+   },
+   {
+    "vi": "nhãn dán, hình dán (sticker)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ノートや手帳にお気に入りのキャラクターのシールを貼った。",
+    "vi": "Tôi dán hình dán nhân vật yêu thích lên vở và sổ tay.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1059680,
+  "m": [
+   {
+    "vi": "tấm khiên, lớp che chắn bảo vệ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ゲームのキャラクターが強力なシールドで敵の攻撃を防いだ。",
+    "vi": "Nhân vật trong game đã dùng tấm khiên mạnh mẽ để đỡ đòn tấn công của kẻ địch.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1059720,
+  "m": [
+   {
+    "vi": "cảnh tượng, khung cảnh"
+   },
+   {
+    "vi": "bối cảnh, tình huống"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "あの美しいシーンが目に浮かぶ。",
+    "vi": "Cảnh tượng tuyệt đẹp đó hiện lên trong tâm trí tôi.",
+    "src": "tatoeba",
+    "sid": 230478
+   }
+  ]
+ },
+ {
+  "id": 1059740,
+  "m": [
+   {
+    "vi": "rạp hát, rạp chiếu phim"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "私達みんなは芝居を見るためにシアターへ行った。",
+    "vi": "Tất cả chúng tôi đều đến nhà hát để xem kịch.",
+    "src": "tatoeba",
+    "sid": 151231
+   }
+  ]
+ },
+ {
+  "id": 1059750,
+  "m": [
+   {
+    "vi": "thành phố Seattle (Mỹ)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "神戸はシアトルの姉妹都市です。",
+    "vi": "Kobe là thành phố kết nghĩa của Seattle.",
+    "src": "tatoeba",
+    "sid": 144879
+   },
+   {
+    "ja": "シアトルに行きたい。",
+    "vi": "Tôi muốn đến Seattle.",
+    "src": "tatoeba",
+    "sid": 216603
+   }
+  ]
+ },
+ {
+  "id": 1059760,
+  "m": [
+   {
+    "vi": "màu xanh lơ (cyan)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "カラー印刷のインクはシアン、マゼンタ、イエローの三色が基本だ。",
+    "vi": "Mực in màu cơ bản gồm ba màu là xanh lơ, đỏ cánh sen và vàng.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1059790,
+  "m": [
+   {
+    "vi": "bình lắc pha chế đồ uống (shaker)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "バーテンダーが手際よくシェーカーを振ってカクテルを作った。",
+    "vi": "Người pha chế lắc bình pha rượu thoăn thoắt để pha ly cocktail.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1059800,
+  "m": [
+   {
+    "vi": "lắc (bình, tay)"
+   },
+   {
+    "vi": "sữa lắc (milkshake)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ドレッシングのボトルをよくシェイクしてからサラダにかけた。",
+    "vi": "Tôi lắc đều chai nước sốt rồi mới rưới lên món salad.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1059850,
+  "m": [
+   {
+    "vi": "dao cạo râu điện"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "肌にシェーバーを滑らす度に確かに滑らか～な感じがします。",
+    "vi": "Mỗi lần lướt dao cạo trên da, cảm giác đúng là mịn màng thật đấy.",
+    "src": "tatoeba",
+    "sid": 74892
+   },
+   {
+    "ja": "電気シェーバーから火が出ました。",
+    "vi": "Máy cạo râu điện của tôi bốc cháy rồi.",
+    "src": "tatoeba",
+    "sid": 124855
+   }
+  ]
+ },
+ {
+  "id": 1059930,
+  "m": [
+   {
+    "vi": "chia sẻ (trên mạng xã hội, dùng chung)"
+   },
+   {
+    "vi": "thị phần"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "私達の市場シェアは２０％です。",
+    "vi": "Thị phần của chúng tôi chiếm 20%.",
+    "src": "tatoeba",
+    "sid": 151962
+   },
+   {
+    "ja": "上位２社で市場の５０％を上回るシェアを占めている。",
+    "vi": "Hai công ty đứng đầu chiếm hơn 50% thị phần trên thị trường.",
+    "src": "tatoeba",
+    "sid": 146272
+   }
+  ]
+ },
+ {
+  "id": 1059960,
+  "m": [
+   {
+    "vi": "sự chia sẻ, dùng chung (sharing)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "最近は車や自転車のシェアリングサービスを利用する人が増えている。",
+    "vi": "Gần đây số người sử dụng dịch vụ chia sẻ ô tô và xe đạp đang tăng lên.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1059970,
+  "m": [
+   {
+    "vi": "giảm cân giữ dáng, làm săn chắc cơ thể"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "夏までに体をシェイプアップするために毎朝ジョギングを始めた。",
+    "vi": "Để giữ dáng săn chắc trước mùa hè, tôi đã bắt đầu chạy bộ mỗi sáng.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1059980,
+  "m": [
+   {
+    "vi": "chó béc-giê (German shepherd)"
+   },
+   {
+    "vi": "người chăn cừu"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "そのシェパードは、びっこをひきながら道を歩いていた。",
+    "vi": "Con chó chăn cừu Đức đó đang đi khập khiễng trên đường.",
+    "src": "tatoeba",
+    "sid": 213059
+   }
+  ]
+ },
+ {
+  "id": 1060000,
+  "m": [
+   {
+    "vi": "bếp trưởng (chef)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "このレストランのシェフはフランスで修行を積んだ一流の料理人だ。",
+    "vi": "Bếp trưởng của nhà hàng này là đầu bếp hàng đầu từng tu nghiệp tại Pháp.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1060010,
+  "m": [
+   {
+    "vi": "rượu vang sherry"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "食前酒として冷やした辛口のシェリーを一杯いただいた。",
+    "vi": "Tôi đã uống một ly rượu sherry vị chát ướp lạnh làm rượu khai vị.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1060040,
+  "m": [
+   {
+    "vi": "vỏ (sò, trứng), lớp vỏ ngoài (shell)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "キャンプ用に軽くて防水性の高いシェルジャケットを買った。",
+    "vi": "Tôi đã mua chiếc áo khoác vỏ ngoài nhẹ và chống nước tốt để đi cắm trại.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1060060,
+  "m": [
+   {
+    "vi": "nơi trú ẩn, hầm trú ẩn"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "戦争を恐れてシェルターが作られてきた。",
+    "vi": "Hầm trú ẩn được xây dựng vì lo sợ chiến tranh.",
+    "src": "tatoeba",
+    "sid": 141249
+   }
+  ]
+ },
+ {
+  "id": 1060080,
+  "m": [
+   {
+    "vi": "giấc ngủ trưa (siesta)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "スペイン旅行では午後にシエスタをとる現地の習慣を体験した。",
+    "vi": "Trong chuyến du lịch Tây Ban Nha, tôi đã trải nghiệm thói quen nghỉ trưa của người dân địa phương.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1060100,
+  "m": [
+   {
+    "vi": "người theo chủ nghĩa Phục quốc Do Thái (Zionist)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "歴史の授業で十九世紀末のシオニストたちの活動について学んだ。",
+    "vi": "Trong giờ lịch sử, chúng tôi đã học về hoạt động của những người theo chủ nghĩa Phục quốc Do Thái cuối thế kỷ 19.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1060110,
+  "m": [
+   {
+    "vi": "chủ nghĩa Phục quốc Do Thái (Zionism)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "近代の中東史を理解する上でシオニズムの歴史は欠かせない。",
+    "vi": "Lịch sử chủ nghĩa Phục quốc Do Thái là phần không thể thiếu khi tìm hiểu lịch sử Trung Đông cận đại.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1060130,
+  "m": [
+   {
+    "vi": "thành phố Chicago (Mỹ)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "シカゴのあたりでは雨が降っていました。",
+    "vi": "Khu vực quanh Chicago trời đã đổ mưa.",
+    "src": "tatoeba",
+    "sid": 216365
+   },
+   {
+    "ja": "シカゴに着いたらすぐ電話します。",
+    "vi": "Đến Chicago tôi sẽ gọi điện ngay.",
+    "src": "tatoeba",
+    "sid": 216366
+   }
+  ]
+ },
+ {
+  "id": 1060160,
+  "m": [
+   {
+    "vi": "hoa tiên khách lai (cyclamen)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "冬の玄関を彩るために赤いシクラメンの鉢植えを買ってきた。",
+    "vi": "Tôi đã mua chậu hoa tiên khách lai màu đỏ về trang trí hiên nhà mùa đông.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1060180,
+  "m": [
+   {
+    "vi": "tín hiệu, đèn giao thông (signal)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "赤のシグナルが青に変わるのを待ってから横断歩道を渡った。",
+    "vi": "Tôi đợi đèn tín hiệu chuyển từ đỏ sang xanh rồi mới băng qua vạch sang đường.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1060270,
+  "m": [
+   {
+    "vi": "chị em gái"
+   },
+   {
+    "vi": "nữ tu, ma sơ (Công giáo)"
+   },
+   {
+    "vi": "bạn gái đồng tính nữ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "すぐにシスターが参ります。",
+    "vi": "Nữ tu sĩ sẽ tới ngay thôi.",
+    "src": "tatoeba",
+    "sid": 214949
+   },
+   {
+    "ja": "修道女になったとき、シスター・テレサの名を受けた。",
+    "vi": "Khi trở thành nữ tu, bà lấy tên là Sơ Teresa.",
+    "src": "tatoeba",
+    "sid": 148229
+   }
+  ]
+ },
+ {
+  "id": 1060410,
+  "m": [
+   {
+    "vi": "các hệ thống (systems)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼はITシステムズの設計と運用を手掛ける会社を経営している。",
+    "vi": "Anh ấy điều hành một công ty chuyên thiết kế và vận hành các hệ thống công nghệ thông tin.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1060560,
+  "m": [
+   {
+    "vi": "từ điển đồng nghĩa (thesaurus)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "文章の表現を豊かにするためにシソーラスで類語を調べた。",
+    "vi": "Để làm phong phú cách diễn đạt trong bài viết, tôi đã tra từ đồng nghĩa trong từ điển.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1060590,
+  "m": [
+   {
+    "vi": "món thịt hầm, súp kem hầm (stew)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "このシチューはいい匂いがしますね。",
+    "vi": "Món hầm này thơm ngon quá nhỉ.",
+    "src": "tatoeba",
+    "sid": 223713
+   },
+   {
+    "ja": "あのシチューがあたったに違いない。",
+    "vi": "Chắc chắn là tôi bị ngộ độc món hầm đó rồi.",
+    "src": "tatoeba",
+    "sid": 231323
+   }
+  ]
+ },
+ {
+  "id": 1060600,
+  "m": [
+   {
+    "vi": "tình huống, hoàn cảnh (situation)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "さまざまなシチュエーションを想定して避難訓練を行った。",
+    "vi": "Chúng tôi đã diễn tập sơ tán bằng cách giả định nhiều tình huống khác nhau.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1060620,
+  "m": [
+   {
+    "vi": "sáu số chín (99,9999%)"
+   },
+   {
+    "vi": "tư thế 69"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "このサーバーはシックスナインと呼ばれる極めて高い稼働率を誇る。",
+    "vi": "Máy chủ này tự hào có tỷ lệ hoạt động cực cao lên tới 99,9999%.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1060660,
+  "m": [
+   {
+    "vi": "con tàu thủy (ship)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "巨大なシップがゆっくりと港の桟橋に近づいてきた。",
+    "vi": "Con tàu lớn từ từ tiến lại gần cầu cảng.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1060700,
+  "m": [
+   {
+    "vi": "thành phố (city)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "都会のシティホテルに泊まって夜景をゆっくり眺めた。",
+    "vi": "Tôi nghỉ lại khách sạn trung tâm thành phố để thong thả ngắm cảnh đêm.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1060710,
+  "m": [
+   {
+    "vi": "nhà ga hàng không nội đô (city air terminal)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "空港行きのリムジンバスに乗るためシティーエアターミナルへ向かった。",
+    "vi": "Tôi đi tới nhà ga hàng không nội đô để bắt xe buýt ra sân bay.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1060770,
+  "m": [
+   {
+    "vi": "quả thanh yên (citron)"
+   },
+   {
+    "vi": "nước ngọt vị chanh (soda chanh)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "夏のお風呂上がりに冷たいシトロンを一気に飲み干した。",
+    "vi": "Sau khi tắm vào mùa hè, tôi uống cạn một hơi ly nước chanh có ga mát lạnh.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1060780,
+  "m": [
+   {
+    "vi": "thành phố Sydney (Úc)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "シドニーは天然の美しい港がある。",
+    "vi": "Sydney có một bến cảng tự nhiên tuyệt đẹp.",
+    "src": "tatoeba",
+    "sid": 216145
+   },
+   {
+    "ja": "父は用事で年２回シドニーへ行く。",
+    "vi": "Bố tôi đi công tác ở Sydney mỗi năm hai lần.",
+    "src": "tatoeba",
+    "sid": 84329
+   }
+  ]
+ },
+ {
+  "id": 1060820,
+  "m": [
+   {
+    "vi": "quế"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "シナモンドーナツを３個おねがいします。",
+    "vi": "Cho tôi 3 chiếc bánh rán vòng vị quế nhé.",
+    "src": "tatoeba",
+    "sid": 237439
+   }
+  ]
+ },
+ {
+  "id": 1060840,
+  "m": [
+   {
+    "vi": "nhà biên kịch (scriptwriter)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼は数々のヒットドラマを手掛けた有名なシナリオライターだ。",
+    "vi": "Ông ấy là nhà biên kịch nổi tiếng từng chắp bút cho hàng loạt bộ phim truyền hình ăn khách.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1060860,
+  "m": [
+   {
+    "vi": "người cao tuổi, bậc tiền bối (senior)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "最近はシニア世代の健康維持に向けたサービスが充実している。",
+    "vi": "Gần đây các dịch vụ chăm sóc sức khỏe dành cho thế hệ người cao tuổi rất phong phú.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1060870,
+  "m": [
+   {
+    "vi": "cay độc, châm biếm, hoài nghi (cynical)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼は社会の問題に対していつもシニカルな見方をする。",
+    "vi": "Anh ấy luôn có cái nhìn châm biếm và hoài nghi đối với các vấn đề xã hội.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1060950,
+  "m": [
+   {
+    "vi": "điện ảnh, rạp chiếu phim (cinema)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "週末は街の小さなシネマで名作映画のリバイバル上映を観た。",
+    "vi": "Cuối tuần tôi đã xem suất chiếu lại bộ phim kinh điển tại một rạp chiếu phim nhỏ trong phố.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1061000,
+  "m": [
+   {
+    "vi": "từ đồng nghĩa (synonym)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "レポートを書くときに同じ単語を避けるためシノニムを探した。",
+    "vi": "Khi viết báo cáo, tôi tìm từ đồng nghĩa để tránh lặp lại cùng một từ.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1061020,
+  "m": [
+   {
+    "vi": "khắt khe, nghiêm khắc, khắc nghiệt (severe)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "今年の就職戦線は例年以上にシビアな状況が続いている。",
+    "vi": "Mùa tuyển dụng năm nay vẫn tiếp tục diễn ra trong tình hình khắc nghiệt hơn mọi năm.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1061030,
+  "m": [
+   {
+    "vi": "thuộc về công dân, đô thị (civic)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "市の中心部にあるシビックホールで市民向けの講演会が開かれた。",
+    "vi": "Buổi tọa đàm dành cho người dân đã được tổ chức tại hội trường công dân ở trung tâm thành phố.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1061060,
+  "m": [
+   {
+    "vi": "sự kiểm soát dân sự (đối với quân đội)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "民主主義国家では軍に対するシビリアンコントロールが原則とされている。",
+    "vi": "Ở các quốc gia dân chủ, nguyên tắc kiểm soát dân sự đối với quân đội được đặt lên hàng đầu.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1061090,
+  "m": [
+   {
+    "vi": "vải voan mỏng (chiffon), bánh bông lan chiffon"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "軽やかなシフォン素材のブラウスは春のお出かけにぴったりだ。",
+    "vi": "Chiếc áo kiểu bằng chất liệu voan nhẹ nhàng rất hợp để đi chơi mùa xuân.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1061100,
+  "m": [
+   {
+    "vi": "sự dịch chuyển, chuyển đổi"
+   },
+   {
+    "vi": "ca làm việc"
+   },
+   {
+    "vi": "cần số (ô tô)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "アルバイトのシフトを調整してテスト勉強の時間を確保した。",
+    "vi": "Tôi đã điều chỉnh lại ca làm thêm để dành thời gian ôn thi.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1061180,
+  "m": [
+   {
+    "vi": "vùng Siberia (Nga)"
+   },
+   {
+    "vi": "bánh bông lan kẹp nhân đậu đỏ (shiberia)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼はシベリア経由でヨーロッパへ行った。",
+    "vi": "Ông ấy đã đi châu Âu qua ngả Siberia.",
+    "src": "tatoeba",
+    "sid": 113550
+   },
+   {
+    "ja": "彼はシベリア経由でロンドンにやってきた。",
+    "vi": "Ông ấy đã đến London qua đường Siberia.",
+    "src": "tatoeba",
+    "sid": 113549
+   }
+  ],
+  "hv": "tây tỷ lợi á"
+ },
+ {
+  "id": 1061200,
+  "m": [
+   {
+    "vi": "váy lót nữ (chemise)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ワンピースが透けないように下に白いシミーズを着た。",
+    "vi": "Tôi mặc thêm chiếc váy lót màu trắng bên trong để chiếc váy liền không bị lộ.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1061210,
+  "m": [
+   {
+    "vi": "sự mô phỏng (simulation)"
+   },
+   {
+    "vi": "hành vi giả vờ ngã câu lỗi (thể thao)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "パイロットは専用の装置を使って飛行のシミュレーション訓練を行う。",
+    "vi": "Phi công thực hiện huấn luyện mô phỏng bay bằng thiết bị chuyên dụng.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1061230,
+  "m": [
+   {
+    "vi": "máy mô phỏng (simulator)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "自動車教習所のシミュレーターで危険な運転状況を体験した。",
+    "vi": "Tôi đã trải nghiệm các tình huống lái xe nguy hiểm trên máy mô phỏng ở trường dạy lái.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1061260,
+  "m": [
+   {
+    "vi": "vải len dệt chéo (sharkskin), da cá mập"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "光沢のあるシャークスキン生地で仕立てたスーツを着ている。",
+    "vi": "Anh ấy đang mặc bộ vest may từ chất liệu vải sharkskin có độ bóng nhẹ.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1061280,
+  "m": [
+   {
+    "vi": "sắc bén, sắc nét, thon gọn"
+   },
+   {
+    "vi": "dấu thăng (âm nhạc)"
+   },
+   {
+    "vi": "dấu thăng (#)"
+   },
+   {
+    "vi": "bút chì kim"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼女のシャープな指摘によって議論の論点が明確になった。",
+    "vi": "Nhờ nhận xét sắc bén của cô ấy mà trọng tâm cuộc thảo luận trở nên rõ ràng.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1061300,
+  "m": [
+   {
+    "vi": "bút chì kim, bút chì bấm"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "試験に備えて新しいシャープペンシルと替え芯を買った。",
+    "vi": "Để chuẩn bị cho kỳ thi, tôi đã mua một chiếc bút chì kim mới và ruột chì thay thế.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1061310,
+  "m": [
+   {
+    "vi": "kem đá bào trái cây (sherbet, sorbet)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "暑い日の食後にさっぱりとしたレモンのシャーベットを食べた。",
+    "vi": "Sau bữa ăn vào ngày nóng, tôi đã thưởng thức món kem đá chanh thanh mát.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1061330,
+  "m": [
+   {
+    "vi": "thầy cúng, pháp sư (shaman)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "古代の社会ではシャーマンが神と人とをつなぐ役割を担っていた。",
+    "vi": "Trong xã hội cổ đại, các thầy cúng giữ vai trò kết nối giữa thần linh và con người.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1061340,
+  "m": [
+   {
+    "vi": "kỹ thuật may nhún chun (shirring)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "胸元にシャーリングが入った可愛いワンピースを見つけた。",
+    "vi": "Tôi tìm thấy một chiếc váy liền xinh xắn có đường may nhún chun ở phần ngực.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1061370,
+  "m": [
+   {
+    "vi": "nhút nhát, hay e thẹn (shy)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼はとてもシャイな性格なので人前で話すのが苦手だ。",
+    "vi": "Anh ấy có tính cách rất nhút nhát nên không giỏi nói chuyện trước đám đông.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1061470,
+  "m": [
+   {
+    "vi": "đóng cửa, ngăn chặn, loại bỏ"
+   },
+   {
+    "vi": "trận thắng trắng không để lọt điểm (thể thao)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼は９回までシャットアウトに抑えた。",
+    "vi": "Anh ấy đã giữ sạch lưới không để ghi điểm cho đến tận hiệp 9.",
+    "src": "tatoeba",
+    "sid": 75786
+   }
+  ]
+ },
+ {
+  "id": 1061510,
+  "m": [
+   {
+    "vi": "cái mũ (tiếng Pháp chapeau)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "相手のあまりの実力に「シャッポを脱ぐ」思いだった。",
+    "vi": "Trước thực lực vượt trội của đối thủ, tôi thực sự phải ngả mũ thán phục.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1061540,
+  "m": [
+   {
+    "vi": "lâu đài (ở Pháp), nhà máy rượu vang (château)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "フランス旅行で歴史ある美しいシャトーをいくつも巡った。",
+    "vi": "Trong chuyến du lịch Pháp, tôi đã đi thăm nhiều tòa lâu đài cổ kính tuyệt đẹp.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1061570,
+  "m": [
+   {
+    "vi": "quả cầu lông"
+   },
+   {
+    "vi": "xe trung chuyển"
+   },
+   {
+    "vi": "con thoi (dệt vải)"
+   },
+   {
+    "vi": "tàu con thoi vũ trụ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼は９時発ニューヨーク行きのシャトル便に飛び乗った。",
+    "vi": "Anh ấy bắt kịp chuyến bay con thoi lúc 9 giờ đi New York.",
+    "src": "tatoeba",
+    "sid": 75785
+   }
+  ]
+ },
+ {
+  "id": 1061590,
+  "m": [
+   {
+    "vi": "xe buýt trung chuyển"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "空港からホテルまでシャトルバスを利用できますか。",
+    "vi": "Có thể đi xe buýt trung chuyển từ sân bay về khách sạn không ạ?",
+    "src": "tatoeba",
+    "sid": 179367
+   }
+  ]
+ },
+ {
+  "id": 1061610,
+  "m": [
+   {
+    "vi": "cái bóng, phấn mắt (shadow)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ボクサーが鏡の前でフォームを確認しながらシャドーボクシングをした。",
+    "vi": "Võ sĩ quyền anh tập đấm gió trước gương để kiểm tra tư thế.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1061700,
+  "m": [
+   {
+    "vi": "trục truyền động (máy móc)"
+   },
+   {
+    "vi": "cán gậy golf"
+   },
+   {
+    "vi": "giếng đứng hầm mỏ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "このシャフトはピストンとつながっている。",
+    "vi": "Trục này nối liền với pít-tông.",
+    "src": "tatoeba",
+    "sid": 223688
+   }
+  ]
+ },
+ {
+  "id": 1061710,
+  "m": [
+   {
+    "vi": "cái xẻng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼等はシャベルで除雪していた。",
+    "vi": "Họ đang dùng xẻng xúc tuyết dọn đường.",
+    "src": "tatoeba",
+    "sid": 86032
+   },
+   {
+    "ja": "彼らは歩道の雪をシャベルで片付けていた。",
+    "vi": "Họ đang dùng xẻng dọn tuyết trên vỉa hè.",
+    "src": "tatoeba",
+    "sid": 96178
+   }
+  ]
+ },
+ {
+  "id": 1061740,
+  "m": [
+   {
+    "vi": "bong bóng xà phòng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "子供たちがシャボン玉を吹いている。",
+    "vi": "Lũ trẻ đang thổi bong bóng xà phòng.",
+    "src": "tatoeba",
+    "sid": 168803
+   },
+   {
+    "ja": "彼はシャボン玉をとばした。",
+    "vi": "Cậu bé thổi bong bóng xà phòng.",
+    "src": "tatoeba",
+    "sid": 113532
+   }
+  ]
+ },
+ {
+  "id": 1061770,
+  "m": [
+   {
+    "vi": "duyên dáng, quyến rũ (charming)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "パリの街角でシャルマンな笑顔の店員さんに接客してもらった。",
+    "vi": "Ở một góc phố Paris, tôi được nhân viên có nụ cười duyên dáng phục vụ.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1061830,
+  "m": [
+   {
+    "vi": "xinh đẹp, bảnh bao"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "あの女優は昔から変わらずとてもシャンとしているね。",
+    "vi": "Nữ diễn viên ấy từ xưa đến nay vẫn luôn giữ được vẻ xinh đẹp rạng rỡ.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1061890,
+  "m": [
+   {
+    "vi": "kem đánh bông ngọt (Chantilly), ren Chantilly"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ケーキの上に甘さ控えめのシャンティーをたっぷり絞った。",
+    "vi": "Tôi bắt thật nhiều lớp kem tươi đánh bông ít ngọt lên mặt bánh.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1061900,
+  "m": [
+   {
+    "vi": "đèn chùm"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ガラス製のシャンデリアがテーブルの真上に下がっていた。",
+    "vi": "Một chiếc đèn chùm pha lê treo ngay phía trên bàn.",
+    "src": "tatoeba",
+    "sid": 226185
+   },
+   {
+    "ja": "天井から美しいシャンデリアが下がっていた。",
+    "vi": "Từ trần nhà treo xuống một chiếc đèn chùm tuyệt đẹp.",
+    "src": "tatoeba",
+    "sid": 125217
+   }
+  ]
+ },
+ {
+  "id": 1061910,
+  "m": [
+   {
+    "vi": "rượu sâm panh"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "シャンパンがグラスの中で泡立った。",
+    "vi": "Rượu sâm panh sủi bọt trong ly.",
+    "src": "tatoeba",
+    "sid": 215740
+   },
+   {
+    "ja": "夜どおしシャンペンが酌み交わされた。",
+    "vi": "Rượu sâm panh được rót suốt cả đêm.",
+    "src": "tatoeba",
+    "sid": 79754
+   }
+  ]
+ },
+ {
+  "id": 1061930,
+  "m": [
+   {
+    "vi": "dầu gội đầu, việc gội đầu"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "このシャンプーを買うと、素敵なヘアブラシがついてきます。",
+    "vi": "Mua dầu gội này được tặng kèm một chiếc lược chải tóc rất đẹp.",
+    "src": "tatoeba",
+    "sid": 223686
+   },
+   {
+    "ja": "シャンプーとセットをお願いします。",
+    "vi": "Cho tôi gội đầu và tạo kiểu nhé.",
+    "src": "tatoeba",
+    "sid": 215737
+   }
+  ]
+ },
+ {
+  "id": 1061950,
+  "m": [
+   {
+    "vi": "bánh su kem"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "シュークリームを１ダース下さい。",
+    "vi": "Cho tôi 1 tá bánh su kem.",
+    "src": "tatoeba",
+    "sid": 215729
+   }
+  ]
+ },
+ {
+  "id": 1061970,
+  "m": [
+   {
+    "vi": "giày"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ラケット１本とテニスシューズを送ってください。",
+    "vi": "Hãy gửi cho tôi một cây vợt và đôi giày tennis.",
+    "src": "tatoeba",
+    "sid": 192639
+   },
+   {
+    "ja": "私はこちらのシューズを選びました。",
+    "vi": "Tôi đã chọn đôi giày này.",
+    "src": "tatoeba",
+    "sid": 161038
+   }
+  ]
+ },
+ {
+  "id": 1061990,
+  "m": [
+   {
+    "vi": "cú sút, cú ném rổ (thể thao)"
+   },
+   {
+    "vi": "cú ném bóng xoáy vào trong (bóng chày)"
+   },
+   {
+    "vi": "chồi non, mầm cây"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "僕達はマックがすばらしいシュートを決めるのを見た。",
+    "vi": "Chúng tôi đã chứng kiến Mac thực hiện một cú sút tuyệt vời.",
+    "src": "tatoeba",
+    "sid": 81692
+   },
+   {
+    "ja": "なんてうまいシュートだろう。",
+    "vi": "Cú sút hay quá!",
+    "src": "tatoeba",
+    "sid": 198945
+   }
+  ]
+ },
+ {
+  "id": 1062000,
+  "m": [
+   {
+    "vi": "nhạc sĩ Schubert"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "音楽の授業でシューベルトが作曲した有名な歌曲を聴いた。",
+    "vi": "Trong giờ âm nhạc, chúng tôi đã nghe ca khúc nổi tiếng do Schubert sáng tác.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1062010,
+  "m": [
+   {
+    "vi": "siêu thực, kỳ quặc khó hiểu (surreal)"
+   },
+   {
+    "vi": "chủ nghĩa siêu thực"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼の描くイラストはどこかシュールで独特の魅力がある。",
+    "vi": "Tranh minh họa anh ấy vẽ mang nét gì đó siêu thực và sức hút rất riêng.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1062020,
+  "m": [
+   {
+    "vi": "chủ nghĩa siêu thực (surrealism)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ダリの作品はシュルレアリスムを代表する絵画として知られている。",
+    "vi": "Các tác phẩm của Dalí nổi tiếng là đại diện tiêu biểu cho hội họa siêu thực.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1062040,
+  "m": [
+   {
+    "vi": "đường (gia vị)"
+   },
+   {
+    "vi": "bệnh tâm thần phân liệt (tiếng Đức)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "コーヒーにスティックシュガーを一本入れて甘くした。",
+    "vi": "Tôi cho một gói đường que vào cà phê cho ngọt.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1062110,
+  "m": [
+   {
+    "vi": "rượu mạnh (schnapps)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ドイツのレストランで食後に強いシュナップスを少し飲んだ。",
+    "vi": "Ở nhà hàng Đức, tôi đã uống một chút rượu mạnh schnapps sau bữa ăn.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1062140,
+  "m": [
+   {
+    "vi": "đồng thanh hô vang khẩu hiệu (biểu tình)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "デモ行進の参加者たちが要求を訴えてシュプレヒコールを上げた。",
+    "vi": "Những người tham gia tuần hành đồng thanh hô vang khẩu hiệu để nêu lên yêu sách.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1062170,
+  "m": [
+   {
+    "vi": "kính viễn vọng Schmidt (thiên văn)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "天文台では広い視野を撮影できるシュミットカメラが使われている。",
+    "vi": "Tại đài thiên văn, người ta sử dụng kính viễn vọng Schmidt có thể chụp vùng trời rộng.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1062230,
+  "m": [
+   {
+    "vi": "máy hủy tài liệu (shredder)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "個人情報が含まれた書類は必ずシュレッダーにかけて処分する。",
+    "vi": "Những tài liệu chứa thông tin cá nhân nhất định phải cho vào máy hủy giấy trước khi bỏ.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1062250,
+  "m": [
+   {
+    "vi": "tủ kính trưng bày mặt tiền cửa hàng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼女はショーウインドウをちょっとのぞいてみた。",
+    "vi": "Cô ấy ghé mắt nhìn qua tủ kính trưng bày.",
+    "src": "tatoeba",
+    "sid": 92787
+   },
+   {
+    "ja": "彼女はショーウインドーを見るのをやめた。",
+    "vi": "Cô ấy thôi không ngắm tủ kính trưng bày nữa.",
+    "src": "tatoeba",
+    "sid": 92789
+   }
+  ]
+ },
+ {
+  "id": 1062270,
+  "m": [
+   {
+    "vi": "tủ kính trưng bày (showcase)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ケーキ屋さんのショーケースに色とりどりのタルトが並んでいた。",
+    "vi": "Trong tủ kính trưng bày của tiệm bánh ngọt xếp đầy các loại bánh tart đủ màu sắc.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1062290,
+  "m": [
+   {
+    "vi": "quần đùi"
+   },
+   {
+    "vi": "quần lót nữ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "夏に向けて涼しい綿素材のショーツを何枚か買い足した。",
+    "vi": "Chuẩn bị cho mùa hè, tôi đã mua thêm vài chiếc quần lót chất liệu cotton thoáng mát.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1062300,
+  "m": [
+   {
+    "vi": "ngắn"
+   },
+   {
+    "vi": "vị trí chặn ngắn (bóng chày)"
+   },
+   {
+    "vi": "đoản mạch, chập điện"
+   },
+   {
+    "vi": "tóc ngắn"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "怪我をしたためにショートの選手は出場できなくなった。",
+    "vi": "Vì bị chấn thương nên cầu thủ chặn ngắn không thể ra sân thi đấu.",
+    "src": "tatoeba",
+    "sid": 185161
+   }
+  ]
+ },
+ {
+  "id": 1062330,
+  "m": [
+   {
+    "vi": "lối tắt, đường tắt"
+   },
+   {
+    "vi": "phím tắt (bàn phím)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "パソコンのショートカットキーを覚えると作業がとても速くなる。",
+    "vi": "Nếu nhớ các phím tắt trên máy tính thì tốc độ làm việc sẽ nhanh hơn nhiều.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1062400,
+  "m": [
+   {
+    "vi": "dịch vụ lưu trú ngắn ngày (chăm sóc người già, người bệnh)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "介護の負担を軽くするため施設でショートステイを利用した。",
+    "vi": "Để giảm bớt gánh nặng chăm sóc, gia đình đã sử dụng dịch vụ lưu trú ngắn ngày tại cơ sở dưỡng lão.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1062460,
+  "m": [
+   {
+    "vi": "quần soóc, quần đùi"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "暑い夏の日は動きやすいデニムのショートパンツで過ごすことが多い。",
+    "vi": "Vào những ngày hè nóng bức, tôi thường mặc quần soóc bò cho thoải mái vận động.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1062580,
+  "m": [
+   {
+    "vi": "khăn choàng vai (shawl)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "夜になって冷え込んできたので肩に厚手のショールを羽織った。",
+    "vi": "Đêm xuống trời trở lạnh nên tôi choàng thêm chiếc khăn dày lên vai.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1062590,
+  "m": [
+   {
+    "vi": "phòng trưng bày sản phẩm (showroom)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "我が社のショールームは若い女性に大人気だった。",
+    "vi": "Phòng trưng bày của công ty chúng tôi rất được các cô gái trẻ yêu thích.",
+    "src": "tatoeba",
+    "sid": 186413
+   }
+  ]
+ },
+ {
+  "id": 1062650,
+  "m": [
+   {
+    "vi": "gây sốc, kinh hoàng (shocking)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "新聞の一面にショッキングな事件のニュースが大きく載っていた。",
+    "vi": "Trên trang nhất tờ báo đăng tin lớn về một vụ án gây chấn động.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1062690,
+  "m": [
+   {
+    "vi": "cảnh quay (shot)"
+   },
+   {
+    "vi": "cú đánh bóng (golf, quần vợt)"
+   },
+   {
+    "vi": "cú ném rổ"
+   },
+   {
+    "vi": "phát súng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ショットはとても速いものもある。",
+    "vi": "Có những cú phát bóng tốc độ rất nhanh.",
+    "src": "tatoeba",
+    "sid": 215557
+   },
+   {
+    "ja": "こんなすごいショットは今まで見た事がないよ。",
+    "vi": "Tôi chưa từng thấy cú đánh nào tuyệt vời như thế bao giờ.",
+    "src": "tatoeba",
+    "sid": 217469
+   }
+  ]
+ },
+ {
+  "id": 1062760,
+  "m": [
+   {
+    "vi": "việc mua sắm"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "地下はショッピング街です。",
+    "vi": "Dưới tầng hầm là khu phố mua sắm.",
+    "src": "tatoeba",
+    "sid": 127022
+   },
+   {
+    "ja": "彼らはショッピングに出かけている。",
+    "vi": "Họ đang đi mua sắm rồi.",
+    "src": "tatoeba",
+    "sid": 98039
+   }
+  ]
+ },
+ {
+  "id": 1062770,
+  "m": [
+   {
+    "vi": "xe đẩy mua hàng (siêu thị)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "まとめ買いをするためにスーパーの入り口でショッピングカートを取った。",
+    "vi": "Để mua nhiều đồ một lúc, tôi lấy chiếc xe đẩy ở cửa siêu thị.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1062810,
+  "m": [
+   {
+    "vi": "trung tâm mua sắm"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "一番近いショッピングモールはどこにありますか。",
+    "vi": "Trung tâm mua sắm gần nhất ở đâu vậy ạ?",
+    "src": "tatoeba",
+    "sid": 190114
+   },
+   {
+    "ja": "この近くにショッピングモールがありますか？",
+    "vi": "Gần đây có trung tâm mua sắm nào không?",
+    "src": "tatoeba",
+    "sid": 222307
+   }
+  ]
+ },
+ {
+  "id": 1062830,
+  "m": [
+   {
+    "vi": "nhà soạn nhạc Chopin"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ショパンはピアノに向かってすわり、ひき始める。",
+    "vi": "Chopin ngồi vào đàn piano và bắt đầu chơi.",
+    "src": "tatoeba",
+    "sid": 215541
+   },
+   {
+    "ja": "私はショパンを弾くことができる。",
+    "vi": "Tôi có thể chơi nhạc của Chopin.",
+    "src": "tatoeba",
+    "sid": 160596
+   }
+  ]
+ },
+ {
+  "id": 1062870,
+  "m": [
+   {
+    "vi": "túi đeo vai"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "革のショルダーバッグを探しているのですが。",
+    "vi": "Tôi đang tìm mua một chiếc túi đeo vai bằng da.",
+    "src": "tatoeba",
+    "sid": 85876
+   }
+  ]
+ },
+ {
+  "id": 1062920,
+  "m": [
+   {
+    "vi": "Syria"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "歴史博物館で古代シリアの貴重な遺跡の出土品を見学した。",
+    "vi": "Tại bảo tàng lịch sử, tôi đã tham quan các hiện vật khai quật từ di tích cổ đại ở Syria.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1062930,
+  "m": [
+   {
+    "vi": "nghiêm túc, nghiêm trọng (serious)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼は普段は陽気だが、シリアスな場面では真剣な表情を見せる。",
+    "vi": "Bình thường anh ấy vui vẻ nhưng vào lúc nghiêm túc lại tỏ ra rất đăm chiêu.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1062960,
+  "m": [
+   {
+    "vi": "nối tiếp, theo chuỗi (serial)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "通信規格のシリアルポートを使って機器同士を接続した。",
+    "vi": "Tôi đã kết nối các thiết bị với nhau thông qua cổng nối tiếp.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1063000,
+  "m": [
+   {
+    "vi": "sao Thiên Lang (Sirius)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "あの青白く光っている星がシリウスです。",
+    "vi": "Ngôi sao sáng màu xanh trắng kia chính là sao Thiên Lang.",
+    "src": "tatoeba",
+    "sid": 230671
+   }
+  ]
+ },
+ {
+  "id": 1063030,
+  "m": [
+   {
+    "vi": "nhựa tổng hợp silicone"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "耐熱性の高いシリコーン製の調理器具は洗いやすくて便利だ。",
+    "vi": "Dụng cụ nấu ăn bằng silicone chịu nhiệt cao vừa dễ rửa lại tiện lợi.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1063040,
+  "m": [
+   {
+    "vi": "silic (Si)"
+   },
+   {
+    "vi": "nhựa tổng hợp silicone"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "半導体チップの主な原料には高純度のシリコンが使われている。",
+    "vi": "Silic độ tinh khiết cao được dùng làm nguyên liệu chính cho chip bán dẫn.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1063090,
+  "m": [
+   {
+    "vi": "ống tiêm (syringe)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "看護師が注射の準備をするために清潔なシリンジを取り出した。",
+    "vi": "Y tá lấy ra một ống tiêm sạch để chuẩn bị tiêm.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1063100,
+  "m": [
+   {
+    "vi": "xi-lanh (động cơ), hình trụ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "自動車のエンジン内部でシリンダーが高速で動いている。",
+    "vi": "Bên trong động cơ ô tô, các xi-lanh đang chuyển động với tốc độ cao.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1063120,
+  "m": [
+   {
+    "vi": "máy tạo hình bóng (silhouetter)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "スタジオで人物の輪郭を美しく撮るためのシルエッターを使った。",
+    "vi": "Trong phòng chụp, họ dùng thiết bị tạo bóng để ghi lại đường nét nhân vật thật đẹp.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1063130,
+  "m": [
+   {
+    "vi": "hình bóng, đường nét dáng người (silhouette)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "この服のシルエットが気に入ってるの。",
+    "vi": "Tôi thích phom dáng của bộ trang phục này.",
+    "src": "tatoeba",
+    "sid": 219958
+   }
+  ]
+ },
+ {
+  "id": 1063150,
+  "m": [
+   {
+    "vi": "lụa, tơ tằm"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "これはシルクの感触だ。",
+    "vi": "Cái này sờ vào có cảm giác như lụa vậy.",
+    "src": "tatoeba",
+    "sid": 218606
+   },
+   {
+    "ja": "彼女はシルクのドレスを着ていた。",
+    "vi": "Cô ấy mặc một chiếc váy bằng lụa.",
+    "src": "tatoeba",
+    "sid": 92768
+   }
+  ]
+ },
+ {
+  "id": 1063180,
+  "m": [
+   {
+    "vi": "Con đường Tơ lụa"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ガラス製品はペルシャからシルクロードを通ってきました。",
+    "vi": "Đồ thủy tinh đã từ Ba Tư truyền qua Con đường Tơ lụa.",
+    "src": "tatoeba",
+    "sid": 226183
+   },
+   {
+    "ja": "私はシルクロードを訪れたい気が大きいにある。",
+    "vi": "Tôi rất muốn đến thăm Con đường Tơ lụa.",
+    "src": "tatoeba",
+    "sid": 160580
+   }
+  ]
+ },
+ {
+  "id": 1063200,
+  "m": [
+   {
+    "vi": "màu bạc, kim loại bạc"
+   },
+   {
+    "vi": "người cao tuổi"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "バスや電車にはお年寄りのためのシルバーシートが設けられている。",
+    "vi": "Trên xe buýt và tàu điện đều bố trí ghế ưu tiên dành cho người cao tuổi.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1063350,
+  "m": [
+   {
+    "vi": "xi-rô"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "咳止めシロップ。本番前に一口飲まないと落ち着かない！",
+    "vi": "Siro trị ho đây. Trước khi lên sân khấu không uống một ngụm là tôi không yên tâm được!",
+    "src": "tatoeba",
+    "sid": 76273
+   }
+  ]
+ },
+ {
+  "id": 1063370,
+  "m": [
+   {
+    "vi": "mỏng, gầy (thin)"
+   },
+   {
+    "vi": "cẳng chân (shin)"
+   },
+   {
+    "vi": "đồng- (tiền tố syn-)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "薄くて軽いシンタイプのノートパソコンを持ち歩いている。",
+    "vi": "Tôi mang theo bên mình chiếc laptop dòng mỏng nhẹ.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1063380,
+  "m": [
+   {
+    "vi": "chì câu cá, quả bóng ném chúc xuống (bóng chày)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "投手が決め球のシンカーを投げて打者から三振を奪った。",
+    "vi": "Tay ném tung cú bóng chìm quyết định để loại tay đánh bóng.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1063390,
+  "m": [
+   {
+    "vi": "ca sĩ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "あの女の子は信頼できるカントリーシンガーだ。",
+    "vi": "Cô gái kia là một ca sĩ nhạc đồng quê thực thụ.",
+    "src": "tatoeba",
+    "sid": 230887
+   }
+  ]
+ },
+ {
+  "id": 1063400,
+  "m": [
+   {
+    "vi": "ca sĩ kiêm nhạc sĩ sáng tác"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼女は自分で作詞作曲を手掛ける人気のシンガーソングライターだ。",
+    "vi": "Cô ấy là ca sĩ kiêm nhạc sĩ nổi tiếng tự viết lời và sáng tác nhạc.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1063410,
+  "m": [
+   {
+    "vi": "Singapore"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "シンガポールでは通りにゴミを散らかすと罰金を課せられる。",
+    "vi": "Ở Singapore, nếu xả rác bừa bãi ra đường sẽ bị phạt tiền.",
+    "src": "tatoeba",
+    "sid": 215177
+   },
+   {
+    "ja": "シンガポールからやって来ました。",
+    "vi": "Tôi đến từ Singapore.",
+    "src": "tatoeba",
+    "sid": 215183
+   }
+  ]
+ },
+ {
+  "id": 1063430,
+  "m": [
+   {
+    "vi": "bồn rửa bát, chậu rửa (sink)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "料理が終わったらすぐにキッチンのシンクをきれいに掃除する。",
+    "vi": "Nấu ăn xong là tôi lau dọn sạch sẽ bồn rửa bát ngay.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1063450,
+  "m": [
+   {
+    "vi": "viện nghiên cứu chính sách, nhóm chuyên gia tư vấn (think tank)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "民間のシンクタンクが来年の経済成長率の予測を発表した。",
+    "vi": "Một viện nghiên cứu chính sách tư nhân đã công bố dự báo tốc độ tăng trưởng kinh tế năm tới.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1063470,
+  "m": [
+   {
+    "vi": "sự đồng bộ (synchronization)"
+   },
+   {
+    "vi": "bơi nghệ thuật"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "シンジのシンクロ率は申し分なかった。",
+    "vi": "Tỷ lệ đồng bộ của Shinji không có điểm nào chê được.",
+    "src": "tatoeba",
+    "sid": 215165
+   }
+  ]
+ },
+ {
+  "id": 1063490,
+  "m": [
+   {
+    "vi": "đồng bộ hóa (synchronize)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "パソコンとスマートフォンのデータをクラウドでシンクロナイズした。",
+    "vi": "Tôi đã đồng bộ hóa dữ liệu giữa máy tính và điện thoại qua đám mây.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1063530,
+  "m": [
+   {
+    "vi": "đơn thân, độc thân"
+   },
+   {
+    "vi": "giường đơn, phòng đơn"
+   },
+   {
+    "vi": "áo vest một hàng khuy"
+   },
+   {
+    "vi": "tay áo măng sét đơn"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "１泊５０ドルのシングルのお部屋がございます。",
+    "vi": "Chúng tôi có phòng đơn giá 50 đô la một đêm.",
+    "src": "tatoeba",
+    "sid": 235665
+   },
+   {
+    "ja": "６月３日にシングルの部屋を予約したいのですが。",
+    "vi": "Tôi muốn đặt một phòng đơn vào ngày mùng 3 tháng 6.",
+    "src": "tatoeba",
+    "sid": 235074
+   }
+  ]
+ },
+ {
+  "id": 1063550,
+  "m": [
+   {
+    "vi": "nội dung đánh đơn (quần vợt, cầu lông)"
+   },
+   {
+    "vi": "người độc thân"
+   },
+   {
+    "vi": "album tuyển tập đĩa đơn"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "テニスの大会で男子シングルスの決勝戦が行われた。",
+    "vi": "Trận chung kết nội dung đơn nam của giải quần vợt đã diễn ra.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1063630,
+  "m": [
+   {
+    "vi": "tổ hợp doanh nghiệp, nghiệp đoàn (syndicate)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "複数の銀行がシンジケートを組んで大企業に融資を行った。",
+    "vi": "Nhiều ngân hàng đã lập tổ hợp để cùng cho tập đoàn lớn vay vốn.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1063660,
+  "m": [
+   {
+    "vi": "đàn tổng hợp âm thanh điện tử (synthesizer)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "バンドのライブで迫力あるシンセサイザーの音色が会場に響いた。",
+    "vi": "Tại buổi biểu diễn của ban nhạc, âm thanh đàn synthesizer đầy uy lực vang vọng khắp khán phòng.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1063750,
+  "m": [
+   {
+    "vi": "hội chứng (syndrome)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "パソコン作業のしすぎで新たな現代病のシンドロームが増えている。",
+    "vi": "Do làm việc máy tính quá nhiều nên các hội chứng bệnh hiện đại mới đang gia tăng.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1063760,
+  "m": [
+   {
+    "vi": "dung môi pha sơn (thinner)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "油性ペンキの汚れを落とすためにシンナーを使って拭いた。",
+    "vi": "Tôi đã dùng dung môi pha sơn để lau sạch vết bẩn của sơn dầu.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1063780,
+  "m": [
+   {
+    "vi": "người đồng tình, người ủng hộ (sympathizer)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "その政治運動には多くの熱心なシンパが影で支援していた。",
+    "vi": "Phong trào chính trị đó được nhiều người ủng hộ nhiệt thành âm thầm giúp sức.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1063820,
+  "m": [
+   {
+    "vi": "bản giao hưởng (symphony)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼のすぐれたシンフォニーが演奏された。",
+    "vi": "Bản giao hưởng xuất sắc của ông ấy đã được trình diễn.",
+    "src": "tatoeba",
+    "sid": 118307
+   }
+  ]
+ },
+ {
+  "id": 1063870,
+  "m": [
+   {
+    "vi": "đơn giản, giản dị"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "私は彼女のドレスのシンプルなところが好きだ。",
+    "vi": "Tôi thích nét đơn giản tinh tế ở chiếc váy của cô ấy.",
+    "src": "tatoeba",
+    "sid": 76081
+   }
+  ]
+ },
+ {
+  "id": 1063890,
+  "m": [
+   {
+    "vi": "nhà tượng trưng chủ nghĩa (symbolist)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "十九世紀末のフランス文学では多くのシンボリストが活躍した。",
+    "vi": "Trong văn học Pháp cuối thế kỷ 19 có nhiều nhà thơ theo chủ nghĩa tượng trưng hoạt động nổi bật.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1063910,
+  "m": [
+   {
+    "vi": "mang tính biểu tượng (symbolic)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "その建物は街の復興を示すシンボリックな存在となっている。",
+    "vi": "Tòa nhà đó đã trở thành một công trình mang tính biểu tượng cho sự phục hồi của thành phố.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1063940,
+  "m": [
+   {
+    "vi": "biểu tượng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ハトは平和のシンボルである。",
+    "vi": "Chim bồ câu là biểu tượng của hòa bình.",
+    "src": "tatoeba",
+    "sid": 197942
+   },
+   {
+    "ja": "このシンボルは強さと高潔さを表す。",
+    "vi": "Biểu tượng này tượng trưng cho sức mạnh và sự chính trực.",
+    "src": "tatoeba",
+    "sid": 223676
+   }
+  ]
+ },
+ {
+  "id": 1063970,
+  "m": [
+   {
+    "vi": "hội nghị chuyên đề (viết tắt symposium)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "来週の土曜日に大学で環境問題に関するシンポが開かれる。",
+    "vi": "Thứ Bảy tuần tới sẽ diễn ra hội thảo chuyên đề về vấn đề môi trường tại trường đại học.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1063980,
+  "m": [
+   {
+    "vi": "hội nghị chuyên đề, hội thảo (symposium)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "医療の未来をテーマにした国際シンポジウムに参加した。",
+    "vi": "Tôi đã tham dự hội thảo chuyên đề quốc tế về tương lai của ngành y tế.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1064070,
+  "m": [
+   {
+    "vi": "xe Jeep"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼は新しいメルセデスを買うのに彼のジープを出した。",
+    "vi": "Anh ấy đã đổi chiếc xe Jeep cũ để lấy chiếc Mercedes mới.",
+    "src": "tatoeba",
+    "sid": 103829
+   }
+  ]
+ },
+ {
+  "id": 1064100,
+  "m": [
+   {
+    "vi": "gen di truyền (gene)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "生物学の研究で病気に関わる特定のジーンが発見された。",
+    "vi": "Trong nghiên cứu sinh học, các nhà khoa học đã phát hiện ra một gen cụ thể liên quan đến bệnh tật.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1064170,
+  "m": [
+   {
+    "vi": "cử chỉ, điệu bộ"
+   },
+   {
+    "vi": "trò chơi đoán chữ qua điệu bộ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ジェスチャーは彼らに使われていない。",
+    "vi": "Họ không sử dụng cử chỉ điệu bộ.",
+    "src": "tatoeba",
+    "sid": 216401
+   },
+   {
+    "ja": "彼女はジェスチャーを交えて話した。",
+    "vi": "Cô ấy vừa nói vừa kết hợp cử chỉ điệu bộ.",
+    "src": "tatoeba",
+    "sid": 88483
+   }
+  ]
+ },
+ {
+  "id": 1064180,
+  "m": [
+   {
+    "vi": "động cơ phản lực, máy bay phản lực"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "私たちはジェット機が空を横切って飛ぶのを見た。",
+    "vi": "Chúng tôi nhìn thấy một chiếc máy bay phản lực bay ngang qua bầu trời.",
+    "src": "tatoeba",
+    "sid": 166505
+   }
+  ]
+ },
+ {
+  "id": 1064200,
+  "m": [
+   {
+    "vi": "tàu lượn siêu tốc (roller coaster)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "遊園地へ行くと必ず一番スリルのあるジェットコースターに乗る。",
+    "vi": "Hễ đến công viên giải trí là tôi nhất định phải chơi tàu lượn siêu tốc cảm giác mạnh nhất.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1064360,
+  "m": [
+   {
+    "vi": "thế hệ (generation)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "世代が違えば価値観やジェネレーションギャップが生まれるのは自然だ。",
+    "vi": "Khác thế hệ thì việc nảy sinh khác biệt về quan điểm sống là điều tự nhiên.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1064410,
+  "m": [
+   {
+    "vi": "tội ác diệt chủng (genocide)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "国際社会は二度とジェノサイドを繰り返さないよう努力している。",
+    "vi": "Cộng đồng quốc tế đang nỗ lực để thảm kịch diệt chủng không bao giờ lặp lại.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1064440,
+  "m": [
+   {
+    "vi": "sự ghen tuông, lòng đố kỵ (jealousy)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "友人の成功を素直に喜べず、少しジェラシーを感じてしまった。",
+    "vi": "Tôi không thể vui mừng trọn vẹn trước thành công của bạn mà thoáng thấy chút ghen tị.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1064450,
+  "m": [
+   {
+    "vi": "chế độ lão trị (người già nắm quyền)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "高齢化が進む中で政治のジェロントクラシー化が議論されている。",
+    "vi": "Trong bối cảnh già hóa dân số, xu hướng người cao tuổi nắm quyền chính trị đang được bàn luận.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1064480,
+  "m": [
+   {
+    "vi": "giới tính (về mặt xã hội, gender)"
+   },
+   {
+    "vi": "giống (ngữ pháp)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "職場におけるジェンダー平等の実現に向けた取り組みが進んでいる。",
+    "vi": "Các nỗ lực hướng tới thực hiện bình đẳng giới tại nơi làm việc đang được đẩy mạnh.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1064600,
+  "m": [
+   {
+    "vi": "hình zíc-zắc"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "道は急斜面をジグザグにのぼっていた。",
+    "vi": "Con đường uốn lượn chữ chi đi lên con dốc đứng.",
+    "src": "tatoeba",
+    "sid": 75838
+   }
+  ]
+ },
+ {
+  "id": 1064620,
+  "m": [
+   {
+    "vi": "trò chơi xếp hình (jigsaw puzzle)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "休日に家族みんなで千ピースのジグソーパズルを完成させた。",
+    "vi": "Vào ngày nghỉ, cả gia đình tôi đã cùng nhau ghép hoàn chỉnh bức tranh xếp hình nghìn mảnh.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1064650,
+  "m": [
+   {
+    "vi": "Tiêu chuẩn Công nghiệp Nhật Bản (JIS)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "この工業製品は厳しいJIS規格の安全基準を満たしている。",
+    "vi": "Sản phẩm công nghiệp này đáp ứng đầy đủ các tiêu chuẩn an toàn nghiêm ngặt của JIS.",
+    "src": "ai"
+   }
+  ]
+ }
+]

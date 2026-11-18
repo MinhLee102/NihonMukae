@@ -12,7 +12,8 @@ import { getApiErrorMessage } from "@/lib/api/flashcard";
 
 const POPUP_WIDTH = 320;
 
-type Selected = { area: "title" | "content"; index: number; top: number; left: number };
+// from..to: tokens covered by the word the popup found (the clicked token until the lookup answers)
+type Selected = { area: "title" | "content"; index: number; from: number; to: number; top: number; left: number };
 
 function Reader() {
   const { id } = useParams<{ id: string }>();
@@ -47,19 +48,19 @@ function Reader() {
     const box = container.getBoundingClientRect();
     const rect = el.getBoundingClientRect();
     const left = Math.min(Math.max(rect.left - box.left, 0), Math.max(box.width - POPUP_WIDTH, 0));
-    setSelected({ area, index, top: rect.bottom - box.top + 8, left });
+    setSelected({ area, index, from: index, to: index, top: rect.bottom - box.top + 8, left });
   };
 
   const tokens = item?.tokens ?? [];
   const titleTokens = item?.titleTokens ?? [];
-  const selectedToken = selected ? (selected.area === "title" ? titleTokens : tokens)[selected.index] : undefined;
+  const selectedList = selected ? (selected.area === "title" ? titleTokens : tokens) : [];
   // A title taken automatically from the first line would repeat the text right below it
   const firstLine = item?.content?.split("\n")[0].trim() ?? "";
   const showTitle = !!item && item.title !== firstLine && !(item.title.endsWith("…") && firstLine.startsWith(item.title.slice(0, -1)));
 
   const renderTokens = (area: "title" | "content", list: ShelfToken[]) =>
     list.map((token: ShelfToken, i) => {
-      const isSelected = selected?.area === area && selected.index === i;
+      const isSelected = selected?.area === area && i >= selected.from && i <= selected.to;
       const content = token.parts.map((part, j) =>
         part.ruby ? (
           // rt is absolutely positioned so hidden furigana does not widen the word
@@ -73,7 +74,16 @@ function Reader() {
           <span key={j}>{part.text}</span>
         )
       );
-      if (!token.lookup) return <span key={i}>{content}</span>;
+      if (!token.lookup) {
+        // Particles inside a found word (食べ[て]いる) belong to the highlighted range too
+        return isSelected ? (
+          <span key={i} className="rounded bg-sky-200">
+            {content}
+          </span>
+        ) : (
+          <span key={i}>{content}</span>
+        );
+      }
       return (
         <span
           key={i}
@@ -132,11 +142,16 @@ function Reader() {
             {renderTokens("content", tokens)}
           </p>
 
-          {selected && selectedToken && (
+          {selected && selectedList[selected.index] && (
             <>
               <div className="fixed inset-0 z-10" onClick={() => setSelected(null)} />
               <div className="absolute z-20" style={{ top: selected.top, left: selected.left }}>
-                <WordPopup token={selectedToken} onClose={() => setSelected(null)} />
+                <WordPopup
+                  tokens={selectedList}
+                  index={selected.index}
+                  onResolved={(from, to) => setSelected((cur) => (cur ? { ...cur, from, to } : cur))}
+                  onClose={() => setSelected(null)}
+                />
               </div>
             </>
           )}

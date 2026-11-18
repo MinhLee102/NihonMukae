@@ -1,0 +1,4019 @@
+[
+ {
+  "id": 1079730,
+  "m": [
+   {
+    "vi": "đồng hồ đo điện vạn năng (tester)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "電池の電圧を測るためにテスターを使った。",
+    "vi": "Tôi đã dùng đồng hồ đo điện vạn năng để đo điện áp của pin."
+   }
+  ]
+ },
+ {
+  "id": 1079780,
+  "m": [
+   {
+    "vi": "trường hợp kiểm thử (test case)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ソフトウェアの不具合を防ぐため多くのテストケースを作成した。",
+    "vi": "Để ngăn ngừa lỗi phần mềm, chúng tôi đã tạo ra rất nhiều trường hợp kiểm thử."
+   }
+  ]
+ },
+ {
+  "id": 1079870,
+  "m": [
+   {
+    "vi": "tấm ván ép xốp cách âm (wallboard)"
+   },
+   {
+    "vi": "vải, chất liệu (tex)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "防音効果を高めるために部屋の壁にテックスを貼った。",
+    "vi": "Để tăng hiệu quả cách âm, tôi đã ốp tấm ván ép tiêu âm lên tường phòng."
+   }
+  ]
+ },
+ {
+  "id": 1079900,
+  "m": [
+   {
+    "vi": "tetrachloroethylene (dung môi giặt khô)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "クリーニング工場ではテトラクロロエチレンの管理が厳しく行われている。",
+    "vi": "Tại xưởng giặt khô, việc quản lý dung môi tetrachloroethylene được thực hiện rất nghiêm ngặt."
+   }
+  ]
+ },
+ {
+  "id": 1079970,
+  "m": [
+   {
+    "vi": "giọng nam cao (tenor), kèn tenor sax"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ジャズの演奏会で深みのあるテナーサックスの音色に魅了された。",
+    "vi": "Tại buổi hòa nhạc jazz, tôi bị mê hoặc bởi âm thanh trầm ấm của kèn tenor sax."
+   }
+  ]
+ },
+ {
+  "id": 1079990,
+  "m": [
+   {
+    "vi": "người thuê mặt bằng, gian hàng (trong tòa nhà, trung tâm thương mại)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "新しい商業ビルには人気の飲食店がテナントとして入っている。",
+    "vi": "Trong tòa nhà thương mại mới có nhiều quán ăn nổi tiếng thuê mặt bằng kinh doanh."
+   }
+  ]
+ },
+ {
+  "id": 1080050,
+  "m": [
+   {
+    "vi": "bang Tennessee (Mỹ)"
+   }
+  ]
+ },
+ {
+  "id": 1080060,
+  "m": [
+   {
+    "vi": "giọng nam cao (tenor)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "オペラで世界的に活躍するテノール歌手の公演を聴きに行った。",
+    "vi": "Tôi đã đi nghe buổi biểu diễn của nam ca sĩ giọng nam cao nổi tiếng thế giới."
+   }
+  ]
+ },
+ {
+  "id": 1080090,
+  "m": [
+   {
+    "vi": "thủ đô Tehran (Iran)"
+   }
+  ],
+  "hv": "đệ hy lan",
+  "ex": [
+   {
+    "ja": "イランの首都テヘランは北部に美しい山脈を望む都市だ。",
+    "vi": "Thủ đô Tehran của Iran là thành phố nhìn ra dãy núi tuyệt đẹp ở phía bắc."
+   }
+  ]
+ },
+ {
+  "id": 1080130,
+  "m": [
+   {
+    "vi": "sân hiên, sân thượng ngoài trời (terrace)"
+   }
+  ]
+ },
+ {
+  "id": 1080180,
+  "m": [
+   {
+    "vi": "món thịt xay nhồi khuôn nướng (terrine)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "フレンチレストランの前菜で彩り豊かな野菜のテリーヌが出た。",
+    "vi": "Món khai vị tại nhà hàng Pháp là món terrine rau củ đầy màu sắc."
+   }
+  ]
+ },
+ {
+  "id": 1080200,
+  "m": [
+   {
+    "vi": "lãnh thổ, địa bàn hoạt động (territory)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ライオンなどの動物は自分のテリトリーを守るために縄張りを作る。",
+    "vi": "Các loài động vật như sư tử thường đánh dấu lãnh thổ để bảo vệ địa bàn của mình."
+   }
+  ]
+ },
+ {
+  "id": 1080210,
+  "m": [
+   {
+    "vi": "thành phố Tel Aviv (Israel)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "地中海に面したテルアビブは活気ある近代的な都市として知られる。",
+    "vi": "Tel Aviv nằm bên bờ Địa Trung Hải nổi tiếng là một thành phố hiện đại và sôi động."
+   }
+  ]
+ },
+ {
+  "id": 1080260,
+  "m": [
+   {
+    "vi": "hội nghị truyền hình từ xa (teleconference)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "海外支社のスタッフとテレカンファレンスで打ち合わせを行った。",
+    "vi": "Tôi đã họp bàn qua hội nghị trực tuyến từ xa với nhân viên chi nhánh nước ngoài."
+   }
+  ]
+ },
+ {
+  "id": 1080290,
+  "m": [
+   {
+    "vi": "dịch vụ hẹn hò qua điện thoại (telekura)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "かつて街角にはテレクラの看板が多く見られた時代があった。",
+    "vi": "Trước đây từng có thời kỳ biển hiệu dịch vụ hẹn hò qua điện thoại xuất hiện khắp các góc phố."
+   }
+  ]
+ },
+ {
+  "id": 1080300,
+  "m": [
+   {
+    "vi": "điện báo (telegraph)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "近代の通信技術はモールス信号を用いたテレグラフから発展した。",
+    "vi": "Công nghệ viễn thông cận đại phát triển từ điện báo sử dụng mã Morse."
+   }
+  ]
+ },
+ {
+  "id": 1080340,
+  "m": [
+   {
+    "vi": "viễn thông (telecommunication)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "急速に発達するテレコム技術が世界中の人々を結びつけている。",
+    "vi": "Công nghệ viễn thông phát triển nhanh chóng đang kết nối mọi người trên khắp thế giới."
+   }
+  ]
+ },
+ {
+  "id": 1080410,
+  "m": [
+   {
+    "vi": "máy quét truyền hình ảnh (telescan)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "映像制作の現場でフィルムを変換するテレスキャンが使われた。",
+    "vi": "Tại trường quay, thiết bị quét truyền hình ảnh đã được sử dụng để chuyển đổi phim."
+   }
+  ]
+ },
+ {
+  "id": 1080520,
+  "m": [
+   {
+    "vi": "trò chơi điện tử (chơi qua tivi)"
+   }
+  ]
+ },
+ {
+  "id": 1080550,
+  "m": [
+   {
+    "vi": "truyền hình (television)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "世界初のテレビジョン放送の実験に関する展示を見学した。",
+    "vi": "Tôi đã tham quan triển lãm về thí nghiệm phát sóng truyền hình đầu tiên trên thế giới."
+   }
+  ]
+ },
+ {
+  "id": 1080610,
+  "m": [
+   {
+    "vi": "đài truyền hình"
+   }
+  ]
+ },
+ {
+  "id": 1080690,
+  "m": [
+   {
+    "vi": "điện thoại (telephone)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "駅の改札を出たところに懐かしいテレホンカードの公衆電話があった。",
+    "vi": "Ngay ngoài cửa soát vé nhà ga có một bốt điện thoại công cộng dùng thẻ điện thoại xưa."
+   }
+  ]
+ },
+ {
+  "id": 1080800,
+  "m": [
+   {
+    "vi": "máy đo từ xa (telemeter)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "火山活動の観測には遠隔でデータを送るテレメーターが役立つ。",
+    "vi": "Máy đo từ xa gửi dữ liệu từ khoảng cách xa rất hữu ích cho việc quan trắc hoạt động núi lửa."
+   }
+  ]
+ },
+ {
+  "id": 1080860,
+  "m": [
+   {
+    "vi": "khủng bố, hành động khủng bố"
+   }
+  ]
+ },
+ {
+  "id": 1080870,
+  "m": [
+   {
+    "vi": "thiết bị chèn chữ lên màn hình tivi"
+   },
+   {
+    "vi": "chữ chạy, phụ đề hiển thị trên màn hình (telop)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ニュース番組の画面下に緊急速報のテロップが流れた。",
+    "vi": "Dòng chữ tin khẩn cấp vừa chạy ngang phía dưới màn hình chương trình thời sự."
+   }
+  ]
+ },
+ {
+  "id": 1080880,
+  "m": [
+   {
+    "vi": "kẻ khủng bố"
+   }
+  ]
+ },
+ {
+  "id": 1080900,
+  "m": [
+   {
+    "vi": "chủ nghĩa khủng bố (terrorism)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "国際社会は協力してあらゆるテロリズムの根絶を目指している。",
+    "vi": "Cộng đồng quốc tế đang hợp tác hướng tới mục tiêu xóa bỏ mọi chủ nghĩa khủng bố."
+   }
+  ]
+ },
+ {
+  "id": 1080940,
+  "m": [
+   {
+    "vi": "số mười (ten)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "トランプのカードからハートのテンを引き当てた。",
+    "vi": "Tôi đã rút trúng quân 10 cơ từ bộ bài tây."
+   }
+  ]
+ },
+ {
+  "id": 1080970,
+  "m": [
+   {
+    "vi": "tinh thần, sự phấn khích, tâm trạng"
+   },
+   {
+    "vi": "độ căng (dây, lực)"
+   },
+   {
+    "vi": "sự căng thẳng tinh thần"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "大好きなバンドのライブが始まって会場のテンションが一気に上がった。",
+    "vi": "Buổi diễn của ban nhạc yêu thích vừa bắt đầu, sự phấn khích của cả khán phòng liền tăng vọt."
+   }
+  ]
+ },
+ {
+  "id": 1081100,
+  "m": [
+   {
+    "vi": "tranh màu keo trứng (tempera)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "美術館でルネサンス期に描かれた美しいテンペラ画を鑑賞した。",
+    "vi": "Tại bảo tàng mỹ thuật, tôi đã thưởng lãm bức tranh màu keo trứng tuyệt đẹp vẽ từ thời Phục Hưng."
+   }
+  ]
+ },
+ {
+  "id": 1081140,
+  "m": [
+   {
+    "vi": "tạm thời, lâm thời (temporary)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "システム障害の間はテンポラリーな対応で業務を継続した。",
+    "vi": "Trong thời gian hệ thống gặp sự cố, chúng tôi duy trì công việc bằng phương án tạm thời."
+   }
+  ]
+ },
+ {
+  "id": 1081170,
+  "m": [
+   {
+    "vi": "trận đấu ban ngày (day game)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "週末の午後は青空の下で野球のデーゲームを観戦した。",
+    "vi": "Chiều cuối tuần, tôi đã đi xem trận đấu bóng chày ban ngày dưới bầu trời xanh."
+   }
+  ]
+ },
+ {
+  "id": 1081290,
+  "m": [
+   {
+    "vi": "ngân hàng dữ liệu (data bank)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "膨大な統計情報を集積したデータバンクが研究に活用されている。",
+    "vi": "Ngân hàng dữ liệu tập hợp lượng thông tin thống kê khổng lồ đang được ứng dụng vào nghiên cứu."
+   }
+  ]
+ },
+ {
+  "id": 1081350,
+  "m": [
+   {
+    "vi": "cơ sở dữ liệu (database)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "顧客の購入履歴を新しいデータベースに整理して登録した。",
+    "vi": "Tôi đã sắp xếp và lưu lịch sử mua hàng của khách vào cơ sở dữ liệu mới."
+   }
+  ]
+ },
+ {
+  "id": 1081470,
+  "m": [
+   {
+    "vi": "ác quỷ (demon)"
+   },
+   {
+    "vi": "tiến trình chạy ngầm (daemon trong Unix)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "サーバーのバックグラウンドで監視用のデーモンが動いている。",
+    "vi": "Tiến trình giám sát đang chạy ngầm ở chế độ nền trên máy chủ."
+   }
+  ]
+ },
+ {
+  "id": 1081510,
+  "m": [
+   {
+    "vi": "hằng ngày (daily)"
+   },
+   {
+    "vi": "thực phẩm tươi sống giao hằng ngày"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "スーパーのデイリーコーナーで新鮮な牛乳とパンを買った。",
+    "vi": "Tôi đã mua sữa tươi và bánh mì ở quầy thực phẩm giao hằng ngày trong siêu thị."
+   }
+  ]
+ },
+ {
+  "id": 1081570,
+  "m": [
+   {
+    "vi": "dầu diesel, động cơ diesel"
+   }
+  ]
+ },
+ {
+  "id": 1081580,
+  "m": [
+   {
+    "vi": "sâu sắc, chuyên sâu, thâm thúy (deep)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼とは夜遅くまで人生についてディープな話を語り合った。",
+    "vi": "Tôi và anh ấy đã trò chuyện sâu sắc về cuộc đời cho đến tận khuya."
+   }
+  ]
+ },
+ {
+  "id": 1081610,
+  "m": [
+   {
+    "vi": "đại lý bán hàng (nhất là ô tô)"
+   },
+   {
+    "vi": "người chia bài (sòng bạc)"
+   },
+   {
+    "vi": "kẻ buôn bán (chứng khoán, ma túy)"
+   },
+   {
+    "vi": "nhà triển lãm"
+   }
+  ]
+ },
+ {
+  "id": 1081620,
+  "m": [
+   {
+    "vi": "từ điển (dictionary)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "英語の論文を読むときは手元に信頼できるディクショナリを置いている。",
+    "vi": "Khi đọc bài báo tiếng Anh, tôi luôn để sẵn bên cạnh một cuốn từ điển đáng tin cậy."
+   }
+  ]
+ },
+ {
+  "id": 1081680,
+  "m": [
+   {
+    "vi": "giảm giá, chiết khấu (discount)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "在庫一掃セールの期間中は全品二十パーセントのディスカウントがある。",
+    "vi": "Trong thời gian xả kho, toàn bộ sản phẩm đều được giảm giá hai mươi phần trăm."
+   }
+  ]
+ },
+ {
+  "id": 1081710,
+  "m": [
+   {
+    "vi": "thảo luận, tranh luận (discussion)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "新しい企画についてチーム全員で活発なディスカッションを行った。",
+    "vi": "Cả nhóm đã có buổi thảo luận sôi nổi về kế hoạch mới."
+   }
+  ]
+ },
+ {
+  "id": 1081720,
+  "m": [
+   {
+    "vi": "khám phá, phát hiện (discover)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "旅先でまだガイドブックに載っていない隠れた名店をディスカバーした。",
+    "vi": "Trong chuyến du lịch, tôi đã khám phá ra một quán ăn ngon ẩn mình chưa có trong sách hướng dẫn."
+   }
+  ]
+ },
+ {
+  "id": 1081740,
+  "m": [
+   {
+    "vi": "cái đĩa, đĩa nhạc"
+   },
+   {
+    "vi": "đĩa lưu trữ (máy tính)"
+   }
+  ]
+ },
+ {
+  "id": 1081760,
+  "m": [
+   {
+    "vi": "người dẫn chương trình phát thanh, DJ (disc jockey)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "深夜ラジオのディスクジョッキーの軽快なトークを聴くのが楽しみだ。",
+    "vi": "Tôi rất thích nghe màn dẫn chuyện hóm hỉnh của phát thanh viên radio đêm khuya."
+   }
+  ]
+ },
+ {
+  "id": 1081820,
+  "m": [
+   {
+    "vi": "sự công khai thông tin (disclosure)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "上場企業には投資家に対する適切なディスクロージャーが求められる。",
+    "vi": "Các doanh nghiệp niêm yết được yêu cầu phải công khai thông tin minh bạch với nhà đầu tư."
+   }
+  ]
+ },
+ {
+  "id": 1081840,
+  "m": [
+   {
+    "vi": "sàn nhảy disco"
+   }
+  ]
+ },
+ {
+  "id": 1081920,
+  "m": [
+   {
+    "vi": "sự méo tiếng, biến dạng âm thanh/hình ảnh (distortion)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "エレキギターにディストーションをかけて力強い音を出した。",
+    "vi": "Tôi bật hiệu ứng méo tiếng cho đàn guitar điện để tạo ra âm thanh mạnh mẽ."
+   }
+  ]
+ },
+ {
+  "id": 1081990,
+  "m": [
+   {
+    "vi": "sự trưng bày, trình diễn"
+   },
+   {
+    "vi": "màn hình máy tính (display)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "百貨店のショーウィンドウの華やかなディスプレイに目を奪われた。",
+    "vi": "Tôi bị cuốn hút bởi cách trưng bày lộng lẫy trên tủ kính của trung tâm thương mại."
+   }
+  ]
+ },
+ {
+  "id": 1082090,
+  "m": [
+   {
+    "vi": "chi tiết, tiểu tiết (detail)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "このプラモデルは本物さながらの細かいディテールまで再現されている。",
+    "vi": "Mô hình lắp ráp này được tái hiện tỉ mỉ đến từng chi tiết nhỏ giống hệt đồ thật."
+   }
+  ]
+ },
+ {
+  "id": 1082120,
+  "m": [
+   {
+    "vi": "bữa tối trang trọng (dinner)"
+   }
+  ]
+ },
+ {
+  "id": 1082260,
+  "m": [
+   {
+    "vi": "hàng phòng ngự, sự phòng thủ (defense)"
+   }
+  ]
+ },
+ {
+  "id": 1082330,
+  "m": [
+   {
+    "vi": "cuộc tranh luận (debate)"
+   }
+  ]
+ },
+ {
+  "id": 1082380,
+  "m": [
+   {
+    "vi": "nhỏ dần âm lượng (thuật ngữ âm nhạc diminuendo)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "楽譜のディミヌエンドの記号に従って音を少しずつ弱くした。",
+    "vi": "Tôi giảm dần âm lượng theo ký hiệu nhỏ dần ghi trên bản nhạc."
+   }
+  ]
+ },
+ {
+  "id": 1082460,
+  "m": [
+   {
+    "vi": "đạo diễn, giám đốc (director)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "番組のディレクターと打ち合わせをして撮影の流れを確認した。",
+    "vi": "Tôi đã họp với đạo diễn chương trình để xác nhận trình tự quay."
+   }
+  ]
+ },
+ {
+  "id": 1082470,
+  "m": [
+   {
+    "vi": "thư mục (directory, folder), danh bạ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ファイルを整理するためにプロジェクトごとのディレクトリを作成した。",
+    "vi": "Để sắp xếp tệp tin, tôi đã tạo thư mục riêng cho từng dự án."
+   }
+  ]
+ },
+ {
+  "id": 1082510,
+  "m": [
+   {
+    "vi": "xuồng nhỏ, thuyền buồm nhỏ một người lái (dinghy)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "学生時代にヨット部で小型のディンギーに乗って練習した。",
+    "vi": "Thời sinh viên, tôi từng lái thuyền buồm nhỏ tập luyện trong câu lạc bộ du thuyền."
+   }
+  ]
+ },
+ {
+  "id": 1082640,
+  "m": [
+   {
+    "vi": "kỹ thuật in chuyển hình (decalcomania)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "紙を二つ折りにして絵の具を写すデカルコマニーの技法を試した。",
+    "vi": "Tôi đã thử kỹ thuật in chuyển màu bằng cách gấp đôi tờ giấy lại."
+   }
+  ]
+ },
+ {
+  "id": 1082750,
+  "m": [
+   {
+    "vi": "bộ giải mã (decoder)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "暗号化されたデジタル信号を元の映像に戻すデコーダを設置した。",
+    "vi": "Tôi đã lắp bộ giải mã để chuyển tín hiệu số mã hóa trở lại thành hình ảnh gốc."
+   }
+  ]
+ },
+ {
+  "id": 1082880,
+  "m": [
+   {
+    "vi": "nhà thiết kế (designer)"
+   }
+  ]
+ },
+ {
+  "id": 1082930,
+  "m": [
+   {
+    "vi": "đê-xi (tiền tố đơn vị 10^-1)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "小学校の算数で一リットルの十分の一を表すデシリットルを習った。",
+    "vi": "Ở môn toán tiểu học, tôi đã học về đơn vị đề-xi-lít bằng một phần mười của một lít."
+   }
+  ]
+ },
+ {
+  "id": 1082980,
+  "m": [
+   {
+    "vi": "đê-xi-ben (dB, đơn vị đo độ ồn)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "図書館の中は四十デシベル以下のとても静かな環境だ。",
+    "vi": "Bên trong thư viện là môi trường rất yên tĩnh với độ ồn dưới bốn mươi đê-xi-ben."
+   }
+  ]
+ },
+ {
+  "id": 1083030,
+  "m": [
+   {
+    "vi": "kỹ thuật số (digital)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "最近では多くの書類が紙からデジタルデータへと移行している。",
+    "vi": "Gần đây nhiều tài liệu đang được chuyển từ bản giấy sang dữ liệu kỹ thuật số."
+   }
+  ]
+ },
+ {
+  "id": 1083120,
+  "m": [
+   {
+    "vi": "bàn làm việc (desk)"
+   },
+   {
+    "vi": "biên tập viên phụ trách kiểm duyệt bài"
+   }
+  ]
+ },
+ {
+  "id": 1083250,
+  "m": [
+   {
+    "vi": "sự hòa dịu căng thẳng (détente)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "1970年代には東西冷戦の中で緊張緩和のデタントが進んだ。",
+    "vi": "Vào thập niên 1970, xu hướng hòa dịu căng thẳng đã tiến triển giữa Chiến tranh Lạnh Đông - Tây."
+   }
+  ]
+ },
+ {
+  "id": 1083270,
+  "m": [
+   {
+    "vi": "boong tàu"
+   },
+   {
+    "vi": "sàn gỗ ngoài trời"
+   },
+   {
+    "vi": "hành lang nối toa tàu"
+   },
+   {
+    "vi": "sân thượng ngắm cảnh (ở sân bay)"
+   }
+  ]
+ },
+ {
+  "id": 1083300,
+  "m": [
+   {
+    "vi": "chết, không sinh lời (vốn, hàng tồn)"
+   },
+   {
+    "vi": "bóng chết (thể thao)"
+   },
+   {
+    "vi": "âm câm, phòng tiêu âm không vang"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "部屋の隅のデッドスペースを有効活用して収納棚を置いた。",
+    "vi": "Tôi tận dụng hiệu quả khoảng không gian chết ở góc phòng để đặt kệ đựng đồ."
+   }
+  ]
+ },
+ {
+  "id": 1083350,
+  "m": [
+   {
+    "vi": "cuộc tranh tài quyết liệt ngang tài ngang sức"
+   },
+   {
+    "vi": "kết quả hòa (cán đích cùng lúc)"
+   }
+  ]
+ },
+ {
+  "id": 1083440,
+  "m": [
+   {
+    "vi": "đơ-ni-ê (denier, đơn vị đo độ mảnh sợi)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "冬用に八十デニールの厚手で暖かいタイツを購入した。",
+    "vi": "Tôi đã mua loại quần tất dày dặn và ấm áp độ dày 80 denier cho mùa đông."
+   }
+  ]
+ },
+ {
+  "id": 1083450,
+  "m": [
+   {
+    "vi": "vải bò (denim)"
+   },
+   {
+    "vi": "quần bò (jeans)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "丈夫なデニム素材のジャケットは季節を問わず活躍する。",
+    "vi": "Áo khoác bằng chất liệu vải bò bền chắc có thể mặc được quanh năm."
+   }
+  ]
+ },
+ {
+  "id": 1083490,
+  "m": [
+   {
+    "vi": "việc đổi tiền, cắt bỏ số không trên mệnh giá tiền"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "インフレ対策として通貨単位を切り下げるデノミが実施された。",
+    "vi": "Biện pháp cắt giảm mệnh giá tiền tệ đã được thực hiện để đối phó với lạm phát."
+   }
+  ]
+ },
+ {
+  "id": 1083510,
+  "m": [
+   {
+    "vi": "thiết bị, linh kiện điện tử (device)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "スマートフォンやタブレットなど複数のデバイスを使い分けている。",
+    "vi": "Tôi sử dụng luân phiên nhiều thiết bị như điện thoại thông minh và máy tính bảng."
+   }
+  ]
+ },
+ {
+  "id": 1083620,
+  "m": [
+   {
+    "vi": "Cúp Davis (giải quần vợt đồng đội nam quốc tế)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "テニスの国別対抗戦であるデビスカップに日本代表が出場した。",
+    "vi": "Đội tuyển Nhật Bản đã tham dự Cúp Davis, giải quần vợt đồng đội nam quốc tế."
+   }
+  ]
+ },
+ {
+  "id": 1083630,
+  "m": [
+   {
+    "vi": "sự ra mắt lần đầu (debut)"
+   },
+   {
+    "vi": "khởi đầu mới"
+   }
+  ]
+ },
+ {
+  "id": 1083760,
+  "m": [
+   {
+    "vi": "cách điệu, làm biến dạng (để nhấn mạnh nét đặc trưng trong tranh, truyện)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "漫画のキャラクターは表情が分かりやすいようにデフォルメされている。",
+    "vi": "Nhân vật trong truyện tranh được vẽ cách điệu hóa để biểu cảm trông rõ ràng hơn."
+   }
+  ]
+ },
+ {
+  "id": 1083780,
+  "m": [
+   {
+    "vi": "giảm phát (kinh tế)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "長引くデフレから脱却するために様々な経済政策がとられた。",
+    "vi": "Nhiều chính sách kinh tế đã được áp dụng để thoát khỏi tình trạng giảm phát kéo dài."
+   }
+  ]
+ },
+ {
+  "id": 1083820,
+  "m": [
+   {
+    "vi": "béo, mập"
+   },
+   {
+    "vi": "người béo"
+   }
+  ]
+ },
+ {
+  "id": 1083860,
+  "m": [
+   {
+    "vi": "nhà phát triển bất động sản, nhà phát triển phần mềm (developer)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "駅前の大規模な再開発を大手デベロッパーが手掛けている。",
+    "vi": "Một tập đoàn bất động sản lớn đang thực hiện dự án tái phát triển quy mô lớn trước nhà ga."
+   }
+  ]
+ },
+ {
+  "id": 1083890,
+  "m": [
+   {
+    "vi": "tiền đặt cọc (deposit)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ホテルにチェックインする際にクレジットカードでデポジットを預けた。",
+    "vi": "Khi làm thủ tục nhận phòng khách sạn, tôi đã đặt cọc bằng thẻ tín dụng."
+   }
+  ]
+ },
+ {
+  "id": 1083910,
+  "m": [
+   {
+    "vi": "tin đồn thất thiệt, tin bịa đặt"
+   }
+  ]
+ },
+ {
+  "id": 1083940,
+  "m": [
+   {
+    "vi": "nhu cầu, yêu cầu (demand)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "電力のデマンドがピークに達する夏場は節電への協力が呼びかけられる。",
+    "vi": "Vào mùa hè khi nhu cầu điện đạt đỉnh, mọi người được kêu gọi hợp tác tiết kiệm điện."
+   }
+  ]
+ },
+ {
+  "id": 1083990,
+  "m": [
+   {
+    "vi": "nhược điểm, mặt bất lợi"
+   }
+  ]
+ },
+ {
+  "id": 1084020,
+  "m": [
+   {
+    "vi": "chế độ dân chủ (democracy)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "国民一人一人の参加が健全なデモクラシーを支えている。",
+    "vi": "Sự tham gia của từng người dân là nền tảng nâng đỡ một chế độ dân chủ lành mạnh."
+   }
+  ]
+ },
+ {
+  "id": 1084030,
+  "m": [
+   {
+    "vi": "người theo chủ nghĩa dân chủ, đảng viên Dân chủ (Mỹ)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "アメリカの大統領選挙でデモクラットの候補者が勝利を収めた。",
+    "vi": "Trong cuộc bầu cử tổng thống Mỹ, ứng cử viên của phe Dân chủ đã giành chiến thắng."
+   }
+  ]
+ },
+ {
+  "id": 1084100,
+  "m": [
+   {
+    "vi": "miễn thuế (duty-free)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "空港のデューティーフリーショップでお土産の化粧品を買った。",
+    "vi": "Tôi đã mua mỹ phẩm làm quà tại cửa hàng miễn thuế ở sân bay."
+   }
+  ]
+ },
+ {
+  "id": 1084180,
+  "m": [
+   {
+    "vi": "song ca, song tấu (duet)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "カラオケで友人と懐かしのデュエット曲を楽しく歌った。",
+    "vi": "Ở quán karaoke, tôi đã cùng bạn hát say sưa một bản song ca kỷ niệm xưa."
+   }
+  ]
+ },
+ {
+  "id": 1084190,
+  "m": [
+   {
+    "vi": "bộ đôi, song tấu (duo)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "若いピアノとバイオリンのデュオが息の合った演奏を聴かせた。",
+    "vi": "Cặp song tấu piano và vĩ cầm trẻ tuổi đã mang đến màn trình diễn vô cùng ăn ý."
+   }
+  ]
+ },
+ {
+  "id": 1084250,
+  "m": [
+   {
+    "vi": "xa hoa, sang trọng, cao cấp (deluxe)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "旅行の最終日は少し奮発してホテルのデラックスルームに泊まった。",
+    "vi": "Ngày cuối chuyến đi, tôi chi mạnh tay hơn một chút để ở phòng hạng sang của khách sạn."
+   }
+  ]
+ },
+ {
+  "id": 1084260,
+  "m": [
+   {
+    "vi": "xóa bỏ (delete)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "不要になったメールをデリートキーを押してすべて削除した。",
+    "vi": "Tôi nhấn phím Delete để xóa toàn bộ những email không còn cần thiết."
+   }
+  ]
+ },
+ {
+  "id": 1084270,
+  "m": [
+   {
+    "vi": "cửa hàng bán đồ ăn chế biến sẵn (delicatessen)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "デパートの地下にあるデリカで夕飯のおかずを買って帰った。",
+    "vi": "Tôi mua thức ăn chế biến sẵn cho bữa tối ở quầy thực phẩm tầng hầm trung tâm thương mại mang về."
+   }
+  ]
+ },
+ {
+  "id": 1084320,
+  "m": [
+   {
+    "vi": "nhạy cảm, dễ tổn thương"
+   },
+   {
+    "vi": "tế nhị, nhạy cảm (vấn đề)"
+   },
+   {
+    "vi": "mong manh, yếu ớt"
+   },
+   {
+    "vi": "tinh tế, dịu nhẹ (hương vị, màu sắc)"
+   }
+  ]
+ },
+ {
+  "id": 1084380,
+  "m": [
+   {
+    "vi": "chữ cái delta (Δ, δ), đồng bằng châu thổ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "河川の河口に形成されたデルタ地帯は肥沃な農地になっている。",
+    "vi": "Vùng đồng bằng châu thổ hình thành ở cửa sông là những vùng đất nông nghiệp màu mỡ."
+   }
+  ]
+ },
+ {
+  "id": 1084390,
+  "m": [
+   {
+    "vi": "phái đoàn, sự ủy quyền (delegation)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "国際会議に出席するため日本からデレゲーションが派遣された。",
+    "vi": "Một phái đoàn từ Nhật Bản đã được cử đi tham dự hội nghị quốc tế."
+   }
+  ]
+ },
+ {
+  "id": 1084400,
+  "m": [
+   {
+    "vi": "thành phố Denver (Mỹ)"
+   }
+  ]
+ },
+ {
+  "id": 1084440,
+  "m": [
+   {
+    "vi": "phim có tiếng nói (talkie)"
+   },
+   {
+    "vi": "thông báo thu âm sẵn"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "無声映画の時代から音声付きのトーキーへと移行した。",
+    "vi": "Điện ảnh đã chuyển từ thời kỳ phim câm sang phim có tiếng nói."
+   }
+  ]
+ },
+ {
+  "id": 1084460,
+  "m": [
+   {
+    "vi": "lời trò chuyện, giao lưu (trên sân khấu, chương trình)"
+   },
+   {
+    "vi": "chương trình trò chuyện (talk show)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "この芸人は軽妙なトークで観客を笑わせるのがとてもうまい。",
+    "vi": "Nghệ sĩ hài này rất giỏi làm khán giả cười bằng lối nói chuyện dí dỏm."
+   }
+  ]
+ },
+ {
+  "id": 1084470,
+  "m": [
+   {
+    "vi": "chương trình trò chuyện (talk show)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "週末に好きな作家が出演するトークショーのイベントに参加した。",
+    "vi": "Cuối tuần tôi đã tham gia sự kiện giao lưu trò chuyện có sự góp mặt của nhà văn mình yêu thích."
+   }
+  ]
+ },
+ {
+  "id": 1084530,
+  "m": [
+   {
+    "vi": "máy nướng bánh mì"
+   }
+  ]
+ },
+ {
+  "id": 1084540,
+  "m": [
+   {
+    "vi": "bánh mì nướng"
+   }
+  ]
+ },
+ {
+  "id": 1084560,
+  "m": [
+   {
+    "vi": "tổng cộng, tổng thể"
+   },
+   {
+    "vi": "toàn diện, bao quát"
+   }
+  ]
+ },
+ {
+  "id": 1084620,
+  "m": [
+   {
+    "vi": "ngọn đuốc"
+   },
+   {
+    "vi": "đèn pin"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "オリンピックの聖火リレーでランナーがトーチを掲げて走った。",
+    "vi": "Trong lễ rước đuốc Olympic, vận động viên giơ cao ngọn đuốc chạy qua phố."
+   }
+  ]
+ },
+ {
+  "id": 1084700,
+  "m": [
+   {
+    "vi": "giải đấu (tournament)"
+   },
+   {
+    "vi": "thể thức đấu loại trực tiếp"
+   }
+  ]
+ },
+ {
+  "id": 1084750,
+  "m": [
+   {
+    "vi": "phí cầu đường, cước phí (toll)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "電話で料金無料のトールフリー番号に問い合わせをした。",
+    "vi": "Tôi đã gọi điện hỏi thông tin qua số điện thoại miễn cước."
+   }
+  ]
+ },
+ {
+  "id": 1084830,
+  "m": [
+   {
+    "vi": "nhà vệ sinh (toilet)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "映画館に入る前にロビーのトイレットを済ませておいた。",
+    "vi": "Trước khi vào rạp chiếu phim, tôi đã tranh thủ đi vệ sinh ở sảnh."
+   }
+  ]
+ },
+ {
+  "id": 1084870,
+  "m": [
+   {
+    "vi": "giấy vệ sinh"
+   }
+  ]
+ },
+ {
+  "id": 1084970,
+  "m": [
+   {
+    "vi": "chuyền bóng bổng (bóng chuyền)"
+   },
+   {
+    "vi": "tung đồng xu (chọn sân)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "セッターが上げた綺麗なトスをエースが力強くスパイクした。",
+    "vi": "Từ đường chuyền bổng đẹp mắt của chuyền hai, chủ công đã đập bóng đầy uy lực."
+   }
+  ]
+ },
+ {
+  "id": 1084990,
+  "m": [
+   {
+    "vi": "tôn lợp (tôn mạ kẽm)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "古い物置のトタン屋根に雨が当たる音が響いていた。",
+    "vi": "Tiếng mưa rơi lộp độp vang lên trên mái tôn của nhà kho cũ."
+   }
+  ]
+ },
+ {
+  "id": 1085000,
+  "m": [
+   {
+    "vi": "mũ chóp cao, áo khoác lửng (topper)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "秋口に軽く羽織れるおしゃれなトッパーコートを買った。",
+    "vi": "Đầu thu tôi đã mua một chiếc áo khoác dáng lửng thanh lịch có thể khoác nhẹ."
+   }
+  ]
+ },
+ {
+  "id": 1085050,
+  "m": [
+   {
+    "vi": "đẳng cấp hàng đầu, top đầu"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼は世界でもトップクラスの実力を持つピアニストだ。",
+    "vi": "Anh ấy là nghệ sĩ dương cầm có thực lực thuộc hàng đầu thế giới."
+   }
+  ]
+ },
+ {
+  "id": 1085110,
+  "m": [
+   {
+    "vi": "ngôi sao hàng đầu (nhất là vai nam chính đoàn kịch Takarazuka)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "宝塚歌劇団のトップスターが退団公演で観客を魅了した。",
+    "vi": "Ngôi sao hàng đầu của đoàn kịch Takarazuka đã làm khán giả say đắm trong buổi diễn chia tay."
+   }
+  ]
+ },
+ {
+  "id": 1085160,
+  "m": [
+   {
+    "vi": "tin tức hàng đầu, tin trang nhất"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "今朝の新聞の一面では大きな経済政策がトップニュースとして報じられた。",
+    "vi": "Trên trang nhất báo sáng nay, chính sách kinh tế lớn được đưa làm tin tiêu điểm hàng đầu."
+   }
+  ]
+ },
+ {
+  "id": 1085190,
+  "m": [
+   {
+    "vi": "người đánh bóng đầu tiên (bóng chày)"
+   },
+   {
+    "vi": "người mở màn, người đầu tiên"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "発表会のトップバッターを務めたので最初はとても緊張した。",
+    "vi": "Vì đảm nhận vai trò mở màn cho buổi thuyết trình nên lúc đầu tôi rất căng thẳng."
+   }
+  ]
+ },
+ {
+  "id": 1085250,
+  "m": [
+   {
+    "vi": "để ngực trần (topless)"
+   },
+   {
+    "vi": "áo tắm một mảnh hở ngực"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "海外のビーチではトップレスで日光浴をする人も見られる。",
+    "vi": "Ở một số bãi biển nước ngoài có thể thấy người tắm nắng để ngực trần."
+   }
+  ]
+ },
+ {
+  "id": 1085280,
+  "m": [
+   {
+    "vi": "cá cược bóng đá hợp pháp (totocalcio)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "イタリアではサッカーの勝敗を予想するトトカルチョが古くから人気だ。",
+    "vi": "Ở Ý, trò dự đoán kết quả bóng đá totocalcio đã phổ biến từ rất lâu."
+   }
+  ]
+ },
+ {
+  "id": 1085350,
+  "m": [
+   {
+    "vi": "chủ đề, đề tài (topic)"
+   }
+  ]
+ },
+ {
+  "id": 1085420,
+  "m": [
+   {
+    "vi": "cà chua"
+   }
+  ]
+ },
+ {
+  "id": 1085450,
+  "m": [
+   {
+    "vi": "rìu chiến (tomahawk), tên lửa hành trình Tomahawk"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "映画の中で先住民の戦士がトマホークを手にしていた。",
+    "vi": "Trong phim, chiến binh bản địa cầm trên tay chiếc rìu chiến tomahawk."
+   }
+  ]
+ },
+ {
+  "id": 1085460,
+  "m": [
+   {
+    "vi": "súng tiểu liên Thompson (tommy gun)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "古いギャング映画ではトミーガンを持った人物がよく登場する。",
+    "vi": "Trong các bộ phim xã hội đen xưa thường xuất hiện nhân vật cầm súng tiểu liên Thompson."
+   }
+  ]
+ },
+ {
+  "id": 1085500,
+  "m": [
+   {
+    "vi": "thử thách, nỗ lực"
+   },
+   {
+    "vi": "bàn thắng đặt bóng xuống vạch cuối sân (try trong bóng bầu dục)"
+   }
+  ]
+ },
+ {
+  "id": 1085530,
+  "m": [
+   {
+    "vi": "ba môn phối hợp (bơi, đạp xe, chạy bộ)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "水泳、自転車、ランの三種目をこなす過酷なトライアスロンに挑んだ。",
+    "vi": "Anh ấy đã thử sức với giải ba môn phối hợp khắc nghiệt gồm bơi, đạp xe và chạy."
+   }
+  ]
+ },
+ {
+  "id": 1085550,
+  "m": [
+   {
+    "vi": "sự thử nghiệm, dùng thử, phiên tòa (trial)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "新システムの本格導入に先立って一週間のトライアルを行った。",
+    "vi": "Trước khi áp dụng chính thức hệ thống mới, chúng tôi đã chạy thử nghiệm trong một tuần."
+   }
+  ]
+ },
+ {
+  "id": 1085570,
+  "m": [
+   {
+    "vi": "kẻng tam giác (nhạc cụ)"
+   },
+   {
+    "vi": "hình tam giác"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "小学校の音楽会でかわいいトライアングルの音を鳴らした。",
+    "vi": "Trong buổi biểu diễn âm nhạc ở trường tiểu học, tôi đã gõ tiếng kẻng tam giác thật vui tai."
+   }
+  ]
+ },
+ {
+  "id": 1085640,
+  "m": [
+   {
+    "vi": "chấn thương tâm lý (trauma)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "子どもの頃のつらい体験が大人になってもトラウマとして残っている。",
+    "vi": "Trải nghiệm đau buồn thời thơ ấu vẫn còn để lại vết thương tâm lý cho đến khi trưởng thành."
+   }
+  ]
+ },
+ {
+  "id": 1085660,
+  "m": [
+   {
+    "vi": "máy kéo (tractor)"
+   }
+  ]
+ },
+ {
+  "id": 1085720,
+  "m": [
+   {
+    "vi": "quyết liệt, mạnh tay, triệt để (drastic)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "業績を回復させるためドラスチックな組織改革に踏み切った。",
+    "vi": "Để khôi phục thành tích kinh doanh, công ty đã quyết định cải cách tổ chức một cách triệt để."
+   }
+  ]
+ },
+ {
+  "id": 1085730,
+  "m": [
+   {
+    "vi": "sự tin tưởng, quỹ tín thác, tổ chức độc quyền (trust)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "独占禁止法によって過度な企業のトラスト形成は規制されている。",
+    "vi": "Luật chống độc quyền kiểm soát việc các doanh nghiệp hình thành tổ chức độc quyền quá mức."
+   }
+  ]
+ },
+ {
+  "id": 1085810,
+  "m": [
+   {
+    "vi": "cổ điển, truyền thống (thời trang)"
+   },
+   {
+    "vi": "nhạc jazz truyền thống (Dixieland)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼は紺のブレザーを軸にしたトラッドな着こなしが似合う。",
+    "vi": "Anh ấy rất hợp với phong cách ăn mặc cổ điển lấy áo blazer xanh than làm chủ đạo."
+   }
+  ]
+ },
+ {
+  "id": 1085830,
+  "m": [
+   {
+    "vi": "cái bẫy (trap)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "サッカーの試合でフォワードが見事なトラップでボールを止めた。",
+    "vi": "Trong trận bóng đá, tiền đạo đã khống chế bóng tuyệt vời."
+   }
+  ]
+ },
+ {
+  "id": 1085870,
+  "m": [
+   {
+    "vi": "chuyển việc, đổi nghề"
+   },
+   {
+    "vi": "lao động, công việc"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "キャリアアップを目指して三十歳を機にトラバーユを決意した。",
+    "vi": "Với mục tiêu thăng tiến sự nghiệp, tôi quyết định chuyển việc nhân dịp bước sang tuổi ba mươi."
+   }
+  ]
+ },
+ {
+  "id": 1085890,
+  "m": [
+   {
+    "vi": "rãnh sâu đại dương, vùng áp thấp kéo dài (trough)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "南海トラフ地震に備えて各自治体で防災対策が進められている。",
+    "vi": "Các địa phương đang đẩy mạnh biện pháp phòng chống thiên tai để ứng phó động đất rãnh Nankai."
+   }
+  ]
+ },
+ {
+  "id": 1085900,
+  "m": [
+   {
+    "vi": "giao thông, lưu lượng truy cập (traffic)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "アクセスが集中してサーバーのトラフィックが急激に増加した。",
+    "vi": "Lượng truy cập dồn dập khiến lưu lượng mạng của máy chủ tăng vọt."
+   }
+  ]
+ },
+ {
+  "id": 1085970,
+  "m": [
+   {
+    "vi": "séc du lịch (traveler's check)"
+   }
+  ]
+ },
+ {
+  "id": 1086000,
+  "m": [
+   {
+    "vi": "chuyến du lịch (travel)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "連休の予定を立てるためにトラベルガイドの本を買ってきた。",
+    "vi": "Để lên kế hoạch cho kỳ nghỉ dài, tôi đã mua cuốn sách hướng dẫn du lịch."
+   }
+  ]
+ },
+ {
+  "id": 1086070,
+  "m": [
+   {
+    "vi": "thuốc an thần (tranquilizer)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "不眠や強い不安を和らげるため医師からトランキライザーが処方された。",
+    "vi": "Bác sĩ đã kê thuốc an thần để làm dịu chứng mất ngủ và lo âu."
+   }
+  ]
+ },
+ {
+  "id": 1086080,
+  "m": [
+   {
+    "vi": "va-li (hành lý)"
+   },
+   {
+    "vi": "cốp xe (ô tô)"
+   },
+   {
+    "vi": "đường dây trung kế"
+   }
+  ]
+ },
+ {
+  "id": 1086090,
+  "m": [
+   {
+    "vi": "quần bơi nam, quần đùi võ sĩ"
+   },
+   {
+    "vi": "quần lót đùi nam (boxer)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "夏の海水浴に向けて新しい水着のトランクスを用意した。",
+    "vi": "Để chuẩn bị đi tắm biển mùa hè, tôi đã sắm chiếc quần bơi mới."
+   }
+  ]
+ },
+ {
+  "id": 1086150,
+  "m": [
+   {
+    "vi": "máy bộ đàm (transceiver)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "登山の連絡手段としてメンバー全員がトランシーバーを携帯した。",
+    "vi": "Tất cả thành viên đều mang theo máy bộ đàm để làm phương tiện liên lạc khi leo núi."
+   }
+  ]
+ },
+ {
+  "id": 1086210,
+  "m": [
+   {
+    "vi": "quá cảnh (chuyển tiếp chuyến bay)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ヨーロッパへ向かう途中、中東の空港で数時間のトランジットがあった。",
+    "vi": "Trên đường bay sang châu Âu, tôi phải quá cảnh vài tiếng tại một sân bay ở Trung Đông."
+   }
+  ]
+ },
+ {
+  "id": 1086220,
+  "m": [
+   {
+    "vi": "máy biến áp (transformer)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "電柱の上に取り付けられたトランスが電圧を下げて家庭へ送っている。",
+    "vi": "Máy biến áp gắn trên cột điện giúp hạ điện áp trước khi truyền vào hộ gia đình."
+   }
+  ]
+ },
+ {
+  "id": 1086340,
+  "m": [
+   {
+    "vi": "thiết bị phát đáp (transponder)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "航空機の位置を正確に把握するためトランスポンダーが搭載されている。",
+    "vi": "Máy bay được trang bị thiết bị phát đáp để xác định chính xác vị trí."
+   }
+  ]
+ },
+ {
+  "id": 1086440,
+  "m": [
+   {
+    "vi": "kèn trumpet"
+   }
+  ]
+ },
+ {
+  "id": 1086480,
+  "m": [
+   {
+    "vi": "chăm sóc phục hồi (nhất là ủ dưỡng tóc)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "美容室で傷んだ髪にしっかりトリートメントをしてもらった。",
+    "vi": "Tôi đã đi tiệm làm tóc để ủ dưỡng phục hồi cho mái tóc bị hư tổn."
+   }
+  ]
+ },
+ {
+  "id": 1086490,
+  "m": [
+   {
+    "vi": "thori (Th, nguyên tố hóa học)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "化学の資料で放射性元素であるトリウムの性質について調べた。",
+    "vi": "Tôi đã tra cứu tính chất của nguyên tố phóng xạ thori trong tài liệu hóa học."
+   }
+  ]
+ },
+ {
+  "id": 1086510,
+  "m": [
+   {
+    "vi": "bộ ba, nhóm tam tấu (trio)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ピアノ、チェロ、バイオリンのトリオが美しい演奏を披露した。",
+    "vi": "Nhóm tam tấu gồm piano, cello và vĩ cầm đã trình diễn một tiết mục tuyệt đẹp."
+   }
+  ]
+ },
+ {
+  "id": 1086530,
+  "m": [
+   {
+    "vi": "cò súng, tác nhân kích hoạt (trigger)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "環境の変化がきっかけとなり、新しい計画のトリガーが引かれた。",
+    "vi": "Sự thay đổi môi trường đã trở thành tác nhân kích hoạt cho kế hoạch mới."
+   }
+  ]
+ },
+ {
+  "id": 1086550,
+  "m": [
+   {
+    "vi": "trichloroethylene (hợp chất dung môi)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "地下水汚染の原因となるトリクロロエチレンの排出が規制されている。",
+    "vi": "Việc xả thải chất trichloroethylene gây ô nhiễm nước ngầm đang bị kiểm soát."
+   }
+  ]
+ },
+ {
+  "id": 1086610,
+  "m": [
+   {
+    "vi": "mánh khóe, thủ thuật (trick)"
+   },
+   {
+    "vi": "mưu mẹo phá án (trong truyện trinh thám)"
+   }
+  ]
+ },
+ {
+  "id": 1086660,
+  "m": [
+   {
+    "vi": "chuyến đi chơi (trip)"
+   },
+   {
+    "vi": "trạng thái ảo giác do ma túy"
+   },
+   {
+    "vi": "xuyên không sang thế giới khác (truyện giả tưởng)"
+   },
+   {
+    "vi": "mã định danh người đăng (tripcode)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "週末に友人と計画して日帰りのショートトリップを楽しんだ。",
+    "vi": "Cuối tuần tôi cùng bạn lên kế hoạch thực hiện một chuyến đi chơi ngắn trong ngày."
+   }
+  ]
+ },
+ {
+  "id": 1086700,
+  "m": [
+   {
+    "vi": "thuốc nổ TNT (trinitrotoluene)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "爆発物の威力はよくトリニトロトルエン換算で表される。",
+    "vi": "Sức công phá của chất nổ thường được quy đổi theo lượng thuốc nổ TNT."
+   }
+  ]
+ },
+ {
+  "id": 1086740,
+  "m": [
+   {
+    "vi": "diễn đàn, quan bảo dân (tên báo Tribune)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "古代ローマの護民官に由来するトリビューンという名の新聞がある。",
+    "vi": "Có tờ báo mang tên Tribune bắt nguồn từ chức quan bảo dân thời La Mã cổ đại."
+   }
+  ]
+ },
+ {
+  "id": 1086750,
+  "m": [
+   {
+    "vi": "gấp ba, cú ăn ba (triple)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "フィギュアスケートの選手が連続でトリプルジャンプを成功させた。",
+    "vi": "Vận động viên trượt băng nghệ thuật đã thực hiện thành công liên tiếp các cú nhảy xoay ba vòng."
+   }
+  ]
+ },
+ {
+  "id": 1086820,
+  "m": [
+   {
+    "vi": "nấm cục (truffle), kẹo sô-cô-la truffle"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "高級フレンチの料理に香り高い黒トリュフが添えられていた。",
+    "vi": "Món ăn Pháp thượng hạng được ăn kèm với nấm cục đen thơm ngào ngạt."
+   }
+  ]
+ },
+ {
+  "id": 1086850,
+  "m": [
+   {
+    "vi": "toluen (dung môi hữu cơ)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "塗料の溶剤として使われるトルエンは換気の良い場所で扱うべきだ。",
+    "vi": "Toluen dùng làm dung môi sơn cần được sử dụng ở nơi thông thoáng khí."
+   }
+  ]
+ },
+ {
+  "id": 1086860,
+  "m": [
+   {
+    "vi": "mô-men xoắn (torque)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "この電気自動車は発進時から非常に力強いトルクを発揮する。",
+    "vi": "Chiếc xe điện này phát huy mô-men xoắn cực kỳ mạnh mẽ ngay từ lúc khởi hành."
+   }
+  ]
+ },
+ {
+  "id": 1086880,
+  "m": [
+   {
+    "vi": "Thổ Nhĩ Kỳ"
+   },
+   {
+    "vi": "đá ngọc lam (turquoise)"
+   }
+  ],
+  "hv": "thổ nhĩ cổ"
+ },
+ {
+  "id": 1086950,
+  "m": [
+   {
+    "vi": "khay đựng đồ"
+   }
+  ]
+ },
+ {
+  "id": 1086990,
+  "m": [
+   {
+    "vi": "đồ lại, sao chép nét vẽ (trace)"
+   },
+   {
+    "vi": "dấu vết trên tuyết (leo núi), lần theo dấu vết"
+   },
+   {
+    "vi": "vết của ma trận (toán học)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "イラストの練習のために下絵をトレーシングペーパーでトレースした。",
+    "vi": "Để tập vẽ minh họa, tôi đã đặt giấy can lên bản phác thảo để đồ lại."
+   }
+  ]
+ },
+ {
+  "id": 1087030,
+  "m": [
+   {
+    "vi": "buôn bán, giao dịch, trao đổi cầu thủ (trade)"
+   }
+  ]
+ },
+ {
+  "id": 1087060,
+  "m": [
+   {
+    "vi": "nhãn hiệu thương mại (trademark)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "いつもかぶっている赤い帽子が彼のトレードマークになっている。",
+    "vi": "Chiếc mũ đỏ lúc nào cũng đội đã trở thành dấu ấn đặc trưng của anh ấy."
+   }
+  ]
+ },
+ {
+  "id": 1087090,
+  "m": [
+   {
+    "vi": "huấn luyện viên (trainer)"
+   },
+   {
+    "vi": "áo nỉ chui đầu (sweatshirt)"
+   }
+  ]
+ },
+ {
+  "id": 1087160,
+  "m": [
+   {
+    "vi": "xe moóc kéo"
+   },
+   {
+    "vi": "xe đầu kéo rơ-moóc"
+   },
+   {
+    "vi": "đoạn giới thiệu phim (trailer)"
+   }
+  ]
+ },
+ {
+  "id": 1087240,
+  "m": [
+   {
+    "vi": "người đi bộ đường dài (trekker)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "美しい山岳風景を求めて世界中からトレッカーが集まってくる。",
+    "vi": "Những người đi bộ đường dài từ khắp thế giới đổ về đây để ngắm cảnh núi non tuyệt đẹp."
+   }
+  ]
+ },
+ {
+  "id": 1087310,
+  "m": [
+   {
+    "vi": "áo khoác dáng dài có đai lưng (trench coat)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "春先の通勤にはベージュのトレンチコートが大活躍する。",
+    "vi": "Áo khoác dáng dài màu be rất tiện dụng khi đi làm vào đầu xuân."
+   }
+  ]
+ },
+ {
+  "id": 1087330,
+  "m": [
+   {
+    "vi": "hợp mốt, sành điệu, theo xu hướng (trendy)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "都会の若者の間でトレンディーなファッションが流行している。",
+    "vi": "Phong cách thời trang sành điệu đang thịnh hành trong giới trẻ thành thị."
+   }
+  ]
+ },
+ {
+  "id": 1087340,
+  "m": [
+   {
+    "vi": "xu hướng, trào lưu (trend)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "SNSをチェックして今年の最新のファッショントレンドを把握した。",
+    "vi": "Tôi xem mạng xã hội để nắm bắt xu hướng thời trang mới nhất năm nay."
+   }
+  ]
+ },
+ {
+  "id": 1087370,
+  "m": [
+   {
+    "vi": "lưới rà đánh cá đáy biển (trawl)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "遠洋漁業では大型のトロール網を使って魚を大量に漁獲する。",
+    "vi": "Trong nghề đánh cá xa bờ, người ta dùng lưới rà cỡ lớn để đánh bắt sản lượng lớn."
+   }
+  ]
+ },
+ {
+  "id": 1087380,
+  "m": [
+   {
+    "vi": "hệ đo lường troy (dùng cho vàng, bạc, đá quý)"
+   }
+  ]
+ },
+ {
+  "id": 1087510,
+  "m": [
+   {
+    "vi": "cúp, chiến lợi phẩm (trophy)"
+   }
+  ]
+ },
+ {
+  "id": 1087530,
+  "m": [
+   {
+    "vi": "thành phố Toronto (Canada)"
+   }
+  ]
+ },
+ {
+  "id": 1087550,
+  "m": [
+   {
+    "vi": "kèn trombone"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "吹奏楽部でスライドを動かして演奏するトロンボーンを担当している。",
+    "vi": "Trong câu lạc bộ kèn đồng, tôi phụ trách chơi kèn trombone kéo ống trượt."
+   }
+  ]
+ },
+ {
+  "id": 1087560,
+  "m": [
+   {
+    "vi": "lúc chạng vạng, hoàng hôn (twilight)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "海に沈む夕日を眺めながらロマンチックなトワイライトタイムを過ごした。",
+    "vi": "Tôi đã tận hưởng khoảnh khắc hoàng hôn lãng mạn khi ngắm mặt trời lặn xuống biển."
+   }
+  ]
+ },
+ {
+  "id": 1087670,
+  "m": [
+   {
+    "vi": "giọng Sol trưởng (âm nhạc)"
+   }
+  ],
+  "hv": "trưởng điệu",
+  "ex": [
+   {
+    "ja": "発表会で明るく爽やかなト長調のメヌエットをピアノで弾いた。",
+    "vi": "Tại buổi biểu diễn, tôi đã chơi bản minuet giọng Sol trưởng tươi sáng trên đàn piano."
+   }
+  ]
+ },
+ {
+  "id": 1087680,
+  "m": [
+   {
+    "vi": "phe ôn hòa, phái trung dung (chính trị)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "選挙では穏健なドーク派の候補者に多くの票が集まった。",
+    "vi": "Trong cuộc bầu cử, ứng cử viên phe ôn hòa đã thu hút được rất nhiều phiếu bầu."
+   }
+  ]
+ },
+ {
+  "id": 1087690,
+  "m": [
+   {
+    "vi": "bánh vòng rán (donut)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "おやつの時間にコーヒーと一緒に甘いドーナツを食べた。",
+    "vi": "Vào giờ ăn nhẹ, tôi đã ăn bánh donut ngọt cùng với cà phê."
+   }
+  ]
+ },
+ {
+  "id": 1087700,
+  "m": [
+   {
+    "vi": "sử dụng chất kích thích bị cấm (doping trong thể thao)"
+   },
+   {
+    "vi": "pha tạp chất (bán dẫn)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "オリンピックでは公正な競技を守るため厳しいドーピング検査が行われる。",
+    "vi": "Tại Olympic, việc kiểm tra chất kích thích nghiêm ngặt được thực hiện để bảo vệ tính công bằng."
+   }
+  ]
+ },
+ {
+  "id": 1087740,
+  "m": [
+   {
+    "vi": "cửa sổ mái (nhô ra trên mái dốc)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "屋根裏部屋に光を取り入れるため可愛らしいドーマーウインドーを設けた。",
+    "vi": "Tôi đã thiết kế một ô cửa sổ mái xinh xắn để đón ánh sáng vào phòng áp mái."
+   }
+  ]
+ },
+ {
+  "id": 1087780,
+  "m": [
+   {
+    "vi": "mái vòm, sân vận động mái vòm"
+   }
+  ]
+ },
+ {
+  "id": 1087980,
+  "m": [
+   {
+    "vi": "tiếng Đức"
+   }
+  ]
+ },
+ {
+  "id": 1088080,
+  "m": [
+   {
+    "vi": "phim tài liệu (documentary)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "昨夜テレビで放送された自然保護のドキュメンタリー番組に感動した。",
+    "vi": "Tôi rất xúc động trước chương trình phim tài liệu về bảo tồn thiên nhiên phát sóng tối qua."
+   }
+  ]
+ },
+ {
+  "id": 1088120,
+  "m": [
+   {
+    "vi": "tài liệu, văn kiện"
+   },
+   {
+    "vi": "tư liệu hướng dẫn (documentation)"
+   },
+   {
+    "vi": "phóng sự tài liệu"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "新しいシステムの仕様書やドキュメントを整理して共有した。",
+    "vi": "Tôi đã sắp xếp và chia sẻ các tài liệu đặc tả của hệ thống mới."
+   }
+  ]
+ },
+ {
+  "id": 1088140,
+  "m": [
+   {
+    "vi": "bác sĩ, tiến sĩ (doctor)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼は大学で医学の博士号を取得した優秀なドクターだ。",
+    "vi": "Anh ấy là bác sĩ giỏi đã nhận bằng tiến sĩ y khoa tại trường đại học."
+   }
+  ]
+ },
+ {
+  "id": 1088170,
+  "m": [
+   {
+    "vi": "học thuyết, chủ trương, giáo lý (doctrine)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "国際政治の授業でアメリカのモンロー・ドクトリンについて学んだ。",
+    "vi": "Trong giờ chính trị quốc tế, chúng tôi đã học về học thuyết Monroe của Mỹ."
+   }
+  ]
+ },
+ {
+  "id": 1088280,
+  "m": [
+   {
+    "vi": "sự ghép nối (tàu vũ trụ), kết hợp (docking)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "宇宙船が国際宇宙ステーションへのドッキングに成功した。",
+    "vi": "Tàu vũ trụ đã ghép nối thành công vào Trạm Vũ trụ Quốc tế."
+   }
+  ]
+ },
+ {
+  "id": 1088290,
+  "m": [
+   {
+    "vi": "ụ tàu (sửa chữa tàu)"
+   },
+   {
+    "vi": "khám sức khỏe tổng quát định kỳ"
+   }
+  ]
+ },
+ {
+  "id": 1088300,
+  "m": [
+   {
+    "vi": "không chiến tầm gần (giữa các máy bay tiêm kích)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "航空ショーの映像で戦闘機同士の激しいドッグファイトを見た。",
+    "vi": "Tôi đã xem cảnh không chiến ác liệt giữa các máy bay tiêm kích trong đoạn phim triển lãm hàng không."
+   }
+  ]
+ },
+ {
+  "id": 1088310,
+  "m": [
+   {
+    "vi": "trò chơi bóng né (dodgeball)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "小学校の昼休みにクラスのみんなで元気にドッジボールをした。",
+    "vi": "Vào giờ nghỉ trưa ở trường tiểu học, cả lớp đã chơi bóng né rất sôi nổi."
+   }
+  ]
+ },
+ {
+  "id": 1088370,
+  "m": [
+   {
+    "vi": "người hiến tặng (máu, nội tạng, tủy)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "一人でも多くの命を救うために骨髄バンクのドナーに登録した。",
+    "vi": "Để cứu thêm nhiều mạng sống, tôi đã đăng ký làm người hiến tủy."
+   }
+  ]
+ },
+ {
+  "id": 1088390,
+  "m": [
+   {
+    "vi": "trò chơi cờ domino"
+   },
+   {
+    "vi": "hiệu ứng domino"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "並べて立てた一万個のドミノが次々と倒れていく様子は圧巻だった。",
+    "vi": "Cảnh tượng mười nghìn quân cờ domino xếp thẳng hàng lần lượt đổ rạp trông thật ngoạn mục."
+   }
+  ]
+ },
+ {
+  "id": 1088570,
+  "m": [
+   {
+    "vi": "hoa khô (dried flower)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "部屋を彩るために季節の花を吊るしてきれいなドライフラワーを作った。",
+    "vi": "Để trang trí phòng, tôi treo hoa theo mùa lên phơi thành những bó hoa khô xinh xắn."
+   }
+  ]
+ },
+ {
+  "id": 1088720,
+  "m": [
+   {
+    "vi": "máy sấy (nhất là máy sấy tóc)"
+   }
+  ]
+ },
+ {
+  "id": 1088740,
+  "m": [
+   {
+    "vi": "con rồng (phương Tây)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ファンタジー小説の中で勇者が巨大なドラゴンに立ち向かった。",
+    "vi": "Trong tiểu thuyết giả tưởng, người anh hùng đã đối đầu với con rồng khổng lồ."
+   }
+  ]
+ },
+ {
+  "id": 1088760,
+  "m": [
+   {
+    "vi": "thuốc men, dược phẩm"
+   },
+   {
+    "vi": "ma túy, chất gây nghiện"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "違法なドラッグに手を出すと人生を大きく狂わせてしまう。",
+    "vi": "Nếu dính vào ma túy bất hợp pháp thì sẽ hủy hoại cả cuộc đời."
+   }
+  ]
+ },
+ {
+  "id": 1088770,
+  "m": [
+   {
+    "vi": "hiệu thuốc, cửa hàng dược mỹ phẩm (drugstore)"
+   }
+  ]
+ },
+ {
+  "id": 1088810,
+  "m": [
+   {
+    "vi": "kỳ tuyển quân (bóng chày, thể thao)"
+   },
+   {
+    "vi": "bản nháp, bản thảo"
+   },
+   {
+    "vi": "bia tươi (draft beer)"
+   },
+   {
+    "vi": "luồng gió lùa"
+   }
+  ]
+ },
+ {
+  "id": 1088840,
+  "m": [
+   {
+    "vi": "người chơi trống (drummer)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "そのロックバンドのドラマーは力強く正確なリズムを刻む。",
+    "vi": "Tay trống của ban nhạc rock đó giữ nhịp vô cùng mạnh mẽ và chính xác."
+   }
+  ]
+ },
+ {
+  "id": 1088860,
+  "m": [
+   {
+    "vi": "kịch tính, đầy cảm xúc (dramatic)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "延長戦の末に逆転サヨナラ勝ちというドラマチックな展開になった。",
+    "vi": "Cuối hiệp phụ đã diễn ra kịch bản đầy kịch tính khi đội nhà lội ngược dòng giành chiến thắng."
+   }
+  ]
+ },
+ {
+  "id": 1088890,
+  "m": [
+   {
+    "vi": "cái trống, bộ trống"
+   }
+  ]
+ },
+ {
+  "id": 1088930,
+  "m": [
+   {
+    "vi": "quý tử phá gia chi tử, đứa con trai lêu lổng"
+   }
+  ],
+  "hv": "tức tử",
+  "ex": [
+   {
+    "ja": "大店のドラ息子が遊び呆けて財産を食いつぶしてしまった。",
+    "vi": "Cậu quý tử ăn chơi của hiệu buôn lớn đã tiêu tán hết gia sản."
+   }
+  ]
+ },
+ {
+  "id": 1088940,
+  "m": [
+   {
+    "vi": "xe đẩy máy quay (dolly)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "映画撮影で滑らかな移動ショットを撮るためにドリーを使った。",
+    "vi": "Trong lúc quay phim, ê-kíp đã dùng xe đẩy máy quay để ghi lại những cú máy di chuyển mượt mà."
+   }
+  ]
+ },
+ {
+  "id": 1088990,
+  "m": [
+   {
+    "vi": "giấc mơ, ước mơ (dream)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "いつか自分の店を開くという大きなドリームに向かって努力している。",
+    "vi": "Tôi đang nỗ lực hướng tới ước mơ lớn là một ngày nào đó sẽ mở cửa hàng của riêng mình."
+   }
+  ]
+ },
+ {
+  "id": 1089010,
+  "m": [
+   {
+    "vi": "quả sầu riêng"
+   },
+   {
+    "vi": "kiểu Dorian (âm nhạc, kiến trúc Hy Lạp)"
+   }
+  ]
+ },
+ {
+  "id": 1089050,
+  "m": [
+   {
+    "vi": "rê bóng, dẫn bóng (bóng đá, bóng rổ)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "俊足のウィングが相手ディフェンスをドリブルで鮮やかに抜き去った。",
+    "vi": "Tiền vệ cánh tốc độ đã đi bóng qua mặt hậu vệ đối phương một cách ngoạn mục."
+   }
+  ]
+ },
+ {
+  "id": 1089080,
+  "m": [
+   {
+    "vi": "đồ uống, thức uống"
+   }
+  ]
+ },
+ {
+  "id": 1089090,
+  "m": [
+   {
+    "vi": "đồng đô la"
+   },
+   {
+    "vi": "tiền bạc, tiền mặt"
+   }
+  ]
+ },
+ {
+  "id": 1089190,
+  "m": [
+   {
+    "vi": "kiểu đạp chân cá heo (bơi bướm)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "水泳のバタフライでは力強いドルフィンキックが推進力を生む。",
+    "vi": "Trong kiểu bơi bướm, động tác đạp chân cá heo mạnh mẽ tạo ra lực đẩy tiến về phía trước."
+   }
+  ]
+ },
+ {
+  "id": 1089360,
+  "m": [
+   {
+    "vi": "nước sốt trộn salad"
+   },
+   {
+    "vi": "việc ăn mặc, trang điểm"
+   }
+  ]
+ },
+ {
+  "id": 1089390,
+  "m": [
+   {
+    "vi": "trận đấu hòa"
+   },
+   {
+    "vi": "bốc thăm chia cặp đấu"
+   },
+   {
+    "vi": "cú đánh xoáy nhẹ (golf)"
+   },
+   {
+    "vi": "sự rút thăm, rút bài"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "テニスの大会の組み合わせを決めるドローの抽選が行われた。",
+    "vi": "Lễ bốc thăm phân cặp thi đấu cho giải quần vợt đã được tiến hành."
+   }
+  ]
+ },
+ {
+  "id": 1089400,
+  "m": [
+   {
+    "vi": "bức vẽ nét, ký họa (drawing)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "美術展で有名な画家の鉛筆によるドローイング作品を鑑賞した。",
+    "vi": "Tại triển lãm mỹ thuật, tôi đã chiêm ngưỡng tác phẩm vẽ nét bằng bút chì của họa sĩ nổi tiếng."
+   }
+  ]
+ },
+ {
+  "id": 1089440,
+  "m": [
+   {
+    "vi": "kẹo cứng viên"
+   },
+   {
+    "vi": "rơi xuống, tụt hạng"
+   },
+   {
+    "vi": "bóng ném rơi thẳng đứng (bóng chày)"
+   },
+   {
+    "vi": "thả bóng phạt (golf)"
+   }
+  ]
+ },
+ {
+  "id": 1089600,
+  "m": [
+   {
+    "vi": "nhà trẻ, vườn ươm"
+   },
+   {
+    "vi": "phòng trẻ em"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "共働き世帯が増えたことで駅近くのナーサリーの需要が高まっている。",
+    "vi": "Khi số hộ gia đình cả hai vợ chồng cùng đi làm tăng lên, nhu cầu gửi trẻ gần nhà ga cũng tăng cao."
+   }
+  ]
+ },
+ {
+  "id": 1089620,
+  "m": [
+   {
+    "vi": "y tá, điều dưỡng (nurse)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "深夜の病棟で献身的に働くナースの姿に感謝の気持ちが湧いた。",
+    "vi": "Nhìn hình ảnh các nữ điều dưỡng tận tụy làm việc trong khu bệnh viện đêm khuya, tôi thấy vô cùng biết ơn."
+   }
+  ]
+ },
+ {
+  "id": 1089650,
+  "m": [
+   {
+    "vi": "bồn chồn, lo lắng, căng thẳng (nervous)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "大切なプレゼンの前になるとどうしてもナーバスになってしまう。",
+    "vi": "Hễ sắp đến buổi thuyết trình quan trọng là tôi lại không sao tránh khỏi cảm giác lo lắng."
+   }
+  ]
+ },
+ {
+  "id": 1089660,
+  "m": [
+   {
+    "vi": "ngây thơ, nhạy cảm, chân chất"
+   }
+  ]
+ },
+ {
+  "id": 1089690,
+  "m": [
+   {
+    "vi": "Nigeria"
+   }
+  ]
+ },
+ {
+  "id": 1089700,
+  "m": [
+   {
+    "vi": "tuyệt vời, tốt, hay (nice)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "味方のピンチを救ったセンターの好守備はまさにナイスプレーだった。",
+    "vi": "Pha phòng thủ xuất sắc của cầu thủ trung tâm cứu nguy cho đồng đội thực sự là một pha bóng tuyệt vời."
+   }
+  ]
+ },
+ {
+  "id": 1089750,
+  "m": [
+   {
+    "vi": "chim sơn ca (nightingale)"
+   },
+   {
+    "vi": "Florence Nightingale (bà tổ ngành điều dưỡng)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "看護の道を志したときにナイチンゲールの伝記を読んで感銘を受けた。",
+    "vi": "Khi nuôi chí hướng theo nghề điều dưỡng, tôi đã đọc tiểu sử của Nightingale và vô cùng xúc động."
+   }
+  ]
+ },
+ {
+  "id": 1089760,
+  "m": [
+   {
+    "vi": "hiệp sĩ (knight)"
+   }
+  ]
+ },
+ {
+  "id": 1089800,
+  "m": [
+   {
+    "vi": "hộp đêm (nightclub)"
+   }
+  ]
+ },
+ {
+  "id": 1089910,
+  "m": [
+   {
+    "vi": "sông Nin (Nile)"
+   }
+  ]
+ },
+ {
+  "id": 1089940,
+  "m": [
+   {
+    "vi": "số chín (nine)"
+   },
+   {
+    "vi": "đội bóng chày (gồm 9 cầu thủ)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "優勝を果たした野球部のナインがグラウンドで喜びを爆発させた。",
+    "vi": "Chín cầu thủ của đội bóng chày vừa giành chức vô địch vỡ òa niềm vui trên sân."
+   }
+  ]
+ },
+ {
+  "id": 1089950,
+  "m": [
+   {
+    "vi": "hiện đại, hợp thời, đang thịnh hành"
+   },
+   {
+    "vi": "đang làm gì đó (now)"
+   }
+  ]
+ },
+ {
+  "id": 1089990,
+  "m": [
+   {
+    "vi": "chủ nghĩa dân tộc"
+   }
+  ]
+ },
+ {
+  "id": 1090020,
+  "m": [
+   {
+    "vi": "thuộc quốc gia, toàn quốc (national)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "サッカーのナショナルチームが国際親善試合に向けて合宿を始めた。",
+    "vi": "Đội tuyển quốc gia bóng đá đã bắt đầu tập huấn chuẩn bị cho trận giao hữu quốc tế."
+   }
+  ]
+ },
+ {
+  "id": 1090150,
+  "m": [
+   {
+    "vi": "chuỗi cửa hàng quy mô toàn quốc"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "地方の商店街にも大手のナショナルチェーンが進出してきている。",
+    "vi": "Ngay cả ở các khu phố mua sắm địa phương, các chuỗi cửa hàng lớn toàn quốc cũng đang mở rộng tới."
+   }
+  ]
+ },
+ {
+  "id": 1090240,
+  "m": [
+   {
+    "vi": "Giải bóng chày Quốc gia (National League ở Mỹ)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "メジャーリーグのナショナルリーグで日本人投手が活躍している。",
+    "vi": "Các tay ném người Nhật đang thi đấu nổi bật tại giải National League của bóng chày nhà nghề Mỹ."
+   }
+  ]
+ },
+ {
+  "id": 1090270,
+  "m": [
+   {
+    "vi": "Đức Quốc xã (Nazi)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "歴史の授業で第二次世界大戦中のナチによる支配について学んだ。",
+    "vi": "Trong giờ lịch sử, chúng tôi đã học về sự thống trị của Đức Quốc xã trong Thế chiến thứ hai."
+   }
+  ]
+ },
+ {
+  "id": 1090280,
+  "m": [
+   {
+    "vi": "chủ nghĩa Quốc xã (Nazism)"
+   }
+  ]
+ },
+ {
+  "id": 1090310,
+  "m": [
+   {
+    "vi": "nhà tự nhiên học, người theo chủ nghĩa tự nhiên"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼は森の生態系を観察して記録するナチュラリストとして活動している。",
+    "vi": "Ông ấy hoạt động như một nhà tự nhiên học chuyên quan sát và ghi chép hệ sinh thái rừng."
+   }
+  ]
+ },
+ {
+  "id": 1090340,
+  "m": [
+   {
+    "vi": "tự nhiên, mộc mạc, không gượng gạo"
+   },
+   {
+    "vi": "dấu bình (âm nhạc)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "休日はあまり濃いメイクをせず、ナチュラルな雰囲気で過ごすのが好きだ。",
+    "vi": "Ngày nghỉ tôi không trang điểm đậm mà thích giữ vẻ ngoài tự nhiên nhẹ nhàng."
+   }
+  ]
+ },
+ {
+  "id": 1090430,
+  "m": [
+   {
+    "vi": "khớp ngón tay"
+   },
+   {
+    "vi": "cú ném bóng lắc lư không xoáy (knuckleball)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "投手が投げた不規則に揺れるナックルボールに打者が翻弄された。",
+    "vi": "Tay đánh bóng bị xoay như chong chóng trước cú ném knuckleball bay lắc lư khó lường."
+   }
+  ]
+ },
+ {
+  "id": 1090470,
+  "m": [
+   {
+    "vi": "không có gì (nothing)"
+   },
+   {
+    "vi": "tỷ số không (0-0)"
+   },
+   {
+    "vi": "hoàn toàn không"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "あきらめずに挑戦し続ければ、ナッシングからでも道は開ける。",
+    "vi": "Nếu kiên trì thử thách không bỏ cuộc, ngay cả từ con số không cũng có thể mở ra lối đi."
+   }
+  ]
+ },
+ {
+  "id": 1090480,
+  "m": [
+   {
+    "vi": "đai ốc (đi kèm bu-lông)"
+   },
+   {
+    "vi": "các loại hạt (hạt điều, hạnh nhân...)"
+   }
+  ]
+ },
+ {
+  "id": 1090490,
+  "m": [
+   {
+    "vi": "ba lô đeo vai (knapsack)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "遠足のために新しいナップザックにお弁当と水筒を詰めた。",
+    "vi": "Để đi dã ngoại, tôi xếp hộp cơm và bình nước vào chiếc ba lô mới."
+   }
+  ]
+ },
+ {
+  "id": 1090510,
+  "m": [
+   {
+    "vi": "natri (Na)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "食塩はナトリウムと塩素が結びついてできた化合物である。",
+    "vi": "Muối ăn là hợp chất được tạo thành từ sự kết hợp giữa natri và clo."
+   }
+  ]
+ },
+ {
+  "id": 1090530,
+  "m": [
+   {
+    "vi": "na-nô (tiền tố 10^-9)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "半導体技術ではナノメートル単位の極めて微細な加工が行われる。",
+    "vi": "Trong công nghệ bán dẫn, việc gia công cực kỳ tinh vi ở đơn vị nanomet được thực hiện."
+   }
+  ]
+ },
+ {
+  "id": 1090580,
+  "m": [
+   {
+    "vi": "hoa tiêu, người dẫn đường (navigator)"
+   },
+   {
+    "vi": "người dẫn chương trình truyền hình"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ラジオ番組のナビゲーターを務める彼女の声はとても聞きやすい。",
+    "vi": "Giọng nói của cô ấy khi dẫn chương trình radio rất dễ nghe."
+   }
+  ]
+ },
+ {
+  "id": 1090590,
+  "m": [
+   {
+    "vi": "dầu thô nhẹ naphtha (nguyên liệu hóa dầu)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "石油を精製して得られるナフサはプラスチックの重要な原料になる。",
+    "vi": "Naphtha thu được từ quá trình lọc dầu là nguyên liệu quan trọng để sản xuất nhựa."
+   }
+  ]
+ },
+ {
+  "id": 1090660,
+  "m": [
+   {
+    "vi": "Napoleon"
+   },
+   {
+    "vi": "trò chơi bài Napoleon (kiểu Nhật)"
+   }
+  ]
+ },
+ {
+  "id": 1090670,
+  "m": [
+   {
+    "vi": "Namibia"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "アフリカ南西部のナミビアには世界最古とされるナミブ砂漠がある。",
+    "vi": "Ở Namibia thuộc tây nam châu Phi có sa mạc Namib được coi là lâu đời nhất thế giới."
+   }
+  ]
+ },
+ {
+  "id": 1090770,
+  "m": [
+   {
+    "vi": "lời bình, thuyết minh (narration)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ドキュメンタリー番組の落ち着いたナレーションが内容を引き立てていた。",
+    "vi": "Giọng thuyết minh trầm ấm của chương trình phim tài liệu đã làm nổi bật nội dung."
+   }
+  ]
+ },
+ {
+  "id": 1090780,
+  "m": [
+   {
+    "vi": "người dẫn chuyện, người thuyết minh (narrator)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼は渋い低音の声を活かしてテレビ番組のナレーターとして活躍している。",
+    "vi": "Anh ấy tận dụng chất giọng trầm ấm để hoạt động tích cực với vai trò người thuyết minh chương trình tivi."
+   }
+  ]
+ },
+ {
+  "id": 1090790,
+  "m": [
+   {
+    "vi": "phát sóng hướng đối tượng hẹp (narrowcasting)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "特定の趣味を持つ視聴者に向けたナローキャスティングの番組が増えている。",
+    "vi": "Các chương trình phát sóng nhắm tới nhóm khán giả có sở thích chuyên biệt đang ngày càng tăng."
+   }
+  ]
+ },
+ {
+  "id": 1090890,
+  "m": [
+   {
+    "vi": "biển số xe"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "引っ越しに伴って車のナンバープレートを新しい地域に変更した。",
+    "vi": "Cùng với việc chuyển nhà, tôi đã đổi biển số xe sang khu vực mới."
+   }
+  ]
+ },
+ {
+  "id": 1090900,
+  "m": [
+   {
+    "vi": "số một, hàng đầu"
+   }
+  ]
+ },
+ {
+  "id": 1090940,
+  "m": [
+   {
+    "vi": "đầu gối (knee)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "冬のアウターに合わせて黒のニーハイブーツを購入した。",
+    "vi": "Tôi đã mua đôi bốt cao qua gối màu đen để phối cùng áo khoác mùa đông."
+   }
+  ]
+ },
+ {
+  "id": 1090960,
+  "m": [
+   {
+    "vi": "nhu cầu, đòi hỏi (needs)"
+   }
+  ]
+ },
+ {
+  "id": 1091050,
+  "m": [
+   {
+    "vi": "suýt đâm nhau (máy bay)"
+   },
+   {
+    "vi": "suýt chạm mặt, lướt qua nhau trong gang tấc"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "空の安全を守るため航空機同士のニアミスを防ぐ管制が重要だ。",
+    "vi": "Để bảo vệ an toàn hàng không, công tác kiểm soát ngăn ngừa máy bay suýt va chạm rất quan trọng."
+   }
+  ]
+ },
+ {
+  "id": 1091080,
+  "m": [
+   {
+    "vi": "Nicaragua"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "中米のニカラグアは火山と大きな湖が多い自然豊かな国だ。",
+    "vi": "Nicaragua ở Trung Mỹ là quốc gia giàu thiên nhiên với nhiều núi lửa và hồ lớn."
+   }
+  ]
+ },
+ {
+  "id": 1091120,
+  "m": [
+   {
+    "vi": "chất nicotine (trong thuốc lá)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "禁煙を続けるためにニコチンガムを使って少しずつ慣らしている。",
+    "vi": "Để duy trì việc cai thuốc lá, tôi dùng kẹo cao su chứa nicotine tập quen dần."
+   }
+  ]
+ },
+ {
+  "id": 1091160,
+  "m": [
+   {
+    "vi": "quần ống túm dài đến đầu gối (knickers)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "昔のゴルフ選手はニッカーズと呼ばれる半ズボンをはいてプレーしていた。",
+    "vi": "Các tay golf ngày xưa thường mặc loại quần lửng túm ống khi thi đấu."
+   }
+  ]
+ },
+ {
+  "id": 1091180,
+  "m": [
+   {
+    "vi": "vết sứt nhỏ, tên riêng Nick"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ガラスのコップの縁に小さなニックが入っていないか確認した。",
+    "vi": "Tôi đã kiểm tra xem mép chiếc cốc thủy tinh có bị sứt mẻ nhỏ chỗ nào không."
+   }
+  ]
+ },
+ {
+  "id": 1091190,
+  "m": [
+   {
+    "vi": "biệt danh, tên gọi thân mật"
+   }
+  ]
+ },
+ {
+  "id": 1091200,
+  "m": [
+   {
+    "vi": "niken (Ni)"
+   }
+  ]
+ },
+ {
+  "id": 1091220,
+  "m": [
+   {
+    "vi": "đồ dệt kim, áo len (knit)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "寒い冬の日には暖かくて柔らかなニットのセーターが手放せない。",
+    "vi": "Vào những ngày đông lạnh giá, không thể thiếu chiếc áo len dệt kim vừa ấm vừa mềm mại."
+   }
+  ]
+ },
+ {
+  "id": 1091320,
+  "m": [
+   {
+    "vi": "hư vô, bất cần đời, bi quan (nihilistic)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "その小説の主人公はどこかニヒルな雰囲気を漂わせている。",
+    "vi": "Nhân vật chính của cuốn tiểu thuyết đó toát lên vẻ gì đó hơi bất cần đời."
+   }
+  ]
+ },
+ {
+  "id": 1091460,
+  "m": [
+   {
+    "vi": "New Zealand"
+   }
+  ]
+ },
+ {
+  "id": 1091470,
+  "m": [
+   {
+    "vi": "bang New Jersey (Mỹ)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ニューヨークの川を挟んだ対岸にあるニュージャージー州に住んでいる。",
+    "vi": "Tôi sống ở bang New Jersey nằm bên kia bờ sông đối diện với New York."
+   }
+  ]
+ },
+ {
+  "id": 1091580,
+  "m": [
+   {
+    "vi": "nguồn tin (news source)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ジャーナリストはニュースソースの秘匿を厳格に守る必要がある。",
+    "vi": "Nhà báo cần phải tuân thủ nghiêm ngặt việc giữ bí mật nguồn tin."
+   }
+  ]
+ },
+ {
+  "id": 1091640,
+  "m": [
+   {
+    "vi": "bản tin định kỳ (newsletter)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "お気に入りのブランドから新着情報を知らせるニュースレターが届いた。",
+    "vi": "Bản tin thông báo thông tin mới từ thương hiệu yêu thích đã được gửi tới."
+   }
+  ]
+ },
+ {
+  "id": 1091710,
+  "m": [
+   {
+    "vi": "khu đô thị mới quy hoạch (new town)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "郊外に開発された緑豊かなニュータウンで子育てをすることにした。",
+    "vi": "Tôi quyết định nuôi dạy con cái tại một khu đô thị mới nhiều cây xanh ở ngoại ô."
+   }
+  ]
+ },
+ {
+  "id": 1091720,
+  "m": [
+   {
+    "vi": "phong cách thời trang truyền thống mới (thập niên 1970)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "1970年代後半の女子大生の間でニュートラという服装が流行した。",
+    "vi": "Vào cuối thập niên 1970, phong cách thời trang truyền thống mới rất thịnh hành trong giới nữ sinh đại học."
+   }
+  ]
+ },
+ {
+  "id": 1091780,
+  "m": [
+   {
+    "vi": "niu-tơn (đơn vị lực)"
+   }
+  ]
+ },
+ {
+  "id": 1091790,
+  "m": [
+   {
+    "vi": "bang New Hampshire (Mỹ)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "秋の紅葉が美しいアメリカのニューハンプシャー州を旅した。",
+    "vi": "Tôi đã đi du lịch bang New Hampshire của Mỹ vào mùa thu lá đỏ tuyệt đẹp."
+   }
+  ]
+ },
+ {
+  "id": 1091820,
+  "m": [
+   {
+    "vi": "gương mặt mới, tân binh (new face)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "芸能界に期待のニューフェイスとして爽やかな若手俳優が登場した。",
+    "vi": "Một nam diễn viên trẻ tươi mới đã xuất hiện trong giới giải trí với tư cách gương mặt mới đầy triển vọng."
+   }
+  ]
+ },
+ {
+  "id": 1091890,
+  "m": [
+   {
+    "vi": "bang New Mexico (Mỹ)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "アメリカ南西部のニューメキシコ州では独特の砂漠の景色が広がる。",
+    "vi": "Ở bang New Mexico phía tây nam nước Mỹ trải rộng khung cảnh sa mạc độc đáo."
+   }
+  ]
+ },
+ {
+  "id": 1091900,
+  "m": [
+   {
+    "vi": "phương tiện truyền thông mới (new media)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "インターネットやSNSといったニューメディアの普及が情報の流れを変えた。",
+    "vi": "Sự phổ cập của các phương tiện truyền thông mới như Internet và mạng xã hội đã làm thay đổi dòng chảy thông tin."
+   }
+  ]
+ },
+ {
+  "id": 1091930,
+  "m": [
+   {
+    "vi": "người dân New York (New Yorker)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "朝の公園をコーヒー片手に歩く姿はまさにニューヨーカーらしい。",
+    "vi": "Hình ảnh vừa cầm ly cà phê vừa đi bộ trong công viên buổi sáng trông thật đúng chất người New York."
+   }
+  ]
+ },
+ {
+  "id": 1091940,
+  "m": [
+   {
+    "vi": "New York"
+   }
+  ]
+ },
+ {
+  "id": 1092020,
+  "m": [
+   {
+    "vi": "nhà lãnh đạo mới (new leader)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "次世代の党を担うニューリーダーの誕生に国民の期待が高まっている。",
+    "vi": "Kỳ vọng của người dân đang dâng cao trước sự xuất hiện của nhà lãnh đạo mới gánh vác thế hệ tiếp theo."
+   }
+  ]
+ },
+ {
+  "id": 1092070,
+  "m": [
+   {
+    "vi": "thần kinh (tiền tố neuro-)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "大学でAIの基盤技術であるニューロコンピュータの研究を行っている。",
+    "vi": "Tại trường đại học, tôi đang nghiên cứu về máy tính thần kinh là công nghệ nền tảng của trí tuệ nhân tạo."
+   }
+  ]
+ },
+ {
+  "id": 1092100,
+  "m": [
+   {
+    "vi": "tế bào thần kinh (neuron)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "人間の脳内では無数のニューロンが複雑に結びついて情報を伝達している。",
+    "vi": "Bên trong não bộ con người, vô số tế bào thần kinh liên kết phức tạp để truyền tải thông tin."
+   }
+  ]
+ },
+ {
+  "id": 1092210,
+  "m": [
+   {
+    "vi": "khỏa thân (nude)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "美術大学の実技試験で石膏像やヌードモデルのデッサンを描いた。",
+    "vi": "Trong kỳ thi thực hành của đại học mỹ thuật, thí sinh vẽ phác họa tượng thạch cao và người mẫu khỏa thân."
+   }
+  ]
+ },
+ {
+  "id": 1092250,
+  "m": [
+   {
+    "vi": "mì sợi (noodle)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "キャンプの夜食にお湯を注ぐだけのカップヌードルを食べた。",
+    "vi": "Vào bữa khuya khi đi cắm trại, tôi đã ăn mì ly chỉ cần rót nước sôi."
+   }
+  ]
+ },
+ {
+  "id": 1092260,
+  "m": [
+   {
+    "vi": "tiểu thuyết vừa (nouvelle)"
+   },
+   {
+    "vi": "mới mẻ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "フランスの新しい映画運動であるヌーベルバーグの作品を観賞した。",
+    "vi": "Tôi đã thưởng thức tác phẩm thuộc phong trào Làn sóng mới của điện ảnh Pháp."
+   }
+  ]
+ },
+ {
+  "id": 1092280,
+  "m": [
+   {
+    "vi": "mới, hiện đại"
+   },
+   {
+    "vi": "trường phái nghệ thuật mới (Art Nouveau)"
+   },
+   {
+    "vi": "rượu vang mới (Beaujolais nouveau)"
+   },
+   {
+    "vi": "mơ hồ, nắm bắt không rõ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "毎年十一月の解禁日にボジョレー・ヌーボーのワインを味わう。",
+    "vi": "Hằng năm vào ngày mở bán trong tháng Mười một, tôi đều thưởng thức rượu vang mới Beaujolais."
+   }
+  ]
+ },
+ {
+  "id": 1092380,
+  "m": [
+   {
+    "vi": "hải quân (navy)"
+   },
+   {
+    "vi": "màu xanh nước biển đậm (navy blue)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "就職活動用に清潔感のある濃いネイビーのスーツを購入した。",
+    "vi": "Tôi đã mua một bộ vest màu xanh than đậm tạo cảm giác chỉn chu để đi xin việc."
+   }
+  ]
+ },
+ {
+  "id": 1092420,
+  "m": [
+   {
+    "vi": "đặt tên (cho sản phẩm, công ty), đặt thương hiệu"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "新商品の魅力が一目で伝わる分かりやすいネーミングを考えた。",
+    "vi": "Tôi đã nghĩ ra một cái tên dễ hiểu giúp truyền tải sức hút của sản phẩm mới ngay từ cái nhìn đầu tiên."
+   }
+  ]
+ },
+ {
+  "id": 1092430,
+  "m": [
+   {
+    "vi": "tên gọi"
+   },
+   {
+    "vi": "biển tên"
+   },
+   {
+    "vi": "lời chú thích"
+   },
+   {
+    "vi": "bản phác thảo kịch bản truyện tranh (name)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "漫画家はまず物語の構成を練るためにネームと呼ばれる下描きを描く。",
+    "vi": "Họa sĩ truyện tranh trước tiên sẽ vẽ bản phác thảo bố cục câu chuyện."
+   }
+  ]
+ },
+ {
+  "id": 1092530,
+  "m": [
+   {
+    "vi": "người Neanderthal (người cổ đại)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "人類学の博物館でネアンデルタール人の復元模型を見た。",
+    "vi": "Tại bảo tàng nhân loại học, tôi đã xem mô hình phục dựng người Neanderthal."
+   }
+  ]
+ },
+ {
+  "id": 1092540,
+  "m": [
+   {
+    "vi": "trần trụi, khỏa thân (naked)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "この携帯電話はSIMフリーのネイキッドな状態で販売されている。",
+    "vi": "Chiếc điện thoại này được bán ở trạng thái nguyên bản không khóa mạng."
+   }
+  ]
+ },
+ {
+  "id": 1092580,
+  "m": [
+   {
+    "vi": "tân, mới (tiền tố neo-)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "十九世紀末の芸術様式に影響を受けたネオクラシックな建築物だ。",
+    "vi": "Đây là công trình kiến trúc tân cổ điển chịu ảnh hưởng từ phong cách nghệ thuật cuối thế kỷ 19."
+   }
+  ]
+ },
+ {
+  "id": 1092650,
+  "m": [
+   {
+    "vi": "chủ nghĩa Tân Quốc xã (neo-Nazi)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ヨーロッパの一部地域で過激なネオナチの動きが懸念されている。",
+    "vi": "Tại một số khu vực ở châu Âu, hoạt động cực đoan của các nhóm Tân Quốc xã đang gây lo ngại."
+   }
+  ]
+ },
+ {
+  "id": 1092740,
+  "m": [
+   {
+    "vi": "khí neon (Ne)"
+   },
+   {
+    "vi": "đèn neon quảng cáo"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "夜の繁華街は色とりどりのネオンが輝いてとても賑やかだ。",
+    "vi": "Khu phố sầm uất về đêm nhộn nhịp với ánh đèn neon đủ màu sắc rực rỡ."
+   }
+  ]
+ },
+ {
+  "id": 1092790,
+  "m": [
+   {
+    "vi": "tiêu cực, bi quan"
+   },
+   {
+    "vi": "phủ định"
+   },
+   {
+    "vi": "âm tính, cực âm (điện học)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "失敗してもあまりネガティブに考えず、前向きに切り替えよう。",
+    "vi": "Dù có thất bại cũng đừng suy nghĩ quá tiêu cực mà hãy hướng về phía trước."
+   }
+  ]
+ },
+ {
+  "id": 1092890,
+  "m": [
+   {
+    "vi": "tính chất, trạng thái (hậu tố -ness)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "英語の授業で形容詞にネスを付けて名詞にする語形変化を学んだ。",
+    "vi": "Trong giờ tiếng Anh, chúng tôi học cách biến đổi từ tính từ thành danh từ bằng cách thêm hậu tố -ness."
+   }
+  ]
+ },
+ {
+  "id": 1092920,
+  "m": [
+   {
+    "vi": "tổ (chim, thú)"
+   },
+   {
+    "vi": "hang ổ, nơi trú ẩn"
+   },
+   {
+    "vi": "lồng ghép (hàm, cấu trúc dữ liệu trong lập trình)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "プログラムが複雑になりすぎないようループのネストを浅くした。",
+    "vi": "Để chương trình không quá phức tạp, tôi đã làm cho cấu trúc vòng lặp lồng nhau nông bớt."
+   }
+  ]
+ },
+ {
+  "id": 1092950,
+  "m": [
+   {
+    "vi": "khăn quàng cổ mỏng (neckerchief)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "首元のアクセントとして模様入りのネッカチーフを巻いた。",
+    "vi": "Tôi quàng thêm chiếc khăn cổ có họa tiết để làm điểm nhấn."
+   }
+  ]
+ },
+ {
+  "id": 1092970,
+  "m": [
+   {
+    "vi": "cổ"
+   },
+   {
+    "vi": "điểm nghẽn cổ chai, trở ngại"
+   },
+   {
+    "vi": "cổ áo"
+   }
+  ]
+ },
+ {
+  "id": 1093020,
+  "m": [
+   {
+    "vi": "mạng lưới"
+   },
+   {
+    "vi": "mạng Internet"
+   },
+   {
+    "vi": "cái lưới (cầu lông, quần vợt, bọc tóc)"
+   },
+   {
+    "vi": "giá ròng, khối lượng tịnh"
+   }
+  ]
+ },
+ {
+  "id": 1093070,
+  "m": [
+   {
+    "vi": "lối đánh áp sát lưới (quần vợt, cầu lông)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ダブルスの試合で積極的なネットプレーを見せてポイントを奪った。",
+    "vi": "Trong trận đánh đôi, anh ấy chủ động lên lưới tấn công và giành được điểm số."
+   }
+  ]
+ },
+ {
+  "id": 1093120,
+  "m": [
+   {
+    "vi": "mạng lưới, hệ thống mạng (network)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "大学時代の友人たちと築いた人的なネットワークは一生の財産だ。",
+    "vi": "Mạng lưới quan hệ bạn bè gây dựng từ thời đại học là tài sản quý giá suốt đời."
+   }
+  ]
+ },
+ {
+  "id": 1093200,
+  "m": [
+   {
+    "vi": "bang Nebraska (Mỹ)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "アメリカ中西部のネブラスカ州ではトウモロコシの栽培が盛んだ。",
+    "vi": "Ở bang Nebraska thuộc miền trung tây nước Mỹ, nghề trồng ngô rất phát triển."
+   }
+  ]
+ },
+ {
+  "id": 1093320,
+  "m": [
+   {
+    "vi": "miễn bình luận (no comment)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "記者からの質問に対し、広報担当者は「ノーコメント」と答えた。",
+    "vi": "Trước câu hỏi của phóng viên, người phát ngôn trả lời rằng \"Miễn bình luận\"."
+   }
+  ]
+ },
+ {
+  "id": 1093330,
+  "m": [
+   {
+    "vi": "tiếng còi kết thúc trận đấu (bóng bầu dục)"
+   },
+   {
+    "vi": "lời khen ngợi lẫn nhau sau trận, làm hòa"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "激しい試合の後、ノーサイドの精神で互いの健闘を称え合った。",
+    "vi": "Sau trận đấu quyết liệt, hai đội đã chúc mừng tinh thần thi đấu của nhau khi trận đấu kết thúc."
+   }
+  ]
+ },
+ {
+  "id": 1093390,
+  "m": [
+   {
+    "vi": "bang Bắc Carolina (Mỹ)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "アメリカ東部のノースカロライナ州は研究機関が集まる地域として有名だ。",
+    "vi": "Bang Bắc Carolina ở miền đông nước Mỹ nổi tiếng là khu vực tập trung nhiều viện nghiên cứu."
+   }
+  ]
+ },
+ {
+  "id": 1093430,
+  "m": [
+   {
+    "vi": "không chạm vào"
+   },
+   {
+    "vi": "không dính líu, không tham gia"
+   }
+  ]
+ },
+ {
+  "id": 1093510,
+  "m": [
+   {
+    "vi": "trận đấu không để đối phương đánh trúng bóng và ghi điểm (bóng chày)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "エース投手が完璧な投球で歴史的なノーヒットノーランゲームを達成した。",
+    "vi": "Tay ném chủ lực với màn trình diễn hoàn hảo đã lập nên trận đấu lịch sử không để lọt hit hay điểm nào."
+   }
+  ]
+ },
+ {
+  "id": 1093550,
+  "m": [
+   {
+    "vi": "cao quý, thanh tao, quý phái (noble)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "このワインはノーブルで上品な香りと深い味わいが特徴だ。",
+    "vi": "Loại rượu vang này có đặc trưng là hương thơm thanh tao quý phái và hậu vị sâu lắng."
+   }
+  ]
+ }
+]

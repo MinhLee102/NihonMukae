@@ -68,6 +68,21 @@ Từ chưa có nghĩa tiếng Việt hiện nghĩa tiếng Anh của JMdict kèm
 
 `data/results/` được đưa lên git: đó là phần tốn công nhất, đừng để mất.
 
+## Cập nhật production khi có thêm batch dịch
+
+Sau khi DB production đã nạp toàn bộ từ điển một lần (dump các bảng `dict_*`), các lần sau chỉ cần gửi phần mới:
+
+```
+python vn/merge_w.py              # ghép N và C thành W0xx (từ W061)
+python -I -X utf8 vn/export_sql.py
+scp work/feed.sql <user>@<vps>:~/
+# trên VPS:
+dc exec -T postgres psql -U nihon -d nihon_mukae -v ON_ERROR_STOP=1 < ~/feed.sql
+```
+
+File SQL (vài MB) chạy trong một giao dịch, chạy lại được, bỏ qua mục admin đã sửa, và không đụng tới đóng góp của
+người dùng. Không dùng `delete from dict_entries` để nạp lại sau khi đã có người đóng góp, vì nó xoá luôn đóng góp.
+
 ## Tab Hán tự (KANJIDIC2 và KanjiVG)
 
 Tải mỗi nguồn vào thư mục riêng trong `sources/` (không đưa lên git), giải nén, rồi nạp:

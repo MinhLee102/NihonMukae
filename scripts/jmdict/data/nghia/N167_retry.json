@@ -1,0 +1,462 @@
+[
+ {
+  "id": 1031810,
+  "m": [
+   {
+    "vi": "vườn cây ăn quả"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "有名なオーチャードホールのコンサートに出かけた。",
+    "vi": "Tôi đã đi xem buổi hòa nhạc tại hội trường Orchard nổi tiếng."
+   }
+  ]
+ },
+ {
+  "id": 1033730,
+  "m": [
+   {
+    "vi": "xuyên đêm, suốt đêm"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "週末に映画館で名作のオールナイト上映が行われた。",
+    "vi": "Cuối tuần tại rạp chiếu phim đã diễn ra buổi chiếu xuyên đêm các tác phẩm kinh điển."
+   }
+  ]
+ },
+ {
+  "id": 1033790,
+  "m": [
+   {
+    "vi": "toàn diện, đa năng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼はどのポジションもこなせるオールラウンドな選手だ。",
+    "vi": "Anh ấy là cầu thủ đa năng có thể chơi tốt ở mọi vị trí."
+   }
+  ]
+ },
+ {
+  "id": 1034020,
+  "m": [
+   {
+    "vi": "phao quây dầu tràn"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "海上保安庁は油の流出を防ぐためオイルフェンスを張った。",
+    "vi": "Lực lượng Bảo vệ Bờ biển đã giăng phao quây dầu để ngăn dầu loang."
+   }
+  ]
+ },
+ {
+  "id": 1034270,
+  "m": [
+   {
+    "vi": "quả đậu bắp"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "夏バテ防止のためにネバネバしたオクラを刻んで食べた。",
+    "vi": "Để chống mệt mỏi mùa hè, tôi đã thái nhỏ đậu bắp nhớt để ăn."
+   }
+  ]
+ },
+ {
+  "id": 1034290,
+  "m": [
+   {
+    "vi": "dàn nhạc giao hưởng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "カラオケはオーケストラを省略したオケという言葉から生まれた。",
+    "vi": "Từ karaoke bắt nguồn từ cách gọi tắt \"oke\" của dàn nhạc giao hưởng."
+   }
+  ]
+ },
+ {
+  "id": 1034400,
+  "m": [
+   {
+    "vi": "khí ô-zôn"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "成層圏にあるオゾン層が地球を紫外線から守っている。",
+    "vi": "Tầng ô-zôn ở tầng bình lưu đang bảo vệ Trái Đất khỏi tia cực tím."
+   }
+  ]
+ },
+ {
+  "id": 1034410,
+  "m": [
+   {
+    "vi": "lỗ thủng tầng ô-zôn"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "フロンガスの排出規制により南極のオゾンホールは縮小傾向にある。",
+    "vi": "Nhờ quy định hạn chế khí CFC, lỗ thủng tầng ô-zôn ở Nam Cực đang có xu hướng thu hẹp."
+   }
+  ]
+ },
+ {
+  "id": 1034420,
+  "m": [
+   {
+    "vi": "otaku, người mê cuồng (anime, game...)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "秋葉原にはアニメやゲームのオタク文化が集まっている。",
+    "vi": "Khu Akihabara là nơi tập trung văn hóa otaku của anime và trò chơi điện tử."
+   }
+  ]
+ },
+ {
+  "id": 1034600,
+  "m": [
+   {
+    "vi": "tắt (công tắc)"
+   },
+   {
+    "vi": "mùa thấp điểm, ngày nghỉ"
+   },
+   {
+    "vi": "in offset"
+   },
+   {
+    "vi": "địa hình gồ ghề (off-road)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "休日は仕事のメールをオフにしてゆっくり休むようにしている。",
+    "vi": "Ngày nghỉ tôi thường tắt email công việc để nghỉ ngơi thư giãn."
+   }
+  ]
+ },
+ {
+  "id": 1034780,
+  "m": [
+   {
+    "vi": "mùa thấp điểm, ngoài mùa giải"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "オフシーズンの観光地は混雑が少なくて過ごしやすい。",
+    "vi": "Khu du lịch vào mùa thấp điểm ít đông đúc nên rất dễ chịu."
+   }
+  ]
+ },
+ {
+  "id": 1034870,
+  "m": [
+   {
+    "vi": "địa hình hiểm trở, không trải nhựa (off-road)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "休日にオフロードバイクで山道を走るのが趣味だ。",
+    "vi": "Sở thích của tôi là lái xe máy địa hình chạy đường núi vào ngày nghỉ."
+   }
+  ]
+ },
+ {
+  "id": 1034880,
+  "m": [
+   {
+    "vi": "quan sát viên"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "国際会議にオブザーバーとして参加して議論を見守った。",
+    "vi": "Tôi tham dự hội nghị quốc tế với tư cách quan sát viên để theo dõi cuộc thảo luận."
+   }
+  ]
+ },
+ {
+  "id": 1035150,
+  "m": [
+   {
+    "vi": "ca phẫu thuật, ca mổ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "外科医は数時間に及ぶ難しいオペを無事に成功させた。",
+    "vi": "Bác sĩ phẫu thuật đã thực hiện thành công ca mổ khó kéo dài nhiều giờ."
+   }
+  ]
+ },
+ {
+  "id": 1035430,
+  "m": [
+   {
+    "vi": "tuyển tập nhiều phần ghép lại (omnibus)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "五人の監督が手掛けたオムニバス映画を観に行った。",
+    "vi": "Tôi đã đi xem bộ phim tuyển tập gồm các phần do năm đạo diễn thực hiện."
+   }
+  ]
+ },
+ {
+  "id": 1035480,
+  "m": [
+   {
+    "vi": "lời sấm truyền, nhà tiên tri"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "古代ギリシャでは神殿で神の言葉を伝えるオラクルが信じられていた。",
+    "vi": "Ở Hy Lạp cổ đại, người ta tin vào những lời sấm truyền của thần linh tại đền thờ."
+   }
+  ]
+ },
+ {
+  "id": 1035530,
+  "m": [
+   {
+    "vi": "chủ nghĩa Đông phương (Orientalism)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "十九世紀のヨーロッパ絵画にはオリエンタリズムの影響が見られる。",
+    "vi": "Trong hội họa châu Âu thế kỷ 19 có thể thấy ảnh hưởng của chủ nghĩa Đông phương."
+   }
+  ]
+ },
+ {
+  "id": 1035560,
+  "m": [
+   {
+    "vi": "trò chơi tìm đường theo bản đồ và la bàn (orienteering)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "林間学校で地図を頼りにチェックポイントを回るオリエンテーリングをした。",
+    "vi": "Ở trại hè trong rừng, chúng tôi đã chơi trò tìm đường qua các trạm dựa vào bản đồ."
+   }
+  ]
+ },
+ {
+  "id": 1035890,
+  "m": [
+   {
+    "vi": "bật (công tắc)"
+   },
+   {
+    "vi": "bóng lăn lên vùng cỏ mịn (golf)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "部屋に入ったらまずエアコンのスイッチをオンにした。",
+    "vi": "Vừa bước vào phòng, việc đầu tiên tôi làm là bật công tắc điều hòa."
+   }
+  ]
+ },
+ {
+  "id": 1036040,
+  "m": [
+   {
+    "vi": "sự xuất hiện dồn dập, màn trình diễn liên tiếp"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "この番組は懐かしの名曲のオンパレードで楽しめた。",
+    "vi": "Chương trình này tràn ngập liên tiếp những ca khúc kinh điển xưa khiến người xem rất thích thú."
+   }
+  ]
+ },
+ {
+  "id": 1036230,
+  "m": [
+   {
+    "vi": "chế độ đẳng cấp (caste)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "歴史の授業でインドの伝統的なカースト制度について学んだ。",
+    "vi": "Trong giờ lịch sử, chúng tôi đã học về chế độ đẳng cấp truyền thống của Ấn Độ."
+   }
+  ]
+ },
+ {
+  "id": 1036260,
+  "m": [
+   {
+    "vi": "con trỏ chuột (cursor)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "画面上のカーソルを動かして目的のアイコンをクリックした。",
+    "vi": "Tôi di chuyển con trỏ trên màn hình và nhấp vào biểu tượng cần mở."
+   }
+  ]
+ },
+ {
+  "id": 1036280,
+  "m": [
+   {
+    "vi": "màn rượt đuổi bằng ô tô"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "アクション映画の冒頭で迫力満点のカーチェイスが展開された。",
+    "vi": "Ở phần mở đầu bộ phim hành động diễn ra màn rượt đuổi ô tô đầy kịch tính."
+   }
+  ]
+ },
+ {
+  "id": 1036340,
+  "m": [
+   {
+    "vi": "áo len cài khuy (cardigan)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "少し肌寒いのでシャツの上に薄手のカーディガンを羽織った。",
+    "vi": "Vì trời hơi se lạnh nên tôi khoác thêm chiếc áo len cài khuy mỏng ra ngoài áo sơ mi."
+   }
+  ]
+ },
+ {
+  "id": 1036600,
+  "m": [
+   {
+    "vi": "cacbon, sợi cacbon"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "この自転車のフレームは軽くて丈夫なカーボン素材で作られている。",
+    "vi": "Khung chiếc xe đạp này được làm bằng chất liệu sợi cacbon vừa nhẹ vừa bền."
+   }
+  ]
+ },
+ {
+  "id": 1036740,
+  "m": [
+   {
+    "vi": "môn bi đá trên băng (curling)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "冬のオリンピックで日本のカーリング女子チームが活躍した。",
+    "vi": "Đội tuyển bi đá trên băng nữ của Nhật Bản đã thi đấu xuất sắc tại Thế vận hội Mùa đông."
+   }
+  ]
+ },
+ {
+  "id": 1036770,
+  "m": [
+   {
+    "vi": "cuộc đua ô tô"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "週末にサーキット場へ行って迫力あるカーレースを観戦した。",
+    "vi": "Cuối tuần tôi đã đến trường đua để xem một cuộc đua ô tô đầy phấn khích."
+   }
+  ]
+ },
+ {
+  "id": 1036780,
+  "m": [
+   {
+    "vi": "tên riêng Kahn, giãn cách chữ (kern)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ドイツの有名なゴールキーパーだったカーン選手を覚えている。",
+    "vi": "Tôi vẫn nhớ thủ môn nổi tiếng người Đức Kahn."
+   }
+  ]
+ },
+ {
+  "id": 1036900,
+  "m": [
+   {
+    "vi": "chuyên viên tư vấn tâm lý"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "悩みが解決しないときは専門のカウンセラーに相談するとよい。",
+    "vi": "Khi nỗi băn khoăn không thể tự giải quyết, bạn nên tìm đến chuyên viên tư vấn tâm lý."
+   }
+  ]
+ },
+ {
+  "id": 1036910,
+  "m": [
+   {
+    "vi": "sự tư vấn, tham vấn tâm lý"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "学校には生徒が気軽に受けられるカウンセリング室がある。",
+    "vi": "Ở trường có phòng tham vấn tâm lý để học sinh có thể thoải mái tìm đến."
+   }
+  ]
+ },
+ {
+  "id": 1037190,
+  "m": [
+   {
+    "vi": "sòng bạc (casino)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "観光振興のためにカジノを含む統合型リゾートの誘致が議論されている。",
+    "vi": "Việc thu hút khu nghỉ dưỡng tích hợp có sòng bạc nhằm thúc đẩy du lịch đang được thảo luận."
+   }
+  ]
+ },
+ {
+  "id": 1037200,
+  "m": [
+   {
+    "vi": "thường ngày, thoải mái, không trang trọng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "金曜日はカジュアルな服装で出社してもよいことになっている。",
+    "vi": "Vào thứ Sáu, nhân viên được phép mặc trang phục thoải mái đi làm."
+   }
+  ]
+ }
+]

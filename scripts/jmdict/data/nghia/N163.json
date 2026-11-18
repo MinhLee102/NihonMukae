@@ -1,0 +1,3773 @@
+[
+ {
+  "id": 1492600,
+  "m": [
+   {
+    "vi": "bất tử, mình đồng da sắt, không biết đau"
+   }
+  ]
+ },
+ {
+  "id": 1495030,
+  "m": [
+   {
+    "vi": "không ngủ không nghỉ, làm việc thâu đêm suốt sáng"
+   }
+  ]
+ },
+ {
+  "id": 1495900,
+  "m": [
+   {
+    "vi": "lợi dụng (điểm yếu, sơ hở)"
+   },
+   {
+    "vi": "ghi sổ (mục kế toán)"
+   }
+  ]
+ },
+ {
+  "id": 1496050,
+  "m": [
+   {
+    "vi": "lợi dụng, thừa cơ (điểm yếu, sự bất cẩn của ai)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "相手の弱みに付け入って不当な要求を突きつけた。",
+    "vi": "Hắn lợi dụng điểm yếu của đối phương để đưa ra yêu sách vô lý."
+   }
+  ]
+ },
+ {
+  "id": 1496470,
+  "m": [
+   {
+    "vi": "bến tàu, cầu cảng"
+   }
+  ]
+ },
+ {
+  "id": 1499800,
+  "m": [
+   {
+    "vi": "thuần phong mỹ tục, kỷ cương xã hội"
+   }
+  ]
+ },
+ {
+  "id": 1501000,
+  "m": [
+   {
+    "vi": "uống thuốc"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "医師の指示通りに毎日欠かさず服薬を続けている。",
+    "vi": "Tôi vẫn duy trì uống thuốc đều đặn mỗi ngày theo đúng chỉ dẫn của bác sĩ."
+   }
+  ]
+ },
+ {
+  "id": 1504830,
+  "m": [
+   {
+    "vi": "tuyết bột, tuyết mịn"
+   }
+  ]
+ },
+ {
+  "id": 1506610,
+  "m": [
+   {
+    "vi": "binh đoàn, quân đoàn"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "国境を守るために精鋭の兵団が派遣された。",
+    "vi": "Một binh đoàn tinh nhuệ đã được cử đi để bảo vệ biên giới."
+   }
+  ]
+ },
+ {
+  "id": 1508430,
+  "m": [
+   {
+    "vi": "ngồi thành hàng, có mặt đông đủ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "会議室には会社の重役たちがずらりと並み居ていた。",
+    "vi": "Trong phòng họp, các lãnh đạo cấp cao của công ty đang ngồi thành hàng dài."
+   }
+  ]
+ },
+ {
+  "id": 1509870,
+  "m": [
+   {
+    "vi": "loại khác, giống loài khác"
+   }
+  ]
+ },
+ {
+  "id": 1515500,
+  "m": [
+   {
+    "vi": "bao gồm, bao hàm"
+   },
+   {
+    "vi": "bao trùm (logic)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "多様な文化や価値観を包摂する社会を目指している。",
+    "vi": "Chúng tôi hướng tới một xã hội bao dung nhiều nền văn hóa và giá trị đa dạng."
+   }
+  ]
+ },
+ {
+  "id": 1516320,
+  "m": [
+   {
+    "vi": "ôm chặt lấy, ôm chầm lấy"
+   }
+  ]
+ },
+ {
+  "id": 1517140,
+  "m": [
+   {
+    "vi": "bạn bè thân hữu, bằng hữu"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "学生時代からの朋友と久しぶりに酒を酌み交わした。",
+    "vi": "Tôi đã cùng người bạn thân từ thời sinh viên nâng ly sau bao ngày xa cách."
+   }
+  ]
+ },
+ {
+  "id": 1517680,
+  "m": [
+   {
+    "vi": "khâu vào, đính vào"
+   }
+  ]
+ },
+ {
+  "id": 1522600,
+  "m": [
+   {
+    "vi": "phần chính (của tạp chí)"
+   },
+   {
+    "vi": "tạp chí này, tạp chí của chúng tôi"
+   }
+  ],
+  "hv": "bản chí",
+  "ex": [
+   {
+    "ja": "詳細は本誌の次号にて改めてご報告いたします。",
+    "vi": "Chi tiết xin phép được thông báo lại trong số tiếp theo của tạp chí này."
+   }
+  ]
+ },
+ {
+  "id": 1523660,
+  "m": [
+   {
+    "vi": "tầm thường, bình thường, xoàng xĩnh"
+   }
+  ]
+ },
+ {
+  "id": 1532540,
+  "m": [
+   {
+    "vi": "sáng mai"
+   }
+  ],
+  "hv": "minh triều"
+ },
+ {
+  "id": 1532650,
+  "m": [
+   {
+    "vi": "rõ ràng, rành mạch, sáng suốt"
+   }
+  ]
+ },
+ {
+  "id": 1534430,
+  "m": [
+   {
+    "vi": "giá để hành lý trên cao (trên tàu, xe buýt)"
+   }
+  ]
+ },
+ {
+  "id": 1536760,
+  "m": [
+   {
+    "vi": "hoa anh đào về đêm"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ライトアップされた公園の夜桜を見に出かけた。",
+    "vi": "Tôi đã đi ngắm hoa anh đào được thắp đèn rực rỡ về đêm ở công viên."
+   }
+  ]
+ },
+ {
+  "id": 1542110,
+  "m": [
+   {
+    "vi": "bạn chơi cùng"
+   }
+  ],
+  "hv": "du tương thủ"
+ },
+ {
+  "id": 1542620,
+  "m": [
+   {
+    "vi": "tuyết tan"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "春の訪れとともに山の融雪が進み川の水が増えた。",
+    "vi": "Khi xuân về, tuyết trên núi tan dần khiến mực nước sông dâng lên."
+   }
+  ]
+ },
+ {
+  "id": 1544030,
+  "m": [
+   {
+    "vi": "nghề tay trái, thú vui tao nhã ngoài công việc chính"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼は本業の傍ら、余技として油絵を描いている。",
+    "vi": "Bên cạnh công việc chính, anh ấy còn vẽ tranh sơn dầu như một thú vui tao nhã."
+   }
+  ]
+ },
+ {
+  "id": 1545970,
+  "m": [
+   {
+    "vi": "phòng kiểu Tây"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "和室を改装してフローリングの洋室に作り替えた。",
+    "vi": "Tôi đã cải tạo phòng kiểu Nhật thành phòng kiểu Tây lát sàn gỗ."
+   }
+  ]
+ },
+ {
+  "id": 1547780,
+  "m": [
+   {
+    "vi": "sự chi viện, ứng cứu"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "被災地へ各地から医療チームの来援が相次いだ。",
+    "vi": "Các đội ngũ y tế từ khắp nơi liên tiếp đến chi viện cho vùng bị thiên tai."
+   }
+  ]
+ },
+ {
+  "id": 1550700,
+  "m": [
+   {
+    "vi": "cửa gỗ phía sau, cổng hậu"
+   }
+  ],
+  "hv": "lý mộc hộ",
+  "ex": [
+   {
+    "ja": "庭の手入れをするために裏木戸を開けて外へ出た。",
+    "vi": "Tôi mở cửa gỗ phía sau đi ra ngoài để chăm sóc khu vườn."
+   }
+  ]
+ },
+ {
+  "id": 1551080,
+  "m": [
+   {
+    "vi": "chiến tranh trên bộ, lục chiến"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "かつてこの平野で激しい陸戦が繰り広げられた。",
+    "vi": "Xưa kia trên đồng bằng này từng diễn ra một trận lục chiến ác liệt."
+   }
+  ]
+ },
+ {
+  "id": 1551310,
+  "m": [
+   {
+    "vi": "rời đi, bỏ đi"
+   }
+  ]
+ },
+ {
+  "id": 1551360,
+  "m": [
+   {
+    "vi": "đến mức, lâm vào tình trạng (nghiêm trọng)"
+   }
+  ]
+ },
+ {
+  "id": 1551390,
+  "m": [
+   {
+    "vi": "đứng ăn (tại quầy hàng rong, quán mì đứng)"
+   }
+  ],
+  "hv": "lập thực"
+ },
+ {
+  "id": 1551460,
+  "m": [
+   {
+    "vi": "đứng san sát thành hàng (cửa hàng, nhà cửa)"
+   },
+   {
+    "vi": "sánh ngang với"
+   }
+  ]
+ },
+ {
+  "id": 1552960,
+  "m": [
+   {
+    "vi": "Long Cung (cung điện của Long Vương dưới đáy biển)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "浦島太郎は亀に連れられて海の底の竜宮を訪れた。",
+    "vi": "Urashima Taro được rùa biển đưa đến thăm Long Cung dưới đáy đại dương."
+   }
+  ]
+ },
+ {
+  "id": 1553240,
+  "m": [
+   {
+    "vi": "lịch trình chuyến đi, kế hoạch hành trình"
+   },
+   {
+    "vi": "chặng đường du hành"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "旅行代理店から届いた詳しい旅程を確認した。",
+    "vi": "Tôi đã kiểm tra lại lịch trình chi tiết do công ty du lịch gửi tới."
+   }
+  ]
+ },
+ {
+  "id": 1554450,
+  "m": [
+   {
+    "vi": "thợ săn"
+   }
+  ]
+ },
+ {
+  "id": 1555340,
+  "m": [
+   {
+    "vi": "gỉ đồng xanh"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "古い銅像の表面が酸化して美しい緑青を吹いている。",
+    "vi": "Bề mặt bức tượng đồng cổ bị oxy hóa tạo nên lớp gỉ đồng xanh tuyệt đẹp."
+   }
+  ]
+ },
+ {
+  "id": 1556530,
+  "m": [
+   {
+    "vi": "chứng minh bằng ví dụ, dẫn chứng"
+   }
+  ]
+ },
+ {
+  "id": 1556900,
+  "m": [
+   {
+    "vi": "đối xử lạnh nhạt, hắt hủi"
+   }
+  ]
+ },
+ {
+  "id": 1560160,
+  "m": [
+   {
+    "vi": "lộ ra, phơi bày"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "調査が進むにつれて組織の不正が次々と露呈した。",
+    "vi": "Khi cuộc điều tra tiến triển, những sai phạm của tổ chức lần lượt bị phơi bày."
+   }
+  ]
+ },
+ {
+  "id": 1560720,
+  "m": [
+   {
+    "vi": "ngâm thơ (thơ Nhật hoặc thơ Hán)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "新年を祝う宮中の行事で和歌が朗詠された。",
+    "vi": "Trong nghi lễ đầu năm của hoàng cung, những bài thơ waka đã được ngâm lên."
+   }
+  ]
+ },
+ {
+  "id": 1569060,
+  "m": [
+   {
+    "vi": "xông khói khử trùng, hun khói"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "害虫を駆除するために倉庫内を薬剤で燻蒸した。",
+    "vi": "Để diệt trừ sâu bọ, họ đã xông khói khử trùng bên trong nhà kho."
+   }
+  ]
+ },
+ {
+  "id": 1572770,
+  "m": [
+   {
+    "vi": "cãi vã, xích mích, tranh chấp"
+   }
+  ]
+ },
+ {
+  "id": 1576070,
+  "m": [
+   {
+    "vi": "một ngọn núi"
+   },
+   {
+    "vi": "một đống, một lô"
+   },
+   {
+    "vi": "giai đoạn khó khăn nhất"
+   },
+   {
+    "vi": "món hời lớn, thắng lớn"
+   }
+  ],
+  "hv": "nhất sơn"
+ },
+ {
+  "id": 1578490,
+  "m": [
+   {
+    "vi": "cổ văn, văn học cổ điển Nhật Bản"
+   },
+   {
+    "vi": "chữ Hán cổ (trước thời Tần)"
+   }
+  ]
+ },
+ {
+  "id": 1578560,
+  "m": [
+   {
+    "vi": "mưa đầu hạ (mùa mưa tháng 5 âm lịch)"
+   }
+  ]
+ },
+ {
+  "id": 1580930,
+  "m": [
+   {
+    "vi": "amiăng (thạch miên)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "古いビルの解体工事では石綿の飛散防止が徹底される。",
+    "vi": "Trong công trình phá dỡ tòa nhà cũ, việc ngăn chặn bụi amiăng phát tán được thực hiện triệt để."
+   }
+  ]
+ },
+ {
+  "id": 1582840,
+  "m": [
+   {
+    "vi": "nhảy xuống nước tự tử, trầm mình"
+   },
+   {
+    "vi": "xuống nước, chạm mặt nước"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "歴史上の悲劇的な人物が入水して命を絶った。",
+    "vi": "Một nhân vật bi kịch trong lịch sử đã trầm mình xuống nước tự vẫn."
+   }
+  ]
+ },
+ {
+  "id": 1585420,
+  "m": [
+   {
+    "vi": "tù binh, kẻ bị bắt"
+   },
+   {
+    "vi": "kẻ si mê, nô lệ (của tình yêu, dục vọng)"
+   }
+  ]
+ },
+ {
+  "id": 1586690,
+  "m": [
+   {
+    "vi": "trời mưa, cơn mưa"
+   },
+   {
+    "vi": "có mưa, ướt mưa"
+   }
+  ],
+  "hv": "vũ giáng"
+ },
+ {
+  "id": 1589120,
+  "m": [
+   {
+    "vi": "ép mua hàng, bán hàng kiểu chèo kéo"
+   },
+   {
+    "vi": "áp đặt (lòng tốt)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "玄関先でのしつこい押し売りはきっぱり断るべきだ。",
+    "vi": "Nên kiên quyết từ chối những người bán hàng chèo kéo dai dẳng trước cửa nhà."
+   }
+  ]
+ },
+ {
+  "id": 1601250,
+  "m": [
+   {
+    "vi": "bệnh giang mai"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "近年、若者の間で梅毒の感染者が増加しているという。",
+    "vi": "Nghe nói những năm gần đây số người mắc bệnh giang mai trong giới trẻ đang gia tăng."
+   }
+  ]
+ },
+ {
+  "id": 1601410,
+  "m": [
+   {
+    "vi": "cạn khô, khô kiệt, hết sạch tiền"
+   }
+  ],
+  "hv": "can thượng"
+ },
+ {
+  "id": 1603570,
+  "m": [
+   {
+    "vi": "đào bới lên, xới lên"
+   },
+   {
+    "vi": "khơi lại (chuyện cũ, bê bối)"
+   }
+  ]
+ },
+ {
+  "id": 1603830,
+  "m": [
+   {
+    "vi": "ngọc bội hình dấu phẩy (magatama)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "古代の遺跡から翡翠で作られた美しい勾玉が出土した。",
+    "vi": "Từ di tích cổ đại đã khai quật được viên ngọc hình dấu phẩy tuyệt đẹp làm bằng ngọc bích."
+   }
+  ]
+ },
+ {
+  "id": 1604410,
+  "m": [
+   {
+    "vi": "tờ gác (của sách)"
+   },
+   {
+    "vi": "miếng vải lót mép áo"
+   },
+   {
+    "vi": "ngoái nhìn, vượt mặt đối thủ"
+   }
+  ],
+  "hv": "kiến phản"
+ },
+ {
+  "id": 1610730,
+  "m": [
+   {
+    "vi": "biển thông báo bằng gỗ dựng trên cọc"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "神社の入り口にある立て札に参拝の注意書きがあった。",
+    "vi": "Trên tấm biển gỗ ở cổng đền có ghi những lưu ý khi vào lễ."
+   }
+  ]
+ },
+ {
+  "id": 1613980,
+  "m": [
+   {
+    "vi": "sự xác nhận, sự kiểm chứng"
+   }
+  ]
+ },
+ {
+  "id": 1615180,
+  "m": [
+   {
+    "vi": "mang vẻ đồng quê, thơ mộng, bình yên"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "羊が草を食む牧歌的な風景に心が和んだ。",
+    "vi": "Lòng tôi thấy bình yên trước khung cảnh đồng quê thơ mộng với đàn cừu gặm cỏ."
+   }
+  ]
+ },
+ {
+  "id": 1616620,
+  "m": [
+   {
+    "vi": "triều cống, dâng cống phẩm"
+   }
+  ],
+  "hv": "triều cống",
+  "ex": [
+   {
+    "ja": "古代の周辺諸国は強大な王朝に使者を送り朝貢していた。",
+    "vi": "Các nước láng giềng thời cổ đại thường cử sứ giả sang triều cống cho vương triều hùng mạnh."
+   }
+  ]
+ },
+ {
+  "id": 1618520,
+  "m": [
+   {
+    "vi": "bắt trượt bóng, làm rơi bóng (bóng chày)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "外野手が簡単なフライを落球してしまい、観客からため息が漏れた。",
+    "vi": "Cầu thủ ngoài sân bắt trượt quả bóng bổng đơn giản khiến khán giả thở dài tiếc nuối."
+   }
+  ]
+ },
+ {
+  "id": 1619480,
+  "m": [
+   {
+    "vi": "đặt đối lập, đối chiếu tương phản"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "筆者は伝統と革新という二つの概念を対置して論じた。",
+    "vi": "Tác giả đã đặt hai khái niệm truyền thống và đổi mới đối chiếu với nhau để bàn luận."
+   }
+  ]
+ },
+ {
+  "id": 1620260,
+  "m": [
+   {
+    "vi": "đi kèm, theo sau"
+   },
+   {
+    "vi": "liên hợp (toán học)"
+   }
+  ]
+ },
+ {
+  "id": 1622070,
+  "m": [
+   {
+    "vi": "đọc đều đều không cảm xúc"
+   },
+   {
+    "vi": "đọc thẳng chữ Hán không dịch nghĩa"
+   }
+  ],
+  "hv": "bổng độc"
+ },
+ {
+  "id": 1622480,
+  "m": [
+   {
+    "vi": "sự làm tổ (của phôi thai trong tử cung)"
+   }
+  ],
+  "hv": "trước sàng",
+  "ex": [
+   {
+    "ja": "受精卵が子宮の内膜に無事着床したことを確認した。",
+    "vi": "Bác sĩ đã xác nhận trứng thụ tinh làm tổ thành công ở niêm mạc tử cung."
+   }
+  ]
+ },
+ {
+  "id": 1622490,
+  "m": [
+   {
+    "vi": "hạ cánh xuống mặt nước, rơi xuống nước"
+   }
+  ],
+  "hv": "trước thủy",
+  "ex": [
+   {
+    "ja": "帰還した宇宙船のカプセルが予定通り太平洋に着水した。",
+    "vi": "Khoang tàu vũ trụ trở về đã hạ cánh xuống Thái Bình Dương đúng kế hoạch."
+   }
+  ]
+ },
+ {
+  "id": 1622980,
+  "m": [
+   {
+    "vi": "viêm ruột"
+   }
+  ],
+  "hv": "tràng viêm"
+ },
+ {
+  "id": 1623280,
+  "m": [
+   {
+    "vi": "chú chó trung thành"
+   }
+  ]
+ },
+ {
+  "id": 1624310,
+  "m": [
+   {
+    "vi": "nghi thức chào danh dự (của đội danh dự)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "国賓の到着に際して自衛隊による栄誉礼が行われた。",
+    "vi": "Nhân dịp quốc khách đến thăm, Lực lượng Phòng vệ đã cử hành nghi thức chào danh dự."
+   }
+  ]
+ },
+ {
+  "id": 1624700,
+  "m": [
+   {
+    "vi": "lấp đất lên hạt giống"
+   }
+  ],
+  "hv": "phúc thổ",
+  "ex": [
+   {
+    "ja": "種をまいた後は乾燥を防ぐために薄く覆土をする。",
+    "vi": "Sau khi gieo hạt xong, hãy phủ một lớp đất mỏng để tránh bị khô."
+   }
+  ]
+ },
+ {
+  "id": 1625790,
+  "m": [
+   {
+    "vi": "sự e thẹn, nét ngượng ngùng"
+   }
+  ]
+ },
+ {
+  "id": 1627070,
+  "m": [
+   {
+    "vi": "tiền kiếm hằng ngày, tiền trả góp theo ngày"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "商売が軌道に乗るまでは日銭を稼ぐのに必死だった。",
+    "vi": "Trước khi việc buôn bán ổn định, tôi đã phải chật vật kiếm từng đồng tiền mặt hằng ngày."
+   }
+  ]
+ },
+ {
+  "id": 1627450,
+  "m": [
+   {
+    "vi": "bên bờ hào (thành cổ)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "春の休日にはお城の堀端を散歩するのが気持ちいい。",
+    "vi": "Vào ngày nghỉ mùa xuân, đi dạo bên bờ hào của tòa thành thật dễ chịu."
+   }
+  ]
+ },
+ {
+  "id": 1635940,
+  "m": [
+   {
+    "vi": "chạy dọc theo chiều dài"
+   },
+   {
+    "vi": "đi dọc sống núi, chinh phục liên hoàn các đỉnh núi"
+   }
+  ],
+  "hv": "tung tẩu",
+  "ex": [
+   {
+    "ja": "夏休みに仲間と北アルプスの稜線を縦走した。",
+    "vi": "Kỳ nghỉ hè, tôi cùng bạn bè đi dọc theo sống núi dãy Bắc Alps."
+   }
+  ]
+ },
+ {
+  "id": 1638430,
+  "m": [
+   {
+    "vi": "vô tư, không vụ lợi, vị tha"
+   }
+  ],
+  "hv": "vô tư",
+  "ex": [
+   {
+    "ja": "彼女は無私の精神で地域のボランティア活動に励んでいる。",
+    "vi": "Cô ấy hết lòng tham gia hoạt động tình nguyện địa phương với tinh thần vô tư không vụ lợi."
+   }
+  ]
+ },
+ {
+  "id": 1638540,
+  "m": [
+   {
+    "vi": "giấy gọi nhập ngũ (thời chiến)"
+   },
+   {
+    "vi": "giấy đỏ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "戦時中、多くの若者のもとに赤紙と呼ばれる召集令状が届いた。",
+    "vi": "Thời chiến tranh, giấy gọi nhập ngũ màu đỏ đã được gửi tới tay rất nhiều thanh niên."
+   }
+  ]
+ },
+ {
+  "id": 1641830,
+  "m": [
+   {
+    "vi": "hoa tiêu, việc dẫn tàu vào cảng"
+   }
+  ]
+ },
+ {
+  "id": 1642090,
+  "m": [
+   {
+    "vi": "người hiểu biết rộng, cuốn từ điển sống"
+   }
+  ]
+ },
+ {
+  "id": 1642450,
+  "m": [
+   {
+    "vi": "cán dài, vũ khí cán dài (thương, kích)"
+   }
+  ],
+  "hv": "trường bính",
+  "ex": [
+   {
+    "ja": "草を刈るために長柄の鎌を納屋から取り出した。",
+    "vi": "Tôi lấy chiếc liềm cán dài từ trong nhà kho ra để cắt cỏ."
+   }
+  ]
+ },
+ {
+  "id": 1642460,
+  "m": [
+   {
+    "vi": "dây chuyền sản xuất liên tục"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "工場では効率を高めるために流れ作業が導入されている。",
+    "vi": "Trong nhà máy, hệ thống dây chuyền sản xuất được áp dụng để nâng cao hiệu suất."
+   }
+  ]
+ },
+ {
+  "id": 1643250,
+  "m": [
+   {
+    "vi": "mùa vụ bận rộn"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "田植えの時期は農家にとって一年で一番の農繁期だ。",
+    "vi": "Mùa cấy lúa là thời điểm bận rộn nhất trong năm đối với nhà nông."
+   }
+  ]
+ },
+ {
+  "id": 1645050,
+  "m": [
+   {
+    "vi": "thức ăn lỏng (cháo loãng, súp cho người bệnh)"
+   }
+  ],
+  "hv": "lưu động thực"
+ },
+ {
+  "id": 1646340,
+  "m": [
+   {
+    "vi": "đoàn thể, hiệp hội, pháp nhân"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "医療や福祉の分野で活動する社団法人を設立した。",
+    "vi": "Họ đã thành lập một hiệp hội pháp nhân hoạt động trong lĩnh vực y tế và phúc lợi."
+   }
+  ]
+ },
+ {
+  "id": 1650890,
+  "m": [
+   {
+    "vi": "dấu hiệu cảm nhẹ, hơi cảm"
+   }
+  ]
+ },
+ {
+  "id": 1651850,
+  "m": [
+   {
+    "vi": "câu mở đầu của thơ renga"
+   },
+   {
+    "vi": "thơ haiku"
+   },
+   {
+    "vi": "câu đầu 5 âm tiết của thơ tanka"
+   }
+  ],
+  "hv": "phát cú",
+  "ex": [
+   {
+    "ja": "江戸時代の連歌では最初の発句が特に重視された。",
+    "vi": "Trong thể thơ liên ca thời Edo, câu mở đầu đặc biệt được coi trọng."
+   }
+  ]
+ },
+ {
+  "id": 1654440,
+  "m": [
+   {
+    "vi": "Tết Đoan Ngọ (5/5 âm lịch hoặc dương lịch ở Nhật)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "五月五日の端午の節句には鯉のぼりを飾る家庭が多い。",
+    "vi": "Vào dịp Tết Đoan Ngọ ngày mùng 5 tháng 5, nhiều gia đình treo cờ cá chép."
+   }
+  ]
+ },
+ {
+  "id": 1655120,
+  "m": [
+   {
+    "vi": "giá dự kiến"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "来月発売予定の新刊書籍の予価が発表された。",
+    "vi": "Giá dự kiến của cuốn sách mới sắp phát hành vào tháng tới đã được công bố."
+   }
+  ]
+ },
+ {
+  "id": 1656400,
+  "m": [
+   {
+    "vi": "sổ nhật ký"
+   }
+  ]
+ },
+ {
+  "id": 1661740,
+  "m": [
+   {
+    "vi": "hạng đặc biệt, loại thượng hạng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "商店街の福引でなんと特等の温泉旅行が当たった。",
+    "vi": "Trong chương trình bốc thăm ở khu phố mua sắm, tôi lại trúng giải đặc biệt là chuyến du lịch suối nước nóng."
+   }
+  ]
+ },
+ {
+  "id": 1662770,
+  "m": [
+   {
+    "vi": "sách lưu trữ trong thư viện riêng"
+   }
+  ],
+  "hv": "tàng bản",
+  "ex": [
+   {
+    "ja": "その古書店には貴重な歴史資料の蔵本が数多く並んでいる。",
+    "vi": "Hiệu sách cổ đó bày bán rất nhiều đầu sách tư liệu lịch sử quý hiếm."
+   }
+  ]
+ },
+ {
+  "id": 1664890,
+  "m": [
+   {
+    "vi": "nếm thử rượu sake, thẩm định rượu"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "蔵元を訪ねて新酒の利き酒を楽しんだ。",
+    "vi": "Tôi đã ghé thăm xưởng nấu rượu và thưởng thức buổi nếm thử rượu mới."
+   }
+  ]
+ },
+ {
+  "id": 1668160,
+  "m": [
+   {
+    "vi": "bình đựng tro cốt"
+   }
+  ]
+ },
+ {
+  "id": 1669020,
+  "m": [
+   {
+    "vi": "quý công tử, chàng trai xuất thân danh giá"
+   },
+   {
+    "vi": "chàng trai có phong thái quý tộc"
+   }
+  ],
+  "hv": "quý công tử",
+  "ex": [
+   {
+    "ja": "彼は端正な顔立ちと品のある立ち居振る舞いで貴公子と呼ばれている。",
+    "vi": "Anh ấy được gọi là quý công tử nhờ gương mặt thanh tú và phong thái lịch lãm."
+   }
+  ]
+ },
+ {
+  "id": 1673270,
+  "m": [
+   {
+    "vi": "ít người, yếu thế, lực lượng mỏng"
+   }
+  ],
+  "hv": "vô thế"
+ },
+ {
+  "id": 1673780,
+  "m": [
+   {
+    "vi": "không có đối thủ, không cạnh tranh"
+   }
+  ],
+  "hv": "vô cạnh tranh",
+  "ex": [
+   {
+    "ja": "今回の市長選挙は対立候補がおらず無競争で決まった。",
+    "vi": "Cuộc bầu cử thị trưởng lần này không có ứng cử viên đối lập nên đã ngã ngũ mà không cần tranh cử."
+   }
+  ]
+ },
+ {
+  "id": 1678600,
+  "m": [
+   {
+    "vi": "hậu thế, thế hệ tương lai"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "先人たちが残した貴重な遺産を後代に伝えなければならない。",
+    "vi": "Chúng ta phải truyền lại cho hậu thế những di sản quý báu mà tiền nhân để lại."
+   }
+  ]
+ },
+ {
+  "id": 1683070,
+  "m": [
+   {
+    "vi": "cảm thụ, tiếp nhận"
+   },
+   {
+    "vi": "thu sóng, bắt được (tín hiệu)"
+   }
+  ]
+ },
+ {
+  "id": 1683510,
+  "m": [
+   {
+    "vi": "người tiên phong, lực lượng đi đầu"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼は環境保護運動の急先鋒として全国を飛び回っている。",
+    "vi": "Ông ấy đang đi khắp cả nước với tư cách người tiên phong của phong trào bảo vệ môi trường."
+   }
+  ]
+ },
+ {
+  "id": 1683930,
+  "m": [
+   {
+    "vi": "cấp học bổng, đài thọ chi phí"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "成績優秀な学生に対して大学から給費の制度がある。",
+    "vi": "Trường đại học có chế độ cấp học bổng dành cho những sinh viên có thành tích xuất sắc."
+   }
+  ]
+ },
+ {
+  "id": 1687370,
+  "m": [
+   {
+    "vi": "Bộ Công Thương Nhật Bản (MITI, 1949-2001)"
+   }
+  ],
+  "hv": "thông thương sản nghiệp tỉnh",
+  "ex": [
+   {
+    "ja": "かつての通商産業省は現在の経済産業省の前身にあたる。",
+    "vi": "Bộ Công Thương trước đây chính là tiền thân của Bộ Kinh tế, Thương mại và Công nghiệp hiện nay."
+   }
+  ]
+ },
+ {
+  "id": 1688290,
+  "m": [
+   {
+    "vi": "đáng đọc, đọc thấy thấm thía, giàu nội dung"
+   }
+  ],
+  "hv": "độc ứng",
+  "ex": [
+   {
+    "ja": "この長編小説は内容が重厚で非常に読み応えがある。",
+    "vi": "Cuốn tiểu thuyết trường thiên này có nội dung sâu sắc, đọc rất thấm thía."
+   }
+  ]
+ },
+ {
+  "id": 1689660,
+  "m": [
+   {
+    "vi": "điều phối tàu, phân bổ tàu"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "需要の増加に合わせて貨物航路の配船数を増やした。",
+    "vi": "Công ty đã tăng số lượng tàu phân bổ trên tuyến vận tải hàng hóa theo đà tăng của nhu cầu."
+   }
+  ]
+ },
+ {
+  "id": 1689870,
+  "m": [
+   {
+    "vi": "thủy phi cơ"
+   }
+  ],
+  "hv": "phi hành đĩnh",
+  "ex": [
+   {
+    "ja": "離島の急患を搬送するために海上自衛隊の飛行艇が出動した。",
+    "vi": "Thủy phi cơ của Lực lượng Phòng vệ Biển đã xuất kích để vận chuyển bệnh nhân nguy kịch từ đảo xa."
+   }
+  ]
+ },
+ {
+  "id": 1690650,
+  "m": [
+   {
+    "vi": "hụt hẫng, cụt hứng"
+   }
+  ],
+  "hv": "phách tử bạt"
+ },
+ {
+  "id": 1694770,
+  "m": [
+   {
+    "vi": "đồ trang trí, đồ bày cho có hình thức"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "実権のない会長職は単なるお飾りにすぎない。",
+    "vi": "Chức chủ tịch không có thực quyền chẳng qua chỉ là bình phong trang trí mà thôi."
+   }
+  ]
+ },
+ {
+  "id": 1696080,
+  "m": [
+   {
+    "vi": "sáng sớm mới về nhà (sau khi đi chơi qua đêm)"
+   }
+  ],
+  "hv": "triều quy",
+  "ex": [
+   {
+    "ja": "終電を逃してしまい、結局朝帰りになってしまった。",
+    "vi": "Lỡ mất chuyến tàu cuối nên rốt cuộc đến sáng tôi mới về tới nhà."
+   }
+  ]
+ },
+ {
+  "id": 1698470,
+  "m": [
+   {
+    "vi": "nhân viên bán hàng (trong hiệu buôn xưa)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "江戸時代の商家では手代が実際の商売を切り盛りしていた。",
+    "vi": "Tại các hiệu buôn thời Edo, nhân viên bán hàng là người trực tiếp quán xuyến việc kinh doanh."
+   }
+  ]
+ },
+ {
+  "id": 1698680,
+  "m": [
+   {
+    "vi": "chiết khấu hối phiếu"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "運転資金を確保するため銀行に手形割引を申し込んだ。",
+    "vi": "Để đảm bảo vốn lưu động, công ty đã làm thủ tục chiết khấu hối phiếu tại ngân hàng."
+   }
+  ]
+ },
+ {
+  "id": 1700700,
+  "m": [
+   {
+    "vi": "chuộc tội, đền tội, bù đắp lỗi lầm"
+   }
+  ]
+ },
+ {
+  "id": 1701160,
+  "m": [
+   {
+    "vi": "mặc kimono thường ngày không kèm hakama"
+   }
+  ],
+  "hv": "trước lưu",
+  "ex": [
+   {
+    "ja": "休日の散歩には着流しの気楽な格好がよく似合う。",
+    "vi": "Trang phục kimono mặc thường ngày giản dị rất hợp cho buổi đi dạo ngày nghỉ."
+   }
+  ]
+ },
+ {
+  "id": 1704650,
+  "m": [
+   {
+    "vi": "vật cầu may, bùa may mắn"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "初詣の帰りに神社の境内で縁起物の破魔矢を買った。",
+    "vi": "Trên đường đi lễ chùa đầu năm về, tôi đã mua mũi tên trừ tà cầu may ở khuôn viên đền."
+   }
+  ]
+ },
+ {
+  "id": 1706790,
+  "m": [
+   {
+    "vi": "xu hướng tăng giá, đà tăng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "主要企業の好決算を受けて株価が再び騰勢を強めている。",
+    "vi": "Nhờ kết quả kinh doanh khả quan của các doanh nghiệp lớn, giá cổ phiếu lại tiếp tục đà tăng mạnh."
+   }
+  ]
+ },
+ {
+  "id": 1715170,
+  "m": [
+   {
+    "vi": "cấp bách, khẩn thiết, cấp thiết"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "地球温暖化への対策は人類にとって喫緊の課題だ。",
+    "vi": "Đối sách ứng phó với hiện tượng nóng lên toàn cầu là nhiệm vụ cấp bách của nhân loại."
+   }
+  ]
+ },
+ {
+  "id": 1721380,
+  "m": [
+   {
+    "vi": "tỷ lệ 7-3"
+   },
+   {
+    "vi": "kiểu tóc rẽ ngôi 7-3"
+   }
+  ]
+ },
+ {
+  "id": 1721800,
+  "m": [
+   {
+    "vi": "tác phẩm cuối đời, nét bút cuối cùng"
+   },
+   {
+    "vi": "gác bút, ngừng viết"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "この未完の原稿が巨匠の絶筆となってしまった。",
+    "vi": "Bản thảo còn dang dở này đã trở thành tác phẩm cuối đời của vị bậc thầy."
+   }
+  ]
+ },
+ {
+  "id": 1723290,
+  "m": [
+   {
+    "vi": "sách ngữ pháp, văn phạm"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "書庫の奥から明治時代に出版された古い文典が見つかった。",
+    "vi": "Từ sâu trong kho sách, người ta tìm thấy cuốn sách văn phạm cũ xuất bản thời Minh Trị."
+   }
+  ]
+ },
+ {
+  "id": 1725850,
+  "m": [
+   {
+    "vi": "thể hiện bản thân, phô trương cái tôi"
+   }
+  ],
+  "hv": "tự kỷ hiển thị",
+  "ex": [
+   {
+    "ja": "SNSには自己顕示欲を満たすための投稿があふれている。",
+    "vi": "Mạng xã hội tràn ngập những bài đăng nhằm thỏa mãn khao khát thể hiện bản thân."
+   }
+  ]
+ },
+ {
+  "id": 1727110,
+  "m": [
+   {
+    "vi": "viêm thận"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "健康診断の尿検査で腎炎の疑いがあると指摘された。",
+    "vi": "Trong kết quả xét nghiệm nước tiểu khi khám sức khỏe, bác sĩ lưu ý có dấu hiệu nghi viêm thận."
+   }
+  ]
+ },
+ {
+  "id": 1731070,
+  "m": [
+   {
+    "vi": "hơn một năm"
+   }
+  ]
+ },
+ {
+  "id": 1733070,
+  "m": [
+   {
+    "vi": "quyền miễn trừ ngoại giao, quyền trị ngoại pháp quyền"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "幕末の不平等条約では外国人に治外法権が認められていた。",
+    "vi": "Trong các hiệp ước bất bình đẳng cuối thời Mạc phủ, người nước ngoài được hưởng quyền trị ngoại pháp quyền."
+   }
+  ]
+ },
+ {
+  "id": 1734940,
+  "m": [
+   {
+    "vi": "người phù hợp với vai trò, vị trí thích hợp"
+   },
+   {
+    "vi": "vai diễn hợp vai"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "豊富な経験を持つ彼こそ、このプロジェクトのリーダーに適役だ。",
+    "vi": "Chính anh ấy với kinh nghiệm dày dặn là người phù hợp nhất cho vị trí trưởng dự án này."
+   }
+  ]
+ },
+ {
+  "id": 1739450,
+  "m": [
+   {
+    "vi": "thơ dịch"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "海外の有名な詩人の作品をまとめた訳詩集を愛読している。",
+    "vi": "Tôi rất thích đọc tuyển tập thơ dịch tổng hợp tác phẩm của các thi sĩ nổi tiếng nước ngoài."
+   }
+  ]
+ },
+ {
+  "id": 1741360,
+  "m": [
+   {
+    "vi": "khai thác mỏ, khai khoáng"
+   }
+  ],
+  "hv": "thải khoáng",
+  "ex": [
+   {
+    "ja": "かつてこの山では盛んに銅の採鉱が行われていた。",
+    "vi": "Trước đây, việc khai thác quặng đồng từng diễn ra nhộn nhịp tại ngọn núi này."
+   }
+  ]
+ },
+ {
+  "id": 1744450,
+  "m": [
+   {
+    "vi": "cái vồ nhỏ, búa gỗ nhỏ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "昔話に出てくる打ち出の小槌は願いを叶える宝物だ。",
+    "vi": "Chiếc búa gỗ thần kỳ trong truyện cổ tích là báu vật biến điều ước thành hiện thực."
+   }
+  ]
+ },
+ {
+  "id": 1747840,
+  "m": [
+   {
+    "vi": "pháo đài, trận địa pháo"
+   }
+  ],
+  "hv": "pháo thai",
+  "ex": [
+   {
+    "ja": "海峡を見下ろす高台に幕末の砲台の跡が残っている。",
+    "vi": "Trên ngọn đồi cao nhìn xuống eo biển vẫn còn dấu tích pháo đài từ cuối thời Mạc phủ."
+   }
+  ]
+ },
+ {
+  "id": 1748590,
+  "m": [
+   {
+    "vi": "thăng trầm, bấp bênh, nổi chìm"
+   }
+  ]
+ },
+ {
+  "id": 1748690,
+  "m": [
+   {
+    "vi": "cổ phiếu trôi nổi (tự do giao dịch)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "市場に出回る浮動株が少ないため株価が乱高下しやすい。",
+    "vi": "Do lượng cổ phiếu trôi nổi trên thị trường ít nên giá cổ phiếu dễ biến động mạnh."
+   }
+  ]
+ },
+ {
+  "id": 1752140,
+  "m": [
+   {
+    "vi": "tài nghệ điêu luyện, màn trình diễn bậc thầy"
+   }
+  ],
+  "hv": "danh nhân nghệ",
+  "ex": [
+   {
+    "ja": "人間国宝による名人芸を間近で鑑賞する機会に恵まれた。",
+    "vi": "Tôi may mắn có dịp chiêm ngưỡng tài nghệ bậc thầy của vị nghệ nhân báu vật quốc gia ở cự ly gần."
+   }
+  ]
+ },
+ {
+  "id": 1753230,
+  "m": [
+   {
+    "vi": "việc bán, sự chuyển nhượng"
+   }
+  ]
+ },
+ {
+  "id": 1754610,
+  "m": [
+   {
+    "vi": "thơ văn xuôi"
+   }
+  ],
+  "hv": "tán văn thi",
+  "ex": [
+   {
+    "ja": "近代文学の授業で有名な散文詩を朗読した。",
+    "vi": "Trong giờ văn học cận đại, chúng tôi đã đọc diễn cảm một bài thơ văn xuôi nổi tiếng."
+   }
+  ]
+ },
+ {
+  "id": 1757120,
+  "m": [
+   {
+    "vi": "thể dục dụng cụ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "オリンピックの器械体操の種目で日本選手が金メダルを取った。",
+    "vi": "Vận động viên Nhật Bản đã giành huy chương vàng ở môn thể dục dụng cụ tại Olympic."
+   }
+  ]
+ },
+ {
+  "id": 1760520,
+  "m": [
+   {
+    "vi": "được chứng nhận chính hiệu, bảo đảm chất lượng"
+   },
+   {
+    "vi": "nổi tiếng lẫy lừng, được công nhận rộng rãi"
+   },
+   {
+    "vi": "tuyệt tác, món đặc sắc nhất"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "この店は美食家の間でも極め付きの老舗として知られている。",
+    "vi": "Quán này nổi tiếng ngay cả trong giới sành ăn như một tiệm lâu đời chuẩn mực."
+   }
+  ]
+ },
+ {
+  "id": 1761470,
+  "m": [
+   {
+    "vi": "chủ nghĩa giáo điều"
+   }
+  ],
+  "hv": "giáo điều chủ nghĩa",
+  "ex": [
+   {
+    "ja": "現実を無視した教条主義的な考え方は通用しない。",
+    "vi": "Lối suy nghĩ giáo điều bất chấp thực tế sẽ không thể đứng vững được."
+   }
+  ]
+ },
+ {
+  "id": 1763530,
+  "m": [
+   {
+    "vi": "bão tuyết thổi tung từ mặt đất"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "猛吹雪の翌朝は地吹雪で視界が真っ白になることがある。",
+    "vi": "Sáng hôm sau trận bão tuyết dữ dội, tuyết cuốn từ mặt đất có thể làm tầm nhìn trắng xóa."
+   }
+  ]
+ },
+ {
+  "id": 1767000,
+  "m": [
+   {
+    "vi": "dải giấy zíc-zắc (shide trong Thần đạo)"
+   },
+   {
+    "vi": "cây trăn (họ cáng lò)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "神社のしめ縄には白い紙で作られた四手が垂れ下がっている。",
+    "vi": "Trên dây thừng thiêng ở đền Thần đạo có treo những dải giấy zíc-zắc màu trắng."
+   }
+  ]
+ },
+ {
+  "id": 1767840,
+  "m": [
+   {
+    "vi": "con ngoài giá thú"
+   }
+  ]
+ },
+ {
+  "id": 1768740,
+  "m": [
+   {
+    "vi": "nước cốt, nước súp, độ ẩm ướt"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "この鍋料理は汁気が少ないので焦げないように気をつけよう。",
+    "vi": "Món lẩu này ít nước nên hãy cẩn thận kẻo bị cháy."
+   }
+  ]
+ },
+ {
+  "id": 1770000,
+  "m": [
+   {
+    "vi": "ôm tiền bỏ trốn, cuỗm đi mất"
+   },
+   {
+    "vi": "bị đánh cắp mang đi"
+   }
+  ]
+ },
+ {
+  "id": 1773750,
+  "m": [
+   {
+    "vi": "dụng cụ câu cá, cần câu"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "週末の川釣りに備えて新しい釣り具を一式そろえた。",
+    "vi": "Để chuẩn bị cho buổi câu cá sông cuối tuần, tôi đã sắm một bộ dụng cụ câu mới."
+   }
+  ]
+ },
+ {
+  "id": 1778000,
+  "m": [
+   {
+    "vi": "câu hỏi hóc búa, câu đố mẹo"
+   }
+  ],
+  "hv": "kỳ vấn",
+  "ex": [
+   {
+    "ja": "クイズ大会で出題された奇問に誰も答えられなかった。",
+    "vi": "Không ai trả lời được câu hỏi hóc búa đưa ra trong cuộc thi đố vui."
+   }
+  ]
+ },
+ {
+  "id": 1778130,
+  "m": [
+   {
+    "vi": "đồ gỗ ghép khảm (yosegi-zaiku)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "箱根のお土産に美しい模様の寄せ木細工の小箱を買った。",
+    "vi": "Tôi đã mua một chiếc hộp nhỏ bằng gỗ ghép khảm hoa văn tuyệt đẹp làm quà lưu niệm Hakone."
+   }
+  ]
+ },
+ {
+  "id": 1779590,
+  "m": [
+   {
+    "vi": "cột sắt, trụ sắt"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "老朽化した線路沿いの鉄柱を新しいものに交換した。",
+    "vi": "Những cột sắt cũ kỹ dọc tuyến đường sắt đã được thay bằng cột mới."
+   }
+  ]
+ },
+ {
+  "id": 1787060,
+  "m": [
+   {
+    "vi": "triều cường"
+   }
+  ],
+  "hv": "đại triều",
+  "ex": [
+   {
+    "ja": "満月と新月の頃には干満の差が大きい大潮になる。",
+    "vi": "Vào khoảng trăng tròn và trăng non sẽ có triều cường với biên độ lên xuống lớn."
+   }
+  ]
+ },
+ {
+  "id": 1787300,
+  "m": [
+   {
+    "vi": "người đam mê câu cá, cần thủ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "休日の海岸には多くの太公望が釣り糸を垂らしている。",
+    "vi": "Vào ngày nghỉ, rất nhiều cần thủ ngồi buông cần dọc bờ biển."
+   }
+  ]
+ },
+ {
+  "id": 1788130,
+  "m": [
+   {
+    "vi": "cảm giác trên đầu lưỡi (độ mịn, mượt của món ăn)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "このプリンは驚くほどなめらかな舌触りでとてもおいしい。",
+    "vi": "Món bánh pudding này có độ mịn mượt đến ngạc nhiên trên đầu lưỡi, ăn rất ngon."
+   }
+  ]
+ },
+ {
+  "id": 1790990,
+  "m": [
+   {
+    "vi": "khí thế hừng hực, lời nói hào hùng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "仲間とお酒を飲みながら将来の夢について気炎を上げた。",
+    "vi": "Vừa uống rượu với bạn bè, chúng tôi vừa hào hứng bàn về ước mơ tương lai."
+   }
+  ]
+ },
+ {
+  "id": 1791480,
+  "m": [
+   {
+    "vi": "tình yêu công ty, lòng trung thành với công ty"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "社員の愛社精神を高めるための社内イベントを企画した。",
+    "vi": "Công ty đã lên kế hoạch tổ chức sự kiện nội bộ nhằm nâng cao tinh thần gắn bó của nhân viên."
+   }
+  ]
+ },
+ {
+  "id": 1795480,
+  "m": [
+   {
+    "vi": "con lật đật"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "何度倒してもすぐに起き上がる起き上がりこぼしは縁起物だ。",
+    "vi": "Con lật đật dù bị đẩy ngã bao nhiêu lần cũng tự bật dậy ngay là vật phẩm mang lại may mắn."
+   }
+  ]
+ },
+ {
+  "id": 1796040,
+  "m": [
+   {
+    "vi": "nước tiếp sức (trong đấu vật sumo)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "力士は土俵に上がる直前に口を清める力水を飲む。",
+    "vi": "Các võ sĩ sumo uống ngụm nước tiếp sức để thanh tẩy miệng ngay trước khi bước lên sới đấu."
+   }
+  ]
+ },
+ {
+  "id": 1798440,
+  "m": [
+   {
+    "vi": "hành vi, việc làm (thường mang nghĩa xấu)"
+   }
+  ]
+ },
+ {
+  "id": 1799690,
+  "m": [
+   {
+    "vi": "cuộc hành quân cấp tốc"
+   },
+   {
+    "vi": "làm việc theo lịch trình dày đặc"
+   }
+  ],
+  "hv": "cường hành quân",
+  "ex": [
+   {
+    "ja": "三日間で五カ国を回る強行軍の視察旅行だった。",
+    "vi": "Đó là chuyến công tác thị sát với lịch trình dày đặc đi qua năm nước chỉ trong ba ngày."
+   }
+  ]
+ },
+ {
+  "id": 1800840,
+  "m": [
+   {
+    "vi": "thánh giáo, giáo lý (Nho giáo, Thiên Chúa giáo, Phật giáo)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "古書店の棚に儒教の聖教を解説した古い本が並んでいた。",
+    "vi": "Trên kệ hiệu sách cũ bày những cuốn sách cổ giải thích giáo lý Nho giáo."
+   }
+  ]
+ },
+ {
+  "id": 1805630,
+  "m": [
+   {
+    "vi": "cú đánh đẹp, pha đánh bóng chuẩn xác"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "終盤のチャンスで飛び出した彼の快打が決勝点になった。",
+    "vi": "Cú đánh đẹp mắt của anh ấy vào cơ hội cuối trận đã mang về điểm quyết định."
+   }
+  ]
+ },
+ {
+  "id": 1806560,
+  "m": [
+   {
+    "vi": "lời lẽ ngoại giao, câu nói xã giao khéo léo"
+   }
+  ]
+ },
+ {
+  "id": 1808140,
+  "m": [
+   {
+    "vi": "miếng dán bịt khe hở (chống gió lùa)"
+   },
+   {
+    "vi": "kẻ viền mắt (trong kịch sân khấu)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "台風で窓ガラスが割れないようテープで目張りをした。",
+    "vi": "Tôi đã dán băng dính bịt kín quanh cửa sổ để kính không bị vỡ khi bão tới."
+   }
+  ]
+ },
+ {
+  "id": 1809630,
+  "m": [
+   {
+    "vi": "vĩ độ cao"
+   }
+  ],
+  "hv": "cao vĩ độ",
+  "ex": [
+   {
+    "ja": "オーロラは主に北極圏などの高緯度地域で観測される。",
+    "vi": "Cực quang chủ yếu được quan sát ở các vùng vĩ độ cao như vòng Bắc Cực."
+   }
+  ]
+ },
+ {
+  "id": 1811190,
+  "m": [
+   {
+    "vi": "vai phản diện, vai ác (trong phim, kịch)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼は主人公を引き立てる悪役などの汚れ役を見事に演じた。",
+    "vi": "Anh ấy đã diễn xuất xuất sắc vai phản diện giúp làm nổi bật nhân vật chính."
+   }
+  ]
+ },
+ {
+  "id": 1812450,
+  "m": [
+   {
+    "vi": "tuổi tròn (tính theo ngày sinh phương Tây)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "日本の法律では誕生日の前日に満年齢が加算される。",
+    "vi": "Theo luật pháp Nhật Bản, tuổi tròn được cộng thêm một tuổi vào ngày trước sinh nhật."
+   }
+  ]
+ },
+ {
+  "id": 1812470,
+  "m": [
+   {
+    "vi": "khắp toàn thân"
+   },
+   {
+    "vi": "dồn hết (sức lực, tinh thần)"
+   }
+  ]
+ },
+ {
+  "id": 1813420,
+  "m": [
+   {
+    "vi": "lên chốt (bóng chày)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "送りバントが成功し、ランナーが二塁へ進塁した。",
+    "vi": "Cú đánh hy sinh thành công giúp cầu thủ chạy chốt tiến lên được chốt hai."
+   }
+  ]
+ },
+ {
+  "id": 1814960,
+  "m": [
+   {
+    "vi": "Huân chương Dải băng xanh (vì cống hiến công ích)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "長年の社会福祉への貢献により藍綬褒章を受章した。",
+    "vi": "Nhờ nhiều năm cống hiến cho phúc lợi xã hội, ông đã vinh dự nhận Huân chương Dải băng xanh."
+   }
+  ]
+ },
+ {
+  "id": 1815150,
+  "m": [
+   {
+    "vi": "chiết cành, ghép cây"
+   }
+  ]
+ },
+ {
+  "id": 1815730,
+  "m": [
+   {
+    "vi": "tập viết phỏng theo mẫu chữ thư pháp"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "書道の上達のために名筆の手本を見て臨書を繰り返した。",
+    "vi": "Để tiến bộ trong thư pháp, tôi lặp đi lặp lại việc tập viết mô phỏng theo mẫu chữ của danh gia."
+   }
+  ]
+ },
+ {
+  "id": 1816360,
+  "m": [
+   {
+    "vi": "ngày tháng, thời gian"
+   }
+  ],
+  "hv": "thời nhật"
+ },
+ {
+  "id": 1818960,
+  "m": [
+   {
+    "vi": "bạn thuở nhỏ, bạn từ hồi tấm bé"
+   }
+  ]
+ },
+ {
+  "id": 1821230,
+  "m": [
+   {
+    "vi": "nói thách giá"
+   },
+   {
+    "vi": "sự phóng đại, nói quá"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "この店は掛け値なしの正直な価格で販売している。",
+    "vi": "Cửa hàng này bán đúng giá niêm yết chứ không hề nói thách."
+   }
+  ]
+ },
+ {
+  "id": 1822080,
+  "m": [
+   {
+    "vi": "đọc tạp, đọc tràn lan không chọn lọc"
+   }
+  ],
+  "hv": "loạn độc",
+  "ex": [
+   {
+    "ja": "若い頃はジャンルを問わずあらゆる本を乱読していた。",
+    "vi": "Hồi trẻ tôi đọc tràn lan đủ mọi thể loại sách không phân biệt gì cả."
+   }
+  ]
+ },
+ {
+  "id": 1823250,
+  "m": [
+   {
+    "vi": "người biết lắng nghe, người khéo lắng nghe"
+   }
+  ],
+  "hv": "văn thượng thủ"
+ },
+ {
+  "id": 1824910,
+  "m": [
+   {
+    "vi": "người cho vay, bên cho mượn"
+   }
+  ]
+ },
+ {
+  "id": 1825680,
+  "m": [
+   {
+    "vi": "định kiến, sự ngộ nhận, ấn tượng chủ quan"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "思い込みを捨てて客観的な事実を冷静に見つめるべきだ。",
+    "vi": "Nên gạt bỏ định kiến chủ quan để bình tĩnh nhìn nhận sự thật khách quan."
+   }
+  ]
+ },
+ {
+  "id": 1827460,
+  "m": [
+   {
+    "vi": "cảm tử quân, lính cảm tử ôm bom"
+   }
+  ],
+  "hv": "nhục đạn",
+  "ex": [
+   {
+    "ja": "戦時中の過酷な戦場では肉弾攻撃という悲劇も起きた。",
+    "vi": "Trên chiến trường khốc liệt thời chiến từng xảy ra những bi kịch tấn công cảm tử."
+   }
+  ]
+ },
+ {
+  "id": 1828550,
+  "m": [
+   {
+    "vi": "giọng nói của Thiên hoàng"
+   },
+   {
+    "vi": "giọng nói hay, âm thanh tuyệt đẹp"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "歴史の授業で終戦を告げる玉音放送の録音について学んだ。",
+    "vi": "Trong giờ lịch sử, chúng tôi học về bản ghi âm phát thanh của Thiên hoàng tuyên bố kết thúc chiến tranh."
+   }
+  ]
+ },
+ {
+  "id": 1829050,
+  "m": [
+   {
+    "vi": "vải nền đỏ, nền màu đỏ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "七五三の祝い着に華やかな赤地の着物を選んだ。",
+    "vi": "Tôi đã chọn bộ kimono nền đỏ rực rỡ làm lễ phục dịp Shichi-go-san."
+   }
+  ]
+ },
+ {
+  "id": 1834760,
+  "m": [
+   {
+    "vi": "sự giáng lâm của Phật A Di Đà (đón linh hồn người mất)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "浄土教の絵画には雲に乗って現れる来迎の姿が描かれている。",
+    "vi": "Trong tranh Tịnh độ tông thường vẽ cảnh Phật A Di Đà cưỡi mây giáng lâm đón linh hồn."
+   }
+  ]
+ },
+ {
+  "id": 1835820,
+  "m": [
+   {
+    "vi": "chạy tốt, màn chạy xuất sắc"
+   }
+  ],
+  "hv": "hảo tẩu",
+  "ex": [
+   {
+    "ja": "先頭打者が二塁打を放ち、見事な好走を見せた。",
+    "vi": "Người đánh bóng đầu tiên tung cú đánh hai chốt và có pha chạy chốt rất xuất sắc."
+   }
+  ]
+ },
+ {
+  "id": 1836450,
+  "m": [
+   {
+    "vi": "kiêu ngạo, hống hách, thế đứng không vững (sumo)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "相手に対して腰高な態度をとると信頼を失ってしまう。",
+    "vi": "Nếu tỏ thái độ hống hách với người khác thì sẽ đánh mất lòng tin."
+   }
+  ]
+ },
+ {
+  "id": 1836690,
+  "m": [
+   {
+    "vi": "lô đất góc, đất hai mặt tiền"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "日当たりが良くて便利な角地を見つけて家を購入した。",
+    "vi": "Tôi đã tìm được một lô đất hai mặt tiền thoáng sáng tiện lợi và mua nhà ở đó."
+   }
+  ]
+ },
+ {
+  "id": 1840600,
+  "m": [
+   {
+    "vi": "cây thông cổ thụ, thông già"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "神社の境内にそびえ立つ老松が長い歴史を見守っている。",
+    "vi": "Cây thông cổ thụ sừng sững trong khuôn viên đền như đang dõi theo dòng lịch sử dài lâu."
+   }
+  ]
+ },
+ {
+  "id": 1840680,
+  "m": [
+   {
+    "vi": "lão hóa, hư hỏng theo thời gian, hết hạn sử dụng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "細胞が老廃するのを防ぐために規則正しい生活を送る。",
+    "vi": "Tôi duy trì lối sống điều độ để ngăn ngừa tế bào bị lão hóa."
+   }
+  ]
+ },
+ {
+  "id": 1841830,
+  "m": [
+   {
+    "vi": "phu xướng phụ tùy (chồng nói vợ nghe)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "祖母の時代には夫唱婦随が理想の夫婦像とされていた。",
+    "vi": "Vào thời của bà tôi, phu xướng phụ tùy từng được coi là hình mẫu vợ chồng lý tưởng."
+   }
+  ]
+ },
+ {
+  "id": 1844560,
+  "m": [
+   {
+    "vi": "đi làm sớm"
+   },
+   {
+    "vi": "ca làm việc sớm"
+   }
+  ]
+ },
+ {
+  "id": 1846580,
+  "m": [
+   {
+    "vi": "tỉa thưa (cây non)"
+   },
+   {
+    "vi": "cắt giảm (chuyến tàu, lịch trình)"
+   },
+   {
+    "vi": "giết bỏ trẻ sơ sinh (thời xưa vì nghèo đói)"
+   }
+  ],
+  "hv": "gian dẫn",
+  "ex": [
+   {
+    "ja": "大根の芽が混み合ってきたので丈夫なものだけ残して間引いた。",
+    "vi": "Mầm củ cải mọc dày quá nên tôi đã tỉa bớt, chỉ giữ lại những cây khỏe."
+   }
+  ]
+ },
+ {
+  "id": 1847660,
+  "m": [
+   {
+    "vi": "sót lại sau đám cháy, thoát khỏi hỏa hoạn"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "大火事の中でも奇跡的に焼け残った古い蔵がある。",
+    "vi": "Giữa trận hỏa hoạn lớn vẫn có một nhà kho cổ kỳ diệu sót lại không bị thiêu rụi."
+   }
+  ]
+ },
+ {
+  "id": 1850150,
+  "m": [
+   {
+    "vi": "ấn xuống, đẩy xuống, kéo giảm xuống"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "原油価格の下落が全体の物価を押し下げている。",
+    "vi": "Giá dầu thô giảm đang kéo mặt bằng giá cả nói chung đi xuống."
+   }
+  ]
+ },
+ {
+  "id": 1853370,
+  "m": [
+   {
+    "vi": "chó Shiba (giống chó Nhật)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "近所の公園で可愛い柴犬を散歩させている人をよく見かける。",
+    "vi": "Tôi thường thấy người dắt chú chó Shiba dễ thương đi dạo ở công viên gần nhà."
+   }
+  ]
+ },
+ {
+  "id": 1855010,
+  "m": [
+   {
+    "vi": "đô vật giàu kỹ thuật, người mưu mẹo khôn khéo"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "小兵ながら多彩な技を持つ業師として人気がある。",
+    "vi": "Tuy thể hình nhỏ bé nhưng anh ấy rất được yêu thích nhờ lối đánh nhiều kỹ thuật điêu luyện."
+   }
+  ]
+ },
+ {
+  "id": 1855220,
+  "m": [
+   {
+    "vi": "nổ dây chuyền, kích nổ thứ cấp"
+   }
+  ],
+  "hv": "dụ bộc",
+  "ex": [
+   {
+    "ja": "火薬庫での火災が周辺の倉庫の誘爆を引き起こした。",
+    "vi": "Vụ hỏa hoạn tại kho thuốc súng đã gây ra vụ nổ dây chuyền sang các kho lân cận."
+   }
+  ]
+ },
+ {
+  "id": 1873490,
+  "m": [
+   {
+    "vi": "kết duyên (với Phật pháp)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "お寺の法要に参列して仏様と深い結縁を結んだ。",
+    "vi": "Tôi tham dự lễ cầu siêu ở chùa và kết duyên sâu sắc với cửa Phật."
+   }
+  ]
+ },
+ {
+  "id": 1875060,
+  "m": [
+   {
+    "vi": "chữ giáp cốt"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "古代中国の甲骨文は亀の甲羅や動物の骨に刻まれた文字だ。",
+    "vi": "Chữ giáp cốt thời Trung Quốc cổ đại là loại chữ được khắc trên mai rùa và xương thú."
+   }
+  ]
+ },
+ {
+  "id": 1878980,
+  "m": [
+   {
+    "vi": "liên minh phiên Satsuma và Choshu"
+   }
+  ],
+  "hv": "tát trường",
+  "ex": [
+   {
+    "ja": "幕末に成立した薩長同盟が明治維新の大きな原動力となった。",
+    "vi": "Liên minh Satsuma - Choshu thành lập cuối thời Mạc phủ là động lực lớn cho cuộc Duy tân Minh Trị."
+   }
+  ]
+ },
+ {
+  "id": 1907110,
+  "m": [
+   {
+    "vi": "tiến sĩ văn học"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "長年大学で研究を続け、ついに文博の学位を取得した。",
+    "vi": "Sau nhiều năm nghiên cứu tại trường đại học, ông cuối cùng đã nhận bằng tiến sĩ văn học."
+   }
+  ]
+ },
+ {
+  "id": 1908140,
+  "m": [
+   {
+    "vi": "vùi lấp vào quên lãng, xóa sạch dấu vết"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "不都合な過去を歴史の闇に葬り去ることはできない。",
+    "vi": "Không thể vùi lấp quá khứ bất tiện vào bóng tối lịch sử được."
+   }
+  ]
+ },
+ {
+  "id": 1909390,
+  "m": [
+   {
+    "vi": "sự uốn cong, độ cong"
+   }
+  ]
+ },
+ {
+  "id": 1931310,
+  "m": [
+   {
+    "vi": "bánh mì ngọt"
+   }
+  ],
+  "hv": "quả tử",
+  "ex": [
+   {
+    "ja": "朝食代わりにコンビニでメロンパンなどの菓子パンを買った。",
+    "vi": "Tôi đã mua bánh mì ngọt như bánh dưa lưới ở cửa hàng tiện lợi để ăn thay bữa sáng."
+   }
+  ]
+ },
+ {
+  "id": 1942360,
+  "m": [
+   {
+    "vi": "chính quyền địa phương, cơ quan hành chính địa phương"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "地域の活性化に向けて地方団体と民間企業が協力している。",
+    "vi": "Chính quyền địa phương và doanh nghiệp tư nhân đang hợp tác để thúc đẩy phát triển khu vực."
+   }
+  ]
+ },
+ {
+  "id": 1950610,
+  "m": [
+   {
+    "vi": "phong độ đỉnh cao, trạng thái hoàn hảo"
+   }
+  ],
+  "hv": "hoàn điều",
+  "ex": [
+   {
+    "ja": "怪我から復帰したエースが完調の状態で試合に臨んだ。",
+    "vi": "Chủ lực vừa trở lại sau chấn thương đã bước vào trận đấu với phong độ hoàn hảo."
+   }
+  ]
+ },
+ {
+  "id": 1952650,
+  "m": [
+   {
+    "vi": "rừng cây lá rộng thường xanh"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "西日本の温暖な地域には豊かな照葉樹林が広がっている。",
+    "vi": "Ở các vùng khí hậu ôn hòa miền Tây Nhật Bản có những cánh rừng lá rộng thường xanh trù phú."
+   }
+  ]
+ },
+ {
+  "id": 1953470,
+  "m": [
+   {
+    "vi": "ra khỏi phòng"
+   }
+  ]
+ },
+ {
+  "id": 1970720,
+  "m": [
+   {
+    "vi": "kim băng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "スカートの裾がほつれたので安全ピンで仮止めした。",
+    "vi": "Vì gấu váy bị sứt chỉ nên tôi dùng kim băng ghim tạm lại."
+   }
+  ]
+ },
+ {
+  "id": 1972290,
+  "m": [
+   {
+    "vi": "ion âm (anion)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "塩化物イオンはマイナスの電荷を持つ代表的な陰イオンだ。",
+    "vi": "Ion clorua là một ion âm tiêu biểu mang điện tích âm."
+   }
+  ]
+ },
+ {
+  "id": 1974780,
+  "m": [
+   {
+    "vi": "bác sĩ gia đình"
+   }
+  ],
+  "hv": "gia đình y",
+  "ex": [
+   {
+    "ja": "日頃から体調を相談できる家庭医が近くにいると安心だ。",
+    "vi": "Có bác sĩ gia đình ở gần để thường xuyên tư vấn sức khỏe thật yên tâm."
+   }
+  ]
+ },
+ {
+  "id": 1979770,
+  "m": [
+   {
+    "vi": "vị ngọt mặn hài hòa"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "甘辛のタレが絡んだ鶏の照り焼きはご飯が進む。",
+    "vi": "Món gà nướng teriyaki thấm đẫm sốt ngọt mặn rất đưa cơm."
+   }
+  ]
+ },
+ {
+  "id": 1980300,
+  "m": [
+   {
+    "vi": "Ủy ban Điều chỉnh Tranh chấp Môi trường"
+   }
+  ],
+  "hv": "công hại đẳng điều chỉnh ủy viên hội",
+  "ex": [
+   {
+    "ja": "騒音被害の解決を求めて公害等調整委員会に申請した。",
+    "vi": "Người dân đã nộp đơn lên Ủy ban Điều chỉnh Tranh chấp Môi trường để yêu cầu giải quyết ô nhiễm tiếng ồn."
+   }
+  ]
+ },
+ {
+  "id": 1983240,
+  "m": [
+   {
+    "vi": "lát chiếu tatami"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "旅館の畳敷きの部屋に案内されてほっと一息ついた。",
+    "vi": "Được dẫn vào căn phòng lát chiếu tatami của lữ quán, tôi thở phào thư giãn."
+   }
+  ]
+ },
+ {
+  "id": 2256130,
+  "m": [
+   {
+    "vi": "vợ lẽ, nhân tình, thiếp"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "昔の小説には大商人の家で暮らす妾の悲哀が描かれている。",
+    "vi": "Trong tiểu thuyết xưa thường khắc họa nỗi buồn của người vợ lẽ sống trong gia đình thương nhân giàu có."
+   }
+  ]
+ },
+ {
+  "id": 1150520,
+  "m": [
+   {
+    "vi": "nuôi dưỡng đầy yêu thương, chăm sóc ân cần"
+   }
+  ]
+ },
+ {
+  "id": 1153820,
+  "m": [
+   {
+    "vi": "sinh nở thuận lợi, mẹ tròn con vuông"
+   }
+  ]
+ },
+ {
+  "id": 1157360,
+  "m": [
+   {
+    "vi": "ngân hàng ngoại hối"
+   }
+  ],
+  "hv": "vị thế ngân hành",
+  "ex": [
+   {
+    "ja": "海外との貿易決済は主に外国為替銀行を通じて行われる。",
+    "vi": "Việc thanh toán thương mại với nước ngoài chủ yếu được thực hiện qua ngân hàng ngoại hối."
+   }
+  ]
+ },
+ {
+  "id": 1160750,
+  "m": [
+   {
+    "vi": "ươm cây giống"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "春先の田植えに備えてハウスの中でイネの育苗を行っている。",
+    "vi": "Để chuẩn bị cho vụ cấy đầu xuân, nông dân đang ươm mạ trong nhà kính."
+   }
+  ]
+ },
+ {
+  "id": 1161000,
+  "m": [
+   {
+    "vi": "tạm thời yên tâm, thở phào nhẹ nhõm"
+   }
+  ]
+ },
+ {
+  "id": 1166450,
+  "m": [
+   {
+    "vi": "một lần"
+   },
+   {
+    "vi": "chỉ, duy nhất"
+   }
+  ]
+ },
+ {
+  "id": 1166740,
+  "m": [
+   {
+    "vi": "ngôi sao chủ lực, át chủ bài"
+   },
+   {
+    "vi": "sở trường duy nhất, điểm tự hào nhất"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼はその劇団を支える絶対的な一枚看板だ。",
+    "vi": "Anh ấy là ngôi sao chủ lực không thể thay thế của đoàn kịch đó."
+   }
+  ]
+ },
+ {
+  "id": 1166810,
+  "m": [
+   {
+    "vi": "một tia, một mạch (hy vọng, liên kết)"
+   }
+  ]
+ },
+ {
+  "id": 1166990,
+  "m": [
+   {
+    "vi": "chạy thục mạng, chạy bán sống bán chết"
+   }
+  ],
+  "hv": "nhất mục tán"
+ },
+ {
+  "id": 1576120,
+  "m": [
+   {
+    "vi": "một nơi, cùng một chỗ"
+   },
+   {
+    "vi": "một người"
+   },
+   {
+    "vi": "cùng nhau"
+   }
+  ]
+ },
+ {
+  "id": 1586140,
+  "m": [
+   {
+    "vi": "dục vọng xác thịt, nhục dục"
+   },
+   {
+    "vi": "sự quyến luyến, tình cảm gắn bó"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "修行僧はあらゆる愛欲を断ち切って悟りを目指す。",
+    "vi": "Các nhà sư tu hành đoạn tuyệt mọi dục vọng để hướng tới sự giác ngộ."
+   }
+  ]
+ },
+ {
+  "id": 1601770,
+  "m": [
+   {
+    "vi": "kéo giãn ra"
+   },
+   {
+    "vi": "phóng to (ảnh)"
+   },
+   {
+    "vi": "trì hoãn, kéo dài (cuộc họp)"
+   }
+  ]
+ },
+ {
+  "id": 1917720,
+  "m": [
+   {
+    "vi": "mưu mô xảo quyệt, mánh khóe xấu"
+   }
+  ],
+  "hv": "ác tri huệ",
+  "ex": [
+   {
+    "ja": "悪知恵を働かせてルールをすり抜けようとしても無駄だ。",
+    "vi": "Có giở mưu mô xảo quyệt để lách luật thì cũng vô ích thôi."
+   }
+  ]
+ },
+ {
+  "id": 1971410,
+  "m": [
+   {
+    "vi": "máy nội soi dạ dày"
+   },
+   {
+    "vi": "thủ thuật nội soi dạ dày"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "人間ドックで初めて胃カメラの検査を受けた。",
+    "vi": "Tôi lần đầu tiên đi nội soi dạ dày trong đợt kiểm tra sức khỏe tổng quát."
+   }
+  ]
+ },
+ {
+  "id": 2830040,
+  "m": [
+   {
+    "vi": "đêm tối mịt mùng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "星一つ見えない暗夜の中を懐中電灯だけを頼りに歩いた。",
+    "vi": "Tôi bước đi giữa đêm tối mịt mùng không một ánh sao, chỉ nhờ vào ánh đèn pin."
+   }
+  ]
+ },
+ {
+  "id": 1000110,
+  "m": [
+   {
+    "vi": "máy nghe đĩa CD"
+   }
+  ]
+ },
+ {
+  "id": 1000160,
+  "m": [
+   {
+    "vi": "áo phông, áo thun cổ tròn"
+   }
+  ]
+ },
+ {
+  "id": 1000170,
+  "m": [
+   {
+    "vi": "quần lót chữ T (T-back)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "夏に向けてショップに新作のＴバックの水着が並んだ。",
+    "vi": "Chuẩn bị cho mùa hè, các mẫu đồ bơi dây chữ T mới đã được bày bán tại cửa hàng."
+   }
+  ]
+ },
+ {
+  "id": 1000390,
+  "m": [
+   {
+    "vi": "trong nháy mắt, thoáng chốc"
+   }
+  ],
+  "hv": "gian"
+ },
+ {
+  "id": 1000440,
+  "m": [
+   {
+    "vi": "người kia, anh ấy, cô ấy"
+   },
+   {
+    "vi": "bạn, anh, chị"
+   }
+  ]
+ },
+ {
+  "id": 1000450,
+  "m": [
+   {
+    "vi": "vị kia, người ấy (kính trọng)"
+   }
+  ]
+ },
+ {
+  "id": 1000580,
+  "m": [
+   {
+    "vi": "cái kia, thứ đó"
+   },
+   {
+    "vi": "người đó"
+   },
+   {
+    "vi": "hồi đó, lúc ấy"
+   },
+   {
+    "vi": "chỗ kia"
+   }
+  ]
+ },
+ {
+  "id": 1000620,
+  "m": [
+   {
+    "vi": "không, không đâu, nào có"
+   }
+  ],
+  "hv": "phủ phủ"
+ },
+ {
+  "id": 1000760,
+  "m": [
+   {
+    "vi": "rắc rối, lục đục, cãi cọ"
+   }
+  ]
+ },
+ {
+  "id": 1000820,
+  "m": [
+   {
+    "vi": "hớn hở, vui vẻ, phấn khởi"
+   }
+  ]
+ },
+ {
+  "id": 1000930,
+  "m": [
+   {
+    "vi": "xin kính chào quý khách"
+   }
+  ]
+ },
+ {
+  "id": 1000980,
+  "m": [
+   {
+    "vi": "ngứa ngáy chân tay, nôn nóng muốn làm gì"
+   }
+  ]
+ },
+ {
+  "id": 1001030,
+  "m": [
+   {
+    "vi": "ngủ gật, gật gà gật gù"
+   }
+  ]
+ },
+ {
+  "id": 1001050,
+  "m": [
+   {
+    "vi": "sự uốn lượn, ngoằn ngoèo"
+   },
+   {
+    "vi": "sóng ngầm, sóng cồn"
+   }
+  ]
+ },
+ {
+  "id": 1001100,
+  "m": [
+   {
+    "vi": "phân, cục ị"
+   },
+   {
+    "vi": "đồ rác rưởi, thứ bỏ đi"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "公園で犬の散歩をさせたら必ずうんこを持ち帰りましょう。",
+    "vi": "Khi dắt chó đi dạo ở công viên, nhất định phải dọn phân mang về nhé."
+   }
+  ]
+ },
+ {
+  "id": 1001120,
+  "m": [
+   {
+    "vi": "cục ị (tiếng trẻ con)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "赤ちゃんのおむつを替えようとしたらウンチをしていた。",
+    "vi": "Định thay tã cho em bé thì thấy bé đã ị mất rồi."
+   }
+  ]
+ },
+ {
+  "id": 1001200,
+  "m": [
+   {
+    "vi": "này!, ê!"
+   },
+   {
+    "vi": "tôi, ta"
+   }
+  ]
+ },
+ {
+  "id": 1001260,
+  "m": [
+   {
+    "vi": "đi tè, nước tiểu (tiếng trẻ con)"
+   }
+  ]
+ },
+ {
+  "id": 1001350,
+  "m": [
+   {
+    "vi": "ông chú, bác trung niên"
+   },
+   {
+    "vi": "nhà sư"
+   }
+  ]
+ },
+ {
+  "id": 1001370,
+  "m": [
+   {
+    "vi": "bầu ngực, ti (của phụ nữ)"
+   },
+   {
+    "vi": "sữa mẹ"
+   }
+  ]
+ },
+ {
+  "id": 1001390,
+  "m": [
+   {
+    "vi": "món hầm thập cẩm oden"
+   }
+  ],
+  "hv": "ngự điền",
+  "ex": [
+   {
+    "ja": "寒い冬の日にはコンビニで買う熱々のおでんが恋しくなる。",
+    "vi": "Vào những ngày đông lạnh giá, tôi lại thèm món oden nóng hổi mua ở cửa hàng tiện lợi."
+   }
+  ]
+ },
+ {
+  "id": 1001420,
+  "m": [
+   {
+    "vi": "rắm, đánh rắm"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "人前でおならが出そうになって必死に我慢した。",
+    "vi": "Suýt chút nữa thì đánh rắm trước mặt mọi người nên tôi phải cố nhịn."
+   }
+  ]
+ },
+ {
+  "id": 1001480,
+  "m": [
+   {
+    "vi": "thêm vào đó, hơn nữa, đã thế lại còn"
+   }
+  ]
+ },
+ {
+  "id": 1001540,
+  "m": [
+   {
+    "vi": "xin chúc mừng"
+   }
+  ],
+  "hv": "ngự tọa",
+  "ex": [
+   {
+    "ja": "このたびはご結婚まことにおめでとうございます。",
+    "vi": "Xin chân thành chúc mừng lễ thành hôn của hai bạn."
+   }
+  ]
+ },
+ {
+  "id": 1001580,
+  "m": [
+   {
+    "vi": "cuống cuồng, luống cuống"
+   },
+   {
+    "vi": "khóc lóc, run rẩy (giọng nói)"
+   }
+  ]
+ },
+ {
+  "id": 1001620,
+  "m": [
+   {
+    "vi": "cơm nắm (onigiri)"
+   }
+  ]
+ },
+ {
+  "id": 1001730,
+  "m": [
+   {
+    "vi": "xin vui lòng, làm ơn"
+   }
+  ]
+ },
+ {
+  "id": 1001740,
+  "m": [
+   {
+    "vi": "mừng bạn đã về nhà"
+   }
+  ]
+ },
+ {
+  "id": 1001770,
+  "m": [
+   {
+    "vi": "khách mời, vị khách"
+   },
+   {
+    "vi": "khách hàng"
+   }
+  ]
+ },
+ {
+  "id": 1001780,
+  "m": [
+   {
+    "vi": "chúc ngủ ngon"
+   }
+  ]
+ },
+ {
+  "id": 1001890,
+  "m": [
+   {
+    "vi": "bánh xèo Nhật Bản (okonomiyaki)"
+   }
+  ],
+  "hv": "hảo thiêu"
+ },
+ {
+  "id": 1001910,
+  "m": [
+   {
+    "vi": "khăn ướt lau tay (ở nhà hàng)"
+   }
+  ]
+ },
+ {
+  "id": 1001970,
+  "m": [
+   {
+    "vi": "kết thúc, chấm dứt"
+   },
+   {
+    "vi": "thế là xong, thế là đủ"
+   }
+  ]
+ },
+ {
+  "id": 1002010,
+  "m": [
+   {
+    "vi": "em bé, cháu bé (cách gọi lịch sự)"
+   },
+   {
+    "vi": "trẻ em"
+   }
+  ],
+  "hv": "tử dạng"
+ },
+ {
+  "id": 1002260,
+  "m": [
+   {
+    "vi": "được giúp đỡ, được chăm sóc, làm phiền"
+   }
+  ]
+ },
+ {
+  "id": 1002340,
+  "m": [
+   {
+    "vi": "chào buổi sáng"
+   }
+  ]
+ },
+ {
+  "id": 1002370,
+  "m": [
+   {
+    "vi": "mẹ (cách gọi thân mật của đàn ông)"
+   }
+  ]
+ },
+ {
+  "id": 1002410,
+  "m": [
+   {
+    "vi": "chúc mừng sinh nhật"
+   }
+  ]
+ },
+ {
+  "id": 1002470,
+  "m": [
+   {
+    "vi": "thời tiết"
+   },
+   {
+    "vi": "tâm trạng, tính khí"
+   }
+  ]
+ },
+ {
+  "id": 1002520,
+  "m": [
+   {
+    "vi": "hời, có lợi, tiết kiệm"
+   },
+   {
+    "vi": "hữu ích, có ích"
+   }
+  ]
+ },
+ {
+  "id": 1002530,
+  "m": [
+   {
+    "vi": "trán"
+   },
+   {
+    "vi": "trán dô"
+   },
+   {
+    "vi": "chẳng bắt được gì (câu cá)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "転んでおでこに大きなたんこぶができてしまった。",
+    "vi": "Bị ngã nên trên trán tôi mọc lên một cục u to tướng."
+   }
+  ]
+ },
+ {
+  "id": 1002570,
+  "m": [
+   {
+    "vi": "cảm ơn bạn đã vất vả"
+   },
+   {
+    "vi": "chào tạm biệt (khi tan làm)"
+   }
+  ]
+ },
+ {
+  "id": 1002680,
+  "m": [
+   {
+    "vi": "giấy chứng nhận"
+   },
+   {
+    "vi": "sự bảo chứng, chấp thuận chính thức"
+   },
+   {
+    "vi": "văn bản có ấn triện của tướng quân"
+   }
+  ]
+ },
+ {
+  "id": 1002800,
+  "m": [
+   {
+    "vi": "tôi tự hỏi, không biết có phải không (thường nữ dùng)"
+   },
+   {
+    "vi": "một cái gì đó, đâu đó"
+   }
+  ]
+ },
+ {
+  "id": 1002840,
+  "m": [
+   {
+    "vi": "tích tắc (tiếng đồng hồ)"
+   },
+   {
+    "vi": "tiếng gõ cạch cạch"
+   },
+   {
+    "vi": "cứng đơ, đóng băng cứng"
+   },
+   {
+    "vi": "cứng nhắc, bảo thủ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "冷凍庫から出したばかりのアイスクリームはカチカチだ。",
+    "vi": "Hộp kem vừa lấy từ ngăn đá ra cứng đơ như đá."
+   }
+  ]
+ },
+ {
+  "id": 1002910,
+  "m": [
+   {
+    "vi": "bừng lên, nóng bừng"
+   },
+   {
+    "vi": "nổi cơn thịnh nộ, mất bình tĩnh"
+   },
+   {
+    "vi": "mở toang (mắt, miệng)"
+   },
+   {
+    "vi": "hành động dứt khoát"
+   }
+  ]
+ },
+ {
+  "id": 1002940,
+  "m": [
+   {
+    "vi": "không biết nữa, tôi tự hỏi"
+   },
+   {
+    "vi": "có nên không nhỉ"
+   },
+   {
+    "vi": "ước gì"
+   }
+  ]
+ },
+ {
+  "id": 1002950,
+  "m": [
+   {
+    "vi": "không địch nổi, không sánh bằng"
+   },
+   {
+    "vi": "không thể chịu nổi"
+   },
+   {
+    "vi": "không thể làm được"
+   }
+  ]
+ },
+ {
+  "id": 1002975,
+  "m": [
+   {
+    "vi": "có lẽ, có thể"
+   }
+  ]
+ },
+ {
+  "id": 1002980,
+  "m": [
+   {
+    "vi": "từ (thời gian, địa điểm)"
+   },
+   {
+    "vi": "qua, bằng"
+   },
+   {
+    "vi": "vì, bởi vì"
+   },
+   {
+    "vi": "làm từ (nguyên liệu)"
+   }
+  ]
+ },
+ {
+  "id": 1003040,
+  "m": [
+   {
+    "vi": "tiếng lách cách"
+   },
+   {
+    "vi": "mở toang (cửa)"
+   },
+   {
+    "vi": "quang đãng, trong xanh (bầu trời)"
+   },
+   {
+    "vi": "khô ráo, giòn tan"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "雨が上がって空がからりと晴れ上がった。",
+    "vi": "Cơn mưa tạnh và bầu trời quang đãng hẳn ra."
+   }
+  ]
+ },
+ {
+  "id": 1003060,
+  "m": [
+   {
+    "vi": "yếu ớt, mảnh mai, mong manh"
+   }
+  ]
+ },
+ {
+  "id": 1003090,
+  "m": [
+   {
+    "vi": "sột soạt (tiếng lá, giấy)"
+   },
+   {
+    "vi": "khô ráp, thô nháp"
+   },
+   {
+    "vi": "thô lỗ, cộc cằn"
+   },
+   {
+    "vi": "đánh bắt cá bằng vợt lưới"
+   }
+  ]
+ },
+ {
+  "id": 1003100,
+  "m": [
+   {
+    "vi": "lạch cạch, rung lắc"
+   },
+   {
+    "vi": "run cầm cập"
+   },
+   {
+    "vi": "càu nhàu, than phiền"
+   },
+   {
+    "vi": "ọp ẹp, lung lay"
+   }
+  ]
+ },
+ {
+  "id": 1003250,
+  "m": [
+   {
+    "vi": "uống ừng ực, tu một hơi"
+   },
+   {
+    "vi": "óc ách (nước trong bụng)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "運動の後に冷たい麦茶をがぶがぶ飲んだ。",
+    "vi": "Sau khi vận động, tôi tu ừng ực cốc trà lúa mạch mát lạnh."
+   }
+  ]
+ },
+ {
+  "id": 1003280,
+  "m": [
+   {
+    "vi": "ồn ào, rôm rả (đám đông nói chuyện)"
+   },
+   {
+    "vi": "cười ha hả, cười ầm ĩ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "休憩時間になると教室の中ががやがやと騒がしくなる。",
+    "vi": "Cứ đến giờ giải lao là trong lớp học lại ồn ào tiếng nói chuyện rôm rả."
+   }
+  ]
+ },
+ {
+  "id": 1003490,
+  "m": [
+   {
+    "vi": "ngó nghiêng, nhìn quanh quất"
+   }
+  ]
+ },
+ {
+  "id": 1003500,
+  "m": [
+   {
+    "vi": "lấp lánh, lóng lánh, rực rỡ"
+   }
+  ]
+ },
+ {
+  "id": 1003550,
+  "m": [
+   {
+    "vi": "gượng gạo, lúng túng, cứng nhắc"
+   }
+  ]
+ },
+ {
+  "id": 1003560,
+  "m": [
+   {
+    "vi": "răng cưa, khía"
+   },
+   {
+    "vi": "lởm chởm, có khía răng cưa"
+   }
+  ]
+ },
+ {
+  "id": 1003600,
+  "m": [
+   {
+    "vi": "kẽo kẹt, cót két"
+   },
+   {
+    "vi": "chen chúc chật ních"
+   },
+   {
+    "vi": "siết chặt, ấn mạnh"
+   },
+   {
+    "vi": "hành hạ, ép cung"
+   }
+  ]
+ },
+ {
+  "id": 1003620,
+  "m": [
+   {
+    "vi": "siết chặt, nắm chặt, ôm chặt"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "母親が迷子になりかけた子どもの手をぎゅっと握った。",
+    "vi": "Người mẹ nắm chặt tay đứa con suýt bị lạc."
+   }
+  ]
+ },
+ {
+  "id": 1003630,
+  "m": [
+   {
+    "vi": "giật mình, thót tim"
+   }
+  ]
+ },
+ {
+  "id": 1003650,
+  "m": [
+   {
+    "vi": "chói chang, lóa mắt, rực lửa"
+   }
+  ]
+ },
+ {
+  "id": 1003660,
+  "m": [
+   {
+    "vi": "sát nút, vừa khít, suýt soát vào phút chót"
+   }
+  ]
+ },
+ {
+  "id": 1003700,
+  "m": [
+   {
+    "vi": "nhăn nhúm, nhàu nát"
+   },
+   {
+    "vi": "bực bội, rối bời"
+   },
+   {
+    "vi": "nhai nhồm nhoàm"
+   }
+  ]
+ },
+ {
+  "id": 1003740,
+  "m": [
+   {
+    "vi": "cù lét, thọc lét"
+   },
+   {
+    "vi": "khơi gợi (trí tò mò), tâng bốc"
+   },
+   {
+    "vi": "chọc cười, mua vui"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "足の裏をくすぐると赤ちゃんが声を上げて笑った。",
+    "vi": "Khi tôi cù nhẹ vào lòng bàn chân, em bé liền bật cười thành tiếng."
+   }
+  ]
+ },
+ {
+  "id": 1003770,
+  "m": [
+   {
+    "vi": "mệt lử, kiệt sức"
+   },
+   {
+    "vi": "cũ nát, rách tươm (quần áo)"
+   },
+   {
+    "vi": "ninh nhừ, nhũn nát"
+   }
+  ]
+ },
+ {
+  "id": 1003790,
+  "m": [
+   {
+    "vi": "ngỏm củ tỏi, chết ngoẻo"
+   },
+   {
+    "vi": "mệt bở hơi tai, kiệt sức"
+   }
+  ]
+ },
+ {
+  "id": 1003890,
+  "m": [
+   {
+    "vi": "lải nhải, dai dẳng, lặp đi lặp lại"
+   }
+  ]
+ },
+ {
+  "id": 1003920,
+  "m": [
+   {
+    "vi": "khắp mọi nơi, không sót chỗ nào"
+   },
+   {
+    "vi": "sáng tỏ, rõ ràng"
+   }
+  ]
+ },
+ {
+  "id": 1003930,
+  "m": [
+   {
+    "vi": "ủ rũ, buồn bã, lo nghĩ vẩn vơ"
+   },
+   {
+    "vi": "nơm nớp lo âu, day dứt mãi"
+   }
+  ]
+ },
+ {
+  "id": 1003960,
+  "m": [
+   {
+    "vi": "xoay tròn, quay tít"
+   },
+   {
+    "vi": "cuộn tròn, quấn quanh"
+   },
+   {
+    "vi": "làm việc thoăn thoắt"
+   },
+   {
+    "vi": "thay đổi xoành xoạch"
+   }
+  ]
+ },
+ {
+  "id": 1004040,
+  "m": [
+   {
+    "vi": "lề mề, chần chừ, lần lữa"
+   },
+   {
+    "vi": "cằn nhằn, lẩm bẩm"
+   },
+   {
+    "vi": "thất thường (thời tiết)"
+   },
+   {
+    "vi": "lỏng lẻo, rệu rã"
+   }
+  ]
+ },
+ {
+  "id": 1004070,
+  "m": [
+   {
+    "vi": "rũ rượi, mềm nhũn, mệt lả"
+   }
+  ]
+ },
+ {
+  "id": 1004110,
+  "m": [
+   {
+    "vi": "lung lay, chao đảo"
+   },
+   {
+    "vi": "do dự, dao động"
+   },
+   {
+    "vi": "sôi sùng sục"
+   },
+   {
+    "vi": "chóng mặt, quay cuồng"
+   }
+  ]
+ },
+ {
+  "id": 1004140,
+  "m": [
+   {
+    "vi": "quay vòng vòng, xoay tròn"
+   },
+   {
+    "vi": "quấn quanh, cuốn quanh"
+   }
+  ]
+ },
+ {
+  "id": 1004170,
+  "m": [
+   {
+    "vi": "sự phân biệt rạch ròi"
+   },
+   {
+    "vi": "chừng mực, lễ độ"
+   },
+   {
+    "vi": "trách nhiệm rõ ràng"
+   },
+   {
+    "vi": "ranh giới, điểm phân chia"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "仕事とプライベートのけじめをしっかりつけることが大切だ。",
+    "vi": "Điều quan trọng là phải phân biệt rạch ròi giữa công việc và đời sống riêng tư."
+   }
+  ]
+ },
+ {
+  "id": 1004200,
+  "m": [
+   {
+    "vi": "nhưng, tuy nhiên, mặc dù"
+   }
+  ]
+ }
+]

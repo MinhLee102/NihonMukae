@@ -101,7 +101,8 @@ export function ImportDialog({ onClose, onImported }: { onClose: () => void; onI
           {step === "edit" && (
             <>
               <p className="text-sm text-neutral-500">
-                Dán JSON đề thi theo định dạng trong docs/JLPT_IMPORT_FORMAT.md. Với đề nghe, ghi tên file audio
+                Dán JSON đề thi theo định dạng trong docs/JLPT_IMPORT_FORMAT.md (prompt nhờ AI tạo JSON có ở mục Prompt AI
+                bên menu). Với đề nghe, ghi tên file audio
                 trong JSON rồi chọn các file đó ở dưới, hệ thống tự tải lên và thay bằng địa chỉ phát.
               </p>
               <textarea

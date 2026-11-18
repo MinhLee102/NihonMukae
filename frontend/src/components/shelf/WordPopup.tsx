@@ -1,35 +1,66 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { X } from "lucide-react";
 import { AddToFlashcardButton } from "@/components/flashcard/AddToFlashcardButton";
-import { lookupWord, type WordDto } from "@/lib/api/dictionary";
+import { lookupAt, type SpanLookupDto } from "@/lib/api/dictionary";
 import type { ShelfToken } from "@/lib/api/shelf";
 
-const KANJI = /[一-鿿々]/;
+const WINDOW_BEFORE = 4; // tokens before the clicked one
+const WINDOW_AFTER = 10; // tokens after the clicked one
+const WINDOW_MAX_CHARS = 100; // the server accepts at most 120
 
-/** What to send to /dictionary/lookup for a token. */
-function lookupParams(token: ShelfToken): { kanji?: string; kana?: string } {
-  const surface = token.parts.map((p) => p.text).join("");
-  if (!KANJI.test(token.base)) return { kana: token.base };
-  // The reading only describes the surface form, so it only helps when the word is not inflected.
-  return surface === token.base ? { kanji: token.base, kana: token.reading } : { kanji: token.base };
+const surfaceOf = (token: ShelfToken) => token.parts.map((p) => p.text).join("");
+
+/** Text around the clicked token plus the clicked character offset and each token's range inside that text. */
+function buildWindow(tokens: ShelfToken[], index: number) {
+  const first = Math.max(0, index - WINDOW_BEFORE);
+  let text = "";
+  const ranges: { start: number; end: number; index: number }[] = [];
+  for (let i = first; i < Math.min(tokens.length, index + WINDOW_AFTER + 1); i++) {
+    const s = surfaceOf(tokens[i]);
+    if (i > index && text.length + s.length > WINDOW_MAX_CHARS) break;
+    ranges.push({ start: text.length, end: text.length + s.length, index: i });
+    text += s;
+  }
+  const clicked = ranges.find((r) => r.index === index);
+  return { text, offset: clicked ? clicked.start : 0, ranges };
 }
 
-/** Popup shown under a clicked word: Vietnamese meanings, one example and an add-to-flashcard button. */
-export function WordPopup({ token, onClose }: { token: ShelfToken; onClose: () => void }) {
-  const [word, setWord] = useState<WordDto | null>(null);
+/**
+ * Popup shown under a clicked word. It looks up the LONGEST dictionary string containing the clicked token
+ * (so 容疑者 is found even though the tokenizer splits it into 容疑 + 者) and tells the page which tokens that
+ * covers, so the page can highlight the whole word.
+ */
+export function WordPopup({
+  tokens,
+  index,
+  onResolved,
+  onClose,
+}: {
+  tokens: ShelfToken[];
+  index: number;
+  onResolved: (from: number, to: number) => void;
+  onClose: () => void;
+}) {
+  const token = tokens[index];
+  const [result, setResult] = useState<SpanLookupDto | null>(null);
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
+  const win = useMemo(() => buildWindow(tokens, index), [tokens, index]);
 
   useEffect(() => {
     let cancelled = false;
     setLoading(true);
     setNotFound(false);
-    setWord(null);
-    lookupWord(lookupParams(token))
+    setResult(null);
+    lookupAt(win.text, win.offset)
       .then((res) => {
-        if (!cancelled) setWord(res.data);
+        if (cancelled) return;
+        setResult(res.data);
+        // Round the matched range outwards to whole tokens (the server tokenizes the window on its own)
+        const covered = win.ranges.filter((r) => r.end > res.data.start && r.start < res.data.end);
+        if (covered.length > 0) onResolved(covered[0].index, covered[covered.length - 1].index);
       })
       .catch(() => {
         if (!cancelled) setNotFound(true);
@@ -40,7 +71,9 @@ export function WordPopup({ token, onClose }: { token: ShelfToken; onClose: () =
     return () => {
       cancelled = true;
     };
-  }, [token]);
+    // onResolved is a new function on every render of the page; the lookup must only depend on what was clicked
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [win]);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
@@ -48,17 +81,18 @@ export function WordPopup({ token, onClose }: { token: ShelfToken; onClose: () =
     return () => window.removeEventListener("keydown", onKey);
   }, [onClose]);
 
+  const word = result?.entry ?? null;
+  const parts = result && result.parts.length > 1 ? result.parts : [];
   const example = word?.examples?.[0];
   const nameLabel = token.name === "person" ? "Tên người" : token.name === "place" ? "Địa danh" : null;
+  const shown = word?.kanji || word?.kana || token.base;
 
   return (
     <div className="w-[320px] rounded-2xl border border-black/5 bg-white p-4 text-left shadow-xl">
       <div className="flex items-start justify-between gap-2">
         <div className="min-w-0">
-          <span className="font-serif text-2xl text-neutral-900">{word?.kanji || token.base}</span>
-          {word && word.kana !== (word.kanji || token.base) && (
-            <span className="ml-2 text-sm text-neutral-400">{word.kana}</span>
-          )}
+          <span className="font-serif text-2xl text-neutral-900">{word ? shown : token.base}</span>
+          {word && word.kana !== shown && <span className="ml-2 text-sm text-neutral-400">{word.kana}</span>}
           {!word && token.reading && <span className="ml-2 text-sm text-neutral-400">{token.reading}</span>}
           {nameLabel && (
             <p className="mt-0.5 text-[11px] font-medium uppercase tracking-widest text-amber-600">{nameLabel}</p>
@@ -99,6 +133,19 @@ export function WordPopup({ token, onClose }: { token: ShelfToken; onClose: () =
               </li>
             ))}
           </ul>
+
+          {parts.length > 0 && (
+            <p className="mt-3 text-[11px] leading-relaxed text-neutral-400">
+              Gồm:{" "}
+              {parts.map((p, i) => (
+                <span key={i}>
+                  {i > 0 && " · "}
+                  <span className="text-neutral-600">{p.surface}</span>
+                  {p.meaning && ` ${p.meaning.replace(/^◆\s*/, "").replace(/[.。]\s*$/, "").split(/[,;，、]/)[0]}`}
+                </span>
+              ))}
+            </p>
+          )}
 
           {example && (
             <div className="mt-3 rounded-xl bg-[#F5F3EE] px-3 py-2.5 text-xs">

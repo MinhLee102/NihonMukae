@@ -29,6 +29,17 @@ public final class DictDtos {
                         List<PublicContribution> contributions) {
     }
 
+    /** Một thành phần của từ ghép trong kết quả tra theo vị trí: mặt chữ, cách đọc và nghĩa chính. */
+    public record SpanPart(String surface, String reading, String meaning) {
+    }
+
+    /**
+     * Kết quả tra theo vị trí bấm: mục từ điển của chuỗi dài nhất tìm được. start và end là vị trí (đơn vị char
+     * UTF-16, end không tính) của chuỗi đó trong văn bản gửi lên. parts rỗng khi chuỗi chỉ có một token.
+     */
+    public record SpanLookup(Entry entry, String surface, int start, int end, List<SpanPart> parts) {
+    }
+
     /** matchType: word_form | meaning | fuzzy | none. */
     public record SearchResult(PageData<Entry> results, String matchType) {
     }

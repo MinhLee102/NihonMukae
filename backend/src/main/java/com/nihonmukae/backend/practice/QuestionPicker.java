@@ -115,17 +115,51 @@ public class QuestionPicker {
 
     // ─── Thi JLPT ───────────────────────────────────────────────────────
 
-    /** Đề cụ thể: lấy toàn bộ câu của đề, xếp theo khối rồi theo thứ tự trong đề. */
+    /**
+     * Đề cụ thể: lấy toàn bộ câu của đề, xếp theo khối, rồi theo dạng bài, rồi theo thứ tự trong đề (đề import làm
+     * nhiều lần theo từng phần vẫn ra đúng thứ tự). Đề không có câu nghe (ví dụ đề do AI soạn) thì mượn nguyên một
+     * bộ nghe của đề khác cùng level, chọn ngẫu nhiên.
+     */
     public Picked pickExamTest(long testId, short level) {
-        Map<Short, BlueprintRow> blueprint = examConfig.findBlueprint(level).stream()
+        List<BlueprintRow> rows = examConfig.findBlueprint(level);
+        Map<Short, BlueprintRow> blueprint = rows.stream()
                 .collect(Collectors.toMap(b -> b.typeId(), Function.identity(), (a, b) -> a));
+        Map<Short, QuestionType> types = typesById();
         List<Entry> entries = new ArrayList<>();
+        boolean hasListening = false;
         for (Question q : questionRepository.findByTestIdAndActiveTrueOrderByTestOrderAscIdAsc(testId)) {
             BlueprintRow row = blueprint.get(q.getTypeId());
             entries.add(new Entry(q, row == null ? 1 : row.blockNo(), row == null ? BigDecimal.ONE : row.pointsPerQuestion()));
+            QuestionType type = types.get(q.getTypeId());
+            hasListening |= type != null && "chokai".equals(type.getSection());
         }
-        entries.sort(Comparator.comparingInt(Entry::blockNo));
-        return new Picked(entries, List.of());
+
+        Long listeningTestId = null;
+        List<BlueprintRow> listeningRows = rows.stream().filter(r -> {
+            QuestionType type = types.get(r.typeId());
+            return type != null && "chokai".equals(type.getSection());
+        }).toList();
+        if (!hasListening && !listeningRows.isEmpty()) {
+            Optional<ListeningSet> set = pickListeningSet(level);
+            if (set.isPresent()) {
+                Map<Short, BlueprintRow> rowByType = listeningRows.stream()
+                        .collect(Collectors.toMap(BlueprintRow::typeId, Function.identity(), (x, y) -> x));
+                int block = listeningRows.get(0).blockNo();
+                for (Question q : set.get().questions()) {
+                    BlueprintRow row = rowByType.get(q.getTypeId());
+                    entries.add(new Entry(q, row == null ? block : row.blockNo(),
+                            row == null ? BigDecimal.ONE : row.pointsPerQuestion()));
+                }
+                listeningTestId = set.get().test().getId();
+            }
+        }
+
+        Map<Short, Integer> typeOrder = new HashMap<>();
+        rows.forEach(r -> typeOrder.put(r.typeId(), r.sortOrder()));
+        // sort ổn định: trong cùng một dạng bài giữ nguyên thứ tự trong đề
+        entries.sort(Comparator.comparingInt(Entry::blockNo)
+                .thenComparingInt(e -> typeOrder.getOrDefault(e.question().getTypeId(), Integer.MAX_VALUE)));
+        return new Picked(entries, List.of(), listeningTestId);
     }
 
     /** Đề random: với mỗi dòng blueprint bốc đúng số câu (hoặc cả nhóm); phần nghe lấy nguyên một bộ nghe nếu có. */

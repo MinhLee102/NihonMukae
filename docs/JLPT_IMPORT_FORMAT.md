@@ -203,7 +203,7 @@ Hệ thống chỉ coi một câu là "đã có" khi **cùng đề** (hoặc cù
 
 1. Với từng đề (ví dụ N3 tháng 12 năm 2021), gom: file PDF hoặc ảnh đề, **bảng đáp án**, một file audio của cả phần nghe, và nếu có thì **bản chép lời phần nghe (スクリプト)**. Đáp án phần nghe bắt buộc phải lấy từ bảng đáp án hoặc từ bản chép lời, vì AI không nghe được audio. Hầu hết nguồn đề (sách, trang luyện thi) đều có đáp án và script đi kèm.
 2. Nén audio bằng `python scripts/jlpt/compress_audio.py file.mp3` (cần ffmpeg; mono 64 kbps, thường nhẹ hơn 4 đến 8 lần, tiết kiệm băng thông server), đặt tên dễ nhớ như `n3_2021_12_listening.mp3`.
-3. Nhờ AI chuyển đề sang JSON bằng đoạn yêu cầu ở cuối tài liệu này. Một đề nên làm thành **một file JSON** (đủ phần chữ Hán, từ vựng, ngữ pháp, đọc hiểu, nghe hiểu). AI sẽ trả thêm **danh sách ảnh cần cắt**.
+3. Nhờ AI chuyển đề sang JSON bằng prompt ở Admin, Prompt AI. Một đề nên làm thành **một file JSON** (đủ phần chữ Hán, từ vựng, ngữ pháp, đọc hiểu, nghe hiểu). AI sẽ trả thêm **danh sách ảnh cần cắt**.
 4. Cắt các ảnh theo danh sách đó (Win + Shift + S), lưu đúng tên file AI đã ghi trong JSON.
 5. Vào Admin, Ngân hàng đề, Import JSON, dán JSON, chọn kèm audio và các ảnh, bấm Kiểm tra. Sửa lỗi nếu có, rồi Lưu. Nếu hộp báo tên file ảnh nào lệch thì đổi tên file cho khớp JSON.
 6. Mở thử vài câu (nhất là câu nghe có hình và bài đọc có bảng) để chắc đáp án và hiển thị đúng.
@@ -247,43 +247,12 @@ Hệ thống chỉ coi một câu là "đã có" khi **cùng đề** (hoặc cù
 
 ## Nhờ AI trích xuất đề từ ảnh hoặc PDF
 
-Đưa AI đề thi (ảnh chụp, PDF) kèm đoạn yêu cầu sau, rồi dán kết quả vào hộp Import JSON. Với tờ rơi quá phức tạp thì bỏ qua phần bài đó ở AI và dùng ảnh (cách A).
-
-```text
-Hãy chuyển đề thi JLPT đính kèm thành MỘT file JSON hợp lệ theo đúng định dạng sau, chỉ trả về JSON.
-
-CẤU TRÚC
-- Gốc có 3 khóa: "test" (level, title, year, month, audio_url), "questions", "groups".
-- Câu nghe: nếu tài liệu có sẵn script (lời thoại) thì ghi vào "transcript" nguyên văn tiếng Nhật; KHÔNG tự nghe hoặc đoán, không có thì bỏ trường này.
-- "audio_url" trong "test" là tên file audio của CẢ phần nghe, theo mẫu n3_2023_07_listening.mp3 (level, năm, tháng). Câu nghe KHÔNG cần audio_url riêng, nhưng PHẢI giữ đúng thứ tự như trong đề (1番, 2番, 3番...).
-- Câu đơn vào "questions". Các câu dùng chung một đoạn văn, bảng, thông báo hoặc ảnh vào "groups", mỗi nhóm có "type", "passage" (hoặc "image_url") và "questions".
-
-MỖI CÂU
-- "type", "question", "options" (3 hoặc 4 chuỗi, KHÔNG kèm số thứ tự 1 2 3 4), "correct" (chữ cái A, B, C hoặc D), "explanation" (giải thích ngắn bằng tiếng Việt).
-- Từ được gạch chân trong đề thì bọc bằng <u>...</u>. Chỗ trống giữ nguyên là （　）. Câu sắp xếp có ★ giữ nguyên ★.
-- KHÔNG ghi số 問題N và câu hướng dẫn, hệ thống tự thêm.
-- Câu nghe: "question" ghi 質問を聞いてください。 và "options" ghi "1","2","3","4" nếu đề không in chữ. Nếu đề in sẵn đáp án thì ghi đúng chữ.
-- Câu nghe có hình: nếu hình nằm ở đề bài thì viết [[img:n3_2021_12_q03.png]] vào "question" (tên theo mẫu level, năm, tháng, số câu). Nếu 4 đáp án là một hình ghép đánh số thì để "options" là "1","2","3","4" và đặt hình vào "question". Nếu mỗi đáp án là một hình riêng thì "options" là [[img:ten_a.png]], [[img:ten_b.png]]... Đáp án bằng chữ thì giữ nguyên chữ. Chỉ ghi tên file ảnh, tôi sẽ tự cắt ảnh từ PDF.
-- SAU phần JSON, hãy trả thêm mục "DANH SÁCH ẢNH CẦN CẮT" dưới dạng bảng: tên file, số thứ tự câu (ví dụ 聴解 問題1 3番), trang trong file đề, vị trí trên trang (đầu, giữa, cuối), và mô tả ngắn hình gồm gì (ví dụ "bản vẽ 4 ô đánh số 1 đến 4", "tờ giấy có các ký hiệu ア イ ウ エ"). Mỗi hình chỉ một dòng và tên file phải trùng đúng với tên trong JSON.
-
-"type" CHỈ DÙNG CÁC MÃ
-kanji_reading, orthography, word_formation, context_word, synonym, word_usage, grammar_choice, grammar_ordering, grammar_text, reading_short, reading_medium, reading_long, reading_integrated, reading_argument, info_search, listen_task, listen_point, listen_overview, listen_expression, listen_quick, listen_integrated.
-Các dạng nhóm (grammar_text, reading_*, info_search, listen_integrated) bắt buộc đặt trong "groups".
-Chọn "type" cho phần 読解 theo tên 問題 trong đề: 内容理解(短文) là reading_short, 内容理解(中文) là reading_medium, 内容理解(長文) là reading_long (chỉ N3 và N1), 統合理解 là reading_integrated (N2, N1), 主張理解(長文) là reading_argument (N2, N1), 情報検索 là info_search. N3 KHÔNG có reading_argument.
-Phần 聴解: 課題理解 là listen_task, ポイント理解 là listen_point, 概要理解 là listen_overview (N3 trở lên), 発話表現 là listen_expression (N3 trở xuống), 即時応答 là listen_quick, 統合理解 là listen_integrated (N2, N1).
-
-ĐỊNH DẠNG BÀI ĐỌC (trong "passage", chỉ dùng các ký hiệu này, KHÔNG dùng HTML hay Markdown khác)
-- **chữ** để in đậm, <u>chữ</u> để gạch chân.
-- Bảng: mỗi hàng một dòng dạng | ô 1 | ô 2 |. Nếu hàng đầu là tiêu đề thì thêm dòng |---|---| ngay sau nó.
-- [[box]] ... [[/box]] cho phần có khung viền (thông báo, tờ rơi, quảng cáo).
-- [[center]] ... [[/center]] cho tiêu đề căn giữa, [[right]] ... [[/right]] cho ngày tháng, tên người gửi hoặc người ký ở bên phải.
-- Có thể lồng các thẻ vào nhau. Xuống dòng bằng \n.
-- Email: ghi đủ các dòng 宛先, 件名, nội dung, người gửi như bản gốc, mỗi dòng một dòng.
-- Nếu một bài có hình ảnh, biểu đồ hoặc bố cục quá phức tạp không thể diễn tả bằng các ký hiệu trên, hãy ĐỂ "passage" là "[ẢNH]" và ghi "image_url" theo mẫu n3_2023_07_reading_q45.png, tôi sẽ tự gắn ảnh.
-
-ĐÁP ÁN
-- Phần chữ Hán, từ vựng, ngữ pháp, đọc hiểu: nếu đề không có đáp án kèm theo, hãy tự giải và ghi "correct" cẩn thận, ghi chú những câu chưa chắc chắn vào "explanation".
-- Phần NGHE (聴解): bạn KHÔNG nghe được audio, nên TUYỆT ĐỐI không đoán đáp án. Chỉ ghi "correct" khi đề có bảng đáp án hoặc bản chép lời (スクリプト) để suy ra được. Câu nào không có căn cứ thì ghi "correct": "?" và liệt kê cuối câu trả lời các câu nghe còn thiếu đáp án (số thứ tự câu) để tôi tự điền.
-```
+Prompt đầy đủ nằm ở **Admin, Prompt AI** (chọn cấp độ, năm, tháng thì tên file audio và ảnh trong prompt tự khớp, có nút Sao chép). Nội dung prompt được giữ trong `frontend/src/lib/adminPrompts.ts`, sửa ở đó khi định dạng thay đổi. Đính kèm PDF hoặc ảnh đề vào AI, dán prompt, rồi dán khối JSON AI trả về vào hộp Import JSON. Với tờ rơi quá phức tạp thì bỏ qua phần bài đó ở AI và dùng ảnh (cách A).
 
 Nên mở thử vài câu sau khi import để chắc đáp án đúng và định dạng bài đọc hiển thị đẹp, vì AI có thể sai khi tự giải hoặc khi dựng bảng. Đếm lại số ảnh AI liệt kê với số ảnh bạn cắt, thiếu ảnh nào thì câu đó sẽ hiện lỗi ảnh.
+
+## Đề do AI soạn (không có phần nghe)
+
+Tab **AI soạn đề mới** ở Admin, Prompt AI tạo prompt để AI tự soạn câu hỏi, đáp án và giải thích cho phần chữ Hán và từ vựng, ngữ pháp, đọc hiểu, đúng số câu từng dạng của thi thử (lấy từ blueprint, `frontend/src/lib/adminGenPrompt.ts` giữ bản sao, đổi blueprint thì sửa theo). Mỗi phần chạy một lần với cùng cấp độ và số thứ tự đề, rồi import từng file. Các file dùng chung `test.title` (ví dụ `N3 AI tạo 01`, không có year, month) nên tự ghép vào cùng một đề.
+
+Đề này không có audio. Khi thi thử nguyên đề, hệ thống tự mượn nguyên một bộ nghe ngẫu nhiên của một đề khác cùng cấp độ có `test.audio_url`. Nếu cấp độ đó chưa có bộ nghe nào thì đề thi thử chỉ có phần chữ.

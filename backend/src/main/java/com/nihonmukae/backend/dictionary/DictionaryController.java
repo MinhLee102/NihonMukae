@@ -3,6 +3,7 @@ package com.nihonmukae.backend.dictionary;
 import com.nihonmukae.backend.auth.jwt.JwtUserPrincipal;
 import com.nihonmukae.backend.dictionary.dto.DictDtos.ContributionRequest;
 import com.nihonmukae.backend.dictionary.dto.DictDtos.Entry;
+import com.nihonmukae.backend.dictionary.dto.DictDtos.SpanLookup;
 import com.nihonmukae.backend.dictionary.dto.DictDtos.HistoryItem;
 import com.nihonmukae.backend.dictionary.dto.DictDtos.KanjiDetail;
 import com.nihonmukae.backend.dictionary.dto.DictDtos.KanjiSummary;
@@ -34,9 +35,11 @@ public class DictionaryController {
     private final DictionaryService dictionaryService;
     private final ContributionService contributionService;
     private final KanjiService kanjiService;
+    private final WordSpanService wordSpanService;
 
     public DictionaryController(DictionaryService dictionaryService, ContributionService contributionService,
-                                KanjiService kanjiService) {
+                                KanjiService kanjiService, WordSpanService wordSpanService) {
+        this.wordSpanService = wordSpanService;
         this.dictionaryService = dictionaryService;
         this.contributionService = contributionService;
         this.kanjiService = kanjiService;
@@ -66,6 +69,15 @@ public class DictionaryController {
             @RequestParam(value = "kana", required = false) String kana
     ) {
         return ApiResponse.success(dictionaryService.lookup(kanji, kana));
+    }
+
+    // GET /dictionary/lookup-at?text=容疑者Xの献身&offset=0 : từ dài nhất chứa ký tự ở vị trí offset
+    @GetMapping("/lookup-at")
+    public ApiResponse<SpanLookup> lookupAt(
+            @RequestParam("text") String text,
+            @RequestParam("offset") int offset
+    ) {
+        return ApiResponse.success(wordSpanService.lookupAt(text, offset));
     }
 
     // ─── Hán tự (công khai) ─────────────────────────────────────────────

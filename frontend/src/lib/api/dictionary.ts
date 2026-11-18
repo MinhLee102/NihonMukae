@@ -108,6 +108,29 @@ export const lookupWord = async (params: {
   return data;
 };
 
+export interface SpanPartDto {
+  surface: string;
+  reading: string | null;
+  meaning: string | null;
+}
+
+// Result of looking up by click position: the longest dictionary string containing the clicked character.
+// start/end are UTF-16 offsets (end exclusive) of that string inside the text that was sent.
+export interface SpanLookupDto {
+  entry: WordDto;
+  surface: string;
+  start: number;
+  end: number;
+  parts: SpanPartDto[];
+}
+
+export const lookupAt = async (text: string, offset: number): Promise<ApiResponse<SpanLookupDto>> => {
+  const { data } = await apiClient.get<ApiResponse<SpanLookupDto>>('/dictionary/lookup-at', {
+    params: { text, offset },
+  });
+  return data;
+};
+
 // ─── Hán tự ────────────────────────────────────────────────────────────
 
 export interface KanjiSummaryDto {

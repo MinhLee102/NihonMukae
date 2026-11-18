@@ -57,6 +57,7 @@ public class SecurityConfig {
                                 "/health",
                                 "/dictionary/search",
                                 "/dictionary/lookup",
+                                "/dictionary/lookup-at",
                                 "/dictionary/kanji/**",
                                 "/actuator/**",
                                 "/v3/api-docs/**",

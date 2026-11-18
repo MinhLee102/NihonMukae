@@ -1,0 +1,3322 @@
+[
+ {
+  "id": 2257550,
+  "m": [
+   {
+    "vi": "không (hậu tố phủ định)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "明日は予定がないので一日中家にいる。",
+    "vi": "Ngày mai không có lịch trình gì nên tôi ở nhà cả ngày."
+   }
+  ]
+ },
+ {
+  "id": 2258150,
+  "m": [
+   {
+    "vi": "sự hiểu biết, biết rõ"
+   }
+  ]
+ },
+ {
+  "id": 2258710,
+  "m": [
+   {
+    "vi": "vì nhiều lý do, đủ thứ chuyện xảy ra"
+   }
+  ]
+ },
+ {
+  "id": 2260250,
+  "m": [
+   {
+    "vi": "không thương tiếc, không nương tay"
+   }
+  ]
+ },
+ {
+  "id": 2260370,
+  "m": [
+   {
+    "vi": "đặt mua định kỳ (báo, tạp chí)"
+   }
+  ],
+  "hv": "định kỳ cấu độc"
+ },
+ {
+  "id": 2261300,
+  "m": [
+   {
+    "vi": "nên làm, phải làm"
+   }
+  ]
+ },
+ {
+  "id": 2262030,
+  "m": [
+   {
+    "vi": "bánh mì hấp, bánh bao hấp"
+   }
+  ]
+ },
+ {
+  "id": 2266130,
+  "m": [
+   {
+    "vi": "bằng cách, nhờ vào, do bởi"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "毎日練習することにより、少しずつ上達してきた。",
+    "vi": "Nhờ luyện tập mỗi ngày nên tôi đã tiến bộ lên từng chút một."
+   }
+  ]
+ },
+ {
+  "id": 2266380,
+  "m": [
+   {
+    "vi": "ẩm thực Pháp, món ăn Pháp"
+   }
+  ]
+ },
+ {
+  "id": 2267940,
+  "m": [
+   {
+    "vi": "có chữ ký (của tác giả, người nổi tiếng)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "抽選で好きな作家のサイン入りの本が当たった。",
+    "vi": "Tôi đã trúng thưởng cuốn sách có chữ ký của tác giả mình thích."
+   }
+  ]
+ },
+ {
+  "id": 2269820,
+  "m": [
+   {
+    "vi": "bị làm, được làm (bị động)"
+   },
+   {
+    "vi": "làm (tôn kính ngữ)"
+   }
+  ],
+  "hv": "vi"
+ },
+ {
+  "id": 2273030,
+  "m": [
+   {
+    "vi": "máy rút tiền tự động (ATM)"
+   },
+   {
+    "vi": "chế độ truyền tải không đồng bộ (ATM)"
+   },
+   {
+    "vi": "tên lửa chống tăng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "出かける前にコンビニのＡＴＭで現金をおろした。",
+    "vi": "Trước khi ra ngoài tôi đã rút tiền mặt ở máy ATM trong cửa hàng tiện lợi."
+   }
+  ]
+ },
+ {
+  "id": 2273360,
+  "m": [
+   {
+    "vi": "xin lỗi nhé (tiếng lóng)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "遅刻してごめん、本当にサーセン。",
+    "vi": "Xin lỗi vì đến muộn nhé, thật sự xin lỗi lắm."
+   }
+  ]
+ },
+ {
+  "id": 2274260,
+  "m": [
+   {
+    "vi": "rốt cuộc là cái gì, ý nghĩa là gì"
+   }
+  ]
+ },
+ {
+  "id": 2274860,
+  "m": [
+   {
+    "vi": "bán hàng hóa, quầy bán đồ lưu niệm"
+   }
+  ]
+ },
+ {
+  "id": 2275300,
+  "m": [
+   {
+    "vi": "ngày 15"
+   },
+   {
+    "vi": "15 ngày"
+   }
+  ]
+ },
+ {
+  "id": 2276200,
+  "m": [
+   {
+    "vi": "xin lỗi, xin phép (khi vào phòng, làm phiền)"
+   }
+  ]
+ },
+ {
+  "id": 2345340,
+  "m": [
+   {
+    "vi": "môi trường làm việc"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "従業員が働きやすい作業環境を整えることが大切だ。",
+    "vi": "Việc xây dựng môi trường làm việc thoải mái cho nhân viên rất quan trọng."
+   }
+  ]
+ },
+ {
+  "id": 2355140,
+  "m": [
+   {
+    "vi": "nhận dạng ký tự quang học (OCR)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "光学式文字認識の技術で紙の書類をデータ化した。",
+    "vi": "Tôi đã số hóa tài liệu giấy bằng công nghệ nhận dạng ký tự quang học."
+   }
+  ]
+ },
+ {
+  "id": 2383820,
+  "m": [
+   {
+    "vi": "tiêu chuẩn, chuẩn mực"
+   },
+   {
+    "vi": "bình thường, điển hình, phổ thông"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "このモデルがシリーズの中で最も標準的な仕様だ。",
+    "vi": "Mẫu này có thông số kỹ thuật tiêu chuẩn nhất trong dòng sản phẩm."
+   }
+  ]
+ },
+ {
+  "id": 2383970,
+  "m": [
+   {
+    "vi": "bảng tính (spreadsheet)"
+   }
+  ]
+ },
+ {
+  "id": 2386360,
+  "m": [
+   {
+    "vi": "trong vòng... phút"
+   }
+  ],
+  "hv": "phân gian"
+ },
+ {
+  "id": 2393900,
+  "m": [
+   {
+    "vi": "đủ rồi đấy!, thôi ngay đi!"
+   }
+  ]
+ },
+ {
+  "id": 2394230,
+  "m": [
+   {
+    "vi": "sắp xếp lại, xếp lại theo thứ tự"
+   }
+  ]
+ },
+ {
+  "id": 2394660,
+  "m": [
+   {
+    "vi": "phải làm, bắt buộc phải làm"
+   },
+   {
+    "vi": "không thể thiếu, tất yếu phải có"
+   }
+  ],
+  "hv": "hành",
+  "ex": [
+   {
+    "ja": "明日の朝は早いのでもう寝ないといけない。",
+    "vi": "Sáng mai phải dậy sớm nên giờ tôi phải đi ngủ thôi."
+   }
+  ]
+ },
+ {
+  "id": 2396020,
+  "m": [
+   {
+    "vi": "nhà phát triển (phần mềm, trò chơi)"
+   }
+  ]
+ },
+ {
+  "id": 2397590,
+  "m": [
+   {
+    "vi": "cái bao (trong oẳn tù tì)"
+   },
+   {
+    "vi": "tan biến hết, đổ sông đổ bể"
+   },
+   {
+    "vi": "sự ngu ngốc, ngớ ngẩn"
+   }
+  ]
+ },
+ {
+  "id": 2398050,
+  "m": [
+   {
+    "vi": "lúc nào không hay, không hề hay biết"
+   }
+  ]
+ },
+ {
+  "id": 2398850,
+  "m": [
+   {
+    "vi": "phát bệnh, khởi phát triệu chứng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "感染してから数日後に熱や咳などの症状が発症した。",
+    "vi": "Vài ngày sau khi nhiễm bệnh, các triệu chứng như sốt và ho đã khởi phát."
+   }
+  ]
+ },
+ {
+  "id": 2406800,
+  "m": [
+   {
+    "vi": "cấu hình đề nghị, môi trường khuyến nghị (phần mềm)"
+   }
+  ],
+  "hv": "suy tưởng hoàn cảnh",
+  "ex": [
+   {
+    "ja": "このゲームを快適に遊ぶための推奨環境を確認した。",
+    "vi": "Tôi đã kiểm tra cấu hình đề nghị để chơi trò chơi này mượt mà."
+   }
+  ]
+ },
+ {
+  "id": 2408310,
+  "m": [
+   {
+    "vi": "tiền tiêu vặt"
+   }
+  ]
+ },
+ {
+  "id": 2408840,
+  "m": [
+   {
+    "vi": "yêu thương, yêu mến"
+   }
+  ]
+ },
+ {
+  "id": 2412510,
+  "m": [
+   {
+    "vi": "bao đựng thẻ tàu xe"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "バッグの持ち手に定期券を入れたパスケースを付けた。",
+    "vi": "Tôi gắn chiếc bao đựng thẻ tàu vào quai túi xách."
+   }
+  ]
+ },
+ {
+  "id": 2413940,
+  "m": [
+   {
+    "vi": "gạo không cần vo (gạo xát sạch sẵn)"
+   }
+  ],
+  "hv": "vô tẩy mễ"
+ },
+ {
+  "id": 2415100,
+  "m": [
+   {
+    "vi": "có cũng như không, chẳng đáng kể"
+   }
+  ],
+  "hv": "hữu vô",
+  "ex": [
+   {
+    "ja": "こんな小さな隙間はあってないようなものだ。",
+    "vi": "Khe hở nhỏ thế này thì có cũng như không thôi."
+   }
+  ]
+ },
+ {
+  "id": 2420910,
+  "m": [
+   {
+    "vi": "thời trẻ, thuở thanh xuân"
+   }
+  ]
+ },
+ {
+  "id": 2420940,
+  "m": [
+   {
+    "vi": "hồi nhỏ, thuở thơ ấu"
+   }
+  ]
+ },
+ {
+  "id": 2427550,
+  "m": [
+   {
+    "vi": "chủ nhà, chủ quán"
+   },
+   {
+    "vi": "chủ nhân tiếp đãi khách"
+   }
+  ],
+  "hv": "chủ"
+ },
+ {
+  "id": 2428080,
+  "m": [
+   {
+    "vi": "lớn, kha khá, đáng kể (số tiền, thời gian)"
+   },
+   {
+    "vi": "rành mạch, có hệ thống, thống nhất"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "引っ越しをするにはまとまったお金が必要になる。",
+    "vi": "Để chuyển nhà cần phải có một khoản tiền kha khá."
+   }
+  ]
+ },
+ {
+  "id": 2428550,
+  "m": [
+   {
+    "vi": "đầu đĩa DVD"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "古い映画を見るために押入れからＤＶＤプレーヤーを出した。",
+    "vi": "Tôi lấy đầu đĩa DVD từ trong tủ ra để xem bộ phim cũ."
+   }
+  ]
+ },
+ {
+  "id": 2430790,
+  "m": [
+   {
+    "vi": "ngày (hậu tố)"
+   },
+   {
+    "vi": "ban ngày"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "毎週水曜日はこのスーパーの特売デーになっている。",
+    "vi": "Thứ Tư hằng tuần là ngày giảm giá đặc biệt của siêu thị này."
+   }
+  ]
+ },
+ {
+  "id": 2438910,
+  "m": [
+   {
+    "vi": "Ngân hàng Bưu điện Nhật Bản (JP Bank)"
+   }
+  ],
+  "hv": "ngân hành",
+  "ex": [
+   {
+    "ja": "近くの郵便局にあるゆうちょ銀行の窓口で口座を作った。",
+    "vi": "Tôi đã mở tài khoản tại quầy Ngân hàng Bưu điện ở bưu cục gần nhà."
+   }
+  ]
+ },
+ {
+  "id": 2441160,
+  "m": [
+   {
+    "vi": "đúng hơn là, nói chính xác hơn thì"
+   }
+  ]
+ },
+ {
+  "id": 2446480,
+  "m": [
+   {
+    "vi": "Tập đoàn Đường sắt Nhật Bản (JR)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "東京から京都までＪＲの新幹線を利用して移動した。",
+    "vi": "Tôi đã di chuyển từ Tokyo đến Kyoto bằng tàu cao tốc của JR."
+   }
+  ]
+ },
+ {
+  "id": 2448150,
+  "m": [
+   {
+    "vi": "chữa lành (tâm hồn, tinh thần)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "森の中で鳥の声を聴きながらヒーリングの時間を過ごした。",
+    "vi": "Tôi đã dành thời gian chữa lành tâm hồn trong rừng vừa nghe tiếng chim hót."
+   }
+  ]
+ },
+ {
+  "id": 2450680,
+  "m": [
+   {
+    "vi": "nhàm chán, tẻ nhạt (khẩu ngữ)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "今日は一日中雨で外に出られず、本当につまんない。",
+    "vi": "Hôm nay trời mưa suốt cả ngày chẳng ra ngoài được, thật sự chán quá."
+   }
+  ]
+ },
+ {
+  "id": 2455980,
+  "m": [
+   {
+    "vi": "thần Atlas (thần thoại Hy Lạp)"
+   },
+   {
+    "vi": "tập bản đồ (atlas)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "地理の勉強をするために世界のアトラスを買った。",
+    "vi": "Tôi đã mua một cuốn tập bản đồ thế giới để học môn địa lý."
+   }
+  ]
+ },
+ {
+  "id": 2457920,
+  "m": [
+   {
+    "vi": "phải không?, có phải là... không? (nghi vấn lịch sự)"
+   }
+  ]
+ },
+ {
+  "id": 2457930,
+  "m": [
+   {
+    "vi": "nhỉ?, đúng không nào? (nữ giới)"
+   }
+  ]
+ },
+ {
+  "id": 2458370,
+  "m": [
+   {
+    "vi": "trải nghiệm, kinh nghiệm"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "このホテルでは宿泊客に特別なエクスペリエンスを提供している。",
+    "vi": "Khách sạn này mang đến những trải nghiệm đặc biệt cho du khách."
+   }
+  ]
+ },
+ {
+  "id": 2465690,
+  "m": [
+   {
+    "vi": "dép xỏ ngón, dép đi biển"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "海辺を歩くために軽くて履きやすいビーチサンダルを買った。",
+    "vi": "Tôi đã mua đôi dép xỏ ngón nhẹ và dễ đi để dạo bước trên bãi biển."
+   }
+  ]
+ },
+ {
+  "id": 2471370,
+  "m": [
+   {
+    "vi": "làn sóng mới (nghệ thuật, âm nhạc, điện ảnh)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "１９８０年代に音楽界でニューウェーブの波が起きた。",
+    "vi": "Thập niên 1980, làn sóng âm nhạc mới đã trỗi dậy trong giới âm nhạc."
+   }
+  ]
+ },
+ {
+  "id": 2480290,
+  "m": [
+   {
+    "vi": "kẹo mềm caramel"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "子供の頃、遠足のおやつに甘いキャラメルをよく持っていった。",
+    "vi": "Hồi nhỏ đi dã ngoại tôi hay mang theo kẹo caramel ngọt lịm."
+   }
+  ]
+ },
+ {
+  "id": 2508400,
+  "m": [
+   {
+    "vi": "sổ tay ghi chép"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "思いついたアイデアを忘れないようにメモ帳に書き留めた。",
+    "vi": "Tôi ghi ngay ý tưởng vừa nảy ra vào sổ tay để khỏi quên."
+   }
+  ]
+ },
+ {
+  "id": 2513640,
+  "m": [
+   {
+    "vi": "việc thanh toán, hóa đơn tính tiền (nhà hàng)"
+   }
+  ],
+  "hv": "hội kế"
+ },
+ {
+  "id": 2528530,
+  "m": [
+   {
+    "vi": "bữa tối, cơm tối"
+   }
+  ]
+ },
+ {
+  "id": 2532460,
+  "m": [
+   {
+    "vi": "nếu như vậy thì, khi đã đến mức đó thì"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "そうなると、今の計画を根本から見直す必要がある。",
+    "vi": "Nếu như vậy thì cần phải xem xét lại kế hoạch hiện tại từ gốc."
+   }
+  ]
+ },
+ {
+  "id": 2534350,
+  "m": [
+   {
+    "vi": "đứa bé trong bụng, thai nhi"
+   }
+  ],
+  "hv": "phúc tử",
+  "ex": [
+   {
+    "ja": "お腹の子の健やかな成長を毎日祈っている。",
+    "vi": "Mỗi ngày tôi đều cầu nguyện cho em bé trong bụng phát triển khỏe mạnh."
+   }
+  ]
+ },
+ {
+  "id": 2537250,
+  "m": [
+   {
+    "vi": "định làm, cố gắng làm"
+   }
+  ]
+ },
+ {
+  "id": 2538870,
+  "m": [
+   {
+    "vi": "á á á!, ôi trời ơi!"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ああああ、また大切な書類を家に忘れてきてしまった。",
+    "vi": "Ôi trời ơi, lại để quên tập tài liệu quan trọng ở nhà mất rồi."
+   }
+  ]
+ },
+ {
+  "id": 2560520,
+  "m": [
+   {
+    "vi": "cún con, chú chó (cách gọi thân mật)"
+   }
+  ],
+  "hv": "tử",
+  "ex": [
+   {
+    "ja": "近所を散歩している可愛いワンこに出会って癒やされた。",
+    "vi": "Tôi gặp chú cún con dễ thương đang đi dạo gần nhà khiến lòng thấy thư thái."
+   }
+  ]
+ },
+ {
+  "id": 2581590,
+  "m": [
+   {
+    "vi": "câu chuyện"
+   },
+   {
+    "vi": "cuộc nói chuyện, trao đổi"
+   }
+  ]
+ },
+ {
+  "id": 2585220,
+  "m": [
+   {
+    "vi": "chưa từng làm, chưa bao giờ xảy ra"
+   },
+   {
+    "vi": "không bao giờ xảy ra"
+   }
+  ]
+ },
+ {
+  "id": 2592740,
+  "m": [
+   {
+    "vi": "phải làm, bắt buộc phải (lịch sự)"
+   },
+   {
+    "vi": "không thể thiếu, tất yếu phải có"
+   }
+  ],
+  "hv": "hành",
+  "ex": [
+   {
+    "ja": "明日は大切な会議があるので早く起きないといけません。",
+    "vi": "Ngày mai có cuộc họp quan trọng nên tôi phải dậy sớm."
+   }
+  ]
+ },
+ {
+  "id": 2597990,
+  "m": [
+   {
+    "vi": "bực bội, phật ý, hậm hực"
+   },
+   {
+    "vi": "ngột ngạt, oi bức"
+   },
+   {
+    "vi": "mím chặt (môi)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "冗談のつもりで言ったのに、相手がムッとしてしまった。",
+    "vi": "Tôi chỉ định nói đùa thôi mà đối phương lại phật ý mất rồi."
+   }
+  ]
+ },
+ {
+  "id": 2600500,
+  "m": [
+   {
+    "vi": "quanh chỗ đó, gần đó"
+   },
+   {
+    "vi": "tầm đó, khoảng chừng đó"
+   },
+   {
+    "vi": "chuyện kiểu như thế"
+   }
+  ]
+ },
+ {
+  "id": 2607690,
+  "m": [
+   {
+    "vi": "được rồi!, tốt lắm!, xong!"
+   }
+  ]
+ },
+ {
+  "id": 2607850,
+  "m": [
+   {
+    "vi": "mới chỉ bắt đầu thôi, chặng đường còn dài phía trước"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "大きな目標に向けて、私の挑戦はまだまだこれからだ。",
+    "vi": "Hướng tới mục tiêu lớn, thử thách của tôi mới chỉ bắt đầu thôi."
+   }
+  ]
+ },
+ {
+  "id": 2610940,
+  "m": [
+   {
+    "vi": "liệu có... hay không"
+   }
+  ],
+  "hv": "phủ"
+ },
+ {
+  "id": 2613080,
+  "m": [
+   {
+    "vi": "thà rằng..., chi bằng..."
+   }
+  ]
+ },
+ {
+  "id": 2617040,
+  "m": [
+   {
+    "vi": "trực thăng cấp cứu y tế"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "山で怪我をした登山者をドクターヘリが病院へ搬送した。",
+    "vi": "Trực thăng cấp cứu đã đưa người leo núi bị thương trên núi về bệnh viện."
+   }
+  ]
+ },
+ {
+  "id": 2617070,
+  "m": [
+   {
+    "vi": "giá hời, đáng mua"
+   }
+  ]
+ },
+ {
+  "id": 2618810,
+  "m": [
+   {
+    "vi": "thanh niên không đi học, không đi làm, không đào tạo (NEET)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "学校を卒業してから仕事に就かずニートになった若者が増えている。",
+    "vi": "Số thanh niên tốt nghiệp xong không đi làm mà ở nhà ngày càng tăng."
+   }
+  ]
+ },
+ {
+  "id": 2620030,
+  "m": [
+   {
+    "vi": "phúc lợi cho người cao tuổi"
+   }
+  ]
+ },
+ {
+  "id": 2630530,
+  "m": [
+   {
+    "vi": "theo như, tuân theo, càng... càng..."
+   }
+  ],
+  "hv": "tòng"
+ },
+ {
+  "id": 2641300,
+  "m": [
+   {
+    "vi": "điện thoại thông minh (smartphone)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "電車の中でスマホを使ってニュースを読む人が増えた。",
+    "vi": "Số người dùng điện thoại thông minh đọc tin tức trên tàu điện ngày càng nhiều."
+   }
+  ]
+ },
+ {
+  "id": 2643770,
+  "m": [
+   {
+    "vi": "bác sĩ tâm thần"
+   }
+  ]
+ },
+ {
+  "id": 2643980,
+  "m": [
+   {
+    "vi": "dù cho, mặc dù"
+   },
+   {
+    "vi": "tuy nói là..."
+   }
+  ]
+ },
+ {
+  "id": 2644330,
+  "m": [
+   {
+    "vi": "hướng tới, nhằm mục đích, dành cho"
+   }
+  ]
+ },
+ {
+  "id": 2648330,
+  "m": [
+   {
+    "vi": "nhóm, phe, đội quân (hậu tố)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "今回の大会では関東勢の活躍が特に目立っている。",
+    "vi": "Ở giải đấu lần này, sự thể hiện của các đội vùng Kanto đặc biệt nổi bật."
+   }
+  ]
+ },
+ {
+  "id": 2654980,
+  "m": [
+   {
+    "vi": "vài năm trước"
+   }
+  ],
+  "hv": "số niên tiền"
+ },
+ {
+  "id": 2656720,
+  "m": [
+   {
+    "vi": "mùa hè, kỳ nghỉ hè"
+   }
+  ]
+ },
+ {
+  "id": 2659310,
+  "m": [
+   {
+    "vi": "vẫn như ngày xưa, nguyên vẹn như cũ"
+   }
+  ]
+ },
+ {
+  "id": 2659710,
+  "m": [
+   {
+    "vi": "sớm, nhanh chóng, vội vã"
+   }
+  ]
+ },
+ {
+  "id": 2662230,
+  "m": [
+   {
+    "vi": "đôi mắt, nhãn cầu"
+   },
+   {
+    "vi": "con ngươi"
+   },
+   {
+    "vi": "tầm nhìn, khả năng quan sát"
+   },
+   {
+    "vi": "cái nhìn, tầm mắt"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "獲物を狙う鷹の鋭い眼が遠くを見つめている。",
+    "vi": "Đôi mắt sắc bén của con diều hâu đang rình mồi nhìn chằm chằm về phía xa."
+   }
+  ]
+ },
+ {
+  "id": 2666480,
+  "m": [
+   {
+    "vi": "huấn luyện, khai vấn (coaching)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "部下の能力を引き出すためにコーチングの技術を学んだ。",
+    "vi": "Tôi đã học kỹ thuật khai vấn để phát huy năng lực của cấp dưới."
+   }
+  ]
+ },
+ {
+  "id": 2667510,
+  "m": [
+   {
+    "vi": "đúng không nhỉ?, phải không nào?"
+   }
+  ]
+ },
+ {
+  "id": 2674080,
+  "m": [
+   {
+    "vi": "có thời hạn, giới hạn thời gian"
+   },
+   {
+    "vi": "chương trình ưu đãi có thời hạn"
+   }
+  ],
+  "hv": "kỳ gian hạn định"
+ },
+ {
+  "id": 2676310,
+  "m": [
+   {
+    "vi": "Hợp chúng quốc Hoa Kỳ (USA)"
+   },
+   {
+    "vi": "Quân đội Hoa Kỳ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "来年の夏休みに家族でＵＳＡの西海岸へ旅行に行く。",
+    "vi": "Kỳ nghỉ hè năm tới cả gia đình tôi sẽ đi du lịch bờ tây nước Mỹ."
+   }
+  ]
+ },
+ {
+  "id": 2679370,
+  "m": [
+   {
+    "vi": "Thành Vatican"
+   }
+  ],
+  "hv": "hòa địa quan",
+  "ex": [
+   {
+    "ja": "ローマ旅行のついでに世界最小の国バチカンも訪れた。",
+    "vi": "Nhân chuyến du lịch Rome, tôi đã ghé thăm luôn Vatican, quốc gia nhỏ nhất thế giới."
+   }
+  ]
+ },
+ {
+  "id": 2683060,
+  "m": [
+   {
+    "vi": "chính là..., thực ra là... (lịch sự)"
+   }
+  ]
+ },
+ {
+  "id": 2693870,
+  "m": [
+   {
+    "vi": "trang web chính thức"
+   }
+  ]
+ },
+ {
+  "id": 2695630,
+  "m": [
+   {
+    "vi": "từ nay về sau, trong tương lai"
+   }
+  ]
+ },
+ {
+  "id": 2708040,
+  "m": [
+   {
+    "vi": "vô cùng, kinh khủng, tồi tệ"
+   }
+  ]
+ },
+ {
+  "id": 2710920,
+  "m": [
+   {
+    "vi": "đến tận, ngay cả"
+   },
+   {
+    "vi": "không cần thiết phải..."
+   },
+   {
+    "vi": "dù không cần đến mức..."
+   }
+  ]
+ },
+ {
+  "id": 2714050,
+  "m": [
+   {
+    "vi": "chết đói"
+   }
+  ]
+ },
+ {
+  "id": 2716530,
+  "m": [
+   {
+    "vi": "không được lòng, kém duyên (với người khác giới)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "清潔感がない服装をしていると異性からモテない。",
+    "vi": "Ăn mặc thiếu sự gọn gàng sạch sẽ thì sẽ không thu hút được người khác giới."
+   }
+  ]
+ },
+ {
+  "id": 2719740,
+  "m": [
+   {
+    "vi": "ngày 19"
+   },
+   {
+    "vi": "19 ngày"
+   },
+   {
+    "vi": "kẻ ngốc nghếch"
+   }
+  ]
+ },
+ {
+  "id": 2722660,
+  "m": [
+   {
+    "vi": "tuyệt vời, siêu đỉnh, ghê gớm (khẩu ngữ)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "夜景がこんなにきれいだなんてすげーな。",
+    "vi": "Cảnh đêm đẹp đến thế này thì thật là đỉnh quá đi."
+   }
+  ]
+ },
+ {
+  "id": 2728330,
+  "m": [
+   {
+    "vi": "hơn là, so với"
+   },
+   {
+    "vi": "thà... còn hơn"
+   }
+  ]
+ },
+ {
+  "id": 2731460,
+  "m": [
+   {
+    "vi": "Lưu Cầu (quần đảo Okinawa)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "沖縄にはかつての琉球王国の歴史を伝える遺産が多い。",
+    "vi": "Ở Okinawa có nhiều di sản lưu giữ lịch sử Vương quốc Lưu Cầu xưa."
+   }
+  ]
+ },
+ {
+  "id": 2735320,
+  "m": [
+   {
+    "vi": "nhắc mới nhớ..., nghĩ lại thì..."
+   }
+  ],
+  "ex": [
+   {
+    "ja": "そう言や、来週の予定をまだ確認していなかった。",
+    "vi": "Nhắc mới nhớ, tôi vẫn chưa kiểm tra lịch trình tuần tới."
+   }
+  ]
+ },
+ {
+  "id": 2736890,
+  "m": [
+   {
+    "vi": "ngày 12"
+   },
+   {
+    "vi": "12 ngày"
+   }
+  ]
+ },
+ {
+  "id": 2737290,
+  "m": [
+   {
+    "vi": "ngày 13"
+   },
+   {
+    "vi": "13 ngày"
+   }
+  ]
+ },
+ {
+  "id": 2737790,
+  "m": [
+   {
+    "vi": "ngày 16"
+   },
+   {
+    "vi": "16 ngày"
+   }
+  ]
+ },
+ {
+  "id": 2737800,
+  "m": [
+   {
+    "vi": "ngày 17"
+   },
+   {
+    "vi": "17 ngày"
+   }
+  ]
+ },
+ {
+  "id": 2737900,
+  "m": [
+   {
+    "vi": "ngày 18"
+   },
+   {
+    "vi": "18 ngày"
+   }
+  ]
+ },
+ {
+  "id": 2737910,
+  "m": [
+   {
+    "vi": "ngày 21"
+   },
+   {
+    "vi": "21 ngày"
+   }
+  ]
+ },
+ {
+  "id": 2738190,
+  "m": [
+   {
+    "vi": "ngày 22"
+   },
+   {
+    "vi": "22 ngày"
+   }
+  ]
+ },
+ {
+  "id": 2738200,
+  "m": [
+   {
+    "vi": "ngày 23"
+   },
+   {
+    "vi": "23 ngày"
+   }
+  ]
+ },
+ {
+  "id": 2738210,
+  "m": [
+   {
+    "vi": "ngày 25"
+   },
+   {
+    "vi": "25 ngày"
+   }
+  ]
+ },
+ {
+  "id": 2738430,
+  "m": [
+   {
+    "vi": "ngày 27"
+   },
+   {
+    "vi": "27 ngày"
+   }
+  ]
+ },
+ {
+  "id": 2738440,
+  "m": [
+   {
+    "vi": "ngày 28"
+   },
+   {
+    "vi": "28 ngày"
+   }
+  ]
+ },
+ {
+  "id": 2738470,
+  "m": [
+   {
+    "vi": "ngày 29"
+   },
+   {
+    "vi": "29 ngày"
+   }
+  ]
+ },
+ {
+  "id": 2738480,
+  "m": [
+   {
+    "vi": "ngày 31"
+   },
+   {
+    "vi": "31 ngày"
+   }
+  ]
+ },
+ {
+  "id": 2740510,
+  "m": [
+   {
+    "vi": "người vùng Kansai"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "関西人はお笑いが好きで気さくな人が多いと言われる。",
+    "vi": "Người ta nói người vùng Kansai thích hài kịch và nhiều người rất cởi mở."
+   }
+  ]
+ },
+ {
+  "id": 2746180,
+  "m": [
+   {
+    "vi": "điểm tham quan du lịch"
+   }
+  ],
+  "hv": "quan quang"
+ },
+ {
+  "id": 2746830,
+  "m": [
+   {
+    "vi": "nước Úc (viết tắt)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "来週から日豪両国の首脳会談が開かれる予定だ。",
+    "vi": "Từ tuần tới hội nghị thượng đỉnh hai nước Nhật - Úc dự kiến sẽ diễn ra."
+   }
+  ]
+ },
+ {
+  "id": 2748190,
+  "m": [
+   {
+    "vi": "như thế nào, bằng cách nào"
+   }
+  ]
+ },
+ {
+  "id": 2749060,
+  "m": [
+   {
+    "vi": "mang tính tổng thể, nhìn chung"
+   }
+  ]
+ },
+ {
+  "id": 2755350,
+  "m": [
+   {
+    "vi": "không phải là"
+   },
+   {
+    "vi": "chẳng phải sao?"
+   }
+  ],
+  "hv": "vô",
+  "ex": [
+   {
+    "ja": "それは君の勘違いじゃ無いかな。",
+    "vi": "Cái đó chẳng phải là cậu hiểu nhầm rồi sao?"
+   }
+  ]
+ },
+ {
+  "id": 2755690,
+  "m": [
+   {
+    "vi": "trong số đó, ở trong đó"
+   }
+  ]
+ },
+ {
+  "id": 2757620,
+  "m": [
+   {
+    "vi": "gọi là, nói là, có nghĩa là (khẩu ngữ)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "要するに、最初からやり直すっちゅうことだね。",
+    "vi": "Tóm lại là phải làm lại từ đầu chứ gì."
+   }
+  ]
+ },
+ {
+  "id": 2762810,
+  "m": [
+   {
+    "vi": "nếu thế thì, sau đó thì"
+   }
+  ]
+ },
+ {
+  "id": 2770680,
+  "m": [
+   {
+    "vi": "Nagasaki (thành phố, tỉnh)"
+   }
+  ],
+  "hv": "trường kỳ"
+ },
+ {
+  "id": 2780660,
+  "m": [
+   {
+    "vi": "vì mà, tại vì (giải thích lý do)"
+   },
+   {
+    "vi": "làm nũng, bất mãn"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "だって、雨が降っていて外に出られなかったんだもの。",
+    "vi": "Tại vì trời mưa nên đâu có ra ngoài được đâu."
+   }
+  ]
+ },
+ {
+  "id": 2788160,
+  "m": [
+   {
+    "vi": "trong lúc loay hoay thế thì, chẳng mấy chốc"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "そうこうしているうちに、あっという間に夜になってしまった。",
+    "vi": "Trong lúc loay hoay hết việc này việc kia, chớp mắt trời đã tối mất rồi."
+   }
+  ]
+ },
+ {
+  "id": 2793090,
+  "m": [
+   {
+    "vi": "như bạn/chúng ta đã biết"
+   }
+  ]
+ },
+ {
+  "id": 2793200,
+  "m": [
+   {
+    "vi": "ông chủ, chủ nhân"
+   },
+   {
+    "vi": "thưa ngài"
+   },
+   {
+    "vi": "chồng (lịch sự)"
+   }
+  ],
+  "hv": "chủ nhân dạng"
+ },
+ {
+  "id": 2794860,
+  "m": [
+   {
+    "vi": "cún cưng, bé cún"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "近所の公園で可愛いワンちゃんを連れた人とすれ違った。",
+    "vi": "Tôi đi ngang qua một người dắt chú cún cưng dễ thương ở công viên gần nhà."
+   }
+  ]
+ },
+ {
+  "id": 2801130,
+  "m": [
+   {
+    "vi": "lạc mất nhau, đi lạc"
+   },
+   {
+    "vi": "lỡ mất (cơ hội)"
+   }
+  ]
+ },
+ {
+  "id": 2803510,
+  "m": [
+   {
+    "vi": "quy hoạch đô thị, phát triển cộng đồng địa phương"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "住民が協力して住みやすいまちづくりを進めている。",
+    "vi": "Người dân đang hợp tác để thúc đẩy xây dựng một khu phố đáng sống."
+   }
+  ]
+ },
+ {
+  "id": 2805740,
+  "m": [
+   {
+    "vi": "bao giờ mới..., đến khi nào mới..."
+   }
+  ],
+  "ex": [
+   {
+    "ja": "この長い行列はいつになったら進むのだろうか。",
+    "vi": "Hàng người dài này không biết bao giờ mới nhích lên được đây."
+   }
+  ]
+ },
+ {
+  "id": 2806180,
+  "m": [
+   {
+    "vi": "áo sơ mi truyền thống Okinawa (kariyushi)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "沖縄では夏の正装として涼しげなかりゆしウェアが着られる。",
+    "vi": "Ở Okinawa, áo sơ mi kariyushi thoáng mát được mặc như lễ phục mùa hè."
+   }
+  ]
+ },
+ {
+  "id": 2819970,
+  "m": [
+   {
+    "vi": "đã là, từng là"
+   }
+  ]
+ },
+ {
+  "id": 2819990,
+  "m": [
+   {
+    "vi": "chẳng phải sao?"
+   },
+   {
+    "vi": "chúng ta hãy..., hay là... nhỉ?"
+   }
+  ],
+  "hv": "vô"
+ },
+ {
+  "id": 2820000,
+  "m": [
+   {
+    "vi": "chẳng phải là... sao? (tiếng Kansai)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "これ、思ったよりずっと簡単なんちゃうか。",
+    "vi": "Cái này chẳng phải là dễ hơn mình nghĩ rất nhiều sao?"
+   }
+  ]
+ },
+ {
+  "id": 2821500,
+  "m": [
+   {
+    "vi": "một, một chút"
+   }
+  ]
+ },
+ {
+  "id": 2822560,
+  "m": [
+   {
+    "vi": "bước vào cửa hàng/quán ăn"
+   },
+   {
+    "vi": "bắt đầu làm việc tại cửa hàng"
+   },
+   {
+    "vi": "mở gian hàng (trong trung tâm thương mại)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "予約時間より少し早めに入店して席に案内された。",
+    "vi": "Tôi bước vào quán sớm hơn giờ đặt bàn một chút và được dẫn vào chỗ ngồi."
+   }
+  ]
+ },
+ {
+  "id": 2823770,
+  "m": [
+   {
+    "vi": "không phải là"
+   }
+  ],
+  "hv": "vô"
+ },
+ {
+  "id": 2825510,
+  "m": [
+   {
+    "vi": "dạo gần đây, những ngày này"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "朝晩の冷え込みが厳しくなってきた今日この頃です。",
+    "vi": "Những ngày gần đây trời sáng sớm và tối bắt đầu trở lạnh gay gắt rồi."
+   }
+  ]
+ },
+ {
+  "id": 2825920,
+  "m": [
+   {
+    "vi": "trong số đó đặc biệt là..."
+   },
+   {
+    "vi": "cùng lúc, đồng thời"
+   }
+  ]
+ },
+ {
+  "id": 2825927,
+  "m": [
+   {
+    "vi": "chụp ảnh"
+   }
+  ]
+ },
+ {
+  "id": 2825931,
+  "m": [
+   {
+    "vi": "tất cả các món, toàn bộ"
+   }
+  ]
+ },
+ {
+  "id": 2825978,
+  "m": [
+   {
+    "vi": "phải không nhỉ?, liệu có... không? (lịch sự)"
+   }
+  ]
+ },
+ {
+  "id": 2825982,
+  "m": [
+   {
+    "vi": "phải không nhỉ?, liệu có... không?"
+   }
+  ]
+ },
+ {
+  "id": 2826021,
+  "m": [
+   {
+    "vi": "hầu như mỗi ngày, gần như hằng ngày"
+   }
+  ]
+ },
+ {
+  "id": 2827091,
+  "m": [
+   {
+    "vi": "ngay cả, thậm chí"
+   }
+  ]
+ },
+ {
+  "id": 2827450,
+  "m": [
+   {
+    "vi": "chăm chỉ, siêng năng, chu đáo"
+   },
+   {
+    "vi": "khỏe mạnh"
+   },
+   {
+    "vi": "trung thực, chân thành"
+   }
+  ]
+ },
+ {
+  "id": 2827554,
+  "m": [
+   {
+    "vi": "thời thơ ấu, hồi còn nhỏ"
+   }
+  ],
+  "hv": "tử cung khoảnh"
+ },
+ {
+  "id": 2827571,
+  "m": [
+   {
+    "vi": "đến mức đáng ngạc nhiên"
+   }
+  ]
+ },
+ {
+  "id": 2827768,
+  "m": [
+   {
+    "vi": "Nara (thành phố, tỉnh)"
+   }
+  ]
+ },
+ {
+  "id": 2827769,
+  "m": [
+   {
+    "vi": "thành phố Kamakura"
+   }
+  ]
+ },
+ {
+  "id": 2829059,
+  "m": [
+   {
+    "vi": "làm cho có thể, cho phép thực hiện"
+   }
+  ]
+ },
+ {
+  "id": 2829587,
+  "m": [
+   {
+    "vi": "đến, đi, ở (tôn kính ngữ)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "本日はお忙しい中お越しいただき、わざわざいらしてありがとうございます。",
+    "vi": "Xin cảm ơn quý vị đã bớt chút thời gian bận rộn đến tham dự hôm nay."
+   }
+  ]
+ },
+ {
+  "id": 2829857,
+  "m": [
+   {
+    "vi": "điều khoản cấm, nội quy cấm"
+   }
+  ],
+  "hv": "cấm chỉ sự mục",
+  "ex": [
+   {
+    "ja": "施設のパンフレットに館内の禁止事項が詳しく書かれている。",
+    "vi": "Trong tờ rơi của cơ sở có ghi chi tiết các điều cấm bên trong tòa nhà."
+   }
+  ]
+ },
+ {
+  "id": 2829960,
+  "m": [
+   {
+    "vi": "tốt đấy, hay đấy"
+   },
+   {
+    "vi": "nút thích (mạng xã hội)"
+   },
+   {
+    "vi": "hiểu rồi chứ?, được chưa?"
+   }
+  ]
+ },
+ {
+  "id": 2830216,
+  "m": [
+   {
+    "vi": "thực ra là, trên thực tế"
+   }
+  ]
+ },
+ {
+  "id": 2830449,
+  "m": [
+   {
+    "vi": "xin lỗi đã làm phiền bạn nhưng..."
+   }
+  ],
+  "hv": "thủ số"
+ },
+ {
+  "id": 2830519,
+  "m": [
+   {
+    "vi": "tự mình, một mình"
+   }
+  ],
+  "hv": "tự phân"
+ },
+ {
+  "id": 2831249,
+  "m": [
+   {
+    "vi": "không biết nói sao cho phải, khó tả"
+   }
+  ]
+ },
+ {
+  "id": 2831357,
+  "m": [
+   {
+    "vi": "không thể thiếu, bắt buộc phải có"
+   },
+   {
+    "vi": "phải làm"
+   }
+  ],
+  "hv": "vô"
+ },
+ {
+  "id": 2831358,
+  "m": [
+   {
+    "vi": "không thể thiếu, bắt buộc phải có"
+   },
+   {
+    "vi": "phải làm"
+   }
+  ],
+  "hv": "vô"
+ },
+ {
+  "id": 2831359,
+  "m": [
+   {
+    "vi": "không thể thiếu, bắt buộc phải có"
+   },
+   {
+    "vi": "phải làm"
+   }
+  ],
+  "hv": "vô"
+ },
+ {
+  "id": 2832535,
+  "m": [
+   {
+    "vi": "huống hồ, chưa kể đến"
+   },
+   {
+    "vi": "cẩu thả, lơ là, xao nhãng"
+   }
+  ]
+ },
+ {
+  "id": 2833313,
+  "m": [
+   {
+    "vi": "sân chơi cho chó (dog park)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "休日は愛犬を連れて近くのドッグランに遊びに行く。",
+    "vi": "Ngày nghỉ tôi dẫn chú chó cưng đi chơi ở sân chơi dành cho chó gần nhà."
+   }
+  ]
+ },
+ {
+  "id": 2833774,
+  "m": [
+   {
+    "vi": "đoàn người, nhóm đi cùng"
+   },
+   {
+    "vi": "một hành động"
+   }
+  ],
+  "hv": "nhất hành"
+ },
+ {
+  "id": 2833871,
+  "m": [
+   {
+    "vi": "đất trống, bãi đất hoang"
+   }
+  ]
+ },
+ {
+  "id": 2834601,
+  "m": [
+   {
+    "vi": "tiến sĩ"
+   }
+  ]
+ },
+ {
+  "id": 2834812,
+  "m": [
+   {
+    "vi": "đấy nhé!, đấy (nam giới nhấn mạnh)"
+   },
+   {
+    "vi": "hừ"
+   }
+  ]
+ },
+ {
+  "id": 2834902,
+  "m": [
+   {
+    "vi": "tàu điện ngầm thành phố"
+   }
+  ],
+  "hv": "thị doanh địa hạ thiết",
+  "ex": [
+   {
+    "ja": "通勤には駅から近い市営地下鉄を毎日利用している。",
+    "vi": "Hằng ngày tôi đi làm bằng tàu điện ngầm thành phố ở gần nhà."
+   }
+  ]
+ },
+ {
+  "id": 2835242,
+  "m": [
+   {
+    "vi": "nhấp chuột phải"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ファイルを削除するにはアイコンの上で右クリックする。",
+    "vi": "Để xóa tệp tin, hãy nhấp chuột phải lên biểu tượng."
+   }
+  ]
+ },
+ {
+  "id": 2836383,
+  "m": [
+   {
+    "vi": "phản ứng phụ (sau tiêm vắc-xin)"
+   },
+   {
+    "vi": "phản ứng phụ (hóa học)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ワクチン接種の翌日に軽い発熱などの副反応が出た。",
+    "vi": "Ngày hôm sau tiêm vắc-xin, tôi xuất hiện phản ứng phụ như sốt nhẹ."
+   }
+  ]
+ },
+ {
+  "id": 2836842,
+  "m": [
+   {
+    "vi": "mức độ thiện cảm, sự yêu mến"
+   }
+  ],
+  "hv": "hảo cảm độ"
+ },
+ {
+  "id": 2837166,
+  "m": [
+   {
+    "vi": "suối nước nóng tự nhiên"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "旅行先の旅館で自慢の天然温泉にゆっくり浸かった。",
+    "vi": "Tại lữ quán nơi du lịch, tôi đã ngâm mình thư giãn trong suối nước nóng tự nhiên nổi tiếng."
+   }
+  ]
+ },
+ {
+  "id": 2837492,
+  "m": [
+   {
+    "vi": "đúng vậy, đúng thế"
+   },
+   {
+    "vi": "nghe nói vậy, người ta bảo thế"
+   }
+  ]
+ },
+ {
+  "id": 2837855,
+  "m": [
+   {
+    "vi": "tuyển chọn kỹ lưỡng, tinh hoa"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "日本全国から集めた選りすぐりの銘菓が並んでいる。",
+    "vi": "Các loại bánh kẹo đặc sản tuyển chọn kỹ lưỡng từ khắp Nhật Bản được bày bán."
+   }
+  ]
+ },
+ {
+  "id": 2838093,
+  "m": [
+   {
+    "vi": "ảnh đại diện (profile picture)"
+   }
+  ],
+  "hv": "họa tượng",
+  "ex": [
+   {
+    "ja": "SNSのプロフィール画像を最近撮った笑顔の写真に変えた。",
+    "vi": "Tôi đã đổi ảnh đại diện mạng xã hội sang bức ảnh cười tươi mới chụp gần đây."
+   }
+  ]
+ },
+ {
+  "id": 2838528,
+  "m": [
+   {
+    "vi": "biết nói thế nào nhỉ, kiểu như là..."
+   }
+  ]
+ },
+ {
+  "id": 2838845,
+  "m": [
+   {
+    "vi": "người châu Á"
+   }
+  ]
+ },
+ {
+  "id": 2838960,
+  "m": [
+   {
+    "vi": "cách sử dụng, hướng dẫn sử dụng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "詳しい利用方法については説明書をご確認ください。",
+    "vi": "Vui lòng xem sách hướng dẫn để biết cách sử dụng chi tiết."
+   }
+  ]
+ },
+ {
+  "id": 2838980,
+  "m": [
+   {
+    "vi": "xin chân thành cảm ơn (trang trọng)"
+   }
+  ]
+ },
+ {
+  "id": 2838992,
+  "m": [
+   {
+    "vi": "phương thức thanh toán"
+   }
+  ]
+ },
+ {
+  "id": 2838993,
+  "m": [
+   {
+    "vi": "phương thức thanh toán (lịch sự)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "お支払い方法は現金またはクレジットカードからお選びいただけます。",
+    "vi": "Quý khách có thể chọn phương thức thanh toán bằng tiền mặt hoặc thẻ tín dụng."
+   }
+  ]
+ },
+ {
+  "id": 2839008,
+  "m": [
+   {
+    "vi": "có cảm giác như là..., hình như là..."
+   }
+  ]
+ },
+ {
+  "id": 2839013,
+  "m": [
+   {
+    "vi": "niên hiệu Lệnh Hòa (Reiwa, từ 1/5/2019)"
+   }
+  ],
+  "hv": "lệnh hòa"
+ },
+ {
+  "id": 2839191,
+  "m": [
+   {
+    "vi": "ngoài ra còn, hơn nữa"
+   }
+  ]
+ },
+ {
+  "id": 2839304,
+  "m": [
+   {
+    "vi": "vàng"
+   },
+   {
+    "vi": "tiền vàng"
+   },
+   {
+    "vi": "màu vàng kim"
+   }
+  ]
+ },
+ {
+  "id": 2839737,
+  "m": [
+   {
+    "vi": "bảng xếp hạng sản phẩm bán chạy"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "書店の入口にある売れ筋ランキングの棚をチェックした。",
+    "vi": "Tôi đã xem kệ bảng xếp hạng sách bán chạy ngay lối vào hiệu sách."
+   }
+  ]
+ },
+ {
+  "id": 2840063,
+  "m": [
+   {
+    "vi": "khi..., nhân dịp..., đối với việc..."
+   }
+  ],
+  "hv": "đương",
+  "ex": [
+   {
+    "ja": "新しいプロジェクトを始めるにあたっては事前の準備が重要だ。",
+    "vi": "Khi bắt đầu dự án mới, việc chuẩn bị trước rất quan trọng."
+   }
+  ]
+ },
+ {
+  "id": 2840111,
+  "m": [
+   {
+    "vi": "trưởng thành, trở thành người lớn"
+   }
+  ],
+  "hv": "đại nhân"
+ },
+ {
+  "id": 2840112,
+  "m": [
+   {
+    "vi": "lớn lên, trưởng thành"
+   },
+   {
+    "vi": "to ra, lớn lên về kích thước"
+   }
+  ],
+  "hv": "đại"
+ },
+ {
+  "id": 2840573,
+  "m": [
+   {
+    "vi": "xe buýt cao tốc liên tỉnh"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "連休の帰省には料金が安い高速バスをよく利用する。",
+    "vi": "Vào kỳ nghỉ dài về quê, tôi hay đi xe buýt cao tốc vì giá vé rẻ."
+   }
+  ]
+ },
+ {
+  "id": 2840724,
+  "m": [
+   {
+    "vi": "sản phẩm mới"
+   }
+  ]
+ },
+ {
+  "id": 2840780,
+  "m": [
+   {
+    "vi": "bà chủ quán (quán rượu)"
+   },
+   {
+    "vi": "mẹ, bà nội trợ"
+   },
+   {
+    "vi": "cô chủ nuôi thú cưng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "近所のママさんたちと公園で子育ての情報交換をした。",
+    "vi": "Tôi đã trao đổi thông tin nuôi con với các bà mẹ hàng xóm ở công viên."
+   }
+  ]
+ },
+ {
+  "id": 2840958,
+  "m": [
+   {
+    "vi": "bố, ông bố"
+   },
+   {
+    "vi": "anh chủ nuôi thú cưng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "休日は犬を連れたパパさんが公園でよく散歩している。",
+    "vi": "Ngày nghỉ các ông bố dắt chó đi dạo ở công viên rất nhiều."
+   }
+  ]
+ },
+ {
+  "id": 2841290,
+  "m": [
+   {
+    "vi": "cái lỗ, hố"
+   },
+   {
+    "vi": "lỗ golf"
+   },
+   {
+    "vi": "lỗ trống (vật lý bán dẫn)"
+   }
+  ]
+ },
+ {
+  "id": 2842054,
+  "m": [
+   {
+    "vi": "bắt buộc phải có, không thể thiếu"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "冬のキャンプでは防寒対策のジャケットがマストだ。",
+    "vi": "Khi đi cắm trại mùa đông, áo khoác giữ ấm là món đồ bắt buộc phải có."
+   }
+  ]
+ },
+ {
+  "id": 2842174,
+  "m": [
+   {
+    "vi": "sân thi đấu (quần vợt, bóng rổ, bóng chuyền)"
+   }
+  ]
+ },
+ {
+  "id": 2842178,
+  "m": [
+   {
+    "vi": "rượu rum"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "お菓子作りの香り付けに少量のラム酒を加えた。",
+    "vi": "Tôi đã thêm một chút rượu rum để tạo hương thơm khi làm bánh."
+   }
+  ]
+ },
+ {
+  "id": 2842257,
+  "m": [
+   {
+    "vi": "đi cùng với, nhóm gồm..."
+   },
+   {
+    "vi": "hạng người, lũ..."
+   }
+  ]
+ },
+ {
+  "id": 2842263,
+  "m": [
+   {
+    "vi": "thời gian (của bạn, lịch sự)"
+   }
+  ],
+  "hv": "thời gian"
+ },
+ {
+  "id": 2842624,
+  "m": [
+   {
+    "vi": "đời thứ..., thế hệ thứ... (hậu tố)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "この老舗の和菓子屋は現在五代目が店を継いでいる。",
+    "vi": "Tiệm bánh truyền thống lâu đời này hiện do truyền nhân đời thứ năm tiếp quản."
+   }
+  ]
+ },
+ {
+  "id": 2842661,
+  "m": [
+   {
+    "vi": "cửa hàng, quán ăn (lịch sự)"
+   }
+  ]
+ },
+ {
+  "id": 2842746,
+  "m": [
+   {
+    "vi": "đang công chiếu, đang mở bán, đang công khai"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "話題のアニメーション映画が全国の劇場で絶賛公開中だ。",
+    "vi": "Bộ phim hoạt hình đang gây sốt hiện đang được công chiếu tại các rạp trên toàn quốc."
+   }
+  ]
+ },
+ {
+  "id": 2842849,
+  "m": [
+   {
+    "vi": "Đức Quốc xã (Nazi)"
+   }
+  ]
+ },
+ {
+  "id": 2843418,
+  "m": [
+   {
+    "vi": "bệnh viêm đường hô hấp cấp COVID-19"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "新型コロナウイルス感染症の対策としてマスクを着用した。",
+    "vi": "Tôi đã đeo khẩu trang để phòng chống dịch bệnh COVID-19."
+   }
+  ]
+ },
+ {
+  "id": 2843441,
+  "m": [
+   {
+    "vi": "hỏi, tra hỏi"
+   }
+  ]
+ },
+ {
+  "id": 2843688,
+  "m": [
+   {
+    "vi": "bánh mì kẹp (sandwich)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "昼食に卵とハムがたっぷり入ったサンドを買った。",
+    "vi": "Bữa trưa tôi đã mua bánh mì kẹp đầy trứng và giăm bông."
+   }
+  ]
+ },
+ {
+  "id": 2844011,
+  "m": [
+   {
+    "vi": "tuyên bố tình trạng khẩn cấp"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "感染拡大を防ぐため政府は緊急事態宣言を発令した。",
+    "vi": "Chính phủ đã ban bố tình trạng khẩn cấp để ngăn chặn dịch bệnh lây lan."
+   }
+  ]
+ },
+ {
+  "id": 2844121,
+  "m": [
+   {
+    "vi": "nhà văn, người viết lách"
+   }
+  ]
+ },
+ {
+  "id": 2844738,
+  "m": [
+   {
+    "vi": "đặt hàng trước"
+   }
+  ]
+ },
+ {
+  "id": 2844997,
+  "m": [
+   {
+    "vi": "ôm trong vòng tay (em bé...), ôm ấp"
+   },
+   {
+    "vi": "quan hệ tình dục"
+   },
+   {
+    "vi": "ấp trứng"
+   }
+  ]
+ },
+ {
+  "id": 2845215,
+  "m": [
+   {
+    "vi": "vải"
+   },
+   {
+    "vi": "khăn trải bàn"
+   },
+   {
+    "vi": "giấy dán tường"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "部屋の模様替えのために壁のクロスを新しく張り替えた。",
+    "vi": "Tôi đã dán lại giấy dán tường mới để thay đổi diện mạo căn phòng."
+   }
+  ]
+ },
+ {
+  "id": 2845216,
+  "m": [
+   {
+    "vi": "đại dịch COVID-19, khủng hoảng dịch corona"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "コロナ禍の影響でテレワークを導入する企業が急増した。",
+    "vi": "Do ảnh hưởng của đại dịch COVID-19, số doanh nghiệp áp dụng làm việc từ xa tăng vọt."
+   }
+  ]
+ },
+ {
+  "id": 2845363,
+  "m": [
+   {
+    "vi": "7 giờ"
+   }
+  ],
+  "hv": "thời"
+ },
+ {
+  "id": 2845468,
+  "m": [
+   {
+    "vi": "xin cảm ơn rất nhiều (đã giúp đỡ)"
+   }
+  ],
+  "hv": "hữu nan"
+ },
+ {
+  "id": 2845652,
+  "m": [
+   {
+    "vi": "đường thắng caramel (làm bánh flan)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "プリンの底にほろ苦いカラメルソースを敷いた。",
+    "vi": "Tôi đã đổ lớp xốt đường thắng hơi đắng nhẹ xuống đáy khuôn bánh flan."
+   }
+  ]
+ },
+ {
+  "id": 2845662,
+  "m": [
+   {
+    "vi": "trước khi, đi trước"
+   },
+   {
+    "vi": "mấy hôm trước, gần đây"
+   }
+  ]
+ },
+ {
+  "id": 2846323,
+  "m": [
+   {
+    "vi": "nhạc rock"
+   },
+   {
+    "vi": "tảng đá, viên đá"
+   },
+   {
+    "vi": "uống với đá (rượu)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "休日は大好きなロックの音楽を聴きながら掃除をする。",
+    "vi": "Ngày nghỉ tôi vừa nghe nhạc rock yêu thích vừa dọn dẹp nhà cửa."
+   }
+  ]
+ },
+ {
+  "id": 2846699,
+  "m": [
+   {
+    "vi": "điệu nhảy Para Para (nhảy đồng bộ tay)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "９０年代には若者の間でパラパラが大流行した。",
+    "vi": "Vào thập niên 1990, điệu nhảy Para Para từng rất thịnh hành trong giới trẻ."
+   }
+  ]
+ },
+ {
+  "id": 2847210,
+  "m": [
+   {
+    "vi": "điểm chấp, bất lợi"
+   }
+  ]
+ },
+ {
+  "id": 2847529,
+  "m": [
+   {
+    "vi": "được đánh giá rất cao, rất được ưa chuộng"
+   }
+  ],
+  "hv": "đại hảo bình"
+ },
+ {
+  "id": 2847599,
+  "m": [
+   {
+    "vi": "nổi tiếng, được yêu thích"
+   }
+  ]
+ },
+ {
+  "id": 2847661,
+  "m": [
+   {
+    "vi": "giá ưu đãi đặc biệt"
+   }
+  ]
+ },
+ {
+  "id": 2848340,
+  "m": [
+   {
+    "vi": "chú thỏ trên mặt trăng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "十五夜の満月を見上げて月の兎の姿を探した。",
+    "vi": "Tôi ngước nhìn trăng rằm tháng Tám để tìm hình bóng chú thỏ trên mặt trăng."
+   }
+  ]
+ },
+ {
+  "id": 2848637,
+  "m": [
+   {
+    "vi": "cuộc tụ họp lớn, hội tụ đông đủ"
+   }
+  ],
+  "hv": "đại tập hợp",
+  "ex": [
+   {
+    "ja": "夏祭りの広場に地域の子どもたちが大集合した。",
+    "vi": "Trẻ em trong khu vực đã tụ họp đông đủ tại quảng trường lễ hội mùa hè."
+   }
+  ]
+ },
+ {
+  "id": 2848696,
+  "m": [
+   {
+    "vi": "không có vấn đề gì, ổn thỏa"
+   }
+  ]
+ },
+ {
+  "id": 2848900,
+  "m": [
+   {
+    "vi": "thuộc về tương lai, triển vọng sau này"
+   }
+  ],
+  "hv": "tương lai đích"
+ },
+ {
+  "id": 2849126,
+  "m": [
+   {
+    "vi": "sau đó, về sau"
+   }
+  ]
+ },
+ {
+  "id": 2849387,
+  "m": [
+   {
+    "vi": "là vì..., thực ra là..."
+   }
+  ]
+ },
+ {
+  "id": 2849579,
+  "m": [
+   {
+    "vi": "vẻ ngoài bắt mắt, hình thức đẹp"
+   }
+  ],
+  "hv": "kiến vinh"
+ },
+ {
+  "id": 2850709,
+  "m": [
+   {
+    "vi": "quận Shibuya (Tokyo)"
+   }
+  ]
+ },
+ {
+  "id": 2850713,
+  "m": [
+   {
+    "vi": "bạn bè, đồng đội, chiến hữu"
+   }
+  ],
+  "hv": "trọng gian"
+ },
+ {
+  "id": 2850805,
+  "m": [
+   {
+    "vi": "nhưng mà, tuy nhiên (lịch sự)"
+   }
+  ]
+ },
+ {
+  "id": 2850928,
+  "m": [
+   {
+    "vi": "bảng báo giá (lịch sự)"
+   }
+  ],
+  "hv": "kiến tích"
+ },
+ {
+  "id": 2851031,
+  "m": [
+   {
+    "vi": "chỉ là..., chẳng qua chỉ là..."
+   }
+  ]
+ },
+ {
+  "id": 2851200,
+  "m": [
+   {
+    "vi": "chi phí ban đầu"
+   }
+  ]
+ },
+ {
+  "id": 2851234,
+  "m": [
+   {
+    "vi": "thời trang, mốt"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "パリのコレクションで最新のモード系ファッションが発表された。",
+    "vi": "Thời trang phong cách cao cấp mới nhất đã được trình diễn tại tuần lễ thời trang Paris."
+   }
+  ]
+ },
+ {
+  "id": 2851269,
+  "m": [
+   {
+    "vi": "chung cư mới xây"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "駅前に完成したばかりの新築マンションを見学に行った。",
+    "vi": "Tôi đã đi tham quan khu chung cư mới xây vừa hoàn thành trước nhà ga."
+   }
+  ]
+ },
+ {
+  "id": 2851348,
+  "m": [
+   {
+    "vi": "tấm, tờ"
+   },
+   {
+    "vi": "bảng tính (spreadsheet)"
+   }
+  ]
+ },
+ {
+  "id": 2851535,
+  "m": [
+   {
+    "vi": "xuất hiện thường xuyên (trên chương trình truyền hình)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "そのお笑い芸人は人気番組にレギュラー出演している。",
+    "vi": "Nghệ sĩ hài đó đang xuất hiện thường xuyên trong chương trình truyền hình ăn khách."
+   }
+  ]
+ },
+ {
+  "id": 2851540,
+  "m": [
+   {
+    "vi": "nhân cơ hội này, lấy đây làm bước ngoặt"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "転職をこれを機に、新しい資格の勉強を始めることにした。",
+    "vi": "Nhân cơ hội chuyển việc này, tôi quyết định bắt đầu học thêm chứng chỉ mới."
+   }
+  ]
+ },
+ {
+  "id": 2851543,
+  "m": [
+   {
+    "vi": "vật mang, người vận chuyển"
+   },
+   {
+    "vi": "vật trung gian mang mầm bệnh"
+   },
+   {
+    "vi": "sóng mang (viễn thông)"
+   },
+   {
+    "vi": "nhà mạng di động"
+   }
+  ]
+ },
+ {
+  "id": 2851581,
+  "m": [
+   {
+    "vi": "mẩu tin nhỏ, tư liệu ngắn"
+   },
+   {
+    "vi": "chuyện cười ngắn"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "会話が弾むように面白い小ネタをいくつか用意しておいた。",
+    "vi": "Tôi đã chuẩn bị sẵn vài mẩu chuyện vui ngắn để cuộc trò chuyện thêm rôm rả."
+   }
+  ]
+ },
+ {
+  "id": 2851640,
+  "m": [
+   {
+    "vi": "khách sạn cao cấp, khách sạn sang trọng"
+   }
+  ]
+ },
+ {
+  "id": 2851756,
+  "m": [
+   {
+    "vi": "nhiều, thường xuyên (văn cổ/trang trọng)"
+   }
+  ]
+ },
+ {
+  "id": 2851937,
+  "m": [
+   {
+    "vi": "việc xây nhà"
+   },
+   {
+    "vi": "kiến trúc nhà ở"
+   }
+  ],
+  "hv": "gia",
+  "ex": [
+   {
+    "ja": "理想のマイホームを実現するために家づくりの相談を始めた。",
+    "vi": "Tôi đã bắt đầu tham khảo tư vấn xây nhà để hiện thực hóa ngôi nhà mơ ước."
+   }
+  ]
+ },
+ {
+  "id": 2851949,
+  "m": [
+   {
+    "vi": "trời mưa"
+   }
+  ],
+  "hv": "vũ giáng"
+ },
+ {
+  "id": 2852013,
+  "m": [
+   {
+    "vi": "Hakata (tên cũ của Fukuoka)"
+   }
+  ]
+ },
+ {
+  "id": 2852392,
+  "m": [
+   {
+    "vi": "ngày sinh nhật (lịch sự)"
+   }
+  ]
+ },
+ {
+  "id": 2852741,
+  "m": [
+   {
+    "vi": "bia (đồ uống)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "夏祭りの会場で冷たいクラフトビアを味わった。",
+    "vi": "Tôi đã thưởng thức món bia thủ công mát lạnh tại lễ hội mùa hè."
+   }
+  ]
+ },
+ {
+  "id": 2852995,
+  "m": [
+   {
+    "vi": "địa chỉ giao hàng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ネット注文の際に自宅の住所を配送先に指定した。",
+    "vi": "Khi đặt hàng trực tuyến, tôi đã chọn địa chỉ nhà riêng làm nơi giao hàng."
+   }
+  ]
+ },
+ {
+  "id": 2853006,
+  "m": [
+   {
+    "vi": "dài dòng, lề mề"
+   },
+   {
+    "vi": "uể oải, lười nhác, rề rà"
+   },
+   {
+    "vi": "nấu nhừ nát"
+   }
+  ]
+ },
+ {
+  "id": 2853151,
+  "m": [
+   {
+    "vi": "cổ áo"
+   }
+  ]
+ },
+ {
+  "id": 2853262,
+  "m": [
+   {
+    "vi": "rãnh thoát nước, mương nước"
+   },
+   {
+    "vi": "khoảng hở (cắt, in ấn)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "大雨のせいで道路脇のどぶから水が溢れそうになった。",
+    "vi": "Do mưa lớn nên nước từ rãnh thoát nước ven đường suýt nữa thì tràn ra."
+   }
+  ]
+ },
+ {
+  "id": 2853328,
+  "m": [
+   {
+    "vi": "họ tên (lịch sự)"
+   }
+  ]
+ },
+ {
+  "id": 2853387,
+  "m": [
+   {
+    "vi": "bu lông"
+   }
+  ]
+ },
+ {
+  "id": 2853389,
+  "m": [
+   {
+    "vi": "quan sát tình hình, chờ xem sao"
+   }
+  ],
+  "hv": "dạng tử kiến"
+ },
+ {
+  "id": 2853395,
+  "m": [
+   {
+    "vi": "cùng thời kỳ, cùng giai đoạn"
+   }
+  ],
+  "hv": "đồng thời kỳ",
+  "ex": [
+   {
+    "ja": "姉と従姉妹はほぼ同時期に結婚して家庭を持った。",
+    "vi": "Chị gái và chị họ tôi kết hôn và lập gia đình gần như cùng thời kỳ."
+   }
+  ]
+ },
+ {
+  "id": 2853544,
+  "m": [
+   {
+    "vi": "sự chú ý rất lớn"
+   }
+  ],
+  "hv": "đại chú mục",
+  "ex": [
+   {
+    "ja": "若手選手の活躍がメディアで大注目されている。",
+    "vi": "Màn thể hiện của tuyển thủ trẻ đang nhận được sự chú ý rất lớn từ truyền thông."
+   }
+  ]
+ },
+ {
+  "id": 2853750,
+  "m": [
+   {
+    "vi": "ồ, ra thế, hiểu rồi"
+   }
+  ]
+ },
+ {
+  "id": 2854195,
+  "m": [
+   {
+    "vi": "những người đàn ông, cánh mày râu"
+   }
+  ]
+ },
+ {
+  "id": 2854354,
+  "m": [
+   {
+    "vi": "sự thất tốc (máy bay)"
+   },
+   {
+    "vi": "sự chết máy (động cơ)"
+   },
+   {
+    "vi": "gian chuồng (chuồng ngựa, bò)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "急激な上昇により飛行機がストールする危険があった。",
+    "vi": "Do bay vọt lên quá gắt nên máy bay có nguy cơ bị thất tốc."
+   }
+  ]
+ },
+ {
+  "id": 2854977,
+  "m": [
+   {
+    "vi": "đám tang, tang lễ"
+   }
+  ]
+ },
+ {
+  "id": 2854985,
+  "m": [
+   {
+    "vi": "dành cho người mới bắt đầu"
+   }
+  ]
+ },
+ {
+  "id": 2855111,
+  "m": [
+   {
+    "vi": "quả chanh xanh"
+   },
+   {
+    "vi": "vôi (khoáng vật)"
+   }
+  ]
+ },
+ {
+  "id": 2855138,
+  "m": [
+   {
+    "vi": "cần gạt, đòn bẩy"
+   },
+   {
+    "vi": "cần điều khiển (joystick)"
+   }
+  ]
+ },
+ {
+  "id": 2855385,
+  "m": [
+   {
+    "vi": "giấm ăn"
+   }
+  ]
+ },
+ {
+  "id": 2855585,
+  "m": [
+   {
+    "vi": "nút một (xúc xắc, bài)"
+   },
+   {
+    "vi": "số một, đứng đầu, hạng nhất"
+   },
+   {
+    "vi": "tiền hoa hồng, tiền phế"
+   }
+  ]
+ },
+ {
+  "id": 2855660,
+  "m": [
+   {
+    "vi": "lịch trình chạy tàu"
+   },
+   {
+    "vi": "biểu đồ, sơ đồ"
+   }
+  ]
+ },
+ {
+  "id": 2855797,
+  "m": [
+   {
+    "vi": "nhà, quê hương"
+   },
+   {
+    "vi": "chốt nhà (bóng chày)"
+   }
+  ]
+ },
+ {
+  "id": 2856153,
+  "m": [
+   {
+    "vi": "tất cả, toàn bộ"
+   },
+   {
+    "vi": "thức trắng đêm"
+   }
+  ]
+ },
+ {
+  "id": 2856217,
+  "m": [
+   {
+    "vi": "thế rồi, nếu vậy thì"
+   }
+  ]
+ },
+ {
+  "id": 2856634,
+  "m": [
+   {
+    "vi": "áo ghi-lê, áo vest"
+   }
+  ]
+ },
+ {
+  "id": 2856955,
+  "m": [
+   {
+    "vi": "vòng đấu loại trực tiếp"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "予選を突破してついに決勝トーナメントへ進出した。",
+    "vi": "Vượt qua vòng loại, đội bóng cuối cùng đã tiến vào vòng đấu loại trực tiếp."
+   }
+  ]
+ },
+ {
+  "id": 2857085,
+  "m": [
+   {
+    "vi": "có nghĩa là, tức là (khẩu ngữ)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "明日は休みってことは、今夜は遅くまで起きられるね。",
+    "vi": "Ngày mai được nghỉ, nghĩa là tối nay có thể thức khuya rồi nhỉ."
+   }
+  ]
+ },
+ {
+  "id": 2857188,
+  "m": [
+   {
+    "vi": "hành vi gây rối, quấy rối nơi công cộng"
+   }
+  ],
+  "hv": "mê hoặc hành vi",
+  "ex": [
+   {
+    "ja": "電車内での迷惑行為は他の乗客に不快な思いをさせる。",
+    "vi": "Hành vi gây rối trên tàu điện khiến các hành khách khác cảm thấy khó chịu."
+   }
+  ]
+ },
+ {
+  "id": 2857379,
+  "m": [
+   {
+    "vi": "không, không phải"
+   }
+  ]
+ },
+ {
+  "id": 2857381,
+  "m": [
+   {
+    "vi": "không, chẳng phải"
+   },
+   {
+    "vi": "sự phản đối, không đồng tình"
+   }
+  ],
+  "hv": "phủ"
+ },
+ {
+  "id": 2857548,
+  "m": [
+   {
+    "vi": "đội trưởng, trưởng nhóm, người đứng đầu"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "サッカー部のキャップとしてチームをまとめている。",
+    "vi": "Cậu ấy đang dẫn dắt toàn đội với tư cách đội trưởng câu lạc bộ bóng đá."
+   }
+  ]
+ },
+ {
+  "id": 2857557,
+  "m": [
+   {
+    "vi": "đà điểu Nam Mỹ (rhea)"
+   },
+   {
+    "vi": "nữ thần Rhea"
+   },
+   {
+    "vi": "vệ tinh Rhea (sao Thổ)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "動物園の広いエリアで珍しいレアという鳥を見た。",
+    "vi": "Tôi đã nhìn thấy loài chim rhea quý hiếm ở khu vực rộng lớn trong sở thú."
+   }
+  ]
+ },
+ {
+  "id": 2857905,
+  "m": [
+   {
+    "vi": "Ngày Quốc tế Lao động (1/5)"
+   }
+  ]
+ },
+ {
+  "id": 2857908,
+  "m": [
+   {
+    "vi": "túi nhỏ đựng đồ cá nhân"
+   }
+  ]
+ },
+ {
+  "id": 2858155,
+  "m": [
+   {
+    "vi": "nhanh, tốc độ cao"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "健康のためにファストフードばかり食べるのは控えたい。",
+    "vi": "Vì sức khỏe, tôi muốn hạn chế việc chỉ ăn toàn đồ ăn nhanh."
+   }
+  ]
+ },
+ {
+  "id": 2858241,
+  "m": [
+   {
+    "vi": "chiều dọc và chiều ngang"
+   },
+   {
+    "vi": "sợi dọc và sợi ngang"
+   }
+  ],
+  "hv": "tung hoành"
+ },
+ {
+  "id": 2858252,
+  "m": [
+   {
+    "vi": "bên phải"
+   },
+   {
+    "vi": "cánh phải, sân ngoài bên phải (bóng chày)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ライトの守備についた選手が鋭い打球を見事に捕った。",
+    "vi": "Cầu thủ phòng ngự cánh phải đã bắt gọn cú đánh bóng đầy uy lực."
+   }
+  ]
+ },
+ {
+  "id": 2858616,
+  "m": [
+   {
+    "vi": "nào, vậy thì"
+   },
+   {
+    "vi": "thế thì, sau đó"
+   },
+   {
+    "vi": "nếu thế thì"
+   },
+   {
+    "vi": "thôi tạm biệt nhé"
+   }
+  ]
+ }
+]

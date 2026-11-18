@@ -1,0 +1,2895 @@
+[
+ {
+  "id": 1211370,
+  "m": [
+   {
+    "vi": "thành thạo, giỏi giang"
+   },
+   {
+    "vi": "thỏa thích, tận hưởng trọn vẹn"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼女はフランス語が堪能だ。",
+    "vi": "Cô ấy thông thạo tiếng Pháp.",
+    "src": "tatoeba",
+    "sid": 91608
+   },
+   {
+    "ja": "ファン・ドーゲンの展覧会を十分堪能してきたよ。",
+    "vi": "Tôi đã thưởng thức trọn vẹn buổi triển lãm của Van Dongen.",
+    "src": "tatoeba",
+    "sid": 197230
+   }
+  ]
+ },
+ {
+  "id": 1216150,
+  "m": [
+   {
+    "vi": "sụt lún, sụp đổ"
+   },
+   {
+    "vi": "thất thủ, đầu hàng"
+   },
+   {
+    "vi": "tụt hạng, giáng chức"
+   },
+   {
+    "vi": "xiêu lòng, bị thuyết phục"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "パリは１９４０年に陥落した。",
+    "vi": "Paris thất thủ vào năm 1940.",
+    "src": "tatoeba",
+    "sid": 197843
+   }
+  ]
+ },
+ {
+  "id": 1217820,
+  "m": [
+   {
+    "vi": "sắc mặt, màu da"
+   },
+   {
+    "vi": "vẻ mặt, nét mặt"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼はその知らせで顔色を変えた。",
+    "vi": "Anh ấy biến sắc mặt ngay khi nghe tin đó.",
+    "src": "tatoeba",
+    "sid": 112543
+   },
+   {
+    "ja": "日に当たって彼の顔色はよくなった。",
+    "vi": "Ra nắng nhiều nên sắc mặt anh ấy trông tươi tắn hẳn lên.",
+    "src": "tatoeba",
+    "sid": 122922
+   }
+  ]
+ },
+ {
+  "id": 1219700,
+  "m": [
+   {
+    "vi": "cập cảng, ghé vào cảng"
+   },
+   {
+    "vi": "quá cảnh ở sân bay"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "その船は横浜に寄港する。",
+    "vi": "Con tàu đó sẽ cập cảng Yokohama.",
+    "src": "tatoeba",
+    "sid": 208437
+   },
+   {
+    "ja": "私達の船はマルセーユに寄港した。",
+    "vi": "Con tàu của chúng tôi đã cập cảng Marseille.",
+    "src": "tatoeba",
+    "sid": 151940
+   }
+  ]
+ },
+ {
+  "id": 1220500,
+  "m": [
+   {
+    "vi": "quyền lợi sẵn có, quyền lợi được hưởng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "既得権を守ろうとする勢力が改革に反対した。",
+    "vi": "Thế lực muốn bảo vệ quyền lợi sẵn có đã phản đối cuộc cải cách.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1220660,
+  "m": [
+   {
+    "vi": "bác bỏ, từ chối, hủy bỏ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "原告の請求は棄却された。",
+    "vi": "Yêu cầu của nguyên đơn đã bị bác bỏ.",
+    "src": "tatoeba",
+    "sid": 2290356
+   }
+  ]
+ },
+ {
+  "id": 1222880,
+  "m": [
+   {
+    "vi": "hiếm có, quý hiếm"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "古代において塩は希少で貴重な商品であった。",
+    "vi": "Thời cổ đại, muối là mặt hàng khan hiếm và quý giá.",
+    "src": "tatoeba",
+    "sid": 174595
+   }
+  ],
+  "hv": "hy thiểu"
+ },
+ {
+  "id": 1223910,
+  "m": [
+   {
+    "vi": "kích nổ, châm ngòi nổ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "経済は緊急に起爆剤を必要としています。",
+    "vi": "Nền kinh tế đang cực kỳ cần một cú hích.",
+    "src": "tatoeba",
+    "sid": 176469
+   },
+   {
+    "ja": "「冬の時代」が大学改革の起爆剤となってくれればと思う。",
+    "vi": "Tôi hy vọng \"thời kỳ mùa đông\" sẽ trở thành động lực thúc đẩy cải cách đại học.",
+    "src": "tatoeba",
+    "sid": 236213
+   }
+  ],
+  "hv": "khởi bộc"
+ },
+ {
+  "id": 1224820,
+  "m": [
+   {
+    "vi": "nghi thức xã giao, lễ nghi"
+   },
+   {
+    "vi": "nghi lễ tôn giáo"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "公式の場にふさわしい儀礼を守る。",
+    "vi": "Chúng tôi tuân thủ các nghi thức xã giao phù hợp với không gian trang trọng.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1226770,
+  "m": [
+   {
+    "vi": "tàu chở khách"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "豪華客船が港に入った。",
+    "vi": "Một chiếc tàu khách hạng sang đã cập cảng.",
+    "src": "tatoeba",
+    "sid": 173124
+   }
+  ]
+ },
+ {
+  "id": 1231800,
+  "m": [
+   {
+    "vi": "quán nhậu phong cách Nhật Bản"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼はその居酒屋によく出かける。",
+    "vi": "Anh ấy rất hay lui tới quán nhậu bình dân đó.",
+    "src": "tatoeba",
+    "sid": 112998
+   },
+   {
+    "ja": "居酒屋は日本風のパブのことです。",
+    "vi": "Izakaya là quán nhậu kiểu Nhật.",
+    "src": "tatoeba",
+    "sid": 182175
+   }
+  ]
+ },
+ {
+  "id": 1233120,
+  "m": [
+   {
+    "vi": "hải sản, thủy hải sản"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "トムはめったに魚介類を食べない。",
+    "vi": "Tom hiếm khi ăn hải sản.",
+    "src": "tatoeba",
+    "sid": 2159409
+   },
+   {
+    "ja": "魚介類、大好きなのよ。",
+    "vi": "Tôi cực kỳ thích hải sản đấy.",
+    "src": "tatoeba",
+    "sid": 10732953
+   }
+  ]
+ },
+ {
+  "id": 1236450,
+  "m": [
+   {
+    "vi": "hùng mạnh, to lớn mạnh mẽ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "強大な権力を有する大国が存在する限り、戦争は避け難い。",
+    "vi": "Chừng nào còn tồn tại các cường quốc nắm giữ quyền lực to lớn, chiến tranh là điều khó tránh khỏi.",
+    "src": "tatoeba",
+    "sid": 180502
+   },
+   {
+    "ja": "最も強大な帝国ですら崩壊する。",
+    "vi": "Ngay cả đế chế hùng mạnh nhất cũng có ngày sụp đổ.",
+    "src": "tatoeba",
+    "sid": 170796
+   }
+  ],
+  "hv": "cường đại"
+ },
+ {
+  "id": 1241870,
+  "m": [
+   {
+    "vi": "co thắt, co hẹp"
+   },
+   {
+    "vi": "thắt chặt chi tiêu, thắt lưng buộc bụng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "緊縮財政政策は経済を冷やし過ぎることになるかもしれない。",
+    "vi": "Chính sách thắt lưng buộc bụng có thể sẽ làm nền kinh tế nguội lạnh quá mức.",
+    "src": "tatoeba",
+    "sid": 179928
+   }
+  ]
+ },
+ {
+  "id": 1245340,
+  "m": [
+   {
+    "vi": "khu đất trống"
+   },
+   {
+    "vi": "điểm trống trên bàn cờ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼女は空き地に駐車した。",
+    "vi": "Cô ấy đỗ xe vào một bãi đất trống.",
+    "src": "tatoeba",
+    "sid": 90368
+   },
+   {
+    "ja": "近くの空き地でキャッチボールをするのはどうですか。",
+    "vi": "Ra bãi đất trống gần đây chơi ném bắt bóng không?",
+    "src": "tatoeba",
+    "sid": 179872
+   }
+  ]
+ },
+ {
+  "id": 1247990,
+  "m": [
+   {
+    "vi": "chủ nghĩa quân phiệt"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "軍国主義の台頭が戦争を引き起こした。",
+    "vi": "Sự trỗi dậy của chủ nghĩa quân phiệt đã dẫn đến chiến tranh.",
+    "src": "ai"
+   }
+  ],
+  "hv": "quân quốc chủ nghĩa"
+ },
+ {
+  "id": 1249280,
+  "m": [
+   {
+    "vi": "quan chức phụ trách, viên chức đảm nhiệm"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "係官は私を通してくれた。",
+    "vi": "Nhân viên phụ trách đã cho tôi vào.",
+    "src": "tatoeba",
+    "sid": 176648
+   }
+  ]
+ },
+ {
+  "id": 1250370,
+  "m": [
+   {
+    "vi": "dấu vết, vết tích"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "その家には人の住んでいる形跡はなかった。",
+    "vi": "Ngôi nhà đó không có dấu hiệu có người ở.",
+    "src": "tatoeba",
+    "sid": 212128
+   },
+   {
+    "ja": "その島に人がいる形跡はなかった。",
+    "vi": "Trên hòn đảo đó không có dấu vết của sự sống.",
+    "src": "tatoeba",
+    "sid": 207500
+   }
+  ]
+ },
+ {
+  "id": 1253230,
+  "m": [
+   {
+    "vi": "đánh chặn, phản công chặn đầu"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "防空ミサイルで敵機を迎撃した。",
+    "vi": "Họ đã phóng tên lửa phòng không để đánh chặn máy bay địch.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1253610,
+  "m": [
+   {
+    "vi": "bắn rơi máy bay, bắn hạ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "領空を侵犯した戦闘機を撃墜した。",
+    "vi": "Họ đã bắn rơi máy bay chiến đấu xâm phạm không phận.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1253930,
+  "m": [
+   {
+    "vi": "vị trí còn khuyết, chỗ trống nhân sự"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "退職によって生じた欠員を補充する。",
+    "vi": "Chúng tôi tuyển thêm người để bổ sung vào vị trí còn khuyết do có nhân viên nghỉ việc.",
+    "src": "ai"
+   }
+  ],
+  "hv": "khiếm viên"
+ },
+ {
+  "id": 1254140,
+  "m": [
+   {
+    "vi": "quyết định, giải quyết xong"
+   },
+   {
+    "vi": "vỡ đê, sụp đổ tràn bờ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "その紛争を解決するのは不可能だ。",
+    "vi": "Việc giải quyết tranh chấp đó là bất khả thi.",
+    "src": "tatoeba",
+    "sid": 206877
+   },
+   {
+    "ja": "彼はその種の問題を解決する名人だ。",
+    "vi": "Anh ấy là chuyên gia giải quyết những vấn đề kiểu đó.",
+    "src": "tatoeba",
+    "sid": 112684
+   }
+  ]
+ },
+ {
+  "id": 1254590,
+  "m": [
+   {
+    "vi": "lấp lỗ hổng, chôn lấp hố"
+   },
+   {
+    "vi": "bù đắp chỗ trống nhân sự"
+   },
+   {
+    "vi": "bù lỗ, đền bù tổn thất"
+   },
+   {
+    "vi": "bài tập điền vào chỗ trống"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "その国は貿易上の赤字の穴埋めに懸命である。",
+    "vi": "Quốc gia đó đang nỗ lực hết sức để bù đắp thâm hụt thương mại.",
+    "src": "tatoeba",
+    "sid": 210571
+   },
+   {
+    "ja": "彼がその穴埋めをした。",
+    "vi": "Anh ấy đã bù đắp vào khoản thâm hụt đó.",
+    "src": "tatoeba",
+    "sid": 120910
+   }
+  ]
+ },
+ {
+  "id": 1255010,
+  "m": [
+   {
+    "vi": "kết cục, hồi kết"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "物語は結末に近づいた。",
+    "vi": "Câu chuyện đã đi đến hồi kết.",
+    "src": "tatoeba",
+    "sid": 83769
+   },
+   {
+    "ja": "悲しい結末の物語が好きです。",
+    "vi": "Tôi thích những câu chuyện có kết thúc buồn.",
+    "src": "tatoeba",
+    "sid": 153156
+   }
+  ]
+ },
+ {
+  "id": 1257570,
+  "m": [
+   {
+    "vi": "chế độ chính trị lập hiến"
+   },
+   {
+    "vi": "nền chính trị mẫu mực"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "憲政の危機が始まったのは、このような状況のもとであった。",
+    "vi": "Cuộc khủng hoảng hiến pháp bắt đầu chính trong hoàn cảnh như vậy.",
+    "src": "tatoeba",
+    "sid": 175389
+   }
+  ]
+ },
+ {
+  "id": 1258430,
+  "m": [
+   {
+    "vi": "hiến máu"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "献血はいやだ。",
+    "vi": "Tôi ngại đi hiến máu lắm.",
+    "src": "tatoeba",
+    "sid": 175218
+   },
+   {
+    "ja": "私たちはその子供を救うために献血をした。",
+    "vi": "Chúng tôi đã hiến máu để cứu đứa trẻ đó.",
+    "src": "tatoeba",
+    "sid": 166396
+   }
+  ]
+ },
+ {
+  "id": 1259490,
+  "m": [
+   {
+    "vi": "xem đến tận cùng"
+   },
+   {
+    "vi": "nhìn thấu, xác định rõ bản chất"
+   },
+   {
+    "vi": "hiểu thấu đáo"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "眼は手を見極め得るが、心までは見極め得ない。",
+    "vi": "Đôi mắt có thể nhìn thấu bàn tay, nhưng không thể nhìn thấu lòng người.",
+    "src": "tatoeba",
+    "sid": 183675
+   },
+   {
+    "ja": "善悪を見極めることは難しい。",
+    "vi": "Phân biệt đúng sai là điều rất khó.",
+    "src": "tatoeba",
+    "sid": 140921
+   }
+  ],
+  "hv": "kiến cực"
+ },
+ {
+  "id": 1261300,
+  "m": [
+   {
+    "vi": "nguyên mẫu, bản mẫu ban đầu"
+   },
+   {
+    "vi": "mẫu rập may"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "これが現代の自動車の原型となった模型だ。",
+    "vi": "Đây là mô hình nguyên mẫu ban đầu của ô tô thời hiện đại.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1261930,
+  "m": [
+   {
+    "vi": "người vượn, người nguyên thủy"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "洞窟から古代の原人の骨が発見された。",
+    "vi": "Xương của người nguyên thủy thời cổ đại đã được phát hiện trong hang động.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1262670,
+  "m": [
+   {
+    "vi": "nghiêm túc, trang nghiêm"
+   },
+   {
+    "vi": "khắc nghiệt, cay đắng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "その裁判官は厳粛な顔をして、怖そうに見えた。",
+    "vi": "Vị thẩm phán đó mang vẻ mặt nghiêm nghị trông thật đáng sợ.",
+    "src": "tatoeba",
+    "sid": 210535
+   },
+   {
+    "ja": "彼らは教会内での厳粛な儀式を畏敬の念をもって見守った。",
+    "vi": "Họ kính cẩn theo dõi nghi lễ trang nghiêm trong nhà thờ.",
+    "src": "tatoeba",
+    "sid": 97323
+   }
+  ]
+ },
+ {
+  "id": 1264620,
+  "m": [
+   {
+    "vi": "vô tận, không giới hạn"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "宇宙には限りない可能性が秘められている。",
+    "vi": "Vũ trụ ẩn chứa những khả năng vô tận.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1265380,
+  "m": [
+   {
+    "vi": "xưa và nay, cổ kim"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼は古今に並ぶ者のない偉大な政治家である。",
+    "vi": "Ông ấy là một chính khách vĩ đại xưa nay chưa từng có.",
+    "src": "tatoeba",
+    "sid": 107553
+   },
+   {
+    "ja": "彼は古今まれなりっぱな建築家である。",
+    "vi": "Ông ấy là một kiến trúc sư tài ba xưa nay hiếm thấy.",
+    "src": "tatoeba",
+    "sid": 107552
+   }
+  ]
+ },
+ {
+  "id": 1266480,
+  "m": [
+   {
+    "vi": "cơ quan hô hấp"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "風邪をひいて呼吸器の調子が悪くなった。",
+    "vi": "Do bị cảm nên cơ quan hô hấp của tôi hoạt động không tốt.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1266510,
+  "m": [
+   {
+    "vi": "tên gọi, danh xưng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "地域によって魚の呼称が異なる場合がある。",
+    "vi": "Tùy theo từng vùng mà tên gọi của loài cá có thể khác nhau.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1266770,
+  "m": [
+   {
+    "vi": "mẹ chồng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "古今東西、嫁と姑の仲は上手くいかぬ例が多いと見える。",
+    "vi": "Xưa nay đông tây đâu cũng thấy nhiều trường hợp mẹ chồng nàng dâu bất hòa.",
+    "src": "tatoeba",
+    "sid": 174602
+   },
+   {
+    "ja": "姑とは仲良く暮らしています。",
+    "vi": "Tôi sống rất hòa thuận với mẹ chồng.",
+    "src": "tatoeba",
+    "sid": 157224
+   }
+  ]
+ },
+ {
+  "id": 1267320,
+  "m": [
+   {
+    "vi": "bờ hồ, ven hồ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "湖畔にはかなり多くのホテルが有る。",
+    "vi": "Ven hồ có khá nhiều khách sạn.",
+    "src": "tatoeba",
+    "sid": 174470
+   },
+   {
+    "ja": "湖畔の古い教会はとても美しい。",
+    "vi": "Nhà thờ cổ bên hồ rất đẹp.",
+    "src": "tatoeba",
+    "sid": 174499
+   }
+  ]
+ },
+ {
+  "id": 1272190,
+  "m": [
+   {
+    "vi": "giao chiến, tác chiến"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "わが軍は敵と交戦した。",
+    "vi": "Quân ta đã giao chiến với quân địch.",
+    "src": "tatoeba",
+    "sid": 192031
+   }
+  ]
+ },
+ {
+  "id": 1273350,
+  "m": [
+   {
+    "vi": "vùng biển quốc tế, hải phận quốc tế"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "船は公海に出て通常の航海を続けた。",
+    "vi": "Con tàu đã đi ra vùng biển quốc tế và tiếp tục hành trình bình thường.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1273650,
+  "m": [
+   {
+    "vi": "công ty tài chính công, ngân quỹ tài chính nhà nước"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "事業資金を公庫から借り入れる手続きをする。",
+    "vi": "Tôi làm thủ tục vay vốn kinh doanh từ công ty tài chính công.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1275860,
+  "m": [
+   {
+    "vi": "ngọn lửa mồi, ngòi nổ"
+   },
+   {
+    "vi": "ngòi nổ mâu thuẫn, nguyên nhân bùng nổ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ジョンは授業中いつも口火を切る。",
+    "vi": "John luôn là người khơi mào cuộc trò chuyện trong lớp.",
+    "src": "tatoeba",
+    "sid": 215268
+   }
+  ]
+ },
+ {
+  "id": 1278580,
+  "m": [
+   {
+    "vi": "thành phố Quảng Châu"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "広州に住んでいる。",
+    "vi": "Tôi sống ở Quảng Châu.",
+    "src": "tatoeba",
+    "sid": 826652
+   }
+  ]
+ },
+ {
+  "id": 1278760,
+  "m": [
+   {
+    "vi": "tính bất biến, tính thường hằng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "日本では米が恒常的に供給過剰である。",
+    "vi": "Ở Nhật Bản, gạo thường xuyên rơi vào tình trạng cung vượt cầu.",
+    "src": "tatoeba",
+    "sid": 122750
+   }
+  ]
+ },
+ {
+  "id": 1279390,
+  "m": [
+   {
+    "vi": "hoàn lương, làm lại cuộc đời"
+   },
+   {
+    "vi": "tái sinh, phục hồi, tái thiết"
+   },
+   {
+    "vi": "sống lại, hồi sức"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼は罪を償い社会で更生する道を選んだ。",
+    "vi": "Anh ấy đã chuộc lại lỗi lầm và chọn con đường hoàn lương trong xã hội.",
+    "src": "ai"
+   }
+  ],
+  "hv": "canh sinh"
+ },
+ {
+  "id": 1280610,
+  "m": [
+   {
+    "vi": "đơ cứng, cứng nhắc, tê liệt"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼らの筋肉は硬直している。",
+    "vi": "Cơ bắp của họ đang bị căng cứng.",
+    "src": "tatoeba",
+    "sid": 98528
+   }
+  ]
+ },
+ {
+  "id": 1282320,
+  "m": [
+   {
+    "vi": "nghệ thuật kể chuyện koudan, truyện kể lịch sử kịch tính"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "寄席で名人の講談にじっくり聞き入る。",
+    "vi": "Tôi chăm chú lắng nghe màn kể chuyện nghệ thuật koudan của danh nhân tại rạp diễn.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1283470,
+  "m": [
+   {
+    "vi": "cao kiến, ý kiến quý báu"
+   },
+   {
+    "vi": "ý tưởng tuyệt vời"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "今後の計画について先生の高見を伺いたい。",
+    "vi": "Em muốn xin lắng nghe cao kiến quý báu của thầy về kế hoạch tương lai.",
+    "src": "ai"
+   }
+  ],
+  "hv": "cao kiến"
+ },
+ {
+  "id": 1284010,
+  "m": [
+   {
+    "vi": "sự dâng cao, phấn chấn tinh thần"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "勝利の知らせを聞いて士気が高揚した。",
+    "vi": "Nghe tin chiến thắng, tinh thần của mọi người đã dâng cao phấn chấn.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1285200,
+  "m": [
+   {
+    "vi": "đậu hay trượt, kết quả thi cử"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "試験の合否はどのくらい勉強するかによる。",
+    "vi": "Việc đỗ hay trượt kỳ thi phụ thuộc vào việc bạn học hành chăm chỉ đến đâu.",
+    "src": "tatoeba",
+    "sid": 151090
+   }
+  ],
+  "hv": "hợp phủ"
+ },
+ {
+  "id": 1285820,
+  "m": [
+   {
+    "vi": "thời khắc, khoảng thời gian"
+   },
+   {
+    "vi": "sự khắc chạm, thái nhỏ"
+   },
+   {
+    "vi": "thắng lợi"
+   },
+   {
+    "vi": "nghiêm khắc, tàn nhẫn"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "決戦の刻が静かに迫ってきた。",
+    "vi": "Thời khắc của trận quyết chiến đang lặng lẽ tiến đến gần.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1287870,
+  "m": [
+   {
+    "vi": "chấm đen, tâm bia ngắm"
+   },
+   {
+    "vi": "dấu thua trận trên bảng thành tích"
+   },
+   {
+    "vi": "thất bại, sai sót"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "横綱が初日に思わぬ黒星を喫した。",
+    "vi": "Đô vật yokozuna đã phải nhận một trận thua bất ngờ ngay trong ngày đầu.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1289860,
+  "m": [
+   {
+    "vi": "tình thân thiết, sự giao lưu thân mật"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "会員同士の懇親を深めるために食事会を開いた。",
+    "vi": "Chúng tôi đã tổ chức buổi ăn uống để tăng cường tình thân thiết giữa các hội viên.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1289940,
+  "m": [
+   {
+    "vi": "trò chuyện thân mật, đàm đạo thân tình"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "地域住民と市長が気さくに懇話した。",
+    "vi": "Người dân địa phương và thị trưởng đã trò chuyện thân mật cởi mở.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1293630,
+  "m": [
+   {
+    "vi": "sự trở lại, tái xuất hiện"
+   },
+   {
+    "vi": "sự tái lâm của Chúa Giê-su, chuyển kiếp"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "祖父は、再来年引退する予定です。",
+    "vi": "Ông nội tôi dự định nghỉ hưu vào năm kia.",
+    "src": "tatoeba",
+    "sid": 140720
+   },
+   {
+    "ja": "彼らは再来週にお店に行きます。",
+    "vi": "Họ sẽ đến cửa hàng vào tuần sau nữa.",
+    "src": "tatoeba",
+    "sid": 10193839
+   }
+  ]
+ },
+ {
+  "id": 1293760,
+  "m": [
+   {
+    "vi": "phút lâm chung, giây phút cuối đời"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "あれが最期の笑みになるとは、思いも寄らなかった。",
+    "vi": "Tôi không ngờ đó lại là nụ cười cuối cùng trước lúc ra đi.",
+    "src": "tatoeba",
+    "sid": 11038510
+   }
+  ]
+ },
+ {
+  "id": 1294300,
+  "m": [
+   {
+    "vi": "tốt nhất, tối ưu"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "正直は最良の方策。",
+    "vi": "Thật thà là thượng sách.",
+    "src": "tatoeba",
+    "sid": 142884
+   },
+   {
+    "ja": "私は正直は最良の策だと思います。",
+    "vi": "Tôi cho rằng trung thực là thượng sách.",
+    "src": "tatoeba",
+    "sid": 155562
+   }
+  ]
+ },
+ {
+  "id": 1294340,
+  "m": [
+   {
+    "vi": "vợ con"
+   },
+   {
+    "vi": "vợ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "妻子は運命に与えられた人質である。",
+    "vi": "Vợ con là con tin trao cho số phận.",
+    "src": "tatoeba",
+    "sid": 170320
+   },
+   {
+    "ja": "彼は妻子を捨てた。",
+    "vi": "Hắn đã bỏ rơi vợ con.",
+    "src": "tatoeba",
+    "sid": 106874
+   }
+  ],
+  "hv": "thê tử"
+ },
+ {
+  "id": 1296080,
+  "m": [
+   {
+    "vi": "phán quyết, quyết định xử lý"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "仲裁では普通６ヶ月に裁決を下す。",
+    "vi": "Trong trọng tài phân xử, phán quyết thường được đưa ra trong vòng 6 tháng.",
+    "src": "tatoeba",
+    "sid": 465218
+   }
+  ]
+ },
+ {
+  "id": 1297930,
+  "m": [
+   {
+    "vi": "phong cách sáng tác, nét đặc trưng tác phẩm"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "作風は地味だが完成度は高い。",
+    "vi": "Phong cách sáng tác tuy giản dị nhưng độ hoàn thiện rất cao.",
+    "src": "tatoeba",
+    "sid": 11045150
+   },
+   {
+    "ja": "作曲者と編曲者、どっちの作風が出てるんだ？",
+    "vi": "Đây là phong cách của người sáng tác hay của người phối khí vậy?",
+    "src": "tatoeba",
+    "sid": 11056608
+   }
+  ]
+ },
+ {
+  "id": 1299180,
+  "m": [
+   {
+    "vi": "thuốc trừ sâu, thuốc diệt côn trùng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼女は花に殺虫剤を振りまいた。",
+    "vi": "Cô ấy phun thuốc trừ sâu lên hoa.",
+    "src": "tatoeba",
+    "sid": 7143308
+   }
+  ],
+  "hv": "sát trùng tễ"
+ },
+ {
+  "id": 1299570,
+  "m": [
+   {
+    "vi": "rừng cây tạp, lùm cây bụi"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "秋の雑木林をのんびりと散策した。",
+    "vi": "Tôi thong thả dạo bước trong rừng cây tạp vào mùa thu.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1303500,
+  "m": [
+   {
+    "vi": "bế mạc cuộc họp, giải tán hội nghị"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "会は八時に散会した。",
+    "vi": "Cuộc họp giải tán vào lúc 8 giờ.",
+    "src": "tatoeba",
+    "sid": 185430
+   },
+   {
+    "ja": "国会は混乱のうちに散会した。",
+    "vi": "Quốc hội đã giải tán phiên họp trong cảnh hỗn loạn.",
+    "src": "tatoeba",
+    "sid": 173078
+   }
+  ],
+  "hv": "tán hội"
+ },
+ {
+  "id": 1303600,
+  "m": [
+   {
+    "vi": "phun rải, rải đều khắp nơi"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼らは果樹に農薬を散布している。",
+    "vi": "Họ đang phun thuốc bảo vệ thực vật lên cây ăn quả.",
+    "src": "tatoeba",
+    "sid": 97453
+   }
+  ],
+  "hv": "tán bố"
+ },
+ {
+  "id": 1305170,
+  "m": [
+   {
+    "vi": "vách ngăn, phân chia ranh giới"
+   },
+   {
+    "vi": "quyết toán tài chính"
+   },
+   {
+    "vi": "nghi thức khởi động chuẩn bị đấu sumo"
+   },
+   {
+    "vi": "điều hành, quản lý chỉ đạo"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ホールは仕切りを設ける前は千人収容できた。",
+    "vi": "Trước khi dựng vách ngăn, hội trường có sức chứa 1.000 người.",
+    "src": "tatoeba",
+    "sid": 196471
+   },
+   {
+    "ja": "弾丸は仕切り壁を貫いた。",
+    "vi": "Viên đạn xuyên thủng bức tường ngăn.",
+    "src": "tatoeba",
+    "sid": 127325
+   }
+  ],
+  "hv": "sĩ thiết"
+ },
+ {
+  "id": 1307270,
+  "m": [
+   {
+    "vi": "tứ tấu nhạc cụ, ban tứ tấu"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "弦楽四重奏の美しい演奏に聴き入った。",
+    "vi": "Tôi lắng nghe màn biểu diễn tuyệt đẹp của ban tứ tấu đàn dây.",
+    "src": "ai"
+   }
+  ],
+  "hv": "tứ trọng tấu"
+ },
+ {
+  "id": 1307430,
+  "m": [
+   {
+    "vi": "sĩ quan quân đội"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼は海軍士官の任務を受けた。",
+    "vi": "Anh ấy được bổ nhiệm làm sĩ quan hải quân.",
+    "src": "tatoeba",
+    "sid": 109002
+   },
+   {
+    "ja": "彼は陸軍士官だ。",
+    "vi": "Anh ấy là sĩ quan lục quân.",
+    "src": "tatoeba",
+    "sid": 99063
+   }
+  ]
+ },
+ {
+  "id": 1309660,
+  "m": [
+   {
+    "vi": "chỉ ra, biểu thị, cho thấy"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "指し示す事ができるんだ。",
+    "vi": "Tôi có thể chỉ ra được đấy.",
+    "src": "tatoeba",
+    "sid": 168250
+   },
+   {
+    "ja": "老人に教会の場所を聞かれて、私はそれを指し示した。",
+    "vi": "Khi được một ông lão hỏi đường đến nhà thờ, tôi đã chỉ cho ông.",
+    "src": "tatoeba",
+    "sid": 77301
+   }
+  ],
+  "hv": "chỉ thị"
+ },
+ {
+  "id": 1310450,
+  "m": [
+   {
+    "vi": "tôn chỉ, mục đích chính"
+   },
+   {
+    "vi": "đại ý, ý chính"
+   },
+   {
+    "vi": "ý nguyện, chỉ thị mệnh lệnh"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼女から結婚できませんという旨の手紙が届いた。",
+    "vi": "Tôi nhận được thư của cô ấy nói rằng không thể kết hôn với tôi.",
+    "src": "tatoeba",
+    "sid": 95544
+   }
+  ]
+ },
+ {
+  "id": 1310820,
+  "m": [
+   {
+    "vi": "tử tù, phạm nhân bị kết án tử hình"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "刑務所で死刑囚の再審請求が認められた。",
+    "vi": "Đơn yêu cầu tái thẩm của tử tù trong trại giam đã được chấp thuận.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1310960,
+  "m": [
+   {
+    "vi": "người tử vong, người chết"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "死亡者数は増え続けています。",
+    "vi": "Số người tử vong vẫn đang tiếp tục tăng.",
+    "src": "tatoeba",
+    "sid": 8689127
+   },
+   {
+    "ja": "死亡者が出なかったのは不幸中の幸いでした。",
+    "vi": "Trong cái rủi có cái may là không có ai thiệt mạng.",
+    "src": "tatoeba",
+    "sid": 1632857
+   }
+  ]
+ },
+ {
+  "id": 1311290,
+  "m": [
+   {
+    "vi": "tư nhân thiết lập, thuộc sở hữu tư"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "地域のために私設の図書館を開設した。",
+    "vi": "Ông ấy đã mở một thư viện do tư nhân thiết lập vì cộng đồng địa phương.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1312330,
+  "m": [
+   {
+    "vi": "đá thử vàng"
+   },
+   {
+    "vi": "thước đo thử thách, phép thử"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "夢は我々の性格の試金石である。",
+    "vi": "Giấc mơ là hòn đá thử vàng cho tính cách của chúng ta.",
+    "src": "tatoeba",
+    "sid": 80957
+   }
+  ]
+ },
+ {
+  "id": 1312410,
+  "m": [
+   {
+    "vi": "phương pháp thử và sai, mò mẫm thử nghiệm"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "解決策が功を奏したのは試行錯誤の結果だった。",
+    "vi": "Tìm ra giải pháp hiệu quả là kết quả của quá trình thử và sai.",
+    "src": "tatoeba",
+    "sid": 185195
+   },
+   {
+    "ja": "試行錯誤は進歩に不可欠だ。",
+    "vi": "Thử và sai là yếu tố thiết yếu cho sự tiến bộ.",
+    "src": "tatoeba",
+    "sid": 151055
+   }
+  ],
+  "hv": "thí hành thác ngộ"
+ },
+ {
+  "id": 1315220,
+  "m": [
+   {
+    "vi": "phụ đề phim"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "トムは、フランス語の字幕付きで日本映画を見ました。",
+    "vi": "Tom đã xem một bộ phim Nhật Bản có phụ đề tiếng Pháp.",
+    "src": "tatoeba",
+    "sid": 10617572
+   },
+   {
+    "ja": "この映画にはフランス語の字幕があります。",
+    "vi": "Bộ phim này có phụ đề tiếng Pháp.",
+    "src": "tatoeba",
+    "sid": 11144482
+   }
+  ],
+  "hv": "tự mạc"
+ },
+ {
+  "id": 1316100,
+  "m": [
+   {
+    "vi": "lương theo giờ, thù lao theo giờ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "あの修理工たちは時給一万円ももらっている。",
+    "vi": "Những người thợ sửa chữa kia được trả lương theo giờ tới 10.000 yên.",
+    "src": "tatoeba",
+    "sid": 229650
+   },
+   {
+    "ja": "時給はいくら？",
+    "vi": "Lương theo giờ là bao nhiêu?",
+    "src": "tatoeba",
+    "sid": 150523
+   }
+  ],
+  "hv": "thời cấp"
+ },
+ {
+  "id": 1318480,
+  "m": [
+   {
+    "vi": "máy bán hàng tự động"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "この自動販売機、動かないんですが。",
+    "vi": "Máy bán hàng tự động này không hoạt động.",
+    "src": "tatoeba",
+    "sid": 221546
+   },
+   {
+    "ja": "この自動販売機は故障しています。",
+    "vi": "Máy bán hàng tự động này đang bị hỏng.",
+    "src": "tatoeba",
+    "sid": 221544
+   }
+  ]
+ },
+ {
+  "id": 1318580,
+  "m": [
+   {
+    "vi": "chi phí tự túc, tiền túi tự trả"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "私は自費でパーティーを開いた。",
+    "vi": "Tôi tự bỏ tiền túi ra tổ chức bữa tiệc.",
+    "src": "tatoeba",
+    "sid": 156319
+   }
+  ]
+ },
+ {
+  "id": 1320600,
+  "m": [
+   {
+    "vi": "bệnh tật, chứng bệnh"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "この疾病の要因は、ストレスです。",
+    "vi": "Nguyên nhân của căn bệnh này là do căng thẳng.",
+    "src": "tatoeba",
+    "sid": 11589802
+   },
+   {
+    "ja": "マラリアは蚊が媒介する疾病です。",
+    "vi": "Sốt rét là căn bệnh do muỗi truyền.",
+    "src": "tatoeba",
+    "sid": 12484423
+   }
+  ]
+ },
+ {
+  "id": 1321210,
+  "m": [
+   {
+    "vi": "chứng minh thực tế, xác minh bằng chứng cứ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "この理論の根拠をこれから実証しよう。",
+    "vi": "Tôi sẽ chứng minh cơ sở của lý thuyết này ngay sau đây.",
+    "src": "tatoeba",
+    "sid": 219208
+   },
+   {
+    "ja": "諸事実がこの仮説を実証している。",
+    "vi": "Các sự kiện thực tế đã chứng minh giả thuyết này.",
+    "src": "tatoeba",
+    "sid": 147391
+   }
+  ]
+ },
+ {
+  "id": 1321370,
+  "m": [
+   {
+    "vi": "đạn thật"
+   },
+   {
+    "vi": "tiền đút lót hối lộ, tiền mặt"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "自衛隊が演習場で実弾射撃の訓練を行った。",
+    "vi": "Lực lượng phòng vệ đã tổ chức huấn luyện bắn đạn thật tại bãi tập.",
+    "src": "ai"
+   }
+  ],
+  "hv": "thực đạn"
+ },
+ {
+  "id": 1322830,
+  "m": [
+   {
+    "vi": "ngoài công ty"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼は社外で人脈を築いている。",
+    "vi": "Anh ấy đang xây dựng mạng lưới quan hệ bên ngoài công ty.",
+    "src": "tatoeba",
+    "sid": 104686
+   }
+  ]
+ },
+ {
+  "id": 1323180,
+  "m": [
+   {
+    "vi": "làn xe chạy trên đường"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "一番右側の車線は現在工事中である。",
+    "vi": "Làn xe ngoài cùng bên phải hiện đang thi công.",
+    "src": "tatoeba",
+    "sid": 190123
+   }
+  ]
+ },
+ {
+  "id": 1323350,
+  "m": [
+   {
+    "vi": "con rắn"
+   },
+   {
+    "vi": "rắn lớn, con trăn"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "蛇をみたとき、彼女は悲鳴をあげた。",
+    "vi": "Khi nhìn thấy con rắn, cô ấy hét lên.",
+    "src": "tatoeba",
+    "sid": 148906
+   },
+   {
+    "ja": "蛇を見るだけで彼女は気分が悪くなる。",
+    "vi": "Chỉ cần nhìn thấy rắn thôi là cô ấy đã thấy khó chịu rồi.",
+    "src": "tatoeba",
+    "sid": 148905
+   }
+  ]
+ },
+ {
+  "id": 1324130,
+  "m": [
+   {
+    "vi": "thước đo tiêu chuẩn, tiêu chí đánh giá"
+   },
+   {
+    "vi": "kích thước, chiều dài"
+   },
+   {
+    "vi": "cây thước đo"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "金銭は価値の尺度である。",
+    "vi": "Tiền bạc là thước đo giá trị.",
+    "src": "tatoeba",
+    "sid": 179646
+   },
+   {
+    "ja": "人は万物の尺度である。",
+    "vi": "Con người là thước đo của vạn vật.",
+    "src": "tatoeba",
+    "sid": 144434
+   }
+  ],
+  "hv": "xích độ"
+ },
+ {
+  "id": 1325230,
+  "m": [
+   {
+    "vi": "mục tiêu cốt lõi, trọng tâm hướng tới"
+   },
+   {
+    "vi": "điểm chủ yếu, đại ý"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "どっちに主眼をおくかでどちらでもいいでしょ。",
+    "vi": "Tùy xem bạn đặt trọng tâm vào đâu mà chọn cái nào cũng được.",
+    "src": "tatoeba",
+    "sid": 75319
+   }
+  ],
+  "hv": "chủ nhãn"
+ },
+ {
+  "id": 1325350,
+  "m": [
+   {
+    "vi": "cục ngân sách thuộc bộ tài chính"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "財務省の主計局が来年度の国家予算案を査定する。",
+    "vi": "Cục ngân sách của Bộ Tài chính thẩm định dự thảo ngân sách quốc gia cho năm tới.",
+    "src": "ai"
+   }
+  ],
+  "hv": "chủ kế cục"
+ },
+ {
+  "id": 1325790,
+  "m": [
+   {
+    "vi": "chủ trương phát động chiến tranh, chủ chiến"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "政府内で主戦論を唱える声が次第に強まった。",
+    "vi": "Ý kiến theo chủ trương chủ chiến trong chính phủ dần trở nên mạnh mẽ.",
+    "src": "ai"
+   }
+  ],
+  "hv": "chủ chiến"
+ },
+ {
+  "id": 1326220,
+  "m": [
+   {
+    "vi": "khẩu pháo chính trên tàu chiến"
+   },
+   {
+    "vi": "tay đập chủ lực, trụ cột tấn công"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "戦艦の主砲が一斉に火を噴いた。",
+    "vi": "Các khẩu pháo chính của chiến hạm đồng loạt nhả đạn.",
+    "src": "ai"
+   }
+  ],
+  "hv": "chủ pháo"
+ },
+ {
+  "id": 1327430,
+  "m": [
+   {
+    "vi": "ghi chép cá nhân, sổ tay ghi chú"
+   },
+   {
+    "vi": "hồi ký tự thuật"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "戦争を生き延びた兵士の手記が出版された。",
+    "vi": "Hồi ký tự thuật của người lính sống sót sau chiến tranh đã được xuất bản.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1328240,
+  "m": [
+   {
+    "vi": "vận hành bằng tay, thủ công"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "停電したため機械を手動で操作した。",
+    "vi": "Vì mất điện nên tôi đã vận hành máy móc bằng tay.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1328680,
+  "m": [
+   {
+    "vi": "chiến công đặc biệt, công trạng xuất sắc"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "殊勲を立てた選手に特別賞が贈られた。",
+    "vi": "Giải thưởng đặc biệt đã được trao cho cầu thủ lập chiến công xuất sắc.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1331010,
+  "m": [
+   {
+    "vi": "xung quanh, chu vi vòng quanh"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "家のぐるりを高い塀で囲んだ。",
+    "vi": "Họ đã bao quanh xung quanh ngôi nhà bằng một bức tường cao.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1333590,
+  "m": [
+   {
+    "vi": "gom hàng hóa, tập kết nông sản"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "採れたての野菜を集荷して市場へ運ぶ。",
+    "vi": "Họ gom rau củ vừa mới thu hoạch rồi chuyển tới chợ.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1334390,
+  "m": [
+   {
+    "vi": "sạc điện, nạp pin"
+   },
+   {
+    "vi": "nạp lại năng lượng, nghỉ ngơi lấy lại sức"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "この電池は充電されている。",
+    "vi": "Viên pin này đã được sạc đầy.",
+    "src": "tatoeba",
+    "sid": 220382
+   },
+   {
+    "ja": "車のバッテリーを充電しなければならない。",
+    "vi": "Tôi phải sạc ắc quy cho xe ô tô.",
+    "src": "tatoeba",
+    "sid": 149062
+   }
+  ]
+ },
+ {
+  "id": 1341240,
+  "m": [
+   {
+    "vi": "khoảnh khắc, trong chớp mắt"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "車が瞬時に目の前を通り過ぎていった。",
+    "vi": "Chiếc xe đã chạy vụt qua trước mắt tôi trong chớp mắt.",
+    "src": "ai"
+   }
+  ],
+  "hv": "thuấn thời"
+ },
+ {
+  "id": 1342080,
+  "m": [
+   {
+    "vi": "lưu diễn các tỉnh, chuyến lưu đấu"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "劇団が全国各地の巡業に出発した。",
+    "vi": "Đoàn kịch đã khởi hành chuyến lưu diễn qua các địa phương trên toàn quốc.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1342120,
+  "m": [
+   {
+    "vi": "tuần tra thị sát"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "警備員が深夜のビル内を巡視している。",
+    "vi": "Nhân viên bảo vệ đang tuần tra thị sát bên trong tòa nhà lúc nửa đêm.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1343020,
+  "m": [
+   {
+    "vi": "mức lương khởi điểm"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "初任給の使い道は？",
+    "vi": "Tháng lương đầu tiên bạn định dùng vào việc gì?",
+    "src": "tatoeba",
+    "sid": 11195024
+   }
+  ],
+  "hv": "sơ nhiệm cấp"
+ },
+ {
+  "id": 1346580,
+  "m": [
+   {
+    "vi": "buôn bán, việc kinh doanh"
+   },
+   {
+    "vi": "doanh thu, tiền bán hàng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼はあの店で野菜を商いしています。",
+    "vi": "Ông ấy buôn bán rau củ ở cửa hàng đó.",
+    "src": "tatoeba",
+    "sid": 114888
+   }
+  ]
+ },
+ {
+  "id": 1347410,
+  "m": [
+   {
+    "vi": "việc công việc bận rộn"
+   },
+   {
+    "vi": "dùng cho mục đích thương mại"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼は商用でニューヨークへ行った。",
+    "vi": "Anh ấy đi công tác ở New York.",
+    "src": "tatoeba",
+    "sid": 104181
+   },
+   {
+    "ja": "彼は商用で大阪に出かけて留守だ。",
+    "vi": "Anh ấy đi công tác ở Osaka nên vắng mặt.",
+    "src": "tatoeba",
+    "sid": 104176
+   }
+  ]
+ },
+ {
+  "id": 1348020,
+  "m": [
+   {
+    "vi": "cấp bậc komusubi trong sumo"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "新小結として初場所の土俵に上がった。",
+    "vi": "Anh ấy đã bước lên võ đài giải đấu đầu năm với tư cách là komusubi mới thăng cấp.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1348730,
+  "m": [
+   {
+    "vi": "phụ kiện, vật dụng nhỏ"
+   },
+   {
+    "vi": "nhân vật phụ, kẻ tép riu"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "小物などをまとめて収納できるラックが欲しいな。",
+    "vi": "Tôi muốn có một chiếc kệ có thể cất gọn các đồ vật nhỏ.",
+    "src": "tatoeba",
+    "sid": 11030879
+   }
+  ]
+ },
+ {
+  "id": 1349760,
+  "m": [
+   {
+    "vi": "sự tăng lương"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "昇給を当てにしないほうがいい。",
+    "vi": "Đừng nên trông chờ vào việc tăng lương.",
+    "src": "tatoeba",
+    "sid": 146436
+   },
+   {
+    "ja": "私たちの昇給の要求は拒絶された。",
+    "vi": "Yêu cầu tăng lương của chúng tôi đã bị từ chối.",
+    "src": "tatoeba",
+    "sid": 166938
+   }
+  ]
+ },
+ {
+  "id": 1356140,
+  "m": [
+   {
+    "vi": "dùng thường ngày, sử dụng thường xuyên"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "何か薬を常用していますか。",
+    "vi": "Bạn có đang dùng loại thuốc nào thường xuyên không?",
+    "src": "tatoeba",
+    "sid": 187884
+   }
+  ]
+ },
+ {
+  "id": 1357140,
+  "m": [
+   {
+    "vi": "ủy thác công việc"
+   },
+   {
+    "vi": "nhân viên bán thời gian, nhân viên đặc phái"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "定年退職後も嘱託職員として会社に残った。",
+    "vi": "Sau khi nghỉ hưu, ông ấy vẫn ở lại công ty với tư cách là nhân viên đặc phái.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1357710,
+  "m": [
+   {
+    "vi": "sắc thái màu sắc, độ đậm nhạt"
+   },
+   {
+    "vi": "sắc thái ý nghĩa, cảm giác"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "その建物は実に美しい色合いの大理石でできている。",
+    "vi": "Tòa nhà đó được xây bằng đá cẩm thạch có màu sắc tuyệt đẹp.",
+    "src": "tatoeba",
+    "sid": 211033
+   },
+   {
+    "ja": "彼女のスカートは明るい色合いの緑だった。",
+    "vi": "Chiếc váy của cô ấy có màu xanh lá tươi sáng.",
+    "src": "tatoeba",
+    "sid": 94696
+   }
+  ],
+  "hv": "sắc hợp"
+ },
+ {
+  "id": 1358570,
+  "m": [
+   {
+    "vi": "thực quản"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "胃カメラを使って食道の内部を詳しく検査した。",
+    "vi": "Bác sĩ đã dùng máy nội soi dạ dày để kiểm tra kỹ bên trong thực quản.",
+    "src": "ai"
+   }
+  ],
+  "hv": "thực đạo"
+ },
+ {
+  "id": 1359120,
+  "m": [
+   {
+    "vi": "sự trung thực, lòng tin cậy và nghĩa khí"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "互いの信義を守って友好な関係を築く。",
+    "vi": "Chúng tôi giữ gìn sự tin cậy lẫn nhau để xây dựng mối quan hệ hữu nghị.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1359700,
+  "m": [
+   {
+    "vi": "hợp tác xã tín dụng, quỹ tín dụng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "地域の信用組合から事業資金の融資を受けた。",
+    "vi": "Tôi đã được vay vốn kinh doanh từ hợp tác xã tín dụng địa phương.",
+    "src": "ai"
+   }
+  ],
+  "hv": "tín dụng tổ hợp"
+ },
+ {
+  "id": 1360670,
+  "m": [
+   {
+    "vi": "sự chuẩn bị tâm lý, tâm thế sẵn sàng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "どんな困難にも立ち向かう心構えができている。",
+    "vi": "Tôi đã có sự chuẩn bị tâm lý sẵn sàng đương đầu với mọi khó khăn.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1362410,
+  "m": [
+   {
+    "vi": "gạo mới đầu mùa"
+   },
+   {
+    "vi": "người mới vào nghề, lính mới"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "新米のくせに大きな顔をするな。",
+    "vi": "Mới chân ướt chân ráo mà đừng có lên mặt.",
+    "src": "tatoeba",
+    "sid": 145102
+   }
+  ]
+ },
+ {
+  "id": 1363470,
+  "m": [
+   {
+    "vi": "giá trị thực chất, giá trị đích thực"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "魅力は見る目を打つが、真価は魂を勝ち取る。",
+    "vi": "Vẻ đẹp hút ánh nhìn, nhưng giá trị thực mới chinh phục được tâm hồn.",
+    "src": "tatoeba",
+    "sid": 81050
+   },
+   {
+    "ja": "彼の偉大な才能は友達がその真価を認めていた。",
+    "vi": "Tài năng vĩ đại của anh ấy được bạn bè công nhận giá trị thực sự.",
+    "src": "tatoeba",
+    "sid": 118180
+   }
+  ]
+ },
+ {
+  "id": 1364060,
+  "m": [
+   {
+    "vi": "chính diện, đối diện ngay trước mặt"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "トムは私の真正面に立っていた。",
+    "vi": "Tom đã đứng ngay trước mặt tôi.",
+    "src": "tatoeba",
+    "sid": 8571249
+   },
+   {
+    "ja": "トムは私の真正面に立っている。",
+    "vi": "Tom đang đứng ngay trước mặt tôi.",
+    "src": "tatoeba",
+    "sid": 8571252
+   }
+  ],
+  "hv": "chân chính diện"
+ },
+ {
+  "id": 1365100,
+  "m": [
+   {
+    "vi": "thị vệ bảo vệ nguyên thủ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "国王の周囲を屈強な親衛隊が厳重に警護した。",
+    "vi": "Đội thị vệ cường tráng đã bảo vệ nghiêm ngặt xung quanh nhà vua.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1365700,
+  "m": [
+   {
+    "vi": "lai lịch, hoàn cảnh xuất thân"
+   },
+   {
+    "vi": "sở trường, ưu điểm nổi bật"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "一身上の都合です。",
+    "vi": "Vì lý do cá nhân.",
+    "src": "tatoeba",
+    "sid": 190505
+   }
+  ]
+ },
+ {
+  "id": 1367430,
+  "m": [
+   {
+    "vi": "vệ tinh nhân tạo"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "現在では我々が作った人工衛星が地球の周辺を回転している。",
+    "vi": "Hiện nay, các vệ tinh nhân tạo do chúng ta chế tạo đang quay quanh Trái Đất.",
+    "src": "tatoeba",
+    "sid": 174918
+   },
+   {
+    "ja": "人工衛星が軌道に向けて打ち上げられた。",
+    "vi": "Vệ tinh nhân tạo đã được phóng lên quỹ đạo.",
+    "src": "tatoeba",
+    "sid": 144212
+   }
+  ]
+ },
+ {
+  "id": 1371810,
+  "m": [
+   {
+    "vi": "pha loãng, pha thêm nước"
+   },
+   {
+    "vi": "khống lên, độn thêm số liệu"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "あのパブではビールを水増ししているのではないか。",
+    "vi": "Tôi nghi quán rượu kia pha loãng bia rồi.",
+    "src": "tatoeba",
+    "sid": 231278
+   },
+   {
+    "ja": "水増し決算の噂で株価は上がりませんでした。",
+    "vi": "Vì tin đồn thổi phồng báo cáo tài chính nên giá cổ phiếu không tăng nổi.",
+    "src": "tatoeba",
+    "sid": 143663
+   }
+  ]
+ },
+ {
+  "id": 1372290,
+  "m": [
+   {
+    "vi": "đường thủy, kênh dẫn nước"
+   },
+   {
+    "vi": "làn bơi trong bể bơi"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "船は水路を下った。",
+    "vi": "Con tàu đi xuôi theo luồng lạch.",
+    "src": "tatoeba",
+    "sid": 141114
+   },
+   {
+    "ja": "平野を横切って水路が枝分かれしている。",
+    "vi": "Các tuyến đường thủy phân nhánh khắp vùng đồng bằng.",
+    "src": "tatoeba",
+    "sid": 83547
+   }
+  ]
+ },
+ {
+  "id": 1374370,
+  "m": [
+   {
+    "vi": "eo biển, luồng lạch hẹp"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "名古屋と言えば、あなたは瀬戸へ行ったことはありますか。",
+    "vi": "Nhắc đến Nagoya, bạn đã bao giờ đến Seto chưa?",
+    "src": "tatoeba",
+    "sid": 80810
+   }
+  ]
+ },
+ {
+  "id": 1379120,
+  "m": [
+   {
+    "vi": "sinh sản, sinh sôi nảy nở"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "春になると多くの生物が活発に生殖活動を行う。",
+    "vi": "Vào mùa xuân nhiều sinh vật tích cực thực hiện hoạt động sinh sản.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1379780,
+  "m": [
+   {
+    "vi": "sự kiện thành công rực rỡ, cảnh tượng náo nhiệt đông đúc"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "会場は人であふれ、立錐の余地なしという大盛況だったね。",
+    "vi": "Hội trường chật kín người, đông đến mức không còn một chỗ chen chân.",
+    "src": "tatoeba",
+    "sid": 185221
+   }
+  ],
+  "hv": "thịnh huống"
+ },
+ {
+  "id": 1383370,
+  "m": [
+   {
+    "vi": "tia hồng ngoại, bức xạ hồng ngoại"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "赤外線や紫外線は、人の目には見えない光である。",
+    "vi": "Tia tử ngoại và tia hồng ngoại là loại ánh sáng mắt người không nhìn thấy được.",
+    "src": "tatoeba",
+    "sid": 4171817
+   },
+   {
+    "ja": "私達の目は赤外線を見ることはできません。",
+    "vi": "Mắt của chúng ta không thể nhìn thấy tia hồng ngoại.",
+    "src": "tatoeba",
+    "sid": 3957743
+   }
+  ]
+ },
+ {
+  "id": 1386320,
+  "m": [
+   {
+    "vi": "sự chừng mực, mức độ vừa phải"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "どんなに節度のある家庭でも事故は起こるもの。",
+    "vi": "Ngay cả trong những gia đình nền nếp nhất thì tai nạn vẫn có thể xảy ra.",
+    "src": "tatoeba",
+    "sid": 199522
+   }
+  ],
+  "hv": "tiết độ"
+ },
+ {
+  "id": 1389710,
+  "m": [
+   {
+    "vi": "tuyên thệ, lời thề"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼は市長に宣誓就任した。",
+    "vi": "Ông ấy đã tuyên thệ nhậm chức thị trưởng.",
+    "src": "tatoeba",
+    "sid": 106515
+   }
+  ]
+ },
+ {
+  "id": 1390240,
+  "m": [
+   {
+    "vi": "chiến sĩ, chiến binh"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "その戦士はヤリに敏感である。",
+    "vi": "Chiến binh đó rất nhạy bén với những ngọn giáo.",
+    "src": "tatoeba",
+    "sid": 208484
+   },
+   {
+    "ja": "その戦士は自分の強さも弱さも分かっている。",
+    "vi": "Chiến binh đó hiểu rõ cả điểm mạnh lẫn điểm yếu của mình.",
+    "src": "tatoeba",
+    "sid": 208483
+   }
+  ]
+ },
+ {
+  "id": 1390540,
+  "m": [
+   {
+    "vi": "tội phạm chiến tranh"
+   },
+   {
+    "vi": "người chịu trách nhiệm cho thất bại của đội"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "これ、完全に戦犯オレやん。",
+    "vi": "Quả này rõ ràng là tội đồ là tôi rồi còn gì.",
+    "src": "tatoeba",
+    "sid": 13440708
+   },
+   {
+    "ja": "これ、戦犯だれだ？",
+    "vi": "Quả này ai là tội đồ đây?",
+    "src": "tatoeba",
+    "sid": 13440786
+   }
+  ]
+ },
+ {
+  "id": 1393160,
+  "m": [
+   {
+    "vi": "tuần trước, tuần vừa qua"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "前週と比べて売り上げが大幅に伸びた。",
+    "vi": "Doanh số bán hàng đã tăng mạnh so với tuần trước.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1393250,
+  "m": [
+   {
+    "vi": "trận chạm trán mở màn"
+   },
+   {
+    "vi": "bước dạo đầu, trận đấu khởi động"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "決勝戦の前哨戦となる熱い試合が繰り広げられた。",
+    "vi": "Một trận đấu nảy lửa đã diễn ra như bước dạo đầu cho trận chung kết.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1393900,
+  "m": [
+   {
+    "vi": "nửa đầu trận đấu, hiệp một"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "試合の前半戦は両チームとも無得点だった。",
+    "vi": "Trong hiệp một trận đấu, cả hai đội đều không ghi được điểm nào.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1402740,
+  "m": [
+   {
+    "vi": "hồi hương, trục xuất về nước"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "不法滞在者が母国へと強制送還された。",
+    "vi": "Những người cư trú bất hợp pháp đã bị trục xuất về nước.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1403070,
+  "m": [
+   {
+    "vi": "ồn ào, hỗn loạn, xôn xao náo động"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "その部屋は騒然としていた。",
+    "vi": "Căn phòng đó náo loạn cả lên.",
+    "src": "tatoeba",
+    "sid": 206943
+   }
+  ]
+ },
+ {
+  "id": 1403090,
+  "m": [
+   {
+    "vi": "bạo loạn, tình trạng náo loạn"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "警察は街で起きた騒乱を速やかに鎮圧した。",
+    "vi": "Cảnh sát đã nhanh chóng trấn áp vụ bạo loạn xảy ra trên phố.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1406700,
+  "m": [
+   {
+    "vi": "lãi và lỗ, được và mất"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "四半期ごとの損益を正確に計算する。",
+    "vi": "Chúng tôi tính toán chính xác lãi và lỗ của từng quý.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1407530,
+  "m": [
+   {
+    "vi": "đa dạng, phong phú nhiều khía cạnh"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "講演の内容は多岐に渡っていた。",
+    "vi": "Nội dung bài giảng bao quát rất nhiều lĩnh vực.",
+    "src": "tatoeba",
+    "sid": 210681
+   },
+   {
+    "ja": "話は多岐にわたった。",
+    "vi": "Câu chuyện lan sang đủ thứ đề tài.",
+    "src": "tatoeba",
+    "sid": 77155
+   }
+  ]
+ },
+ {
+  "id": 1408950,
+  "m": [
+   {
+    "vi": "phá vỡ, xóa bỏ hủ tục, đánh bại"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼らはその悪習を打破した。",
+    "vi": "Họ đã xóa bỏ hủ tục đó.",
+    "src": "tatoeba",
+    "sid": 97986
+   },
+   {
+    "ja": "ファッション・デザイナーたちは伝統を打破しています。",
+    "vi": "Các nhà thiết kế thời trang đang phá bỏ truyền thống.",
+    "src": "tatoeba",
+    "sid": 197233
+   }
+  ]
+ },
+ {
+  "id": 1408960,
+  "m": [
+   {
+    "vi": "vết bầm tím do va đập, vết thâm tím"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "けんかの後、彼は体中に打撲を負っていた。",
+    "vi": "Sau trận đánh nhau, anh ta bị bầm tím khắp người.",
+    "src": "tatoeba",
+    "sid": 1014771
+   },
+   {
+    "ja": "左腕に打撲傷を負った。",
+    "vi": "Tôi bị bầm dập ở cánh tay trái.",
+    "src": "tatoeba",
+    "sid": 170906
+   }
+  ],
+  "hv": "đả phác"
+ },
+ {
+  "id": 1409290,
+  "m": [
+   {
+    "vi": "thụ tinh trong ống nghiệm"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "夫婦は体外受精による治療を受ける決断をした。",
+    "vi": "Hai vợ chồng đã quyết định điều trị bằng phương pháp thụ tinh trong ống nghiệm.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1412870,
+  "m": [
+   {
+    "vi": "quy mô lớn, rầm rộ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼は大々的にパーティーを催した。",
+    "vi": "Anh ấy đã tổ chức một bữa tiệc linh đình.",
+    "src": "tatoeba",
+    "sid": 102378
+   }
+  ],
+  "hv": "đại đại đích"
+ },
+ {
+  "id": 1413310,
+  "m": [
+   {
+    "vi": "vui mừng khôn xiết, vô cùng sung sướng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "そのショーで観客は大喜びだった。",
+    "vi": "Khán giả vô cùng thích thú với buổi biểu diễn đó.",
+    "src": "tatoeba",
+    "sid": 213046
+   },
+   {
+    "ja": "彼らの販売の成功に大喜びした。",
+    "vi": "Họ hân hoan trước thành công trong việc bán hàng.",
+    "src": "tatoeba",
+    "sid": 98414
+   }
+  ],
+  "hv": "đại hỉ"
+ },
+ {
+  "id": 1416370,
+  "m": [
+   {
+    "vi": "giành lại, đoạt lại vùng đất đã mất"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "軍隊は敵から要所を奪還することに成功した。",
+    "vi": "Quân đội đã thành công trong việc giành lại vị trí trọng yếu từ tay quân địch.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1418380,
+  "m": [
+   {
+    "vi": "thám tử, điều tra viên"
+   },
+   {
+    "vi": "hoạt động điều tra thám tử"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼女は彼を探偵だと言った。",
+    "vi": "Cô ấy nói anh ta là thám tử.",
+    "src": "tatoeba",
+    "sid": 87192
+   },
+   {
+    "ja": "その探偵は年老いた紳士に変装した。",
+    "vi": "Vị thám tử đó cải trang thành một quý ông lớn tuổi.",
+    "src": "tatoeba",
+    "sid": 208196
+   }
+  ]
+ },
+ {
+  "id": 1418730,
+  "m": [
+   {
+    "vi": "khẩu súng ngắn"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "犯人は隠し持っていた短銃を警察に向けた。",
+    "vi": "Tên tội phạm đã chĩa khẩu súng ngắn giấu trong người về phía cảnh sát.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1418940,
+  "m": [
+   {
+    "vi": "thẳng thắn, ngắn gọn rõ ràng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "端的に言って、彼は首になったのだ。",
+    "vi": "Nói ngắn gọn là anh ta bị đuổi việc rồi.",
+    "src": "tatoeba",
+    "sid": 127358
+   },
+   {
+    "ja": "端的に言って、彼には音楽の才能がない。",
+    "vi": "Nói ngắn gọn là anh ta không có năng khiếu âm nhạc.",
+    "src": "tatoeba",
+    "sid": 127359
+   }
+  ]
+ },
+ {
+  "id": 1419850,
+  "m": [
+   {
+    "vi": "mùa đông ấm áp, mùa đông ít lạnh"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "長期予報によると、暖冬だそうだ。",
+    "vi": "Theo dự báo dài hạn thì mùa đông này sẽ ấm.",
+    "src": "tatoeba",
+    "sid": 125882
+   },
+   {
+    "ja": "今年は暖冬ね。すごしやすくていいや。",
+    "vi": "Mùa đông năm nay ấm áp nhỉ. Dễ chịu thật đấy.",
+    "src": "tatoeba",
+    "sid": 75054
+   }
+  ]
+ },
+ {
+  "id": 1420450,
+  "m": [
+   {
+    "vi": "quen biết nhau, làm quen với nhau"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "いつ彼女と知り合ったのですか。",
+    "vi": "Bạn quen biết cô ấy từ bao giờ thế?",
+    "src": "tatoeba",
+    "sid": 228611
+   },
+   {
+    "ja": "彼と知り合ってどのくらいになりますか。",
+    "vi": "Bạn đã quen anh ấy được bao lâu rồi?",
+    "src": "tatoeba",
+    "sid": 119177
+   }
+  ],
+  "hv": "tri hợp"
+ },
+ {
+  "id": 1425900,
+  "m": [
+   {
+    "vi": "trọng tài phân xử, hòa giải can thiệp"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼が仲裁してその場は丸く収めた。",
+    "vi": "Nhờ anh ấy đứng ra hòa giải nên mọi chuyện tạm thời êm đẹp.",
+    "src": "tatoeba",
+    "sid": 119647
+   },
+   {
+    "ja": "彼女の仲裁が私たちの口論を終わらせた。",
+    "vi": "Sự hòa giải của cô ấy đã chấm dứt cuộc cãi vã của chúng tôi.",
+    "src": "tatoeba",
+    "sid": 94134
+   }
+  ]
+ },
+ {
+  "id": 1427750,
+  "m": [
+   {
+    "vi": "viếng tang, đến chia buồn với tang quyến"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "恩師の訃報を聞いて弔問に訪れた。",
+    "vi": "Nghe tin người thầy qua đời, tôi đã đến viếng tang để chia buồn.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1428260,
+  "m": [
+   {
+    "vi": "khiêu khích, kích động"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "あなたはトムを挑発するつもりなのだと思っていました。",
+    "vi": "Tôi tưởng là bạn định thách thức Tom.",
+    "src": "tatoeba",
+    "sid": 2110637
+   }
+  ]
+ },
+ {
+  "id": 1430810,
+  "m": [
+   {
+    "vi": "trực thuộc chỉ đạo trực tiếp, quản lý trực tiếp"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "この公園は国の直轄で管理されている。",
+    "vi": "Công viên này được quản lý trực thuộc chỉ đạo trực tiếp của nhà nước.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1431840,
+  "m": [
+   {
+    "vi": "quý hiếm"
+   },
+   {
+    "vi": "kỳ lạ, khác thường"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "あの珍本をどうやって手に入れたのですか。",
+    "vi": "Làm thế nào bạn kiếm được những cuốn sách hiếm kia vậy?",
+    "src": "tatoeba",
+    "sid": 230570
+   },
+   {
+    "ja": "探していた珍本を見つけた。",
+    "vi": "Tôi đã tìm thấy cuốn sách hiếm mà mình đang tìm kiếm.",
+    "src": "tatoeba",
+    "sid": 127411
+   }
+  ]
+ },
+ {
+  "id": 1432360,
+  "m": [
+   {
+    "vi": "truy kích kẻ địch đang tháo chạy"
+   },
+   {
+    "vi": "cú bồi thêm, giáng thêm đòn nặng nề"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "不況のなか増税が追い討ちをかけた。",
+    "vi": "Trong lúc kinh tế suy thoái, việc tăng thuế đã giáng thêm một đòn nặng nề.",
+    "src": "ai"
+   }
+  ]
+ }
+]

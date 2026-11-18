@@ -1,0 +1,3206 @@
+[
+ {
+  "id": 1232030,
+  "m": [
+   {
+    "vi": "vĩ mô"
+   },
+   {
+    "vi": "toàn diện, bao quát"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "経済の動きを巨視的な視点から分析する必要がある。",
+    "vi": "Cần phân tích biến động kinh tế từ góc nhìn vĩ mô.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1232970,
+  "m": [
+   {
+    "vi": "lục tìm, săn lùng"
+   },
+   {
+    "vi": "mua sắm/đọc ngấu nghiến, sa đà"
+   },
+   {
+    "vi": "đánh bắt cá"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "休日に古本屋を巡って珍しい本を漁るのが好きだ。",
+    "vi": "Ngày nghỉ tôi thích đi dạo các tiệm sách cũ để săn tìm sách hiếm.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1233370,
+  "m": [
+   {
+    "vi": "vùng Kyoto và Osaka"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "京阪地域は歴史的な観光スポットがたくさんある。",
+    "vi": "Khu vực Kyoto - Osaka có rất nhiều điểm tham quan lịch sử.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1234180,
+  "m": [
+   {
+    "vi": "năng lực cạnh tranh, sức cạnh tranh"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ＳＥが辞め続けると会社の競争力が落ちる。",
+    "vi": "Nếu các kỹ sư hệ thống cứ tiếp tục nghỉ việc thì năng lực cạnh tranh của công ty sẽ suy giảm.",
+    "src": "tatoeba",
+    "sid": 234810
+   },
+   {
+    "ja": "輸出市場での競争力強化が緊急の課題である。",
+    "vi": "Tăng cường năng lực cạnh tranh trên thị trường xuất khẩu là nhiệm vụ cấp bách.",
+    "src": "tatoeba",
+    "sid": 79441
+   }
+  ]
+ },
+ {
+  "id": 1234250,
+  "m": [
+   {
+    "vi": "chúng tôi, tôi (hạ mình)"
+   },
+   {
+    "vi": "bọn, tụi, lũ (hậu tố chỉ số nhiều, hàm ý bề trên)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "そのろくでなしどもはクビになりましたよ。",
+    "vi": "Lũ vô tích sự đó đã bị đuổi việc hết rồi.",
+    "src": "tatoeba",
+    "sid": 74235
+   },
+   {
+    "ja": "当然ですが先生は英仏語とも理解できますけれど。",
+    "vi": "Rõ ràng là giáo viên đó có thể hiểu cả tiếng Anh lẫn tiếng Pháp.",
+    "src": "tatoeba",
+    "sid": 75286
+   }
+  ]
+ },
+ {
+  "id": 1234730,
+  "m": [
+   {
+    "vi": "điểm chung"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "でもね、わたしたち全然共通点がないんですもの。",
+    "vi": "Nhưng mà, chúng ta hoàn toàn chẳng có điểm chung nào cả.",
+    "src": "tatoeba",
+    "sid": 202095
+   },
+   {
+    "ja": "二人の首相は何一つ共通点がなかった。",
+    "vi": "Hai vị thủ tướng không có điểm chung nào cả.",
+    "src": "tatoeba",
+    "sid": 123103
+   }
+  ]
+ },
+ {
+  "id": 1235330,
+  "m": [
+   {
+    "vi": "nước cộng hòa"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "アメリカ合衆国は共和国である。",
+    "vi": "Hợp chủng quốc Hoa Kỳ là một nước cộng hòa.",
+    "src": "tatoeba",
+    "sid": 230133
+   },
+   {
+    "ja": "革命後、フランスは共和国になった。",
+    "vi": "Sau cuộc cách mạng, nước Pháp trở thành nước cộng hòa.",
+    "src": "tatoeba",
+    "sid": 184529
+   }
+  ],
+  "hv": "cộng hòa quốc"
+ },
+ {
+  "id": 1236390,
+  "m": [
+   {
+    "vi": "mang tính cưỡng chế, bắt buộc"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼女は強制的に私を一緒に連れ出した。",
+    "vi": "Cô ấy đã ép buộc tôi đi cùng với cô ấy.",
+    "src": "tatoeba",
+    "sid": 90482
+   },
+   {
+    "ja": "彼女は強制的に私を連れ出した。",
+    "vi": "Cô ấy đã cưỡng ép lôi kéo tôi ra ngoài.",
+    "src": "tatoeba",
+    "sid": 90480
+   }
+  ],
+  "hv": "cưỡng chế đích"
+ },
+ {
+  "id": 1238740,
+  "m": [
+   {
+    "vi": "sự kinh ngạc, sự sửng sốt"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "私は彼の勇気に驚愕した。",
+    "vi": "Tôi kinh ngạc trước lòng dũng cảm của anh ấy.",
+    "src": "tatoeba",
+    "sid": 153779
+   }
+  ]
+ },
+ {
+  "id": 1240670,
+  "m": [
+   {
+    "vi": "hành tây"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "トマトと玉ねぎをのせてください。",
+    "vi": "Cho tôi thêm cà chua và hành tây lên trên nhé.",
+    "src": "tatoeba",
+    "sid": 200245
+   },
+   {
+    "ja": "玉ねぎを切っていたら涙が出てきた。",
+    "vi": "Đang thái hành tây thì nước mắt tôi chảy ra.",
+    "src": "tatoeba",
+    "sid": 179998
+   }
+  ]
+ },
+ {
+  "id": 1240700,
+  "m": [
+   {
+    "vi": "ngô, bắp"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "袋はとうもろこしではちきれそうだった。",
+    "vi": "Cái bao tải căng phồng như sắp nổ tung vì chứa đầy ngô.",
+    "src": "tatoeba",
+    "sid": 137890
+   },
+   {
+    "ja": "農夫は春にとうもろこしの種をまく。",
+    "vi": "Người nông dân gieo hạt ngô vào mùa xuân.",
+    "src": "tatoeba",
+    "sid": 121687
+   }
+  ]
+ },
+ {
+  "id": 1241990,
+  "m": [
+   {
+    "vi": "khăn quàng cổ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "外はとても寒いので厚手の襟巻きをして出かけた。",
+    "vi": "Ngoài trời rất lạnh nên tôi quàng chiếc khăn dày khi ra ngoài.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1242060,
+  "m": [
+   {
+    "vi": "Chúc mừng năm mới (trang trọng)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "年賀状の最初に大きく謹賀新年と書いた。",
+    "vi": "Tôi đã viết dòng chữ Chúc mừng năm mới thật to ở đầu tấm thiệp chúc Tết.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1242490,
+  "m": [
+   {
+    "vi": "sắp tới, vài ngày tới"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "近日中に彼女にまた会うことになっている。",
+    "vi": "Tôi dự định sẽ sớm gặp lại cô ấy một ngày gần đây.",
+    "src": "tatoeba",
+    "sid": 179790
+   },
+   {
+    "ja": "私は近日中に彼を訪問しよう。",
+    "vi": "Một ngày gần đây tôi sẽ đến thăm anh ấy.",
+    "src": "tatoeba",
+    "sid": 157571
+   }
+  ]
+ },
+ {
+  "id": 1243010,
+  "m": [
+   {
+    "vi": "sao Kim"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "今夜は金星を見ることが可能ですか。",
+    "vi": "Tối nay có thể nhìn thấy Sao Kim không?",
+    "src": "tatoeba",
+    "sid": 171108
+   }
+  ]
+ },
+ {
+  "id": 1243240,
+  "m": [
+   {
+    "vi": "việc kiếm tiền, hám tiền"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "金儲けをするためには、彼はどんなことでもする。",
+    "vi": "Để kiếm tiền thì chuyện gì hắn cũng dám làm.",
+    "src": "tatoeba",
+    "sid": 179632
+   },
+   {
+    "ja": "彼女は金儲けのことしか考えない。",
+    "vi": "Cô ta chẳng nghĩ đến gì ngoài việc kiếm tiền.",
+    "src": "tatoeba",
+    "sid": 90386
+   }
+  ]
+ },
+ {
+  "id": 1243550,
+  "m": [
+   {
+    "vi": "giấy bạc, giấy thiếc (gói đồ ăn)"
+   },
+   {
+    "vi": "giấy màu bạc"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "魚を焼くときに焦げないよう銀紙で包んだ。",
+    "vi": "Khi nướng cá, tôi bọc giấy bạc để cá không bị cháy.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1244630,
+  "m": [
+   {
+    "vi": "vị đắng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "このお茶は独特の苦みがあって大人向けの味だ。",
+    "vi": "Loại trà này có vị đắng đặc trưng hợp với khẩu vị người lớn.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1246830,
+  "m": [
+   {
+    "vi": "chỗ lõm, vết lõm, hố trũng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "お友達ブロガーさんがブログ閉鎖を決心されて凹み気味です。",
+    "vi": "Một người bạn viết blog của tôi quyết định đóng cửa blog nên tôi thấy hơi buồn hụt hẫng.",
+    "src": "tatoeba",
+    "sid": 74981
+   }
+  ]
+ },
+ {
+  "id": 1247310,
+  "m": [
+   {
+    "vi": "các bạn, các cậu"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "それらは君たちの椅子ではありません。",
+    "vi": "Đó không phải là ghế của các cậu.",
+    "src": "tatoeba",
+    "sid": 204711
+   },
+   {
+    "ja": "君達全部のいう事を順番に聞こう。",
+    "vi": "Tôi sẽ lắng nghe lần lượt từng người một trong các cậu nói.",
+    "src": "tatoeba",
+    "sid": 176727
+   }
+  ]
+ },
+ {
+  "id": 1247450,
+  "m": [
+   {
+    "vi": "cách đọc âm Kun (âm thuần Nhật của kanji)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "同じ漢字でも音読みと訓読みで意味が違うことがある。",
+    "vi": "Cùng một chữ Hán nhưng âm On và âm Kun đôi khi có nghĩa khác nhau.",
+    "src": "ai"
+   }
+  ],
+  "hv": "huấn độc"
+ },
+ {
+  "id": 1250210,
+  "m": [
+   {
+    "vi": "bản hợp đồng, văn bản ký kết"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼らは彼に無理矢理契約書にサインさせた。",
+    "vi": "Họ đã ép buộc anh ta ký vào bản hợp đồng.",
+    "src": "tatoeba",
+    "sid": 96360
+   },
+   {
+    "ja": "契約書に名前を署名してください。",
+    "vi": "Xin vui lòng ký tên vào bản hợp đồng.",
+    "src": "tatoeba",
+    "sid": 176547
+   }
+  ]
+ },
+ {
+  "id": 1250630,
+  "m": [
+   {
+    "vi": "bảng thông báo, bảng tin"
+   },
+   {
+    "vi": "diễn đàn trực tuyến (BBS)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼は掲示板にそのビラをびょうで留めた。",
+    "vi": "Anh ấy dùng đinh ghim gắn tờ rơi lên bảng thông báo.",
+    "src": "tatoeba",
+    "sid": 107994
+   },
+   {
+    "ja": "掲示板を荒らす人の精神状態がわかりません。",
+    "vi": "Tôi chẳng hiểu nổi tâm lý của những kẻ chuyên đi phá hoại diễn đàn.",
+    "src": "tatoeba",
+    "sid": 75037
+   }
+  ],
+  "hv": "yết thị bản"
+ },
+ {
+  "id": 1250690,
+  "m": [
+   {
+    "vi": "điện thoại di động"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "この型の携帯電話はよく売れています。",
+    "vi": "Mẫu điện thoại này đang bán rất chạy.",
+    "src": "tatoeba",
+    "sid": 222237
+   },
+   {
+    "ja": "携帯電話の電源を切るべきである。",
+    "vi": "Bạn nên tắt nguồn điện thoại di động đi.",
+    "src": "tatoeba",
+    "sid": 176529
+   }
+  ],
+  "hv": "huề đới điện thoại"
+ },
+ {
+  "id": 1251380,
+  "m": [
+   {
+    "vi": "kinh tế học"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼には多少経済学の知識がある。",
+    "vi": "Anh ấy có đôi chút kiến thức về kinh tế học.",
+    "src": "tatoeba",
+    "sid": 118789
+   },
+   {
+    "ja": "彼は兵庫大学の経済学の教授です。",
+    "vi": "Ông ấy là giáo sư kinh tế học của trường đại học Hyogo.",
+    "src": "tatoeba",
+    "sid": 100185
+   }
+  ]
+ },
+ {
+  "id": 1251730,
+  "m": [
+   {
+    "vi": "vá víu, chắp vá (quần áo)"
+   },
+   {
+    "vi": "cóp nhặt, chắp vá (bài viết, ý tưởng)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "穴の開いたズボンを布でつぎはぎして直した。",
+    "vi": "Tôi đã dùng vải vá lại chiếc quần bị rách lỗ.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1252400,
+  "m": [
+   {
+    "vi": "cảnh sát, sĩ quan cảnh sát"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "警察官がその泥棒を逮捕した。",
+    "vi": "Cảnh sát đã bắt giữ tên trộm đó.",
+    "src": "tatoeba",
+    "sid": 176087
+   },
+   {
+    "ja": "警察官は行方不明の子供を捜した。",
+    "vi": "Cảnh sát đã tìm kiếm đứa trẻ bị mất tích.",
+    "src": "tatoeba",
+    "sid": 176076
+   }
+  ]
+ },
+ {
+  "id": 1253150,
+  "m": [
+   {
+    "vi": "nghệ sĩ giải trí, người nổi tiếng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "この芸能人、本当に催眠術にかかってるのかなあ。",
+    "vi": "Không biết nghệ sĩ này có bị thôi miên thật không nhỉ.",
+    "src": "tatoeba",
+    "sid": 10917107
+   }
+  ],
+  "hv": "nghệ năng nhân"
+ },
+ {
+  "id": 1254090,
+  "m": [
+   {
+    "vi": "mảnh vỡ, mảnh vụn"
+   },
+   {
+    "vi": "một chút, một mẩu (sự thật, lương tâm...)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼は勇気のかけらもなかった。",
+    "vi": "Anh ta chẳng có lấy một mảy may can đảm.",
+    "src": "tatoeba",
+    "sid": 99336
+   },
+   {
+    "ja": "彼らはパンのかけらを置くことによって道に迷わなかった。",
+    "vi": "Nhờ rải những mẩu bánh mì mà họ đã không bị lạc đường.",
+    "src": "tatoeba",
+    "sid": 97710
+   }
+  ],
+  "hv": "khiếm phiến"
+ },
+ {
+  "id": 1254330,
+  "m": [
+   {
+    "vi": "trận chung kết"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "結局我々のチームは決勝戦で負けた。",
+    "vi": "Cuối cùng đội của chúng tôi đã thua ở trận chung kết.",
+    "src": "tatoeba",
+    "sid": 175806
+   },
+   {
+    "ja": "決勝戦は明日まで延期された。",
+    "vi": "Trận chung kết đã bị hoãn sang ngày mai.",
+    "src": "tatoeba",
+    "sid": 175908
+   }
+  ]
+ },
+ {
+  "id": 1254600,
+  "m": [
+   {
+    "vi": "búi tóc, vấn tóc"
+   },
+   {
+    "vi": "buộc, thắt, dựng (hàng rào)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼女は髪を結ってもらうために美容院に行った。",
+    "vi": "Cô ấy đã đi tiệm làm tóc để bới tóc.",
+    "src": "tatoeba",
+    "sid": 87524
+   },
+   {
+    "ja": "彼女はいつも有名な美容師に髪を結ってもらう。",
+    "vi": "Cô ấy lúc nào cũng nhờ một nhà tạo mẫu tóc nổi tiếng làm tóc cho.",
+    "src": "tatoeba",
+    "sid": 93211
+   }
+  ]
+ },
+ {
+  "id": 1256140,
+  "m": [
+   {
+    "vi": "đáng khen, kiên cường, ngoan cường"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼が直向きに生きるその姿は実に健気です。",
+    "vi": "Dáng vẻ anh ấy sống hết mình hướng về phía trước thực sự rất đáng khâm phục.",
+    "src": "tatoeba",
+    "sid": 75801
+   }
+  ]
+ },
+ {
+  "id": 1256210,
+  "m": [
+   {
+    "vi": "khám sức khỏe tổng quát"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "２歳の娘の健康診断をお願いします。",
+    "vi": "Tôi muốn đăng ký khám sức khỏe cho con gái 2 tuổi.",
+    "src": "tatoeba",
+    "sid": 235501
+   },
+   {
+    "ja": "最後に健康診断をしたのはいつですか。",
+    "vi": "Lần khám sức khỏe gần nhất của bạn là khi nào vậy?",
+    "src": "tatoeba",
+    "sid": 170575
+   }
+  ],
+  "hv": "kiện khang chẩn đoán"
+ },
+ {
+  "id": 1256240,
+  "m": [
+   {
+    "vi": "lành mạnh, tốt cho sức khỏe, hợp vệ sinh"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "海辺の空気はきれいで健康的だ。",
+    "vi": "Không khí ven biển thật trong lành và tốt cho sức khỏe.",
+    "src": "tatoeba",
+    "sid": 185022
+   },
+   {
+    "ja": "学校は健康的な環境に位置している。",
+    "vi": "Ngôi trường tọa lạc trong một môi trường lành mạnh tốt cho sức khỏe.",
+    "src": "tatoeba",
+    "sid": 184396
+   }
+  ]
+ },
+ {
+  "id": 1257510,
+  "m": [
+   {
+    "vi": "kiến trúc sư"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "建築家は芸術家ぶってはならない。",
+    "vi": "Kiến trúc sư không nên làm ra vẻ mình là nghệ sĩ.",
+    "src": "tatoeba",
+    "sid": 175395
+   },
+   {
+    "ja": "これは有名な建築家によってデザインされた家だ。",
+    "vi": "Đây là một ngôi nhà được thiết kế bởi một kiến trúc sư nổi tiếng.",
+    "src": "tatoeba",
+    "sid": 218067
+   }
+  ],
+  "hv": "kiến trúc gia"
+ },
+ {
+  "id": 1257750,
+  "m": [
+   {
+    "vi": "nắm đấm"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼はげんこつでテーブルをたたいた。",
+    "vi": "Anh ta đấm nắm đấm xuống mặt bàn.",
+    "src": "tatoeba",
+    "sid": 113877
+   },
+   {
+    "ja": "彼はテーブルを拳骨でどんどんたたいた。",
+    "vi": "Anh ta đấm nắm đấm thùm thụp xuống bàn.",
+    "src": "tatoeba",
+    "sid": 111860
+   }
+  ]
+ },
+ {
+  "id": 1257810,
+  "m": [
+   {
+    "vi": "lật, giở (trang sách)"
+   },
+   {
+    "vi": "vén lên, lột ra (chăn, vỏ)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼女はぼんやりと雑誌のページをめくっていた。",
+    "vi": "Cô ấy lơ đãng lật giở từng trang tạp chí.",
+    "src": "tatoeba",
+    "sid": 91512
+   },
+   {
+    "ja": "彼女は本のページをめくった。",
+    "vi": "Cô ấy lật một trang sách.",
+    "src": "tatoeba",
+    "sid": 86683
+   }
+  ]
+ },
+ {
+  "id": 1259130,
+  "m": [
+   {
+    "vi": "tìm ra, phát hiện ra"
+   },
+   {
+    "vi": "chọn ra"
+   },
+   {
+    "vi": "nhìn ra ngoài"
+   },
+   {
+    "vi": "trợn tròn mắt"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "奴隷たちは宗教に活力を見いだす。",
+    "vi": "Những người nô lệ tìm thấy sức mạnh tinh thần từ tôn giáo.",
+    "src": "tatoeba",
+    "sid": 148252
+   },
+   {
+    "ja": "彼女は読書に楽しみを見いだした。",
+    "vi": "Cô ấy tìm thấy niềm vui trong việc đọc sách.",
+    "src": "tatoeba",
+    "sid": 87670
+   }
+  ],
+  "hv": "kiến xuất"
+ },
+ {
+  "id": 1259220,
+  "m": [
+   {
+    "vi": "vẻ bề ngoài, sự giả vờ, làm màu"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼女の涙はほんの見せかけであった。",
+    "vi": "Nước mắt của cô ta chỉ là giả bộ đóng kịch thôi.",
+    "src": "tatoeba",
+    "sid": 93843
+   },
+   {
+    "ja": "彼女の謝罪はただの見せかけだった。",
+    "vi": "Lời xin lỗi của cô ta chỉ là làm màu cho có lệ thôi.",
+    "src": "tatoeba",
+    "sid": 94342
+   }
+  ],
+  "hv": "kiến quải"
+ },
+ {
+  "id": 1259780,
+  "m": [
+   {
+    "vi": "nhìn bao quát, phóng tầm mắt"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "タワーからは眼下に平野が見晴らせる。",
+    "vi": "Từ trên tháp có thể phóng tầm mắt nhìn xuống đồng bằng trải rộng ngay dưới chân.",
+    "src": "tatoeba",
+    "sid": 2210533
+   }
+  ],
+  "hv": "kiến tình"
+ },
+ {
+  "id": 1259840,
+  "m": [
+   {
+    "vi": "đánh giá sai, nhìn nhầm"
+   },
+   {
+    "vi": "nhìn lầm người, đánh giá quá cao"
+   },
+   {
+    "vi": "bỏ sót, nhìn lỡ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "見損なったよ。",
+    "vi": "Tôi đã nhìn nhầm cậu rồi.",
+    "src": "tatoeba",
+    "sid": 175142
+   }
+  ],
+  "hv": "kiến tổn"
+ },
+ {
+  "id": 1260700,
+  "m": [
+   {
+    "vi": "từ đầu, vốn dĩ"
+   },
+   {
+    "vi": "dĩ nhiên, tất nhiên"
+   },
+   {
+    "vi": "chưa kể đến, huống hồ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "もとよりそんなことは承知の上だ。",
+    "vi": "Chuyện đó dĩ nhiên là tôi đã biết rõ từ đầu rồi.",
+    "src": "tatoeba",
+    "sid": 7878182
+   },
+   {
+    "ja": "もとより私は最悪の事態を覚悟していた。",
+    "vi": "Ngay từ đầu tôi đã chuẩn bị tinh thần cho tình huống xấu nhất rồi.",
+    "src": "tatoeba",
+    "sid": 7900078
+   }
+  ]
+ },
+ {
+  "id": 1260950,
+  "m": [
+   {
+    "vi": "ngày đầu năm mới, mùng 1 Tết"
+   },
+   {
+    "vi": "sáng mùng 1 Tết"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "一年の計は元旦にあり。",
+    "vi": "Kế hoạch cả năm bắt đầu từ ngày đầu năm mới.",
+    "src": "tatoeba",
+    "sid": 190232
+   },
+   {
+    "ja": "元旦には近所の神社にお参りする人が多い。",
+    "vi": "Vào ngày mùng một Tết, nhiều người đi lễ ở đền thờ gần nhà.",
+    "src": "tatoeba",
+    "sid": 175019
+   }
+  ]
+ },
+ {
+  "id": 1263730,
+  "m": [
+   {
+    "vi": "thực tế, thiết thực"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "イギリス人は現実的な国民であると言われている。",
+    "vi": "Người ta nói người Anh là dân tộc sống thực tế.",
+    "src": "tatoeba",
+    "sid": 229215
+   },
+   {
+    "ja": "彼の理論は、全く現実的ではなかった。",
+    "vi": "Lý thuyết của ông ta hoàn toàn phi thực tế.",
+    "src": "tatoeba",
+    "sid": 115901
+   }
+  ]
+ },
+ {
+  "id": 1264220,
+  "m": [
+   {
+    "vi": "diễn đạt bằng lời, biểu đạt"
+   },
+   {
+    "vi": "thú nhận"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "その物体がどんな物か言い表す事が出来ますか。",
+    "vi": "Bạn có thể mô tả vật thể đó trông như thế nào không?",
+    "src": "tatoeba",
+    "sid": 206884
+   },
+   {
+    "ja": "これを言い表す適当な言葉が思い浮かびません。",
+    "vi": "Tôi không nghĩ ra được từ ngữ nào thích hợp để diễn tả điều này.",
+    "src": "tatoeba",
+    "sid": 217652
+   }
+  ]
+ },
+ {
+  "id": 1264740,
+  "m": [
+   {
+    "vi": "cái, chiếc (lượng từ đồ vật nhỏ)"
+   },
+   {
+    "vi": "đơn vị quân đội"
+   },
+   {
+    "vi": "cá nhân, một người"
+   },
+   {
+    "vi": "tuổi chênh lệch, năm học"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "この懐中電灯は２個の電池が必要だ。",
+    "vi": "Chiếc đèn pin này cần 2 viên pin.",
+    "src": "tatoeba",
+    "sid": 222655
+   },
+   {
+    "ja": "私は６行に６個の誤りを発見した。",
+    "vi": "Tôi phát hiện ra 6 lỗi sai trong số 6 dòng.",
+    "src": "tatoeba",
+    "sid": 161909
+   }
+  ]
+ },
+ {
+  "id": 1264970,
+  "m": [
+   {
+    "vi": "cá tính, độc đáo, đặc trưng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼女は非常に個性的な人だ。",
+    "vi": "Cô ấy là người có cá tính rất mạnh.",
+    "src": "tatoeba",
+    "sid": 87126
+   },
+   {
+    "ja": "彼女は個性的な話し方をしていた。",
+    "vi": "Cô ấy có cách nói chuyện rất riêng biệt cá tính.",
+    "src": "tatoeba",
+    "sid": 90204
+   }
+  ]
+ },
+ {
+  "id": 1266170,
+  "m": [
+   {
+    "vi": "tiệm sách cũ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "古本屋と古着屋をあさるのが好きです。",
+    "vi": "Tôi thích đi săn đồ ở hiệu sách cũ và tiệm quần áo cũ.",
+    "src": "tatoeba",
+    "sid": 174584
+   },
+   {
+    "ja": "ぼくはこの本を古本屋で見つけた。",
+    "vi": "Tôi tình cờ tìm thấy cuốn sách này ở hiệu sách cũ.",
+    "src": "tatoeba",
+    "sid": 196352
+   }
+  ],
+  "hv": "cổ bản ốc"
+ },
+ {
+  "id": 1267120,
+  "m": [
+   {
+    "vi": "lý do, nguyên nhân, hoàn cảnh"
+   },
+   {
+    "vi": "vì, bởi vì, do"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "欠点ゆえにそれだけいっそう彼が好きだ。",
+    "vi": "Chính vì những khuyết điểm đó mà tôi lại càng yêu anh ấy hơn.",
+    "src": "tatoeba",
+    "sid": 175946
+   },
+   {
+    "ja": "彼の欠点のゆえにかえって人々は彼を好いた。",
+    "vi": "Ngược lại, mọi người lại quý mến anh ấy hơn chính nhờ những khuyết điểm đó.",
+    "src": "tatoeba",
+    "sid": 117692
+   }
+  ]
+ },
+ {
+  "id": 1267520,
+  "m": [
+   {
+    "vi": "ngồi khoanh chân, ngồi xếp bằng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "俺は葵の指さした場所に胡坐をかく。",
+    "vi": "Tôi ngồi xếp bằng khoanh chân xuống chỗ mà Aoi chỉ tay.",
+    "src": "tatoeba",
+    "sid": 75449
+   },
+   {
+    "ja": "みんな、床に胡坐をかいて座っていた。",
+    "vi": "Mọi người đều ngồi xếp bằng trên sàn nhà.",
+    "src": "tatoeba",
+    "sid": 11299818
+   }
+  ]
+ },
+ {
+  "id": 1267550,
+  "m": [
+   {
+    "vi": "quả óc chó"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼女のポケットはくるみで膨らんでいた。",
+    "vi": "Túi áo của cô ấy phồng lên vì đựng đầy quả óc chó.",
+    "src": "tatoeba",
+    "sid": 94657
+   }
+  ]
+ },
+ {
+  "id": 1267560,
+  "m": [
+   {
+    "vi": "hạt vừng, hạt mè"
+   },
+   {
+    "vi": "cây vừng, cây mè"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "あいつ、上司に胡麻を擂ってやがる。",
+    "vi": "Tên đó đang nịnh bợ sếp đấy.",
+    "src": "tatoeba",
+    "sid": 234686
+   },
+   {
+    "ja": "マヨネーズと胡麻ペーストの相性は抜群だ。",
+    "vi": "Sốt mayonnaise và xốt mè kết hợp với nhau cực kỳ hợp vị.",
+    "src": "tatoeba",
+    "sid": 8621593
+   }
+  ]
+ },
+ {
+  "id": 1268790,
+  "m": [
+   {
+    "vi": "xen kẽ nhau, so le nhau"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "昼と夜は互い違いにやってくる。",
+    "vi": "Ngày và đêm luân phiên nhau xuất hiện.",
+    "src": "tatoeba",
+    "sid": 126418
+   }
+  ]
+ },
+ {
+  "id": 1269070,
+  "m": [
+   {
+    "vi": "trong buổi sáng, suốt buổi sáng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "午前中は在宅の予定です。",
+    "vi": "Buổi sáng tôi dự định sẽ ở nhà.",
+    "src": "tatoeba",
+    "sid": 174366
+   },
+   {
+    "ja": "午前中はずっと本を読んでました。",
+    "vi": "Suốt cả buổi sáng tôi đã đọc sách.",
+    "src": "tatoeba",
+    "sid": 157196
+   }
+  ]
+ },
+ {
+  "id": 1269950,
+  "m": [
+   {
+    "vi": "hậu thiên (có được do rèn luyện sau khi sinh)"
+   },
+   {
+    "vi": "hậu nghiệm"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "その習慣は後天的で、先天的なものではない。",
+    "vi": "Thói quen đó là do hình thành về sau chứ không phải bẩm sinh.",
+    "src": "tatoeba",
+    "sid": 209448
+   },
+   {
+    "ja": "言語能力は後天的ではなく、生まれつきです。",
+    "vi": "Năng lực ngôn ngữ là bẩm sinh chứ không phải do học hỏi về sau.",
+    "src": "tatoeba",
+    "sid": 174718
+   }
+  ]
+ },
+ {
+  "id": 1270210,
+  "m": [
+   {
+    "vi": "nhờ có, nhờ vào"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "私はあなたの援助のおかげで成功した。",
+    "vi": "Tôi đã thành công nhờ có sự giúp đỡ của bạn.",
+    "src": "tatoeba",
+    "sid": 161701
+   },
+   {
+    "ja": "飛行機のおかげで、人は早く、長い距離を旅行できる。",
+    "vi": "Nhờ vào máy bay mà con người có thể di chuyển giữa các nơi xa xôi.",
+    "src": "tatoeba",
+    "sid": 85697
+   }
+  ]
+ },
+ {
+  "id": 1270290,
+  "m": [
+   {
+    "vi": "sự hợp tác, giúp đỡ (kính ngữ)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "禁煙、ご協力ありがとうございます。",
+    "vi": "Cảm ơn quý khách đã hợp tác không hút thuốc.",
+    "src": "tatoeba",
+    "sid": 179964
+   },
+   {
+    "ja": "ご協力ありがとうございました。",
+    "vi": "Xin cảm ơn sự hợp tác giúp đỡ của bạn.",
+    "src": "tatoeba",
+    "sid": 11380389
+   }
+  ]
+ },
+ {
+  "id": 1270380,
+  "m": [
+   {
+    "vi": "quý công ty"
+   },
+   {
+    "vi": "đền thờ của ngài"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "御社のお考えを先におっしゃってください。",
+    "vi": "Xin quý công ty vui lòng cho biết quan điểm của quý vị trước.",
+    "src": "tatoeba",
+    "sid": 76178
+   }
+  ],
+  "hv": "ngự xã"
+ },
+ {
+  "id": 1270450,
+  "m": [
+   {
+    "vi": "tọc mạch, hay xen vào chuyện người khác"
+   },
+   {
+    "vi": "người hay lo chuyện bao đồng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "よけいなお節介だ。",
+    "vi": "Đúng là lo chuyện bao đồng.",
+    "src": "tatoeba",
+    "sid": 192743
+   },
+   {
+    "ja": "余計なおせっかいはよせ。",
+    "vi": "Đừng có xía vào chuyện của người khác.",
+    "src": "tatoeba",
+    "sid": 78947
+   }
+  ]
+ },
+ {
+  "id": 1270460,
+  "m": [
+   {
+    "vi": "món ăn truyền thống ngày Tết (Osechi)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "おばあちゃんのおせち料理はとても美味しいです。",
+    "vi": "Món ăn Tết Osechi bà ngoại làm rất ngon.",
+    "src": "tatoeba",
+    "sid": 8417375
+   }
+  ]
+ },
+ {
+  "id": 1270540,
+  "m": [
+   {
+    "vi": "quà biếu giữa năm (mùa hè)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "今年のお中元どうする？",
+    "vi": "Quà biếu giữa năm năm nay tính sao đây?",
+    "src": "tatoeba",
+    "sid": 11027679
+   }
+  ]
+ },
+ {
+  "id": 1270820,
+  "m": [
+   {
+    "vi": "sự liên lạc (kính ngữ)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "いずれご連絡いたします。",
+    "vi": "Chẳng bao lâu nữa tôi sẽ liên lạc lại với bạn.",
+    "src": "tatoeba",
+    "sid": 229119
+   },
+   {
+    "ja": "明日、電話でご連絡いたします。",
+    "vi": "Ngày mai tôi sẽ liên lạc với bạn qua điện thoại.",
+    "src": "tatoeba",
+    "sid": 234460
+   }
+  ]
+ },
+ {
+  "id": 1272740,
+  "m": [
+   {
+    "vi": "ứng cử viên, ứng viên"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼らは皆その候補者を応援した。",
+    "vi": "Tất cả bọn họ đều ủng hộ ứng cử viên đó.",
+    "src": "tatoeba",
+    "sid": 97404
+   },
+   {
+    "ja": "彼はアメリカ大統領候補者の一人である。",
+    "vi": "Anh ấy là một ứng cử viên tổng thống Mỹ.",
+    "src": "tatoeba",
+    "sid": 114805
+   }
+  ]
+ },
+ {
+  "id": 1275370,
+  "m": [
+   {
+    "vi": "lòng tốt, sự ân cần, thiện ý"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ご厚意に感謝いたします。",
+    "vi": "Xin chân thành cảm ơn tấm lòng tốt bụng của ngài.",
+    "src": "tatoeba",
+    "sid": 10778300
+   }
+  ]
+ },
+ {
+  "id": 1275560,
+  "m": [
+   {
+    "vi": "mặc quần áo dày, mặc ấm"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼はいつも厚着している。",
+    "vi": "Anh ấy lúc nào cũng mặc rất nhiều lớp áo dày.",
+    "src": "tatoeba",
+    "sid": 114554
+   }
+  ],
+  "hv": "hậu trước"
+ },
+ {
+  "id": 1276700,
+  "m": [
+   {
+    "vi": "cãi lại, trả treo"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "お母さんに口答えしてはいけませんよ。",
+    "vi": "Không được cãi lại mẹ đâu đấy.",
+    "src": "tatoeba",
+    "sid": 226625
+   },
+   {
+    "ja": "彼女に口答えするなんて見当違いだ。",
+    "vi": "Cãi lại cô ấy như thế là sai trái rồi.",
+    "src": "tatoeba",
+    "sid": 94836
+   }
+  ]
+ },
+ {
+  "id": 1276990,
+  "m": [
+   {
+    "vi": "ấp úng, ngập ngừng không nói nên lời"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "その来たばかりの子はおどおどして口ごもった。",
+    "vi": "Đứa trẻ mới đến đó rụt rè lắp bắp không nói nên lời.",
+    "src": "tatoeba",
+    "sid": 206254
+   },
+   {
+    "ja": "彼は口ごもりながら二言三言しゃべった。",
+    "vi": "Anh ấy ấp úng nói ra vài ba từ.",
+    "src": "tatoeba",
+    "sid": 107427
+   }
+  ]
+ },
+ {
+  "id": 1278150,
+  "m": [
+   {
+    "vi": "đang thi công, đang sửa chữa"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "この道を行ってもダメですよ。工事中ですから。",
+    "vi": "Đi đường này không được đâu. Đang thi công sửa chữa đấy.",
+    "src": "tatoeba",
+    "sid": 220272
+   },
+   {
+    "ja": "「道路工事中」",
+    "vi": "\"Đường đang thi công sửa chữa.\"",
+    "src": "tatoeba",
+    "sid": 236210
+   }
+  ]
+ },
+ {
+  "id": 1279070,
+  "m": [
+   {
+    "vi": "khiêm tốn, chừng mực, vừa phải"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼の意見は控え目である。",
+    "vi": "Ông ấy rất khiêm tốn về ý kiến của mình.",
+    "src": "tatoeba",
+    "sid": 118161
+   },
+   {
+    "ja": "その講演者は態度が控え目であった。",
+    "vi": "Diễn giả đó có thái độ rất chừng mực khiêm nhường.",
+    "src": "tatoeba",
+    "sid": 210676
+   }
+  ]
+ },
+ {
+  "id": 1279660,
+  "m": [
+   {
+    "vi": "sự tắc nghẽn"
+   },
+   {
+    "vi": "nhồi máu (y học)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "父は心筋梗塞で緊急入院することになった。",
+    "vi": "Bố tôi phải nhập viện cấp cứu vì bị nhồi máu cơ tim.",
+    "src": "ai"
+   }
+  ],
+  "hv": "ngạnh tắc"
+ },
+ {
+  "id": 1279890,
+  "m": [
+   {
+    "vi": "thời kỳ Edo (1603-1868)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "この習慣は江戸時代に始まった。",
+    "vi": "Tập tục này bắt đầu từ thời kỳ Edo.",
+    "src": "tatoeba",
+    "sid": 221253
+   },
+   {
+    "ja": "この習慣は江戸時代からのものだ。",
+    "vi": "Tập tục này có từ thời kỳ Edo.",
+    "src": "tatoeba",
+    "sid": 221254
+   }
+  ],
+  "hv": "giang hộ thời đại"
+ },
+ {
+  "id": 1280250,
+  "m": [
+   {
+    "vi": "giá trị, công sức xứng đáng, kết quả"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "苦心の甲斐があった。",
+    "vi": "Công sức bỏ ra thật xứng đáng.",
+    "src": "tatoeba",
+    "sid": 179528
+   }
+  ]
+ },
+ {
+  "id": 1281010,
+  "m": [
+   {
+    "vi": "nghĩ lại thì, xét cho cùng thì"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "考えてみれば彼のいう事はおかしいよ。",
+    "vi": "Nghĩ kỹ lại thì điều anh ta nói thật vô lý.",
+    "src": "tatoeba",
+    "sid": 173464
+   },
+   {
+    "ja": "考えてみれば、一週間雨が降りつづいている。",
+    "vi": "Nghĩ kỹ lại thì trời đã mưa liên tục suốt một tuần rồi đấy.",
+    "src": "tatoeba",
+    "sid": 173465
+   }
+  ]
+ },
+ {
+  "id": 1281070,
+  "m": [
+   {
+    "vi": "nghĩ lại, suy xét lại"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "あなたがそれを考え直して止めてもらえればと思います。",
+    "vi": "Tôi mong bạn sẽ suy nghĩ lại và từ bỏ chuyện đó.",
+    "src": "tatoeba",
+    "sid": 234196
+   },
+   {
+    "ja": "考えなおしたうえでの考えが一番よい。",
+    "vi": "Suy nghĩ sau khi đã cân nhắc lại luôn là tốt nhất.",
+    "src": "tatoeba",
+    "sid": 173460
+   }
+  ]
+ },
+ {
+  "id": 1281300,
+  "m": [
+   {
+    "vi": "hãng hàng không"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "その航空会社は貨物のみを扱っている。",
+    "vi": "Hãng hàng không đó chỉ chuyên vận chuyển hàng hóa.",
+    "src": "tatoeba",
+    "sid": 210690
+   },
+   {
+    "ja": "あれは空の旅に利用するにはいい航空会社だ。",
+    "vi": "Đó là một hãng hàng không tốt để đi du lịch bằng đường hàng không.",
+    "src": "tatoeba",
+    "sid": 229715
+   }
+  ],
+  "hv": "hàng không hội xã"
+ },
+ {
+  "id": 1281330,
+  "m": [
+   {
+    "vi": "vé máy bay"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "航空券はどこで受け取ればいいですか？",
+    "vi": "Tôi có thể nhận vé máy bay ở đâu vậy ạ?",
+    "src": "tatoeba",
+    "sid": 173437
+   },
+   {
+    "ja": "国内便の安い航空券はありますか。",
+    "vi": "Có vé máy bay giá rẻ cho chuyến bay nội địa không ạ?",
+    "src": "tatoeba",
+    "sid": 173034
+   }
+  ]
+ },
+ {
+  "id": 1281750,
+  "m": [
+   {
+    "vi": "chu đáo, tỉ mỉ, toàn diện"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "その庭は手入れが行き届いている。",
+    "vi": "Khu vườn đó được chăm sóc rất chu đáo tỉ mỉ.",
+    "src": "tatoeba",
+    "sid": 207709
+   },
+   {
+    "ja": "彼は何事にも行き届いた人だ。",
+    "vi": "Anh ấy là người chu đáo cẩn thận trong mọi việc.",
+    "src": "tatoeba",
+    "sid": 109353
+   }
+  ],
+  "hv": "hành giới"
+ },
+ {
+  "id": 1281780,
+  "m": [
+   {
+    "vi": "đi đi lại lại, qua lại"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼は通りを行ったり来たりした。",
+    "vi": "Anh ấy đi đi lại lại trên con phố.",
+    "src": "tatoeba",
+    "sid": 102006
+   },
+   {
+    "ja": "私は通りを行ったり来たりした。",
+    "vi": "Tôi đi đi lại lại trên đường phố.",
+    "src": "tatoeba",
+    "sid": 154990
+   }
+  ],
+  "hv": "hành lai"
+ },
+ {
+  "id": 1282190,
+  "m": [
+   {
+    "vi": "mất tích, bặt vô âm tín"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "３人が依然行方不明です。",
+    "vi": "Vẫn còn 3 người đang mất tích.",
+    "src": "tatoeba",
+    "sid": 235305
+   },
+   {
+    "ja": "彼は行方不明になったと思われた。",
+    "vi": "Người ta cho rằng anh ấy đã mất tích.",
+    "src": "tatoeba",
+    "sid": 107320
+   }
+  ],
+  "hv": "hành phương bất minh"
+ },
+ {
+  "id": 1282250,
+  "m": [
+   {
+    "vi": "buổi diễn thuyết, buổi nói chuyện chuyên đề"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼の講演会にはたくさんの聴衆が集まっていた。",
+    "vi": "Buổi diễn thuyết của ông ấy thu hút rất đông khán giả.",
+    "src": "tatoeba",
+    "sid": 117351
+   }
+  ],
+  "hv": "giảng diễn hội"
+ },
+ {
+  "id": 1284590,
+  "m": [
+   {
+    "vi": "áo mưa"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "自転車に乗るときは傘ではなくカッパを着ている。",
+    "vi": "Khi đi xe đạp, tôi mặc áo mưa chứ không dùng ô.",
+    "src": "ai"
+   }
+  ],
+  "hv": "hợp vũ"
+ },
+ {
+  "id": 1287690,
+  "m": [
+   {
+    "vi": "nốt ruồi"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "あの人は眼の横にほくろがある。",
+    "vi": "Người kia có một nốt ruồi ở bên cạnh mắt.",
+    "src": "tatoeba",
+    "sid": 230726
+   },
+   {
+    "ja": "このほくろに悩んでいます。",
+    "vi": "Tôi đang phiền lòng vì nốt ruồi này.",
+    "src": "tatoeba",
+    "sid": 223179
+   }
+  ],
+  "hv": "hắc tử"
+ },
+ {
+  "id": 1288490,
+  "m": [
+   {
+    "vi": "lú lẫn (vì tuổi già)"
+   },
+   {
+    "vi": "ngơ ngẩn, chậm chạp"
+   },
+   {
+    "vi": "giả ngốc, nói đùa ngớ ngẩn (diễn hài)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "最近、物忘れが激しくて。少しボケてきたのかな？",
+    "vi": "Gần đây tôi hay quên kinh khủng. Hay là bắt đầu lú lẫn rồi nhỉ?",
+    "src": "tatoeba",
+    "sid": 170728
+   },
+   {
+    "ja": "彼はこのごろ頭がぼけてきた。",
+    "vi": "Dạo này ông ta đã trở nên lẩm cẩm.",
+    "src": "tatoeba",
+    "sid": 113803
+   }
+  ],
+  "hv": "ngốc"
+ },
+ {
+  "id": 1288495,
+  "m": [
+   {
+    "vi": "nhòe, mờ, mất nét (ảnh)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "手ブレでせっかく撮った写真がぼけてしまった。",
+    "vi": "Vì rung tay nên bức ảnh chụp mãi mới được lại bị mờ mất rồi.",
+    "src": "ai"
+   }
+  ],
+  "hv": "vựng"
+ },
+ {
+  "id": 1288500,
+  "m": [
+   {
+    "vi": "phải lòng, yêu say đắm"
+   },
+   {
+    "vi": "mê mẩn, bị cuốn hút"
+   },
+   {
+    "vi": "say mê quên mình"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ビルはどうもメアリーに惚れているらしい。",
+    "vi": "Có vẻ như Bill phải lòng Mary mất rồi.",
+    "src": "tatoeba",
+    "sid": 197354
+   },
+   {
+    "ja": "私は女の子に惚れたことがない。",
+    "vi": "Tôi chưa từng phải lòng cô gái nào cả.",
+    "src": "tatoeba",
+    "sid": 155932
+   }
+  ]
+ },
+ {
+  "id": 1289030,
+  "m": [
+   {
+    "vi": "chưa được tốt lắm, hơi thiếu sót, không ổn lắm"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "いまいち東芝は信用できない。",
+    "vi": "Tôi không tin tưởng Toshiba lắm.",
+    "src": "tatoeba",
+    "sid": 228558
+   },
+   {
+    "ja": "あの人のルックスはいまいちね。",
+    "vi": "Ngoại hình của anh ta cũng bình thường thôi nhỉ.",
+    "src": "tatoeba",
+    "sid": 230762
+   }
+  ]
+ },
+ {
+  "id": 1289160,
+  "m": [
+   {
+    "vi": "tầm giờ này, khoảng lúc này"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "昨日の今頃は何をしていましたか。",
+    "vi": "Tầm này ngày hôm qua bạn đang làm gì thế?",
+    "src": "tatoeba",
+    "sid": 170043
+   },
+   {
+    "ja": "彼女は今頃もう村に到着してるよ。",
+    "vi": "Giờ này chắc chắn cô ấy đã tới làng rồi đấy.",
+    "src": "tatoeba",
+    "sid": 1209978
+   }
+  ]
+ },
+ {
+  "id": 1290060,
+  "m": [
+   {
+    "vi": "hỏi han cặn kẽ, moi móc tận gốc rễ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "根掘り葉掘り聞いてごめん。",
+    "vi": "Xin lỗi vì đã hỏi dò cặn kẽ đủ thứ chuyện nhé.",
+    "src": "tatoeba",
+    "sid": 11267684
+   }
+  ]
+ },
+ {
+  "id": 1290300,
+  "m": [
+   {
+    "vi": "đóng gói, đóng kiện"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "梱包は潰れてたけど、中身は無事だったよ。",
+    "vi": "Bao bì đóng gói bị bẹp dúm nhưng đồ bên trong vẫn nguyên vẹn đấy.",
+    "src": "tatoeba",
+    "sid": 10763939
+   },
+   {
+    "ja": "梱包がいい加減で壊れるかと思った。",
+    "vi": "Đóng gói cẩu thả quá làm tôi cứ tưởng bị vỡ rồi cơ.",
+    "src": "tatoeba",
+    "sid": 11013875
+   }
+  ]
+ },
+ {
+  "id": 1290680,
+  "m": [
+   {
+    "vi": "vặt vãnh, nhỏ nhặt, không đáng kể"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "これはほんの些細な感謝の印です。",
+    "vi": "Đây chỉ là chút quà nhỏ bày tỏ lòng biết ơn của tôi.",
+    "src": "tatoeba",
+    "sid": 218525
+   },
+   {
+    "ja": "彼らは些細な事でお互いに喧嘩をした。",
+    "vi": "Họ cãi nhau chỉ vì những chuyện vặt vãnh.",
+    "src": "tatoeba",
+    "sid": 97120
+   }
+  ]
+ },
+ {
+  "id": 1290790,
+  "m": [
+   {
+    "vi": "xúi giục, dụ dỗ, kích động"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "イブを唆したのは蛇だ。",
+    "vi": "Chính con rắn đã xúi giục Eva.",
+    "src": "tatoeba",
+    "sid": 228566
+   },
+   {
+    "ja": "アダムをそそのかしたのはイブだ。",
+    "vi": "Chính Eva là người đã xúi giục Adam.",
+    "src": "tatoeba",
+    "sid": 234369
+   }
+  ]
+ },
+ {
+  "id": 1290920,
+  "m": [
+   {
+    "vi": "góc trên bên trái"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "左上の奥歯が痛みます。",
+    "vi": "Răng hàm trên bên trái của tôi bị đau.",
+    "src": "tatoeba",
+    "sid": 170914
+   }
+  ]
+ },
+ {
+  "id": 1290970,
+  "m": [
+   {
+    "vi": "bàn chân trái"
+   },
+   {
+    "vi": "chân trái"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "その事故で彼は左足にけがをした。",
+    "vi": "Anh ấy bị thương ở chân trái trong vụ tai nạn đó.",
+    "src": "tatoeba",
+    "sid": 209909
+   },
+   {
+    "ja": "彼は倒れたときに左足をけがした。",
+    "vi": "Anh ấy bị thương ở chân trái khi bị ngã.",
+    "src": "tatoeba",
+    "sid": 101795
+   }
+  ]
+ },
+ {
+  "id": 1291290,
+  "m": [
+   {
+    "vi": "trước mắt, tạm thời, hiện tại"
+   },
+   {
+    "vi": "trở ngại"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "さしあたり、我々にはこれで間に合います。",
+    "vi": "Trước mắt chúng tôi dùng tạm cái này cũng ổn rồi.",
+    "src": "tatoeba",
+    "sid": 216833
+   },
+   {
+    "ja": "差し当たり、あれで十分でしょう。",
+    "vi": "Trước mắt chắc cái kia là đủ dùng rồi.",
+    "src": "tatoeba",
+    "sid": 170902
+   }
+  ],
+  "hv": "sai đương"
+ },
+ {
+  "id": 1291540,
+  "m": [
+   {
+    "vi": "đồng hồ cát"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "叔父から砂時計が与えられた。",
+    "vi": "Tôi được chú tặng cho một chiếc đồng hồ cát.",
+    "src": "tatoeba",
+    "sid": 1174575
+   },
+   {
+    "ja": "伯父から砂時計をもらった。",
+    "vi": "Tôi nhận được một chiếc đồng hồ cát từ bác trai.",
+    "src": "tatoeba",
+    "sid": 1176742
+   }
+  ],
+  "hv": "sa thời kế"
+ },
+ {
+  "id": 1292410,
+  "m": [
+   {
+    "vi": "xác nhận lại"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "フライトの再確認をお願いします。",
+    "vi": "Xin vui lòng xác nhận lại chuyến bay giúp tôi.",
+    "src": "tatoeba",
+    "sid": 197103
+   },
+   {
+    "ja": "予約の再確認をしたいのですが。",
+    "vi": "Tôi muốn xác nhận lại đặt chỗ của mình ạ.",
+    "src": "tatoeba",
+    "sid": 78983
+   }
+  ]
+ },
+ {
+  "id": 1292490,
+  "m": [
+   {
+    "vi": "khởi động lại"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "コンピューターを再起動してください。",
+    "vi": "Hãy khởi động lại máy tính.",
+    "src": "tatoeba",
+    "sid": 8762964
+   },
+   {
+    "ja": "PCを再起動する必要があります。",
+    "vi": "Bạn cần phải khởi động lại máy tính.",
+    "src": "tatoeba",
+    "sid": 11851812
+   }
+  ]
+ },
+ {
+  "id": 1295480,
+  "m": [
+   {
+    "vi": "tỉ mỉ, chi tiết, cặn kẽ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼は細々とおもちゃやをやっている。",
+    "vi": "Ông ấy mở một cửa hàng đồ chơi nhỏ sống qua ngày.",
+    "src": "tatoeba",
+    "sid": 106865
+   }
+  ]
+ },
+ {
+  "id": 1296050,
+  "m": [
+   {
+    "vi": "cắt (vải)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "布に応じて衣服を裁て。",
+    "vi": "Hãy liệu cơm gắp mắm (cắt áo tùy theo khổ vải).",
+    "src": "tatoeba",
+    "sid": 84920
+   },
+   {
+    "ja": "布を斜めに裁ちなさい。",
+    "vi": "Hãy cắt vải theo đường chéo.",
+    "src": "tatoeba",
+    "sid": 84917
+   }
+  ]
+ },
+ {
+  "id": 1297310,
+  "m": [
+   {
+    "vi": "cười gượng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "トムは作り笑いを浮かべた。",
+    "vi": "Tom nở một nụ cười gượng gạo.",
+    "src": "tatoeba",
+    "sid": 12470056
+   },
+   {
+    "ja": "トムは作り笑いをした。",
+    "vi": "Tom cười gượng.",
+    "src": "tatoeba",
+    "sid": 2916988
+   }
+  ]
+ },
+ {
+  "id": 1297480,
+  "m": [
+   {
+    "vi": "chuyện bịa, truyện hư cấu"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "これは事実であって作り話ではありません。",
+    "vi": "Đây là sự thật chứ không phải chuyện bịa đặt.",
+    "src": "tatoeba",
+    "sid": 218289
+   },
+   {
+    "ja": "ポールが成功したというのは作り話だった。",
+    "vi": "Chuyện Paul thành công chỉ là chuyện bịa đặt thôi.",
+    "src": "tatoeba",
+    "sid": 196507
+   }
+  ]
+ },
+ {
+  "id": 1297660,
+  "m": [
+   {
+    "vi": "nhà soạn nhạc, nhạc sĩ sáng tác"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "あなたの好きな作曲家は誰ですか。",
+    "vi": "Nhà soạn nhạc yêu thích của bạn là ai vậy?",
+    "src": "tatoeba",
+    "sid": 233310
+   },
+   {
+    "ja": "私は彼を日本で最高の現代の作曲家の一人だと評価している。",
+    "vi": "Tôi đánh giá ông là một trong số các nhà soạn nhạc hiện đại nhất tại Nhật Bản.",
+    "src": "tatoeba",
+    "sid": 153570
+   }
+  ],
+  "hv": "tác khúc gia"
+ },
+ {
+  "id": 1299060,
+  "m": [
+   {
+    "vi": "sát khí, ý định giết chóc"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "暗闇の中で背後から恐ろしい殺気を感じた。",
+    "vi": "Trong bóng tối, tôi cảm nhận được luồng sát khí đáng sợ từ phía sau.",
+    "src": "ai"
+   }
+  ],
+  "hv": "sát khí"
+ },
+ {
+  "id": 1299220,
+  "m": [
+   {
+    "vi": "khoai lang"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "この薩摩芋は生焼けでがりがりする。",
+    "vi": "Củ khoai lang này nướng chưa chín kỹ nên vẫn còn sượng cứng.",
+    "src": "tatoeba",
+    "sid": 76739
+   }
+  ]
+ },
+ {
+  "id": 1299610,
+  "m": [
+   {
+    "vi": "cá thu"
+   },
+   {
+    "vi": "máy chủ (server trong game trực tuyến)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "今夜は脂の乗ったさばを塩焼きにして食べる。",
+    "vi": "Tối nay tôi sẽ làm món cá thu béo ngậy nướng muối để ăn.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1299940,
+  "m": [
+   {
+    "vi": "ba lần"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "我々は１日に３回食事をする。",
+    "vi": "Chúng tôi ăn cơm ba bữa một ngày.",
+    "src": "tatoeba",
+    "sid": 185968
+   },
+   {
+    "ja": "ゴミ収集は週に３回やっています。",
+    "vi": "Việc thu gom rác diễn ra ba lần một tuần.",
+    "src": "tatoeba",
+    "sid": 219089
+   }
+  ]
+ },
+ {
+  "id": 1300670,
+  "m": [
+   {
+    "vi": "ngày 30"
+   },
+   {
+    "vi": "30 ngày"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "３０日の予約を確認したいのですが。",
+    "vi": "Tôi muốn xác nhận lại lịch đặt ngày 30 ạ.",
+    "src": "tatoeba",
+    "sid": 235376
+   }
+  ]
+ },
+ {
+  "id": 1302300,
+  "m": [
+   {
+    "vi": "sách tham khảo"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "この参考書は私の研究にとって重要である。",
+    "vi": "Cuốn sách tham khảo này rất quan trọng đối với nghiên cứu của tôi.",
+    "src": "tatoeba",
+    "sid": 221860
+   },
+   {
+    "ja": "私は手もとによい参考書を持っていない。",
+    "vi": "Tôi không có cuốn sách tham khảo tốt nào trong tay.",
+    "src": "tatoeba",
+    "sid": 156084
+   }
+  ],
+  "hv": "tham khảo thư"
+ },
+ {
+  "id": 1302710,
+  "m": [
+   {
+    "vi": "mù tạt xanh Nhật Bản (wasabi)"
+   },
+   {
+    "vi": "cải ngựa"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "このすしはわさびがよく効いている。",
+    "vi": "Món sushi này có vị mù tạt rất cay nồng.",
+    "src": "tatoeba",
+    "sid": 223635
+   }
+  ],
+  "hv": "sơn quỳ"
+ },
+ {
+  "id": 1303710,
+  "m": [
+   {
+    "vi": "san hô"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "沖縄の海では色とりどりの美しいさんごが見られる。",
+    "vi": "Ở vùng biển Okinawa có thể ngắm nhìn những rạn san hô đủ màu tuyệt đẹp.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1305020,
+  "m": [
+   {
+    "vi": "đang làm việc, trong giờ làm việc"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "仕事中は喫煙してはいけない。",
+    "vi": "Không được hút thuốc trong giờ làm việc.",
+    "src": "tatoeba",
+    "sid": 169019
+   },
+   {
+    "ja": "彼は仕事中の事故でケガをした。",
+    "vi": "Anh ta bị thương trong khi làm việc",
+    "src": "tatoeba",
+    "sid": 106597
+   }
+  ]
+ },
+ {
+  "id": 1305090,
+  "m": [
+   {
+    "vi": "dịch vụ giao đồ ăn đặt sẵn"
+   },
+   {
+    "vi": "vai diễn phụ, diễn viên quần chúng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼は握手を求めて手を差し出した。",
+    "vi": "Anh ấy đưa tay ra muốn bắt tay.",
+    "src": "tatoeba",
+    "sid": 110199
+   },
+   {
+    "ja": "彼はもっとくれと手をさし出した。",
+    "vi": "Anh ấy chìa tay ra xin thêm.",
+    "src": "tatoeba",
+    "sid": 110557
+   }
+  ]
+ },
+ {
+  "id": 1305440,
+  "m": [
+   {
+    "vi": "không còn cách nào khác"
+   },
+   {
+    "vi": "đành chịu, bất khả kháng"
+   },
+   {
+    "vi": "vô ích, chẳng ích gì"
+   },
+   {
+    "vi": "hết thuốc chữa, phiền phức"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "パーティーが待ち遠しくて仕方ない。",
+    "vi": "Tôi nóng lòng mong chờ bữa tiệc quá đi mất.",
+    "src": "tatoeba",
+    "sid": 198527
+   },
+   {
+    "ja": "その命令に従うより他に仕方ない。",
+    "vi": "Chẳng còn cách nào khác ngoài việc phải tuân theo mệnh lệnh đó.",
+    "src": "tatoeba",
+    "sid": 206569
+   }
+  ]
+ },
+ {
+  "id": 1307200,
+  "m": [
+   {
+    "vi": "đảo Shikoku (Nhật Bản)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "四国は台風１０号に襲われた。",
+    "vi": "Vùng Shikoku đã bị cơn bão số 10 tàn phá.",
+    "src": "tatoeba",
+    "sid": 168963
+   },
+   {
+    "ja": "台風９号は四国に接近している。",
+    "vi": "Cơn bão số 9 đang tiến gần vùng Shikoku.",
+    "src": "tatoeba",
+    "sid": 137817
+   }
+  ]
+ },
+ {
+  "id": 1307230,
+  "m": [
+   {
+    "vi": "4 giờ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "会議は午後四時に終わった。",
+    "vi": "Cuộc họp kết thúc vào lúc 4 giờ chiều.",
+    "src": "tatoeba",
+    "sid": 185360
+   },
+   {
+    "ja": "この荷物を四時まで預かってください。",
+    "vi": "Xin vui lòng giữ giúp tôi hành lý này đến 4 giờ chiều nhé.",
+    "src": "tatoeba",
+    "sid": 222706
+   }
+  ],
+  "hv": "thời"
+ },
+ {
+  "id": 1307780,
+  "m": [
+   {
+    "vi": "tuổi Tý (con chuột)"
+   },
+   {
+    "vi": "giờ Tý (khoảng 11 giờ đêm đến 1 giờ sáng)"
+   },
+   {
+    "vi": "hướng Bắc"
+   },
+   {
+    "vi": "tháng 11 âm lịch"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼はきっすいのロンドン子です。",
+    "vi": "Ông ấy là người London chính gốc.",
+    "src": "tatoeba",
+    "sid": 114048
+   },
+   {
+    "ja": "その子は母親に甘えた。",
+    "vi": "Đứa trẻ làm nũng mẹ.",
+    "src": "tatoeba",
+    "sid": 210178
+   }
+  ],
+  "hv": "tý"
+ },
+ {
+  "id": 1307790,
+  "m": [
+   {
+    "vi": "việc nuôi dạy con cái"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼女は三人の子育てにかかりきりだ。",
+    "vi": "Cô ấy tất bật suốt ngày với việc nuôi dạy ba đứa con.",
+    "src": "tatoeba",
+    "sid": 89845
+   },
+   {
+    "ja": "彼は子育ての苦労を知らない。",
+    "vi": "Anh ta chẳng hiểu nỗi vất vả của việc nuôi dạy con cái.",
+    "src": "tatoeba",
+    "sid": 106568
+   }
+  ],
+  "hv": "tử dục"
+ },
+ {
+  "id": 1307870,
+  "m": [
+   {
+    "vi": "lũ trẻ, các em nhỏ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "子供たちがおもちゃで遊んでいる。",
+    "vi": "Đám trẻ đang chơi với đồ chơi.",
+    "src": "tatoeba",
+    "sid": 168806
+   },
+   {
+    "ja": "ここでは子供達が安心して遊べる。",
+    "vi": "Ở đây, trẻ em có thể yên tâm chơi đùa.",
+    "src": "tatoeba",
+    "sid": 224601
+   }
+  ],
+  "hv": "tử cung"
+ },
+ {
+  "id": 1307880,
+  "m": [
+   {
+    "vi": "dành cho trẻ em"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼は口座の中の一定額を子供用に用いた。",
+    "vi": "Ông ấy dành riêng một khoản tiền cố định trong tài khoản cho con cái.",
+    "src": "tatoeba",
+    "sid": 107410
+   }
+  ],
+  "hv": "tử cung dụng"
+ },
+ {
+  "id": 1309250,
+  "m": [
+   {
+    "vi": "từ bỏ ý định, thôi không làm nữa"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "私は彼女にスキーを思いとどまらせた。",
+    "vi": "Tôi đã khuyên can cô ấy từ bỏ ý định đi trượt tuyết.",
+    "src": "tatoeba",
+    "sid": 153399
+   },
+   {
+    "ja": "怒鳴りつけたかったが思いとどまった。",
+    "vi": "Anh ấy định quát mắng nhưng đã kìm lại được.",
+    "src": "tatoeba",
+    "sid": 124407
+   }
+  ]
+ },
+ {
+  "id": 1309350,
+  "m": [
+   {
+    "vi": "chợt nhớ ra, sực nghĩ ra, liên tưởng tới"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "夏休みも近いけど、どこかいいところ思い当たりますか。",
+    "vi": "Kỳ nghỉ hè sắp đến gần rồi, bạn có nghĩ ra chỗ nào hay để đi chơi không?",
+    "src": "tatoeba",
+    "sid": 187164
+   },
+   {
+    "ja": "思いあたらないのですが。",
+    "vi": "Tôi không nhớ ra được.",
+    "src": "tatoeba",
+    "sid": 168289
+   }
+  ],
+  "hv": "tư đương"
+ },
+ {
+  "id": 1309470,
+  "m": [
+   {
+    "vi": "có vẻ như, được cho là"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "私には彼はそそっかしすぎるように思われる。",
+    "vi": "Đối với tôi thì anh ta có vẻ quá hậu đậu bất cẩn.",
+    "src": "tatoeba",
+    "sid": 164524
+   },
+   {
+    "ja": "彼は金持ちであるように思われる。",
+    "vi": "Có vẻ như ông ấy là người giàu có.",
+    "src": "tatoeba",
+    "sid": 108178
+   }
+  ]
+ },
+ {
+  "id": 1309960,
+  "m": [
+   {
+    "vi": "người chỉ đạo, người hướng dẫn, huấn luyện viên"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "アンは彼らの指導者であると言われている。",
+    "vi": "Người ta nói Ann là người lãnh đạo của họ.",
+    "src": "tatoeba",
+    "sid": 229478
+   },
+   {
+    "ja": "彼女はクラブの指導者をつとめた。",
+    "vi": "Cô ấy đảm nhận vai trò lãnh đạo của câu lạc bộ.",
+    "src": "tatoeba",
+    "sid": 92944
+   }
+  ]
+ },
+ {
+  "id": 1310500,
+  "m": [
+   {
+    "vi": "suôn sẻ, thành công tốt đẹp"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "気楽に行けよ。大丈夫、すべて上手く行くさ。",
+    "vi": "Cứ thoải mái đi. Yên tâm, mọi chuyện rồi sẽ ổn thôi.",
+    "src": "tatoeba",
+    "sid": 183221
+   }
+  ],
+  "hv": "thượng thủ hành"
+ },
+ {
+  "id": 1311200,
+  "m": [
+   {
+    "vi": "chính bản thân tôi"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "私自身の部屋があったらなあ。",
+    "vi": "Giá mà tôi có một căn phòng của riêng mình thì tốt biết mấy.",
+    "src": "tatoeba",
+    "sid": 152076
+   },
+   {
+    "ja": "私は私自身の目でそれを見たのだ。",
+    "vi": "Tôi đã tận mắt nhìn thấy điều đó.",
+    "src": "tatoeba",
+    "sid": 156478
+   }
+  ]
+ },
+ {
+  "id": 1311730,
+  "m": [
+   {
+    "vi": "hoa cẩm tú cầu"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "あじさいは６月に咲く。",
+    "vi": "Hoa cẩm tú cầu nở vào tháng 6.",
+    "src": "tatoeba",
+    "sid": 234475
+   }
+  ]
+ },
+ {
+  "id": 1312500,
+  "m": [
+   {
+    "vi": "mặc thử quần áo"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "このドレスを試着してみたいのですけれど。",
+    "vi": "Tôi muốn mặc thử chiếc váy này được không ạ?",
+    "src": "tatoeba",
+    "sid": 223436
+   },
+   {
+    "ja": "これ試着してもいいですか？",
+    "vi": "Tôi mặc thử đồ này được không ?",
+    "src": "tatoeba",
+    "sid": 2869738
+   }
+  ],
+  "hv": "thí trước"
+ },
+ {
+  "id": 1313590,
+  "m": [
+   {
+    "vi": "tùy vào hoàn cảnh, tùy trường hợp"
+   },
+   {
+    "vi": "do, bởi vì"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "ことによっては意外な結末もあり得る。",
+    "vi": "Tùy tình hình mà cũng có thể xảy ra cái kết bất ngờ đấy.",
+    "src": "tatoeba",
+    "sid": 2257377
+   },
+   {
+    "ja": "彼は自分の成功を、良い教育を受けたことによると考えた。",
+    "vi": "Ông ấy cho rằng thành công của mình là nhờ được giáo dục tốt.",
+    "src": "tatoeba",
+    "sid": 104897
+   }
+  ]
+ },
+ {
+  "id": 1314620,
+  "m": [
+   {
+    "vi": "tranh chân dung, tranh ký họa khuôn mặt"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "観光地でプロに家族の似顔絵を描いてもらった。",
+    "vi": "Tại điểm du lịch, tôi đã nhờ họa sĩ chuyên nghiệp vẽ tranh chân dung cả nhà.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1315150,
+  "m": [
+   {
+    "vi": "nét chữ Hán, số nét của chữ Hán"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "この漢字は字画が多くて書くのが大変だ。",
+    "vi": "Chữ Hán này nhiều nét quá nên viết thật vất vả.",
+    "src": "ai"
+   }
+  ],
+  "hv": "tự họa"
+ },
+ {
+  "id": 1315540,
+  "m": [
+   {
+    "vi": "cầm cự, chống đỡ, chịu đựng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "その病人がどれだけ持ちこたえるかは、誰にもわからない。",
+    "vi": "Không ai biết người bệnh đó có thể cầm cự được bao lâu.",
+    "src": "tatoeba",
+    "sid": 207058
+   },
+   {
+    "ja": "小屋は強風に持ちこたえられまい。",
+    "vi": "Căn nhà gỗ nhỏ khó lòng trụ vững trước cơn gió mạnh.",
+    "src": "tatoeba",
+    "sid": 146980
+   }
+  ]
+ },
+ {
+  "id": 1315700,
+  "m": [
+   {
+    "vi": "mang đi, đem theo"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "３１８号室のお客さんに持って行ってあげなさい。",
+    "vi": "Hãy mang cái này lên cho khách ở phòng 318 đi.",
+    "src": "tatoeba",
+    "sid": 235361
+   },
+   {
+    "ja": "それをここから持っていけ！",
+    "vi": "Hãy mang chúng ra khỏi đây.",
+    "src": "tatoeba",
+    "sid": 204681
+   }
+  ]
+ },
+ {
+  "id": 1315710,
+  "m": [
+   {
+    "vi": "mang đến, đem tới"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "お水を持ってきてください。",
+    "vi": "Làm ơn mang giúp tôi ít nước uống.",
+    "src": "tatoeba",
+    "sid": 227003
+   },
+   {
+    "ja": "彼は私に私達のチームが勝ったという知らせを持ってきた。",
+    "vi": "Anh ta báo cho tôi về sự chiến thắng của đội chúng tôi.",
+    "src": "tatoeba",
+    "sid": 106069
+   }
+  ]
+ },
+ {
+  "id": 1315860,
+  "m": [
+   {
+    "vi": "đôi khi, thỉnh thoảng"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "時にはうまくいかないこともある。",
+    "vi": "Đôi khi cũng có lúc mọi việc không suôn sẻ.",
+    "src": "tatoeba",
+    "sid": 150679
+   },
+   {
+    "ja": "私たちは時には過ちを犯すものだ。",
+    "vi": "Con người đôi khi cũng có lúc mắc sai lầm.",
+    "src": "tatoeba",
+    "sid": 165713
+   }
+  ],
+  "hv": "thời"
+ },
+ {
+  "id": 1316010,
+  "m": [
+   {
+    "vi": "khung giờ, khoảng thời gian"
+   },
+   {
+    "vi": "múi giờ"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "毎日働く時間帯が違うんです。",
+    "vi": "Mỗi ngày khung giờ làm việc của tôi lại khác nhau.",
+    "src": "tatoeba",
+    "sid": 81275
+   },
+   {
+    "ja": "この時間帯は道路が混雑するんだ。",
+    "vi": "Vào khung giờ này đường sá hay bị tắc nghẽn lắm.",
+    "src": "tatoeba",
+    "sid": 221625
+   }
+  ],
+  "hv": "thời gian đới"
+ },
+ {
+  "id": 1316410,
+  "m": [
+   {
+    "vi": "như sau, theo cách dưới đây"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "私は幸福を次のように定義しよう。",
+    "vi": "Tôi xin định nghĩa hạnh phúc như sau.",
+    "src": "tatoeba",
+    "sid": 157146
+   },
+   {
+    "ja": "彼の詩は次のようにかかれている。",
+    "vi": "Bài thơ của ông ấy được viết như sau.",
+    "src": "tatoeba",
+    "sid": 117156
+   }
+  ]
+ },
+ {
+  "id": 1316560,
+  "m": [
+   {
+    "vi": "con gái thứ hai"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "三人姉妹の次女が来月結婚することになった。",
+    "vi": "Cô con gái thứ hai trong ba chị em sẽ kết hôn vào tháng tới.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1317520,
+  "m": [
+   {
+    "vi": "sự tuyệt vọng, làm liều, buông xuôi"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "彼女は自暴自棄になりかけていた。",
+    "vi": "Cô ấy đã suýt rơi vào tuyệt vọng buông xuôi.",
+    "src": "tatoeba",
+    "sid": 10908958
+   },
+   {
+    "ja": "自暴自棄になるな。",
+    "vi": "Đừng bao giờ tuyệt vọng buông xuôi.",
+    "src": "tatoeba",
+    "sid": 149715
+   }
+  ]
+ },
+ {
+  "id": 1317740,
+  "m": [
+   {
+    "vi": "tự phụ, tự mãn, kiêu ngạo"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "人気がでて彼女はうぬぼれた。",
+    "vi": "Trở nên nổi tiếng khiến cô ta kiêu ngạo tự mãn.",
+    "src": "tatoeba",
+    "sid": 144224
+   },
+   {
+    "ja": "彼女は美人だとうぬぼれている。",
+    "vi": "Cô ấy tự hào về vẻ đẹp của bản thân.",
+    "src": "tatoeba",
+    "sid": 87073
+   }
+  ]
+ },
+ {
+  "id": 1318370,
+  "m": [
+   {
+    "vi": "sự tự động hóa"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "これが自動化されたらどんなにいいか。",
+    "vi": "Giá mà cái này được tự động hóa thì tốt biết bao.",
+    "src": "tatoeba",
+    "sid": 10979954
+   },
+   {
+    "ja": "自動化に適していないのはどのような仕事ですか？",
+    "vi": "Những công việc nào không phù hợp để tự động hóa vậy?",
+    "src": "tatoeba",
+    "sid": 10952540
+   }
+  ]
+ },
+ {
+  "id": 1318570,
+  "m": [
+   {
+    "vi": "máy bán hàng tự động"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "私はかっとなって、その自販機をけとばした。",
+    "vi": "Tôi nổi cáu lên và đá vào chiếc máy bán hàng tự động đó.",
+    "src": "tatoeba",
+    "sid": 161192
+   }
+  ]
+ },
+ {
+  "id": 1320240,
+  "m": [
+   {
+    "vi": "tôi xin lỗi, thứ lỗi cho tôi"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "おっと。こりゃ失礼しました。",
+    "vi": "Ối chà. Thất lễ quá, xin lỗi nhé.",
+    "src": "tatoeba",
+    "sid": 13201435
+   },
+   {
+    "ja": "その節は、失礼しました。",
+    "vi": "Xin lỗi vì chuyện lần trước nhé.",
+    "src": "tatoeba",
+    "sid": 10987979
+   }
+  ]
+ },
+ {
+  "id": 1320260,
+  "m": [
+   {
+    "vi": "sự mất tích, bỏ trốn"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "３日後になってはじめて彼女が失踪したことを知った。",
+    "vi": "Phải đến ba ngày sau tôi mới biết tin cô ấy đã mất tích.",
+    "src": "tatoeba",
+    "sid": 235267
+   },
+   {
+    "ja": "警察は彼の失踪を調査している。",
+    "vi": "Cảnh sát đang điều tra vụ mất tích của anh ấy.",
+    "src": "tatoeba",
+    "sid": 176118
+   }
+  ]
+ },
+ {
+  "id": 1321920,
+  "m": [
+   {
+    "vi": "nhiếp ảnh gia"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "その写真家は表現するのが下手でした。",
+    "vi": "Nhiếp ảnh gia đó diễn đạt kém lắm.",
+    "src": "tatoeba",
+    "sid": 209603
+   },
+   {
+    "ja": "写真家が私の家の写真を取った。",
+    "vi": "Nhiếp ảnh gia đã chụp ảnh ngôi nhà của tôi.",
+    "src": "tatoeba",
+    "sid": 149242
+   }
+  ],
+  "hv": "tả chân gia"
+ },
+ {
+  "id": 1322270,
+  "m": [
+   {
+    "vi": "sự xuất tinh"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "保健の授業で射精の仕組みについて学んだ。",
+    "vi": "Tôi đã học về cơ chế xuất tinh trong giờ học sức khỏe.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1322870,
+  "m": [
+   {
+    "vi": "hòa đồng, khéo giao tiếp"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "子供ではあるけれど、彼女はとても社交的です。",
+    "vi": "Tuy còn nhỏ tuổi nhưng cô bé rất hòa đồng giao tiếp tốt.",
+    "src": "tatoeba",
+    "sid": 168686
+   },
+   {
+    "ja": "メアリーはとても社交的な人です。",
+    "vi": "Mary là người rất cởi mở hòa đồng.",
+    "src": "tatoeba",
+    "sid": 194796
+   }
+  ]
+ },
+ {
+  "id": 1324440,
+  "m": [
+   {
+    "vi": "rong biển wakame"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "今朝の味噌汁にはたっぷりのわかめが入っている。",
+    "vi": "Bát súp miso sáng nay có rất nhiều rong biển wakame.",
+    "src": "ai"
+   }
+  ]
+ },
+ {
+  "id": 1324940,
+  "m": [
+   {
+    "vi": "chính, chủ yếu, quan trọng"
+   },
+   {
+    "vi": "vai phụ chính (trong kịch Kyogen)"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "１９９０年の主な出来事は何でしたか。",
+    "vi": "Vào năm 1990, sự kiện quan trọng nào đã xảy ra?",
+    "src": "tatoeba",
+    "sid": 235888
+   },
+   {
+    "ja": "この計画の主な目的はなんですか。",
+    "vi": "Mục đích chính của kế hoạch này là gì?",
+    "src": "tatoeba",
+    "sid": 222209
+   }
+  ],
+  "hv": "chủ"
+ },
+ {
+  "id": 1324950,
+  "m": [
+   {
+    "vi": "chủ nhân, ông chủ"
+   },
+   {
+    "vi": "người đứng đầu, thủ lĩnh"
+   },
+   {
+    "vi": "Chúa (tôn giáo)"
+   },
+   {
+    "vi": "phần chính, mục đích chính"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "この国では国民が国の主である。",
+    "vi": "Ở đất nước này, người dân là chủ nhân của đất nước.",
+    "src": "ai"
+   }
+  ],
+  "hv": "chủ"
+ },
+ {
+  "id": 1324960,
+  "m": [
+   {
+    "vi": "chủ gia đình, người đứng đầu"
+   },
+   {
+    "vi": "chủ sở hữu, chủ quán"
+   },
+   {
+    "vi": "nhân vật chính (của tin đồn, sự việc)"
+   },
+   {
+    "vi": "thần hộ mệnh, cư dân lâu năm"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "のろいはのろい主に返る。",
+    "vi": "Ác giả ác báo.",
+    "src": "tatoeba",
+    "sid": 198548
+   },
+   {
+    "ja": "男性が一家の主と言うことはアメリカ社会に当てはまる。",
+    "vi": "Trong xã hội Mỹ, đàn ông là trụ cột gia đình.",
+    "src": "tatoeba",
+    "sid": 127163
+   }
+  ],
+  "hv": "chủ"
+ }
+]

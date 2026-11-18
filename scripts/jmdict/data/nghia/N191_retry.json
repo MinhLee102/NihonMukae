@@ -1,0 +1,65 @@
+[
+ {
+  "id": 1327340,
+  "m": [
+   {
+    "vi": "cảm giác chạm tay"
+   },
+   {
+    "vi": "phản hồi tích cực, cảm giác thành công"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "今回の試験はかなり手応えがあった。",
+    "vi": "Kỳ thi lần này tôi cảm thấy làm bài khá tốt."
+   }
+  ]
+ },
+ {
+  "id": 1349310,
+  "m": [
+   {
+    "vi": "hơn nữa, thêm vào đó"
+   },
+   {
+    "vi": "tuy nhiên, dù vậy"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "この店は値段が安く、なおかつ料理もおいしい。",
+    "vi": "Quán này giá rẻ mà đồ ăn lại còn ngon nữa."
+   }
+  ]
+ },
+ {
+  "id": 1351950,
+  "m": [
+   {
+    "vi": "thưởng và phạt"
+   }
+  ],
+  "ex": [
+   {
+    "ja": "会社は社員の働きに応じて賞罰を公平に行うべきだ。",
+    "vi": "Công ty nên thực hiện thưởng phạt công bằng theo hiệu quả làm việc của nhân viên."
+   }
+  ]
+ },
+ {
+  "id": 1370390,
+  "m": [
+   {
+    "vi": "minh họa bằng biểu đồ, sơ đồ"
+   }
+  ],
+  "hv": "đồ thị",
+  "ex": [
+   {
+    "ja": "複雑な仕組みを分かりやすく図示して説明した。",
+    "vi": "Tôi đã minh họa bằng sơ đồ để giải thích cơ chế phức tạp sao cho dễ hiểu."
+   }
+  ]
+ }
+]

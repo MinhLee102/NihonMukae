@@ -126,7 +126,7 @@ export function ChatView({ apiKey, level, topic, onExit }: Props) {
   }
 
   return (
-    <div className="mx-auto flex h-[calc(100vh-11rem)] min-h-[420px] max-w-2xl flex-col">
+    <div className="mx-auto flex h-[calc(100dvh-9rem)] min-h-[420px] md:h-[calc(100dvh-11rem)] max-w-2xl flex-col">
       <div className="mb-3 flex items-center justify-between gap-3">
         <div className="min-w-0">
           <p className="truncate text-sm font-semibold text-neutral-900">{topic}</p>

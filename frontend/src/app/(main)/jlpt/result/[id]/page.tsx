@@ -103,8 +103,8 @@ function ResultView() {
   }));
 
   return (
-    <div className="-mx-8 -my-8 flex h-[calc(100%+4rem)] min-h-[560px] flex-col">
-      <header className="flex shrink-0 items-center gap-4 border-b border-black/5 bg-white px-5 py-3">
+    <div className="-mx-4 -my-5 flex h-[calc(100%+2.5rem)] min-h-[480px] flex-col md:-mx-8 md:-my-8 md:h-[calc(100%+4rem)] md:min-h-[560px]">
+      <header className="flex shrink-0 items-center gap-2 border-b border-black/5 bg-white px-3 py-2.5 sm:gap-4 sm:px-5 sm:py-3">
         <button
           type="button"
           onClick={() => router.push("/jlpt")}
@@ -113,14 +113,14 @@ function ResultView() {
         >
           <X size={18} />
         </button>
-        <div className="min-w-0 max-w-[30%] shrink-0">
+        <div className="min-w-0 flex-1 sm:max-w-[30%] sm:flex-none sm:shrink-0">
           <p className="truncate text-sm font-medium text-neutral-900">{result?.title ?? "Đang tải..."}</p>
-          <p className="text-[10px] tracking-widest text-neutral-400">KẾT QUẢ VÀ ĐÁP ÁN</p>
+          <p className="hidden text-[10px] tracking-widest text-neutral-400 sm:block">KẾT QUẢ VÀ ĐÁP ÁN</p>
         </div>
         {result?.listeningAudioUrl && view === "review" ? (
           <SectionAudioReview url={result.listeningAudioUrl} inline />
         ) : (
-          <span className="flex-1" />
+          <span className="hidden flex-1 sm:block" />
         )}
         <nav className="flex shrink-0 gap-1 rounded-full bg-[#F5F3EE] p-1 text-sm">
           {(
@@ -133,11 +133,18 @@ function ResultView() {
               key={id}
               type="button"
               onClick={() => setView(id)}
-              className={`rounded-full px-4 py-1.5 transition ${
+              className={`whitespace-nowrap rounded-full px-3 py-1.5 text-xs transition sm:px-4 sm:text-sm ${
                 view === id ? "bg-neutral-900 text-white" : "text-neutral-500 hover:text-neutral-800"
               }`}
             >
-              {label}
+              {id === "review" ? (
+                <>
+                  <span className="sm:hidden">Xem lại</span>
+                  <span className="hidden sm:inline">{label}</span>
+                </>
+              ) : (
+                label
+              )}
             </button>
           ))}
         </nav>

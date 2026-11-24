@@ -68,7 +68,7 @@ export function SearchBar({ value, onChange, mode, onModeChange, onSearch, isLoa
           placeholder={activeMode === "kanji" ? "食, thực, ăn, ショク, shoku..." : "日本, nihon, Nhật Bản..."}
           className="min-w-0 flex-1 bg-transparent text-sm text-neutral-800 outline-none placeholder:text-neutral-400"
         />
-        <div className="flex shrink-0 items-center gap-3 text-neutral-400">
+        <div className="hidden shrink-0 items-center gap-3 text-neutral-400 sm:flex">
           <button type="button" aria-label="Viết tay" disabled title="Đang phát triển" className="cursor-not-allowed opacity-50">
             <PenLine size={16} strokeWidth={1.75} />
           </button>
@@ -94,7 +94,7 @@ export function SearchBar({ value, onChange, mode, onModeChange, onSearch, isLoa
         </div>
       </div>
 
-      <div className="flex items-center gap-1 px-1 pb-1 pt-1">
+      <div className="flex items-center gap-1 overflow-x-auto px-1 pb-1 pt-1">
         {SEARCH_MODES.map((mode) => (
           <button
             key={mode.id}
@@ -102,7 +102,7 @@ export function SearchBar({ value, onChange, mode, onModeChange, onSearch, isLoa
             onClick={() => setActiveMode(mode.id)}
             disabled={!AVAILABLE_MODES.includes(mode.id)}
             title={AVAILABLE_MODES.includes(mode.id) ? undefined : "Đang phát triển"}
-            className={`rounded-full px-3.5 py-1.5 text-sm transition-colors ${
+            className={`shrink-0 whitespace-nowrap rounded-full px-3.5 py-1.5 text-sm transition-colors ${
               activeMode === mode.id
                 ? "bg-neutral-900 text-white"
                 : AVAILABLE_MODES.includes(mode.id)

@@ -88,7 +88,7 @@ export function WordPopup({
   const shown = word?.kanji || word?.kana || token.base;
 
   return (
-    <div className="w-[320px] rounded-2xl border border-black/5 bg-white p-4 text-left shadow-xl">
+    <div className="w-[min(320px,calc(100vw-2rem))] rounded-2xl border border-black/5 bg-white p-4 text-left shadow-xl">
       <div className="flex items-start justify-between gap-2">
         <div className="min-w-0">
           <span className="font-serif text-2xl text-neutral-900">{word ? shown : token.base}</span>

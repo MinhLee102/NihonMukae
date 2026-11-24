@@ -13,12 +13,12 @@ import { Footer } from '@/components/Footer';
  */
 export default function AppLayout({ children }: { children: ReactNode }) {
   return (
-    <div className="flex h-screen bg-[#F5F3EE]">
+    <div className="flex h-dvh bg-[#F5F3EE]">
       <AuthInitializer />
       <Sidebar />
       <div className="relative flex min-w-0 flex-1 flex-col">
         <Header />
-        <main className="flex-1 overflow-y-auto px-8 py-8">
+        <main className="flex-1 overflow-y-auto px-4 py-5 md:px-8 md:py-8">
           {/* min-h-full đẩy footer xuống dưới màn hình đầu tiên: chỉ thấy khi kéo hết trang */}
           <div className="min-h-full">{children}</div>
           <Footer />

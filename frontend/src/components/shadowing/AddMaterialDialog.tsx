@@ -48,7 +48,7 @@ export function AddMaterialDialog({ onClose }: { onClose: () => void }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 p-4" role="dialog" aria-modal="true">
-      <div className="flex max-h-[90vh] w-full max-w-xl flex-col rounded-2xl bg-white p-6 shadow-xl">
+      <div className="flex max-h-[90dvh] w-full max-w-xl flex-col rounded-2xl bg-white p-4 shadow-xl sm:p-6">
         <div className="mb-4 flex items-center justify-between">
           <h2 className="text-lg font-semibold text-neutral-900">Thêm bài shadowing</h2>
           <button type="button" onClick={onClose} aria-label="Đóng" className="text-neutral-400 hover:text-neutral-700">

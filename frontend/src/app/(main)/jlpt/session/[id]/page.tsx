@@ -3,7 +3,16 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { useFeedbackStore } from "@/store/feedbackStore";
-import { ChevronLeft, ChevronRight, Clock, Infinity as InfinityIcon, PanelRightClose, PanelRightOpen, X } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  Clock,
+  Infinity as InfinityIcon,
+  LayoutGrid,
+  PanelRightClose,
+  PanelRightOpen,
+  X,
+} from "lucide-react";
 import { RequireAuth } from "@/components/flashcard/RequireAuth";
 import { AnswerSheet, type SheetCell } from "@/components/jlpt/AnswerSheet";
 import { ConfirmDialog } from "@/components/jlpt/ConfirmDialog";
@@ -60,6 +69,8 @@ function Runner() {
   const [warnings, setWarnings] = useState<string[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [dialog, setDialog] = useState<"submit" | "exit" | null>(null);
+  // Below lg the answer sheet is a panel that slides up from the bottom instead of a side column
+  const [mobileSheet, setMobileSheet] = useState(false);
   const [busy, setBusy] = useState(false);
   const [sheetOpen, toggleSheet] = useStoredToggle("jlpt:sheet");
   const handledExpiry = useRef<number | null>(null);
@@ -268,8 +279,8 @@ function Runner() {
     : "LUYỆN THEO DẠNG BÀI";
 
   return (
-    <div className="-mx-8 -my-8 flex h-[calc(100%+4rem)] min-h-[560px] flex-col">
-      <header className="flex shrink-0 items-center gap-4 border-b border-black/5 bg-white px-5 py-3">
+    <div className="-mx-4 -my-5 flex h-[calc(100%+2.5rem)] min-h-[480px] flex-col md:-mx-8 md:-my-8 md:h-[calc(100%+4rem)] md:min-h-[560px]">
+      <header className="flex shrink-0 items-center gap-2 border-b border-black/5 bg-white px-3 py-2.5 sm:gap-4 sm:px-5 sm:py-3">
         <button
           type="button"
           onClick={() => setDialog("exit")}
@@ -280,12 +291,12 @@ function Runner() {
         </button>
         <div className="min-w-0">
           <p className="truncate text-sm font-medium text-neutral-900">{view?.title ?? "Đang tải..."}</p>
-          <p className="text-[10px] tracking-widest text-neutral-400">{subtitle}</p>
+          <p className="hidden text-[10px] tracking-widest text-neutral-400 sm:block">{subtitle}</p>
         </div>
-        <div className="ml-auto flex items-center gap-3">
+        <div className="ml-auto flex shrink-0 items-center gap-2 sm:gap-3">
           {activeBlock && (
             <span
-              className={`flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold tabular-nums text-white ${
+              className={`flex items-center gap-2 rounded-full px-3 py-2 text-xs font-semibold tabular-nums text-white sm:px-4 ${
                 lowTime ? "bg-red-600" : "bg-neutral-900"
               }`}
             >
@@ -304,9 +315,18 @@ function Runner() {
           )}
           <button
             type="button"
+            onClick={() => setMobileSheet(true)}
+            aria-label="Mở phiếu trả lời"
+            className="flex items-center gap-1.5 rounded-full border border-black/10 bg-white px-3 py-2 text-xs font-medium tabular-nums text-neutral-800 lg:hidden"
+          >
+            <LayoutGrid size={14} />
+            {answeredCount}/{questions.length}
+          </button>
+          <button
+            type="button"
             onClick={() => setDialog("submit")}
             disabled={!activeBlock || busy}
-            className="rounded-full border border-black/10 bg-white px-4 py-2 text-xs font-medium text-neutral-800 hover:border-black/30 disabled:opacity-40"
+            className="rounded-full border border-black/10 bg-white px-3 py-2 text-xs font-medium text-neutral-800 hover:border-black/30 disabled:opacity-40 sm:px-4"
           >
             {submitLabel}
           </button>
@@ -473,6 +493,43 @@ function Runner() {
           </aside>
         )}
       </div>
+
+      {mobileSheet && (
+        <div className="fixed inset-0 z-40 flex items-end bg-black/30 lg:hidden" onClick={() => setMobileSheet(false)}>
+          <div
+            className="max-h-[80dvh] w-full overflow-y-auto rounded-t-2xl bg-white p-4 shadow-xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <AnswerSheet
+              cells={cells}
+              current={current}
+              onJump={(position) => {
+                setCurrent(position);
+                setMobileSheet(false);
+              }}
+              header={
+                <div className="flex items-start justify-between gap-2">
+                  <div>
+                    <p className="text-sm font-semibold text-neutral-900">Phiếu trả lời</p>
+                    <p className="mt-0.5 text-[11px] text-neutral-400">
+                      {answeredCount}/{questions.length} câu đã chọn
+                    </p>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => setMobileSheet(false)}
+                    aria-label="Đóng phiếu trả lời"
+                    className="rounded-full p-1.5 text-neutral-400 hover:bg-neutral-100 hover:text-neutral-700"
+                  >
+                    <X size={16} />
+                  </button>
+                </div>
+              }
+              legend={LEGEND}
+            />
+          </div>
+        </div>
+      )}
 
       {dialog === "submit" && (
         <ConfirmDialog

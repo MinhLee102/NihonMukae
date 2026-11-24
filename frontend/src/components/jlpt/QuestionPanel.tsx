@@ -117,7 +117,7 @@ function InstructionHeader({ no, ja, vi }: { no?: number; ja: string; vi?: strin
   const [open, toggle] = useStoredToggle("jlpt:instruction");
   const Icon = open ? ChevronDown : ChevronRight;
   return (
-    <div className={`shrink-0 border-b border-black/5 px-6 ${open ? "pb-3 pt-4" : "py-2"}`}>
+    <div className={`shrink-0 border-b border-black/5 px-4 sm:px-6 ${open ? "pb-3 pt-4" : "py-2"}`}>
       <div className="mx-auto max-w-5xl">
         <button
           type="button"
@@ -151,7 +151,7 @@ function InstructionHeader({ no, ja, vi }: { no?: number; ja: string; vi?: strin
 
 function GroupContent({ group, audioMode }: { group: GroupViewDto; audioMode: AudioMode }) {
   return (
-    <div className="flex flex-col gap-4 p-6">
+    <div className="flex flex-col gap-4 p-4 sm:p-6">
       {group.title && <p className="text-xs font-semibold tracking-wide text-neutral-400">{group.title}</p>}
       {group.audioUrl && <AudioBlock url={group.audioUrl} isListening mode={audioMode} />}
       {group.imageUrl && (
@@ -223,7 +223,7 @@ export function QuestionPanel({
   }, [group?.id]);
 
   const body = (
-    <div className="mx-auto flex w-full max-w-3xl flex-col px-6 py-6">
+    <div className="mx-auto flex w-full max-w-3xl flex-col px-4 py-4 sm:px-6 sm:py-6">
       <div className="mb-6 flex flex-wrap items-start justify-between gap-2">
         <div className="mr-auto">
           <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-neutral-400">

@@ -114,6 +114,11 @@ public class DictionaryService {
         return getEntry(id);
     }
 
+    /** Nhiều mục một lần, theo đúng thứ tự ids (mục không còn thì bị bỏ qua). */
+    public List<Entry> getEntries(List<Long> ids) {
+        return ids.isEmpty() ? List.of() : repository.load(ids);
+    }
+
     public Entry getEntry(long id) {
         List<Entry> found = repository.load(List.of(id));
         if (found.isEmpty()) {

@@ -6,16 +6,24 @@ import type { ReactNode } from "react";
 import { ArrowLeft, BookOpen, Database, HandHeart, MessageSquare, Server, Sparkles, Users } from "lucide-react";
 import { useAuthStore } from "@/store/authStore";
 import { useAuthModalStore } from "@/store/authModalStore";
+import type { NotificationKind } from "@/lib/api/adminNotifications";
+import { NotificationBell, countOf, useAdminNotifications } from "@/components/admin/AdminNotifications";
 
-// adminOnly: MODERATOR (chưa gán cho ai) chỉ thấy các mục không đánh dấu
-const ADMIN_NAV = [
-  { href: "/admin/users", label: "Người dùng", icon: Users, adminOnly: true },
+// adminOnly: MODERATOR (chưa gán cho ai) chỉ thấy các mục không đánh dấu. notify: số việc chờ hiện cạnh mục
+const ADMIN_NAV: {
+  href: string;
+  label: string;
+  icon: typeof Users;
+  adminOnly: boolean;
+  notify?: NotificationKind;
+}[] = [
+  { href: "/admin/users", label: "Người dùng", icon: Users, adminOnly: true, notify: "users" },
   { href: "/admin/server", label: "Trạng thái server", icon: Server, adminOnly: true },
   { href: "/admin/bank", label: "Ngân hàng đề", icon: Database, adminOnly: false },
   { href: "/admin/prompts", label: "Prompt AI", icon: Sparkles, adminOnly: false },
   { href: "/admin/dictionary", label: "Từ điển", icon: BookOpen, adminOnly: false },
-  { href: "/admin/contributions", label: "Đóng góp từ điển", icon: HandHeart, adminOnly: false },
-  { href: "/admin/feedback", label: "Góp ý", icon: MessageSquare, adminOnly: false },
+  { href: "/admin/contributions", label: "Đóng góp từ điển", icon: HandHeart, adminOnly: false, notify: "contributions" },
+  { href: "/admin/feedback", label: "Góp ý", icon: MessageSquare, adminOnly: false, notify: "feedback" },
 ];
 
 /** Sidebar plus the access check: ADMIN sees everything, MODERATOR only the question bank and feedback. */
@@ -25,6 +33,8 @@ export function AdminShell({ children }: { children: ReactNode }) {
   const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
   const role = useAuthStore((s) => s.user?.role);
   const openAuthModal = useAuthModalStore((s) => s.open);
+  const canAdmin = !isInitializing && isAuthenticated && (role === "ADMIN" || role === "MODERATOR");
+  const { data: notifications, fresh, dismissFresh, refresh } = useAdminNotifications(canAdmin);
 
   if (isInitializing) return null;
 
@@ -60,9 +70,12 @@ export function AdminShell({ children }: { children: ReactNode }) {
   return (
     <div className="flex h-full">
       <aside className="flex w-[230px] shrink-0 flex-col border-r border-black/5 bg-[#F5F3EE] px-3 py-5">
-        <div className="px-3 pb-5">
-          <p className="font-serif text-lg font-semibold tracking-wide text-neutral-900">管理室</p>
-          <p className="text-[11px] uppercase tracking-widest text-neutral-400">Admin console</p>
+        <div className="flex items-start justify-between gap-2 px-3 pb-5">
+          <div>
+            <p className="font-serif text-lg font-semibold tracking-wide text-neutral-900">管理室</p>
+            <p className="text-[11px] uppercase tracking-widest text-neutral-400">Admin console</p>
+          </div>
+          <NotificationBell data={notifications} onOpen={() => void refresh()} />
         </div>
         <nav className="flex flex-1 flex-col gap-1">
           {ADMIN_NAV.filter((item) => !item.adminOnly || role === "ADMIN").map((item) => {
@@ -77,7 +90,16 @@ export function AdminShell({ children }: { children: ReactNode }) {
                 }`}
               >
                 <Icon size={18} strokeWidth={1.75} />
-                {item.label}
+                <span className="min-w-0 flex-1 truncate">{item.label}</span>
+                {item.notify && countOf(notifications, item.notify) > 0 && (
+                  <span
+                    className={`rounded-full px-1.5 text-[11px] font-semibold tabular-nums ${
+                      active ? "bg-white text-neutral-900" : "bg-red-500 text-white"
+                    }`}
+                  >
+                    {countOf(notifications, item.notify)}
+                  </span>
+                )}
               </Link>
             );
           })}
@@ -91,6 +113,14 @@ export function AdminShell({ children }: { children: ReactNode }) {
         </Link>
       </aside>
       <main className="min-w-0 flex-1 overflow-y-auto px-8 py-8">{children}</main>
+      {fresh && (
+        <div className="fixed bottom-5 right-5 z-50 flex max-w-sm items-start gap-3 rounded-2xl bg-neutral-900 px-4 py-3 text-sm text-white shadow-xl">
+          <span className="min-w-0 flex-1">{fresh}</span>
+          <button type="button" onClick={dismissFresh} aria-label="Đóng" className="text-neutral-400 hover:text-white">
+            ×
+          </button>
+        </div>
+      )}
     </div>
   );
 }

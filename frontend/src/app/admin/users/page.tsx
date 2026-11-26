@@ -32,6 +32,11 @@ export default function AdminUsersPage() {
   const [query, setQuery] = useState("");
   const [search, setSearch] = useState("");
   const [status, setStatus] = useState("");
+  // Opened from the notification bell (?status=pending): start on that filter
+  useEffect(() => {
+    const wanted = new URLSearchParams(window.location.search).get("status");
+    if (wanted) setStatus(wanted);
+  }, []);
   const [pageIndex, setPageIndex] = useState(0);
   const [error, setError] = useState<string | null>(null);
 

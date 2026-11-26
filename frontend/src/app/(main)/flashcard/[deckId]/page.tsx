@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
-import { ChevronLeft, Pencil, Play, Plus } from "lucide-react";
+import { ChevronLeft, ListChecks, Pencil, Play, Plus } from "lucide-react";
 import { RequireAuth } from "@/components/flashcard/RequireAuth";
 import { useAuthStore } from "@/store/authStore";
 import { getApiErrorMessage, getDecks, type DeckDto } from "@/lib/api/flashcard";
@@ -66,13 +66,20 @@ function DeckOverview() {
             </div>
           </div>
 
-          <div className="mt-6 grid grid-cols-2 gap-3">
+          <div className="mt-6 grid grid-cols-3 gap-3">
             <Link
               href={`/flashcard/${deckId}/study`}
               className="flex items-center justify-center gap-2 rounded-full bg-neutral-900 py-3 text-sm font-medium text-white"
             >
               <Play size={16} />
               Học
+            </Link>
+            <Link
+              href={`/flashcard/${deckId}/quiz`}
+              className="flex items-center justify-center gap-2 rounded-full border border-black/10 py-3 text-sm font-medium text-neutral-800 hover:bg-neutral-50"
+            >
+              <ListChecks size={16} />
+              Quiz
             </Link>
             <Link
               href={`/flashcard/${deckId}/edit`}

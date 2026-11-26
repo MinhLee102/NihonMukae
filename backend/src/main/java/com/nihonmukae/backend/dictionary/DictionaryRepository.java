@@ -182,6 +182,39 @@ public class DictionaryRepository {
     // ─── Nạp đầy đủ ─────────────────────────────────────────────────────
 
     /** Trả các mục theo đúng thứ tự ids (mục không tồn tại bị bỏ qua). */
+    // ─── Quiz flashcard: nguồn đáp án nhiễu ─────────────────────────────
+
+    /**
+     * Mục ngẫu nhiên có nghĩa tiếng Việt, ở các cấp JLPT cho trước (rỗng thì lấy từ phổ biến bất kỳ cấp nào).
+     * Dùng làm đáp án nhiễu cho quiz: cùng trình độ với từ đang hỏi thì đáp án sai mới đáng tin.
+     */
+    public List<Long> randomQuizIds(Set<Short> levels, int limit) {
+        MapSqlParameterSource p = new MapSqlParameterSource("limit", limit);
+        String where = "e.freq_rank IS NOT NULL";
+        if (!levels.isEmpty()) {
+            p.addValue("levels", List.copyOf(levels));
+            where = "e.jlpt_level IN (:levels)";
+        }
+        return jdbc.queryForList("SELECT e.id FROM dict_entries e WHERE " + where
+                + " AND EXISTS (SELECT 1 FROM dict_meanings m WHERE m.entry_id = e.id) ORDER BY random() LIMIT :limit",
+                p, Long.class);
+    }
+
+    /** Mục phổ biến có chứa ít nhất một trong các chữ Hán cho trước (đáp án nhiễu cho câu hỏi cách đọc). */
+    public List<Long> idsSharingKanji(Set<String> kanji, int limit) {
+        if (kanji.isEmpty()) {
+            return List.of();
+        }
+        // Chỉ ghép chữ Hán vào lớp ký tự của biểu thức chính quy, nên không có ký tự đặc biệt nào lọt vào
+        String cls = "[" + String.join("", kanji) + "]";
+        return jdbc.queryForList("""
+                SELECT e.id FROM dict_entries e
+                WHERE e.word ~ :cls AND e.freq_rank IS NOT NULL
+                  AND EXISTS (SELECT 1 FROM dict_meanings m WHERE m.entry_id = e.id)
+                ORDER BY random() LIMIT :limit
+                """, new MapSqlParameterSource("cls", cls).addValue("limit", limit), Long.class);
+    }
+
     public List<Entry> load(List<Long> ids) {
         if (ids.isEmpty()) {
             return List.of();

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { ReactNode } from "react";
-import { ArrowLeft, BookOpen, Database, HandHeart, MessageSquare, Server, Sparkles, Users } from "lucide-react";
+import { ArrowLeft, BookOpen, Database, HandHeart, Languages, MessageSquare, Server, Sparkles, Users } from "lucide-react";
 import { useAuthStore } from "@/store/authStore";
 import { useAuthModalStore } from "@/store/authModalStore";
 import type { NotificationKind } from "@/lib/api/adminNotifications";
@@ -21,6 +21,7 @@ const ADMIN_NAV: {
   { href: "/admin/server", label: "Trạng thái server", icon: Server, adminOnly: true },
   { href: "/admin/bank", label: "Ngân hàng đề", icon: Database, adminOnly: false },
   { href: "/admin/prompts", label: "Prompt AI", icon: Sparkles, adminOnly: false },
+  { href: "/admin/grammar", label: "Ngữ pháp", icon: Languages, adminOnly: true },
   { href: "/admin/dictionary", label: "Từ điển", icon: BookOpen, adminOnly: false },
   { href: "/admin/contributions", label: "Đóng góp từ điển", icon: HandHeart, adminOnly: false, notify: "contributions" },
   { href: "/admin/feedback", label: "Góp ý", icon: MessageSquare, adminOnly: false, notify: "feedback" },

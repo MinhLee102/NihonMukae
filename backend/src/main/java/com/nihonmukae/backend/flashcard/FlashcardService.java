@@ -20,6 +20,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.ZonedDateTime;
 import java.util.HashMap;
+import java.util.Objects;
+import java.util.Comparator;
+import java.util.Collections;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
@@ -152,12 +156,81 @@ public class FlashcardService {
 
     // ─── Study, review, stats ───────────────────────────────────────────
 
+    private static final int MAX_STUDY_LIMIT = 1000;
+
     @Transactional(readOnly = true)
-    public List<CardResponse> getStudyCards(UUID userId, UUID deckId) {
+    public List<CardResponse> getStudyCards(UUID userId, UUID deckId, String mode, Integer limit) {
         getOwnedDeck(userId, deckId);
-        return cardRepository.findDueCards(deckId, userId, ZonedDateTime.now()).stream()
-                .map(this::toCardResponse)
-                .toList();
+        boolean all = "all".equalsIgnoreCase(mode);
+        ZonedDateTime now = ZonedDateTime.now();
+        Map<UUID, FlashcardReview> reviews = new HashMap<>();
+        for (FlashcardReview r : reviewRepository.findByUserIdAndCardDeckId(userId, deckId)) {
+            reviews.put(r.getCard().getId(), r);
+        }
+        List<Flashcard> pool = new ArrayList<>();
+        for (Flashcard c : cardRepository.findByDeckIdOrderByCreatedAtAsc(deckId)) {
+            if (all || isDue(reviews.get(c.getId()), now)) {
+                pool.add(c);
+            }
+        }
+        // Xáo trộn rồi sắp ổn định theo nhóm ưu tiên: trong cùng nhóm thứ tự vẫn ngẫu nhiên
+        Collections.shuffle(pool);
+        pool.sort(Comparator.comparingInt(c -> priority(reviews.get(c.getId()))));
+        if (limit != null && limit > 0 && limit <= MAX_STUDY_LIMIT && pool.size() > limit) {
+            pool = pool.subList(0, limit);
+        }
+        return withDictionary(pool.stream().map(this::toCardResponse).toList());
+    }
+
+    static boolean isDue(FlashcardReview review, ZonedDateTime now) {
+        return review == null || !review.getNextReviewAt().isAfter(now);
+    }
+
+    /**
+     * Nhóm ưu tiên khi chọn thẻ ôn (nhỏ hơn đứng trước): 0 lần gần nhất bấm Khó, 1 Bình thường, 2 chưa học,
+     * 3 Dễ. Thẻ ôn trước khi có cột last_rating thì đoán từ SM-2: chuỗi nhớ vừa bị reset là Khó, hệ số dễ
+     * dưới mức ban đầu là Bình thường.
+     */
+    static int priority(FlashcardReview review) {
+        if (review == null) {
+            return 2;
+        }
+        String last = review.getLastRating();
+        if (last == null) {
+            if (review.getRepetitions() == null || review.getRepetitions() == 0) {
+                return 0;
+            }
+            return review.getEaseFactor() != null && review.getEaseFactor() < 2.5f ? 1 : 3;
+        }
+        return switch (last) {
+            case "hard" -> 0;
+            case "normal" -> 1;
+            default -> 3;
+        };
+    }
+
+    /** Thêm Hán Việt và một câu ví dụ có bản dịch từ từ điển cho các thẻ tạo từ từ điển. */
+    private List<CardResponse> withDictionary(List<CardResponse> cards) {
+        List<Long> ids = cards.stream().map(CardResponse::getWordId).filter(Objects::nonNull).distinct().toList();
+        Map<Long, Entry> entries = new HashMap<>();
+        for (Entry e : dictionaryService.getEntries(ids)) {
+            entries.put(e.id(), e);
+        }
+        for (CardResponse card : cards) {
+            Entry e = card.getWordId() == null ? null : entries.get(card.getWordId());
+            if (e == null) {
+                continue;
+            }
+            card.setHanViet(isBlank(e.hanViet()) ? null : e.hanViet());
+            e.examples().stream()
+                    .filter(x -> !isBlank(x.sentence()) && !isBlank(x.translation()))
+                    .findFirst()
+                    .ifPresent(x -> {
+                        card.setExampleJa(x.sentence().trim());
+                        card.setExampleVi(x.translation().trim());
+                    });
+        }
+        return cards;
     }
 
     @Transactional
@@ -171,20 +244,25 @@ public class FlashcardService {
                         .build());
 
         ZonedDateTime now = ZonedDateTime.now();
-        SrsService.SrsState next = srsService.calculate(
-                review.getEaseFactor(), review.getIntervalDays(), review.getRepetitions(), grade, now);
-        review.setEaseFactor(next.easeFactor());
-        review.setIntervalDays(next.intervalDays());
-        review.setRepetitions(next.repetitions());
-        review.setNextReviewAt(next.nextReviewAt());
+        review.setLastRating(rating.toLowerCase());
         review.setLastReviewed(now);
+        // Ôn thêm thẻ chưa đến hạn không đổi lịch nhắc, trừ khi bấm Khó (đã quên thì cần ôn sớm lại)
+        boolean due = review.getId() == null || isDue(review, now);
+        if (due || grade < SrsService.GRADE_NORMAL) {
+            SrsService.SrsState next = srsService.calculate(
+                    review.getEaseFactor(), review.getIntervalDays(), review.getRepetitions(), grade, now);
+            review.setEaseFactor(next.easeFactor());
+            review.setIntervalDays(next.intervalDays());
+            review.setRepetitions(next.repetitions());
+            review.setNextReviewAt(next.nextReviewAt());
+        }
         reviewRepository.save(review);
 
         return ReviewResultResponse.builder()
-                .intervalDays(next.intervalDays())
-                .repetitions(next.repetitions())
-                .easeFactor(next.easeFactor())
-                .nextReviewAt(next.nextReviewAt())
+                .intervalDays(review.getIntervalDays())
+                .repetitions(review.getRepetitions())
+                .easeFactor(review.getEaseFactor())
+                .nextReviewAt(review.getNextReviewAt())
                 .build();
     }
 

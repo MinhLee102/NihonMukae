@@ -30,6 +30,10 @@ export interface CardDto {
   createdAt: string;
   /** Only set by the deck card list; null/undefined means not studied yet. */
   nextReviewAt?: string | null;
+  /** Only set when loading cards to study, for cards made from the dictionary. */
+  hanViet?: string | null;
+  exampleJa?: string | null;
+  exampleVi?: string | null;
 }
 
 export interface CardInput {
@@ -93,8 +97,20 @@ export const deleteCard = async (id: string): Promise<void> => {
   await apiClient.delete(`/flashcard/cards/${id}`);
 };
 
-export const getStudyCards = async (deckId: string): Promise<CardDto[]> => {
-  const { data } = await apiClient.get<ApiResponse<CardDto[]>>(`/flashcard/decks/${deckId}/study`);
+export type StudyMode = 'due' | 'all';
+
+/**
+ * Cards to study. mode "due": cards never studied or due by the schedule; "all": every card in the deck
+ * (reviewing a card that is not due does not move its schedule, except when rated hard).
+ * limit: at most this many cards, hard and normal ones first, random within each group.
+ */
+export const getStudyCards = async (
+  deckId: string,
+  options: { mode?: StudyMode; limit?: number } = {}
+): Promise<CardDto[]> => {
+  const { data } = await apiClient.get<ApiResponse<CardDto[]>>(`/flashcard/decks/${deckId}/study`, {
+    params: { mode: options.mode, limit: options.limit },
+  });
   return data.data;
 };
 

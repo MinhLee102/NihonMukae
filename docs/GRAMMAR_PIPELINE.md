@@ -1,58 +1,35 @@
-# Pipeline ngữ pháp
+# Soạn ngữ pháp
 
-Nội dung ngữ pháp (giải thích, cách chia, ví dụ) do AI viết mới, không sao chép từ sách hay đề. Chạy từ thư mục `scripts/grammar`
-bằng Python của venv trong `scripts/jmdict` (cần `psycopg2`, đã có). Luôn thêm `-I -X utf8`.
+Làm toàn bộ trên **Admin, Ngữ pháp** (chỉ tài khoản ADMIN). Nội dung (giải thích, cách chia, ví dụ) do AI viết mới, không sao chép từ sách hay file tham khảo. Không cần chạy script hay SSH vào VPS.
 
-## Lượt 0 (tuỳ chọn): trích tên mẫu từ file tham khảo
+Phía trên trang là năm ô N5 đến N1, mỗi ô cho biết bao nhiêu mẫu đã có nội dung, bao nhiêu đang chờ viết và bao nhiêu bị AI gác lại. Bấm vào một ô để làm việc với cấp đó.
 
-Khi có một file PDF tổng hợp (ví dụ bảng ngữ pháp N1 dạng scan), dùng AI để lấy RIÊNG tên mẫu, nhóm ý nghĩa và cách nối, không lấy giải thích hay ví dụ của file:
+## Bước 1: danh sách tên mẫu
 
-```
-python -I -X utf8 prepare.py extract --level 1 --pages 1-11 --pages 12-21   # work/extract/EXTRACT_N1_p1-11.txt, ..._p12-21.txt
-```
+Có hai cách, dùng riêng hoặc kết hợp:
 
-Đính kèm PDF vào Gemini rồi dán từng prompt (chia theo trang để câu trả lời không quá dài), lưu câu trả lời vào `data/list/N1.json`
-và `data/list/N1_2.json`. Mỗi mục có `pattern`, `reading`, `category` (nhóm như 時間関係) và `hint` (cách nối, chỉ để tham khảo).
-Sau đó làm tiếp lượt 2: nội dung giải thích và ví dụ do AI viết mới, không dựa vào file.
+- **AI tự liệt kê:** copy prompt, dán vào AI (Gemini, ChatGPT...), dán câu trả lời vào ô bên dưới rồi bấm **Lưu danh sách**. Nếu AI liệt kê chưa đủ, copy prompt lần nữa: prompt tự kèm các mẫu đã có để AI liệt kê tiếp phần còn thiếu.
+- **Trích từ file PDF:** khi có file tổng hợp (ví dụ bảng ngữ pháp N1 dạng scan), chọn cách này, nhập khoảng trang (ví dụ `1-11`), đính kèm file khi dán prompt. AI chỉ lấy tên mẫu, nhóm ý nghĩa (`category`) và cách nối (`hint`), không lấy giải thích hay ví dụ của file. File dài thì chia trang, mỗi phần lưu một lần.
 
-## Lượt 1: danh sách tên mẫu theo cấp (khi không có file tham khảo)
+Lưu bao nhiêu lần cũng được: mẫu trùng tên với mẫu đã có (bỏ qua khác biệt `~`, `〜`, khoảng trắng) tự bị bỏ qua, mẫu mới thêm vào cuối danh sách.
 
-```
-python -I -X utf8 prepare.py list              # work/list/LIST_N5.txt ... LIST_N1.txt
-```
+## Bước 2: nội dung từng mẫu
 
-Dán từng file vào Gemini, lưu câu trả lời vào `data/list/N5.json`, `N4.json`... Nếu AI chưa liệt kê đủ, chạy lại lệnh trên
-(prompt tự thêm danh sách đã có để AI liệt kê tiếp phần còn thiếu) và lưu lượt sau vào `N5_2.json`, `N5_3.json`.
-Chỉ thêm file hoặc thêm cuối mảng, không chèn giữa, để id (`N5-001`...) của các mẫu cũ không đổi.
+Trang tự lấy 15 mẫu kế tiếp chưa có nội dung và dựng sẵn prompt. Copy prompt, dán vào AI, dán câu trả lời vào ô rồi bấm **Kiểm tra và lưu**. Hệ thống kiểm tra từng mục:
 
-## Lượt 2: nội dung từng mẫu
+- **Lỗi** (không lưu, mẫu đó vào lại batch sau): sai hoặc thiếu `id`, thiếu nghĩa hay giải thích, nghĩa không phải tiếng Việt, thiếu cách chia, ít hơn 2 ví dụ hợp lệ.
+- **Cảnh báo** (vẫn lưu, nên xem qua): ví dụ không thấy chứa mẫu, ít hơn 3 ví dụ, có furigana trong ngoặc.
+- Mục AI trả `"invalid": true` (không chắc mẫu có thật) bị gác lại, không vào batch nữa. Ở danh sách mẫu bên dưới có nút cho vào lại hàng chờ.
 
-```
-python -I -X utf8 prepare.py batches           # work/batches/GN5-01.txt ... (15 mẫu mỗi batch)
-```
+Lưu xong trang tự chuyển sang batch kế tiếp. Lặp lại đến khi hết mẫu chờ viết.
 
-Dán từng file vào Gemini, lưu câu trả lời vào `data/results/GN5-01.json` (file trống đã được tạo sẵn), rồi:
+## Danh sách mẫu
 
-```
-python -I -X utf8 check.py                     # hoặc check.py GN5-01
-```
+Cuối trang có danh sách mọi mẫu của cấp đang chọn, kèm trạng thái. Có thể xoá mẫu nhầm (xoá cả nội dung và ví dụ của mẫu đó).
 
-`check.py` làm sạch định dạng, bỏ mục lỗi khỏi file và báo cáo ở `work/reports/`. Chạy lại `prepare.py batches` thì mục lỗi
-tự vào lại batch của nó (batch đã đạt hết thì bị bỏ). Mục AI đánh dấu `"invalid": true` được ghi vào `data/invalid.json`
-và không hỏi lại.
+## Ghi chú kỹ thuật
 
-## Nạp dữ liệu
-
-```
-python -I -X utf8 import_grammar.py            # vào DB local
-python -I -X utf8 import_grammar.py --sql      # work/grammar_feed.sql để chạy trên VPS
-```
-
-Trên VPS (sau khi backend đã chạy migration V27):
-
-```
-dc exec -T postgres psql -U nihon -d nihon_mukae -v ON_ERROR_STOP=1 < grammar_feed.sql
-```
-
-Chạy lại bao nhiêu lần cũng được (ghi đè theo cấp độ và tên mẫu). Tab Ngữ pháp trên web vẫn khoá cho đến khi có trang đọc
-bảng `grammar_points` và `grammar_examples`.
+- Bảng `grammar_points` và `grammar_examples` (V27, V28, V31). Mẫu chưa có nội dung có `meaning` là NULL; trang học chỉ nên hiện mẫu đã có nội dung.
+- API: `/admin/grammar/summary`, `/points`, `/list`, `/batch`, `/content`, `/points/{id}` (xoá), `/points/{id}/restore`.
+- Prompt nằm ở `frontend/src/lib/adminGrammarPrompts.ts`, kiểm tra nội dung ở `backend/.../grammar/GrammarValidator.java`.
+- Tab Ngữ pháp phía người học vẫn khoá cho đến khi có trang đọc hai bảng này.

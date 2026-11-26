@@ -24,4 +24,8 @@ public class CardResponse {
     private ZonedDateTime createdAt;
     // Chỉ điền khi lấy danh sách card của deck. null nghĩa là chưa học lần nào
     private ZonedDateTime nextReviewAt;
+    // Chỉ điền khi lấy thẻ để ôn, với thẻ tạo từ từ điển: Hán Việt và một câu ví dụ có bản dịch, lấy từ từ điển
+    private String hanViet;
+    private String exampleJa;
+    private String exampleVi;
 }

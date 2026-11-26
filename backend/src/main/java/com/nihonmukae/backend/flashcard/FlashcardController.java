@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -65,11 +66,14 @@ public class FlashcardController {
         return ApiResponse.success(flashcardService.createCard(principal.getId(), id, req));
     }
 
-    // Card cần ôn hôm nay trong deck (chưa học hoặc đã đến hạn theo SM-2)
+    // Thẻ để ôn. mode=due (mặc định): thẻ chưa học hoặc đã đến hạn theo SM-2; mode=all: mọi thẻ trong deck.
+    // limit: số thẻ tối đa, bỏ trống là lấy hết. Thẻ hay bấm Khó, Bình thường được xếp trước, trong cùng nhóm thì ngẫu nhiên.
     @GetMapping("/decks/{id}/study")
     public ApiResponse<List<CardResponse>> study(@AuthenticationPrincipal JwtUserPrincipal principal,
-                                                 @PathVariable UUID id) {
-        return ApiResponse.success(flashcardService.getStudyCards(principal.getId(), id));
+                                                 @PathVariable UUID id,
+                                                 @RequestParam(value = "mode", required = false) String mode,
+                                                 @RequestParam(value = "limit", required = false) Integer limit) {
+        return ApiResponse.success(flashcardService.getStudyCards(principal.getId(), id, mode, limit));
     }
 
     @PostMapping("/cards/{id}/review")

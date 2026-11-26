@@ -44,4 +44,8 @@ public class FlashcardReview {
 
     @Column(name = "last_reviewed")
     private ZonedDateTime lastReviewed;
+
+    // Lần bấm gần nhất: hard, normal hoặc easy (null với thẻ ôn trước V29)
+    @Column(name = "last_rating", length = 10)
+    private String lastRating;
 }

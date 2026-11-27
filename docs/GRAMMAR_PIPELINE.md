@@ -23,13 +23,26 @@ Trang tự lấy 15 mẫu kế tiếp chưa có nội dung và dựng sẵn prom
 
 Lưu xong trang tự chuyển sang batch kế tiếp. Lặp lại đến khi hết mẫu chờ viết.
 
+## Chạy bằng agent (nhiều batch một lượt)
+
+Mục **Chạy bằng agent** dưới Bước 2: chọn chỉ cấp đang xem hoặc mọi cấp, bấm **Tải grammar_todo.md**. File có hướng dẫn ở đầu và mỗi batch 15 mẫu một mục (tên dạng `G3-01`) kèm prompt đầy đủ. Đặt file vào một thư mục, giao cho agent (ví dụ Antigravity) bằng prompt có sẵn trên trang (nút Sao chép). Agent ghi mỗi batch ra `results/G3-01.json`... Xong thì bấm **Nhập file kết quả**, chọn tất cả file trong `results/` để kiểm tra và lưu một lượt. Mục lỗi không được lưu; tải file lần sau chỉ còn các mẫu chưa xong.
+
+## Trùng giữa các cấp
+
+Một mẫu có thể thuộc nhiều cấp (ví dụ 〜終わる ở N4 và N3). Mục **Trùng giữa các cấp** liệt kê các nhóm cùng tên (bỏ qua 〜, khoảng trắng) hoặc cùng cách đọc ở các cấp khác nhau:
+
+- **Gộp** khi cùng nghĩa: giữ mẫu được chọn (mặc định mẫu đã có nội dung), cấp chính là cấp thấp nhất trong nhóm, các cấp còn lại lưu ở `extra_levels` để trang học hiện mẫu ở cả các cấp đó. Các mẫu kia bị xoá.
+- **Khác nghĩa, giữ riêng** (ví dụ 〜ように: N4 là "để mà", N3 là "như là"): không gợi ý gộp nữa, và prompt viết nội dung của từng mẫu dặn AI chỉ viết nghĩa thuộc cấp đó.
+
+Khi lưu danh sách ở Bước 1, mẫu trùng tên với cấp khác vẫn được thêm và được báo lại, để admin quyết định ở mục này.
+
 ## Danh sách mẫu
 
 Cuối trang có danh sách mọi mẫu của cấp đang chọn, kèm trạng thái. Có thể xoá mẫu nhầm (xoá cả nội dung và ví dụ của mẫu đó).
 
 ## Ghi chú kỹ thuật
 
-- Bảng `grammar_points` và `grammar_examples` (V27, V28, V31). Mẫu chưa có nội dung có `meaning` là NULL; trang học chỉ nên hiện mẫu đã có nội dung.
-- API: `/admin/grammar/summary`, `/points`, `/list`, `/batch`, `/content`, `/points/{id}` (xoá), `/points/{id}/restore`.
+- Bảng `grammar_points` và `grammar_examples` (V27, V28, V31, V32), `grammar_distinct` (cặp giữ riêng). Mẫu chưa có nội dung có `meaning` là NULL; trang học chỉ nên hiện mẫu đã có nội dung.
+- API: `/admin/grammar/summary`, `/points`, `/list`, `/batch`, `/content`, `/pending`, `/duplicates`, `/merge`, `/distinct`, `/points/{id}` (xoá), `/points/{id}/restore`.
 - Prompt nằm ở `frontend/src/lib/adminGrammarPrompts.ts`, kiểm tra nội dung ở `backend/.../grammar/GrammarValidator.java`.
 - Tab Ngữ pháp phía người học vẫn khoá cho đến khi có trang đọc hai bảng này.

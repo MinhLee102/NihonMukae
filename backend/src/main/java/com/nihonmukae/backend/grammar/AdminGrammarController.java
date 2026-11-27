@@ -2,6 +2,9 @@ package com.nihonmukae.backend.grammar;
 
 import com.nihonmukae.backend.grammar.AdminGrammarService.BatchItem;
 import com.nihonmukae.backend.grammar.AdminGrammarService.ContentResult;
+import com.nihonmukae.backend.grammar.AdminGrammarService.DuplicateRow;
+import com.nihonmukae.backend.grammar.AdminGrammarService.IdsRequest;
+import com.nihonmukae.backend.grammar.AdminGrammarService.MergeRequest;
 import com.nihonmukae.backend.grammar.AdminGrammarService.LevelSummary;
 import com.nihonmukae.backend.grammar.AdminGrammarService.ListImport;
 import com.nihonmukae.backend.grammar.AdminGrammarService.ListResult;
@@ -58,6 +61,29 @@ public class AdminGrammarController {
     @PostMapping("/content")
     public ApiResponse<ContentResult> content(@RequestBody List<Map<String, Object>> entries) {
         return ApiResponse.success(service.saveContent(entries));
+    }
+
+    // Mọi mẫu chờ viết (level bỏ trống là mọi cấp), để tải file giao cho agent
+    @GetMapping("/pending")
+    public ApiResponse<List<BatchItem>> pending(@RequestParam(value = "level", required = false) Integer level) {
+        return ApiResponse.success(service.allPending(level));
+    }
+
+    @GetMapping("/duplicates")
+    public ApiResponse<List<List<DuplicateRow>>> duplicates() {
+        return ApiResponse.success(service.duplicates());
+    }
+
+    @PostMapping("/merge")
+    public ApiResponse<Void> merge(@RequestBody MergeRequest req) {
+        service.merge(req);
+        return ApiResponse.success(null);
+    }
+
+    @PostMapping("/distinct")
+    public ApiResponse<Void> distinct(@RequestBody IdsRequest req) {
+        service.markDistinct(req);
+        return ApiResponse.success(null);
     }
 
     @DeleteMapping("/points/{id}")

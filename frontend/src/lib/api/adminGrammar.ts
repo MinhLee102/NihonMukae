@@ -17,6 +17,8 @@ export interface GrammarPointRow {
   hint: string | null;
   ready: boolean;
   invalid: boolean;
+  /** Other levels that also show this pattern (the main one is the lowest). */
+  extraLevels: number[];
 }
 
 export interface GrammarListItem {
@@ -30,6 +32,8 @@ export interface GrammarListResult {
   added: number;
   skipped: number;
   problems: string[];
+  /** New patterns whose name already exists at another level. */
+  crossLevel: string[];
 }
 
 /** One pattern to put in the explain prompt; id looks like "G123". */
@@ -40,6 +44,17 @@ export interface GrammarBatchItem {
   reading: string | null;
   category: string | null;
   hint: string | null;
+  /** Set when a same-named pattern at another level has a different meaning. */
+  note: string | null;
+}
+
+export interface GrammarDuplicateRow {
+  id: number;
+  level: number;
+  extraLevels: number[];
+  pattern: string;
+  reading: string | null;
+  meaning: string | null;
 }
 
 export interface GrammarIssue {
@@ -80,6 +95,25 @@ export async function fetchGrammarBatch(level: number, size?: number): Promise<G
 export async function saveGrammarContent(entries: unknown[]): Promise<GrammarContentResult> {
   const { data } = await apiClient.post<ApiResponse<GrammarContentResult>>('/admin/grammar/content', entries);
   return data.data;
+}
+
+/** Every pattern still waiting for content (one level, or all when level is omitted). */
+export async function fetchGrammarPending(level?: number): Promise<GrammarBatchItem[]> {
+  const { data } = await apiClient.get<ApiResponse<GrammarBatchItem[]>>('/admin/grammar/pending', { params: { level } });
+  return data.data;
+}
+
+export async function fetchGrammarDuplicates(): Promise<GrammarDuplicateRow[][]> {
+  const { data } = await apiClient.get<ApiResponse<GrammarDuplicateRow[][]>>('/admin/grammar/duplicates');
+  return data.data;
+}
+
+export async function mergeGrammar(keepId: number, mergeIds: number[]): Promise<void> {
+  await apiClient.post('/admin/grammar/merge', { keepId, mergeIds });
+}
+
+export async function markGrammarDistinct(ids: number[]): Promise<void> {
+  await apiClient.post('/admin/grammar/distinct', { ids });
 }
 
 export async function deleteGrammarPoint(id: number): Promise<void> {

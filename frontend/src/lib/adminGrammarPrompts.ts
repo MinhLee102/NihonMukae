@@ -62,6 +62,7 @@ export function buildExplainPrompt(items: GrammarBatchItem[]): string {
             reading: i.reading ?? "",
             category: i.category ?? "",
             hint: i.hint ?? "",
+            note: i.note ?? "",
           }).filter(([, v]) => v !== "")
         )
       )
@@ -79,6 +80,7 @@ Nguyên tắc nội dung:
 5. similar: chỉ ghi mẫu thực sự dễ nhầm với mẫu này (tối đa 2), kèm một câu tiếng Việt nêu khác biệt. Không có mẫu dễ nhầm thì để [].
 6. notes: sắc thái (trang trọng, văn viết, văn nói, tiêu cực...), hạn chế dùng, lỗi hay gặp. Không có gì đáng nói thì để chuỗi rỗng "".
 7. Nếu một mục không phải mẫu ngữ pháp có thật hoặc bạn không chắc về nghĩa, KHÔNG đoán: trả {"id": "...", "invalid": true}.
+8. "level" có thể ghi nhiều cấp (ví dụ "N4, cũng dùng ở N3"): viết theo cấp đầu tiên, từ vựng ví dụ không khó hơn cấp đó. Nếu mục có "note" thì làm đúng theo note (thường là chỉ viết nghĩa thuộc cấp này vì cấp khác có mẫu cùng tên nhưng khác nghĩa).
 
 Định dạng trả về: CHỈ một mảng JSON hợp lệ, không markdown, không \`\`\`json, không lời dẫn, không giải thích thêm. Có đúng một phần tử cho mỗi mục trong danh sách, giữ nguyên thứ tự và giữ nguyên "id". Dùng dấu nháy kép chuẩn cho mọi chuỗi; trong chuỗi nếu cần nháy kép thì dùng 「」 thay thế.
 Mỗi phần tử đúng dạng:
@@ -102,4 +104,22 @@ DANH SÁCH CẦN SOẠN:
 [
 ${list}
 ]`;
+}
+
+/** File giao cho agent (Antigravity...): hướng dẫn ở đầu, mỗi batch một mục có prompt đầy đủ. */
+export function buildAgentFile(batches: { name: string; items: GrammarBatchItem[] }[]): string {
+  const header = `# Việc cần làm: viết nội dung ngữ pháp
+
+File này có ${batches.length} batch, mỗi batch là một mục "## BATCH <tên>" bên dưới, chứa đầy đủ yêu cầu và danh sách mẫu.
+
+Với MỖI batch, theo thứ tự:
+1. Đọc kỹ toàn bộ yêu cầu trong mục của batch đó (không làm theo trí nhớ của batch trước).
+2. Tự viết nội dung cho từng mẫu theo đúng yêu cầu. Không dùng script hay dịch máy để tạo nội dung.
+3. Ghi kết quả vào file results/<tên batch>.json (ví dụ results/${batches[0]?.name ?? "G3-01"}.json): CHỈ một mảng JSON hợp lệ, đủ một phần tử cho mỗi mẫu, giữ nguyên "id".
+4. Kiểm tra lại file vừa ghi: JSON hợp lệ, đủ số mục, mỗi mục có meaning, explanation bằng tiếng Việt, connection là mảng chuỗi, ít nhất 2 (nên là 3) ví dụ có cả "ja" và "vi". Sai thì sửa ngay.
+5. Sang batch kế tiếp. Không dừng lại hỏi giữa chừng. Batch nào đã có file kết quả hợp lệ thì bỏ qua.
+
+Chỉ tạo file trong thư mục results/. Không sửa file này. Cuối cùng báo cáo batch nào đã xong, batch nào còn lỗi.
+`;
+  return header + batches.map((b) => `\n\n## BATCH ${b.name}\n\n${buildExplainPrompt(b.items)}\n`).join("");
 }

@@ -13,7 +13,7 @@ const SEARCH_MODES = [
 ] as const;
 
 // Modes that are not built yet stay visible but cannot be selected
-const AVAILABLE_MODES: string[] = ["vocab", "kanji"];
+const AVAILABLE_MODES: string[] = ["vocab", "kanji", "grammar"];
 
 export type SearchMode = (typeof SEARCH_MODES)[number]["id"];
 
@@ -65,7 +65,13 @@ export function SearchBar({ value, onChange, mode, onModeChange, onSearch, isLoa
           value={query}
           onChange={handleInputChange}
           onKeyDown={handleKeyDown}
-          placeholder={activeMode === "kanji" ? "食, thực, ăn, ショク, shoku..." : "日本, nihon, Nhật Bản..."}
+          placeholder={
+            activeMode === "kanji"
+              ? "食, thực, ăn, ショク, shoku..."
+              : activeMode === "grammar"
+                ? "ざるを得ない, zaru, đành phải..."
+                : "日本, nihon, Nhật Bản..."
+          }
           className="min-w-0 flex-1 bg-transparent text-sm text-neutral-800 outline-none placeholder:text-neutral-400"
         />
         <div className="hidden shrink-0 items-center gap-3 text-neutral-400 sm:flex">

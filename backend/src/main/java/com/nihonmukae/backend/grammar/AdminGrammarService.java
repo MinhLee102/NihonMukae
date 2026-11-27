@@ -406,7 +406,7 @@ public class AdminGrammarService {
         }
     }
 
-    private static List<Integer> levels(java.sql.Array array) throws java.sql.SQLException {
+    static List<Integer> levels(java.sql.Array array) throws java.sql.SQLException {
         if (array == null) {
             return List.of();
         }

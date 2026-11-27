@@ -59,6 +59,7 @@ public class SecurityConfig {
                                 "/dictionary/lookup",
                                 "/dictionary/lookup-at",
                                 "/dictionary/kanji/**",
+                                "/grammar/**",
                                 "/actuator/**",
                                 "/v3/api-docs/**",
                                 "/swagger-ui/**",

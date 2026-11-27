@@ -5,6 +5,7 @@ import { X } from "lucide-react";
 import { AddToFlashcardButton } from "@/components/flashcard/AddToFlashcardButton";
 import { lookupAt, type SpanLookupDto } from "@/lib/api/dictionary";
 import type { ShelfToken } from "@/lib/api/shelf";
+import { SentenceGrammar } from "@/components/shelf/SentenceGrammar";
 
 const WINDOW_BEFORE = 4; // tokens before the clicked one
 const WINDOW_AFTER = 10; // tokens after the clicked one
@@ -25,6 +26,33 @@ function buildWindow(tokens: ShelfToken[], index: number) {
   }
   const clicked = ranges.find((r) => r.index === index);
   return { text, offset: clicked ? clicked.start : 0, ranges };
+}
+
+const SENTENCE_END = /[。！？!?\n]/;
+const SENTENCE_MAX_CHARS = 200; // the server accepts at most 300
+
+/** The sentence containing the clicked token, and where the clicked token sits inside it. */
+function buildSentence(tokens: ShelfToken[], index: number) {
+  let first = index;
+  let length = surfaceOf(tokens[index]).length;
+  while (first > 0 && !SENTENCE_END.test(surfaceOf(tokens[first - 1]))) {
+    const s = surfaceOf(tokens[first - 1]);
+    if (length + s.length > SENTENCE_MAX_CHARS / 2) break;
+    length += s.length;
+    first--;
+  }
+  let text = "";
+  let start = 0;
+  let end = 0;
+  for (let i = first; i < tokens.length; i++) {
+    const s = surfaceOf(tokens[i]);
+    if (i > index && text.length + s.length > SENTENCE_MAX_CHARS) break;
+    if (i === index) start = text.length;
+    text += s;
+    if (i === index) end = text.length;
+    if (i >= index && SENTENCE_END.test(s)) break;
+  }
+  return { text: text.replace(/\n/g, " "), start, end };
 }
 
 /**
@@ -48,6 +76,7 @@ export function WordPopup({
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
   const win = useMemo(() => buildWindow(tokens, index), [tokens, index]);
+  const sentence = useMemo(() => buildSentence(tokens, index), [tokens, index]);
 
   useEffect(() => {
     let cancelled = false;
@@ -88,7 +117,7 @@ export function WordPopup({
   const shown = word?.kanji || word?.kana || token.base;
 
   return (
-    <div className="w-[min(320px,calc(100vw-2rem))] rounded-2xl border border-black/5 bg-white p-4 text-left shadow-xl">
+    <div className="max-h-[75vh] w-[min(320px,calc(100vw-2rem))] overflow-y-auto rounded-2xl border border-black/5 bg-white p-4 text-left shadow-xl">
       <div className="flex items-start justify-between gap-2">
         <div className="min-w-0">
           <span className="font-serif text-2xl text-neutral-900">{word ? shown : token.base}</span>
@@ -159,6 +188,8 @@ export function WordPopup({
           </div>
         </>
       )}
+
+      {!loading && <SentenceGrammar text={sentence.text} start={sentence.start} end={sentence.end} />}
     </div>
   );
 }

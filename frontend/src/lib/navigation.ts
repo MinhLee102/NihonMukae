@@ -1,5 +1,6 @@
 import {
   BookOpen,
+  ScrollText,
   Layers,
   Bookmark,
   AlignLeft,
@@ -33,6 +34,14 @@ export const NAV_ITEMS: NavItem[] = [
     icon: BookOpen,
     breadcrumbJa: "辞書",
     breadcrumbVi: "Từ điển",
+    publicRoute: true,
+  },
+  {
+    href: "/grammar",
+    label: "Ngữ pháp",
+    icon: ScrollText,
+    breadcrumbJa: "文法",
+    breadcrumbVi: "Ngữ pháp",
     publicRoute: true,
   },
   {

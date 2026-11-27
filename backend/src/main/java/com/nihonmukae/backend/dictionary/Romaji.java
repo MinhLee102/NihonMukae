@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /** Đổi romaji (Hepburn, có nhận cả kiểu Kunrei như si, ti, tu) sang hiragana, và bỏ dấu tiếng Việt. */
-final class Romaji {
+public final class Romaji {
 
     private static final Map<String, String> TABLE = new HashMap<>();
     private static final String VOWELS = "aiueo";
@@ -54,7 +54,7 @@ final class Romaji {
     }
 
     /** Hiragana, hoặc null nếu chuỗi không phải romaji hợp lệ (còn chữ không đổi được, có khoảng trắng...). */
-    static String toHiragana(String input) {
+    public static String toHiragana(String input) {
         if (input == null) {
             return null;
         }
@@ -106,7 +106,7 @@ final class Romaji {
     }
 
     /** Bỏ dấu tiếng Việt (kể cả đ → d). Chuỗi không có dấu thì giữ nguyên. */
-    static String stripAccents(String s) {
+    public static String stripAccents(String s) {
         String d = Normalizer.normalize(s, Normalizer.Form.NFD).replaceAll("\\p{M}+", "");
         return d.replace('đ', 'd').replace('Đ', 'D');
     }

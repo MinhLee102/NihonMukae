@@ -45,4 +45,5 @@ Cuối trang có danh sách mọi mẫu của cấp đang chọn, kèm trạng t
 - Bảng `grammar_points` và `grammar_examples` (V27, V28, V31, V32), `grammar_distinct` (cặp giữ riêng). Mẫu chưa có nội dung có `meaning` là NULL; trang học chỉ nên hiện mẫu đã có nội dung.
 - API: `/admin/grammar/summary`, `/points`, `/list`, `/batch`, `/content`, `/pending`, `/duplicates`, `/merge`, `/distinct`, `/points/{id}` (xoá), `/points/{id}/restore`.
 - Prompt nằm ở `frontend/src/lib/adminGrammarPrompts.ts`, kiểm tra nội dung ở `backend/.../grammar/GrammarValidator.java`.
-- Tab Ngữ pháp phía người học vẫn khoá cho đến khi có trang đọc hai bảng này.
+- Phía người học (công khai, chỉ hiện mẫu đã có nội dung và không bị gác): tab Ngữ pháp ở Từ điển (tìm theo tên mẫu, cách đọc kana hoặc romaji, nghĩa tiếng Việt), trang `/grammar` (duyệt theo cấp, gom theo `category`), và mục "Ngữ pháp trong câu" ở popup tra từ của kệ sách. API: `/grammar/search`, `/grammar/levels/{level}`, `/grammar/{id}`, `/grammar/detect`.
+- Nhận diện trong câu (`GrammarMatcher.java`) so theo mặt chữ: tách tên mẫu theo 〜, chia đuôi (する thành し, い thành かっ...), phần đầu phải ở ranh giới từ, bỏ qua mẫu một chữ. Bộ dò dựng lại sau 5 phút nên mẫu mới lưu có thể chưa nhận diện ngay.

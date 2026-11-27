@@ -6,6 +6,7 @@ import { Clock, BookOpen, Volume2, CheckCircle2, Pencil } from "lucide-react";
 import { QuoteBanner } from "../../components/QuoteBanner";
 import { SearchBar, type SearchMode } from "../../components/SearchBar";
 import { KanjiPanel } from "@/components/dictionary/KanjiPanel";
+import { GrammarPanel } from "@/components/grammar/GrammarPanel";
 import { RecentWordCard, type RecentWord } from "../../components/RecentWordCard";
 import { AddToFlashcardButton } from "@/components/flashcard/AddToFlashcardButton";
 import { ContributeDialog } from "@/components/dictionary/ContributeDialog";
@@ -166,6 +167,8 @@ export default function DictionaryPage() {
             setQuery(word);
           }}
         />
+      ) : mode === "grammar" && debouncedQuery ? (
+        <GrammarPanel query={debouncedQuery} onSearch={setQuery} />
       ) : debouncedQuery ? (
         <section className="flex flex-col gap-3">
           {matchType === "fuzzy" && (
